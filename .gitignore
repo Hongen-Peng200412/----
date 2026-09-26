@@ -1,2 +1,12 @@
 **tmp**
 .review/
+
+# 依赖和 Python 缓存
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Word、PowerPoint 临时锁文件
+~$*
+画图/

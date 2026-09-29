@@ -15,6 +15,7 @@ import sys
 import tempfile
 import zlib
 from pathlib import Path
+from zipfile import ZIP_DEFLATED, ZipFile
 
 from 转换工具.ppt_figures import export_ppt_figure, picture_markup, read_ppt_figures
 
@@ -99,6 +100,62 @@ def _resolve_source(raw: str, base: Path) -> Path:
     if not candidate.is_file():
         raise FileNotFoundError(f"资源文件不存在：{candidate}")
     return candidate
+
+
+def _flat_opc_to_docx(source: Path, target: Path) -> None:
+    """将 Word 导出的 Flat OPC 副本还原成 Pandoc 可读取的 DOCX。"""
+    from lxml import etree
+
+    package_ns = "http://schemas.microsoft.com/office/2006/xmlPackage"
+    types_ns = "http://schemas.openxmlformats.org/package/2006/content-types"
+    package = etree.parse(str(source)).getroot()
+    types = etree.Element(f"{{{types_ns}}}Types", nsmap={None: types_ns})
+    with ZipFile(target, "w", compression=ZIP_DEFLATED) as archive:
+        for part in package:
+            name = part.get(f"{{{package_ns}}}name")
+            content_type = part.get(f"{{{package_ns}}}contentType")
+            if not name or not name.startswith("/") or not content_type or len(part) != 1:
+                raise ValueError(f"Word 版式副本包含无效的包部件：{name!r}")
+            payload = part[0]
+            if payload.tag == f"{{{package_ns}}}xmlData" and len(payload) == 1:
+                data = etree.tostring(payload[0], encoding="UTF-8", xml_declaration=True)
+            elif payload.tag == f"{{{package_ns}}}binaryData":
+                data = base64.b64decode("".join(payload.itertext()))
+            else:
+                raise ValueError(f"Word 版式副本包含无法识别的包部件：{name}")
+            archive.writestr(name.lstrip("/"), data)
+            etree.SubElement(types, f"{{{types_ns}}}Override",
+                             PartName=name, ContentType=content_type)
+        archive.writestr("[Content_Types].xml",
+                         etree.tostring(types, encoding="UTF-8", xml_declaration=True))
+
+
+def _snapshot_operation_reference(reference: Path, directory: Path) -> Path:
+    """复制版式文件；若被 Word 独占打开，则读取当前打开文档的副本。"""
+    snapshot = directory / "operation_reference.docx"
+    try:
+        shutil.copyfile(reference, snapshot)
+        return snapshot
+    except PermissionError as error:
+        flat_opc = directory / "operation_reference.xml"
+        helper = ROOT / "转换工具" / "snapshot_open_word.ps1"
+        result = subprocess.run(
+            ["powershell.exe", "-NoProfile", "-ExecutionPolicy", "Bypass",
+             "-File", str(helper), "-ReferencePath", str(reference),
+             "-OutputPath", str(flat_opc)],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False,
+        )
+        if result.returncode:
+            details = result.stderr.decode("utf-8", errors="replace").strip()
+            raise PermissionError(
+                f"无法读取正在使用的 Word 版式文件：{reference}。"
+                "请在 Word 中关闭它，或用 --reference 指定可读取的副本。"
+                + (f"\n{details}" if details else "")
+            ) from error
+        _flat_opc_to_docx(flat_opc, snapshot)
+        print(f"提示：{reference} 正在 Word 中打开，已使用当前打开文档的版式副本。",
+              file=sys.stderr)
+        return snapshot
 
 
 def _xlsx_to_html(spec: dict, base: Path) -> str:
@@ -671,6 +728,14 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
     TEMP_ROOT.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="manuscript_figures_", dir=TEMP_ROOT) as temporary:
         figure_root = Path(temporary)
+        layout_reference = None
+        if profile == "operation":
+            reference = (reference or OPERATION_REFERENCE).resolve()
+            if not reference.is_file():
+                raise FileNotFoundError(f"找不到 Operation 版式文件：{reference}")
+            layout_reference = _snapshot_operation_reference(reference, figure_root)
+        elif profile != "nature":
+            raise ValueError(f"未知 Word 版式：{profile}")
         figure_specs = {}
         figure_index = {}
         rendered = {}
@@ -772,16 +837,11 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
         _append_bibliography(document, original, pandoc, bib, keys)
         target.parent.mkdir(parents=True, exist_ok=True)
         options = ["--standalone", f"--resource-path={source.parent}"]
-        if profile == "operation":
-            reference = (reference or OPERATION_REFERENCE).resolve()
-            if not reference.is_file():
-                raise FileNotFoundError(f"找不到 Operation 版式文件：{reference}")
-            options.append(f"--reference-doc={reference}")
-        elif profile != "nature":
-            raise ValueError(f"未知 Word 版式：{profile}")
+        if layout_reference is not None:
+            options.append(f"--reference-doc={layout_reference}")
         run_pandoc(pandoc, json.dumps(document, ensure_ascii=False), "json", "docx", options, target)
         if profile == "operation":
-            _apply_operation_layout(target, reference)
+            _apply_operation_layout(target, layout_reference)
         else:
             _apply_nature_layout(target)
         if figure_specs:

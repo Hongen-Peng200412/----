@@ -53,7 +53,7 @@ def test_ppt_figures(root: Path) -> None:
     """用含真实现代批注的图集副本核对多 PPT、图注、回转与 Word 改图。"""
     from docx import Document
 
-    original = ROOT / "画图" / "总图集.pptx"
+    original = ROOT / "画图" / "总览图.pptx"
     if not original.is_file():
         raise FileNotFoundError(f"测试图集不存在：{original}")
     assert "fig-overview" in read_ppt_figures(original)

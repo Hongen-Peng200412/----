@@ -12,9 +12,10 @@
 ├─ word_to_md.py              # Word → Markdown 命令入口
 ├─ manuscript_conversion.py   # 双向转换实现
 ├─ nature_article.csl         # Word 参考文献的数字编号格式
-├─ 画图/总图集.pptx             # 可引用的成品图片图集之一
+├─ 画图/总览图.pptx             # 可引用的成品图片图集之一
 ├─ 转换工具/ppt_figures.py      # 读取图名批注、备注并裁边导图
 ├─ 转换工具/export_slide.ps1    # 调用本机 PowerPoint 导出指定页
+├─ 转换工具/snapshot_open_word.ps1 # 读取 Word 中已打开的版式文件
 ├─ 转换工具/test_roundtrip.py   # 可再生的往返测试
 ├─ references.bib             # 可选；出现 [@key] 引用时需要
 ├─ 论文草稿.nature.docx        # 默认 Word 输出
@@ -58,7 +59,7 @@ python word_to_md.py 文章.operation.docx --output 文章.operation.from_word.m
 PPT 图集采用一页一图。将引用独立写在一行，双引号内是 PPT 路径，竖线后是该 PPT 中的图名：
 
 ```markdown
-{{pptfig:"画图/总图集.pptx"|fig-overview}}
+{{pptfig:"画图/总览图.pptx"|fig-overview}}
 {{pptfig:"C:/Users/15919/Desktop/other_figures.pptx"|fig-model}}
 ```
 
@@ -118,6 +119,8 @@ $$
 行内 `$...$` 和块级 `$$...$$` 公式转换为 Word 可编辑公式。多行公式保留明确的换行和对齐点；下括号使用 Word 可伸展的原生公式结构。极长的独立公式才缩小字号，其余公式沿用正文大小。Markdown 中相邻的正文行各自成为 Word 段落，段间留白，正文首行缩进两个汉字宽度。
 
 Nature 版采用 A4、12 磅正文、双倍行距、连续行号和 6 磅段后间距；表格另起一页，表题与表体同页。这些版式依据 [Nature 的格式指南](https://www.nature.com/nature/for-authors/formatting-guide)。Operation 版沿用参考文件的 A4 页面、页边距与标题层级，正文为 10.5 磅、1.5 倍行距和 6 磅段后间距，一级至六级标题均有明确样式。两种版式仅改变 Word 的排版，不改写原稿内容。
+
+Operation 版式文件若被 Word 独占锁定，转换器会从当前打开的文档读取临时版式副本，不会保存或关闭该文档。若有多个同名文档同时打开，无法确定使用哪一份时会提示关闭多余文档，或用 `--reference` 指定另一份可读取的版式文件。
 
 ## 往返检查
 

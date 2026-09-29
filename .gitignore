@@ -1,12 +1,16 @@
-**tmp**
 .review/
+/temp/
 
 # 依赖和 Python 缓存
 node_modules/
 __pycache__/
 *.pyc
 .pytest_cache/
+.manuscript_deps/
 
 # Word、PowerPoint 临时锁文件
 ~$*
-画图/
+画图/草稿
+画图/画图代码
+画图/图a制作
+画图/formal

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" default-locale="en-GB">
+  <info>
+    <title>Nature Article numeric references for manuscript conversion</title>
+    <id>https://local.invalid/nature-article-manuscript</id>
+    <category citation-format="numeric"/>
+  </info>
+  <citation collapse="citation-number">
+    <sort><key variable="citation-number"/></sort>
+    <layout vertical-align="sup" delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+  <bibliography et-al-min="6" et-al-use-first="1" entry-spacing="0" line-spacing="2">
+    <layout suffix=".">
+      <text variable="citation-number" suffix=". "/>
+      <names variable="author" suffix=". ">
+        <name name-as-sort-order="all" initialize-with=". " delimiter=", " and="symbol"/>
+        <et-al term="et-al"/>
+      </names>
+      <text variable="title" suffix=". "/>
+      <text variable="container-title" font-style="italic" suffix=" "/>
+      <text variable="volume" font-weight="bold" suffix=", "/>
+      <text variable="page" suffix=" "/>
+      <date variable="issued" prefix="(" suffix=")"><date-part name="year"/></date>
+      <text variable="DOI" prefix=". https://doi.org/"/>
+    </layout>
+  </bibliography>
+</style>

@@ -1,0 +1,242 @@
+"""用可再生样本核对表格、PPT 图集、引用、公式和 Word 图片编辑的往返行为。"""
+
+from __future__ import annotations
+
+import json
+import shutil
+import struct
+import sys
+import tempfile
+import zlib
+from pathlib import Path
+from zipfile import ZipFile
+
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+sys.dont_write_bytecode = True
+
+from manuscript_conversion import (
+    TEMP_ROOT,
+    ensure_dependencies,
+    markdown_to_word,
+    word_to_markdown,
+)
+from 转换工具.ppt_figures import read_ppt_figures
+
+
+def make_captioned_ppt(source: Path, target: Path, caption: str) -> None:
+    """仅在临时 PPT 副本的第 1 页备注中填写图注, 保留真实的现代批注。"""
+    from lxml import etree
+
+    p_ns = "http://schemas.openxmlformats.org/presentationml/2006/main"
+    a_ns = "http://schemas.openxmlformats.org/drawingml/2006/main"
+    with ZipFile(source) as original, ZipFile(target, "w") as updated:
+        for item in original.infolist():
+            payload = original.read(item.filename)
+            if item.filename == "ppt/notesSlides/notesSlide1.xml":
+                root = etree.fromstring(payload)
+                bodies = root.xpath(
+                    ".//p:sp[p:nvSpPr/p:nvPr/p:ph[@type='body']]/p:txBody",
+                    namespaces={"p": p_ns},
+                )
+                assert len(bodies) == 1
+                paragraph = bodies[0].find(f"{{{a_ns}}}p")
+                run = etree.Element(f"{{{a_ns}}}r")
+                etree.SubElement(run, f"{{{a_ns}}}t").text = caption
+                paragraph.insert(0, run)
+                payload = etree.tostring(root, encoding="UTF-8", xml_declaration=True)
+            updated.writestr(item, payload)
+
+
+def test_ppt_figures(root: Path) -> None:
+    """用含真实现代批注的图集副本核对多 PPT、图注、回转与 Word 改图。"""
+    from docx import Document
+
+    original = ROOT / "画图" / "总图集.pptx"
+    if not original.is_file():
+        raise FileNotFoundError(f"测试图集不存在：{original}")
+    assert "fig-overview" in read_ppt_figures(original)
+    first = root / "primary.pptx"
+    second = root / "secondary.pptx"
+    caption = "图 1：总流程示意。"
+    make_captioned_ppt(original, first, caption)
+    shutil.copyfile(first, second)
+    assert read_ppt_figures(first)["fig-overview"][1] == caption
+    source = root / "ppt_article.md"
+    source.write_text(
+        "# 多图集测试\n\n前文。\n"
+        '{{pptfig:"primary.pptx"|fig-overview}}\n后文。\n\n'
+        f'{{{{pptfig:"{second.as_posix()}"|fig-overview}}}}\n',
+        encoding="utf-8",
+    )
+    for profile in ("nature", "operation"):
+        reference = ROOT / "论文草稿.operation.docx" if profile == "operation" else None
+        first_word = root / f"ppt_{profile}.docx"
+        first_markdown = (root / "nested" / "ppt_nature.md") if profile == "nature" else root / "ppt_operation.md"
+        second_word = root / f"ppt_{profile}_second.docx"
+        second_markdown = first_markdown.with_name(f"ppt_{profile}_second.md")
+        markdown_to_word(source, first_word, profile=profile, reference=reference)
+        word = Document(first_word)
+        assert len(word.inline_shapes) == 2
+        assert sum(caption in paragraph.text for paragraph in word.paragraphs) == 2
+        word_to_markdown(first_word, first_markdown)
+        recovered = first_markdown.read_text(encoding="utf-8")
+        relative_ppt = "../primary.pptx" if profile == "nature" else "primary.pptx"
+        assert f'{{{{pptfig:"{relative_ppt}"|fig-overview}}}}' in recovered
+        assert f'{{{{pptfig:"{second.as_posix()}"|fig-overview}}}}' in recovered
+        markdown_to_word(first_markdown, second_word, profile=profile, reference=reference)
+        word_to_markdown(second_word, second_markdown)
+        assert first_markdown.read_bytes() == second_markdown.read_bytes()
+        if profile == "nature":
+            word.inline_shapes[0].width = int(word.inline_shapes[0].width * 0.8)
+            edited_word = root / "ppt_edited.docx"
+            edited_markdown = root / "ppt_edited.md"
+            word.save(edited_word)
+            word_to_markdown(edited_word, edited_markdown)
+            changed = edited_markdown.read_text(encoding="utf-8")
+            assert 'pptfig-edited' in changed and '"name": "fig-overview"' in changed
+            assert '&&"' in changed and '{{pptfig:"../primary.pptx"|fig-overview}}' not in changed
+            edited_second_word = root / "ppt_edited_second.docx"
+            edited_second_markdown = root / "ppt_edited_second.md"
+            markdown_to_word(edited_markdown, edited_second_word)
+            word_to_markdown(edited_second_word, edited_second_markdown)
+            assert edited_markdown.read_bytes() == edited_second_markdown.read_bytes()
+            replaced = Document(first_word)
+            from docx.oxml.ns import qn
+            replacement = root / "replacement.png"
+            make_png(replacement, (0, 0, 255))
+            relation = replaced.inline_shapes[0]._inline.xpath(".//a:blip")[0].get(qn("r:embed"))
+            replaced.part.related_parts[relation]._blob = replacement.read_bytes()
+            replaced_word = root / "ppt_replaced.docx"
+            replaced_markdown = root / "ppt_replaced.md"
+            replaced.save(replaced_word)
+            word_to_markdown(replaced_word, replaced_markdown)
+            assert 'pptfig-edited' in replaced_markdown.read_text(encoding="utf-8")
+    missing = root / "missing.md"
+    missing.write_text('{{pptfig:"primary.pptx"|not-found}}\n', encoding="utf-8")
+    try:
+        markdown_to_word(missing, root / "missing.docx")
+    except ValueError as error:
+        assert "图名不存在" in str(error)
+    else:
+        raise AssertionError("不存在的 PPT 图名没有报错")
+    duplicate = root / "duplicate.pptx"
+    with ZipFile(first) as original_zip, ZipFile(duplicate, "w") as changed_zip:
+        for item in original_zip.infolist():
+            payload = original_zip.read(item.filename)
+            if item.filename.startswith("ppt/comments/") and item.filename.endswith(".xml"):
+                from lxml import etree
+                root_xml = etree.fromstring(payload)
+                marker = next(node for node in root_xml if b"@@fig-overview" in etree.tostring(node))
+                root_xml.append(etree.fromstring(etree.tostring(marker)))
+                payload = etree.tostring(root_xml, encoding="UTF-8", xml_declaration=True)
+            changed_zip.writestr(item, payload)
+    try:
+        read_ppt_figures(duplicate)
+    except ValueError as error:
+        assert "多个 @@ 图名" in str(error)
+    else:
+        raise AssertionError("重复的 PPT 图名没有报错")
+
+
+def make_png(path: Path, rgb: tuple[int, int, int]) -> None:
+    """生成一张 12×12 的测试图片，无需额外图像库。"""
+    def chunk(name: bytes, payload: bytes) -> bytes:
+        content = name + payload
+        return struct.pack(">I", len(payload)) + content + struct.pack(">I", zlib.crc32(content))
+
+    row = b"\x00" + bytes(rgb) * 12
+    content = b"\x89PNG\r\n\x1a\n"
+    content += chunk(b"IHDR", struct.pack(">IIBBBBB", 12, 12, 8, 2, 0, 0, 0))
+    content += chunk(b"IDAT", zlib.compress(row * 12))
+    content += chunk(b"IEND", b"")
+    path.write_bytes(content)
+
+
+def main() -> None:
+    ensure_dependencies()
+    from docx import Document
+    from openpyxl import Workbook
+
+    TEMP_ROOT.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix="manuscript_roundtrip_", dir=TEMP_ROOT) as temporary:
+        root = Path(temporary)
+        image = root / "figure.png"
+        added_image = root / "added.png"
+        make_png(image, (255, 0, 0))
+        make_png(added_image, (0, 0, 255))
+        workbook = Workbook()
+        worksheet = workbook.active
+        worksheet.title = "Sheet1"
+        worksheet.append(["Group", "A", "B"])
+        worksheet.append(["One", 10, 20])
+        worksheet.append(["", 30, 40])
+        worksheet.merge_cells("A2:A3")
+        workbook.save(root / "table.xlsx")
+        (root / "references.bib").write_text(
+            "@article{smith2020, author={Smith, Jane}, title={Example paper}, "
+            "journal={Nature Methods}, year={2020}, volume={17}, pages={1--2}}\n",
+            encoding="utf-8",
+        )
+        directive = json.dumps({
+            "path": (root / "table.xlsx").as_posix(), "sheet": "Sheet1",
+            "range": "A1:C3", "caption": "XLSX table",
+        }, ensure_ascii=False)
+        source = root / "article.md"
+        source.write_text(
+            "# Example\n\n第一段。\n第二段 $E=mc^2$ [@smith2020]。\n\n"
+            "## 二级\n\n### 三级\n\n#### 四级\n\n##### 五级\n\n###### 六级\n\n"
+            "$$f(x)=x^2.$$\n\n"
+            "| Metric | Value |\n|---|---:|\n| Score | 0.81 |\n\n"
+            "<table><caption>Merged table</caption><tr><th colspan=\"2\">Info</th>"
+            "<th>Value</th></tr><tr><td rowspan=\"2\">A</td><td>X</td><td>1</td></tr>"
+            "<tr><td>Y</td><td>2</td></tr></table>\n\n"
+            f"<!-- xlsx-table {directive} -->\n\n"
+            f'![Figure](&&"{image.as_posix()}")\n',
+            encoding="utf-8",
+        )
+        first_word = root / "first.docx"
+        first_markdown = root / "first.md"
+        second_word = root / "second.docx"
+        second_markdown = root / "second.md"
+        markdown_to_word(source, first_word, None)
+        word_to_markdown(first_word, first_markdown)
+        markdown_to_word(first_markdown, second_word, None)
+        word_to_markdown(second_word, second_markdown)
+        assert first_markdown.read_bytes() == second_markdown.read_bytes()
+        result = first_markdown.read_text(encoding="utf-8")
+        assert "| Score" in result
+        assert 'colspan="2"' in result and 'rowspan="2"' in result
+        assert "[@smith2020]" in result and '&&"' in result
+        document = Document(first_word)
+        body = [p.text for p in document.paragraphs if p.style.name in ("Body Text", "First Paragraph")]
+        assert "第一段。" in body and any("第二段" in item for item in body)
+        document.tables[0].cell(1, 1).text = "0.99"
+        document.add_paragraph().add_run().add_picture(str(added_image))
+        edited_word = root / "edited.docx"
+        document.save(edited_word)
+        edited_markdown = root / "edited.md"
+        word_to_markdown(edited_word, edited_markdown)
+        edited = edited_markdown.read_text(encoding="utf-8")
+        assert "0.99" in edited and edited.count('&&"') == 2
+        if (ROOT / "论文草稿.operation.docx").is_file():
+            operation_word = root / "operation.docx"
+            markdown_to_word(source, operation_word, profile="operation", reference=ROOT / "论文草稿.operation.docx")
+            operation = Document(operation_word)
+            levels = {paragraph.style.name for paragraph in operation.paragraphs}
+            assert all(f"Heading {level}" in levels for level in range(1, 7))
+            assert operation.styles["Heading 4"].font.color.rgb == (0, 0, 0)
+            operation_md = root / "operation.md"
+            word_to_markdown(operation_word, operation_md)
+            second_operation_word = root / "operation_second.docx"
+            markdown_to_word(operation_md, second_operation_word, profile="operation", reference=ROOT / "论文草稿.operation.docx")
+            second_operation_md = root / "operation_second.md"
+            word_to_markdown(second_operation_word, second_operation_md)
+            assert operation_md.read_bytes() == second_operation_md.read_bytes()
+        test_ppt_figures(root)
+        print("通过：两种版式、多 PPT 图集、图注、三类表格、公式、引用和 Word 内图片编辑。")
+
+
+if __name__ == "__main__":
+    main()

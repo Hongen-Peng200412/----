@@ -52,6 +52,7 @@ def make_captioned_ppt(source: Path, target: Path, caption: str) -> None:
 def test_ppt_figures(root: Path) -> None:
     """用含真实现代批注的图集副本核对多 PPT、图注、回转与 Word 改图。"""
     from docx import Document
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
 
     original = ROOT / "画图" / "总览图.pptx"
     if not original.is_file():
@@ -79,6 +80,19 @@ def test_ppt_figures(root: Path) -> None:
         markdown_to_word(source, first_word, profile=profile, reference=reference)
         word = Document(first_word)
         assert len(word.inline_shapes) == 2
+        section = word.sections[0]
+        text_width = section.page_width - section.left_margin - section.right_margin
+        assert abs(word.inline_shapes[0].width - text_width) < 20000
+        assert all(
+            paragraph.alignment == WD_ALIGN_PARAGRAPH.CENTER
+            for paragraph in word.paragraphs
+            if paragraph._p.xpath(".//w:drawing")
+        )
+        if profile == "operation":
+            assert all(
+                word.styles[f"Heading {level}"].element.pPr.numPr is None
+                for level in range(1, 7)
+            )
         assert sum(caption in paragraph.text for paragraph in word.paragraphs) == 2
         word_to_markdown(first_word, first_markdown)
         recovered = first_markdown.read_text(encoding="utf-8")

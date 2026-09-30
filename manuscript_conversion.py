@@ -46,7 +46,7 @@ def ensure_dependencies() -> str:
     if pandoc.is_file() and all(importlib.util.find_spec(name) for name in required):
         return str(pandoc)
     if DEPENDENCIES.is_dir() and str(DEPENDENCIES) not in sys.path:
-        sys.path.insert(0, str(DEPENDENCIES))
+        sys.path.append(str(DEPENDENCIES))
     if pandoc.is_file() and all(importlib.util.find_spec(name) for name in required):
         return str(pandoc)
     if not pandoc.is_file() or any(importlib.util.find_spec(name) is None for name in required):
@@ -59,7 +59,7 @@ def ensure_dependencies() -> str:
         ]
         subprocess.run(command, check=True)
         if str(DEPENDENCIES) not in sys.path:
-            sys.path.insert(0, str(DEPENDENCIES))
+            sys.path.append(str(DEPENDENCIES))
         if pandoc.is_file():
             return str(pandoc)
     raise RuntimeError("无法找到 Pandoc。")
@@ -494,6 +494,67 @@ def _format_content_paragraphs(document, body_spacing: float, body_size: float) 
             paragraph_format.keep_with_next = True
 
 
+def _layout_images(document, alignment: str, sizing: str) -> None:
+    """按版心等比放置独立图片，并保留行内图片的原有排版。"""
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    from docx.oxml.ns import qn
+
+    alignments = {
+        "left": WD_ALIGN_PARAGRAPH.LEFT,
+        "center": WD_ALIGN_PARAGRAPH.CENTER,
+        "right": WD_ALIGN_PARAGRAPH.RIGHT,
+    }
+    section = document.sections[0]
+    max_width = section.page_width - section.left_margin - section.right_margin
+    max_height = int((section.page_height - section.top_margin - section.bottom_margin) * 0.85)
+    paragraphs = {id(item._p): item for item in document.paragraphs}
+    for shape in document.inline_shapes:
+        paragraph_element = shape._inline.getparent()
+        while paragraph_element is not None and paragraph_element.tag != qn("w:p"):
+            paragraph_element = paragraph_element.getparent()
+        if paragraph_element is None:
+            continue
+        paragraph = paragraphs.get(id(paragraph_element))
+        if (paragraph is None or paragraph.text.strip()
+                or len(paragraph._p.findall(".//" + qn("wp:inline"))) != 1):
+            continue
+        paragraph.alignment = alignments[alignment]
+        if (sizing == "fit" and shape.width and shape.height
+                and not shape._inline.docPr.get("title", "").startswith(PPT_EDITED_TITLE_PREFIX)):
+            width, height = shape.width, shape.height
+            if max_width * height <= max_height * width:
+                shape.width = max_width
+                shape.height = round(height * max_width / width)
+            else:
+                shape.width = round(width * max_height / height)
+                shape.height = max_height
+
+
+def _remove_heading_numbering(document) -> None:
+    """清除参考模板附着在标题样式上的自动章节编号。"""
+    from docx.oxml.ns import qn
+
+    heading_ids = set()
+    for level in range(1, 7):
+        name = f"Heading {level}"
+        if name not in document.styles:
+            continue
+        style = document.styles[name]
+        heading_ids.add(style.style_id)
+        if style.element.pPr is not None and style.element.pPr.numPr is not None:
+            style.element.pPr.remove(style.element.pPr.numPr)
+    for paragraph in document.paragraphs:
+        if paragraph.style.style_id not in heading_ids:
+            continue
+        if paragraph._p.pPr is not None and paragraph._p.pPr.numPr is not None:
+            paragraph._p.pPr.remove(paragraph._p.pPr.numPr)
+    numbering = document.part.numbering_part.element
+    for level in numbering.iter(qn("w:lvl")):
+        linked_style = level.find(qn("w:pStyle"))
+        if linked_style is not None and linked_style.get(qn("w:val")) in heading_ids:
+            level.remove(linked_style)
+
+
 def _fit_long_equations(document, size_half_points: int) -> None:
     """仅缩小超长块级公式，避免公式内容伸入页边距。"""
     from docx.oxml import OxmlElement
@@ -541,7 +602,7 @@ def _repair_underbraces(document) -> None:
         inner.getparent().replace(inner, group)
 
 
-def _apply_nature_layout(path: Path) -> None:
+def _apply_nature_layout(path: Path, image_align: str, image_size: str) -> None:
     """设置 Nature 初次投稿需要的字体、双倍行距、行号和表格分页。"""
     from docx import Document
     from docx.oxml import OxmlElement
@@ -597,6 +658,7 @@ def _apply_nature_layout(path: Path) -> None:
                 run.font.bold = True
                 run.font.italic = False
     _format_content_paragraphs(document, 2.0, 12)
+    _layout_images(document, image_align, image_size)
     _fit_long_equations(document, 20)
     _repair_underbraces(document)
     body = document.element.body
@@ -661,7 +723,7 @@ def _apply_nature_layout(path: Path) -> None:
     document.save(path)
 
 
-def _apply_operation_layout(path: Path, reference: Path) -> None:
+def _apply_operation_layout(path: Path, reference: Path, image_align: str, image_size: str) -> None:
     """沿用 Operation 页框和标题层级，形成适合通读的 Word 稿。"""
     from docx import Document
     from docx.enum.style import WD_STYLE_TYPE
@@ -709,18 +771,26 @@ def _apply_operation_layout(path: Path, reference: Path) -> None:
             WD_ALIGN_PARAGRAPH.CENTER if level == 1 else WD_ALIGN_PARAGRAPH.LEFT
         )
     _format_content_paragraphs(document, 1.5, 10.5)
+    _remove_heading_numbering(document)
+    _layout_images(document, image_align, image_size)
     _fit_long_equations(document, 19)
     _repair_underbraces(document)
     document.save(path)
 
 
 def markdown_to_word(source: Path, target: Path, bibliography: Path | None = None,
-                     profile: str = "nature", reference: Path | None = None) -> None:
+                     profile: str = "nature", reference: Path | None = None,
+                     image_align: str = "center", image_size: str = "fit") -> None:
     """将 Markdown 草稿转换为保留公式、图表、PPT 图名和引用键的 Word 文档。"""
+    pandoc = ensure_dependencies()
     from docx import Document
     from PIL import Image
 
-    pandoc = ensure_dependencies()
+    if image_align not in ("left", "center", "right"):
+        raise ValueError(f"未知图片对齐方式：{image_align}")
+    if image_size not in ("fit", "original"):
+        raise ValueError(f"未知图片放置方式：{image_size}")
+
     source = source.resolve()
     target = target.resolve()
     if source == target:
@@ -841,9 +911,9 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
             options.append(f"--reference-doc={layout_reference}")
         run_pandoc(pandoc, json.dumps(document, ensure_ascii=False), "json", "docx", options, target)
         if profile == "operation":
-            _apply_operation_layout(target, layout_reference)
+            _apply_operation_layout(target, layout_reference, image_align, image_size)
         else:
-            _apply_nature_layout(target)
+            _apply_nature_layout(target, image_align, image_size)
         if figure_specs:
             word = Document(target)
             marked = set()
@@ -1056,10 +1126,9 @@ def _normalize_markdown_spacing(markdown: str) -> str:
 
 def word_to_markdown(source: Path, target: Path) -> None:
     """把 Word 的文字、公式和表格写回 Markdown, 同时识别未改动的 PPT 图集图片。"""
+    pandoc = ensure_dependencies()
     from docx import Document
     from docx.oxml.ns import qn
-
-    pandoc = ensure_dependencies()
     source = source.resolve()
     target = target.resolve()
     if source == target:

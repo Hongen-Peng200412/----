@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import copy
+import locale
 import posixpath
 import re
 import subprocess
+import sys
 import tempfile
 from pathlib import Path, PurePosixPath
 from xml.etree import ElementTree
@@ -72,10 +74,15 @@ def export_ppt_figure(ppt_path: Path, page: int, output: Path, temp_root: Path) 
             "-File", str(EXPORT_SCRIPT), "-DeckPath", str(ppt_path),
             "-SlideNumber", str(page), "-OutputPath", str(raw), "-WidthPx", "3600",
         ]
-        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False)
-        if result.returncode or not raw.is_file():
-            message = result.stderr.decode("utf-8", errors="replace").strip()
-            raise RuntimeError(f"PowerPoint 第 {page} 页导图失败：{message}")
+        result = subprocess.run(
+            command, capture_output=True, check=False, text=True,
+            encoding=locale.getpreferredencoding(False), errors="replace",
+        )
+        message = "\n".join(part.strip() for part in (result.stderr, result.stdout) if part.strip())
+        if result.returncode or not raw.is_file() or raw.stat().st_size == 0:
+            raise RuntimeError(f"PowerPoint 第 {page} 页导图失败：{message or '没有生成有效 PNG'}")
+        if message:
+            print(message, file=sys.stderr)
         with Image.open(raw) as original:
             canvas = original.convert("RGB")
             difference = ImageChops.difference(canvas, Image.new("RGB", canvas.size, "white"))

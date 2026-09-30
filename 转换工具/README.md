@@ -38,11 +38,14 @@ python word_to_md.py
 ```powershell
 python md_to_word.py 文章.md --output 文章.nature.docx --bib references.bib
 python md_to_word_operation.py 文章.md --output 文章.operation.docx --reference D:/OneDrive/Operation.docx
+python md_to_word_operation.py 文章.md --output 文章.operation.docx --image-align right --image-size original
 python word_to_md.py 文章.nature.docx --output 文章.from_word.md
 python word_to_md.py 文章.operation.docx --output 文章.operation.from_word.md
 ```
 
 三个命令都不覆盖输入文件。Word 转回 Markdown 时，图片保存到输出 Markdown 所在目录的 `manuscript_assets/images/`；内容相同的图片复用已有文件，Word 中新增或替换的图片写入新文件。
+
+两种 Markdown → Word 版式的独立图片默认居中，并在保持长宽比的前提下放大至版心可容纳的最大尺寸，同时为图注留出空间。可用 `--image-align left|center|right` 改变位置，用 `--image-size original` 保留转换器的原插入尺寸。
 
 阅读代码可先看三个命令入口，再看 `manuscript_conversion.py` 的双向主流程；`ppt_figures.py` 只负责 PPT 图名、备注和导图。
 
@@ -66,6 +69,8 @@ PPT 图集采用一页一图。将引用独立写在一行，双引号内是 PPT
 同一篇 Markdown 可引用多个 PPT。相对路径以这篇 Markdown 所在目录为基准，绝对路径直接使用。每张图在所属 PPT 的一条批注中写 `@@fig-overview` 这样的图名；去掉首尾空白后整条批注必须是 `@@` 加图名。同一 PPT 内图名不得重复，不同 PPT 可使用相同图名。该页备注是 Word 图片下方的图注；其他批注只保存数据来源、服务器路径与绘图代码等追溯信息，不进入正文。未引用的空白草稿页不要求填写图名或备注。被引用页的备注为空时，转换器会提示，并只插入图片。
 
 转换器按图名找到幻灯片，以清晰 PNG 导出并裁掉页面大块留白。生成的 Word 图片保留 PPT 路径和图名标记；未修改的图片转回 Markdown 后仍是原来的 `{{pptfig:"路径"|图名}}`。如果在 Word 里直接调整或替换图集图片，回转时会保存 Word 中的图片为普通图片，并在它上方写入 `pptfig-edited` 来源注释，保留原 PPT 路径和图名；之后要把修改重新纳入图集，需要在 PPT 中更新成品图。
+
+若图片已成功导出，但 PowerPoint 在关闭演示文稿时出错，转换器会提示并继续；若图片没有成功导出，则报告实际导出错误，不会写出缺图的 Word。
 
 ### 表格
 
@@ -118,7 +123,7 @@ $$
 
 行内 `$...$` 和块级 `$$...$$` 公式转换为 Word 可编辑公式。多行公式保留明确的换行和对齐点；下括号使用 Word 可伸展的原生公式结构。极长的独立公式才缩小字号，其余公式沿用正文大小。Markdown 中相邻的正文行各自成为 Word 段落，段间留白，正文首行缩进两个汉字宽度。
 
-Nature 版采用 A4、四边 2.54 cm 页边距、12 磅正文、双倍行距、连续行号和 6 磅段后间距；表格另起一页，表题与表体同页。这些版式参照 [Nature 的格式指南](https://www.nature.com/nature/for-authors/formatting-guide)；其中 A4 和页边距是本工具的排版选择，并非 Nature 对初次投稿的硬性规定。Operation 版沿用 `D:/OneDrive/Operation.docx` 的 A4 页面和标题层级；该模板四边页边距现为 2.54 cm。阅读版正文为 10.5 磅、1.5 倍行距和 6 磅段后间距，一级至六级标题均有明确样式。两种版式仅改变 Word 的排版，不改写原稿内容。
+Nature 版采用 A4、四边 2.54 cm 页边距、12 磅正文、双倍行距、连续行号和 6 磅段后间距；表格另起一页，表题与表体同页。这些版式参照 [Nature 的格式指南](https://www.nature.com/nature/for-authors/formatting-guide)；其中 A4 和页边距是本工具的排版选择，并非 Nature 对初次投稿的硬性规定。Operation 版沿用 `D:/OneDrive/Operation.docx` 的 A4 页面和标题层级；该模板四边页边距现为 2.54 cm。阅读版正文为 10.5 磅、1.5 倍行距和 6 磅段后间距，一级至六级标题均有明确样式，但默认不显示模板中的自动章节编号。两种版式仅改变 Word 的排版，不改写原稿内容。
 
 Operation 版式文件若被 Word 独占锁定，转换器会从当前打开的文档读取临时版式副本，不会保存或关闭该文档。若有多个同名文档同时打开，无法确定使用哪一份时会提示关闭多余文档，或用 `--reference` 指定另一份可读取的版式文件。
 

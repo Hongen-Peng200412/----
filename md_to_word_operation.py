@@ -16,12 +16,17 @@ def main() -> None:
     parser.add_argument("source", nargs="?", type=Path, default=Path(__file__).with_name("论文草稿.md"))
     parser.add_argument("--output", type=Path, help="输出 DOCX；默认与输入同名，加 .operation.docx")
     parser.add_argument("--bib", type=Path, help="BibTeX 文献库；默认输入旁的 references.bib")
+    parser.add_argument("--image-align", choices=("left", "center", "right"), default="center",
+                        help="独立图片对齐方式；默认 center")
+    parser.add_argument("--image-size", choices=("fit", "original"), default="fit",
+                        help="独立图片等比适配版心或保留原插入尺寸；默认 fit")
     parser.add_argument("--reference", type=Path, default=OPERATION_REFERENCE,
                         help="版式参考 Word；默认 D:/OneDrive/Operation.docx")
     options = parser.parse_args()
     output = options.output or options.source.with_name(options.source.stem + ".operation.docx")
     markdown_to_word(options.source, output, options.bib,
-                     profile="operation", reference=options.reference)
+                     profile="operation", reference=options.reference,
+                     image_align=options.image_align, image_size=options.image_size)
     print(f"已生成：{output.resolve()}")
 
 

@@ -69,7 +69,7 @@ def plot_radar(condition: str, label: str) -> None:
         "Small molecule",
         "Sugar",
         "Metal ion",
-        "Peptide (n=1)",
+        "Peptide",
     )
     angles = np.linspace(0, 2 * np.pi, len(keys), endpoint=False)
     closed_angles = np.r_[angles, angles[0]]
@@ -109,7 +109,7 @@ def plot_radar(condition: str, label: str) -> None:
         fontsize=8, handlelength=2.2, labelspacing=1.05,
     )
     fig.text(
-        0.745, 0.20, "*Small-molecule known sites only\n  (different test population)",
+        0.745, 0.20, "*Small-molecule scored sites only\n  (different test population)",
         fontsize=6.9, color="#58636D", linespacing=1.45,
     )
     fig.text(0.745, 0.10, "Radial axis: 30–100%", fontsize=7.2, color="#58636D")
@@ -215,6 +215,7 @@ def main() -> None:
         known = DATA["small_known_site"][condition]
         assert sum(known["matcher_correct"]) == (301 if condition == "real" else 303)
         assert sum(known["emerald_correct"]) == (233 if condition == "real" else 263)
+        assert sum(known["emerald_scored"]) == DATA["radar"]["emerald_small_known_site"][condition][1]
         label = "Real receptor" if condition == "real" else "CryoAtom2 receptor"
         plot_radar(condition, label)
         plot_strongest_categories(condition, label)

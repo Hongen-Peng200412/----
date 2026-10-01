@@ -12,7 +12,7 @@
       "density_only-0": {"f1": [0.8244778307072188, 1], "overall": [931, 1160], "small": [303, 348], "sugar": [177, 277], "metal": [450, 534], "peptide": [1, 1]},
       "pocket_only-0": {"f1": [0.8265381764269829, 1], "overall": [938, 1160], "small": [318, 348], "sugar": [164, 277], "metal": [455, 534], "peptide": [1, 1]}
     },
-    "emerald_small_known_site": {"real": [233, 357], "cryo": [263, 357]}
+    "emerald_small_known_site": {"real": [233, 282], "cryo": [263, 313]}
   },
   "strongest_by_candidate_smiles_count": {
     "real": {

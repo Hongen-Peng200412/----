@@ -68,19 +68,22 @@ def export_ppt_figure(ppt_path: Path, page: int, output: Path, temp_root: Path) 
 
     temp_root.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="ppt_render_", dir=temp_root) as directory:
-        raw = Path(directory) / "full_slide.png"
-        command = [
-            "powershell.exe", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass",
-            "-File", str(EXPORT_SCRIPT), "-DeckPath", str(ppt_path),
-            "-SlideNumber", str(page), "-OutputPath", str(raw), "-WidthPx", "3600",
-        ]
-        result = subprocess.run(
-            command, capture_output=True, check=False, text=True,
-            encoding=locale.getpreferredencoding(False), errors="replace",
-        )
-        message = "\n".join(part.strip() for part in (result.stderr, result.stdout) if part.strip())
-        if result.returncode or not raw.is_file() or raw.stat().st_size == 0:
-            raise RuntimeError(f"PowerPoint 第 {page} 页导图失败：{message or '没有生成有效 PNG'}")
+        for attempt in range(3):
+            raw = Path(directory) / f"full_slide_{attempt + 1}.png"
+            command = [
+                "powershell.exe", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass",
+                "-File", str(EXPORT_SCRIPT), "-DeckPath", str(ppt_path),
+                "-SlideNumber", str(page), "-OutputPath", str(raw), "-WidthPx", "3600",
+            ]
+            result = subprocess.run(
+                command, capture_output=True, check=False, text=True,
+                encoding=locale.getpreferredencoding(False), errors="replace",
+            )
+            message = "\n".join(part.strip() for part in (result.stderr, result.stdout) if part.strip())
+            if result.returncode == 0 and raw.is_file() and raw.stat().st_size > 0:
+                break
+            if attempt == 2 or "COMException" not in message:
+                raise RuntimeError(f"PowerPoint 第 {page} 页导图失败：{message or '没有生成有效 PNG'}")
         if message:
             print(message, file=sys.stderr)
         with Image.open(raw) as original:

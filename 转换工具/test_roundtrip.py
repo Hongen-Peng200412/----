@@ -5,10 +5,12 @@ from __future__ import annotations
 import json
 import shutil
 import struct
+import subprocess
 import sys
 import tempfile
 import zlib
 from pathlib import Path
+from unittest.mock import patch
 from zipfile import ZipFile
 
 
@@ -22,7 +24,7 @@ from manuscript_conversion import (
     markdown_to_word,
     word_to_markdown,
 )
-from 转换工具.ppt_figures import read_ppt_figures
+from 转换工具.ppt_figures import export_ppt_figure, read_ppt_figures
 
 
 def make_captioned_ppt(source: Path, target: Path, caption: str) -> None:
@@ -180,6 +182,28 @@ def main() -> None:
         added_image = root / "added.png"
         make_png(image, (255, 0, 0))
         make_png(added_image, (0, 0, 255))
+        export_attempts = []
+
+        def intermittent_export(command, **_kwargs):
+            export_attempts.append(command)
+            if len(export_attempts) == 1:
+                return subprocess.CompletedProcess(command, 1, "", "Slide.Export : Object does not exist. COMException")
+            shutil.copyfile(image, Path(command[command.index("-OutputPath") + 1]))
+            return subprocess.CompletedProcess(command, 0, "", "")
+
+        retried_image = root / "retried.png"
+        with patch("转换工具.ppt_figures.subprocess.run", side_effect=intermittent_export):
+            export_ppt_figure(root / "unused.pptx", 7, retried_image, root)
+        assert len(export_attempts) == 2 and retried_image.is_file()
+        permanent_error = subprocess.CompletedProcess([], 1, "", "Slide.Export : invalid slide")
+        with patch("转换工具.ppt_figures.subprocess.run", return_value=permanent_error) as failed_export:
+            try:
+                export_ppt_figure(root / "unused.pptx", 99, root / "invalid.png", root)
+            except RuntimeError as error:
+                assert "invalid slide" in str(error)
+            else:
+                raise AssertionError("永久性导图错误未报告")
+            assert failed_export.call_count == 1
         workbook = Workbook()
         worksheet = workbook.active
         worksheet.title = "Sheet1"

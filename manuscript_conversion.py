@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import base64
 import copy
+import errno
 import html
 import importlib.util
 import json
@@ -13,6 +14,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 import zlib
 from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile
@@ -781,7 +783,7 @@ def _apply_operation_layout(path: Path, reference: Path, image_align: str, image
 def markdown_to_word(source: Path, target: Path, bibliography: Path | None = None,
                      profile: str = "nature", reference: Path | None = None,
                      image_align: str = "center", image_size: str = "fit") -> None:
-    """将 Markdown 草稿转换为保留公式、图表、PPT 图名和引用键的 Word 文档。"""
+    """先在 temp 中生成完整 Word, 校验后再发布到目标路径。"""
     pandoc = ensure_dependencies()
     from docx import Document
     from PIL import Image
@@ -906,16 +908,17 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
         bib = bibliography.resolve() if bibliography else source.parent / "references.bib"
         _append_bibliography(document, original, pandoc, bib, keys)
         target.parent.mkdir(parents=True, exist_ok=True)
+        completed_word = figure_root / "completed.docx"
         options = ["--standalone", f"--resource-path={source.parent}"]
         if layout_reference is not None:
             options.append(f"--reference-doc={layout_reference}")
-        run_pandoc(pandoc, json.dumps(document, ensure_ascii=False), "json", "docx", options, target)
+        run_pandoc(pandoc, json.dumps(document, ensure_ascii=False), "json", "docx", options, completed_word)
         if profile == "operation":
-            _apply_operation_layout(target, layout_reference, image_align, image_size)
+            _apply_operation_layout(completed_word, layout_reference, image_align, image_size)
         else:
-            _apply_nature_layout(target, image_align, image_size)
+            _apply_nature_layout(completed_word, image_align, image_size)
         if figure_specs:
-            word = Document(target)
+            word = Document(completed_word)
             marked = set()
             for shape in word.inline_shapes:
                 properties = shape._inline.docPr
@@ -929,7 +932,30 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                 marked.add(token)
             if marked != set(figure_specs):
                 raise RuntimeError(f"Word 图片标记不完整：{sorted(set(figure_specs) - marked)}")
-            word.save(target)
+            word.save(completed_word)
+        with ZipFile(completed_word) as package:
+            damaged_member = package.testzip()
+        if damaged_member is not None:
+            raise RuntimeError(f"生成的 Word 压缩包损坏：{damaged_member}")
+        try:
+            for attempt in range(3):
+                try:
+                    os.replace(completed_word, target)
+                    break
+                except OSError as error:
+                    if error.errno == errno.EXDEV:
+                        shutil.copy2(completed_word, target)
+                        break
+                    if attempt == 2 or error.errno not in (errno.EACCES, errno.EPERM, errno.EINVAL):
+                        raise
+                    time.sleep(0.5)
+        except OSError as error:
+            pending_word = TEMP_ROOT / f"pending_{figure_root.name}.docx"
+            shutil.move(completed_word, pending_word)
+            raise RuntimeError(
+                f"无法写入目标 Word：{target}\n完整 Word 已保留在：{pending_word}\n"
+                "请关闭占用目标文件的 Word 窗口，或用 --output 指定另一个文件名。"
+            ) from error
 
 
 def _remove_generated_styles(document: dict, citation_markers: dict[str, str]) -> None:

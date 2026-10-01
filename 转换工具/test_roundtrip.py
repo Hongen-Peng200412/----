@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import errno
 import json
 import shutil
 import struct
@@ -239,6 +240,18 @@ def main() -> None:
         second_word = root / "second.docx"
         second_markdown = root / "second.md"
         markdown_to_word(source, first_word, None)
+        original_word = first_word.read_bytes()
+        pending_before = set(TEMP_ROOT.glob("pending_manuscript_figures_*.docx"))
+        with patch("manuscript_conversion.os.replace", side_effect=OSError(errno.EINVAL, "target busy")):
+            try:
+                markdown_to_word(source, first_word, None)
+            except RuntimeError as error:
+                assert "完整 Word 已保留" in str(error)
+            else:
+                raise AssertionError("目标写入失败未报告")
+        pending_after = set(TEMP_ROOT.glob("pending_manuscript_figures_*.docx")) - pending_before
+        assert len(pending_after) == 1 and first_word.read_bytes() == original_word
+        pending_after.pop().unlink()
         word_to_markdown(first_word, first_markdown)
         markdown_to_word(first_markdown, second_word, None)
         word_to_markdown(second_word, second_markdown)

@@ -45,6 +45,8 @@ python word_to_md.py 文章.operation.docx --output 文章.operation.from_word.m
 
 三个命令都不覆盖输入文件。Word 转回 Markdown 时，图片保存到输出 Markdown 所在目录的 `manuscript_assets/images/`；内容相同的图片复用已有文件，Word 中新增或替换的图片写入新文件。
 
+Markdown → Word 会先在 `temp/` 完成排版、写入图集标记并检查 DOCX，再发布到输出路径。默认输出与 `temp/` 位于同一磁盘，替换时不会留下半成品；若目标 Word 被占用，命令会报出完整新稿在 `temp/pending_*.docx` 中的路径。关闭目标 Word 后重新运行，或用 `--output` 指定新文件名即可。
+
 两种 Markdown → Word 版式的独立图片默认居中，并在保持长宽比的前提下放大至版心可容纳的最大尺寸，同时为图注留出空间。可用 `--image-align left|center|right` 改变位置，用 `--image-size original` 保留转换器的原插入尺寸。
 
 阅读代码可先看三个命令入口，再看 `manuscript_conversion.py` 的双向主流程；`ppt_figures.py` 只负责 PPT 图名、备注和导图。

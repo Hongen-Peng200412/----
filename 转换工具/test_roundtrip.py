@@ -101,6 +101,13 @@ def test_ppt_figures(root: Path) -> None:
                 word.styles[f"Heading {level}"].element.pPr.numPr is None
                 for level in range(1, 7)
             )
+            captions = [paragraph for paragraph in word.paragraphs if paragraph.text == caption]
+            assert len(captions) == 2
+            assert all(paragraph.paragraph_format.line_spacing == 1.0 for paragraph in captions)
+            assert all(
+                run.font.name == "华文仿宋" and run.font.size.pt == 9
+                for paragraph in captions for run in paragraph.runs
+            )
         assert sum(caption in paragraph.text for paragraph in word.paragraphs) == 2
         with patch("manuscript_conversion.export_ppt_figures", wraps=export_ppt_figures) as comparisons:
             word_to_markdown(first_word, first_markdown)
@@ -300,6 +307,15 @@ def main() -> None:
             levels = {paragraph.style.name for paragraph in operation.paragraphs}
             assert all(f"Heading {level}" in levels for level in range(1, 7))
             assert operation.styles["Heading 4"].font.color.rgb == (0, 0, 0)
+            table_captions = [paragraph for paragraph in operation.paragraphs
+                              if paragraph._p.pPr is not None and paragraph._p.pPr.pStyle is not None
+                              and paragraph._p.pPr.pStyle.val == "TableCaption"]
+            assert len(table_captions) == 2
+            assert all(paragraph.paragraph_format.line_spacing == 1.0 for paragraph in table_captions)
+            assert all(
+                run.font.name == "华文仿宋" and run.font.size.pt == 9
+                for paragraph in table_captions for run in paragraph.runs
+            )
             operation_md = root / "operation.md"
             word_to_markdown(operation_word, operation_md)
             second_operation_word = root / "operation_second.docx"

@@ -730,6 +730,7 @@ def _apply_operation_layout(path: Path, reference: Path, image_align: str, image
     from docx import Document
     from docx.enum.style import WD_STYLE_TYPE
     from docx.enum.text import WD_ALIGN_PARAGRAPH
+    from docx.oxml.ns import qn
     from docx.shared import Pt, RGBColor
 
     source = Document(reference)
@@ -773,6 +774,27 @@ def _apply_operation_layout(path: Path, reference: Path, image_align: str, image
             WD_ALIGN_PARAGRAPH.CENTER if level == 1 else WD_ALIGN_PARAGRAPH.LEFT
         )
     _format_content_paragraphs(document, 1.5, 10.5)
+    paragraphs = document.paragraphs
+    for index, paragraph in enumerate(paragraphs):
+        properties = paragraph._p.pPr
+        is_table_caption = (properties is not None and properties.pStyle is not None
+                            and properties.pStyle.val == "TableCaption")
+        is_figure_caption = False
+        if index and paragraphs[index - 1].text.strip() == "":
+            descriptions = [item.get("descr", "").strip()
+                            for item in paragraphs[index - 1]._p.xpath(".//wp:docPr")]
+            is_figure_caption = bool(paragraph.text.strip() and paragraph.text.strip() in descriptions)
+        if not (is_table_caption or is_figure_caption):
+            continue
+        paragraph.paragraph_format.first_line_indent = Pt(0)
+        paragraph.paragraph_format.line_spacing = 1.0
+        paragraph.paragraph_format.keep_together = True
+        if is_table_caption:
+            paragraph.paragraph_format.keep_with_next = True
+        for run in paragraph.runs:
+            run.font.name = "华文仿宋"
+            run.font.size = Pt(9)
+            run._r.get_or_add_rPr().rFonts.set(qn("w:eastAsia"), "华文仿宋")
     _remove_heading_numbering(document)
     _layout_images(document, image_align, image_size)
     _fit_long_equations(document, 19)

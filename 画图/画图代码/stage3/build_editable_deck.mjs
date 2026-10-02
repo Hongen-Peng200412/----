@@ -1,4 +1,4 @@
-/** 从冻结实例 RMSD 生成三页可逐点编辑的 PowerPoint 图集。 */
+/** 从冻结逐实例 RMSD 生成两页可逐点编辑的 PowerPoint 图集。 */
 
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -6,166 +6,180 @@ import crypto from "node:crypto";
 import pptxgen from "file:///C:/Users/15919/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/pptxgenjs/dist/pptxgen.cjs.js";
 
 const paper = "C:/Users/15919/Desktop/论文草稿";
-const input = path.join(paper, "画图/画图代码/stage3/data.json");
-const buildDir = path.join(paper, "temp/stage3-deck-build");
-const output = path.join(buildDir, "stage3-native-draft.pptx");
-const data = JSON.parse(await fs.readFile(input, "utf8"));
+const data = JSON.parse(await fs.readFile(path.join(paper, "画图/画图代码/stage3/data.json"), "utf8"));
+const output = path.join(paper, "temp/stage3-deck-build/stage3-native-draft.pptx");
 const pptx = new pptxgen();
-const width = 960;
-const height = 505;
-const ptToIn = value => value / 72;
-const colors = { GT: "32887D", CA2: "5575B2", Build: "B17642", ink: "26333D", muted: "68747D", rule: "B8C0C5" };
-const full = new Map(data.series.map(item => [`${item.model}/${item.receptor}/${item.protocol}`, item.rows]));
-const subset = new Set(data.build.filter(row => row.top1 !== null && row.best !== null).map(row => `${row.pdb_id}/${row.occurrence_id}`));
-const legends = [
-  "图 7 | 官方与 local_cov 模型的首位配体姿态 RMSD。完整测试集包含 446 个小分子实例。左半为真实中心条件 C0，右半为真实包络条件 E；青绿色表示真实受体，蓝色表示 CryoAtom2 重建受体。每个浅色点是一个实例的 Top-1 姿态；箱体、中间横线和须分别表示第 25–75 百分位数、中位数和第 5–95 百分位数。纵轴使用对数刻度，灰色虚线标出 2 Å。官方模型在真实受体条件下有一个实例未形成可评价姿态，因此相应两组各有 445 个 RMSD；其余各组均为 446 个。",
-  "图 8 | 官方与 local_cov 模型的 50 个候选中最佳配体姿态 RMSD。数据、C0/E 定位条件及颜色与图 7 相同。每个点是同一实例 50 个候选中最低的重原子 RMSD，表示事后可达到的精度上界，而非模型的候选排序结果。箱体、中间横线和须分别表示第 25–75 百分位数、中位数和第 5–95 百分位数；纵轴为对数刻度，虚线为 2 Å。官方模型在真实受体条件下有一个实例无可评价姿态，相应两组 n = 445；其余组 n = 446。",
-  "图 9 | Find 命中实例上 local_cov-C 与 Emap2lig-Build 的配体姿态 RMSD。共同展示 237 个有可评价姿态的测试实例。a，原排序首位姿态；b，50 个候选中的最低 RMSD。local_cov-C 在真实中心 C0 下分别使用真实受体（青绿色）和 CryoAtom2 受体（蓝色），Emap2lig-Build 使用 Find 预测的原生 blob（赭色）。每点为一个实例；箱体、中间横线和须分别表示第 25–75 百分位数、中位数和第 5–95 百分位数。纵轴为对数刻度，虚线为 2 Å。",
-];
+const inch = value => value / 72;
+const color = { GT: "2D887E", CA2: "5879BD", Build: "B57442", ink: "25323B", light: "B8C2C8", guide: "C7CFD4" };
+const full = new Map(data.series.map(group => [`${group.model}/${group.receptor}/${group.protocol}`, group.rows]));
+const shared = new Set(data.build.filter(row => row.top1 !== null && row.best !== null)
+  .map(row => `${row.pdb_id}/${row.occurrence_id}`));
+const build = data.build.filter(row => shared.has(`${row.pdb_id}/${row.occurrence_id}`));
 
-pptx.defineLayout({ name: "STAGE3", width: ptToIn(width), height: ptToIn(height) });
+pptx.defineLayout({ name: "STAGE3", width: inch(980), height: inch(720) });
 pptx.layout = "STAGE3";
 pptx.author = "Manuscript figures";
-pptx.subject = "Frozen Stage3 docking RMSD distributions";
 
-function addText(slide, value, x, y, w, h, size, options = {}) {
+function label(slide, value, x, y, w, h, size, options = {}) {
   slide.addText(value, {
-    x: ptToIn(x), y: ptToIn(y), w: ptToIn(w), h: ptToIn(h),
-    fontFace: "Arial", fontSize: size, color: options.color ?? colors.ink,
+    x: inch(x), y: inch(y), w: inch(w), h: inch(h),
+    fontFace: "Arial", fontSize: size, color: options.color ?? color.ink,
     bold: options.bold ?? false, align: options.align ?? "left",
-    valign: "mid", breakLine: false, margin: 0,
-    vert: options.vertical ? "vert270" : "horz",
+    valign: "mid", margin: 0, vert: options.vertical ? "vert270" : "horz",
   });
 }
 
-function addLine(slide, x1, y1, x2, y2, color, weight, dashed = false) {
-  const left = Math.min(x1, x2);
-  const top = Math.min(y1, y2);
+function line(slide, x1, y1, x2, y2, shade, width = 0.8, dashed = false) {
   slide.addShape(pptx.ShapeType.line, {
-    x: ptToIn(left), y: ptToIn(top),
-    w: ptToIn(Math.max(Math.abs(x2 - x1), 0.01)),
-    h: ptToIn(Math.max(Math.abs(y2 - y1), 0.01)),
+    x: inch(Math.min(x1, x2)), y: inch(Math.min(y1, y2)),
+    w: inch(Math.max(Math.abs(x2 - x1), 0.01)),
+    h: inch(Math.max(Math.abs(y2 - y1), 0.01)),
     flipV: (x2 - x1) * (y2 - y1) < 0,
-    line: { color, width: weight, dash: dashed ? "dash" : "solid" },
+    line: { color: shade, width, dash: dashed ? "dash" : "solid" },
   });
 }
 
-function addDot(slide, x, y, color) {
-  slide.addShape(pptx.ShapeType.ellipse, {
-    x: ptToIn(x - 1.65), y: ptToIn(y - 1.65), w: ptToIn(3.3), h: ptToIn(3.3),
-    fill: { color, transparency: 73 }, line: { color, transparency: 100 },
+function dot(slide, x, y, shade, capped) {
+  slide.addShape(capped ? pptx.ShapeType.triangle : pptx.ShapeType.ellipse, {
+    x: inch(x - (capped ? 3 : 1.55)), y: inch(y - (capped ? 3 : 1.55)),
+    w: inch(capped ? 6 : 3.1), h: inch(capped ? 5 : 3.1),
+    fill: { color: shade, transparency: capped ? 18 : 61 },
+    line: { color: shade, transparency: 100 },
   });
 }
 
-function addDistribution(slide, rows, field, x, color, mapY) {
+function quantile(values, fraction) {
+  const index = fraction * (values.length - 1);
+  const low = Math.floor(index);
+  const high = Math.ceil(index);
+  return values[low] + (index - low) * (values[high] - values[low]);
+}
+
+function distribution(slide, rows, field, x, shade, mapY, cap = null) {
   const valid = rows.filter(row => row[field] !== null);
   const values = valid.map(row => row[field]).sort((a, b) => a - b);
-  const quantile = fraction => {
-    const position = fraction * (values.length - 1);
-    const start = Math.floor(position);
-    const end = Math.ceil(position);
-    return values[start] + (position - start) * (values[end] - values[start]);
-  };
-
-  // 每个原始实例仍各占一个 PowerPoint 原生点; 抖动只移动横向显示位置。
+  // 每个原始实例画一个独立对象；哈希只决定横向抖动，不进入 RMSD 计算。
   for (const row of valid) {
-    const token = `${row.pdb_id}/${row.occurrence_id}`;
-    const fraction = crypto.createHash("sha256").update(token).digest().readUInt32BE(0) / 2 ** 32;
-    addDot(slide, x + (fraction - 0.5) * 34, mapY(row[field]), color);
+    const key = `${row.pdb_id}/${row.occurrence_id}`;
+    const fraction = crypto.createHash("sha256").update(key).digest().readUInt32BE(0) / 2 ** 32;
+    const capped = cap !== null && row[field] > cap;
+    dot(slide, x + (fraction - 0.5) * 34, capped ? mapY(cap) - 21 : mapY(row[field]), shade, capped);
   }
-  const [p05, p25, median, p75, p95] = [0.05, 0.25, 0.5, 0.75, 0.95].map(quantile);
-  addLine(slide, x, mapY(p05), x, mapY(p95), color, 1.1);
-  addLine(slide, x - 8, mapY(p05), x + 8, mapY(p05), color, 1.1);
-  addLine(slide, x - 8, mapY(p95), x + 8, mapY(p95), color, 1.1);
+  const [p05, p25, median, p75, p95] = [0.05, 0.25, 0.5, 0.75, 0.95]
+    .map(fraction => quantile(values, fraction));
+  line(slide, x, mapY(p05), x, mapY(p95), shade, 1.1);
+  for (const point of [p05, p95]) line(slide, x - 9, mapY(point), x + 9, mapY(point), shade, 1.1);
   slide.addShape(pptx.ShapeType.rect, {
-    x: ptToIn(x - 12), y: ptToIn(mapY(p75)), w: ptToIn(24),
-    h: ptToIn(mapY(p25) - mapY(p75)),
-    fill: { color: "FFFFFF" }, line: { color, width: 1.5 },
+    x: inch(x - 13), y: inch(mapY(p75)), w: inch(26), h: inch(mapY(p25) - mapY(p75)),
+    fill: { color: "FFFFFF", transparency: 16 }, line: { color: shade, width: 1.55 },
   });
-  addLine(slide, x - 12, mapY(median), x + 12, mapY(median), color, 2.4);
+  line(slide, x - 13, mapY(median), x + 13, mapY(median), shade, 2.5);
 }
 
-function addAxis(slide, left, top, right, bottom, low, high, ticks, leftLabels) {
-  const mapY = value => bottom - (Math.log10(value) - Math.log10(low)) / (Math.log10(high) - Math.log10(low)) * (bottom - top);
-  addLine(slide, left, top, left, bottom, colors.ink, 1.0);
-  addLine(slide, left, bottom, right, bottom, colors.ink, 1.0);
+function axis(slide, left, right, top, bottom, low, high, ticks, capped, showLabels = true) {
+  const bodyTop = top + (capped ? 25 : 0);
+  const mapY = value => bottom - (Math.log10(value) - Math.log10(low))
+    / (Math.log10(high) - Math.log10(low)) * (bottom - bodyTop);
+  line(slide, left, top, left, bottom, color.ink, 0.95);
+  line(slide, left, bottom, right, bottom, color.ink, 0.95);
   for (const tick of ticks) {
     const y = mapY(tick);
-    addLine(slide, left - 5, y, left, y, colors.ink, 0.9);
-    if (leftLabels) addText(slide, String(tick), left - 55, y - 12, 43, 22, 13, { align: "right" });
+    line(slide, left - 5, y, left, y, color.ink);
+    if (showLabels) label(slide, String(tick), left - 50, y - 9, 40, 18, 13, { align: "right" });
   }
-  addLine(slide, left, mapY(2), right, mapY(2), "A5ADB3", 0.8, true);
+  if (capped) {
+    line(slide, left - 5, top + 4, left, top + 4, color.ink);
+    label(slide, "50+", left - 56, top - 6, 46, 19, 13, { align: "right" });
+    // 轴断裂只改变 >50 Å 点的显示高度；所有箱线分位数仍用原始距离。
+    line(slide, left - 5, top + 14, left + 2, top + 19, color.ink, 0.9);
+    line(slide, left - 5, top + 19, left + 2, top + 24, color.ink, 0.9);
+  }
+  for (const threshold of [2, 3]) {
+    line(slide, left, mapY(threshold), right, mapY(threshold), color.guide, 0.65, true);
+  }
   return mapY;
 }
 
-function addFullFigure(field, legend, filename) {
-  const slide = pptx.addSlide();
-  slide.background = { color: "FFFFFF" };
-  slide.addNotes(legend);
-  const left = 105;
-  const right = 920;
-  const top = 93;
-  const bottom = 402;
-  const mapY = addAxis(slide, left, top, right, bottom, 0.15, 260, [0.2, 0.5, 1, 2, 5, 10, 50, 200], true);
-  addText(slide, "Ligand heavy-atom RMSD (Å)", 14, 149, 40, 252, 18, { vertical: true, align: "center" });
-  addText(slide, "Known centre · C0", 188, 57, 245, 26, 17, { align: "center" });
-  addText(slide, "Known pocket · E", 595, 57, 245, 26, 17, { align: "center" });
-  addLine(slide, 512, top, 512, bottom, colors.rule, 0.8);
-  slide.addShape(pptx.ShapeType.rect, { x: ptToIn(583), y: ptToIn(22), w: ptToIn(16), h: ptToIn(9), fill: { color: colors.GT }, line: { color: colors.GT } });
-  addText(slide, "GT receptor", 607, 15, 128, 27, 15);
-  slide.addShape(pptx.ShapeType.rect, { x: ptToIn(739), y: ptToIn(22), w: ptToIn(16), h: ptToIn(9), fill: { color: colors.CA2 }, line: { color: colors.CA2 } });
-  addText(slide, "CryoAtom2 receptor", 763, 15, 182, 27, 15);
-  const positions = [192, 377, 602, 787];
-  const modelLabels = ["Official", "local_cov", "Official", "local_cov"];
-  positions.forEach((x, index) => {
-    addLine(slide, x, bottom, x, bottom + 6, colors.ink, 0.8);
-    addText(slide, modelLabels[index], x - 60, bottom + 14, 120, 30, 17, { align: "center" });
-  });
-  for (const [protocolIndex, protocol] of ["C0", "E"].entries()) {
-    for (const [modelIndex, model] of ["official", "local_cov"].entries()) {
-      const x = positions[protocolIndex * 2 + modelIndex];
-      for (const [receptor, offset] of [["GT", -27], ["CA2", 27]]) {
-        addDistribution(slide, full.get(`${model}/${receptor}/${protocol}`), field, x + offset, colors[receptor], mapY);
-      }
-    }
-  }
-  return slide;
-}
-
-function addHeadToHead() {
-  const slide = pptx.addSlide();
-  slide.background = { color: "FFFFFF" };
-  slide.addNotes(legends[2]);
-  const panels = [
-    { left: 90, right: 481, centers: [158, 286, 414], letter: "a", title: "Top-1", field: "top1" },
-    { left: 557, right: 948, centers: [625, 753, 881], letter: "b", title: "Best of 50", field: "best" },
-  ];
-  for (const panel of panels) {
-    const top = 100;
-    const bottom = 402;
-    const mapY = addAxis(slide, panel.left, top, panel.right, bottom, 0.2, 30, [0.2, 0.5, 1, 2, 5, 10, 20], panel.letter === "a");
-    addText(slide, panel.letter, panel.left - 40, 47, 28, 30, 20, { bold: true });
-    addText(slide, panel.title, panel.left + 2, 47, 145, 30, 18);
-    const rows = [
-      [...full.get("local_cov/GT/C0")].filter(row => subset.has(`${row.pdb_id}/${row.occurrence_id}`)),
-      [...full.get("local_cov/CA2/C0")].filter(row => subset.has(`${row.pdb_id}/${row.occurrence_id}`)),
-      data.build.filter(row => subset.has(`${row.pdb_id}/${row.occurrence_id}`)),
-    ];
-    const palette = [colors.GT, colors.CA2, colors.Build];
-    const labels = ["local_cov-C\nGT", "local_cov-C\nCryoAtom2", "Emap2lig-\nBuild"];
-    panel.centers.forEach((x, index) => {
-      addDistribution(slide, rows[index], panel.field, x, palette[index], mapY);
-      addLine(slide, x, bottom, x, bottom + 6, colors.ink, 0.8);
-      addText(slide, labels[index], x - 61, bottom + 13, 122, 57, 15, { align: "center" });
+function key(slide, items) {
+  const starts = items.length === 2 ? [305, 560] : [185, 425, 700];
+  items.forEach(([name, shade], index) => {
+    slide.addShape(pptx.ShapeType.rect, {
+      x: inch(starts[index]), y: inch(30), w: inch(15), h: inch(9),
+      fill: { color: shade }, line: { color: shade },
     });
-  }
-  addText(slide, "Ligand heavy-atom RMSD (Å)", 8, 159, 37, 242, 17, { vertical: true, align: "center" });
-  return slide;
+    label(slide, name, starts[index] + 22, 22, items.length === 2 ? 194 : 208, 26, 15);
+  });
 }
 
-addFullFigure("top1", legends[0], "stage3_top1_full");
-addFullFigure("best", legends[1], "stage3_best_full");
-addHeadToHead();
-await fs.mkdir(buildDir, { recursive: true });
+function fullPanel(slide, letter, title, field, top, bottom) {
+  const left = 129, right = 908;
+  const centres = [231, 406, 631, 806];
+  label(slide, letter, 66, top - 58, 35, 34, 23, { bold: true });
+  label(slide, title, 103, top - 58, 190, 31, 19);
+  label(slide, "Centre pocket · C0", 160, top - 28, 321, 24, 15, { align: "center" });
+  label(slide, "Envelope pocket · E", 550, top - 28, 321, 24, 15, { align: "center" });
+  const mapY = axis(slide, left, right, top, bottom, 0.15, 50,
+    [0.2, 0.5, 1, 2, 3, 5, 10, 50], true);
+  label(slide, "RMSD (Å)", 57, top + 32, 31, bottom - top - 36, 16,
+    { vertical: true, align: "center" });
+  line(slide, 518, top + 1, 518, bottom, color.light, 0.85);
+  centres.forEach((centre, index) => {
+    const protocol = index < 2 ? "C0" : "E";
+    const model = index % 2 === 0 ? "official" : "local_cov";
+    for (const [receptor, offset] of [["GT", -26], ["CA2", 26]]) {
+      distribution(slide, full.get(`${model}/${receptor}/${protocol}`),
+        field, centre + offset, color[receptor], mapY, 50);
+    }
+    line(slide, centre, bottom, centre, bottom + 5, color.ink);
+    label(slide, index % 2 === 0 ? "Official" : "Tuned",
+      centre - 65, bottom + 7, 130, 27, 16, { align: "center" });
+  });
+}
+
+function officialFigure() {
+  const slide = pptx.addSlide();
+  slide.background = { color: "FFFFFF" };
+  key(slide, [["GT receptor", color.GT], ["CryoAtom2 receptor", color.CA2]]);
+  fullPanel(slide, "a", "Top-1 pose", "top1", 120, 326);
+  fullPanel(slide, "b", "Best of 50", "best", 442, 648);
+}
+
+function buildPanel(slide, letter, title, field, left, right, centres, showLabels) {
+  const top = 135, bottom = 583;
+  label(slide, letter, left - 24, 76, 28, 35, 23, { bold: true });
+  label(slide, title, left + 35, 76, 171, 35, 19);
+  const mapY = axis(slide, left, right, top, bottom, 0.18, 25,
+    [0.2, 0.5, 1, 2, 3, 5, 10, 20], false, showLabels);
+  const groups = [
+    [full.get("local_cov/GT/C0").filter(row => shared.has(`${row.pdb_id}/${row.occurrence_id}`)), color.GT],
+    [full.get("local_cov/CA2/C0").filter(row => shared.has(`${row.pdb_id}/${row.occurrence_id}`)), color.CA2],
+    [build, color.Build],
+  ];
+  const names = ["Tuned\nGT", "Tuned\nCryoAtom2", "Emap2lig-\nBuild"];
+  groups.forEach(([rows, shade], index) => {
+    distribution(slide, rows, field, centres[index], shade, mapY);
+    line(slide, centres[index], bottom, centres[index], bottom + 5, color.ink);
+    label(slide, names[index], centres[index] - 59, bottom + 11, 118, 58, 15, { align: "center" });
+  });
+}
+
+function buildFigure() {
+  const slide = pptx.addSlide();
+  slide.background = { color: "FFFFFF" };
+  key(slide, [
+    ["Tuned · GT", color.GT], ["Tuned · CryoAtom2", color.CA2],
+    ["Emap2lig-Build", color.Build],
+  ]);
+  buildPanel(slide, "a", "Top-1 pose", "top1", 107, 465, [171, 285, 399], true);
+  buildPanel(slide, "b", "Best of 50", "best", 565, 923, [629, 743, 857], true);
+  label(slide, "RMSD (Å)", 47, 205, 31, 300, 16,
+    { vertical: true, align: "center" });
+  label(slide, "RMSD (Å)", 480, 205, 31, 300, 16,
+    { vertical: true, align: "center" });
+}
+
+officialFigure();
+buildFigure();
+await fs.mkdir(path.dirname(output), { recursive: true });
 await pptx.writeFile({ fileName: output });
 console.log(output);

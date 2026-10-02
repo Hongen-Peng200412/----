@@ -1,6 +1,6 @@
-"""从冻结逐实例 RMSD 绘制三张 Stage3 定量图的印刷预览与统计摘要。
+"""从冻结逐实例 RMSD 绘制两张 Stage3 定量图的印刷预览与统计摘要。
 
-入口 ``main`` 读取同目录 ``data.json``; 在 ``画图/formal/stage3`` 输出三张 PDF、SVG、
+入口 ``main`` 读取同目录 ``data.json``; 在 ``画图/formal/stage3`` 输出两张 PDF、SVG、
 PNG 和 TIFF, 以及每组的有效数、中位数、四分位数和 5–95 百分位数。
 PowerPoint 成品由同目录的原生对象脚本读取同一份 ``data.json`` 生成。
 """
@@ -42,7 +42,7 @@ mpl.rcParams.update(
 )
 
 
-def draw_distribution(ax, rows, field, x, color):
+def draw_distribution(ax, rows, field, x, color, cap=None):
     """画出同一实验组全部有效配体实例及中位数、四分位数、5–95 百分位数。
 
     ``rows`` 的每个实例含 ``pdb_id``、``occurrence_id``、``top1``、``best``;
@@ -60,7 +60,14 @@ def draw_distribution(ax, rows, field, x, color):
             for row in valid
         ]
     )
-    ax.scatter(x + offsets, values, s=2.2, c=color, alpha=0.24, linewidths=0, rasterized=False)
+    # 完整集的大于 50 Å 观测值显示在顶端 50+ 区；分位数仍由原始值计算。
+    shown = np.where(values > cap, 80, values) if cap is not None else values
+    ordinary = values <= cap if cap is not None else np.ones(len(values), dtype=bool)
+    ax.scatter(x + offsets[ordinary], shown[ordinary], s=2.2, c=color,
+               alpha=0.34, linewidths=0, rasterized=False)
+    if cap is not None:
+        ax.scatter(x + offsets[~ordinary], shown[~ordinary], s=13, marker="^",
+                   c=color, alpha=0.8, linewidths=0, rasterized=False)
     quantiles = np.quantile(values, [0.05, 0.25, 0.5, 0.75, 0.95])
     ax.vlines(x, quantiles[0], quantiles[4], color=color, linewidth=0.8, zorder=4)
     ax.hlines([quantiles[0], quantiles[4]], x - 0.055, x + 0.055, color=color, linewidth=0.8, zorder=4)
@@ -99,30 +106,42 @@ def main():
     }
     stats = {"full": {}, "find_hit": {}}
 
-    for field, name in (("top1", "stage3_top1_full"), ("best", "stage3_best_full")):
-        fig, ax = plt.subplots(figsize=(7.2, 3.35))
-        fig.subplots_adjust(left=0.085, right=0.985, bottom=0.22, top=0.84)
+    fig, axes = plt.subplots(2, 1, figsize=(7.2, 5.35), sharex=True)
+    fig.subplots_adjust(left=0.085, right=0.985, bottom=0.12, top=0.91, hspace=0.30)
+    for ax, field, letter, title in zip(
+        axes, ("top1", "best"), ("a", "b"), ("Top-1 pose", "Best of 50")
+    ):
         for protocol_index, protocol in enumerate(("C0", "E")):
             for model_index, model in enumerate(("official", "local_cov")):
                 base = protocol_index * 2 + model_index
                 for receptor, offset in (("GT", -0.17), ("CA2", 0.17)):
                     key = f"{model}_{receptor}_{protocol}"
-                    stats["full"].setdefault(key, {})[field] = draw_distribution(ax, full[(model, receptor, protocol)], field, base + offset, COLORS[receptor])
+                    stats["full"].setdefault(key, {})[field] = draw_distribution(
+                        ax, full[(model, receptor, protocol)], field,
+                        base + offset, COLORS[receptor], cap=50
+                    )
         ax.set_yscale("log")
-        ax.set_ylim(0.15, 260)
-        ax.set_yticks([0.2, 0.5, 1, 2, 5, 10, 50, 200], labels=["0.2", "0.5", "1", "2", "5", "10", "50", "200"])
-        ax.set_xticks(range(4), labels=["Official", "local_cov", "Official", "local_cov"])
+        ax.set_ylim(0.15, 95)
+        ax.set_yticks([0.2, 0.5, 1, 2, 3, 5, 10, 50, 80],
+                      labels=["0.2", "0.5", "1", "2", "3", "5", "10", "50", "50+"])
+        ax.set_xticks(range(4), labels=["Official", "Tuned", "Official", "Tuned"])
         ax.set_xlim(-0.52, 3.52)
-        ax.set_ylabel("Ligand heavy-atom RMSD (Å)")
+        ax.set_ylabel("RMSD (Å)")
         ax.axvline(1.5, color="#B8BEC3", linewidth=0.7)
-        ax.axhline(2, color="#A9ADB1", linewidth=0.7, linestyle=(0, (3, 2)))
-        ax.text(0.25, 1.06, "Known centre · C0", ha="center", transform=ax.transAxes, fontsize=7)
-        ax.text(0.75, 1.06, "Known pocket · E", ha="center", transform=ax.transAxes, fontsize=7)
-        ax.legend(handles=[Patch(facecolor=COLORS["GT"], label="GT receptor"), Patch(facecolor=COLORS["CA2"], label="CryoAtom2 receptor")], frameon=False, ncol=2, loc="upper right", fontsize=6.5, bbox_to_anchor=(0.99, 1.24))
-        save_figure(fig, name)
+        ax.axhline(2, color="#C7CFD4", linewidth=0.6, linestyle=(0, (3, 2)))
+        ax.axhline(3, color="#C7CFD4", linewidth=0.6, linestyle=(0, (3, 2)))
+        ax.text(0.25, 1.04, "Centre pocket · C0", ha="center", transform=ax.transAxes, fontsize=7)
+        ax.text(0.75, 1.04, "Envelope pocket · E", ha="center", transform=ax.transAxes, fontsize=7)
+        ax.text(-0.075, 1.16, letter, transform=ax.transAxes, fontsize=8, fontweight="bold")
+        ax.text(-0.025, 1.16, title, transform=ax.transAxes, fontsize=7)
+    axes[0].legend(handles=[Patch(facecolor=COLORS["GT"], label="GT receptor"),
+                            Patch(facecolor=COLORS["CA2"], label="CryoAtom2 receptor")],
+                   frameon=False, ncol=2, loc="upper right", fontsize=6.5,
+                   bbox_to_anchor=(0.99, 1.29))
+    save_figure(fig, "stage3_official_tuned")
 
-    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.25), sharey=True)
-    fig.subplots_adjust(left=0.085, right=0.985, bottom=0.24, top=0.84, wspace=0.12)
+    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.25), sharey=False)
+    fig.subplots_adjust(left=0.085, right=0.985, bottom=0.24, top=0.84, wspace=0.26)
     for ax, field, letter, title in zip(axes, ("top1", "best"), ("a", "b"), ("Top-1", "Best of 50")):
         groups = [
             ("local_cov-C · GT", [row for row in full[("local_cov", "GT", "C0")] if (row["pdb_id"], row["occurrence_id"]) in subset], COLORS["GT"]),
@@ -136,10 +155,11 @@ def main():
         ax.set_yticks([0.2, 0.5, 1, 2, 5, 10, 20], labels=["0.2", "0.5", "1", "2", "5", "10", "20"])
         ax.set_xlim(-0.42, 2.42)
         ax.set_xticks(range(3), labels=["local_cov-C\nGT", "local_cov-C\nCryoAtom2", "Emap2lig-\nBuild"])
-        ax.axhline(2, color="#A9ADB1", linewidth=0.7, linestyle=(0, (3, 2)))
+        ax.axhline(2, color="#C7CFD4", linewidth=0.6, linestyle=(0, (3, 2)))
+        ax.axhline(3, color="#C7CFD4", linewidth=0.6, linestyle=(0, (3, 2)))
+        ax.set_ylabel("RMSD (Å)")
         ax.text(-0.09, 1.08, letter, transform=ax.transAxes, fontsize=8, fontweight="bold")
         ax.text(0.02, 1.08, title, transform=ax.transAxes, fontsize=7)
-    axes[0].set_ylabel("Ligand heavy-atom RMSD (Å)")
     save_figure(fig, "stage3_find_hit_head_to_head")
     (OUTPUT / "summary.json").write_text(json.dumps(stats, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

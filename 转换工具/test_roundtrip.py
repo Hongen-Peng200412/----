@@ -25,7 +25,7 @@ from manuscript_conversion import (
     markdown_to_word,
     word_to_markdown,
 )
-from 转换工具.ppt_figures import export_ppt_figure, read_ppt_figures
+from 转换工具.ppt_figures import export_ppt_figures, read_ppt_figures
 
 
 def make_captioned_ppt(source: Path, target: Path, caption: str) -> None:
@@ -80,7 +80,12 @@ def test_ppt_figures(root: Path) -> None:
         first_markdown = (root / "nested" / "ppt_nature.md") if profile == "nature" else root / "ppt_operation.md"
         second_word = root / f"ppt_{profile}_second.docx"
         second_markdown = first_markdown.with_name(f"ppt_{profile}_second.md")
-        markdown_to_word(source, first_word, profile=profile, reference=reference)
+        with patch("manuscript_conversion.export_ppt_figures", wraps=export_ppt_figures) as exports:
+            markdown_to_word(source, first_word, profile=profile, reference=reference)
+        assert exports.call_count == 1
+        export_requests = exports.call_args.args[0]
+        assert len(export_requests) == 2
+        assert all(deck.parent.parent == TEMP_ROOT and deck.name.startswith("deck_") for deck, _, _ in export_requests)
         word = Document(first_word)
         assert len(word.inline_shapes) == 2
         section = word.sections[0]
@@ -97,7 +102,13 @@ def test_ppt_figures(root: Path) -> None:
                 for level in range(1, 7)
             )
         assert sum(caption in paragraph.text for paragraph in word.paragraphs) == 2
-        word_to_markdown(first_word, first_markdown)
+        with patch("manuscript_conversion.export_ppt_figures", wraps=export_ppt_figures) as comparisons:
+            word_to_markdown(first_word, first_markdown)
+        assert comparisons.call_count == 2
+        assert all(
+            request[0][0].parent.parent == TEMP_ROOT and request[0][0].name.startswith("deck_")
+            for request in (call.args[0] for call in comparisons.call_args_list)
+        )
         recovered = first_markdown.read_text(encoding="utf-8")
         relative_ppt = "../primary.pptx" if profile == "nature" else "primary.pptx"
         assert f'{{{{pptfig:"{relative_ppt}"|fig-overview}}}}' in recovered
@@ -189,17 +200,28 @@ def main() -> None:
             export_attempts.append(command)
             if len(export_attempts) == 1:
                 return subprocess.CompletedProcess(command, 1, "", "Slide.Export : Object does not exist. COMException")
-            shutil.copyfile(image, Path(command[command.index("-OutputPath") + 1]))
+            manifest = Path(command[command.index("-ManifestPath") + 1])
+            decks = json.loads(manifest.read_text(encoding="utf-8"))
+            assert len(decks) == 2 and sum(len(deck["slides"]) for deck in decks) == 3
+            for deck in decks:
+                for slide in deck["slides"]:
+                    shutil.copyfile(image, Path(slide["output"]))
             return subprocess.CompletedProcess(command, 0, "", "")
 
         retried_image = root / "retried.png"
+        second_image = root / "second.png"
+        third_image = root / "third.png"
         with patch("转换工具.ppt_figures.subprocess.run", side_effect=intermittent_export):
-            export_ppt_figure(root / "unused.pptx", 7, retried_image, root)
-        assert len(export_attempts) == 2 and retried_image.is_file()
+            export_ppt_figures([
+                (root / "unused.pptx", 7, retried_image),
+                (root / "unused.pptx", 8, second_image),
+                (root / "other.pptx", 1, third_image),
+            ], root)
+        assert len(export_attempts) == 2 and all(path.is_file() for path in (retried_image, second_image, third_image))
         permanent_error = subprocess.CompletedProcess([], 1, "", "Slide.Export : invalid slide")
         with patch("转换工具.ppt_figures.subprocess.run", return_value=permanent_error) as failed_export:
             try:
-                export_ppt_figure(root / "unused.pptx", 99, root / "invalid.png", root)
+                export_ppt_figures([(root / "unused.pptx", 99, root / "invalid.png")], root)
             except RuntimeError as error:
                 assert "invalid slide" in str(error)
             else:

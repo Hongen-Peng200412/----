@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import copy
+import json
 import locale
 import posixpath
 import re
@@ -62,43 +63,55 @@ def read_ppt_figures(ppt_path: Path) -> dict[str, tuple[int, str]]:
     return figures
 
 
-def export_ppt_figure(ppt_path: Path, page: int, output: Path, temp_root: Path) -> None:
-    """通过本机 PowerPoint 导出指定页, 以非白色内容裁边后写出 300 DPI PNG。"""
+def export_ppt_figures(requests: list[tuple[Path, int, Path]], temp_root: Path) -> None:
+    """一次调用 PowerPoint 导出多份 PPT 的指定页, 裁边后分别写出 300 DPI PNG。"""
     from PIL import Image, ImageChops
 
+    if not requests:
+        return
     temp_root.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="ppt_render_", dir=temp_root) as directory:
+        decks: dict[Path, list[dict[str, str | int]]] = {}
+        outputs = []
+        for index, (ppt_path, page, output) in enumerate(requests, 1):
+            raw = Path(directory) / f"full_slide_{index:06d}.png"
+            decks.setdefault(ppt_path, []).append({"page": page, "output": str(raw)})
+            outputs.append((raw, output, page))
+        manifest = Path(directory) / "slides.json"
+        manifest.write_text(
+            json.dumps([{"path": str(path), "slides": slides} for path, slides in decks.items()], ensure_ascii=False),
+            encoding="utf-8",
+        )
+        command = [
+            "powershell.exe", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass",
+            "-File", str(EXPORT_SCRIPT), "-ManifestPath", str(manifest), "-WidthPx", "3600",
+        ]
         for attempt in range(3):
-            raw = Path(directory) / f"full_slide_{attempt + 1}.png"
-            command = [
-                "powershell.exe", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass",
-                "-File", str(EXPORT_SCRIPT), "-DeckPath", str(ppt_path),
-                "-SlideNumber", str(page), "-OutputPath", str(raw), "-WidthPx", "3600",
-            ]
             result = subprocess.run(
                 command, capture_output=True, check=False, text=True,
                 encoding=locale.getpreferredencoding(False), errors="replace",
             )
             message = "\n".join(part.strip() for part in (result.stderr, result.stdout) if part.strip())
-            if result.returncode == 0 and raw.is_file() and raw.stat().st_size > 0:
+            if result.returncode == 0 and all(raw.is_file() and raw.stat().st_size > 0 for raw, _, _ in outputs):
                 break
             if attempt == 2 or "COMException" not in message:
-                raise RuntimeError(f"PowerPoint 第 {page} 页导图失败：{message or '没有生成有效 PNG'}")
+                raise RuntimeError(f"PowerPoint 导图失败：{message or '没有生成全部有效 PNG'}")
         if message:
             print(message, file=sys.stderr)
-        with Image.open(raw) as original:
-            canvas = original.convert("RGB")
-            difference = ImageChops.difference(canvas, Image.new("RGB", canvas.size, "white"))
-            content = difference.convert("L").point(lambda value: 255 if value > 12 else 0)
-            bounds = content.getbbox()
-            if bounds is None:
-                raise ValueError(f"PPT 第 {page} 页没有可见图形")
-            margin = max(12, round(min(canvas.size) * 0.012))
-            left, top, right, bottom = bounds
-            cropped = canvas.crop((max(0, left - margin), max(0, top - margin),
-                                   min(canvas.width, right + margin), min(canvas.height, bottom + margin)))
-            output.parent.mkdir(parents=True, exist_ok=True)
-            cropped.save(output, format="PNG", dpi=(300, 300))
+        for raw, output, page in outputs:
+            with Image.open(raw) as original:
+                canvas = original.convert("RGB")
+                difference = ImageChops.difference(canvas, Image.new("RGB", canvas.size, "white"))
+                content = difference.convert("L").point(lambda value: 255 if value > 12 else 0)
+                bounds = content.getbbox()
+                if bounds is None:
+                    raise ValueError(f"PPT 第 {page} 页没有可见图形")
+                margin = max(12, round(min(canvas.size) * 0.012))
+                left, top, right, bottom = bounds
+                cropped = canvas.crop((max(0, left - margin), max(0, top - margin),
+                                       min(canvas.width, right + margin), min(canvas.height, bottom + margin)))
+                output.parent.mkdir(parents=True, exist_ok=True)
+                cropped.save(output, format="PNG", dpi=(300, 300))
 
 
 def picture_markup(inline) -> str:

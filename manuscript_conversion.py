@@ -19,7 +19,7 @@ import zlib
 from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile
 
-from 转换工具.ppt_figures import export_ppt_figure, picture_markup, read_ppt_figures
+from 转换工具.ppt_figures import export_ppt_figures, picture_markup, read_ppt_figures
 
 
 ROOT = Path(__file__).resolve().parent
@@ -810,7 +810,9 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
             raise ValueError(f"未知 Word 版式：{profile}")
         figure_specs = {}
         figure_index = {}
+        deck_snapshots = {}
         rendered = {}
+        export_requests = []
         source_text = source.read_text(encoding="utf-8")
         pieces = []
         cursor = 0
@@ -820,7 +822,10 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                 raise ValueError(f"PPT 图名无效：{figure_name!r}")
             ppt_path = _resolve_source(ppt_label, source.parent)
             if ppt_path not in figure_index:
-                figure_index[ppt_path] = read_ppt_figures(ppt_path)
+                snapshot = figure_root / f"deck_{len(deck_snapshots) + 1:06d}.pptx"
+                shutil.copyfile(ppt_path, snapshot)
+                deck_snapshots[ppt_path] = snapshot
+                figure_index[ppt_path] = read_ppt_figures(snapshot)
             if figure_name not in figure_index[ppt_path]:
                 raise ValueError(f"PPT 图名不存在：{ppt_path} 中的 {figure_name}")
             page, caption = figure_index[ppt_path][figure_name]
@@ -829,18 +834,23 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
             figure_key = (ppt_path, figure_name)
             if figure_key not in rendered:
                 image = figure_root / f"figure_{len(rendered) + 1:06d}.png"
-                export_ppt_figure(ppt_path, page, image, TEMP_ROOT)
                 rendered[figure_key] = image
+                export_requests.append((deck_snapshots[ppt_path], page, image))
             image = rendered[figure_key]
-            with Image.open(image) as bitmap:
-                width = min(5.8, 7.4 * bitmap.width / bitmap.height)
             token = f"MDPPTFIGTOKEN{len(figure_specs) + 1:06d}"
             figure_specs[token] = {
                 "path": ppt_label, "resolved": str(ppt_path), "name": figure_name,
-                "caption": caption, "image": image.as_posix(), "width": width,
+                "caption": caption, "image": image.as_posix(),
             }
             pieces.extend((source_text[cursor:match.start()], f"\n\n{token}\n\n"))
             cursor = match.end()
+        export_ppt_figures(export_requests, TEMP_ROOT)
+        image_widths = {}
+        for image in rendered.values():
+            with Image.open(image) as bitmap:
+                image_widths[image.as_posix()] = min(5.8, 7.4 * bitmap.width / bitmap.height)
+        for spec in figure_specs.values():
+            spec["width"] = image_widths[spec["image"]]
         pieces.append(source_text[cursor:])
         expanded_source = "".join(pieces)
         if re.search(r"(?m)^[ \t]*\{\{pptfig:", expanded_source):
@@ -1198,6 +1208,7 @@ def word_to_markdown(source: Path, target: Path) -> None:
             else:
                 edited_images.setdefault(relation, []).append(metadata)
         figure_indices = {}
+        deck_snapshots = {}
         rendered_figures = {}
         recovered = {}
         blocks = []
@@ -1245,14 +1256,17 @@ def word_to_markdown(source: Path, target: Path) -> None:
             if unchanged:
                 try:
                     if ppt_path not in figure_indices:
-                        figure_indices[ppt_path] = read_ppt_figures(ppt_path)
+                        snapshot = media_root / f"deck_{len(deck_snapshots) + 1:06d}.pptx"
+                        shutil.copyfile(ppt_path, snapshot)
+                        deck_snapshots[ppt_path] = snapshot
+                        figure_indices[ppt_path] = read_ppt_figures(snapshot)
                     if name not in figure_indices[ppt_path]:
                         unchanged = False
                     else:
                         key = (ppt_path, name)
                         if key not in rendered_figures:
                             rendered = media_root / f"ppt_compare_{len(rendered_figures) + 1:06d}.png"
-                            export_ppt_figure(ppt_path, figure_indices[ppt_path][name][0], rendered, TEMP_ROOT)
+                            export_ppt_figures([(deck_snapshots[ppt_path], figure_indices[ppt_path][name][0], rendered)], TEMP_ROOT)
                             rendered_figures[key] = rendered.read_bytes()
                         unchanged = word_pixels == rendered_figures[key]
                 except (ValueError, RuntimeError, OSError):

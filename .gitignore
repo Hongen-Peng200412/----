@@ -23,3 +23,8 @@ __pycache__/
 画图/图a制作
 画图/formal
 画图/archieve
+
+# 只跟踪两份正文 Word；其他 Word 由本地保管
+*.docx
+!/论文草稿.operation.docx
+!/论文草稿.nature.docx

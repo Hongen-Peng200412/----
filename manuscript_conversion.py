@@ -28,6 +28,7 @@ TEMP_ROOT = ROOT / "temp"
 CSL = ROOT / "nature_article.csl"
 OPERATION_REFERENCE = Path(r"D:\OneDrive\Operation.docx")
 CITATION_STYLE_PREFIX = "MDCITE_"
+FIGURE_REFERENCE_STYLE_PREFIX = "MDFIGREF_"
 BIBLIOGRAPHY_STYLE = "MDConverterBibliography"
 PANDOC_INPUT = "markdown+pipe_tables+raw_html+tex_math_dollars+citations"
 PANDOC_OUTPUT = "markdown+pipe_tables+raw_html-simple_tables-grid_tables-multiline_tables"
@@ -39,6 +40,9 @@ PPT_FIGURE = re.compile(r'(?m)^[ \t]*\{\{pptfig:"([^"\r\n]+)"\|([^|}\r\n]+)\}\}[
 PPT_TITLE_PREFIX = "MDPPTFIG_"
 PPT_EDITED_TITLE_PREFIX = "MDPPTEDIT_"
 PPT_EDITED_COMMENT = re.compile(r"<!--\s*pptfig-edited\s+(\{.*\})\s*-->", re.S)
+PPT_EDITED_SOURCE = re.compile(r"<!--\s*pptfig-edited\s+(\{.*?\})\s*-->", re.S)
+FIGURE_REFERENCE = re.compile(r"\{\{figref:([^\s|{}]+)(?:\|([a-z](?:[,–-][a-z])*))?\}\}")
+MANUAL_FIGURE_NUMBER = re.compile(r"^(?:图\s*\d+|Fig(?:ure)?\.?\s*\d+)\s*[｜|:：]\s*", re.I)
 
 
 def ensure_dependencies() -> str:
@@ -407,10 +411,52 @@ def _citation_keys(document: dict) -> list[str]:
     return keys
 
 
-def _encode_citations(document: dict, keys: list[str]) -> None:
+def _encode_references(document: dict, keys: list[str], figure_numbers: dict[str, int]) -> None:
+    """将文献与按图名引用的编号写入 Word 字符样式, 回转时恢复原始引用语法."""
     order = {key: index + 1 for index, key in enumerate(keys)}
 
     def convert(node: dict):
+        if node.get("t") == "Str" and "{{figref:" in node["c"]:
+            text = node["c"]
+            inlines = []
+            cursor = 0
+            for match in FIGURE_REFERENCE.finditer(text):
+                name, panels = match.groups()
+                names = name.split(",")
+                for figure_name in names:
+                    if figure_name not in figure_numbers:
+                        raise ValueError(f"正文引用的图名没有插图定义：{figure_name}")
+                if len(names) > 1 and panels:
+                    raise ValueError("多个图片的组合引用不能附加面板；请分别引用各图的面板")
+                if match.start() > cursor:
+                    inlines.append({"t": "Str", "c": text[cursor:match.start()]})
+                literal = match.group(0)
+                marker = base64.urlsafe_b64encode(zlib.compress(literal.encode("utf-8"))).decode("ascii").rstrip("=")
+                if len(names) == 1:
+                    visible = f"Fig. {figure_numbers[name]}"
+                else:
+                    ranges = []
+                    start = end = figure_numbers[names[0]]
+                    for figure_name in names[1:]:
+                        number = figure_numbers[figure_name]
+                        if number == end + 1:
+                            end = number
+                        else:
+                            ranges.append(str(start) if start == end else f"{start}–{end}")
+                            start = end = number
+                    ranges.append(str(start) if start == end else f"{start}–{end}")
+                    visible = "Figs. " + ", ".join(ranges)
+                if panels:
+                    visible += panels.replace("-", "–").replace(",", ", ")
+                inlines.append({"t": "Span", "c": [
+                    ["", [], [["custom-style", FIGURE_REFERENCE_STYLE_PREFIX + marker]]],
+                    [{"t": "Str", "c": visible}],
+                ]})
+                cursor = match.end()
+            inlines.append({"t": "Str", "c": text[cursor:]})
+            if any("{{figref:" in item.get("c", "") for item in inlines if item["t"] == "Str"):
+                raise ValueError("图片正文引用格式无效；使用 {{figref:图名}} 或 {{figref:图名|a,b}}")
+            return {"t": "Span", "c": [["", [], []], inlines]}
         if node.get("t") != "Cite":
             return node
         cited = [entry["citationId"] for entry in node["c"][0]]
@@ -636,6 +682,8 @@ def _apply_nature_layout(path: Path, image_align: str, image_size: str) -> None:
         style.paragraph_format.line_spacing = 2
         style.paragraph_format.space_before = Pt(0)
         style.paragraph_format.space_after = Pt(6)
+    if "Image Caption" in document.styles:
+        document.styles["Image Caption"].font.italic = False
     for level, size in ((1, 14), (2, 12), (3, 12), (4, 12), (5, 12), (6, 12)):
         name = f"Heading {level}"
         if name not in document.styles:
@@ -735,6 +783,17 @@ def _apply_operation_layout(path: Path, reference: Path, image_align: str, image
 
     source = Document(reference)
     document = Document(path)
+    # 本机 Word 模板可能只保留本地化样式编号; 补齐 Pandoc 写出的图注和字符样式依赖, 保留回转语义.
+    for name in ("Body Text Char", "Verbatim Char"):
+        if name not in document.styles:
+            style = document.styles.add_style(name, WD_STYLE_TYPE.CHARACTER)
+            style.base_style = document.styles["Default Paragraph Font"]
+            if name == "Verbatim Char":
+                style.font.name = "Courier New"
+    if "Image Caption" not in document.styles:
+        style = document.styles.add_style("Image Caption", WD_STYLE_TYPE.PARAGRAPH)
+        style.base_style = document.styles["Caption"]
+    document.styles["Image Caption"].font.italic = False
     example = source.sections[0]
     for section in document.sections:
         for property_name in (
@@ -832,15 +891,27 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
             raise ValueError(f"未知 Word 版式：{profile}")
         figure_specs = {}
         figure_index = {}
+        figure_owners = {}
         deck_snapshots = {}
         rendered = {}
         export_requests = []
         source_text = source.read_text(encoding="utf-8")
+        # 图名到 1 起始编号的映射, 按插图位置排序; Word 内改图后的来源注释也保留编号资格.
+        definitions = [(match.start(), match.group(2).strip()) for match in PPT_FIGURE.finditer(source_text)]
+        definitions.extend((match.start(), json.loads(match.group(1))["name"])
+                           for match in PPT_EDITED_SOURCE.finditer(source_text))
+        figure_numbers = {}
+        for _, name in sorted(definitions):
+            if name in figure_numbers:
+                raise ValueError(f"同一图名不能重复插图：{name}；再次提及时使用 {{{{figref:{name}}}}}")
+            figure_numbers[name] = len(figure_numbers) + 1
+        preflight = _as_json(pandoc, source_text, PANDOC_INPUT)
+        _encode_references(preflight, _citation_keys(preflight), figure_numbers)
         pieces = []
         cursor = 0
         for match in PPT_FIGURE.finditer(source_text):
             ppt_label, figure_name = match.group(1), match.group(2).strip()
-            if not re.fullmatch(r"[^\s|{}]+", figure_name):
+            if not re.fullmatch(r"[^\s|{},]+", figure_name):
                 raise ValueError(f"PPT 图名无效：{figure_name!r}")
             ppt_path = _resolve_source(ppt_label, source.parent)
             if ppt_path not in figure_index:
@@ -848,9 +919,18 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                 shutil.copyfile(ppt_path, snapshot)
                 deck_snapshots[ppt_path] = snapshot
                 figure_index[ppt_path] = read_ppt_figures(snapshot)
+                for name in figure_index[ppt_path]:
+                    if name in figure_owners and figure_owners[name] != ppt_path:
+                        raise ValueError(f"跨 PPT 图名重复：{name}，来自 {figure_owners[name]} 与 {ppt_path}")
+                    figure_owners[name] = ppt_path
             if figure_name not in figure_index[ppt_path]:
                 raise ValueError(f"PPT 图名不存在：{ppt_path} 中的 {figure_name}")
             page, caption = figure_index[ppt_path][figure_name]
+            caption = MANUAL_FIGURE_NUMBER.sub("", caption)
+            if caption:
+                title_end = re.search(r"。|\.(?=\s|$)|\n", caption)
+                split = title_end.end() if title_end else len(caption)
+                caption = f"**Fig. {figure_numbers[figure_name]} | {caption[:split]}**{caption[split:]}"
             if not caption:
                 print(f"提示：{ppt_path} 第 {page} 页备注为空，Word 中不会生成该图的图注。", file=sys.stderr)
             figure_key = (ppt_path, figure_name)
@@ -906,6 +986,13 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                 origin_path = Path(edited_origin["path"].replace("\\", "/"))
                 resolved_origin = origin_path if origin_path.is_absolute() else source.parent / origin_path
                 metadata = {"path": edited_origin["path"], "resolved": str(resolved_origin.resolve()), "name": edited_origin["name"]}
+                if block.get("t") == "Figure" and block["c"][1][1]:
+                    caption_document = {"pandoc-api-version": document["pandoc-api-version"], "meta": {}, "blocks": block["c"][1][1]}
+                    caption_text = run_pandoc(pandoc, json.dumps(caption_document, ensure_ascii=False), "json", PANDOC_OUTPUT, ["--wrap=none"])
+                    caption_text = re.sub(r"(?m)^(\*{0,2}Fig\.\s*)\d+(\s*\\?\|)",
+                                          rf"\g<1>{figure_numbers[edited_origin['name']]}\g<2>", caption_text)
+                    block["c"][1][1] = _as_json(pandoc, caption_text, PANDOC_INPUT)["blocks"]
+                    image_nodes[0]["c"][1] = block["c"][1][1][0]["c"]
                 marker = base64.urlsafe_b64encode(zlib.compress(json.dumps(metadata, ensure_ascii=False).encode("utf-8"))).decode("ascii").rstrip("=")
                 image_nodes[0]["c"][2][1] = PPT_EDITED_TITLE_PREFIX + marker
                 edited_origin = None
@@ -936,7 +1023,7 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
         _remove_duplicate_captions(document)
         original = copy.deepcopy(document)
         keys = _citation_keys(document)
-        _encode_citations(document, keys)
+        _encode_references(document, keys, figure_numbers)
         bib = bibliography.resolve() if bibliography else source.parent / "references.bib"
         _append_bibliography(document, original, pandoc, bib, keys)
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -991,7 +1078,7 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
 
 
 def _remove_generated_styles(document: dict, citation_markers: dict[str, str]) -> None:
-    """去掉 Word 样式噪音，保留本工具编码的文献引用。"""
+    """去掉 Word 样式噪音, 保留本工具编码的文献与图名引用."""
     counter = [0]
 
     def clean(value):
@@ -1017,8 +1104,10 @@ def _remove_generated_styles(document: dict, citation_markers: dict[str, str]) -
         if kind == "Span":
             attrs, inlines = value["c"]
             style = dict(attrs[2]).get("custom-style", "")
-            if style.startswith(CITATION_STYLE_PREFIX):
-                encoded = style[len(CITATION_STYLE_PREFIX):]
+            prefix = next((prefix for prefix in (CITATION_STYLE_PREFIX, FIGURE_REFERENCE_STYLE_PREFIX)
+                           if style.startswith(prefix)), None)
+            if prefix is not None:
+                encoded = style[len(prefix):]
                 padding = "=" * (-len(encoded) % 4)
                 literal = zlib.decompress(base64.urlsafe_b64decode(encoded + padding)).decode("utf-8")
                 counter[0] += 1

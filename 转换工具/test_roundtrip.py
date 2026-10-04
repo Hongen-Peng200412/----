@@ -28,7 +28,7 @@ from manuscript_conversion import (
 from 转换工具.ppt_figures import export_ppt_figures, read_ppt_figures
 
 
-def make_captioned_ppt(source: Path, target: Path, caption: str) -> None:
+def make_captioned_ppt(source: Path, target: Path, caption: str, name_suffix: str = "") -> None:
     """仅在临时 PPT 副本的第 1 页备注中填写图注, 保留真实的现代批注。"""
     from lxml import etree
 
@@ -49,6 +49,12 @@ def make_captioned_ppt(source: Path, target: Path, caption: str) -> None:
                 etree.SubElement(run, f"{{{a_ns}}}t").text = caption
                 paragraph.insert(0, run)
                 payload = etree.tostring(root, encoding="UTF-8", xml_declaration=True)
+            if name_suffix and item.filename.startswith("ppt/comments/") and item.filename.endswith(".xml"):
+                root = etree.fromstring(payload)
+                for node in root.iter():
+                    if node.text and node.text.startswith("@@"):
+                        node.text += name_suffix
+                payload = etree.tostring(root, encoding="UTF-8", xml_declaration=True)
             updated.writestr(item, payload)
 
 
@@ -63,15 +69,17 @@ def test_ppt_figures(root: Path) -> None:
     assert "fig-overview" in read_ppt_figures(original)
     first = root / "primary.pptx"
     second = root / "secondary.pptx"
-    caption = "图 1：总流程示意。"
+    caption = "总流程示意。"
     make_captioned_ppt(original, first, caption)
-    shutil.copyfile(first, second)
+    make_captioned_ppt(original, second, caption, "-secondary")
     assert read_ppt_figures(first)["fig-overview"][1] == caption
     source = root / "ppt_article.md"
     source.write_text(
-        "# 多图集测试\n\n前文。\n"
+        "# 多图集测试\n\n前文。{{figref:fig-overview-secondary|a–c}}；{{figref:fig-overview|a,b}}。\n"
         '{{pptfig:"primary.pptx"|fig-overview}}\n后文。\n\n'
-        f'{{{{pptfig:"{second.as_posix()}"|fig-overview}}}}\n',
+        f'{{{{pptfig:"{second.as_posix()}"|fig-overview-secondary}}}}\n'
+        '组合引用：{{figref:fig-overview,fig-overview-secondary}}。\n'
+        '示例代码：`{{figref:not-a-figure}}`。\n',
         encoding="utf-8",
     )
     for profile in ("nature", "operation"):
@@ -88,6 +96,7 @@ def test_ppt_figures(root: Path) -> None:
         assert all(deck.parent.parent == TEMP_ROOT and deck.name.startswith("deck_") for deck, _, _ in export_requests)
         word = Document(first_word)
         assert len(word.inline_shapes) == 2
+        assert word.styles["Image Caption"].font.italic is False
         section = word.sections[0]
         text_width = section.page_width - section.left_margin - section.right_margin
         assert abs(word.inline_shapes[0].width - text_width) < 20000
@@ -101,7 +110,8 @@ def test_ppt_figures(root: Path) -> None:
                 word.styles[f"Heading {level}"].element.pPr.numPr is None
                 for level in range(1, 7)
             )
-            captions = [paragraph for paragraph in word.paragraphs if paragraph.text == caption]
+            captions = [paragraph for paragraph in word.paragraphs
+                        if paragraph.text in (f"Fig. 1 | {caption}", f"Fig. 2 | {caption}")]
             assert len(captions) == 2
             assert all(paragraph.paragraph_format.line_spacing == 1.0 for paragraph in captions)
             assert all(
@@ -109,6 +119,10 @@ def test_ppt_figures(root: Path) -> None:
                 for paragraph in captions for run in paragraph.runs
             )
         assert sum(caption in paragraph.text for paragraph in word.paragraphs) == 2
+        visible = "\n".join(paragraph.text for paragraph in word.paragraphs)
+        assert "Fig. 2a–c；Fig. 1a, b" in visible
+        assert "Figs. 1–2" in visible
+        assert "{{figref:not-a-figure}}" in visible
         with patch("manuscript_conversion.export_ppt_figures", wraps=export_ppt_figures) as comparisons:
             word_to_markdown(first_word, first_markdown)
         assert comparisons.call_count == 2
@@ -119,7 +133,10 @@ def test_ppt_figures(root: Path) -> None:
         recovered = first_markdown.read_text(encoding="utf-8")
         relative_ppt = "../primary.pptx" if profile == "nature" else "primary.pptx"
         assert f'{{{{pptfig:"{relative_ppt}"|fig-overview}}}}' in recovered
-        assert f'{{{{pptfig:"{second.as_posix()}"|fig-overview}}}}' in recovered
+        assert f'{{{{pptfig:"{second.as_posix()}"|fig-overview-secondary}}}}' in recovered
+        assert "{{figref:fig-overview-secondary|a–c}}" in recovered
+        assert "{{figref:fig-overview|a,b}}" in recovered
+        assert "{{figref:fig-overview,fig-overview-secondary}}" in recovered
         markdown_to_word(first_markdown, second_word, profile=profile, reference=reference)
         word_to_markdown(second_word, second_markdown)
         assert first_markdown.read_bytes() == second_markdown.read_bytes()
@@ -137,6 +154,14 @@ def test_ppt_figures(root: Path) -> None:
             markdown_to_word(edited_markdown, edited_second_word)
             word_to_markdown(edited_second_word, edited_second_markdown)
             assert edited_markdown.read_bytes() == edited_second_markdown.read_bytes()
+            edited_reordered = root / "edited_reordered.md"
+            second_directive = f'{{{{pptfig:"{second.as_posix()}"|fig-overview-secondary}}}}'
+            edited_reordered.write_text(second_directive + "\n\n" + changed.replace(second_directive, ""), encoding="utf-8")
+            edited_reordered_word = root / "edited_reordered.docx"
+            markdown_to_word(edited_reordered, edited_reordered_word)
+            edited_visible = "\n".join(paragraph.text for paragraph in Document(edited_reordered_word).paragraphs)
+            assert "Fig. 1a–c；Fig. 2a, b" in edited_visible
+            assert f"Fig. 2 | {caption}" in edited_visible
             replaced = Document(first_word)
             from docx.oxml.ns import qn
             replacement = root / "replacement.png"
@@ -148,6 +173,36 @@ def test_ppt_figures(root: Path) -> None:
             replaced.save(replaced_word)
             word_to_markdown(replaced_word, replaced_markdown)
             assert 'pptfig-edited' in replaced_markdown.read_text(encoding="utf-8")
+    reordered = root / "reordered.md"
+    reordered.write_text(
+        '{{figref:fig-overview-secondary|a}}；{{figref:fig-overview}}。\n\n'
+        '{{pptfig:"secondary.pptx"|fig-overview-secondary}}\n\n'
+        '{{pptfig:"primary.pptx"|fig-overview}}\n', encoding="utf-8",
+    )
+    reordered_word = root / "reordered.docx"
+    markdown_to_word(reordered, reordered_word)
+    visible = "\n".join(paragraph.text for paragraph in Document(reordered_word).paragraphs)
+    assert "Fig. 1a；Fig. 2" in visible
+    assert f"Fig. 1 | {caption}" in visible and f"Fig. 2 | {caption}" in visible
+    conflict = root / "conflict.pptx"
+    shutil.copyfile(first, conflict)
+    invalid_sources = (
+        ('{{pptfig:"primary.pptx"|fig-overview}}\n{{pptfig:"conflict.pptx"|fig-overview_v2}}', "跨 PPT 图名重复"),
+        ('{{pptfig:"primary.pptx"|fig-overview}}\n{{pptfig:"primary.pptx"|fig-overview}}', "重复插图"),
+        ('{{figref:missing}}\n{{pptfig:"primary.pptx"|fig-overview}}', "没有插图定义"),
+        ('{{figref:fig-overview|A}}\n{{pptfig:"primary.pptx"|fig-overview}}', "引用格式无效"),
+    )
+    for index, (text, expected_error) in enumerate(invalid_sources):
+        invalid = root / f"invalid_reference_{index}.md"
+        invalid.write_text(text, encoding="utf-8")
+        with patch("manuscript_conversion.export_ppt_figures") as exports:
+            try:
+                markdown_to_word(invalid, root / f"invalid_reference_{index}.docx")
+            except ValueError as error:
+                assert expected_error in str(error), str(error)
+            else:
+                raise AssertionError(f"未拒绝无效图引用：{text}")
+            exports.assert_not_called()
     missing = root / "missing.md"
     missing.write_text('{{pptfig:"primary.pptx"|not-found}}\n', encoding="utf-8")
     try:

@@ -224,7 +224,7 @@ def main() -> None:
         save_figure(
             application, name="e2e-all-find-match",
             filename="E2E结果_全配体.pptx", height=252,
-            caption=("图 10｜一般配体的区域检出与化学身份识别。179 个 PDB 中，前 K 个排序"
+            caption=("一般配体的区域检出与化学身份识别。179 个 PDB 中，前 K 个排序"
                      "候选至少有一个区域命中时计为 Find 成功；同时具有正确精确 SMILES "
                      "身份时计为 Find+Match 成功。纵轴为成功 PDB 比例，K=1–10。"
                      "GT 与 CA2 分别使用真实受体与 CryoAtom2 受体及其对应模拟密度，"
@@ -234,7 +234,7 @@ def main() -> None:
         save_figure(
             application, name="e2e-small-pipeline",
             filename="E2E结果_小分子三联图.pptx", height=425,
-            caption=("图 11｜Stage3 小分子从位点检出到全原子构象重建。"
+            caption=("Stage3 小分子从位点检出到全原子构象重建。"
                      "a，在 77 个 PDB 中，前 K 个位点至少有一次区域检出或正确身份"
                      "匹配时的 Find、Find+Match 成功率，以及不使用受体的 "
                      "Emap2lig-Find 成功率；已知不适用于 Stage3 的前景位点不计入 K。"

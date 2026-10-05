@@ -7,6 +7,8 @@
 ```text
 论文草稿/
 ├─ 论文草稿.md                 # 默认 Markdown 输入，仍由作者维护
+├─ draft.md                  # 与中文稿含义同步的英文源稿
+├─ RULES/                    # 术语、翻译及同步工作规则，不定义转换语法
 ├─ md_to_word.py              # Markdown → Nature Word
 ├─ md_to_word_operation.py    # Markdown → Operation 阅读版 Word
 ├─ word_to_md.py              # Word → Markdown 命令入口
@@ -20,6 +22,8 @@
 ├─ references.bib             # 可选；出现 [@key] 引用时需要
 ├─ 论文草稿.nature.docx        # 默认 Word 输出
 ├─ 论文草稿.operation.docx     # 阅读版 Word 输出
+├─ draft.nature.docx          # 英文 Nature Word
+├─ draft.operation.docx       # 英文阅读版 Word
 ├─ 论文草稿.from_word.md       # 默认回转输出，不覆盖原草稿
 ├─ manuscript_assets/images/  # Word 中的图片回转时导出的原始文件
 └─ temp/                     # 所有测试与渲染中间文件
@@ -32,6 +36,15 @@ python md_to_word.py
 python md_to_word_operation.py
 python word_to_md.py
 ```
+
+英文稿使用同样的两个入口，并显式选择英文 PPT 图注：
+
+```powershell
+python md_to_word.py draft.md --english
+python md_to_word_operation.py draft.md --english
+```
+
+输入文件名决定默认输出名；以上命令分别生成 `draft.nature.docx` 和 `draft.operation.docx`。`--english` 只选择 PPT 备注中的英文图注，不翻译正文、表格或图内文字，也不根据文件名推断图注语言。正文和图内文字由写作流程维护，规则见 [默认工作流](../RULES/默认工作流.md)。
 
 处理其他文件时可指定输入和输出，例如：
 
@@ -70,7 +83,24 @@ PPT 图集采用一页一图。将引用独立写在一行，双引号内是 PPT
 
 同一篇 Markdown 可引用多个 PPT。相对路径以这篇 Markdown 所在目录为基准，绝对路径直接使用。每张图在所属 PPT 的一条批注中写 `@@fig-overview` 这样的图名；去掉首尾空白后整条批注必须是 `@@` 加图名。同一篇文章所涉及的全部 PPT 中图名必须唯一，包括这些 PPT 中尚未插入正文的已命名页面。图名不含空白、逗号、竖线或花括号。跨 PPT 重复会在导图前报错，并列出冲突图名和文件。其他批注只保存数据来源、服务器路径与绘图代码等追溯信息，不进入正文。
 
-该页备注只写图注内容，不手写“图 X｜”或 `Fig. X |`。转换器按 Markdown 中 `pptfig` 插图指令的出现顺序从 1 编号，在图片下方生成 `Fig. N | 原图注`，并加粗图号与原图注的首句标题，图注段落使用正体；图注内容与语言保持不变。尚存的旧编号前缀在转换时自动移除，避免导出时出现两套编号。两种 Word 版式使用同一编号规则。未引用的空白草稿页不要求填写图名或备注；被引用页备注为空时，转换器提示并只插入图片。同一图名只插入一次，再次提及使用正文引用。
+该页备注只写图注内容，不手写“图 X｜”或 `Fig. X |`。同一页可同时保存中文和英文图注，中文在前，英文在独立的 `ENGLISH:` 行之后：
+
+```text
+Find–Match–Build 工作流程。中文图注的其余内容。
+ENGLISH：
+Find–Match–Build workflow. The remaining English caption.
+```
+
+| PPT 备注 | 默认编译 | 带 `--english` 编译 |
+|---|---|---|
+| 含有效的 `ENGLISH:` 或 `ENGLISH：` 独立行 | 使用标记之前的中文部分 | 使用标记之后的英文部分 |
+| 不含有效标记 | 使用原备注全文 | 使用原备注全文，兼容旧图集 |
+
+标记必须为大写 `ENGLISH`，冒号可为半角或全角；行首、冒号后允许空格或制表符。冒号后必须有实际换行，支持 LF、CRLF 和 CR；字面字符 `\n`、正文句内出现的 `ENGLISH:`、以及没有换行的末尾标记均不分区。存在多个标记时以第一个有效标记分区。所选部分为空时提示并只插入图片，不自动回退到另一语言。
+
+备注中的公式沿用 Markdown 的 `$...$` 写法，选定图注语言后再转换为 Word 原生公式。含公式的图注仍使用所属版式的图注格式；阅读版为 9 磅文字、单倍行距，不因原生公式不出现在普通段落文本中而改用正文格式。
+
+转换器按 Markdown 中 `pptfig` 插图指令的出现顺序从 1 编号，在图片下方生成 `Fig. N | 所选图注`，加粗图号与所选图注的首句标题，图注段落使用正体。尚存的旧编号前缀在选择语言后自动移除，避免两套编号。两种 Word 版式使用同一编号规则。未引用的空白草稿页不要求填写图名或备注；同一图名只插入一次，再次提及使用正文引用。
 
 正文用图名引用，省去 PPT 路径和手写图号：
 
@@ -85,7 +115,7 @@ PPT 图集采用一页一图。将引用独立写在一行，双引号内是 PPT
 
 Word 回转会恢复 `figref` 图名引用；再次转换时依据新的插图顺序重新编号。直接在 Word 中改图后生成的 `pptfig-edited` 来源注释也保留图名和编号资格；保留该注释即可继续引用该图。普通 Markdown 图片沿用现有行为，不纳入 PPT 图集的自动编号。
 
-英文图号和首句标题加粗采用 Nature 论文常见的展示格式。图注的简短标题、各面板说明及统计定义参照 [Nature 初次投稿说明](https://www.nature.com/nature/for-authors/initial-submission)；本次迁移只处理编号、引用和格式，不翻译或润色正文与图注。
+英文图号和首句标题加粗采用 Nature 论文常见的展示格式，格式依据见 [Nature 初次投稿说明](https://www.nature.com/nature/for-authors/initial-submission)。转换器只处理语言选择、编号、引用和格式，不翻译或润色正文与图注；文字规范见[翻译与同步规则](../RULES/翻译与同步规则.md)。
 
 转换器按图名找到幻灯片，以清晰 PNG 导出并裁掉页面大块留白。一次编译通常只启动一次导图进程，并按 PPT 批量导出所需页面。转换前会把每份已保存的 PPT 复制到 `temp/`，图名、备注和成品图都从该次副本读取；转换器不会在 PowerPoint 中打开或关闭原 PPT，也不会退出你正在使用的 PowerPoint。若你正在修改原 PPT 但尚未保存，本次编译使用上次保存的版本；保存后重新编译即可取得更新。临时副本在转换结束后自动清理。
 
@@ -163,6 +193,9 @@ python word_to_md.py second.docx --output second.md
 
 ```powershell
 python 转换工具/test_roundtrip.py
+python 转换工具/test_english_captions.py
 ```
+
+英文图注测试固定导出图片以隔离 Office 桌面状态，使用正式 Word 转换流程覆盖两种版式、标记边界、旧备注兼容、原生公式图注、图号及首句格式、图名引用和英文回转。真实 Office 导图另由往返集成测试及文稿编译验证。
 
 测试、媒体提取与版面检查产生的临时文件统一放在 `temp/` 中；稳定输出和 Word 回转所引用的图片仍放在文稿所在目录。

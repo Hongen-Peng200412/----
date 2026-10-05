@@ -58,7 +58,8 @@ def read_ppt_figures(ppt_path: Path) -> dict[str, tuple[int, str]]:
             figure_name = slide_names[0]
             if figure_name in figures:
                 raise ValueError(f"PPT 图名重复：{figure_name}，第 {figures[figure_name][0]} 与 {page} 页")
-            note = slide.notes_slide.notes_text_frame.text.strip() if slide.has_notes_slide else ""
+            # 保留末尾换行, 使仅含 ENGLISH: 分隔行的空英文区也可被识别; 选择语言后再去除首尾空白.
+            note = slide.notes_slide.notes_text_frame.text if slide.has_notes_slide else ""
             figures[figure_name] = (page, note)
     return figures
 

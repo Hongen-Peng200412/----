@@ -838,8 +838,9 @@ def _apply_operation_layout(path: Path, reference: Path, image_align: str, image
         properties = paragraph._p.pPr
         is_table_caption = (properties is not None and properties.pStyle is not None
                             and properties.pStyle.val == "TableCaption")
-        is_figure_caption = False
-        if index and paragraphs[index - 1].text.strip() == "":
+        # 原生公式不计入 paragraph.text; 优先用图注样式识别, 避免公式图注回退为正文格式.
+        is_figure_caption = paragraph.style.name in ("Figure Caption", "Image Caption")
+        if not is_figure_caption and index and paragraphs[index - 1].text.strip() == "":
             descriptions = [item.get("descr", "").strip()
                             for item in paragraphs[index - 1]._p.xpath(".//wp:docPr")]
             is_figure_caption = bool(paragraph.text.strip() and paragraph.text.strip() in descriptions)
@@ -863,8 +864,9 @@ def _apply_operation_layout(path: Path, reference: Path, image_align: str, image
 
 def markdown_to_word(source: Path, target: Path, bibliography: Path | None = None,
                      profile: str = "nature", reference: Path | None = None,
-                     image_align: str = "center", image_size: str = "fit") -> None:
-    """先在 temp 中生成完整 Word, 校验后再发布到目标路径。"""
+                     image_align: str = "center", image_size: str = "fit",
+                     english: bool = False) -> None:
+    """在 temp 中生成 Word 后发布; english 选择 PPT 双语备注的英文部分, 无分隔标记时保留原图注."""
     pandoc = ensure_dependencies()
     from docx import Document
     from PIL import Image
@@ -926,6 +928,11 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
             if figure_name not in figure_index[ppt_path]:
                 raise ValueError(f"PPT 图名不存在：{ppt_path} 中的 {figure_name}")
             page, caption = figure_index[ppt_path][figure_name]
+            # 独立的 ENGLISH: 或 ENGLISH：行分隔中文与英文图注; 匹配实际换行, 不匹配字面的 \\n.
+            language_marker = re.search(r"(?:\A|(?<=[\r\n]))[ \t]*ENGLISH[:：][ \t]*(?:\r?\n|\r)", caption)
+            if language_marker is not None:
+                caption = caption[language_marker.end():] if english else caption[:language_marker.start()]
+            caption = caption.strip()
             caption = MANUAL_FIGURE_NUMBER.sub("", caption)
             if caption:
                 title_end = re.search(r"。|\.(?=\s|$)|\n", caption)

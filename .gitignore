@@ -28,3 +28,5 @@ __pycache__/
 *.docx
 !/论文草稿.operation.docx
 !/论文草稿.nature.docx
+!/draft.operation.docx
+!/draft.nature.docx

@@ -44,7 +44,7 @@ $$
 
 Each $B_j$ is a 26-connected region in the three-dimensional voxel grid.
 
-Match uses the multi-view density bank $M$, receptor information $A$ around each blob and auxiliary information AUX from Find (see Methods). It matches the Find-predicted blobs $ \{B_j\}_{j=1}^{J}$ to user-provided ligand identities $ \{ S_k \}_{k=1}^{K} $ in the same PDB entry. Here, $K$ denotes the number of ligand identities present in that PDB entry. Match determines whether each blob is a false-positive Find prediction and, if it is not, assigns its ligand identity:
+Match uses the multi-view density bank $M$, the surrounding receptor pocket $A$ around each blob and auxiliary features from Find ($\mathrm{AUX}$), assigning the predicted blobs $\{B_j\}_{j=1}^{J}$ to user-provided ligand identities $\{S_k\}_{k=1}^{K}$ in the PDB entry. Here, $K$ denotes the number of ligand identities present in that PDB entry. Match determines whether each blob is a false-positive Find prediction and, if it is not, assigns its ligand identity:
 
 $$
 \begin{aligned}

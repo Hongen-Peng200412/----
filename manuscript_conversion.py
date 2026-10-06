@@ -937,7 +937,9 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
             if caption:
                 title_end = re.search(r"。|\.(?=\s|$)|\n", caption)
                 split = title_end.end() if title_end else len(caption)
-                caption = f"**Fig. {figure_numbers[figure_name]} | {caption[:split]}**{caption[split:]}"
+                # 只加粗图注段首的面板字母; 保留逗号、正文、公式及已有 Markdown 加粗标记.
+                body = re.sub(r"(?m)^([ \t]*)([a-z])(?=[,，、])", r"\1**\2**", caption[split:])
+                caption = f"**Fig. {figure_numbers[figure_name]} | {caption[:split]}**{body}"
             if not caption:
                 print(f"提示：{ppt_path} 第 {page} 页备注为空，Word 中不会生成该图的图注。", file=sys.stderr)
             figure_key = (ppt_path, figure_name)

@@ -65,3 +65,53 @@ Build takes a specified initial binding site $p \in R^3$, a small-molecule ident
 We tested the framework on a non-redundant set of 179 PDB entries. To evaluate Find's localisation performance, we computed semantic and instance-level metrics for each full density map. To evaluate Match's identity matching and Build's molecular docking performance, we assessed the relevant ligands from these PDB entries.
 
 {{pptfig:"画图/Method总图.pptx"|fig-method-v4}}
+
+# Results
+
+## Stage 1
+
+### Stage 1: Evaluation metrics
+
+For a given PDB structure, let the model predict $N_{pred}$ three-dimensional candidate blobs, $\{B_i\}_{i=1}^{N_{pred}}$. The structure contains $N_{gt}$ ground-truth ligand instances, $\{G_j\}_{j=1}^{N_{gt}}$, where $G_j$ denotes the ligand region of instance $j$. We set the bidirectional coverage threshold to $\tau \in \{0.3, 0.5\}$.
+
+We evaluated Find at both the semantic and instance levels. At the semantic level, performance was measured using the Dice score.
+
+At the instance level, predicted instances $\{B_i\}_{i=1}^{N_{pred}}$ and ground-truth instances $\{G_j\}_{j=1}^{N_{gt}}$ form the two vertex sets of a bipartite graph. An edge connects $B_i$ and $G_j$ if each covers at least a fraction $\tau$ of the other. We then used the Hungarian algorithm to obtain a maximum matching between the two sets. Let $N^{\mathrm{1to1}}_{\tau}$ be the number of successfully matched instance pairs. We define one-to-one precision and recall as:
+
+$$
+\operatorname{1to1P}_{\tau}
+=
+\frac{N^{\mathrm{1to1}}_{\tau}}{N_{\mathrm{pred}}},
+\qquad
+\operatorname{1to1R}_{\tau}
+=
+\frac{N^{\mathrm{1to1}}_{\tau}}{N_{\mathrm{gt}}},
+$$
+
+These quantities yield the one-to-one F1 score at threshold $\tau$, $\operatorname{one-to-one F1}_{\tau}$. Ranking predicted instances by their mean voxel probability yields the corresponding one-to-one precision–recall area under the curve (PRAUC), $\operatorname{one-to-one PRAUC}_{\tau}$.
+
+One-to-one metrics exclude both one-to-many and many-to-one matches between predicted and ground-truth instances. For example, if one predicted blob covers several ground-truth ligands, at most one pair can count as a successful match. These metrics require accurate instance localisation and separation, penalising incorrect splitting or merging as well as localisation errors. They therefore provide a precise assessment of the model's performance.
+
+### Stage 1: Results
+
+Panels a, c and e of {{figref:stage1-main-sixpanel}} show predictions on the full test set. Panels b, d and f show evaluations restricted to small molecules. Ground-truth and predicted instances from other categories, such as sugars and metal ions, were excluded from both numerators and denominators.
+
+We compared LigandSeek-Find using either deposited or CryoAtom2-reconstructed receptors with the density-only method Emap2lig-Find ({{figref:stage1-main-sixpanel|a,b}}). Across the full test set, their mean Dice scores were 0.584, 0.477 and 0.050, respectively. Their mean one-to-one PRAUC@0.3 scores were 0.663, 0.541 and 0.255, respectively ({{figref:stage1-main-sixpanel|a}}). At the stricter matching threshold of 0.5, their mean one-to-one PRAUC@0.5 scores were 0.558, 0.447 and 0.126, respectively. LigandSeek-Find outperformed Emap2lig-Find even without deposited receptor structures as input, and this trend persisted in the small-molecule test subset.
+
+Panels c and d compare LigandSeek-Find and Emap2lig-Find directly using one-to-one PRAUC@0.3 ({{figref:stage1-main-sixpanel|c,d}}). With CryoAtom2-reconstructed receptors, LigandSeek-Find performed better on 112 structures, comparably on 40 and worse on 27 in the full test set ({{figref:stage1-main-sixpanel|c}}). Its performance was therefore substantially better than that of Emap2lig-Find. In the small-molecule subset, the corresponding counts were 40, 36 and 18 PDB entries ({{figref:stage1-main-sixpanel|d}}). Although the advantage narrowed, LigandSeek-Find continued to outperform Emap2lig-Find. Emap2lig primarily targets small-molecule identification and modelling, explaining its better detection performance for small molecules than across all ligand categories.
+
+Emap2lig-Find tended to predict far more ligand instances than were present, resulting in much lower precision than recall in both semantic and instance-level metrics ({{figref:stage1-main-sixpanel|e,f}}). Accurate localisation requires both high precision and high recall, with a good balance between them. Sacrificing too much precision to increase recall is inappropriate for this task. LigandSeek-Find achieved a good balance between precision and recall under these conditions. The low precision of Emap2lig-Find directly resulted in its low Dice score. However, subsequent analyses showed reasonable top-k success rates for Emap2lig-Find ({{figref:e2e-all-find-match}}, {{figref:e2e-small-pipeline|a}}). Its PRAUC, which depends on ranking instances by their mean probability, was therefore substantially higher than its Dice score.
+
+{{pptfig:"画图/stage1结果.pptx"|stage1-main-sixpanel}}
+
+### Stage 1: Representative cases
+
+Four representative cases showed that LigandSeek-Find covered ligand regions more completely than the density-only method Emap2lig-Find and detected regions that it missed ({{figref:stage1-fourcase-main|a–d}}). In the viral replication-associated protein complex 9PQM, both methods detected most of the region occupied by the ATP analogue ATPγS. LigandSeek-Find and Emap2lig-Find achieved instance Dice scores of 0.816 and 0.766, respectively ({{figref:stage1-fourcase-main|a}}). For cholesterol in 9UWI, Emap2lig-Find predictions were concentrated within the ground-truth ligand region, achieving a precision of 0.990 but covering only 0.300 of that region. LigandSeek-Find increased coverage to 0.812, recovering more of the missed ligand region ({{figref:stage1-fourcase-main|b}}). At the NADPH binding site in 9WUP, Emap2lig-Find produced no prediction overlapping the ground-truth ligand region. LigandSeek-Find covered 0.922 of that region in the same comparison ({{figref:stage1-fourcase-main|c}}). Similarly, at the ADP site in 9RMI, Emap2lig-Find covered only 0.103 of the ground-truth region, whereas LigandSeek-Find covered 0.883 ({{figref:stage1-fourcase-main|d}}). These local comparisons demonstrated advantages in both detecting ligand regions and delineating their spatial boundaries more accurately.
+
+Replacing deposited receptor structures with receptors reconstructed from density maps by CryoAtom2 retained the main detection and coverage advantages of LigandSeek-Find in these cases. With reconstructed receptors, the instance Dice scores for 9PQM, 9UWI and 9WUP were 0.816, 0.848 and 0.715, respectively. These scores were close to those obtained with deposited receptors and exceeded those of Emap2lig-Find ({{figref:stage1-fourcase-main|a–c}}). The 9RMI case illustrated a loss of precision after receptor replacement. The predicted region extended beyond the ligand, reducing precision from 0.607 to 0.396 and Dice from 0.719 to 0.532 ({{figref:stage1-fourcase-main|d}}). Nevertheless, the prediction still covered 0.810 of the ground-truth ligand region, and its Dice score exceeded the 0.131 achieved by Emap2lig-Find. Thus, across these four cases, LigandSeek-Find retained good detection performance with CryoAtom2-reconstructed receptors when deposited receptor structures were unavailable. Performance decreased in some regions, while the overall test-set comparison is shown in {{figref:stage1-main-sixpanel}}.
+
+{{pptfig:"画图/stage1可视化.pptx"|stage1-fourcase-main}}
+
+{{pptfig:"画图/E2E结果.pptx"|e2e-all-find-match}}
+
+{{pptfig:"画图/E2E结果.pptx"|e2e-small-pipeline}}

@@ -44,22 +44,21 @@ $$
 
 Each $B_j$ is a 26-connected region in the three-dimensional voxel grid.
 
-Match uses the multi-view density bank $M$, the surrounding receptor pocket $A$ around each blob and auxiliary features from Find ($\mathrm{AUX}$), assigning the predicted blobs $\{B_j\}_{j=1}^{J}$ to user-provided ligand identities $\{S_k\}_{k=1}^{K}$ in the PDB entry. Here, $K$ denotes the number of ligand identities present in that PDB entry. Match determines whether each blob is a false-positive Find prediction and, if it is not, assigns its ligand identity:
+Match uses the density bank $M$, the receptor pocket $A$ surrounding each blob and auxiliary features from Find ($\mathrm{AUX}$) to associate the predicted blobs $\{B_j\}_{j=1}^{J}$ with user-provided ligand identities $\{S_k\}_{k=1}^{K}$ in the PDB entry. Here, $K$ denotes the number of ligand identities present in that complex. Specifically, it determines whether each blob is a false-positive Find prediction and, if not, identifies its corresponding ligand identity:
 
 $$
 \begin{aligned}
-&\mathbf{Match}(M, A, AUX; B_j, \{S_k\}_{k=1}^{K}) \\
-&\quad = \begin{cases}
+\mathbf{Match}(M, A, AUX; B_j, \{S_k\}_{k=1}^{K}) 
+&= \begin{cases}
 (1, S_k), & \begin{aligned}
-&\text{if } B_j \text{ is not a false positive} \\
-&\text{and has ligand identity } S_k
+&\text{if } B_j \text{ is not a false positive and corresponds to ligand identity $S_k$}
 \end{aligned} \\
 (0, \emptyset), & \text{if } B_j \text{ is a false positive}
 \end{cases}
 \end{aligned}
 $$
 
-Once Find locates a ligand region and Match assigns its chemical identity (SMILES), downstream molecular docking tools can reconstruct the three-dimensional ligand pose. We provide interfaces to commonly used docking tools, allowing users to select the appropriate tool for their needs. We also minimally modified the PocketXMol architecture to use density information as additional docking guidance alongside receptor information. We then loaded its official weights for fine-tuning and adopted PocketXMol-tuned as the default Build model.
+Once Find locates a ligand region and Match assigns its chemical identity, downstream molecular docking tools can reconstruct the three-dimensional ligand pose. While we provide modular interfaces to standard docking tools, we developed a density-guided variant of PocketXMol as the default Build model. Specifically, PocketXMol was adapted with local density conditioning and fine-tuned from official weights, enabling pose generation constrained by both the receptor environment and experimental density.
 
 Build takes a specified initial binding site $p \in R^3$, a small-molecule identity represented by SMILES and the surrounding pocket environment $P$. It also accepts optional guiding density information $M \in \mathbb{R}^{D \times H \times W}$ and generates all-atom coordinates for the small molecule.
 

@@ -123,13 +123,13 @@ c_{ij}^{B}=\frac{|B_i\cap G_j|}{|B_i|},\qquad
 c_{ij}^{G}=\frac{|B_i\cap G_j|}{|G_j|}.
 $$
 
-Here, $c_{ij}^{B}$ is the fraction of the blob covered by the ground-truth ligand region. Conversely, $c_{ij}^{G}$ is the fraction of the ground-truth ligand region covered by the blob. We define the set of instances meeting a threshold of 0.30 in both directions as:
+Here, $c_{ij}^{B}$ is the fraction of the blob covered by the ground-truth ligand region. Conversely, $c_{ij}^{G}$ is the fraction of the ground-truth ligand region covered by the blob. For predicted ligand $B_i$, we present the ground-truth instances meeting a coverage threshold of 0.30 in both directions as a set:
 
 $$
 \mathcal J_i=\left\{j:c_{ij}^{B}\geq 0.30\ \land\ c_{ij}^{G}\geq 0.30\right\}.
 $$
 
-We label $B_i$ as foreground if $\mathcal J_i$ is non-empty, meaning that both coverage fractions reach at least 30% for a ground-truth ligand. Otherwise, we label the blob as background under this criterion. For each foreground blob, we assign a unique ground-truth ligand instance by maximising the geometric mean of the two coverage fractions:
+We label $B_i$ as foreground if $\mathcal J_i$ is non-empty, meaning there is a ground-truth ligand that both coverage fractions reach at least 30%, otherwise, we label the blob as background under this criterion. For each foreground blob, we assign a unique ground-truth ligand instance by maximising the geometric mean of the two coverage fractions:
 
 $$
 j_i^*=\underset{j\in\mathcal J_i}{\arg\max}\;\sqrt{c_{ij}^{B}c_{ij}^{G}}.
@@ -137,9 +137,9 @@ $$
 
 The SMILES representation of that instance defines the ligand identity label for $B_i$.
 
-After training Find, we ran inference with deposited receptors on 1,650 training and 200 validation PDB entries. The resulting candidate blobs and their auxiliary features formed the training and validation sets for Match.
+After training Find, we ran inference with deposited receptors on 1,650 training and 200 validation PDB entries. The resulting candidate blobs and the following features formed the training and validation sets for Match.
 
-Find also processed the 179 test PDB entries separately with deposited and CryoAtom2-reconstructed receptors. These conditions yielded 1,238 and 1,160 foreground blobs, respectively, whose corresponding ligands could be successfully parsed. They also yielded 413 and 489 false-positive blobs, respectively. The Match test sets included all these blobs, including false positives, under the same two receptor conditions. We applied no additional filtering or processing to the blobs, so this evaluation reflected the operation of the actual inference pipeline.
+Find also processed the 179 test PDB entries separately with deposited and CryoAtom2-reconstructed receptors. Respectively, these conditions yielded 1,238 and 1,160 blobs that were defined as foreground blob and corresponding ligands which could be successfully parsed. They also yielded 413 and 489 false-positive blobs, respectively. The Match test sets included all these blobs, including false positives, under the same two receptor conditions. We applied no additional filtering or processing to the blobs, so this evaluation reflected the operation of the actual inference pipeline.
 
 We refer to the main model, which uses the **full voxel feature set**, pocket context and auxiliary information AUX, as strongest. We also trained three ablation models on the same samples using the same training protocol. The voxel-only model used the full voxel feature set, density-only used only experimental density, and pocket-only used only pocket information.
 

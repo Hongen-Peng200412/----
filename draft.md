@@ -108,7 +108,7 @@ Across the 179 test PDB entries, each complex contained an average of 14.0 groun
 
 Four representative cases showed that LigandSeek-Find covered ligand regions more completely than the density-only method Emap2lig-Find and detected regions that it missed ({{figref:stage1-fourcase-main|a–d}}). In the viral replication-associated protein complex 9PQM, both methods detected most of the region occupied by the ATP analogue ATPγS. LigandSeek-Find and Emap2lig-Find achieved Dice scores of 0.816 and 0.766 for this ligand instance, respectively ({{figref:stage1-fourcase-main|a}}). For cholesterol in 9UWI, Emap2lig-Find predictions were concentrated within the ground-truth ligand region, achieving a precision of 0.990 but covering only 0.300 of that region. LigandSeek-Find increased coverage to 0.812, recovering more of the missed ligand region ({{figref:stage1-fourcase-main|b}}). At the NADPH binding site in 9WUP, Emap2lig-Find produced no prediction overlapping the ground-truth ligand region. LigandSeek-Find covered 0.922 of that region in the same comparison ({{figref:stage1-fourcase-main|c}}). Similarly, at the ADP site in 9RMI, Emap2lig-Find covered only 0.103 of the ground-truth region, whereas LigandSeek-Find covered 0.883 ({{figref:stage1-fourcase-main|d}}). These local comparisons demonstrated advantages in both detecting ligand regions and delineating their spatial boundaries more accurately.
 
-LigandSeek-Find retained its main detection and coverage advantages in these cases when deposited receptor structures were replaced with receptors automatically reconstructed by CryoAtom2. With reconstructed receptors, the instance Dice scores for 9PQM, 9UWI and 9WUP were 0.816, 0.848 and 0.715, respectively. These scores were close to those obtained with deposited receptors and exceeded those of Emap2lig-Find ({{figref:stage1-fourcase-main|a–c}}). The 9RMI case illustrated a loss of precision after receptor replacement. For this ligand instance, the predicted region extended beyond the ligand, reducing precision from 0.607 to 0.396 and the Dice score from 0.719 to 0.532 ({{figref:stage1-fourcase-main|d}}). Nevertheless, the prediction still covered 0.810 of the ground-truth ligand region, and its Dice score exceeded the 0.131 achieved by Emap2lig-Find. Thus, across these four cases, LigandSeek-Find usaually retained good detection performance with CryoAtom2-reconstructed receptors when deposited receptor structures were unavailable.
+LigandSeek-Find retained its main detection and coverage advantages in these cases when deposited receptor structures were replaced with receptors automatically reconstructed by CryoAtom2. With reconstructed receptors, the instance Dice scores for 9PQM, 9UWI and 9WUP were 0.816, 0.848 and 0.715, respectively. These scores were close to those obtained with deposited receptors and exceeded those of Emap2lig-Find ({{figref:stage1-fourcase-main|a–c}}). The 9RMI case illustrated a loss of precision after receptor replacement. For this ligand instance, the predicted region extended beyond the ligand, reducing precision from 0.607 to 0.396 and the Dice score from 0.719 to 0.532 ({{figref:stage1-fourcase-main|d}}). Nevertheless, the prediction still covered 0.810 of the ground-truth ligand region, and its Dice score exceeded the 0.131 achieved by Emap2lig-Find. Thus, across these four cases, LigandSeek-Find usually retained good detection performance with CryoAtom2-reconstructed receptors when deposited receptor structures were unavailable.
 
 {{pptfig:"画图/stage1可视化.pptx"|stage1-fourcase-main}}
 
@@ -116,36 +116,36 @@ LigandSeek-Find retained its main detection and coverage advantages in these cas
 
 ### Stage 2: Evaluation protocol
 
-Let $B_i$ denote the $i$th blob predicted by Find. Let $G_j$ denote the ground-truth ligand region of instance $j$ in the same PDB entry. Their bidirectional coverage is defined as:
+Let $B_i$ denote the $i$-th candidate blob predicted by Find, and let $G_j$ denote the ground-truth ligand region of instance $j$ in the same PDB entry. Their bidirectional coverage is defined as:
 
 $$
 c_{ij}^{B}=\frac{|B_i\cap G_j|}{|B_i|},\qquad
-c_{ij}^{G}=\frac{|B_i\cap G_j|}{|G_j|}.
+c_{ij}^{G}=\frac{|B_i\cap G_j|}{|G_j|},
 $$
 
-Here, $c_{ij}^{B}$ is the fraction of the blob covered by the ground-truth ligand region. Conversely, $c_{ij}^{G}$ is the fraction of the ground-truth ligand region covered by the blob. For predicted ligand $B_i$, we present the ground-truth instances meeting a coverage threshold of 0.30 in both directions as a set:
+where $c_{ij}^{B}$ is the fraction of the blob covered by the ground-truth ligand region, and $c_{ij}^{G}$ is the fraction of the ground-truth ligand region covered by the blob. For each candidate blob $B_i$, the indices of ground-truth instances meeting a bidirectional coverage threshold of 0.30 are collected into the set:
 
 $$
 \mathcal J_i=\left\{j:c_{ij}^{B}\geq 0.30\ \land\ c_{ij}^{G}\geq 0.30\right\}.
 $$
 
-We label $B_i$ as foreground if $\mathcal J_i$ is non-empty, meaning there is a ground-truth ligand that both coverage fractions reach at least 30%, otherwise, we label the blob as background under this criterion. For each foreground blob, we assign a unique ground-truth ligand instance by maximising the geometric mean of the two coverage fractions:
+A candidate blob $B_i$ is labeled as foreground if $\mathcal J_i$ is non-empty (i.e. sharing at least 30% bidirectional coverage with a ground-truth ligand); otherwise, it is labeled as background. For each foreground blob, we assign a unique ground-truth ligand instance by maximising the geometric mean of the two coverage fractions:
 
 $$
 j_i^*=\underset{j\in\mathcal J_i}{\arg\max}\;\sqrt{c_{ij}^{B}c_{ij}^{G}}.
 $$
 
-The SMILES representation of that instance defines the ligand identity label for $B_i$.
+The SMILES string of this instance defines the ground-truth ligand identity for $B_i$.
 
-After training Find, we ran inference with deposited receptors on 1,650 training and 200 validation PDB entries. The resulting candidate blobs and the following features formed the training and validation sets for Match.
+After training LigandSeek-Find, we used it to run inference with deposited receptors on 1,650 training and 200 validation PDB entries. The resulting candidate blobs and associated auxiliary features formed the training and validation sets for Match.
 
-Find also processed the 179 test PDB entries separately with deposited and CryoAtom2-reconstructed receptors. Respectively, these conditions yielded 1,238 and 1,160 blobs that were defined as foreground blob and corresponding ligands which could be successfully parsed. They also yielded 413 and 489 false-positive blobs, respectively. The Match test sets included all these blobs, including false positives, under the same two receptor conditions. We applied no additional filtering or processing to the blobs, so this evaluation reflected the operation of the actual inference pipeline.
+We also ran inference with LigandSeek-Find on the 179 test PDB entries using both deposited and CryoAtom2-reconstructed receptors. These conditions yielded 1,238 and 1,160 blobs defined as foreground blobs with corresponding parsable ligands, alongside 413 and 489 false-positive blobs, respectively. The Match test set incorporated all these candidate blobs without manual pre-filtering, ensuring that the benchmark accurately reflected real-world pipeline performance.
 
-We refer to the main model, which uses the **full voxel feature set**, pocket context and auxiliary information AUX, as strongest. We also trained three ablation models on the same samples using the same training protocol. The voxel-only model used the full voxel feature set, density-only used only experimental density, and pocket-only used only pocket information.
+We refer to the main model, which integrates the full voxel features, pocket context and auxiliary information, as strongest. For comparison, we trained three ablation models under identical protocols: voxel-only (using only the full voxel features), density-only (using only the experimental density), and pocket-only (using only the pocket information).
 
 ### Stage 2: Results
 
-{{pptfig:"画图/stage2结果.pptx"|stage2-radar-pair}}
+{{pptfig:"画图/stage2结果_忽视2+2例子.pptx"|stage2-radar-pair}}
 
 {{figref:stage2-radar-pair|a}} shows false-positive detection and ligand identity matching for the four model variants with deposited receptors. {{figref:stage2-radar-pair|b}} shows the corresponding results with CryoAtom2-reconstructed receptors. We treated each candidate blob as one sample and computed foreground F1 and ligand identity matching accuracy across blobs. We also calculated matching accuracy separately for small molecules, metal ions, sugars and peptides.
 
@@ -155,7 +155,7 @@ The voxel-only model achieved a foreground F1 of 84.1% and an overall matching a
 
 Overall matching accuracy showed no marked decline for any of the four models when deposited receptors were replaced with CryoAtom2-reconstructed receptors. By contrast, Find showed some reduction in ligand localisation performance ({{figref:stage1-main-sixpanel|a,b}}). Match was therefore more robust to the change in receptor source.
 
-{{pptfig:"画图/stage2结果.pptx"|stage2-strongest-pair}}
+{{pptfig:"画图/stage2结果_忽视2+2例子.pptx"|stage2-strongest-pair}}
 
 {{figref:stage2-strongest-pair|a,b}} stratifies strongest's results by the number of SMILES representations in each PDB entry. This number corresponds to the ligand identities competing for assignment to each candidate region in that entry. Identity discrimination became more difficult as the number of competing identities increased. For example, with deposited receptors, small-molecule matching accuracy fell from 94.8% in entries with two identities to 65.9% in entries with four. Nevertheless, when fewer than 4 identities competed, matching accuracy generally exceeded 80% across ligand categories. These cases accounted for approximately 80% of tasks, making Match's accuracy acceptable for practical use.
 

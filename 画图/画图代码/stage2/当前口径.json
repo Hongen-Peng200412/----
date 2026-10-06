@@ -1,0 +1,12 @@
+{
+  "profile": "new",
+  "ppt": "画图/stage2结果_忽视2+2例子.pptx",
+  "plot_data": "data_忽视2+2例子.json",
+  "metrics": "两种口径统计.json",
+  "metrics_key": "new",
+  "candidate_counts": {
+    "real": 1651,
+    "cryo": 1649
+  },
+  "end_to_end_changed": false
+}

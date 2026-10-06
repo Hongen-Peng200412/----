@@ -1,0 +1,26 @@
+{
+  "old": [
+    {
+      "page": 1,
+      "chinese": "各模型在真实受体（a）和 CryoAtom2（b）条件下的前景 F1 与配体身份匹配正确率。六轴自顶端顺时针为总体 SMILES、小分子、糖、前景 F1、金属离子和肽类，径向坐标为 20–100%。真实受体条件下有 1,653 个待分类和匹配的候选，其中1,238 个为前景，具体对应 389 个小分子、284 个糖、564 个金属离子和1 个肽；CryoAtom2 条件下有 1,651 个待分类和匹配的候选，其中 1,160 个为前景，具体对应 348 个小分子、277个糖、534个金属离子和 1 个肽。特别地，菱形表示 EMERALD-ID 在独立小分子测试集上的准确率，并只在返回有效预测结果的位点上取平均，其中真实受体条件下有282 个位点返回了预测结果，CryoAtom2 条件下则有313 个位点返回了预测结果。",
+      "english": "Foreground F1 and ligand identity matching accuracy of each model with deposited receptors (a) and CryoAtom2-reconstructed receptors (b). Clockwise from the top, the six axes show overall SMILES, small molecules, sugars, foreground F1, metal ions and peptides. Radial values range from 20% to 100%. With deposited receptors, 1,653 candidates require classification and matching, of which 1,238 are foreground. These comprise 389 small molecules, 284 sugars, 564 metal ions and 1 peptide. With CryoAtom2-reconstructed receptors, 1,651 candidates require classification and matching, of which 1,160 are foreground. These comprise 348 small molecules, 277 sugars, 534 metal ions and 1 peptide. Diamonds indicate EMERALD-ID accuracy on an independent small-molecule test set, averaged only over sites returning valid predictions. Predictions were returned at 282 sites with deposited receptors and 313 sites with CryoAtom2-reconstructed receptors."
+    },
+    {
+      "page": 2,
+      "chinese": "strongest 模型在真实受体（a）和 CryoAtom2受体（b）条件下的配体身份匹配精度，与竞争的配体身份数的关系。在真实受体条件下，竞争配体身份数为1，2，3，4，>=5的位点分别有419、459、113、85、162；在CryoAtom2 条件下，竞争配体身份数为1，2，3，4，>=5的位点分别有413、443、91、63、150。竞争配体身份数为1，意味着这个候选区域所在的PDB中只有一种配体身份，准确率自然为100%。",
+      "english": "Ligand identity matching accuracy of strongest versus the number of competing ligand identities, with deposited receptors (a) and CryoAtom2-reconstructed receptors (b). With deposited receptors, groups with 1, 2, 3, 4 and ≥5 competing identities contain 419, 459, 113, 85 and 162 sites, respectively. With CryoAtom2-reconstructed receptors, the corresponding groups contain 413, 443, 91, 63 and 150 sites, respectively. One competing identity means that the candidate region belongs to a PDB entry containing only one ligand identity, so accuracy is naturally 100%."
+    }
+  ],
+  "new": [
+    {
+      "page": 1,
+      "chinese": "各模型在真实受体（a）和 CryoAtom2（b）条件下的前景 F1 与配体身份匹配正确率。六轴自顶端顺时针为总体 SMILES、小分子、糖、前景 F1、金属离子和肽类，径向坐标为 20–100%。真实受体条件下有 1,651 个待分类和匹配的候选，其中1,238 个为前景，具体对应 389 个小分子、284 个糖、564 个金属离子和1 个肽；CryoAtom2 条件下有 1,649 个待分类和匹配的候选，其中 1,160 个为前景，具体对应 348 个小分子、277个糖、534个金属离子和 1 个肽。特别地，菱形表示 EMERALD-ID 在独立小分子测试集上的准确率，并只在返回有效预测结果的位点上取平均，其中真实受体条件下有282 个位点返回了预测结果，CryoAtom2 条件下则有313 个位点返回了预测结果。",
+      "english": "Foreground F1 and ligand identity matching accuracy of each model with deposited receptors (a) and CryoAtom2-reconstructed receptors (b). Clockwise from the top, the six axes show overall SMILES, small molecules, sugars, foreground F1, metal ions and peptides. Radial values range from 20% to 100%. With deposited receptors, 1,651 candidates require classification and matching, of which 1,238 are foreground. These comprise 389 small molecules, 284 sugars, 564 metal ions and 1 peptide. With CryoAtom2-reconstructed receptors, 1,649 candidates require classification and matching, of which 1,160 are foreground. These comprise 348 small molecules, 277 sugars, 534 metal ions and 1 peptide. Diamonds indicate EMERALD-ID accuracy on an independent small-molecule test set, averaged only over sites returning valid predictions. Predictions were returned at 282 sites with deposited receptors and 313 sites with CryoAtom2-reconstructed receptors."
+    },
+    {
+      "page": 2,
+      "chinese": "strongest 模型在真实受体（a）和 CryoAtom2受体（b）条件下的配体身份匹配精度，与竞争的配体身份数的关系。在真实受体条件下，竞争配体身份数为1，2，3，4，>=5的位点分别有419、459、113、85、162；在CryoAtom2 条件下，竞争配体身份数为1，2，3，4，>=5的位点分别有413、443、91、63、150。竞争配体身份数为1，意味着这个候选区域所在的PDB中只有一种配体身份，准确率自然为100%。",
+      "english": "Ligand identity matching accuracy of strongest versus the number of competing ligand identities, with deposited receptors (a) and CryoAtom2-reconstructed receptors (b). With deposited receptors, groups with 1, 2, 3, 4 and ≥5 competing identities contain 419, 459, 113, 85 and 162 sites, respectively. With CryoAtom2-reconstructed receptors, the corresponding groups contain 413, 443, 91, 63 and 150 sites, respectively. One competing identity means that the candidate region belongs to a PDB entry containing only one ligand identity, so accuracy is naturally 100%."
+    }
+  ]
+}

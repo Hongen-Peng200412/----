@@ -4,7 +4,7 @@ Cryo-electron microscopy (cryo-EM) has advanced three-dimensional structure dete
 
 # Introduction
 
-Single-particle cryo-electron microscopy (cryo-EM) has become an important method for determining the three-dimensional structures of macromolecular complexes[@callaway2020revolution; @bai2015cryo]. Deep learning tools such as ModelAngelo[@jamali2024modelangelo], CryoAtom2[@cryoatom2_2025] and EMProt[@emprot2024] have advanced automated modelling of protein and nucleic acid structures. Ligands bound in binding pockets often control catalysis, conformational switching and signalling cascades in these complexes. Their binding poses also underpin structure-based drug design[@cheng2018cryo]. A key challenge is therefore to combine experimental density and the receptor environment to detect, identify and reconstruct accurate all-atom ligand structures automatically, without expert modelling. Automated, end-to-end reconstruction of all-atom ligand structures from cryo-EM density maps faces three sequential bottlenecks.
+Single-particle cryo-electron microscopy (cryo-EM) has become an important method for determining the three-dimensional structures of macromolecular complexes[@callaway2020revolution; @bai2015cryo]. Deep learning tools such as ModelAngelo[@jamali2024modelangelo], CryoAtom2[@cryoatom2_2025] and EMProt[@emprot2024] have advanced automated modelling of protein and nucleic acid structures. However, ligands bound in the binding pockets of these complexes often regulate catalysis, conformational switching and signalling cascades[@cheng2018cryo]. A key challenge is therefore to combine experimental density and the receptor environment to detect, identify and reconstruct accurate all-atom ligand structures automatically, without expert modelling. Automated, end-to-end reconstruction of all-atom ligand structures from cryo-EM density maps faces three sequential bottlenecks.
 
 The first is region localisation, the Find bottleneck. Cryo-EM density maps span large spatial scales, with heterogeneous local signal-to-noise ratios and diffuse, intermixed densities from water molecules or lipid micelles. Existing density detection methods, such as Emap2lig-Find[@umap2lig], mainly use three-dimensional voxel segmentation networks to locate small-molecule density blobs directly across the entire map. Without information about the surrounding macromolecular receptor, these density-only approaches lack the chemical and geometric context of the binding pocket, tending to produce many false-positive candidate regions and thereby reducing the precision of instance-level localisation.
 
@@ -12,7 +12,7 @@ The second is chemical identity matching, the Match bottleneck. Even after a lig
 
 
 
-The third is pose reconstruction, the Build bottleneck. After the binding region and chemical identity have been determined, generative docking models such as DiffDock[@corso2023diffdock] and PocketXMol[@pocketxmol] rely primarily on receptor structures, failing to exploit experimental density to guide pose generation. Conversely, density-only deep learning tools such as Emap2lig-Build[@umap2lig] omit protein and nucleic acid receptors, struggling to reconcile density fitting with receptor-environment constraints. Classical non-deep-learning methods, including EMERALD, GemSpot and ChemEM, can incorporate both the receptor environment and experimental density for pose search or optimisation[@muenks2023emerald; @robertson2020gemspot; @sweeney2024chemem]. However, they are computationally slow and remain disconnected from upstream localisation and identity matching.
+The third is pose reconstruction, the Build bottleneck. After the binding region and chemical identity have been determined, generative docking models such as DiffDock[@corso2023diffdock] and PocketXMol[@pocketxmol] usually rely primarily on receptor structures, failing to exploit experimental density to guide pose generation. Conversely, density-only deep learning tools such as Emap2lig-Build[@umap2lig] omit protein and nucleic acid receptors, struggling to reconcile density fitting with receptor-environment constraints. Classical non-deep-learning methods, including EMERALD, GemSpot and ChemEM, can incorporate both the receptor environment and experimental density for pose search or optimisation[@muenks2023emerald; @robertson2020gemspot; @sweeney2024chemem]. However, they are computationally slow and remain disconnected from upstream localisation and identity matching.
 
 To address these bottlenecks and unify localisation, matching and pose reconstruction, we developed LigandSeek, an automated end-to-end framework based on joint density and receptor modelling ({{figref:fig-overview_v2,fig-method-v4}}). Across all three stages, the neural networks share a unified representation that jointly encodes the experimental density, receptor-derived simulated and difference densities, and the chemical and geometric environments of receptor atoms.
 
@@ -24,6 +24,45 @@ LigandSeek follows a three-stage Find–Match–Build workflow:
 
 We evaluated the framework on 179 complexes comprising 2,502 ligand instances. Under blind evaluation conditions, only receptors modelled de novo by CryoAtom2 were used, with no deposited receptor structures provided as input. All three LigandSeek components outperformed their respective baselines. Find achieved a one-to-one PRAUC@0.3 of 0.541, compared with 0.255 for Emap2lig-Find. Match achieved 86.6% overall matching accuracy, with a mean matching time of 0.09 s per candidate region, substantially faster than conventional reverse docking. Build reduced the median root-mean-square deviation (RMSD) of top-1 poses from 1.81 Å with the official model to 1.21 Å. In end-to-end blind evaluation across 77 complexes containing organic small molecules, LigandSeek achieved an all-atom modelling success rate of 67.5% (top-1 RMSD < 3 Å). LigandSeek connects ligand localisation, identity matching and pose reconstruction to generate accurate all-atom ligand poses from cryo-EM density maps. It provides a new tool for drug discovery and high-throughput cryo-EM screening.
 
+# Overview
+
 {{pptfig:"画图/总览图.pptx"|fig-overview_v2}}
+
+LigandSeek takes protein and nucleic acid receptor structures, either deposited or automatically modelled by CryoAtom2, together with three-dimensional cryo-EM density maps.
+
+We represent protein and nucleic acid receptors uniformly as $A = \{(a_i, x_i)\}_{i=1}^{n}$. Here, $n$ is the number of receptor atoms, and $x_i \in \mathbb{R}^3$ is the spatial position of atom $i$. The representation $a_i$ encodes the atom's attributes, such as its element type and amino acid or nucleotide type. These attributes are represented by a 50-dimensional feature vector for each receptor atom.
+
+Let $M_{exp} \in \mathbb{R}^{D \times H \times W}$ denote the voxelised three-dimensional cryo-EM density map. The receptor structure yields a simulated density map $M_{sim} \in \mathbb{R}^{D \times H \times W}$ of the same dimensions. From $M_{exp}$ and $M_{sim}$, we construct a 56-channel multi-view density bank $M \in \mathbb{R}^{56 \times D \times H \times W}$.
+
+{{figref:fig-overview_v2}} shows the model inputs, outputs and overall workflow. LigandSeek reconstructs ligand poses end to end through three stages: Find, Match and Build. The 50-dimensional receptor-atom features and the multi-view density bank are the main inputs shared by all three stages. {{figref:fig-method-v4}} shows the overall network architecture, with further details provided in Methods.
+
+Find combines receptor information and experimental density information to predict ligand regions. It produces $J$ candidate ligand regions (blobs), expressed as:
+
+$$
+\mathbf{Find}(A, M) \longrightarrow \{B_j\}_{j=1}^{J}
+$$
+
+Each $B_j$ is a 26-connected region in the three-dimensional voxel grid.
+
+Match uses the multi-view density bank $M$, receptor information $A$ around each blob and auxiliary information AUX from Find (see Methods). It matches the Find-predicted blobs $ \{B_j\}_{j=1}^{J}$ to user-provided ligand identities $ \{ S_k \}_{k=1}^{K} $ in the same PDB entry. Here, $K$ denotes the number of ligand identities present in that PDB entry. Match determines whether each blob is a false-positive Find prediction and, if it is not, assigns its ligand identity:
+
+$$
+\begin{aligned}
+&\mathbf{Match}(M, A, AUX; B_j, \{S_k\}_{k=1}^{K}) \\
+&\quad = \begin{cases}
+(1, S_k), & \begin{aligned}
+&\text{if } B_j \text{ is not a false positive} \\
+&\text{and has ligand identity } S_k
+\end{aligned} \\
+(0, \emptyset), & \text{if } B_j \text{ is a false positive}
+\end{cases}
+\end{aligned}
+$$
+
+Once Find locates a ligand region and Match assigns its chemical identity (SMILES), downstream molecular docking tools can reconstruct the three-dimensional ligand pose. We provide interfaces to commonly used docking tools, allowing users to select the appropriate tool for their needs. We also minimally modified the PocketXMol architecture to use density information as additional docking guidance alongside receptor information. We then loaded its official weights for fine-tuning and adopted PocketXMol-tuned as the default Build model.
+
+Build takes a specified initial binding site $p \in R^3$, a small-molecule identity represented by SMILES and the surrounding pocket environment $P$. It also accepts optional guiding density information $M \in \mathbb{R}^{D \times H \times W}$ and generates all-atom coordinates for the small molecule.
+
+We tested the framework on a non-redundant set of 179 PDB entries. To evaluate Find's localisation performance, we computed semantic and instance-level metrics for each full density map. To evaluate Match's identity matching and Build's molecular docking performance, we assessed the relevant ligands from these PDB entries.
 
 {{pptfig:"画图/Method总图.pptx"|fig-method-v4}}

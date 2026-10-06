@@ -112,6 +112,59 @@ LigandSeek-Find retained its main detection and coverage advantages in these cas
 
 {{pptfig:"画图/stage1可视化.pptx"|stage1-fourcase-main}}
 
+## Stage 2
+
+### Stage 2: Evaluation protocol
+
+Let $B_i$ denote the $i$th blob predicted by Find. Let $G_j$ denote the ground-truth ligand region of instance $j$ in the same PDB entry. Their bidirectional coverage is defined as:
+
+$$
+c_{ij}^{B}=\frac{|B_i\cap G_j|}{|B_i|},\qquad
+c_{ij}^{G}=\frac{|B_i\cap G_j|}{|G_j|}.
+$$
+
+Here, $c_{ij}^{B}$ is the fraction of the blob covered by the ground-truth ligand region. Conversely, $c_{ij}^{G}$ is the fraction of the ground-truth ligand region covered by the blob. We define the set of instances meeting a threshold of 0.30 in both directions as:
+
+$$
+\mathcal J_i=\left\{j:c_{ij}^{B}\geq 0.30\ \land\ c_{ij}^{G}\geq 0.30\right\}.
+$$
+
+We label $B_i$ as foreground if $\mathcal J_i$ is non-empty, meaning that both coverage fractions reach at least 30% for a ground-truth ligand. Otherwise, we label the blob as background under this criterion. For each foreground blob, we assign a unique ground-truth ligand instance by maximising the geometric mean of the two coverage fractions:
+
+$$
+j_i^*=\underset{j\in\mathcal J_i}{\arg\max}\;\sqrt{c_{ij}^{B}c_{ij}^{G}}.
+$$
+
+The SMILES representation of that instance defines the ligand identity label for $B_i$.
+
+After training Find, we ran inference with deposited receptors on 1,650 training and 200 validation PDB entries. The resulting candidate blobs and their auxiliary features formed the training and validation sets for Match.
+
+Find also processed the 179 test PDB entries separately with deposited and CryoAtom2-reconstructed receptors. These conditions yielded 1,238 and 1,160 foreground blobs, respectively, whose corresponding ligands could be successfully parsed. They also yielded 413 and 489 false-positive blobs, respectively. The Match test sets included all these blobs, including false positives, under the same two receptor conditions. We applied no additional filtering or processing to the blobs, so this evaluation reflected the operation of the actual inference pipeline.
+
+We refer to the main model, which uses the **full voxel feature set**, pocket context and auxiliary information AUX, as strongest. We also trained three ablation models on the same samples using the same training protocol. The voxel-only model used the full voxel feature set, density-only used only experimental density, and pocket-only used only pocket information.
+
+### Stage 2: Results
+
+{{pptfig:"画图/stage2结果.pptx"|stage2-radar-pair}}
+
+{{figref:stage2-radar-pair|a}} shows false-positive detection and ligand identity matching for the four model variants with deposited receptors. {{figref:stage2-radar-pair|b}} shows the corresponding results with CryoAtom2-reconstructed receptors. We treated each candidate blob as one sample and computed foreground F1 and ligand identity matching accuracy across blobs. We also calculated matching accuracy separately for small molecules, metal ions, sugars and peptides.
+
+With deposited receptors, strongest achieved an overall matching accuracy of 87.8% and a foreground F1 of 86.0%. Matching accuracy was 92.5% for small molecules and 93.1% for metal ions, both exceeding the 70.8% (201/284) achieved for sugars. Peptides accounted for only 0.08% of all ligands in the full dataset. We retained the original test distribution without increasing the representation of this rare category, leaving only one peptide test case.
+
+The voxel-only model achieved a foreground F1 of 84.1% and an overall matching accuracy of 83.7%. Its matching accuracy was slightly below strongest's 87.8%, but substantially above density-only's 78.6% and pocket-only's 79.4%. These comparisons showed that the **full voxel feature set** provided important discriminative information.
+
+Overall matching accuracy showed no marked decline for any of the four models when deposited receptors were replaced with CryoAtom2-reconstructed receptors. By contrast, Find showed some reduction in ligand localisation performance ({{figref:stage1-main-sixpanel|a,b}}). Match was therefore more robust to the change in receptor source.
+
+{{pptfig:"画图/stage2结果.pptx"|stage2-strongest-pair}}
+
+{{figref:stage2-strongest-pair|a,b}} stratifies strongest's results by the number of SMILES representations in each PDB entry. This number corresponds to the ligand identities competing for assignment to each candidate region in that entry. Identity discrimination became more difficult as the number of competing identities increased. For example, with deposited receptors, small-molecule matching accuracy fell from 94.8% in entries with two identities to 65.9% in entries with four. Nevertheless, when fewer than 4 identities competed, matching accuracy generally exceeded 80% across ligand categories. These cases accounted for approximately 80% of tasks, making Match's accuracy acceptable for practical use.
+
+Metal ions retained high matching accuracy across all groups and were easier to distinguish from other ligand identities. This reflected their greater chemical separability from the other ligands. During identity matching, we provided no prior information about the ligand category within each candidate blob. Thus, the high accuracy did not arise from the limited number of metal-ion types.
+
+We also evaluated EMERALD-ID, which supports only small molecules. EMERALD-ID docks candidate small-molecule SMILES representations individually at each site, then uses the resulting docking scores to infer the most likely ligand identity. Its computational complexity per PDB entry is $O(N_g \times K)$. Here, $N_g$ is the number of small-molecule ligand instances, and $K$ is the number of small-molecule identities. In contrast, our model supports GPU acceleration through vectorised computation and required a mean of only 0.09 s to match each candidate blob. This mean runtime was measured on an NVIDIA H100 GPU.
+
+EMERALD-ID cannot use GPU acceleration and required a mean of 64 min to dock one small-molecule identity at one site on a single CPU core. Its runtime was almost prohibitive for PDB entries in the high-cost tail, which required docking more small molecules. We therefore defined a separate evaluation subset for EMERALD-ID within the original test set. Among entries containing small molecules, we excluded the 10% with the highest $N_g \times K$, retaining 357 small-molecule sites from 84 PDB entries. We supplied all small-molecule identities from the same PDB entry for matching. Chemical preparation failed at many sites, preventing EMERALD-ID from returning results. We therefore calculated its matching accuracy only for sites that returned valid results. {{figref:stage2-radar-pair|a}} and {{figref:stage2-radar-pair|b}} show its performance with deposited and CryoAtom2-reconstructed receptors, respectively.
+
 {{pptfig:"画图/E2E结果.pptx"|e2e-all-find-match}}
 
 {{pptfig:"画图/E2E结果.pptx"|e2e-small-pipeline}}

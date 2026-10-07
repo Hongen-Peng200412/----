@@ -25,6 +25,8 @@ def main() -> None:
 
     chinese = "中文标题。中文说明。"
     english = "English title. English description."
+    panel_chinese = "面板标题。\na-c，短横线范围。\nd–f、连接号范围。\n  g - i，含空格范围。\nj – l，含空格连接号范围。\nm，单个面板。\n**n–p**，已有加粗。\n比较 a-c，普通说明。\na-c 不是段首面板标识。"
+    panel_english = "Panel title.\na-c, Hyphen range.\nd–f, En dash range.\n  g - i, Spaced hyphen range.\nj – l, Spaced en dash range.\nm, Single panel.\n**n–p**, Existing bold.\nCompare a-c, ordinary prose.\na-c bonds remain unchanged."
     cases = [
         (chinese + "\nENGLISH:\n" + english, chinese, english),
         (chinese + "\nENGLISH：\n" + english, chinese, english),
@@ -47,6 +49,8 @@ def main() -> None:
         ("图 9｜" + chinese + "\nENGLISH:\nFig. 8 | " + english, chinese, english),
         (chinese + "\nENGLISH:\nEnglish title. Native formula $h_j^{\\mathrm{vox}}$ remains editable.",
          chinese, "English title. Native formula  remains editable."),
+        (panel_chinese + "\nENGLISH:\n" + panel_english,
+         panel_chinese.replace("**", ""), panel_english.replace("**", "")),
     ]
     TEMP_ROOT.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="english_captions_", dir=TEMP_ROOT) as folder:
@@ -100,6 +104,11 @@ def main() -> None:
                     first = captions[0]
                     title = "English title." if use_english else "中文标题。"
                     assert "".join(run.text for run in first.runs if run.bold) == "Fig. 1 | " + title
+                    panels = next(p for p in captions if p.text.startswith(f"Fig. {len(cases)} | "))
+                    panel_title = "Panel title." if use_english else "面板标题。"
+                    assert "".join(run.text for run in panels.runs if run.bold) == (
+                        f"Fig. {len(cases)} | {panel_title}" + "a-cd–fg - ij – lmn–p"
+                    ), (profile, use_english, [(run.text, run.bold) for run in panels.runs])
                     assert all(run.italic is not True for paragraph in captions for run in paragraph.runs)
                     if profile == "operation":
                         assert all(p.paragraph_format.line_spacing == 1.0 for p in captions)
@@ -115,6 +124,10 @@ def main() -> None:
                                          english=True)
                         assert [p.text for p in Document(rebuilt).paragraphs if p.text.startswith("Fig. ")] == [
                             p.text for p in captions
+                        ]
+                        assert ["".join(run.text for run in p.runs if run.bold)
+                                for p in Document(rebuilt).paragraphs if p.text.startswith("Fig. ")] == [
+                            "".join(run.text for run in p.runs if run.bold) for p in captions
                         ]
         assert [hashlib.sha256(deck.read_bytes()).hexdigest() for deck in decks] == original_hashes
         print(f"通过: {len(cases)} 种备注边界 × 2 种语言 × 2 种版式; 原生公式、英文回转、图号、格式和 PPT 保全.")

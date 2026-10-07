@@ -147,13 +147,13 @@ We refer to the main model, which integrates the full voxel features, pocket con
 
 {{pptfig:"画图/stage2结果_忽视2+2例子.pptx"|stage2-radar-pair}}
 
-{{figref:stage2-radar-pair|a}} shows false-positive detection and ligand identity matching for the four model variants with deposited receptors. {{figref:stage2-radar-pair|b}} shows the corresponding results with CryoAtom2-reconstructed receptors. We treated each candidate blob as one sample and computed foreground F1 and ligand identity matching accuracy across blobs. We also calculated matching accuracy separately for small molecules, metal ions, sugars and peptides.
+{{figref:stage2-radar-pair|a}} shows false-positive detection and ligand identity matching for all four model variants with deposited receptors. {{figref:stage2-radar-pair|b}} shows the corresponding false-positive detection and identity matching results with CryoAtom2-reconstructed receptors. We treated each candidate blob as one sample and computed foreground F1 and ligand identity matching accuracy across blobs. We also calculated matching accuracy separately for small molecules, metal ions, sugars and peptides.
 
 With deposited receptors, strongest achieved an overall matching accuracy of 87.8% and a foreground F1 of 86.0%. Matching accuracy was 92.5% for small molecules and 93.1% for metal ions, both exceeding the 70.8% (201/284) achieved for sugars. Peptides accounted for only 0.08% of all ligands in the full dataset. We retained the original test distribution without increasing the representation of this rare category, leaving only one peptide test case.
 
 The voxel-only model achieved a foreground F1 of 84.1% and an overall matching accuracy of 83.7%. Its matching accuracy was slightly below strongest's 87.8%, but substantially above density-only's 78.6% and pocket-only's 79.4%. These comparisons showed that the **full voxel feature set** provided important discriminative information.
 
-Overall matching accuracy showed no marked decline for any of the four models when deposited receptors were replaced with CryoAtom2-reconstructed receptors. By contrast, Find showed some reduction in ligand localisation performance ({{figref:stage1-main-sixpanel|a,b}}). Match was therefore more robust to the change in receptor source.
+With CryoAtom2-reconstructed receptors, strongest still achieved 86.6% overall matching accuracy and a foreground F1 of 82.9%, and matching accuracy showed no marked decline for any of the four models. By contrast, Find showed some reduction in ligand localisation performance ({{figref:stage1-main-sixpanel|a,b}}). Match was therefore more robust to the change in receptor source.
 
 {{pptfig:"画图/stage2结果_忽视2+2例子.pptx"|stage2-strongest-pair}}
 
@@ -161,10 +161,100 @@ Overall matching accuracy showed no marked decline for any of the four models wh
 
 Metal ions retained high matching accuracy across all groups and were easier to distinguish from other ligand identities. This reflected their greater chemical separability from the other ligands. During identity matching, we provided no prior information about the ligand category within each candidate blob. Thus, the high accuracy did not arise from the limited number of metal-ion types.
 
-We also evaluated EMERALD-ID, which supports only small molecules. EMERALD-ID docks candidate small-molecule SMILES representations individually at each site, then uses the resulting docking scores to infer the most likely ligand identity. Its computational complexity per PDB entry is $O(N_g \times K)$. Here, $N_g$ is the number of small-molecule ligand instances, and $K$ is the number of small-molecule identities. In contrast, our model supports GPU acceleration through vectorised computation and required a mean of only 0.09 s to match each candidate blob. This mean runtime was measured on an NVIDIA H100 GPU.
+We also evaluated EMERALD-ID, whose supported ligand scope is limited to small molecules. EMERALD-ID docks candidate small-molecule SMILES representations individually at each site, then uses the resulting docking scores to infer the most likely ligand identity. Its computational complexity per PDB entry is $O(N_g \times K)$, where $N_g$ counts small-molecule ligand instances and $K$ counts small-molecule identities. In contrast, our model supports GPU acceleration through vectorised computation and required a mean of only 0.09 s to match each candidate blob. This mean runtime was measured on an NVIDIA H100 GPU.
 
 EMERALD-ID cannot use GPU acceleration and required a mean of 64 min to dock one small-molecule identity at one site on a single CPU core. Its runtime was almost prohibitive for PDB entries in the high-cost tail, which required docking more small molecules. We therefore defined a separate evaluation subset for EMERALD-ID within the original test set. Among entries containing small molecules, we excluded the 10% with the highest $N_g \times K$, retaining 357 small-molecule sites from 84 PDB entries. We supplied all small-molecule identities from the same PDB entry for matching. Chemical preparation failed at many sites, preventing EMERALD-ID from returning results. We therefore calculated its matching accuracy only for sites that returned valid results. {{figref:stage2-radar-pair|a}} and {{figref:stage2-radar-pair|b}} show its performance with deposited and CryoAtom2-reconstructed receptors, respectively.
 
+## Stage 3
+
+### Stage 3: Comparison of official and fine-tuned PocketXMol models
+
+We compared the official PocketXMol model with our fine-tuned version. The official model accepts a ligand SMILES representation and its binding pocket, generating 50 candidate poses by default.
+
+PocketXMol provides two pocket definitions for docking, with the ligand-envelope pocket using a 10 Å envelope around the ligand atoms. All atoms of a receptor residue are included if at least one lies within the envelope, giving the Envelope pocket. The centre-defined pocket comprises all receptor atoms within a 15 Å sphere centred on the binding site, termed the Centre pocket.
+
+We treated these pocket definitions as separate training and testing conditions. We trained one fine-tuned model for each definition and evaluated each model under its corresponding condition.
+
+To assess fine-tuning, we used all single-residue organic small molecules with no atoms missing relative to their templates from the 179 PDB entries. This test set comprised a total of 446 ligand instances.
+
+We used two complementary docking metrics based on heavy-atom root-mean-square deviation (RMSD). Top-1 RMSD measures the error of the top-1 pose, ranked first by the model's own score, and reflects accuracy in blind evaluation. Best RMSD measures the lowest error among the 50 generated candidates, defining the best-of-50 pose. This metric measures the upper limit of the model's pose sampling capacity.
+
+Across the 446 test instances, density-guided PocketXMol-tuned achieved substantially greater pose accuracy than PocketXMol-official under every test condition ({{figref:stage3-official-tuned}}). The improvement was particularly pronounced with the Centre pocket and deposited receptors. Without density guidance, the official model had considerable translational and rotational freedom within the spacious 15 Å pocket. It readily settled in geometrically plausible cavities outside the active binding site. Its median top-1 RMSD reached 2.31 Å, with only 44.7% of predictions achieving RMSD < 2 Å. Local three-dimensional constraints from the cryo-EM density substantially reduced the fine-tuned model's median top-1 RMSD to 1.29 Å. Success rates rose to 73.8% at RMSD < 2 Å and 83.4% at RMSD < 3 Å. For best-of-50 poses, fine-tuning substantially reduced the median minimum RMSD from 1.43 Å to 0.77 Å. The fraction achieving RMSD < 2 Å increased sharply from 61.6% to 93.0%.
+
+Fine-tuning also improved docking accuracy when both models used the more tightly defined Envelope pocket. With deposited receptors, median top-1 RMSD fell from 1.55 Å to 1.14 Å. The corresponding success rate at RMSD < 2 Å increased from 62.9% to 78.0%. Median best RMSD fell from 0.94 Å to 0.69 Å, with 97.1% of best-of-50 poses achieving RMSD < 2 Å. These results showed that cryo-EM density provided effective docking guidance even when the pocket boundaries were already tightly constrained.
+
+The fine-tuned model was also robust to receptor modelling errors introduced by CryoAtom2. Replacing deposited receptors with CryoAtom2-reconstructed receptors increased the official model's median top-1 RMSD from 2.31 Å to 3.01 Å with Centre pockets. Its success rate at RMSD < 2 Å fell to 39.9%. By comparison, PocketXMol-tuned retained a median top-1 RMSD of 1.44 Å and a success rate of 67.5% at RMSD < 2 Å. Its performance substantially exceeded that of the official model even with deposited receptors.
+
+{{pptfig:"画图/stage3结果.pptx"|stage3-official-tuned}}
+
+### Stage 3: Comparison with Emap2lig-Build
+
+We also compared PocketXMol-tuned using Centre pockets with the ligand pose prediction tool Emap2lig-Build. Emap2lig-Build accepts a guiding region and a cryo-EM density map. In its default workflow, the guiding region is the three-dimensional blob predicted by Emap2lig-Find in the preceding stage.
+
+A fair comparison therefore required restricting evaluation to ligand instances for which Emap2lig-Find returned a corresponding blob. Of the 446 small-molecule test instances, Emap2lig-Find returned qualifying blobs for only 237. Each qualifying blob shared at least 30% bidirectional coverage with the ground-truth ligand region. We compared PocketXMol-tuned and Emap2lig-Build only on these instances ({{figref:stage3-find-hit-head-to-head}}).
+
+Across these 237 jointly evaluable instances, PocketXMol-tuned using Centre pockets substantially outperformed Emap2lig-Build. With deposited and CryoAtom2-reconstructed receptors, median top-1 RMSD was 0.90 Å and 1.01 Å, respectively, substantially below Emap2lig-Build's 1.85 Å. Median best-of-50 RMSD was 0.65 Å and 0.70 Å, respectively, also substantially below Emap2lig-Build's 1.33 Å.
+
+{{pptfig:"画图/stage3结果.pptx"|stage3-find-hit-head-to-head}}
+
+### Stage 3: Representative cases
+
+We analysed six representative instances to examine how receptor pockets and experimental density provide complementary constraints on pose generation ({{figref:stage3-cases-main}}).
+
+The first group illustrated typical errors in receptor-only docking without experimental density guidance ({{figref:stage3-cases-main|a–c}}). In 9Q16, 9UB7 and 9R3D, PocketXMol-official avoided receptor clashes, with zero clashing atom pairs in each case. However, without density guidance, its poses shifted within the pocket cavity or adopted flipped conformations. Only 46%–77% of heavy atoms reached the recommended density threshold, denoted by D, and top-1 RMSD reached 3.84–5.69 Å. With density guidance, PocketXMol-tuned placed ligand atoms accurately within the experimental density, increasing D to 80%–100%. RMSD fell sharply to 0.76–1.05 Å, while all three poses remained free of receptor clashes.
+
+The second group illustrated the shortcomings of density-only fitting that ignores receptor steric constraints ({{figref:stage3-cases-main|d–f}}). In 9U7J, 9WUP and 9WQ3, Emap2lig-Build's top-1 poses produced 10, 15 and 11 clashing pairs with surrounding receptor atoms, respectively. Its pose in 9WQ3 also deviated markedly from the deposited position, with an RMSD of 9.30 Å. By combining receptor geometry with density information, PocketXMol-tuned eliminated all receptor clashes and consistently achieved RMSD values of 0.52–1.41 Å.
+
+These cases showed that the receptor structure imposes steric exclusion constraints, whereas cryo-EM density constrains ligand position and conformation. PocketXMol-tuned combined these complementary sources of information to reconstruct ligand poses with high accuracy.
+
+{{pptfig:"画图/stage3可视化.pptx"|stage3-cases-main}}
+
+## End-to-end
+
+In practical cryo-EM structure determination, researchers work with unannotated three-dimensional density maps and unknown binding sites. To assess automated modelling in this setting, we connected Find, Match and Build into a single end-to-end pipeline. We evaluated region detection and identity matching across all ligand categories, and full pose reconstruction for organic small molecules with no missing atoms.
+
+Find ranks candidate ligand regions by descending confidence, producing Rank 1, Rank 2 and subsequent candidates. For each PDB entry, the pipeline examines these candidates in order within a search budget of $K$ attempts. A PDB entry is classified as successful if any attempt within that budget completes the task.
+
+For end-to-end region detection and identity matching across all ligand categories, we applied the following accounting rules. A false-positive candidate predicted by Find consumes one attempt, after which the pipeline examines the next candidate. If a candidate corresponds to a ground-truth ligand with at least 30% coverage in both directions, Match assigns its ligand identity. Correct identity matching completes the task; incorrect matching consumes one attempt. The pipeline continues until the task succeeds or the $K$-attempt budget is exhausted.
+
+For end-to-end modelling of single-residue small molecules with no missing atoms, false-positive candidates likewise consume one attempt before the next candidate is examined.
+
+If a candidate corresponds to a non-small-molecule ligand but Match assigns a small-molecule identity, the attempt is counted as a failure and charged. Otherwise, the candidate is skipped without consuming the attempt budget.
+
+If a candidate corresponds to a small molecule with at least 30% bidirectional coverage, incorrect identity matching consumes one attempt. A correctly matched small molecule that fails the single-residue, no-missing-atom criteria is skipped without charge. Otherwise, PocketXMol-tuned performs docking, and success is determined from the top-1 or best-of-50 pose and the corresponding RMSD threshold.
+
+When a ligand outside the single-residue, complete organic small-molecule subset is correctly detected and matched, we skip docking and charge no attempt. This ensures that all evaluated docking tasks use the same downstream tool, PocketXMol-tuned. However, a region corresponding to a true non-small-molecule ligand is charged if it is misidentified as a small molecule. It remains an unresolved distractor and counts as a failed attempt.
+
+### End-to-end region detection and identity matching across ligand categories
+
 {{pptfig:"画图/E2E结果.pptx"|e2e-all-find-match}}
 
+We first evaluated region detection by Find and exact ligand identity matching by Find+Match across the 179 independent test PDB entries ({{figref:e2e-all-find-match}}). These entries contained coexisting ligand categories, including small molecules, ions and sugars. With a single attempt ($K=1$) and deposited receptors (GT), Find detected a ligand region in 148 entries (82.7%). Of these, 142 entries (79.3% of the full test set) also received the exactly correct SMILES representation. With CryoAtom2-reconstructed receptors (CA2), the corresponding counts were 134 (74.9%) for region detection and 120 (67.0%) for exact identity matching. As the attempt budget increased to 10, success rates rapidly approached 92.2% and 87.7% under the two receptor conditions, respectively. By comparison, Emap2lig-Find detects ligand regions but does not identify their chemical identities. It detected regions in only 71 entries (39.7%) at $K=1$ and 93 entries (52.0%) within $K \le 10$.
+
+### End-to-end reconstruction of all-atom small-molecule poses
+
 {{pptfig:"画图/E2E结果.pptx"|e2e-small-pipeline}}
+
+We evaluated the complete detection, matching and pose reconstruction pipeline in 77 PDB entries containing single-residue organic small molecules with no missing atoms ({{figref:e2e-small-pipeline|b,c}}). PocketXMol received the centre of the ligand region predicted by Find as its binding-site input, which also defined the pocket. With CryoAtom2-reconstructed receptors, no stage of the pipeline used the deposited receptor structure as input.
+
+The strictest evaluation allowed one attempt ($K=1$), selected only the top-1 pose and required RMSD < 2 Å. Under this criterion, 44/77 entries (57.1%) succeeded with deposited receptors, compared with 34/77 (44.2%) with CryoAtom2-reconstructed receptors. At RMSD < 3 Å, the corresponding counts were 50/77 (64.9%) and 41/77 (53.2%). Allowing up to 10 charged attempts ($K \le 10$) increased top-1 success with deposited receptors to 66.2% at RMSD < 2 Å. At RMSD < 3 Å, 55/77 entries (71.4%) achieved successful reconstruction. With CryoAtom2-reconstructed receptors, 46/77 entries (59.7%) succeeded at RMSD < 2 Å and 52/77 (67.5%) at RMSD < 3 Å.
+
+For best-of-50 poses within $K \le 10$, success at RMSD < 2 Å reached 75.3% and 67.5% with deposited and CryoAtom2-reconstructed receptors, respectively. At RMSD < 3 Å, the corresponding success rates were 76.6% and 75.3%.
+
+{{figref:e2e-small-pipeline|a}} further separates the success rates of individual pipeline stages. Within the first 10 charged attempts ($K \le 10$), Find alone succeeded in 89.6% and 88.3% of entries with deposited and CryoAtom2-reconstructed receptors, respectively. Both exceeded Emap2lig-Find's success rate of 70.1% in this subset. Requiring both Find and Match to succeed yielded rates of 83.1% and 81.8%, respectively ({{figref:e2e-small-pipeline|a}}).
+
+### Representative cases
+
+We selected three representative cases, all using CryoAtom2-reconstructed receptors rather than deposited receptor structures as input ({{figref:e2e-flow-9llg,e2e-flow-9bjj,e2e-flow-30ga}}).
+
+In 9LLG ({{figref:e2e-flow-9llg}}), Find's Rank 1 candidate hit the ground-truth ligand region of A1EKL (R:602). Match correctly identified A1EKL among the three candidate identities PLM, A1EKL and CLR. PocketXMol-tuned then generated a top-1 pose with a heavy-atom RMSD of 0.88 Å.
+
+{{pptfig:"画图/E2E案例可视化-端到端流程版_v3.pptx"|e2e-flow-9llg}}
+
+In 9BJJ ({{figref:e2e-flow-9bjj}}), Find's Rank 1 candidate hit the ground-truth ligand region of ATP (B:901). Match correctly identified ATP among the three candidate identities ATP, A1AP0 and Mg²⁺. PocketXMol-tuned then generated a top-1 pose with subångström accuracy, achieving a heavy-atom RMSD of 0.80 Å.
+
+{{pptfig:"画图/E2E案例可视化-端到端流程版_v3.pptx"|e2e-flow-9bjj}}
+
+In 30GA ({{figref:e2e-flow-30ga}}), Find's Rank 1 candidate was a background false positive and consumed one search attempt. The Rank 2 candidate then hit ATP (N:401), and Match correctly identified ATP. PocketXMol-tuned subsequently generated a pose with a heavy-atom RMSD of 1.04 Å.
+
+{{pptfig:"画图/E2E案例可视化-端到端流程版_v3.pptx"|e2e-flow-30ga}}

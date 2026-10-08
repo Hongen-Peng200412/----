@@ -27,6 +27,8 @@ def main() -> None:
     english = "English title. English description."
     panel_chinese = "面板标题。\na-c，短横线范围。\nd–f、连接号范围。\n  g - i，含空格范围。\nj – l，含空格连接号范围。\nm，单个面板。\n**n–p**，已有加粗。\n比较 a-c，普通说明。\na-c 不是段首面板标识。"
     panel_english = "Panel title.\na-c, Hyphen range.\nd–f, En dash range.\n  g - i, Spaced hyphen range.\nj – l, Spaced en dash range.\nm, Single panel.\n**n–p**, Existing bold.\nCompare a-c, ordinary prose.\na-c bonds remain unchanged."
+    panel_chinese += "\ne, f，两个面板。\nq,r,s，三个面板。\nt，u，中文逗号。\nv、w、中文顿号。\na-c, d, f–h，范围与单字母并列。\n比较 e, f，普通说明。"
+    panel_english += "\ne, f, Two panels.\nq,r,s, Three panels.\nt，u，Chinese commas.\nv、w、Chinese list separators.\na-c, d, f–h, Mixed ranges and single panels.\nCompare e, f, ordinary prose."
     cases = [
         (chinese + "\nENGLISH:\n" + english, chinese, english),
         (chinese + "\nENGLISH：\n" + english, chinese, english),
@@ -107,7 +109,7 @@ def main() -> None:
                     panels = next(p for p in captions if p.text.startswith(f"Fig. {len(cases)} | "))
                     panel_title = "Panel title." if use_english else "面板标题。"
                     assert "".join(run.text for run in panels.runs if run.bold) == (
-                        f"Fig. {len(cases)} | {panel_title}" + "a-cd–fg - ij – lmn–p"
+                        f"Fig. {len(cases)} | {panel_title}" + "a-cd–fg - ij – lmn–pefqrstuvwa-cdf–h"
                     ), (profile, use_english, [(run.text, run.bold) for run in panels.runs])
                     assert all(run.italic is not True for paragraph in captions for run in paragraph.runs)
                     if profile == "operation":

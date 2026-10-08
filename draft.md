@@ -165,7 +165,7 @@ By contrast, EMERALD-ID cannot use GPU acceleration and required a mean of 64 mi
 
 ## Stage 3
 
-### Stage 3: Comparison of official and fine-tuned PocketXMol models
+### Stage 3: Comparison of PocketXMol-official and PocketXMol-tuned
 
 We compared the official PocketXMol model with our fine-tuned version. The official model accepts a ligand SMILES string and its binding pocket or binding site, generating 50 candidate poses by default.
 
@@ -205,8 +205,12 @@ These cases showed that the receptor structure imposes steric constraints, where
 
 {{pptfig:"画图/stage3可视化.pptx"|stage3-cases-main}}
 
+
+
+
 ## End-to-end
 
+### Evaluation protocol
 In practical cryo-EM structure determination, researchers work with unannotated three-dimensional density maps and unknown binding sites. To assess automated modelling in this setting, we connected Find, Match and Build into a single end-to-end pipeline. We evaluated region detection and identity matching across all ligand categories, and full pose reconstruction for organic small molecules with no missing atoms.
 
 Find ranks candidate ligand regions by descending mean probability, yielding Rank 1, Rank 2 and subsequent candidates. For each PDB entry, the pipeline examines these candidates in order for up to $K$ attempts. A PDB entry is classified as successful if any attempt within this budget succeeds.
@@ -219,7 +223,7 @@ If a candidate corresponds to a non-small-molecule ligand but Match assigns a sm
 
 If a candidate corresponds to a small molecule with at least 30% bidirectional coverage, incorrect identity matching consumes one attempt. A correctly matched small molecule that fails the single-residue, no-missing-atom criteria is skipped without charge. Otherwise, PocketXMol-tuned performs docking, and success is determined from the top-1 or best-of-50 pose and the corresponding RMSD threshold.
 
-When a ligand outside the single-residue, complete organic small-molecule subset is correctly detected and matched, we choose to skip docking and charge no attempt. This ensures that all evaluated docking tasks use the same downstream tool, PocketXMol-tuned. However, a region corresponding to a true non-small-molecule ligand is charged if it is misidentified as a small molecule. In this case, it is actually an unmatched distractor and counts as a failed attempt.
+When a ligand outside the single-residue, complete organic small-molecule subset is correctly detected and matched, we still skip docking and charge no attempt. This ensures that all evaluated docking tasks use the same downstream tool, PocketXMol-tuned. However, a region corresponding to a true non-small-molecule ligand is charged if it is misidentified as a small molecule. In this case, it is actually an unmatched distractor and counts as a failed attempt.
 
 ### End-to-end region detection and identity matching across ligand categories
 
@@ -231,7 +235,7 @@ We first evaluated end-to-end ligand-region detection and identity matching in 1
 
 {{pptfig:"画图/E2E结果.pptx"|e2e-small-pipeline}}
 
-We evaluated the complete detection, matching and pose reconstruction pipeline in 77 PDB entries containing single-residue organic small molecules with no missing atoms ({{figref:e2e-small-pipeline|b,c}}). PocketXMol received the centre of the ligand region predicted by Find as its binding-site input, which also defined the pocket. With CryoAtom2-reconstructed receptors, no stage of the pipeline used the deposited receptor structure as input.
+We evaluated the end-to-end complete detection, matching and pose reconstruction pipeline in 77 PDB entries containing single-residue organic small molecules with no missing atoms ({{figref:e2e-small-pipeline|b,c}}). PocketXMol-tuned received the centre of the ligand region predicted by Find as its binding-site input, which also defined the pocket. With CryoAtom2-reconstructed receptors, no stage of the pipeline used the deposited receptor structure as input.
 
 The strictest evaluation allowed one attempt ($K=1$), selected only the top-1 pose and required RMSD < 2 Å. Under this criterion, 44/77 entries (57.1%) succeeded with deposited receptors, compared with 34/77 (44.2%) with CryoAtom2-reconstructed receptors. At RMSD < 3 Å, the corresponding counts were 50/77 (64.9%) and 41/77 (53.2%). Allowing up to 10 charged attempts ($K \le 10$) increased top-1 success with deposited receptors to 66.2% at RMSD < 2 Å. At RMSD < 3 Å, 55/77 entries (71.4%) achieved successful reconstruction. With CryoAtom2-reconstructed receptors, 46/77 entries (59.7%) succeeded at RMSD < 2 Å and 52/77 (67.5%) at RMSD < 3 Å.
 

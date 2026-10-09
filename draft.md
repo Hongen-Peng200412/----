@@ -371,31 +371,23 @@ Y^{*}_{u,v,w}
 \right].
 $$
 
-Given the receptor-atom set $A$ defined above and the experimental cryo-EM density map $M$, Find predicts ligand-region probabilities $\hat{Y} \in [0,1]^{D\times H\times W}$. These probabilities are the primary target of supervision during Find training:
-
-$$
-\hat{Y}=\sigma\!\left(f_{\theta}(A,M)\right),
-\qquad
-\hat{Y}\in[0,1]^{D\times H\times W},
-$$
-
-Here, $f_{\theta}$ denotes the Find network with parameters $\theta$, and $\sigma$ denotes the voxelwise sigmoid function. The value $\hat{Y}_{u,v,w}$ is the predicted probability that voxel $(u,v,w)$ belongs to a ligand region.
+Given the receptor-atom set $A$ defined above and the experimental cryo-EM density map $M$, Find predicts ligand-region probabilities $\hat{Y} \in [0,1]^{D\times H\times W}$, and corresponding to $Y^{*}_{u,v,w}$, the value $\hat{Y}_{u,v,w}$ is the predicted probability that voxel $(u,v,w)$ belongs to a ligand region. These probabilities are the primary supervised output during Find training. 
 
 ### Network architecture
 
-We represent density maps as voxel grids and receptor atoms as point clouds with features. Find jointly models these representations with a hybrid point–voxel network. The voxel branch predicts ligand-region probabilities from the complete local density field. The point-cloud branch resolves receptor geometry and chemistry, producing auxiliary features, including receptor-atom binding probabilities, for Find and Match training and inference. The network comprises a receptor embedding head, a voxel branch, a point-cloud branch and classification heads. Multiscale information fusion and recycling connect these components within the network.
+We represent density maps as voxel grids and receptor atoms as point clouds with features. Find jointly models these representations with a hybrid point–voxel network. The voxel branch predicts ligand-region probabilities from the complete local density field. The point-cloud branch resolves receptor geometry and chemistry, producing auxiliary features, including receptor-atom binding probabilities, for Find and Match training and inference. The network comprises a receptor embedding head, a voxel branch, a point-cloud branch and prediction heads. Multiscale information fusion and recycling connect these components within the network.
 
-The receptor embedding head supplies processed atom representations to both branches. Before the voxel branch, it embeds receptor atoms, encodes their centre positions and softly scatters the encoded features onto the voxel grid. The projected features are concatenated with the 56 density channels as input to a 3D U-Net. Before the point-cloud branch, Point Transformer V3 attention modules and progressive cropping process the initial atom features to provide the point-cloud input.
+The receptor embedding head supplies processed atom representations to both the voxel branch and point branch. Before the voxel branch, it embeds receptor atoms, encodes their centre positions and softly scatters the encoded features onto the voxel grid. The projected features are concatenated with the 56 density channels as input to a 3D U-Net. Before the point-cloud branch, Point Transformer V3 attention modules and progressive cropping process the initial atom features to provide the point-cloud input.
 
-The voxel branch uses a 3D U-Net with an encoder–decoder architecture. Self-attention at low-resolution layers models long-range spatial relationships, while skip connections restore high-resolution features. The main output head predicts ligand-region probabilities from the voxel features. Auxiliary heads predict receptor-binding regions, protein backbone atom classes, nucleic acid backbone atom classes and inverse distance to the nearest ligand. The network samples pseudo-atoms $P$ from regions with high predicted receptor-binding probabilities. Convolutional layers extract surrounding density information to initialise their features. These pseudo-atoms enter the point-cloud branch together with receptor atoms $A$ encoded by the receptor embedding head.
+The voxel branch uses a 3D U-Net with an encoder–decoder architecture. Self-attention at low-resolution layers models long-range spatial relationships, while skip connections restore high-resolution features. The main output head predicts ligand-region probabilities from the voxel features. Auxiliary heads predict receptor-binding regions, protein backbone atom classes, nucleic acid backbone atom classes and inverse distance to the nearest ligand. The network samples pseudo atoms $P$ from regions with high predicted ligand-region probabilities. Convolutional layers extract surrounding density information to initialise their features. These pseudo atoms enter the point-cloud branch together with receptor atoms $A$ encoded by the receptor embedding head.
 
-The point-cloud branch uses the U-Net-style encoder–decoder architecture of Point Transformer V3. Space-filling curves jointly serialise receptor atoms $A$ and pseudo-atoms $P$, while point-cloud convolutions provide conditional positional encoding. At multiple resolutions, the network performs learnable weighted sampling over the $3^3$ neighbourhoods of $A$ and $P$ in voxel feature maps at the corresponding scale. Feature modulation injects the voxel branch's density information into atom representations, allowing the point-cloud branch to access intermediate voxel features at multiple levels. Receptor-atom representations are supervised using receptor-atom binding probabilities, whereas pseudo-atom representations are supervised using their probabilities of lying within ligand regions.
+The point-cloud branch uses the U-Net-style encoder–decoder architecture of Point Transformer V3. Space-filling curves jointly serialise receptor atoms $A$ and pseudo atoms $P$, while point-cloud convolutions provide conditional positional encoding. At multiple resolutions, the network performs learnable weighted sampling over the $3^3$ neighbourhoods of $A$ and $P$ in voxel feature maps at the corresponding scale. Feature modulation injects the voxel branch's density information into atom representations, allowing the point-cloud branch to access intermediate voxel features at multiple levels. The receptor-atom representations are supervised by predicting whether each receptor atom belongs to a receptor binding region, whereas the pseudo atom representations are supervised by predicting whether each pseudo atom lies within a ligand region.
 
-Following AlphaFold3, the Find network also incorporates a recycling mechanism. Voxel and point-cloud features from each iteration serve as additional inputs to their respective branches in the next iteration. Training randomly used one to three recycling iterations, whereas inference used a fixed three iterations.
+Following AlphaFold3, the Find network also incorporates a recycling mechanism. Voxel and point-cloud features from each iteration are fed back as additional inputs to the corresponding branches in the next iteration. Training randomly used one to three recycling iterations, whereas inference used a fixed three iterations.
 
 ### Losses and supervision
 
-Find's primary task is ligand-region segmentation, supported by auxiliary supervision of both branches. The voxel branch also predicts receptor-binding regions, inverse distance to the nearest ligand, and protein and nucleic acid backbone atom classes. The point-cloud branch provides separate supervision for receptor atoms and sampled pseudo-atoms. The total loss combines the voxel and point-cloud terms as follows:
+Find's primary task is ligand-region segmentation, with auxiliary supervision in the voxel and point-cloud branches. The voxel branch also predicts receptor binding regions, the inverse distance to the nearest ligand, and protein and nucleic acid backbone atom classes. The point-cloud branch uses separate supervision for receptor atoms and sampled pseudo atoms. The total loss combines the voxel and point-cloud terms as follows:
 
 $$
 \mathcal L_{\mathrm{Find}}
@@ -420,7 +412,7 @@ Receptor-binding regions comprise voxels containing receptor atoms with a ligand
 
 The protein backbone head predicts probabilities over five channels: background, N, CA, C and O. The nucleic acid backbone head predicts probabilities over seven channels: background, P, O5′, C5′, C4′, C3′ and O3′. The corresponding heads are supervised by $\mathcal L_{\mathrm{protein\text{-}mainchain}}$ and $\mathcal L_{\mathrm{nucleic\text{-}mainchain}}$, respectively.
 
-The point-cloud branch performs binary classification of receptor atoms and sampled pseudo-atoms. A receptor atom is positive if and only if a ligand atom lies within 4 Å. A pseudo-atom is positive if and only if it lies within a ligand region. The loss $\mathcal L_{\mathrm{receptor\text{-}prob}}$ supervises receptor atoms, whereas $\mathcal L_{\mathrm{pseudo\text{-}prob}}$ supervises pseudo-atoms.
+The point-cloud branch performs binary classification of receptor atoms and sampled pseudo atoms. A receptor atom is positive if and only if a ligand atom lies within 4 Å. A pseudo atom is positive if and only if it lies within a ligand region. The loss $\mathcal L_{\mathrm{receptor\text{-}prob}}$ supervises receptor atoms, whereas $\mathcal L_{\mathrm{pseudo\text{-}prob}}$ supervises pseudo atoms.
 
 The ligand-distance loss uses mean squared error (MSE) for the distance prediction. All other losses combine focal loss ($\gamma=2$) and Dice loss with weights of 0.7 and 0.3, respectively.
 
@@ -428,7 +420,7 @@ The ligand-distance loss uses mean squared error (MSE) for the distance predicti
 
 As in training, Find uses $80^{3}$ voxel blocks as its basic input during inference. Sliding-window inference with a stride of 30 and a Gaussian kernel with $\sigma=0.5$ produces the full ligand-region probability map $\hat{Y}$. We threshold this map at a fixed probability $t_{\mathrm{sem}}$ to obtain candidate blobs, which are then filtered by Gaussian scoring. We selected $t_{\mathrm{sem}}$ to maximise the semantic F1 score on the calibration set. Gaussian-scoring parameters were also searched on the calibration set, then fixed together with the probability threshold for testing.
 
-During inference, we apply 26-connected-component analysis to voxels satisfying $\hat{Y}\ge t_{\mathrm{sem}}$, yielding candidate ligand regions (blobs) $\{B_j\}_{j=1}^{J}$. We then compute a Gaussian score for each of these candidate regions.
+During inference, we apply 26-connected-component analysis to voxels satisfying $\hat{Y}\ge t_{\mathrm{sem}}$, yielding candidate ligand regions (blobs) $\{B_j\}_{j=1}^{J}$. We then compute a Gaussian score for each of these candidate regions as follow.
 
 For candidate $B_j$, let $\bar{p}_j$ denote the mean ligand-region probability within the candidate region. Let $q_i$ denote the binding probability of receptor atom $i$. Let $d_{ij}$ denote the physical distance from that atom to the nearest voxel centre in $B_j$. The Gaussian candidate score $s_j$ for blob $B_j$ is defined as:
 
@@ -444,4 +436,4 @@ $$
 
 Candidate $B_j$ is predicted as positive if and only if $s_j$ exceeds the fixed Gaussian-score threshold $\bar{s}$ and its voxel count exceeds $\mathit{v_{min}}$. We searched the Gaussian width $\tau$, coefficients $\lambda_{+}$ and $\lambda_{-}$, score threshold $\bar{s}$ and minimum voxel count $\mathit{v_{min}}$ on the calibration set. The objective was to maximise the sum of semantic F1, $\operatorname{covF1}_{0.3}$ and $\operatorname{1to1F1}_{0.3}$. After calibration, all selected parameters remained fixed throughout subsequent testing.
 
-The first score term measures the candidate's own density confidence. The second rewards support from nearby receptor atoms predicted to bind ligands. The third penalises nearby receptor atoms predicted to lie outside binding regions.
+The first score term measures the candidate's own density confidence. The second rewards nearby receptor atoms predicted to be close to a ligand, whereas the third penalises nearby receptor atoms predicted to be distant from ligands.

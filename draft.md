@@ -265,13 +265,19 @@ In 30GA ({{figref:e2e-flow-30ga}}), Find's Rank 1 candidate was a background fal
 
 ## Data sources and sample partitioning
 
-We downloaded cryo-EM density maps from EMDB and their corresponding PDB structures from the RCSB database. We selected samples with a resolution of ≤4 Å and cc > 0.65. We then partitioned the dataset into mutually disjoint training, validation, calibration and test sets. The test set contained samples from after 1 January 2026, whereas the other three sets contained samples from before that date.
+We downloaded cryo-EM density maps from EMDB and their corresponding PDB structures from the RCSB database. We selected samples with a resolution of <4 Å and cc > 0.65. We then partitioned the dataset into mutually disjoint training, validation, calibration and test sets. The test set contained non-redundant samples from after 1 January 2026, whereas the other three sets contained samples from before that date.
 
 We used MMseqs2 sequence comparisons to define redundancy between protein and nucleic acid complexes. Two protein sequences were considered similar if their alignment had ≥30% identity and ≥80% coverage in both directions. For nucleic acid sequences, the identity threshold was ≥80%, with the same bidirectional coverage requirement.
 
 We then removed sequence redundancy from the candidate test set at the PDB-entry level. A PDB pair was considered redundant if the number of similar chains reached ≥60% of the comparable chains in either entry. Each sample in the final test set was non-redundant with every sample in the training, validation and calibration sets. All pairs of samples within the test set were also non-redundant.
 
-For each model, the training set supplied the metadata required for training, such as local density crops for Find. The validation set was used to select the best checkpoint during training. The calibration set was used to select probability or score thresholds after training. The test set was used exclusively for the final evaluation. After quality filtering and processing, the training, validation, calibration and test sets contained 13,714, 200, 100 and 179 EMDB–PDB pairs, respectively. The corresponding numbers of ligand instances were 435,187, 5,942, 3,532 and 2,502.
+Quality filtering and removal of redundancy reduced the 2,497 PDB structures whose density maps were first released after 1 January 2026 to 179 EMDB–PDB pairs. These pairs formed the original test set used for subsequent evaluations. Samples from before 1 January 2026 were divided into three mutually disjoint subsets containing 13,714, 200, 100 and 179 EMDB–PDB pairs. These subsets served as the original training, validation and calibration sets.
+
+For Find, the training set supplied training metadata, including local density crops. The validation set was used to select the best checkpoint during training. The calibration set determined probability or score thresholds after training was complete. Find operated at the PDB-entry level for training and testing, using all 13,714, 200, 100 and 179 EMDB–PDB pairs from the original sets.
+
+Match used candidate blobs inferred by Find as its basic sample unit. Its training, validation and test sets comprised Find inference outputs from 1,590, 200 and 169 PDB entries, respectively. These PDB entries were subsets of the corresponding original training, validation and test sets. The three sets contained 44,643, 5,544 and 1,651 blobs, respectively.
+
+Build used individual ligand instances as its basic training and testing unit. For PocketXMol fine-tuning, each training, validation and test split comprised all single-residue organic small molecules without missing atoms from its corresponding original partition. End-to-end testing was restricted to the original 179 PDB entries, as were Find, Match and Build testing. This shared test scope prevented data leakage between training and testing.
 
 ## Unified input representation
 

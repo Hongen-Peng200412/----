@@ -377,7 +377,7 @@ Given the receptor-atom set $A$ defined above and the experimental cryo-EM densi
 
 We represent density maps as voxel grids and receptor atoms as point clouds with features. Find jointly models these representations with a hybrid point–voxel network. The voxel branch predicts ligand-region probabilities from the complete local density field. The point-cloud branch resolves receptor geometry and chemistry, producing auxiliary features, including receptor-atom binding probabilities, for Find and Match training and inference. The network comprises a receptor embedding head, a voxel branch, a point-cloud branch and prediction heads. Multiscale information fusion and recycling connect these components within the network.
 
-The receptor embedding head supplies processed atom representations to both the voxel branch and point branch. Before the voxel branch, it embeds receptor atoms, encodes their centre positions and softly scatters the encoded features onto the voxel grid. The projected features are concatenated with the 56 density channels as input to a 3D U-Net. Before the point-cloud branch, Point Transformer V3 attention modules and progressive cropping process the initial atom features to provide the point-cloud input.
+The receptor embedding head supplies processed atom representations to both the voxel branch and point-cloud branch. Before the voxel branch, it embeds receptor atoms, encodes their centre positions and softly scatters the encoded features onto the voxel grid. The projected features are concatenated with the 56 density channels as input to a 3D U-Net. Before the point-cloud branch, Point Transformer V3 attention modules and progressive cropping process the initial atom features to provide the point-cloud input.
 
 The voxel branch uses a 3D U-Net with an encoder–decoder architecture. Self-attention at low-resolution layers models long-range spatial relationships, while skip connections restore high-resolution features. The main output head predicts ligand-region probabilities from the voxel features. Auxiliary heads predict receptor-binding regions, protein backbone atom classes, nucleic acid backbone atom classes and inverse distance to the nearest ligand. The network samples pseudo atoms $P$ from regions with high predicted ligand-region probabilities. Convolutional layers extract surrounding density information to initialise their features. These pseudo atoms enter the point-cloud branch together with receptor atoms $A$ encoded by the receptor embedding head.
 
@@ -420,7 +420,7 @@ The ligand-distance loss uses mean squared error (MSE) for the distance predicti
 
 As in training, Find uses $80^{3}$ voxel blocks as its basic input during inference. Sliding-window inference with a stride of 30 and a Gaussian kernel with $\sigma=0.5$ produces the full ligand-region probability map $\hat{Y}$. We threshold this map at a fixed probability $t_{\mathrm{sem}}$ to obtain candidate blobs, which are then filtered by Gaussian scoring. We selected $t_{\mathrm{sem}}$ to maximise the semantic F1 score on the calibration set. Gaussian-scoring parameters were also searched on the calibration set, then fixed together with the probability threshold for testing.
 
-During inference, we apply 26-connected-component analysis to voxels satisfying $\hat{Y}\ge t_{\mathrm{sem}}$, yielding candidate ligand regions (blobs) $\{B_j\}_{j=1}^{J}$. We then compute a Gaussian score for each of these candidate regions as follow.
+During inference, we apply 26-connected-component analysis to voxels satisfying $\hat{Y}\ge t_{\mathrm{sem}}$, yielding candidate ligand regions (blobs) $\{B_j\}_{j=1}^{J}$. We then compute a Gaussian score for each of these candidate regions as follows.
 
 For candidate $B_j$, let $\bar{p}_j$ denote the mean ligand-region probability within the candidate region. Let $q_i$ denote the binding probability of receptor atom $i$. Let $d_{ij}$ denote the physical distance from that atom to the nearest voxel centre in $B_j$. The Gaussian candidate score $s_j$ for blob $B_j$ is defined as:
 
@@ -437,3 +437,91 @@ $$
 Candidate $B_j$ is predicted as positive if and only if $s_j$ exceeds the fixed Gaussian-score threshold $\bar{s}$ and its voxel count exceeds $\mathit{v_{min}}$. We searched the Gaussian width $\tau$, coefficients $\lambda_{+}$ and $\lambda_{-}$, score threshold $\bar{s}$ and minimum voxel count $\mathit{v_{min}}$ on the calibration set. The objective was to maximise the sum of semantic F1, $\operatorname{covF1}_{0.3}$ and $\operatorname{1to1F1}_{0.3}$. After calibration, all selected parameters remained fixed throughout subsequent testing.
 
 The first score term measures the candidate's own density confidence. The second rewards nearby receptor atoms predicted to be close to a ligand, whereas the third penalises nearby receptor atoms predicted to be distant from ligands.
+
+## Stage 2: Match
+
+### Overview
+
+Although Find can correctly localise a ligand region, conventional molecular docking still requires the ligand's chemical identity, represented by its SMILES. Without identity information, Find and Build cannot complete end-to-end ligand discovery, identification and docking. Match fills this gap by assigning each blob predicted by Find to a ligand identity from the same PDB entry for subsequent docking in Build.
+
+After completing Find training and calibration, we froze its weights and performed full-map inference on 1,650 PDB entries from the training set. We saved the resulting blobs and associated candidate information for training and inference with the Match network.
+
+### Ligand-identity representation and encoding
+
+Let $\{ S_k \}_{k=1}^{K}$ denote the chemical identities in a PDB entry, represented by SMILES. For each identity, the ligand language model SMI-TED produces a 768-dimensional feature vector. A linear layer embeds this vector into the language representation $S_{k}^{language} \in R^{256}$.
+
+In parallel, we use RDKit to generate ideal three-dimensional ligand conformations $\{ S_{k}^{graph} \}_{k=1}^{K}$, which are encoded as three-dimensional molecular graphs. Node features comprise atomic number, formal charge and ring information, whereas edge features comprise bond type and ring information.
+
+For each SMILES $S_{i} \in \{ S_k \}_{k=1}^{K}$, its language representation serves as the query for two attention operations ({{figref:fig-method-v4|c}}). Graph attention operates on its own molecular graph, whereas context attention operates on the language representations of other SMILES in the same PDB entry:
+
+$$
+\hat{S_{i}} = Attention(q=S_{i}^{language}, kv=S_{i}^{graph}), \qquad \tilde{S_{i}} = Attention(q=S_{i}^{language}, kv=\{S_{i}^{language}\}_{k \ne i})
+$$
+
+The final representation of ligand identity $k$ is $ g_{k} = ( S_{k}^{language}, \hat{S_{k}}, \tilde{S_{k}} )$, combining its language, graph-attention and context-attention representations.
+
+### Candidate encoding and auxiliary-feature injection
+
+Let $\{B_j\}_{j=1}^{J}$ denote the candidate regions predicted by Find within the same PDB entry. Match extracts a $48^3$ voxel block centred on each candidate and constructs the 56-channel multi-view density bank defined above. The 50-dimensional receptor-atom features are scattered onto the same grid according to atom coordinates. Concatenating these inputs produces a base feature tensor of size $106\times48^3$. A U-Net encodes this tensor into a base summary vector $h_j^{\mathrm{vox}}$ for the candidate.
+
+Match also incorporates auxiliary features from the surrounding pocket, defined as receptor atoms within the candidate region's 10 Å envelope. Further auxiliary inputs include hidden features within the blob from the highest-resolution U-Net decoder, together with additionally sampled pseudo atoms and their features.
+
+Pooling and attention encode these auxiliary features to further modulate the base density summary $h_j^{\mathrm{vox}}$. For each auxiliary feature type, mean and maximum pooling produce a pooled summary vector. In parallel, cross-attention uses $h_j^{\mathrm{vox}}$ as the query and the corresponding auxiliary features as keys and values to produce an attention summary vector. The two summary vectors are concatenated and passed through a multilayer perceptron (MLP). A feature-wise linear modulation (FiLM) module then uses this output to modulate the base summary $h_j^{\mathrm{vox}}$. The modulated representation is used for both foreground classification and ligand-identity matching.
+
+### Scoring and selection
+
+Suppose a PDB entry contains $J$ candidates $\{B_j\}_{j=1}^{J}$ and $K$ valid SMILES identities $\mathcal S=\{S_k\}_{k=1}^{K}$. Match pairs each candidate representation with every ligand-identity representation from the same PDB entry to form a $J\times K$ matching-score matrix. Its entry in row $j$ and column $k$ is defined as:
+
+$$
+s_{j,k}=f_{\mathrm{match}}\!\left(h_j,S_k^{\mathrm{repr}}\right),\qquad 1\le j\le J,\quad 1\le k\le K.
+$$
+
+Here, $h_j$ is the candidate representation, and $S_k^{\mathrm{repr}}$ is the ligand-identity representation defined above. The function $f_{\mathrm{match}}$ applies separate learnable linear projections to $h_j$ and $S_{k}^{repr}$, then computes their cosine similarity to produce the raw score $s_{j,k}$. For candidate $B_j$, the ligand identity with the highest score is predicted as:
+
+$$
+\hat{k}_j=\underset{1\le k\le K}{\arg\max}\;s_{j,k},\qquad \hat S_j=S_{\hat{k}_j}.
+$$
+
+An independent foreground head uses $h_j$ to predict the foreground probability $p_{j}^{\mathrm{fg}}$ of candidate $B_j$. Thus, Match provides each candidate's foreground probability and the probability of its corresponding ligand identity for downstream pose modelling.
+
+### Labels and loss functions
+
+A candidate blob $B_j$ is labelled as foreground if its bidirectional coverage with at least one ground-truth ligand instance reaches 0.3 in both directions. Otherwise, the candidate is labelled as a false positive for training. For a foreground candidate, we select the ligand instance with the highest geometric mean of the two coverage fractions. The SMILES of that instance provides the candidate's ligand-identity label.
+
+Match uses cross-entropy losses to supervise both ligand-identity matching and foreground classification. Let $y_j^{\mathrm{fg}}\in\{0,1\}$ denote the foreground label, and let $k_j^{*}$ denote the ground-truth identity's index in $\mathcal S=\{S_k\}_{k=1}^{K}$. The foreground loss is binary cross-entropy over all training candidates:
+
+$$
+\mathcal L_{\mathrm{fg}}=-\frac{1}{J}\sum_{j=1}^{J}\left[y_j^{\mathrm{fg}}\log p_j^{\mathrm{fg}}+(1-y_j^{\mathrm{fg}})\log(1-p_j^{\mathrm{fg}})\right].
+$$
+
+The identity loss uses cross-entropy over valid identity scores, evaluated only on ground-truth foreground candidates with valid SMILES identity targets:
+
+$$
+\mathcal L_{\mathrm{id}}=-\frac{1}{|\{j:y_j^{\mathrm{fg}}=1\}|}\sum_{j:y_j^{\mathrm{fg}}=1}\log\frac{\exp(s_{j, k_j^{*}})}{\sum_{k=1}^{K_j}\exp(s_{j,k})}.
+$$
+
+Background candidates contribute only to the foreground loss and are excluded from the identity loss. The total Match loss combines these terms with their respective weights:
+
+$$
+\mathcal L_{\mathrm{Match}}=\lambda_{\mathrm{fg}}\mathcal L_{\mathrm{fg}}+\lambda_{\mathrm{id}}\mathcal L_{\mathrm{id}}.
+$$
+
+We set the foreground and identity loss weights to $\lambda_{\mathrm{fg}}=0.3$ and $\lambda_{\mathrm{id}}=1.0$, respectively.
+
+## Stage 3: Build
+
+### Overview
+
+After ligand-region detection and identity matching, Build connects to a suitable downstream docking tool according to the ligand type and pocket environment. Available tools include Vina, DiffDock, EMERALD, Emap2lig-Build and PocketXMol, subject to their respective input requirements.
+
+Docking tools differ in the ligand types they support; for example, some cannot dock sugars. They also differ in their guiding information, with some using receptor information alone and others using density alone. Their requirements for binding-location information vary: some require a binding site or pocket, whereas others perform blind docking. Rather than training a single universally best docking model, we provide a flexible choice of downstream docking tools.
+
+Few existing docking tools jointly use receptor information and cryo-EM density. We therefore minimally modified PocketXMol, a high-accuracy small-molecule docking tool, to accept density information as an additional input. We loaded its official weights and fine-tuned the model on single-residue organic small molecules. Density guidance further improves docking performance, and PocketXMol-tuned provides another available downstream docking tool.
+
+### PocketXMol fine-tuning experiments
+
+PocketXMol fine-tuning used the same training, validation and test partitions described above. From each PDB entry in these partitions, we included all single-residue small molecules without missing atoms. The training, validation and test sets contained 65,290, 781 and 446 ligand instances, respectively. No probability or score threshold required calibration at this stage, so a calibration set was unnecessary.
+
+We made minimal modifications to PocketXMol to incorporate density as an additional input. As described above, we construct 56 density channels and 50 receptor-feature channels, then concatenate them into a 106-channel voxel representation. Before each atomic-coordinate update in the PocketXMol network, a short convolutional module with global average pooling (GAP) extracts surrounding density and receptor signals. A FiLM module uses these signals to modulate the existing atom features.
+
+The original PocketXMol does not support nucleic acid atoms as input, so we added a linear layer to encode these atoms. All other components remain unchanged, including the original network architecture, feature representations and noise addition and denoising processes. During fine-tuning, the added modules are randomly initialised, while the remaining network parameters are loaded from the official PocketXMol weights.

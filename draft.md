@@ -258,3 +258,183 @@ In 9BJJ ({{figref:e2e-flow-9bjj}}), Find's Rank 1 candidate hit the ground-truth
 In 30GA ({{figref:e2e-flow-30ga}}), Find's Rank 1 candidate was a background false positive and consumed one search attempt. The Rank 2 candidate then hit ATP (N:401), and Match correctly identified ATP. PocketXMol-tuned subsequently generated a pose with a heavy-atom RMSD of 1.04 Å.
 
 {{pptfig:"画图/E2E案例可视化-端到端流程版_v3.pptx"|e2e-flow-30ga}}
+
+# Methods
+
+{{figref:fig-method-v4}} shows the network architecture and information flow of the Find–Match–Build framework. The three stages share density and receptor-atom input representations ({{figref:fig-method-v4|a}}). They sequentially localise ligand regions ({{figref:fig-method-v4|b}}), match candidate regions to ligand identities ({{figref:fig-method-v4|c}}) and reconstruct all-atom ligand poses ({{figref:fig-method-v4|d}}).
+
+## Data sources and sample partitioning
+
+We downloaded cryo-EM density maps from EMDB and their corresponding PDB structures from the RCSB database. We selected samples with a resolution of ≤4 Å and cc > 0.65. We then partitioned the dataset into mutually disjoint training, validation, calibration and test sets. The test set contained samples from after 1 January 2026, whereas the other three sets contained samples from before that date.
+
+We used MMseqs2 sequence comparisons to define redundancy between protein and nucleic acid complexes. Two protein sequences were considered similar if their alignment had ≥30% identity and ≥80% coverage in both directions. For nucleic acid sequences, the identity threshold was ≥80%, with the same bidirectional coverage requirement.
+
+We then removed sequence redundancy from the candidate test set at the PDB-entry level. A PDB pair was considered redundant if the number of similar chains reached ≥60% of the comparable chains in either entry. Each sample in the final test set was non-redundant with every sample in the training, validation and calibration sets. All pairs of samples within the test set were also non-redundant.
+
+For each model, the training set supplied the metadata required for training, such as local density crops for Find. The validation set was used to select the best checkpoint during training. The calibration set was used to select probability or score thresholds after training. The test set was used exclusively for the final evaluation. After quality filtering and processing, the training, validation, calibration and test sets contained 13,714, 200, 100 and 179 EMDB–PDB pairs, respectively. The corresponding numbers of ligand instances were 435,187, 5,942, 3,532 and 2,502.
+
+## Unified input representation
+
+Find, Match and Build all extract information from density maps and receptor atoms, motivating a shared density–atom input representation. We organise density information into a multi-view density bank and encode each receptor atom as a 50-dimensional feature vector. These representations provide common inputs for training and inference across all three stages.
+
+### Multi-view density bank
+
+The multi-view density bank organises complementary views of density into a local representation shared by Find, Match and Build.
+
+Using Chimera, we generated a simulated receptor density map $M_{\mathrm{sim}}$ from the input receptor structure, with the same dimensions as the experimental cryo-EM density map $M_{\mathrm{exp}}$. We resampled both maps to a voxel spacing of 1 Å and aligned them to a common physical coordinate system and voxel grid. These two maps served as the source inputs for constructing the multi-view density bank.
+
+On the set of voxels containing receptor atoms, $\Omega_{\mathrm{rec}}$, we fitted a scale coefficient $a$ and offset $b$ by least squares. This fit minimised the root-mean-square error between the experimental and scaled simulated densities:
+
+$$
+(a,b)=\underset{a,b}{\arg\min}\sum_{x\in\Omega_{\mathrm{rec}}}
+\left[M_{\mathrm{exp}}(x)-aM_{\mathrm{sim}}(x)-b\right]^2.
+$$
+
+We then constructed the difference density map using the fitted scale and offset:
+
+$$
+M_{\mathrm{diff}}(x)=M_{\mathrm{exp}}(x)-\left(aM_{\mathrm{sim}}(x)+b\right)
+$$
+
+We also constructed a positive difference density map from the residual, $M_{\mathrm{diff}}^{+}(x)=\max(M_{\mathrm{diff}}(x),0)$. This yielded four base density fields: experimental density, simulated receptor density, difference density and positive difference density. Experimental density retains the complete observed signal, whereas simulated receptor density explicitly marks the signal explained by the receptor structure. Difference density retains both positive and negative residuals, while positive difference density isolates experimental density unexplained by the receptor model.
+
+For each base density field $M$, we retained both unnormalised and z-score-normalised representations. For the latter, we first clipped $M$ to its $0.1\%$ and $99.9\%$ quantiles before applying z-score normalisation. This reduced the influence of a small number of extreme density values on the overall numerical scale.
+
+Each representation underwent seven deterministic spatial transformations: identity mapping, two Gaussian smoothing operations, two difference-of-Gaussians (DoG) filters and two receptor-neighbourhood suppression operations. Three-dimensional Gaussian smoothing used standard deviations of 1 and 2 voxels. The DoG filters used scale parameters of 1 and 2 voxels and a scale ratio of 1.6. Receptor-neighbourhood suppression likewise used scales of 1 and 2 voxels.
+
+Let $G_\sigma$ denote a three-dimensional Gaussian kernel with standard deviation $\sigma$, and let $*$ denote three-dimensional convolution. Let $d_{\mathrm{rec}}(x)$ denote the distance from voxel $x$ to the nearest receptor-occupied voxel. With $S_\sigma(x)=\mathbb{I}[d_{\mathrm{rec}}(x)\le 2]\exp[-d_{\mathrm{rec}}(x)^2/(2\sigma^2)]$ defining receptor-neighbourhood suppression, the seven spatial views are written as:
+
+$$
+\mathcal V(M)=\left\{
+M,\ G_1*M,\ G_2*M,\ (G_{1.6}-G_1)*M,\ (G_{3.2}-G_2)*M,\ M(1-S_1),\ M(1-S_2)
+\right\}.
+$$
+
+Each local region therefore yields a total of $4\times2\times7=56$ density channels. These form a 56-channel tensor in the fixed order of base density field, normalisation scheme and spatial transformation.
+
+Multiscale smoothing provides context for continuous density over different spatial ranges. DoG views highlight compact density blobs and their boundaries, while receptor-neighbourhood suppression reduces masking of unexplained density by the macromolecular body. Because ligand density is sparse and difficult to capture, this construction provides a shared inductive bias for downstream tasks rather than requiring each to learn it from scratch.
+
+All models were trained on local $L^3$ voxel blocks rather than entire density maps. The multi-view density bank was constructed within each block, producing a tensor $M\in\mathbb{R}^{56\times L\times L\times L}$ as the neural-network input. The local block size was $L=80$ for Find and Build and $L=48$ for Match.
+
+### Receptor-atom features
+
+We represent receptor atoms uniformly across all three stages as $A=\{(\mathbf r_i,\mathbf u_i)\}_{i=1}^{N}$. Here, $\mathbf r_i\in\mathbb{R}^{3}$ gives the world coordinates of receptor heavy atom $i$. The corresponding feature vector $\mathbf u_i\in\mathbb{R}^{50}$ describes its chemical properties, residue environment and local packing.
+
+The 50-dimensional feature vector is formed by concatenating six components in a fixed order:
+
+$$
+\mathbf u_i=
+\left[
+\mathbf e_i^{(6)},
+\mathbf q_i^{(25)},
+\mathbf p_i^{(8)},
+m_i^{(1)},
+\mathbf h_i^{(9)},
+b_i^{(1)}
+\right].
+$$
+
+The element one-hot encoding $\mathbf e_i^{(6)}$ represents C, N, O, S, P and other elements, in that order. The residue one-hot encoding $\mathbf q_i^{(25)}$ includes 20 standard amino acids, the four nucleotides A/U/C/G and an unknown category. DNA bases and common modified residues are mapped to their corresponding standard parent categories. This mapping provides a unified input space for protein, RNA and DNA receptors.
+
+The eight features in $\mathbf p_i^{(8)}$ describe the physicochemical categories of the atom's residue. In order, they encode polar, non-polar, acidic, basic, neutral, positively charged, negatively charged and uncharged properties. The relative atomic mass $m_i$ is normalised by dividing by 32.
+
+The nine-dimensional component $\mathbf h_i^{(9)}$ describes the local packing environment around the atom. We partitioned its 0–18 Å neighbourhood into nine concentric shells: $[0,2),[2,4),\ldots,[16,18]$ Å. We counted the other receptor atoms in each shell, $n_{i,k}$, and compressed the dynamic range of these counts using:
+
+$$
+h_{i,k}=\log\left(1+n_{i,k}\right),\qquad k=1,\ldots,9
+$$
+
+The final feature $b_i$ indicates whether the atom belongs to the backbone. It equals 1 for protein N, CA, C and O atoms, and for nucleic acid P, O5′, C5′, C4′, C3′ and O3′ atoms. All other atoms receive a value of 0, completing the 50-dimensional vector.
+
+Find, Match and Build use the same rules to construct receptor-atom features. Each atom therefore has a consistent initial representation across tasks and local regions. The network layers of each model subsequently map these features into their respective hidden spaces.
+
+## Stage 1: Find
+
+### Task definition
+
+Let $\mathcal{L}=\{(\boldsymbol{\ell}_m,e_m)\}_{m}$ denote the set of non-hydrogen atoms from all ligands in a sample. Here, $\boldsymbol{\ell}_m\in\mathbb{R}^{3}$ gives the world coordinates of ligand atom $m$, and $e_m$ denotes its element type. Let $\mathbf{c}_{u,v,w}\in\mathbb{R}^{3}$ denote the physical coordinates of the centre of voxel $(u,v,w)$. Let $r_{\mathrm{vdW}}(e_m)$ denote the van der Waals radius of element $e_m$. We define the ground-truth semantic label $Y^{*}$ for each voxel as:
+
+$$
+Y^{*}_{u,v,w}
+=
+\mathbb{I}\!\left[
+\exists m,\;
+\left\|\mathbf{c}_{u,v,w}-\boldsymbol{\ell}_m\right\|_{2}
+\le r_{\mathrm{vdW}}(e_m)
+\right].
+$$
+
+Given the receptor-atom set $A$ defined above and the experimental cryo-EM density map $M$, Find predicts ligand-region probabilities $\hat{Y}$. These probabilities are the primary target of supervision during Find training:
+
+$$
+\hat{Y}=\sigma\!\left(f_{\theta}(A,M)\right),
+\qquad
+\hat{Y}\in[0,1]^{D\times H\times W},
+$$
+
+Here, $f_{\theta}$ denotes the Find network with parameters $\theta$, and $\sigma$ denotes the voxelwise sigmoid function. The value $\hat{Y}_{u,v,w}$ is the predicted probability that voxel $(u,v,w)$ belongs to a ligand region.
+
+### Network architecture
+
+We represent density maps as voxel grids and receptor atoms as point clouds with features. Find jointly models these representations with a hybrid point–voxel network. The voxel branch predicts ligand-region probabilities from the complete local density field. The point-cloud branch resolves receptor geometry and chemistry, producing auxiliary features, including receptor-atom binding probabilities, for Find and Match training and inference. The network comprises a receptor embedding head, a voxel branch, a point-cloud branch and classification heads. Multiscale information fusion and recycling connect these components within the network.
+
+The receptor embedding head supplies processed atom representations to both branches. Before the voxel branch, it embeds receptor atoms, encodes their centre positions and softly scatters the encoded features onto the voxel grid. The projected features are concatenated with the 56 density channels as input to a 3D U-Net. Before the point-cloud branch, Point Transformer V3 attention modules and progressive cropping process the initial atom features to provide the point-cloud input.
+
+The voxel branch uses a 3D U-Net with an encoder–decoder architecture. Self-attention at low-resolution layers models long-range spatial relationships, while skip connections restore high-resolution features. The main output head predicts ligand-region probabilities from the voxel features. Auxiliary heads predict receptor-binding regions, protein backbone atom classes, nucleic acid backbone atom classes and inverse distance to the nearest ligand. The network samples pseudo-atoms $P$ from regions with high predicted receptor-binding probabilities. Convolutional layers extract surrounding density information to initialise their features. These pseudo-atoms enter the point-cloud branch together with receptor atoms $A$ encoded by the receptor embedding head.
+
+The point-cloud branch uses the U-Net-style encoder–decoder architecture of Point Transformer V3. Space-filling curves jointly serialise receptor atoms $A$ and pseudo-atoms $P$, while point-cloud convolutions provide conditional positional encoding. At multiple resolutions, the network performs learnable weighted sampling over the $3^3$ neighbourhoods of $A$ and $P$ in voxel feature maps at the corresponding scale. Feature modulation injects the voxel branch's density information into atom representations, allowing the point-cloud branch to access intermediate voxel features at multiple levels. Receptor-atom representations are supervised using receptor-atom binding probabilities, whereas pseudo-atom representations are supervised using their probabilities of lying within ligand regions.
+
+Following AlphaFold3, the Find network also incorporates a recycling mechanism. Voxel and point-cloud features from each iteration serve as additional inputs to their respective branches in the next iteration. Training randomly used one to three recycling iterations, whereas inference used a fixed three iterations.
+
+### Losses and supervision
+
+Find's primary task is ligand-region segmentation, supported by auxiliary supervision of both branches. The voxel branch also predicts receptor-binding regions, inverse distance to the nearest ligand, and protein and nucleic acid backbone atom classes. The point-cloud branch provides separate supervision for receptor atoms and sampled pseudo-atoms. The total loss combines the voxel and point-cloud terms as follows:
+
+$$
+\mathcal L_{\mathrm{Find}}
+=
+\underbrace{
+\mathcal L_{\mathrm{ligand\text{-}area}}
++0.1\mathcal L_{\mathrm{receptor\text{-}area}}
++0.3\mathcal L_{\mathrm{ligand\text{-}dist}}
++0.05\mathcal L_{\mathrm{protein\text{-}mainchain}}
++0.05\mathcal L_{\mathrm{nucleic\text{-}mainchain}}
+}_{\text{voxel branch}} \\
++
+\underbrace{
+\mathcal L_{\mathrm{receptor\text{-}prob}}
++0.1\mathcal L_{\mathrm{pseudo\text{-}prob}}
+}_{\text{point-cloud branch}}.
+$$
+
+For the voxel branch, $\mathcal L_{\mathrm{ligand\text{-}area}}$ is the primary supervision term. It compares ligand-region probabilities $\hat Y$ from the main output head with the ground-truth binary labels $Y^{*}$.
+
+Receptor-binding regions comprise voxels containing receptor atoms with a ligand atom within 4 Å. The loss $\mathcal L_{\mathrm{receptor\text{-}area}}$ provides supervision for the corresponding receptor-binding-region output head. The ligand-distance loss $\mathcal L_{\mathrm{ligand\text{-}dist}}$ supervises the predicted inverse distance to the nearest ligand atom.
+
+The protein backbone head predicts probabilities over five channels: background, N, CA, C and O. The nucleic acid backbone head predicts probabilities over seven channels: background, P, O5′, C5′, C4′, C3′ and O3′. The corresponding heads are supervised by $\mathcal L_{\mathrm{protein\text{-}mainchain}}$ and $\mathcal L_{\mathrm{nucleic\text{-}mainchain}}$, respectively.
+
+The point-cloud branch performs binary classification of receptor atoms and sampled pseudo-atoms. A receptor atom is positive if and only if a ligand atom lies within 4 Å. A pseudo-atom is positive if and only if it lies within a ligand region. The loss $\mathcal L_{\mathrm{receptor\text{-}prob}}$ supervises receptor atoms, whereas $\mathcal L_{\mathrm{pseudo\text{-}prob}}$ supervises pseudo-atoms.
+
+The ligand-distance loss uses mean squared error (MSE) for the distance prediction. All other losses combine focal loss ($\gamma=2$) and Dice loss with weights of 0.7 and 0.3, respectively.
+
+### Inference and post-processing
+
+As in training, Find uses $80^{3}$ voxel blocks as its basic input during inference. Sliding-window inference with a stride of 30 and a Gaussian kernel with $\sigma=0.5$ produces the full ligand-region probability map $\hat{Y}$. We threshold this map at a fixed probability $t_{\mathrm{sem}}$ to obtain candidate blobs, which are then filtered by Gaussian scoring. We selected $t_{\mathrm{sem}}$ to maximise the semantic F1 score on the calibration set. Gaussian-scoring parameters were also searched on the calibration set, then fixed together with the probability threshold for testing.
+
+During inference, we apply 26-connected-component analysis to voxels satisfying $\hat{Y}\ge t_{\mathrm{sem}}$, yielding candidate ligand regions (blobs) $\{B_j\}_{j=1}^{J}$. We then compute a Gaussian score for each of these candidate regions.
+
+For candidate $B_j$, let $\bar{p}_j$ denote the mean ligand-region probability within the candidate region. Let $q_i$ denote the binding probability of receptor atom $i$. Let $d_{ij}$ denote the physical distance from that atom to the nearest voxel centre in $B_j$. The Gaussian candidate score $s_j$ for blob $B_j$ is defined as:
+
+$$
+s_j
+=
+\bar{p}_j
++\lambda_{+}\sum_{i}w_{ij}q_i \mathbb{I}\!\left[ d_{ij} \le 5Å \right]
+-\lambda_{-}\sum_{i}w_{ij}(1-q_i) \mathbb{I}\!\left[ d_{ij} \le 5Å \right],
+\qquad
+w_{ij}=\exp\!\left(-\frac{d_{ij}^{2}}{2\tau^{2}}\right).
+$$
+
+Candidate $B_j$ is predicted as positive if and only if $s_j$ exceeds the fixed Gaussian-score threshold $\bar{s}$ and its voxel count exceeds $\mathit{v_{min}}$. We searched the Gaussian width $\tau$, coefficients $\lambda_{+}$ and $\lambda_{-}$, score threshold $\bar{s}$ and minimum voxel count $\mathit{v_{min}}$ on the calibration set. The objective was to maximise the sum of semantic F1, $\operatorname{covF1}_{0.3}$ and $\operatorname{1to1F1}_{0.3}$. After calibration, all selected parameters remained fixed throughout subsequent testing.
+
+The first score term measures the candidate's own density confidence. The second rewards support from nearby receptor atoms predicted to bind ligands. The third penalises nearby receptor atoms predicted to lie outside binding regions.

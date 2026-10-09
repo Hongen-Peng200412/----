@@ -265,17 +265,18 @@ In 30GA ({{figref:e2e-flow-30ga}}), Find's Rank 1 candidate was a background fal
 
 ## Data sources and sample partitioning
 
-We downloaded cryo-EM density maps from EMDB and their corresponding PDB structures from the RCSB database. We selected samples with a resolution of <4 Å and cc > 0.65. We then partitioned the dataset into mutually disjoint training, validation, calibration and test sets. The test set contained non-redundant samples from after 1 January 2026, whereas the other three sets contained samples from before that date.
+We downloaded cryo-EM density maps from EMDB and their corresponding PDB structures from the RCSB database. We selected samples with a resolution of <4 Å and CC >0.65. We then partitioned the dataset into mutually disjoint training, validation, calibration, and test sets. The test set contained non-redundant samples first released after 1 January 2026, whereas the other three sets contained samples released before that date.
 
-We used MMseqs2 sequence comparisons to define redundancy between protein and nucleic acid complexes. Two protein sequences were considered similar if their alignment had ≥30% identity and ≥80% coverage in both directions. For nucleic acid sequences, the identity threshold was ≥80%, with the same bidirectional coverage requirement.
+We used sequence comparisons performed by MMseqs2 to define redundancy between protein and nucleic acid complexes. Two protein sequences were considered similar if their alignment had ≥30% identity and ≥80% coverage in both directions. For nucleic acid sequences, the identity threshold was ≥80%, with the same bidirectional coverage requirement. A pair of PDB entries was considered redundant if the number of similar chains reached ≥60% of the comparable chains in either entry.
 
-We then removed sequence redundancy from the candidate test set at the PDB-entry level. A PDB pair was considered redundant if the number of similar chains reached ≥60% of the comparable chains in either entry. Each sample in the final test set was non-redundant with every sample in the training, validation and calibration sets. All pairs of samples within the test set were also non-redundant.
+We then removed redundant samples from the candidate test set at the PDB-entry level, namely, by selecting a maximal independent set in the PDB-graph defined by the redundancy relationships. Each sample in the final test set was non-redundant with every sample in the training, validation, and calibration sets. All pairs of samples within the test set were also non-redundant.
 
-Quality filtering and removal of redundancy reduced the 2,497 PDB structures whose density maps were first released after 1 January 2026 to 179 EMDB–PDB pairs. These pairs formed the original test set used for subsequent evaluations. Samples from before 1 January 2026 were divided into three mutually disjoint subsets containing 13,714, 200, 100 and 179 EMDB–PDB pairs. These subsets served as the original training, validation and calibration sets.
+Of the 2,497 EMDB–PDB pairs whose corresponding density maps were first released after 1 January 2026, 179 remained after quality filtering and redundancy removal. These pairs formed the original test set used for subsequent evaluations. Samples released before 1 January 2026 were divided into three mutually disjoint subsets containing 13,714, 200, and 100 EMDB–PDB pairs, respectively. These subsets served as the original training, validation, and calibration sets.
 
-For Find, the training set supplied training metadata, including local density crops. The validation set was used to select the best checkpoint during training. The calibration set determined probability or score thresholds after training was complete. Find operated at the PDB-entry level for training and testing, using all 13,714, 200, 100 and 179 EMDB–PDB pairs from the original sets.
 
-Match used candidate blobs inferred by Find as its basic sample unit. Its training, validation and test sets comprised Find inference outputs from 1,590, 200 and 169 PDB entries, respectively. These PDB entries were subsets of the corresponding original training, validation and test sets. The three sets contained 44,643, 5,544 and 1,651 blobs, respectively.
+For Find, the training set supplied training metadata, including local $80^3$ density crops. The validation set was used to select the best checkpoint during training. The calibration set determined probability or score thresholds after training was complete. Find operated at the PDB-entry level for training and testing, using all 13,714, 200, 100 and 179 EMDB–PDB pairs from the original sets.
+
+Match used candidate blobs inferred by Find as its basic sample unit. Its training, validation and test sets comprised Find inference outputs from 1,650, 200 and 179 PDB entries, respectively. These PDB entries were subsets of the corresponding original training, validation and test sets. The three sets contained 44,643, 5,544 and 1,651 blobs, respectively.
 
 Build used individual ligand instances as its basic training and testing unit. For PocketXMol fine-tuning, each training, validation and test split comprised all single-residue organic small molecules without missing atoms from its corresponding original partition. End-to-end testing was restricted to the original 179 PDB entries, as were Find, Match and Build testing. This shared test scope prevented data leakage between training and testing.
 
@@ -287,7 +288,7 @@ Find, Match and Build all extract information from density maps and receptor ato
 
 The multi-view density bank organises complementary views of density into a local representation shared by Find, Match and Build.
 
-Using Chimera, we generated a simulated receptor density map $M_{\mathrm{sim}}$ from the input receptor structure, with the same dimensions as the experimental cryo-EM density map $M_{\mathrm{exp}}$. We resampled both maps to a voxel spacing of 1 Å and aligned them to a common physical coordinate system and voxel grid. These two maps served as the source inputs for constructing the multi-view density bank.
+Using Chimera, we generated a simulated receptor density map $M_{\mathrm{sim}}$ from the input receptor structure on the same grid as the experimental cryo-EM density map $M_{\mathrm{exp}}$. We resampled both maps to a voxel spacing of 1 Å and aligned them to a common physical coordinate system and voxel grid. These two maps served as the source inputs for constructing the multi-view density bank.
 
 On the set of voxels containing receptor atoms, $\Omega_{\mathrm{rec}}$, we fitted a scale coefficient $a$ and offset $b$ by least squares. This fit minimised the root-mean-square error between the experimental and scaled simulated densities:
 
@@ -302,9 +303,9 @@ $$
 M_{\mathrm{diff}}(x)=M_{\mathrm{exp}}(x)-\left(aM_{\mathrm{sim}}(x)+b\right)
 $$
 
-We also constructed a positive difference density map from the residual, $M_{\mathrm{diff}}^{+}(x)=\max(M_{\mathrm{diff}}(x),0)$. This yielded four base density fields: experimental density, simulated receptor density, difference density and positive difference density. Experimental density retains the complete observed signal, whereas simulated receptor density explicitly marks the signal explained by the receptor structure. Difference density retains both positive and negative residuals, while positive difference density isolates experimental density unexplained by the receptor model.
+We also constructed a positive difference density map from the residual, $M_{\mathrm{diff}}^{+}(x)=\max(M_{\mathrm{diff}}(x),0)$. This yielded four base density fields: experimental density, simulated receptor density, difference density and positive difference density. Experimental density retains the complete observed signal, whereas simulated receptor density represents the density explained by the receptor structure. Difference density captures residual discrepancies between the experimental and simulated maps, whereas positive difference density highlights density unexplained by the receptor model.
 
-For each base density field $M$, we retained both unnormalised and z-score-normalised representations. For the latter, we first clipped $M$ to its $0.1\%$ and $99.9\%$ quantiles before applying z-score normalisation. This reduced the influence of a small number of extreme density values on the overall numerical scale.
+For each base density field $M$, we retained both unnormalised and z-score-normalised representations. For the latter, we first clipped $M$ to its 0.1st and 99.9th percentiles before applying z-score normalisation, reducing the influence of extreme density values on the numerical scale.
 
 Each representation underwent seven deterministic spatial transformations: identity mapping, two Gaussian smoothing operations, two difference-of-Gaussians (DoG) filters and two receptor-neighbourhood suppression operations. Three-dimensional Gaussian smoothing used standard deviations of 1 and 2 voxels. The DoG filters used scale parameters of 1 and 2 voxels and a scale ratio of 1.6. Receptor-neighbourhood suppression likewise used scales of 1 and 2 voxels.
 
@@ -352,7 +353,7 @@ $$
 
 The final feature $b_i$ indicates whether the atom belongs to the backbone. It equals 1 for protein N, CA, C and O atoms, and for nucleic acid P, O5′, C5′, C4′, C3′ and O3′ atoms. All other atoms receive a value of 0, completing the 50-dimensional vector.
 
-Find, Match and Build use the same rules to construct receptor-atom features. Each atom therefore has a consistent initial representation across tasks and local regions. The network layers of each model subsequently map these features into their respective hidden spaces.
+Find and Match use the same receptor-atom feature construction rules, whereas we follow the PocketXMol official process when fine-tuning it. Under the shared encoding scheme, each atom has a consistent initial representation across tasks and local regions.
 
 ## Stage 1: Find
 
@@ -370,7 +371,7 @@ Y^{*}_{u,v,w}
 \right].
 $$
 
-Given the receptor-atom set $A$ defined above and the experimental cryo-EM density map $M$, Find predicts ligand-region probabilities $\hat{Y}$. These probabilities are the primary target of supervision during Find training:
+Given the receptor-atom set $A$ defined above and the experimental cryo-EM density map $M$, Find predicts ligand-region probabilities $\hat{Y} \in [0,1]^{D\times H\times W}$. These probabilities are the primary target of supervision during Find training:
 
 $$
 \hat{Y}=\sigma\!\left(f_{\theta}(A,M)\right),

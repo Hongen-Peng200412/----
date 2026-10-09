@@ -455,7 +455,7 @@ In parallel, we use RDKit to generate ideal three-dimensional ligand conformatio
 For each SMILES $S_{i} \in \{ S_k \}_{k=1}^{K}$, its language representation serves as the query for two attention operations ({{figref:fig-method-v4|c}}). Graph attention operates on its own molecular graph, whereas context attention operates on the language representations of other SMILES in the same PDB entry:
 
 $$
-\hat{S_{i}} = Attention(q=S_{i}^{language}, kv=S_{i}^{graph}), \qquad \tilde{S_{i}} = Attention(q=S_{i}^{language}, kv=\{S_{i}^{language}\}_{k \ne i})
+\hat{S_{i}} = Attention(q=S_{i}^{language}, kv=S_{i}^{graph}), \qquad \tilde{S_{i}} = Attention(q=S_{i}^{language}, kv=\{S_{k}^{language}\}_{k \ne i})
 $$
 
 The final representation of ligand identity $k$ is $ g_{k} = ( S_{k}^{language}, \hat{S_{k}}, \tilde{S_{k}} )$, combining its language, graph-attention and context-attention representations.
@@ -464,29 +464,29 @@ The final representation of ligand identity $k$ is $ g_{k} = ( S_{k}^{language},
 
 Let $\{B_j\}_{j=1}^{J}$ denote the candidate regions predicted by Find within the same PDB entry. Match extracts a $48^3$ voxel block centred on each candidate and constructs the 56-channel multi-view density bank defined above. The 50-dimensional receptor-atom features are scattered onto the same grid according to atom coordinates. Concatenating these inputs produces a base feature tensor of size $106\times48^3$. A U-Net encodes this tensor into a base summary vector $h_j^{\mathrm{vox}}$ for the candidate.
 
-Match also incorporates auxiliary features from the surrounding pocket, defined as receptor atoms within the candidate region's 10 Å envelope. Further auxiliary inputs include hidden features within the blob from the highest-resolution U-Net decoder, together with additionally sampled pseudo atoms and their features.
+Match also incorporates auxiliary features from the surrounding pocket, defined as receptor atoms within the candidate region's 10 Å envelope. Further auxiliary inputs include hidden features within the blob from the highest-resolution of the LigandSeek-Find 3D-UNet decoder, together with additionally sampled pseudo atoms and their features.
 
-Pooling and attention encode these auxiliary features to further modulate the base density summary $h_j^{\mathrm{vox}}$. For each auxiliary feature type, mean and maximum pooling produce a pooled summary vector. In parallel, cross-attention uses $h_j^{\mathrm{vox}}$ as the query and the corresponding auxiliary features as keys and values to produce an attention summary vector. The two summary vectors are concatenated and passed through a multilayer perceptron (MLP). A feature-wise linear modulation (FiLM) module then uses this output to modulate the base summary $h_j^{\mathrm{vox}}$. The modulated representation is used for both foreground classification and ligand-identity matching.
+Pooling and attention encode these auxiliary features to further modulate the base density summary $h_j^{\mathrm{vox}}$. For each auxiliary feature type, mean and maximum pooling produce a pooled summary vector. In parallel, cross-attention uses $h_j^{\mathrm{vox}}$ as the query and the corresponding auxiliary features as keys and values to produce an attention summary vector. The two summary vectors are concatenated and passed through a MLP. A FiLM module then uses this output to modulate the base summary $h_j^{\mathrm{vox}}$. The modulated representation is used for both foreground classification and ligand-identity matching.
 
 ### Scoring and selection
 
-Suppose a PDB entry contains $J$ candidates $\{B_j\}_{j=1}^{J}$ and $K$ valid SMILES identities $\mathcal S=\{S_k\}_{k=1}^{K}$. Match pairs each candidate representation with every ligand-identity representation from the same PDB entry to form a $J\times K$ matching-score matrix. Its entry in row $j$ and column $k$ is defined as:
+Suppose a PDB entry contains $J$ candidates $\{B_j\}_{j=1}^{J}$ and $K$ valid SMILES identities $\mathcal S=\{S_k\}_{k=1}^{K}$. LigandSeek-Match pairs each candidate representation with every ligand-identity representation from the same PDB entry to form a $J\times K$ matching-score matrix. Its entry in row $j$ and column $k$ is defined as:
 
 $$
-s_{j,k}=f_{\mathrm{match}}\!\left(h_j,S_k^{\mathrm{repr}}\right),\qquad 1\le j\le J,\quad 1\le k\le K.
+s_{j,k}=f_{\mathrm{match}}(h_j,g_k),\qquad 1\le j\le J,\quad 1\le k\le K.
 $$
 
-Here, $h_j$ is the candidate representation, and $S_k^{\mathrm{repr}}$ is the ligand-identity representation defined above. The function $f_{\mathrm{match}}$ applies separate learnable linear projections to $h_j$ and $S_{k}^{repr}$, then computes their cosine similarity to produce the raw score $s_{j,k}$. For candidate $B_j$, the ligand identity with the highest score is predicted as:
+Here, $h_j$ is the candidate representation, and $g_k$ is the ligand-identity representation defined above. The function $f_{\mathrm{match}}$ applies separate learnable linear projections to $h_j$ and $g_k$, then computes their cosine similarity to produce the raw score $s_{j,k}$. For candidate $B_j$, the ligand identity with the highest score is predicted as:
 
 $$
 \hat{k}_j=\underset{1\le k\le K}{\arg\max}\;s_{j,k},\qquad \hat S_j=S_{\hat{k}_j}.
 $$
 
-An independent foreground head uses $h_j$ to predict the foreground probability $p_{j}^{\mathrm{fg}}$ of candidate $B_j$. Thus, Match provides each candidate's foreground probability and the probability of its corresponding ligand identity for downstream pose modelling.
+An independent foreground head uses $h_j$ to predict the foreground probability $p_{j}^{\mathrm{fg}}$ of candidate $B_j$. Thus, Match provides each candidate's foreground probability and ligand-identity matching scores for downstream pose modelling.
 
 ### Labels and loss functions
 
-A candidate blob $B_j$ is labelled as foreground if its bidirectional coverage with at least one ground-truth ligand instance reaches 0.3 in both directions. Otherwise, the candidate is labelled as a false positive for training. For a foreground candidate, we select the ligand instance with the highest geometric mean of the two coverage fractions. The SMILES of that instance provides the candidate's ligand-identity label.
+A candidate blob $B_j$ is labelled as foreground if it matches at least one ground-truth ligand instance, with at least 0.3 coverage in both directions. Otherwise, the candidate is labelled as a false positive for training. For a foreground candidate, we select the ligand instance with the highest geometric mean of the two coverage fractions. The SMILES of that instance provides the candidate's ligand-identity label.
 
 Match uses cross-entropy losses to supervise both ligand-identity matching and foreground classification. Let $y_j^{\mathrm{fg}}\in\{0,1\}$ denote the foreground label, and let $k_j^{*}$ denote the ground-truth identity's index in $\mathcal S=\{S_k\}_{k=1}^{K}$. The foreground loss is binary cross-entropy over all training candidates:
 
@@ -494,10 +494,10 @@ $$
 \mathcal L_{\mathrm{fg}}=-\frac{1}{J}\sum_{j=1}^{J}\left[y_j^{\mathrm{fg}}\log p_j^{\mathrm{fg}}+(1-y_j^{\mathrm{fg}})\log(1-p_j^{\mathrm{fg}})\right].
 $$
 
-The identity loss uses cross-entropy over valid identity scores, evaluated only on ground-truth foreground candidates with valid SMILES identity targets:
+The identity loss is evaluated only on ground-truth foreground candidates with valid SMILES identity targets:
 
 $$
-\mathcal L_{\mathrm{id}}=-\frac{1}{|\{j:y_j^{\mathrm{fg}}=1\}|}\sum_{j:y_j^{\mathrm{fg}}=1}\log\frac{\exp(s_{j, k_j^{*}})}{\sum_{k=1}^{K_j}\exp(s_{j,k})}.
+\mathcal L_{\mathrm{id}}=-\frac{1}{|\{j:y_j^{\mathrm{fg}}=1\}|}\sum_{j:y_j^{\mathrm{fg}}=1}\log\frac{\exp(s_{j, k_j^{*}})}{\sum_{k=1}^{K}\exp(s_{j,k})}.
 $$
 
 Background candidates contribute only to the foreground loss and are excluded from the identity loss. The total Match loss combines these terms with their respective weights:
@@ -516,7 +516,7 @@ After ligand-region detection and identity matching, Build connects to a suitabl
 
 Docking tools differ in the ligand types they support; for example, some cannot dock sugars. They also differ in their guiding information, with some using receptor information alone and others using density alone. Their requirements for binding-location information vary: some require a binding site or pocket, whereas others perform blind docking. Rather than training a single universally best docking model, we provide a flexible choice of downstream docking tools.
 
-Few existing docking tools jointly use receptor information and cryo-EM density. We therefore minimally modified PocketXMol, a high-accuracy small-molecule docking tool, to accept density information as an additional input. We loaded its official weights and fine-tuned the model on single-residue organic small molecules. Density guidance further improves docking performance, and PocketXMol-tuned provides another available downstream docking tool.
+Few existing docking tools jointly use receptor information and cryo-EM density. We therefore extended PocketXMol, a unified small-molecule model that supports molecular docking, to incorporate cryo-EM density as an additional conditioning signal alongside receptor information. We initialised the model with its official weights and fine-tuned it on single-residue organic small molecules. Density guidance further improves docking performance, and PocketXMol-tuned provides another available downstream docking tool.
 
 ### PocketXMol fine-tuning experiments
 

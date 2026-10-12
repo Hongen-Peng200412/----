@@ -243,6 +243,8 @@ For best-of-50 poses within $K \le 10$, success at RMSD < 2 Å reached 67.5% and
 
 {{figref:e2e-small-pipeline|a}} further separates the success rates of individual pipeline stages. Within the first 10 charged attempts ($K \le 10$), Find alone succeeded in 88.3% and 89.6% of entries with CryoAtom2-reconstructed and deposited receptors, respectively. Both exceeded Emap2lig-Find's success rate of 70.1% in this subset. Requiring both Find and Match to succeed yielded rates of 81.8% and 83.1%, respectively.
 
+The supplementary analysis measured ligand-instance completion after normalising the attempt budget by the number of target instances in each PDB. At a 300% relative budget, macro-mean completion for detection and identity matching was 67.5% with deposited receptors and 58.8% with CryoAtom2 receptors. For single-residue organic small molecules with no missing atoms, top-1 RMSD <2 Å completion was 55.1% and 44.9%, respectively.
+
 ### Representative cases
 
 We selected three representative cases to illustrate the end-to-end pipeline for all-atom small-molecule pose reconstruction, using CryoAtom2-reconstructed rather than deposited receptor structures as input ({{figref:e2e-flow-9llg,e2e-flow-9bjj,e2e-flow-30ga}}).

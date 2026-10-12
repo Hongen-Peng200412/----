@@ -14,6 +14,13 @@ __pycache__/
 画图/画图代码
 !画图/画图代码/
 画图/画图代码/*
+!画图/画图代码/stage1/
+画图/画图代码/stage1/*
+!画图/画图代码/stage1/ligandseek1_comparison/
+!画图/画图代码/stage1/ligandseek1_comparison/**
+画图/画图代码/stage1/ligandseek1_comparison/**/__pycache__/
+画图/画图代码/stage1/ligandseek1_comparison/**/.pytest_cache/
+画图/画图代码/stage1/ligandseek1_comparison/**/*.pyc
 !画图/画图代码/stage2/
 !画图/画图代码/stage2/**
 !画图/画图代码/stage3/

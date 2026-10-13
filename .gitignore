@@ -18,6 +18,10 @@ __pycache__/
 画图/画图代码/stage1/*
 !画图/画图代码/stage1/ligandseek1_comparison/
 !画图/画图代码/stage1/ligandseek1_comparison/**
+!画图/画图代码/stage1/main_sixpanel_20260929/
+画图/画图代码/stage1/main_sixpanel_20260929/*
+!画图/画图代码/stage1/main_sixpanel_20260929/svg_to_scene.py
+!画图/画图代码/stage1/main_sixpanel_20260929/plot_config.py
 画图/画图代码/stage1/ligandseek1_comparison/**/__pycache__/
 画图/画图代码/stage1/ligandseek1_comparison/**/.pytest_cache/
 画图/画图代码/stage1/ligandseek1_comparison/**/*.pyc

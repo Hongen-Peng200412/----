@@ -1,29 +1,52 @@
 # Supplementary Information
 
-## End-to-end ligand instance completion
 
-We measured instance completion at different relative attempt budgets to assess recovery of multiple ligand instances within each PDB. The analysis used frozen results from LigandSeek-Find, LigandSeek-Match and LigandSeek-Build, hereafter Find, Match and Build. Detection and identity matching across all ligand classes included 2,502 ligand instances in 179 PDBs. Small-molecule modelling included 446 organic small-molecule instances, each occupying one residue with no missing atoms, in 77 PDBs. Both analyses compared deposited receptor structures (GT) with CryoAtom2-reconstructed receptor structures (CA2).
 
-### Metric and attempt budget
+## Stage 1 Ligand region detection by LigandSeek2 and LigandSeek1
 
-For PDB $p$, $N_p$ denotes all target ligand instances in the analysis, and $S_p(K)$ counts distinct instances completed within $K$ charged attempts. The integer budget and instance completion at relative attempt budget $\rho$ are
+### Comparison protocol
 
-$$
-K_p(\rho)=\lfloor\rho N_p\rfloor,\qquad
-F_p(\rho)=\frac{S_p(K_p(\rho))}{N_p}.
-$$
+We refer to the Find model presented here and its frozen F2–F1 Gaussian workflow as LigandSeek2. LigandSeek1 denotes the official v1.0.0 release with the complete PV model. Its default probability thresholds are 0.79 for deposited receptors (GT) and 0.88 for CryoAtom2-reconstructed receptors (CA2). Native mean ligand probabilities rank its predicted instances. We evaluated both generations on the same test_0 set of 179 PDB entries and 2,502 ligand instances without retuning on test data. Semantic Dice uses the voxel union of retained instances, whereas one-to-one PRAUC applies bidirectional coverage thresholds between predicted and ground-truth instances.
 
-Here, $\rho=1$ corresponds to a 100% relative attempt budget, allowing as many charged attempts as target instances in that PDB. The floor operator rounds down; a PDB containing one target instance therefore receives zero attempts at a 50% budget. For the all-ligand analysis, $N_p$ includes every ligand instance in the PDB. For small-molecule modelling, it includes only organic small-molecule instances occupying one residue with no missing atoms.
+The small-molecule view contains 94 PDB entries and 821 labelled small-molecule instances. A frozen bidirectional coverage threshold of 0.3 assigns predicted candidates to ground-truth instances. Candidates assigned to other ligand classes are ignored, whereas unassigned candidates remain as false positives. Values below are PDB-equal macro means. Figure error bars show 95% mean confidence intervals from 10,000 PDB bootstrap resamples.
 
-Instances sharing a chemical identity were counted separately, whereas repeated hits to one instance contributed at most one completion. Candidate processing continued after the first success to accumulate completion of other instances. Undetected instances, identity errors, input construction failures and docking failures remained in the denominator. The frozen candidate order placed selected candidates before unselected candidates, with each segment ranked by decreasing Find score. Candidates beyond rank 20 were retained.
+### Complete test set and small-molecule view
 
-For detection and identity matching across all ligand classes, every candidate consumed one attempt. An instance was completed when its region was detected and Match assigned the correct identity. Small-molecule modelling retained the accounting rule based on the Match-predicted class. False-positive candidates consumed one attempt. Candidates corresponding to non-small-molecule ligands were skipped without charge when Match predicted a non-small-molecule identity. Predictions of a small molecule for those candidates consumed one attempt and failed. Candidates corresponding to small molecules consumed one attempt when their identity was incorrect. Correctly identified molecules outside the single-residue, complete-atom scope were skipped without charge. Eligible, correctly identified instances consumed one attempt and were assessed using the Build pose.
+On the complete test set, LigandSeek2 had higher semantic Dice and one-to-one PRAUC at both coverage thresholds than LigandSeek1 ({{figref:ligandseek2-vs-ligandseek1|a}}). One-to-one PRAUC₀.₃ increased from 0.517197 to 0.663163 for GT and from 0.439913 to 0.540883 for CA2. In paired CA2 comparisons, LigandSeek2 was higher for 79 PDB entries, values were equal for 69, and LigandSeek1 was higher for 31 ({{figref:ligandseek2-vs-ligandseek1|c}}).
 
-Completion was calculated separately for each PDB, followed by a PDB-equal mean and median. With $P$ PDBs, macro-mean completion is $P^{-1}\sum_{p=1}^{P}F_p(\rho)$. The plots show relative attempt budgets from 0% to 300%. The 300% limit defines the displayed range, not the maximum number of attempts in the frozen candidate sequence. Completion remained constant after candidate exhaustion.
+For small molecules, GT one-to-one PRAUC₀.₃ was 0.620856 for LigandSeek1 and 0.701144 for LigandSeek2 ({{figref:ligandseek2-vs-ligandseek1|b}}). The corresponding CA2 values were similar, at 0.567725 and 0.572615. Paired CA2 comparisons gave direction counts of 27, 46 and 21, respectively ({{figref:ligandseek2-vs-ligandseek1|d}}). Per-PDB precision and recall distributions appear in {{figref:ligandseek2-vs-ligandseek1|e,f}}.
+
+{{pptfig:"画图/LigandSeek2_vs_LigandSeek1.pptx"|ligandseek2-vs-ligandseek1}}
+
+<table>
+<caption>Table 3 | Stage 1 detection performance of two LigandSeek generations. All values are PDB-equal macro means; PRAUC subscripts indicate bidirectional coverage thresholds between predicted and ground-truth regions.</caption>
+<tr><th>Evaluation scope</th><th>Model</th><th>Input</th><th>Semantic Dice</th><th>One-to-one PRAUC₀.₃</th><th>One-to-one PRAUC₀.₅</th></tr>
+<tr><td>Complete test_0</td><td>LigandSeek1</td><td>GT</td><td>0.419166</td><td>0.517197</td><td>0.315426</td></tr>
+<tr><td>Complete test_0</td><td>LigandSeek2</td><td>GT</td><td>0.584498</td><td>0.663163</td><td>0.557571</td></tr>
+<tr><td>Complete test_0</td><td>LigandSeek1</td><td>CA2</td><td>0.354548</td><td>0.439913</td><td>0.260535</td></tr>
+<tr><td>Complete test_0</td><td>LigandSeek2</td><td>CA2</td><td>0.476877</td><td>0.540883</td><td>0.447013</td></tr>
+<tr><td>Small molecules</td><td>LigandSeek1</td><td>GT</td><td>0.511079</td><td>0.620856</td><td>0.539118</td></tr>
+<tr><td>Small molecules</td><td>LigandSeek2</td><td>GT</td><td>0.576214</td><td>0.701144</td><td>0.604858</td></tr>
+<tr><td>Small molecules</td><td>LigandSeek1</td><td>CA2</td><td>0.460169</td><td>0.567725</td><td>0.483082</td></tr>
+<tr><td>Small molecules</td><td>LigandSeek2</td><td>CA2</td><td>0.481504</td><td>0.572615</td><td>0.499294</td></tr>
+</table>
+
+
+
+
+## Stage 3: End-to-end ligand instance completion
+
+### Evaluation protocol (completion)
+
+Top-k success measures whether an end-to-end pipeline successfully processes at least one ligand instance in a complex within a specified attempt budget. We extended this assessment with the ligand completion ratio, which measures the **proportion** of ligand instances processed successfully at a specified **relative** attempt budget.
+
+For a PDB entry containing $N$ ground-truth ligands, let $f(t)$ denote the number of ligand instances successfully processed within $t$ charged attempts. Whereas top-k success uses the absolute number of charged attempts $t$, ligand completion ratio uses the relative attempt budget $\rho=\frac{t}{N}$. Correspondingly, the binary outcome indicating **whether any ligand instance was successfully processed** becomes the fraction of successfully processed ligands, $\frac{f(t)}{N}$, at relative budget $\rho$.
+
+Like top-k success, ligand completion ratio evaluates two basic end-to-end capabilities of our pipeline. These comprise detection and identity matching across all ligand categories, and detection, identity matching and modelling of single-residue organic small molecules with no missing atoms. Both metrics use the same accounting rules and test sets for each task. The all-ligand test set contains 179 PDBs and 2,502 ligand instances; the small-molecule subset contains 77 PDBs and 446 instances. Each task was evaluated with deposited receptors (GT) and CryoAtom2-reconstructed receptors (CA2).
 
 ### Detection and identity matching across all ligand classes
 
-Increasing the relative attempt budget from 100% to 300% raised macro-mean instance completion from 62.1% to 67.5% for GT and from 51.1% to 58.8% for CA2 ({{figref:supp-e2e-completion-all}}). The corresponding medians increased from 66.7% and 50.0% to 71.4% and 60.2%, respectively. Larger budgets recovered additional instances under both receptor conditions, while the PDB-level distributions showed variation in completion across complexes.
+For detection and identity matching across all ligand classes, increasing the relative attempt budget from 100% to 300% raised mean instance completion. Completion increased from 62.1% to 67.5% for GT and from 51.1% to 58.8% for CA2 ({{figref:supp-e2e-completion-all}}). The corresponding medians increased from 66.7% and 50.0% to 71.4% and 60.2%, respectively. A relative attempt budget of 100% has particular practical significance. This corresponds to a setting in which users already know the ligand identities and relative molecular masses of the complex. Under these conditions, our pipeline recovered most of the ligand instances.
 
 {{pptfig:"画图/E2E实例完成度.pptx"|supp-e2e-completion-all}}
 
@@ -36,21 +59,22 @@ Increasing the relative attempt budget from 100% to 300% raised macro-mean insta
 
 ### Modelling organic small molecules with one residue and no missing atoms
 
-Small-molecule completion required detection by Find, correct identity assignment by Match, and a PocketXMol-tuned pose satisfying the heavy-atom root-mean-square deviation (RMSD) threshold. The top-1 pose retained the model's self-ranking. The best-of-50 pose was the generated pose with the lowest heavy-atom RMSD among 50 candidates for each candidate region, assessing pose-generation coverage. Both assessments used strict RMSD thresholds of <2 Å and <3 Å, preserving the original pose ranking and success criteria.
+Small-molecule instance completion requires detection by Find, correct identity assignment by Match, and a PocketXMol-tuned pose with an RMSD below the specified threshold. We report results under eight combinations of the following test conditions. These combine GT or CA2 receptors, top-1 or best poses, and heavy-atom RMSD thresholds of <2 Å or <3 Å.
 
-For top-1 poses with RMSD <2 Å, macro-mean completion was 55.1% for GT at both 100% and 300% budgets. CA2 completion increased from 41.1% to 44.9% ({{figref:supp-e2e-completion-small}}). At a 300% budget, best-of-50 completion was 64.4% for GT and 55.9% for CA2 at RMSD <2 Å. The corresponding values at RMSD <3 Å were 66.9% and 62.8%. The gap between best-of-50 and top-1 completion showed that some correct poses were generated but were not ranked first by the model.
+For top-1 poses with RMSD <3 Å, mean completion for GT was 60.1% and 61.1% at 100% and 300% budgets, respectively. The corresponding CA2 values were 47.7% and 53.0% ({{figref:supp-e2e-completion-small}}). For best poses, mean completion was 66.0% and 66.9% for GT, and 54.7% and 62.8% for CA2, respectively. The gap between best and top-1 poses shows that many correct poses had already been generated but were not ranked first.
 
 {{pptfig:"画图/E2E实例完成度.pptx"|supp-e2e-completion-small}}
 
 <table>
-<caption>Table 2 | Small-molecule instance completion (%). Means are PDB-equal macro means; medians were calculated across the same 77 PDBs. All 446 eligible instances remained in their respective PDB denominators.</caption>
+<caption>Table 2 | Small-molecule instance completion (%). Means and medians were calculated across the same 77 PDBs.</caption>
 <tr><th>Input</th><th>Pose</th><th>RMSD</th><th>100% mean</th><th>100% median</th><th>300% mean</th><th>300% median</th></tr>
-<tr><td>GT</td><td>Top-1</td><td>&lt;2 Å</td><td>55.1</td><td>75.0</td><td>55.1</td><td>75.0</td></tr>
-<tr><td>CA2</td><td>Top-1</td><td>&lt;2 Å</td><td>41.1</td><td>16.7</td><td>44.9</td><td>25.0</td></tr>
-<tr><td>GT</td><td>Top-1</td><td>&lt;3 Å</td><td>60.1</td><td>100.0</td><td>61.1</td><td>100.0</td></tr>
-<tr><td>CA2</td><td>Top-1</td><td>&lt;3 Å</td><td>47.7</td><td>33.3</td><td>53.0</td><td>50.0</td></tr>
-<tr><td>GT</td><td>Best of 50</td><td>&lt;2 Å</td><td>63.5</td><td>100.0</td><td>64.4</td><td>100.0</td></tr>
-<tr><td>CA2</td><td>Best of 50</td><td>&lt;2 Å</td><td>49.1</td><td>50.0</td><td>55.9</td><td>83.3</td></tr>
-<tr><td>GT</td><td>Best of 50</td><td>&lt;3 Å</td><td>66.0</td><td>100.0</td><td>66.9</td><td>100.0</td></tr>
-<tr><td>CA2</td><td>Best of 50</td><td>&lt;3 Å</td><td>54.7</td><td>66.7</td><td>62.8</td><td>100.0</td></tr>
+<tr><td>GT</td><td>Top‑1</td><td>&lt;2 Å</td><td>55.1</td><td>75.0</td><td>55.1</td><td>75.0</td></tr>
+<tr><td>CA2</td><td>Top‑1</td><td>&lt;2 Å</td><td>41.1</td><td>16.7</td><td>44.9</td><td>25.0</td></tr>
+<tr><td>GT</td><td>Top‑1</td><td>&lt;3 Å</td><td>60.1</td><td>100.0</td><td>61.1</td><td>100.0</td></tr>
+<tr><td>CA2</td><td>Top‑1</td><td>&lt;3 Å</td><td>47.7</td><td>33.3</td><td>53.0</td><td>50.0</td></tr>
+<tr><td>GT</td><td>Best</td><td>&lt;2 Å</td><td>63.5</td><td>100.0</td><td>64.4</td><td>100.0</td></tr>
+<tr><td>CA2</td><td>Best</td><td>&lt;2 Å</td><td>49.1</td><td>50.0</td><td>55.9</td><td>83.3</td></tr>
+<tr><td>GT</td><td>Best</td><td>&lt;3 Å</td><td>66.0</td><td>100.0</td><td>66.9</td><td>100.0</td></tr>
+<tr><td>CA2</td><td>Best</td><td>&lt;3 Å</td><td>54.7</td><td>66.7</td><td>62.8</td><td>100.0</td></tr>
 </table>
+

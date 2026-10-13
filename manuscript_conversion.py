@@ -774,10 +774,14 @@ def _apply_nature_layout(path: Path, image_align: str, image_size: str) -> None:
 
 
 def _apply_operation_layout(path: Path, reference: Path, image_align: str, image_size: str) -> None:
-    """沿用 Operation 页框和标题层级，形成适合通读的 Word 稿。"""
+    """沿用 Operation 页框和标题层级, 形成适合通读的 Word 稿.
+
+    表格单元格单倍行距、零首行缩进、3 pt 段后间距, 每行不拆跨页; 不修改单元格文字或 Nature 版式.
+    """
     from docx import Document
     from docx.enum.style import WD_STYLE_TYPE
     from docx.enum.text import WD_ALIGN_PARAGRAPH
+    from docx.oxml import OxmlElement
     from docx.oxml.ns import qn
     from docx.shared import Pt, RGBColor
 
@@ -833,6 +837,17 @@ def _apply_operation_layout(path: Path, reference: Path, image_align: str, image
             WD_ALIGN_PARAGRAPH.CENTER if level == 1 else WD_ALIGN_PARAGRAPH.LEFT
         )
     _format_content_paragraphs(document, 1.5, 10.5)
+    # 表格单元格不继承正文两字首行缩进和 1.5 倍行距, 防止短标签及数值被挤成多行.
+    for table in document.tables:
+        for row in table.rows:
+            row_properties = row._tr.get_or_add_trPr()
+            if row_properties.find(qn("w:cantSplit")) is None:
+                row_properties.append(OxmlElement("w:cantSplit"))  # 保持同一比较记录的全部单元格在同页, 表头仍沿用现有跨页重复规则.
+            for cell in row.cells:
+                for paragraph in cell.paragraphs:
+                    paragraph.paragraph_format.first_line_indent = Pt(0)
+                    paragraph.paragraph_format.line_spacing = 1.0
+                    paragraph.paragraph_format.space_after = Pt(3)
     paragraphs = document.paragraphs
     for index, paragraph in enumerate(paragraphs):
         properties = paragraph._p.pPr

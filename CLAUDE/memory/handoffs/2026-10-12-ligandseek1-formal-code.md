@@ -1,10 +1,12 @@
 # Handoff: LigandSeek1 正式代码归属与等价验收
 
-Date: 2026-10-12
+Date: 2026-10-13
 
 ## Current State
 
-LigandSeek1 完整 PV 的 test_0 双受体任务仍在三卡上运行：A800 Job 400877／gnode09 使用 batch 12；A100 Jobs 400875／gnode04、400876／gnode01 使用 batch 6，均 4 CPU。after_lock 保留。正式科学产物全部位于 `/storage/penghongen/AdaLigand_stage1_inference/Ligandseek1/official_v1.0.0_pv`。
+本轮后续论文交付也已全部完成；最终可续接状态见[2026-10-13收口handoff](2026-10-13-ligandseek1-held-out-closure.md)。以下保留正式重整理阶段的技术证据，不作为尚待运行的任务列表。
+
+LigandSeek1 完整 PV 的 358 个 test_0 双受体组合及六套汇总已于 2026-10-13 全部完成并通过科学／文件验收。A800 Job 400877、A100 Jobs 400875／400876 均回到 try_lock，after_lock 保留。锁根在 `.../ligandseek1_held_out_20261011/feedback/allocations/`，不是 controller 源码目录；不再次启动或释放这些资源。正式科学产物全部位于 `/storage/penghongen/AdaLigand_stage1_inference/Ligandseek1/official_v1.0.0_pv`。
 
 用户否定把长期科学代码留在论文临时目录的组织方式。本轮已将适配、评估、模拟密度输入转换和稳定队列入口正式纳入 `C:/Users/15919/Desktop/Ligandseek`，并同步到 `/home/penghongen/My_Project/Ligandseek`。现有服务器进程继续使用原冻结版本，不热修改源码，不中断已有前向；用户明确允许复用这些任务与产物。
 
@@ -31,9 +33,11 @@ LigandSeek1 完整 PV 的 test_0 双受体任务仍在三卡上运行：A800 Job
 
 ## Next Actions
 
-继续守护三个真实 Job，不创建 heartbeat，以连续 300 秒睡眠构成稳定静默窗口。native_ready 仅表示前向完成，complete 才表示评估完成，不重复前向；不得重新创建旧本地临时目录或使用退役恢复代码作为生产入口。
+无需继续模型前向；全部 358 个 complete 已齐，初始复用 56 项没有后加入的 native_ready，不因此重复运行。不得重新创建旧本地临时目录或使用退役恢复代码作为生产入口。
 
-全部结果完成后验收 179/149/94 的成员、顺序、完整指标、实例坐标与交集，生成 AdaLigand 四份文档、双语补充材料、六图可编辑 PPT 和 Word。绘图统计程序已就绪，需先只读下载验收的真实 L1 JSONL 再运行，不使用测试夹具或退役代码生成论文图。
+科学验收已完成：179/149/94 顺序、全部指标、test_1 与父事实一致；3,783 文件内容校验及 3,768 旧摘要一致，14 汇总镜像与服务器一致。报告正式根 `运行记录/验收/content_sha256.json`，SHA `125c6bd0b0f2c63a8b31d51672a09f907f870ff1febbee92944928417d366b56`。
+
+AdaLigand 四份真实结果文档与双语补充小节已写；真实绘图统计已生成。当前收口实际 PowerPoint 兼容与七页可编辑对象／Word 视觉验收，尚不称整项完成。已定位现代批注作者 userId/providerId 缺失并补到正式 JS setSelf；新候选须通过真实 PowerPoint 打开、渲染与最终验收。不要因包结构／ArtifactImport 通过就宣称原生可用。
 
 论文作者已自行提交至 main `eb5c825`，本轮未提交作者内容或整理其历史。只为 `ligandseek1_comparison` 增加 .gitignore 窄例外使正式源文件可审阅，其他旧 Stage1 代码仍忽略，本目录 __pycache__、pyc 和 pytest 缓存继续排除；新增代码、规则和记录都保持未暂存。
 

@@ -88,7 +88,7 @@ $$
 \frac{N^{\mathrm{1to1}}_{\tau}}{N_{\mathrm{gt}}},
 $$
 
-These quantities yield the one-to-one F1 score at threshold $\tau$, $\operatorname{1to1F1}_{\tau}$. Ranking predicted instances by their mean voxel probability yields the corresponding one-to-one precision–recall area under the curve (PRAUC), $\operatorname{1to1PRAUC}_{\tau}$. In formulae, 1to1 is used as an abbreviation for one-to-one.
+These quantities yield the one-to-one F1 score at threshold $\tau$, $\operatorname{1to1F1}_{\tau}$. Ranking predicted instances by their mean voxel probability yields the corresponding one-to-one precision–recall area under the curve (PRAUC), $\operatorname{1to1PRAUC}_{\tau}$. We use "1to1" and "one-to-one" interchangeably depending on the context.
 
 One-to-one metrics exclude both one-to-many and many-to-one matches between predicted and ground-truth instances. For example, if one predicted blob covers several ground-truth ligands, at most one pair can count as a successful match. These metrics require accurate instance localisation and separation, penalising incorrect splitting or merging as well as localisation errors. They therefore provide a precise assessment of the model's performance.
 

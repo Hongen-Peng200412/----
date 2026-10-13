@@ -543,9 +543,10 @@ def _format_content_paragraphs(document, body_spacing: float, body_size: float) 
 
 
 def _layout_images(document, alignment: str, sizing: str) -> None:
-    """按版心等比放置独立图片，并保留行内图片的原有排版。"""
+    """按版心及紧邻图注的高度等比放置独立图片, 保留行内图片的原有排版."""
     from docx.enum.text import WD_ALIGN_PARAGRAPH
     from docx.oxml.ns import qn
+    from docx.shared import Pt
 
     alignments = {
         "left": WD_ALIGN_PARAGRAPH.LEFT,
@@ -554,7 +555,8 @@ def _layout_images(document, alignment: str, sizing: str) -> None:
     }
     section = document.sections[0]
     max_width = section.page_width - section.left_margin - section.right_margin
-    max_height = int((section.page_height - section.top_margin - section.bottom_margin) * 0.85)
+    page_height = section.page_height - section.top_margin - section.bottom_margin
+    max_height = int(page_height * 0.85)
     paragraphs = {id(item._p): item for item in document.paragraphs}
     for shape in document.inline_shapes:
         paragraph_element = shape._inline.getparent()
@@ -567,15 +569,35 @@ def _layout_images(document, alignment: str, sizing: str) -> None:
                 or len(paragraph._p.findall(".//" + qn("wp:inline"))) != 1):
             continue
         paragraph.alignment = alignments[alignment]
+        paragraph.paragraph_format.line_spacing = 1.0
+        paragraph.paragraph_format.space_before = Pt(0)
+        paragraph.paragraph_format.space_after = Pt(0)
         if (sizing == "fit" and shape.width and shape.height
                 and not shape._inline.docPr.get("title", "").startswith(PPT_EDITED_TITLE_PREFIX)):
+            image_max_height = max_height
+            caption = paragraphs.get(id(paragraph_element.getnext()))
+            if caption is not None and caption.style.name in ("Figure Caption", "Image Caption"):
+                # 中文按全字宽、英文按平均字宽估计图注行数; 含中文或使用华文仿宋时预留较高行框, 英文 Times New Roman 单独估计.
+                caption_size = max((run.font.size.pt for run in caption.runs if run.font.size), default=12)
+                text_width = sum(1.0 if ord(char) >= 0x2E80 else 0.5 for char in caption.text) * caption_size
+                caption_lines = int(text_width / (max_width / Pt(1))) + 1
+                spacing = caption.paragraph_format.line_spacing or caption.style.paragraph_format.line_spacing or 1.0
+                has_cjk = any(ord(char) >= 0x2E80 for char in caption.text)
+                line_box_factor = 1.7 if has_cjk or any(run.font.name == "华文仿宋" for run in caption.runs) else 1.15
+                line_height = spacing.pt if hasattr(spacing, "pt") else caption_size * spacing * line_box_factor
+                caption_before = caption.paragraph_format.space_before or caption.style.paragraph_format.space_before or Pt(0)
+                caption_after = caption.paragraph_format.space_after or caption.style.paragraph_format.space_after or Pt(6)
+                caption_height = Pt(caption_lines * line_height) + caption_before + caption_after
+                # 额外 12 pt 覆盖行内图片的基线留白; 图片与图注保持相邻, 不改变图片像素或宽高比.
+                image_max_height = min(max_height, max(int(Pt(1)), page_height - caption_height - Pt(12)))
+                paragraph.paragraph_format.keep_with_next = True
             width, height = shape.width, shape.height
-            if max_width * height <= max_height * width:
+            if max_width * height <= image_max_height * width:
                 shape.width = max_width
                 shape.height = round(height * max_width / width)
             else:
-                shape.width = round(width * max_height / height)
-                shape.height = max_height
+                shape.width = round(width * image_max_height / height)
+                shape.height = image_max_height
 
 
 def _remove_heading_numbering(document) -> None:
@@ -653,6 +675,7 @@ def _repair_underbraces(document) -> None:
 def _apply_nature_layout(path: Path, image_align: str, image_size: str) -> None:
     """设置 Nature 初次投稿需要的字体、双倍行距、行号和表格分页。"""
     from docx import Document
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
     from docx.oxml import OxmlElement
     from docx.oxml.ns import qn
     from docx.shared import Inches, Pt, RGBColor
@@ -708,6 +731,30 @@ def _apply_nature_layout(path: Path, image_align: str, image_size: str) -> None:
                 run.font.bold = True
                 run.font.italic = False
     _format_content_paragraphs(document, 2.0, 12)
+    # 图注使用 12 pt 单倍行距, 给竖幅多面板图留出可读宽度; 正文仍为 12 pt 双倍行距.
+    for paragraph in document.paragraphs:
+        if paragraph.style.name in ("Figure Caption", "Image Caption"):
+            paragraph.paragraph_format.line_spacing = 1.0
+    # 七列及以上的宽表使用紧凑单元格格式, 如并排展示两种受体下的三项指标, 防止正文缩进与双倍行距挤断数字.
+    for table in document.tables:
+        if len(table.columns) < 7:
+            continue
+        for row_index, row in enumerate(table.rows):
+            row_properties = row._tr.get_or_add_trPr()
+            if row_properties.find(qn("w:cantSplit")) is None:
+                row_properties.append(OxmlElement("w:cantSplit"))
+            for cell in row.cells:
+                for paragraph in cell.paragraphs:
+                    paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
+                    paragraph.paragraph_format.first_line_indent = Pt(0)
+                    paragraph.paragraph_format.line_spacing = 1.0
+                    paragraph.paragraph_format.space_before = Pt(0)
+                    paragraph.paragraph_format.space_after = Pt(3)
+                    # 短宽表整表随表注移动, 如两层表头加四行数据; 长表仍允许在完整行之间分页.
+                    if len(table.rows) <= 8:
+                        paragraph.paragraph_format.keep_with_next = row_index < len(table.rows) - 1
+                    for run in paragraph.runs:
+                        run.font.size = Pt(9)
     _layout_images(document, image_align, image_size)
     _fit_long_equations(document, 20)
     _repair_underbraces(document)
@@ -839,7 +886,8 @@ def _apply_operation_layout(path: Path, reference: Path, image_align: str, image
     _format_content_paragraphs(document, 1.5, 10.5)
     # 表格单元格不继承正文两字首行缩进和 1.5 倍行距, 防止短标签及数值被挤成多行.
     for table in document.tables:
-        for row in table.rows:
+        wide_table = len(table.columns) >= 7
+        for row_index, row in enumerate(table.rows):
             row_properties = row._tr.get_or_add_trPr()
             if row_properties.find(qn("w:cantSplit")) is None:
                 row_properties.append(OxmlElement("w:cantSplit"))  # 保持同一比较记录的全部单元格在同页, 表头仍沿用现有跨页重复规则.
@@ -848,6 +896,13 @@ def _apply_operation_layout(path: Path, reference: Path, image_align: str, image
                     paragraph.paragraph_format.first_line_indent = Pt(0)
                     paragraph.paragraph_format.line_spacing = 1.0
                     paragraph.paragraph_format.space_after = Pt(3)
+                    if wide_table:
+                        paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
+                        paragraph.paragraph_format.space_before = Pt(0)
+                        if len(table.rows) <= 8:
+                            paragraph.paragraph_format.keep_with_next = row_index < len(table.rows) - 1
+                        for run in paragraph.runs:
+                            run.font.size = Pt(9)
     paragraphs = document.paragraphs
     for index, paragraph in enumerate(paragraphs):
         properties = paragraph._p.pPr

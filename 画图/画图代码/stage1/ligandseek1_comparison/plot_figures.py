@@ -37,7 +37,7 @@ plt.rcParams.update({
 
 METHODS = ("L2_GT", "L2_CA2", "L1_GT", "L1_CA2")  # 四个模型/受体条件的固定展示顺序; GT 是沉积受体, CA2 是 CryoAtom2 重建受体.
 COLORS = {"L2_GT": "#007C83", "L2_CA2": "#566AB4", "L1_GT": "#7D8990", "L1_CA2": "#B08A60"}  # 一个方法在柱图、散点和分布中始终使用同一颜色.
-LABELS = {"L2_GT": "LigandSeek2 (GT)", "L2_CA2": "LigandSeek2 (CA2)", "L1_GT": "LigandSeek1 (GT)", "L1_CA2": "LigandSeek1 (CA2)"}  # 受体简称由每页双语图注定义.
+LABELS = {"L2_GT": "LigandSeek2-Find (GT)", "L2_CA2": "LigandSeek2-Find (CA2)", "L1_GT": "LigandSeek (GT)", "L1_CA2": "LigandSeek (CA2)"}  # 模型显示名使用全文标准名称, 受体简称由每页双语图注定义.
 TITLE = {"bar": "Overall scores", "paired": "CA2: one-to-one PRAUC₀.₃", "violin": "CA2: one-to-one detection₀.₃"}  # Calibri 支持阈值 Unicode 下标, 保持 SVG 普通 text 节点, 不引入 mathtext 的 tspan.
 COMPOSITE_SIZE = (163.0 / 25.4, 190.0 / 25.4)  # (2,), 完整图宽/高, 单位 inch; 正文缩到 147 mm 宽时字号仍高于 5 pt.
 SINGLE_SIZE = (89.0 / 25.4, 85.0 / 25.4)  # (2,), 单图宽/高, 单位 inch; PowerPoint 只等比缩放同一 SVG 场景.
@@ -96,14 +96,15 @@ def draw_panel(fig: plt.Figure, block: dict, kind: str, rect: list[float], lette
         ax.grid(axis="y", color="#E7EBED", linewidth=0.45)
         ax.set_axisbelow(True)
     elif kind == "paired":
-        x = np.asarray(block["models"]["L1_CA2"]["values"]["prauc_0p3"], dtype=float)  # (N,), 横轴是同一 PDB 的 LigandSeek1/CA2 一对一 PRAUC₀.₃.
-        y = np.asarray(block["models"]["L2_CA2"]["values"]["prauc_0p3"], dtype=float)  # (N,), 纵轴是与 x 逐 PDB 配对的 LigandSeek2/CA2 一对一 PRAUC₀.₃.
+        x = np.asarray(block["models"]["L1_CA2"]["values"]["prauc_0p3"], dtype=float)  # (N,), 横轴是同一 PDB 的 LigandSeek/CA2 一对一 PRAUC₀.₃.
+        y = np.asarray(block["models"]["L2_CA2"]["values"]["prauc_0p3"], dtype=float)  # (N,), 纵轴是与 x 逐 PDB 配对的 LigandSeek2-Find/CA2 一对一 PRAUC₀.₃.
         resolution = np.asarray(block["resolution"], dtype=float)  # (N,), 与 x/y 对齐的实验分辨率, 单位 Å.
         for start in np.arange(0.0, 1.0, 0.05):
             segment = [start, min(start + 0.025, 1.0)]  # (2,), 等值线的一段横/纵指标坐标; 实体分段使原生 PowerPoint 保留同一虚线几何.
             ax.plot(segment, segment, color="#939CA2", linewidth=0.65, zorder=0)
         scatter = ax.scatter(x, y, c=resolution, cmap="viridis_r", vmin=1.0, vmax=4.0, s=11.0, alpha=0.82, linewidths=0.22, edgecolors="white", zorder=2, clip_on=False)  # 固定 1-4 Å 色域, 域外分辨率仅饱和到端点颜色, 不修改数值或配对.
-        ax.set(xlim=(0, 1), ylim=(0, 1), xticks=[0, 0.5, 1], yticks=[0, 0.5, 1], aspect="equal", xlabel="LigandSeek1 (CA2)", ylabel="LigandSeek2 (CA2)")
+        ax.set(xlim=(0, 1), ylim=(0, 1), xticks=[0, 0.5, 1], yticks=[0, 0.5, 1], aspect="equal", xlabel="LigandSeek (CA2)", ylabel="LigandSeek2-Find (CA2)")
+        ax.xaxis.set_major_formatter(FormatStrFormatter("%.3f"))  # 只改变性能数值标签的显示精度, 坐标与冻结数值不变.
         left, bottom, width, height = ax.get_position().bounds  # (4,), 最终绘图区在 Figure 内的左/下/宽/高; square aspect 已确定实际几何.
         colorbar_ax = fig.add_axes([left + width + 0.014, bottom, 0.010, height])  # (4,), 色条与配对图区同高, 独立创建以保持科学绘图区的宽度.
         colorbar = fig.colorbar(scatter, cax=colorbar_ax, ticks=[1, 2, 3, 4])
@@ -135,6 +136,7 @@ def draw_panel(fig: plt.Figure, block: dict, kind: str, rect: list[float], lette
         ax.tick_params(axis="x", length=0, pad=5)
         ax.grid(axis="y", color="#E7EBED", linewidth=0.45)
         ax.set_axisbelow(True)
+    ax.yaxis.set_major_formatter(FormatStrFormatter("%.3f"))  # Score/PRAUC 统一三位小数, 色条分辨率仍使用原来的 Å 显示精度.
     title_offset = ScaledTranslation(0, 8 / 72, fig.dpi_scale_trans)  # ScaledTranslation, 使用 (dx,dy) inch 偏移的标题绘图变换.
     panel_offset = ScaledTranslation(-21 / 72, 8 / 72, fig.dpi_scale_trans)  # ScaledTranslation, 字母使用相同的 (dx,dy) inch 锚点偏移规则.
     ax.text(0, 1, TITLE[kind], transform=ax.transAxes + title_offset, fontsize=9.0, ha="left", va="bottom")
@@ -227,16 +229,16 @@ def render_figures(plot_data: Path, output_root: Path, build_root: Path, nature_
             detail_en = "Semantic Dice and one-to-one precision–recall area under the curve (PRAUC) at bidirectional coverage thresholds of 0.3 and 0.5. Bars show equally weighted PDB means, points show every PDB value and error bars show 95% confidence intervals from 10,000 PDB bootstrap resamples. All four conditions and three metrics share resampling indices within each cohort (seed=20260922)."
         elif kind == "paired":
             counts = block["paired_counts"]  # 三个冻结方向计数, 不从 x/y 重新比较或计算统计检验.
-            detail_cn = f"CA2 输入下一对一 PRAUC₀.₃ 的逐 PDB 配对比较. 横轴为 LigandSeek1, 纵轴为 LigandSeek2, 虚线为等值线, 点颜色为实验密度图分辨率. LigandSeek2 较高、相等、LigandSeek1 较高分别为 {counts['l2_higher']}、{counts['equal']}、{counts['l1_higher']} 个 PDB; 相等定义为差值绝对值不超过 1e-12."
-            detail_en = f"Paired PDB comparison of one-to-one precision–recall area under the curve (PRAUC) at a bidirectional coverage threshold of 0.3 with CA2 receptors. The x and y axes show LigandSeek1 and LigandSeek2, respectively, the dashed line marks equality and point colours show experimental-map resolution. LigandSeek2 is higher for {counts['l2_higher']} PDB entries, values are equal for {counts['equal']} and LigandSeek1 is higher for {counts['l1_higher']}; equality means an absolute difference of at most 1e-12."
+            detail_cn = f"CA2 输入下一对一 PRAUC₀.₃ 的逐 PDB 配对比较. 横轴为 LigandSeek, 纵轴为 LigandSeek2-Find, 虚线为等值线, 点颜色为实验密度图分辨率. LigandSeek2-Find 较高、相等、LigandSeek 较高分别为 {counts['l2_higher']}、{counts['equal']}、{counts['l1_higher']} 个 PDB; 相等定义为差值绝对值不超过 1e-12."
+            detail_en = f"Paired PDB comparison of one-to-one precision–recall area under the curve (PRAUC) at a bidirectional coverage threshold of 0.3 with CA2 receptors. The x and y axes show LigandSeek and LigandSeek2-Find, respectively, the dashed line marks equality and point colours show experimental-map resolution. LigandSeek2-Find is higher for {counts['l2_higher']} PDB entries, values are equal for {counts['equal']} and LigandSeek is higher for {counts['l1_higher']}; equality means an absolute difference of at most 1e-12."
         else:
             detail_cn = "CA2 输入下一对一₀.₃ 精确率和召回率分布. 点为全部逐 PDB 指标, 包括 0/1 端点; 白点为中位数, 粗线为四分位范围. 小提琴使用在 0/1 两端反射的 Gaussian KDE, 无量纲 bw_method 因子为 0.045, 不对 P/R 另做 bootstrap."
             detail_en = "Distributions of one-to-one precision and recall at a bidirectional coverage threshold of 0.3 with CA2 receptors. Points show every PDB value, including endpoints at 0 and 1, white points mark medians and thick lines mark interquartile ranges. Violin widths use Gaussian kernel density estimation reflected at both boundaries with a dimensionless bw_method factor of 0.045. No bootstrap intervals are calculated for precision or recall."
-        caption_cn = f"LigandSeek2 与 LigandSeek1 的配体区域检测比较: {scope_cn}. {detail_cn} 下标表示预测与真实区域的双向覆盖下限. GT 为沉积受体, CA2 为 CryoAtom2 重建受体. LigandSeek2 使用冻结的 F2–F1 Gaussian 流程; LigandSeek1 使用官方 PV 模型的默认阈值及原生实例平均概率."
-        caption_en = f"Ligand-region detection by LigandSeek2 and LigandSeek1: {scope_en}. {detail_en} GT denotes deposited receptors and CA2 denotes CryoAtom2-reconstructed receptors. LigandSeek2 uses the frozen F2–F1 Gaussian workflow; LigandSeek1 uses the official PV model with its default thresholds and native mean instance probabilities."
+        caption_cn = f"LigandSeek2-Find 与 LigandSeek 的配体区域检测比较: {scope_cn}. {detail_cn} 下标表示预测与真实区域的双向覆盖下限. GT 为沉积受体, CA2 为 CryoAtom2 重建受体."
+        caption_en = f"Ligand-region detection by LigandSeek2-Find and LigandSeek: {scope_en}. {detail_en} GT denotes deposited receptors and CA2 denotes CryoAtom2-reconstructed receptors."
         captions[letter] = caption_cn + "\nENGLISH:\n" + caption_en
-    composite_cn = "LigandSeek2 与 LigandSeek1 的配体区域检测比较. 左列为全部 179 个 PDB, 右列为包含小分子标签的 94 个 PDB、821 个小分子实例. a、b, 语义 Dice 和一对一 PRAUC₀.₃/PRAUC₀.₅, 柱高为 PDB 等权均值, 点为全部 PDB 指标, 误差线为 10,000 次配对 PDB bootstrap 的 95% 均值区间; 四方法和三指标在各集合内共享重采样索引, seed=20260922. c、d, CA2 输入下一对一 PRAUC₀.₃ 的同 PDB 两代配对比较, 颜色表示实验密度图分辨率, 虚线表示相等. e、f, CA2 输入下一对一₀.₃ 精确率/召回率; 保留全部 0/1 端点, 白点为中位数, 粗线为四分位范围, 小提琴为两端反射 KDE (bw_method=0.045). 下标表示预测与真实区域的双向覆盖下限. GT 为沉积受体, CA2 为 CryoAtom2 重建受体. LigandSeek2 使用冻结的 F2–F1 Gaussian 流程; LigandSeek1 使用官方 PV 模型的默认阈值和原生实例平均概率. "
-    composite_en = "Ligand-region detection by LigandSeek2 and LigandSeek1. The left column includes all 179 PDB entries; the right column includes 94 PDB entries with 821 small-molecule instances. a, b, Semantic Dice and one-to-one precision–recall area under the curve (PRAUC) at bidirectional coverage thresholds of 0.3 and 0.5. Bars show equally weighted PDB means, points show every PDB value and error bars show 95% mean confidence intervals from 10,000 paired PDB bootstrap resamples. Four conditions and three metrics share resampling indices within each cohort (seed=20260922). c, d, Paired PDB comparisons of one-to-one PRAUC₀.₃ with CA2 receptors. Colours show experimental-map resolution and dashed lines mark equality. e, f, One-to-one precision and recall at a coverage threshold of 0.3 with CA2 receptors. All endpoints at 0 and 1 are retained. White points mark medians, thick lines mark interquartile ranges and violin widths show boundary-reflected kernel density estimates (bw_method=0.045). GT denotes deposited receptors and CA2 denotes CryoAtom2-reconstructed receptors. LigandSeek2 uses the frozen F2–F1 Gaussian workflow; LigandSeek1 uses the official PV model with default thresholds and native mean instance probabilities. "
+    composite_cn = "LigandSeek2-Find 与 LigandSeek 的配体区域检出。比较 LigandSeek2-Find 与第一代 LigandSeek 在沉积受体（GT）和 CryoAtom2 重建受体（CA2）条件下的表现。左列为全配体测试集（179 个 PDB，2,502 个配体实例），右列为小分子测试子集（94 个 PDB，821 个小分子实例）。\n\na、b，逐 PDB Dice 和覆盖阈值为 0.3、0.5 的一对一 PRAUC。误差线表示对 PDB 条目进行 10,000 次 bootstrap 重采样得到的均值 95% 区间。\n\nc、d，CA2 受体条件下 LigandSeek2-Find 与 LigandSeek 的逐 PDB 直接比较。全配体中，LigandSeek2-Find 更高、相等、更低的 PDB 数分别为 79、69、31；小分子中分别为 27、46、21。\n\ne、f，CA2 受体条件下，覆盖阈值为 0.3 的一对一精确率和召回率。每个点代表一个 PDB 条目；白色空心圆和粗线分别表示中位数和四分位区间。"
+    composite_en = "Ligand-region detection by LigandSeek2-Find and LigandSeek. LigandSeek2-Find and the first-generation LigandSeek are compared using deposited (GT) or CryoAtom2-reconstructed (CA2) receptor structures. The left column shows all ligands (179 PDB entries, 2,502 instances); the right shows only small molecules (94 PDB entries, 821 instances).\n\na, b, Per-PDB Dice scores and one-to-one PRAUC at thresholds of 0.3 and 0.5. Error bars show 95% intervals for the mean from 10,000 bootstrap resamples of PDB entries.\n\nc, d, Direct comparisons of LigandSeek2-Find with LigandSeek using CryoAtom2-reconstructed receptors. LigandSeek2-Find performs better, comparably or worse on 79/69/31 PDB entries for all ligands and 27/46/21 for small molecules, respectively.\n\ne, f, One-to-one precision and recall at a threshold of 0.3 using CryoAtom2-reconstructed receptors. Each point represents one PDB entry; open white circles and thick bars indicate the median and interquartile range, respectively."
     pages = []  # list[dict], 同源 SVG 场景、双语备注和图名, 顺序决定 PowerPoint 页序.
     for page_index, stem in enumerate(stems):
         composite = page_index == 6
@@ -271,7 +273,7 @@ def render_figures(plot_data: Path, output_root: Path, build_root: Path, nature_
             name = "l2-l1-stage1-" + stem.replace("_", "-")
             row_groups, column_groups = [], []
         handles = [Patch(facecolor=COLORS[method], edgecolor="none", label=LABELS[method]) for method in legend_methods]  # 每个图例元素对应一个实际展示的模型/受体条件.
-        fig.legend(handles=handles, loc="upper center" if composite else "lower center", bbox_to_anchor=(0.5, 0.951) if composite else (0.55, 0.045), ncol=4 if composite else 2, fontsize=8.5, handlelength=1.0, handletextpad=0.45, columnspacing=1.0, labelspacing=0.45)
+        fig.legend(handles=handles, loc="upper center" if composite else "lower center", bbox_to_anchor=(0.5, 0.965) if composite else (0.55, 0.045), ncol=2, fontsize=8.5, handlelength=1.0, handletextpad=0.45, columnspacing=1.0, labelspacing=0.45)  # 全称图例分两列排列, 仅调整文字区域, 不移动科学绘图区.
         fig.canvas.draw()  # 完成字体、图例、square aspect 和色条的最后布局, 然后测量实际绘图区.
         require_matplotlib_panel_alignment(fig, axes=axes, panel_ids=panel_ids, row_groups=row_groups, column_groups=column_groups, exclude_axes=colorbar_axes, json_out=qa_root / f"{stem}.alignment.json", overlay_svg=qa_root / f"{stem}.alignment.svg", tolerance_pt=1.5, gutter_tolerance_pt=1.5, require_panel_labels=True, strict=True)
         svg_path = render_root / f"{stem}.svg"

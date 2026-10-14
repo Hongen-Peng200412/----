@@ -1,4 +1,4 @@
-# LigandSeek2 与 LigandSeek1 比较图
+# LigandSeek2-Find 与 LigandSeek 比较图
 
 本目录拥有六张版本比较图的长期绘图代码与规格，不承担推理或科学评估。`prepare_plot_data.py` 从冻结逐 PDB 指标生成柱图、小提琴和配对散点所需统计；它不导入模型或评估包，不读取概率图或体素掩码，不计算交集、匹配、PRAUC、成员资格或哈希。真实 179-PDB 双受体测试及 149／94 视图已完成并验收；本目录只读最终指标生成比较图。
 
@@ -6,7 +6,7 @@
 
 绘图只读取冻结的逐 PDB JSONL／指标表以及对应的预先确定成员列表。均值、逐 PDB bootstrap 区间、KDE 和配对散点属于绘图数据准备；掩码交集、匹配、PRAUC 和小分子样本资格由 Ligandseek 的正式评估包确定，不能在本目录重算或重定。
 
-LigandSeek1 科学代码与稳定任务入口位于 `C:/Users/15919/Desktop/Ligandseek/src/ligandseek/{evaluation,execution}/` 和 `训练与运行/sh/infer/ligandseek1_held_out.sh`。其服务器正式根为 `/storage/penghongen/AdaLigand_stage1_inference/Ligandseek1/official_v1.0.0_pv`；LigandSeek2 继续使用论文已冻结的结果，不重新校准或推理。
+LigandSeek 科学代码与稳定任务入口位于 `C:/Users/15919/Desktop/Ligandseek/src/ligandseek/{evaluation,execution}/` 和 `训练与运行/sh/infer/ligandseek1_held_out.sh`。其服务器正式根为 `/storage/penghongen/AdaLigand_stage1_inference/Ligandseek1/official_v1.0.0_pv`；LigandSeek2-Find 继续使用论文已冻结的结果，不重新校准或推理。
 
 六图统计和视觉契约见[规格](规格.md)。代码组织为一个可直接阅读的公共函数 `prepare_plot_data()`：依次读取成员与指标、计算绘图统计、发布三个文件；末尾 CLI 只装配四个必需路径。测试代码见 `tests/test_plot_data.py`；渲染、测试和 Office 快照进入论文 `temp/`，不能成为长期源代码或默认入口。
 
@@ -28,7 +28,7 @@ LigandSeek1 科学代码与稳定任务入口位于 `C:/Users/15919/Desktop/Liga
     └── bar_statistics.csv                   # 两集合/四方法/三柱图指标的均值和区间
 ```
 
-LigandSeek2 输入为论文已经冻结的 `画图/formal/Stage1_main_sixpanel_20260929/data/server_metrics_and_pr.json`，只使用 `models.GT`、`models.Cryo` 与 `resolution`，不使用其中的 Emap2lig 指标。成员输入为 Ligandseek 正式评估的 `实验记录/held_out/inputs.json`，分别读取 `test_0_pdb_ids` 和 `small_pdb_ids`。缺少成员、顺序不同、非有限指标或指标超出 `[0,1]` 均停止，不补零或改变资格。
+LigandSeek2-Find 输入为论文已经冻结的 `画图/formal/Stage1_main_sixpanel_20260929/data/server_metrics_and_pr.json`，只使用 `models.GT`、`models.Cryo` 与 `resolution`，不使用其中的 Emap2lig 指标。成员输入为 Ligandseek 正式评估的 `实验记录/held_out/inputs.json`，分别读取 `test_0_pdb_ids` 和 `small_pdb_ids`。缺少成员、顺序不同、非有限指标或指标超出 `[0,1]` 均停止，不补零或改变资格。
 
 ## 绘图数据契约
 
@@ -45,7 +45,7 @@ LigandSeek2 输入为论文已经冻结的 `画图/formal/Stage1_main_sixpanel_2
 | `ids` | 长度 N 的字符串列表，与正式成员清单严格同序 | `["9ter", "30yu"]`，仅展示完整清单开头片段 |
 | `n` | 整数，等于 `len(ids)` | 完整集为 `179` |
 | `resolution` | 长度 N 的 float 列表，与 `ids` 逐 PDB 对齐，单位 Å | 如某 PDB 的 `3.5` |
-| `models` | 四个固定方法的对象，`L2/L1` 为两代模型，`GT/CA2` 为沉积／重建受体 | `L1_CA2` 对应第一代模型的重建受体条件 |
+| `models` | 四个固定方法的对象，`L2/L1` 为两代模型，`GT/CA2` 为沉积／重建受体 | `L1_CA2` 对应第一代 LigandSeek 的重建受体条件；图内第二代模型统一显示为 LigandSeek2-Find，第一代显示为 LigandSeek，源字段和文件名保持原样 |
 | `paired_counts` | 三个整数 `l2_higher/equal/l1_higher`，合计 N；对相同 PDB 的 CA2 输入 PRAUC₀.₃ 判断方向，差值绝对值不超过 `1e-12` 为相等 | 格式如 `{"l2_higher":1,"equal":1,"l1_higher":0}`，为 2-PDB 构造示例 |
 
 每个 `models.<method>` 包含 `values`、`bars` 和 `distribution`，不共享或合并不同 PDB 身份。
@@ -109,7 +109,7 @@ UTF-8 BOM 的 CSV，包含 `cohort,method,metric,n,mean,ci95_lower,ci95_upper` �
 
 ## 图形与 PowerPoint
 
-`plot_figures.py` 的唯一公共入口 `render_figures()` 读取已冻结 plot_data，以同一 `draw_panel()` 构造六单图和三行两列组合图，不重新计算任何统计。七组 SVG／PDF／PNG 进入指定输出根；构建根在论文 temp 中，保存 alignment、PDF 字号／碰撞报告及 `manifest.json`。manifest 的七页包含唯一图名、双语图注、pt 画布几何和文本／椭圆／路径场景；字段逐项定义见函数 Docstring。
+`plot_figures.py` 的唯一公共入口 `render_figures()` 读取已冻结 plot_data，以同一 `draw_panel()` 构造六单图和三行两列组合图，不重新计算任何统计。图内性能数值轴统一显示三位小数，0.3／0.5 阈值和分辨率色条沿用参数与单位所需精度。七组 SVG／PDF／PNG 进入指定输出根；构建根在论文 temp 中，保存 alignment、PDF 字号／碰撞报告及 `manifest.json`。manifest 的七页包含唯一图名、双语图注、pt 画布几何和文本／椭圆／路径场景；字段逐项定义见函数 Docstring。
 
 `build_deck.mjs` 只接收该 manifest 与构建目录，按同一 SVG 几何等比写七页原生文本、椭圆和路径。它写 `candidate.pptx`、`transport_validation.json` 和检查 NDJSON，不重新画数据、不导入模型。最终交付为论文 `画图/LigandSeek2_vs_LigandSeek1.pptx`，六单图各一页，第七页为组合图；原 `stage1结果.pptx` 不改。
 

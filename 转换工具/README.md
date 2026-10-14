@@ -81,6 +81,14 @@ PPT 图集采用一页一图。将引用独立写在一行，双引号内是 PPT
 {{pptfig:"C:/Users/15919/Desktop/other_figures.pptx"|fig-model}}
 ```
 
+需要为某张图预留完整多段图注的空间时，可在同一指令末尾指定显示宽度，单位为英寸：
+
+```markdown
+{{pptfig:"画图/LigandSeek2_vs_LigandSeek1.pptx"|ligandseek2-vs-ligandseek1|width=5.6in}}
+```
+
+`width` 必须为大于零且不超过版心的数值。指定后，两种 Word 版式都在默认图片排版结束后采用该宽度，并按原宽高比调整高度；图片与紧邻的全部图注段落保持同页，最后一段图注不牵连后文。应按图与完整图注可共同容纳于一页的大小选择宽度。不指定 `width` 的图片继续使用默认尺寸和图注排版规则。Word 回转恢复原指令中的宽度参数；Word 内改图时，参数随 `pptfig-edited` 来源说明保留。
+
 同一篇 Markdown 可引用多个 PPT。相对路径以这篇 Markdown 所在目录为基准，绝对路径直接使用。每张图在所属 PPT 的一条批注中写 `@@fig-overview` 这样的图名；去掉首尾空白后整条批注必须是 `@@` 加图名。同一篇文章所涉及的全部 PPT 中图名必须唯一，包括这些 PPT 中尚未插入正文的已命名页面。图名不含空白、逗号、竖线或花括号。跨 PPT 重复会在导图前报错，并列出冲突图名和文件。其他批注只保存数据来源、服务器路径与绘图代码等追溯信息，不进入正文。
 
 该页备注只写图注内容，不手写“图 X｜”或 `Fig. X |`。同一页可同时保存中文和英文图注，中文在前，英文在独立的 `ENGLISH:` 行之后：
@@ -121,7 +129,9 @@ Word 回转会恢复 `figref` 图名引用；再次转换时依据新的插图�
 
 转换器按图名找到幻灯片，以清晰 PNG 导出并裁掉页面大块留白。一次编译通常只启动一次导图进程，并按 PPT 批量导出所需页面。转换前会把每份已保存的 PPT 复制到 `temp/`，图名、备注和成品图都从该次副本读取；转换器不会在 PowerPoint 中打开或关闭原 PPT，也不会退出你正在使用的 PowerPoint。若你正在修改原 PPT 但尚未保存，本次编译使用上次保存的版本；保存后重新编译即可取得更新。临时副本在转换结束后自动清理。
 
-生成的 Word 图片保留原 PPT 路径和图名标记；未修改的图片转回 Markdown 后仍是原来的 `{{pptfig:"路径"|图名}}`。如果在 Word 里直接调整或替换图集图片，回转时会保存 Word 中的图片为普通图片，并在它上方写入 `pptfig-edited` 来源注释，保留原 PPT 路径和图名；之后要把修改重新纳入图集，需要在 PPT 中更新成品图。
+生成的 Word 图片保留原 PPT 路径、图名标记及最终完整图注的规范 XML 基线，基线包括原生公式和格式。图片与全部图注均未修改时，回转仍恢复原来的 `{{pptfig:"路径"|图名}}`，并移除属于该图的实际图注段，避免重新编译时重复。恢复依据图注样式识别段落，不按段落数量跳过正文。
+
+如果在 Word 中修改图集图片或任一图注段，回转会保存 Word 图片和完整图注，并在图片上方写入 `pptfig-edited` 来源注释，保留原 PPT 路径、图名及显式宽度。图注写成带 `figure-name` 的 `::: {.ppt-figure-caption}` Markdown 段落块；再次编译保留图注样式、原生公式和自动图号。旧 Word 若没有图注基线，同样保留 Word 图及图注。之后要把修改重新纳入图集，需要在所属 PPT 中更新图片或备注。
 
 PowerPoint 临时失去 COM 对象时，导图会重新打开临时副本，最多尝试三次。若图片已成功导出，但 PowerPoint 在关闭临时副本时出错，转换器会提示并继续；若图片没有成功导出，则报告实际导出错误，不会写出缺图的 Word。
 
@@ -145,6 +155,26 @@ PowerPoint 临时失去 COM 对象时，导图会重新打开临时副本，最�
 <tr><td>乙</td><td>0.84</td></tr>
 </table>
 ```
+
+需要紧凑的三线表时，在 HTML 表格上写 `data-layout="booktabs"`。这类表格采用 Times New Roman、10 磅、单倍行距；首列左对齐，其余列居中，单元格不换行。上下横线为 0.75 磅，表头下方及分组间横线为 0.5 磅，无纵线和底纹；整表与紧邻的表注保持同页。列宽由 `<colgroup>` 的百分比决定。正文、普通表格和两种 Word 版式的其余规则保持原样。
+
+表题只写在 `<caption>` 中。表注独立放在表后的 `<p class="table-note">` 中，采用 9 磅、单倍行距、零首行缩进。组标题行用 `class="table-group"`，合并及斜体仍通过 HTML 表达。表内及表注中的 `$...$` 公式转换为 Word 原生公式，表内公式为 10 磅，表注公式为 9 磅；数字精度、粗体及 `<u>...</u>` 下划线以源稿为准。
+
+```html
+<table data-layout="booktabs">
+<caption>Table 3 | Detection performance.</caption>
+<colgroup><col style="width: 28%"/><col style="width: 36%"/><col style="width: 36%"/></colgroup>
+<thead><tr><th>Model</th><th>Dice</th><th>$\mathrm{PRAUC}_{0.3}$</th></tr></thead>
+<tbody>
+<tr class="table-group"><td colspan="3"><em>All ligands</em></td></tr>
+<tr><td>LigandSeek</td><td>0.355</td><td>0.440</td></tr>
+<tr><td>LigandSeek2-Find</td><td><strong>0.477</strong></td><td><strong>0.541</strong></td></tr>
+</tbody>
+</table>
+<p class="table-note">Values are PDB-equal macro means. Bold values indicate the best result within each group.</p>
+```
+
+Word 回转保留三线表标记、列宽和组标题，以 Word 中的实际文字、粗体及合并关系为准。表注回转为 `::: {.table-note}` Markdown 段落块；这种写法与上述 HTML 表注一样可以重新编译。三线表的排版来源标记保存在 Word 的表格说明中。
 
 XLSX 作为另一种表格输入来源，在 Markdown 中写一条导入指令。`path` 指向工作簿，`sheet` 指向工作表，`range` 是 Excel 单元格区域；省略后两项时分别使用首张工作表和已使用区域。默认将区域首行作为表头，设 `"header":false` 可关闭。
 

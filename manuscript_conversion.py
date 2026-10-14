@@ -34,9 +34,12 @@ PANDOC_INPUT = "markdown+pipe_tables+raw_html+tex_math_dollars+citations"
 PANDOC_OUTPUT = "markdown+pipe_tables+raw_html-simple_tables-grid_tables-multiline_tables"
 XLSX_DIRECTIVE = re.compile(r"<!--\s*xlsx-table\s+(\{.*?\})\s*-->", re.I | re.S)
 HTML_TABLE = re.compile(r"<table\b[^>]*>.*?</table\s*>", re.I | re.S)
+HTML_TABLE_NOTE = re.compile(r'<p\b[^>]*\bclass=["\']table-note["\'][^>]*>.*?</p\s*>', re.I | re.S)
+TABLE_NOTE_STYLE = "MDTableNote"
+BOOKTABS_DESCRIPTION_PREFIX = "MDBOOKTABS_"
 MARKED_IMAGE = re.compile(r"(!\[[^\]]*\]\()&&\"([^\"]+)\"(\))")
 STANDALONE_IMAGE = re.compile(r"(?m)^\s*&&\"([^\"]+)\"\s*$")
-PPT_FIGURE = re.compile(r'(?m)^[ \t]*\{\{pptfig:"([^"\r\n]+)"\|([^|}\r\n]+)\}\}[ \t]*$')
+PPT_FIGURE = re.compile(r'(?m)^[ \t]*\{\{pptfig:"([^"\r\n]+)"\|([^|}\r\n]+)(?:\|width=([0-9]+(?:\.[0-9]+)?)in)?\}\}[ \t]*$')
 PPT_TITLE_PREFIX = "MDPPTFIG_"
 PPT_EDITED_TITLE_PREFIX = "MDPPTEDIT_"
 PPT_EDITED_COMMENT = re.compile(r"<!--\s*pptfig-edited\s+(\{.*\})\s*-->", re.S)
@@ -240,6 +243,7 @@ def _prepare_markdown(source: str, base: Path) -> tuple[str, dict[str, str]]:
 
     source = XLSX_DIRECTIVE.sub(xlsx_match, source)
     source = HTML_TABLE.sub(lambda match: replace_table(match, match.group(0)), source)
+    source = HTML_TABLE_NOTE.sub(lambda match: replace_table(match, match.group(0)), source)
 
     def image_match(match: re.Match) -> str:
         path = _resolve_source(match.group(2), base).as_posix()
@@ -354,7 +358,13 @@ def _remove_duplicate_captions(document: dict) -> None:
 def _insert_tables(document: dict, tables: dict[str, str], pandoc: str) -> None:
     parsed = {}
     for token, markup in tables.items():
-        table_doc = _as_json(pandoc, markup, "html")
+        # HTML 表体与表注中的美元公式也按原生数学解析, 如 $\\mathrm{PRAUC}_{0.3}$.
+        is_note = HTML_TABLE_NOTE.fullmatch(markup)
+        is_booktabs = re.search(r'\bdata-layout=["\']booktabs["\']', markup, re.I)
+        table_doc = _as_json(pandoc, markup, "html+tex_math_dollars" if is_note or is_booktabs else "html")
+        if is_note:
+            parsed[token] = {"t": "Div", "c": [["", ["table-note"], []], table_doc["blocks"]]}
+            continue
         candidates = [block for block in table_doc["blocks"] if block["t"] == "Table"]
         if len(candidates) != 1:
             raise ValueError(f"无法把表格转换为 Word 原生表格：{token}")
@@ -985,6 +995,8 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
             ppt_label, figure_name = match.group(1), match.group(2).strip()
             if not re.fullmatch(r"[^\s|{},]+", figure_name):
                 raise ValueError(f"PPT 图名无效：{figure_name!r}")
+            if match.group(3) is not None and float(match.group(3)) <= 0:
+                raise ValueError("PPT 图片显示宽度必须大于零, 如 width=5.6in")
             ppt_path = _resolve_source(ppt_label, source.parent)
             if ppt_path not in figure_index:
                 snapshot = figure_root / f"deck_{len(deck_snapshots) + 1:06d}.pptx"
@@ -1027,6 +1039,8 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                 "path": ppt_label, "resolved": str(ppt_path), "name": figure_name,
                 "caption": caption, "image": image.as_posix(),
             }
+            if match.group(3) is not None:
+                figure_specs[token]["display_width"] = match.group(3) + "in"
             pieces.extend((source_text[cursor:match.start()], f"\n\n{token}\n\n"))
             cursor = match.end()
         export_ppt_figures(export_requests, TEMP_ROOT)
@@ -1045,8 +1059,17 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
         _insert_tables(document, tables, pandoc)
         replacements = []
         recognized_figures = set()
+        sized_edited_figures = False
         edited_origin = None
         for block in document["blocks"]:
+            if block.get("t") == "Div" and "ppt-figure-caption" in block["c"][0][1]:
+                figure_name = dict(block["c"][0][2]).get("figure-name")
+                if figure_name in figure_numbers:
+                    caption_document = {"pandoc-api-version": document["pandoc-api-version"], "meta": {}, "blocks": block["c"][1]}
+                    caption_text = run_pandoc(pandoc, json.dumps(caption_document, ensure_ascii=False), "json", PANDOC_OUTPUT, ["--wrap=none"])
+                    caption_text = re.sub(r"(?m)^(\*{0,2}Fig\.\s*)\d+(\s*\\?\|)",
+                                          rf"\g<1>{figure_numbers[figure_name]}\g<2>", caption_text)
+                    block["c"][1] = _as_json(pandoc, caption_text, PANDOC_INPUT)["blocks"]
             if block.get("t") == "RawBlock" and block["c"][0] == "html":
                 edited_match = PPT_EDITED_COMMENT.fullmatch(block["c"][1].strip())
                 if edited_match:
@@ -1069,6 +1092,9 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                 origin_path = Path(edited_origin["path"].replace("\\", "/"))
                 resolved_origin = origin_path if origin_path.is_absolute() else source.parent / origin_path
                 metadata = {"path": edited_origin["path"], "resolved": str(resolved_origin.resolve()), "name": edited_origin["name"]}
+                if "display_width" in edited_origin:
+                    metadata["display_width"] = edited_origin["display_width"]
+                    sized_edited_figures = True
                 if block.get("t") == "Figure" and block["c"][1][1]:
                     caption_document = {"pandoc-api-version": document["pandoc-api-version"], "meta": {}, "blocks": block["c"][1][1]}
                     caption_text = run_pandoc(pandoc, json.dumps(caption_document, ensure_ascii=False), "json", PANDOC_OUTPUT, ["--wrap=none"])
@@ -1104,6 +1130,33 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
         document["blocks"] = replacements
         _split_softbreak_paragraphs(document)
         _remove_duplicate_captions(document)
+        # 显式标记的三线表保存源稿列宽、表头和组标题位置; 普通表保持各版式的原规则.
+        table_layouts = []
+        pending = list(reversed(document["blocks"]))
+        while pending:
+            node = pending.pop()
+            if isinstance(node, list):
+                pending.extend(reversed(node))
+            elif isinstance(node, dict):
+                if node.get("t") == "Div" and "table-note" in node["c"][0][1]:
+                    node["c"][0][2].append(["custom-style", TABLE_NOTE_STYLE])
+                elif node.get("t") == "Div" and "ppt-figure-caption" in node["c"][0][1]:
+                    node["c"][0][2].append(["custom-style", "Image Caption"])
+                if node.get("t") == "Table":
+                    layout = None
+                    if dict(node["c"][0][2]).get("layout") == "booktabs":
+                        rows = list(node["c"][3][1])
+                        for body in node["c"][4]:
+                            rows.extend(body[2] + body[3])
+                        rows.extend(node["c"][5][1])
+                        layout = {
+                            "headers": len(node["c"][3][1]),
+                            "groups": [index for index, row in enumerate(rows) if "table-group" in row[0][1]],
+                            "widths": [width.get("c", 0) for _, width in node["c"][2]],
+                        }
+                    table_layouts.append(layout)
+                if "c" in node:
+                    pending.append(node["c"])
         original = copy.deepcopy(document)
         keys = _citation_keys(document)
         _encode_references(document, keys, figure_numbers)
@@ -1119,19 +1172,189 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
             _apply_operation_layout(completed_word, layout_reference, image_align, image_size)
         else:
             _apply_nature_layout(completed_word, image_align, image_size)
-        if figure_specs:
+        if any(layout is not None for layout in table_layouts):
+            from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
+            from docx.enum.text import WD_ALIGN_PARAGRAPH
+            from docx.oxml import OxmlElement
+            from docx.oxml.ns import qn
+            from docx.shared import Pt
+            from docx.table import _Cell
+
+            word = Document(completed_word)
+            for table, layout in zip(word.tables, table_layouts):
+                if layout is None:
+                    continue
+                properties = table._tbl.tblPr
+                for tag in ("tblStyle", "tblLook", "tblBorders", "tblCellMar", "tblLayout", "tblDescription"):
+                    for old in properties.findall(qn("w:" + tag)):
+                        properties.remove(old)
+                marker = OxmlElement("w:tblDescription")
+                marker.set(qn("w:val"), BOOKTABS_DESCRIPTION_PREFIX + json.dumps(layout, separators=(",", ":")))
+                properties.append(marker)
+                borders = OxmlElement("w:tblBorders")
+                for edge in ("top", "bottom", "left", "right", "insideH", "insideV"):
+                    border = OxmlElement("w:" + edge)
+                    border.set(qn("w:val"), "single" if edge in ("top", "bottom") else "nil")
+                    border.set(qn("w:sz"), "6")
+                    border.set(qn("w:color"), "000000")
+                    borders.append(border)
+                properties.append(borders)
+                table.autofit = False
+                section = word.sections[0]
+                available_width = section.page_width - section.left_margin - section.right_margin
+                proportions = layout["widths"]
+                if not sum(proportions):
+                    proportions = [1 / len(table.columns)] * len(table.columns)
+                column_widths = [int(available_width * proportion / sum(proportions)) for proportion in proportions]
+                for column, width in zip(table.columns, column_widths):
+                    column.width = width
+                for row_index, row in enumerate(table.rows):
+                    row_properties = row._tr.get_or_add_trPr()
+                    if row_properties.find(qn("w:cantSplit")) is None:
+                        row_properties.append(OxmlElement("w:cantSplit"))
+                    column_index = 0
+                    for cell_element in row._tr.tc_lst:
+                        cell = _Cell(cell_element, table)
+                        span = cell._tc.grid_span
+                        cell.width = sum(column_widths[column_index:column_index + span])
+                        cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+                        cell_properties = cell._tc.get_or_add_tcPr()
+                        for tag in ("shd", "tcBorders", "tcMar", "noWrap"):
+                            for old in cell_properties.findall(qn("w:" + tag)):
+                                cell_properties.remove(old)
+                        cell_properties.append(OxmlElement("w:noWrap"))
+                        margins = OxmlElement("w:tcMar")
+                        for edge, value in (("top", 30), ("bottom", 30), ("left", 45), ("right", 45)):
+                            margin = OxmlElement("w:" + edge)
+                            margin.set(qn("w:w"), str(value))
+                            margin.set(qn("w:type"), "dxa")
+                            margins.append(margin)
+                        cell_properties.append(margins)
+                        rule = ("bottom" if row_index == layout["headers"] - 1 else
+                                "top" if row_index in layout["groups"] and row_index > layout["headers"] else None)
+                        if rule is not None:
+                            cell_borders = OxmlElement("w:tcBorders")
+                            border = OxmlElement("w:" + rule)
+                            border.set(qn("w:val"), "single")
+                            border.set(qn("w:sz"), "4")
+                            border.set(qn("w:color"), "000000")
+                            cell_borders.append(border)
+                            cell_properties.append(cell_borders)
+                        for paragraph in cell.paragraphs:
+                            paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT if column_index == 0 else WD_ALIGN_PARAGRAPH.CENTER
+                            paragraph.paragraph_format.first_line_indent = Pt(0)
+                            paragraph.paragraph_format.line_spacing = 1.0
+                            paragraph.paragraph_format.space_before = Pt(0)
+                            paragraph.paragraph_format.space_after = Pt(0)
+                            paragraph.paragraph_format.keep_with_next = True
+                            for run in paragraph.runs:
+                                run.font.name = "Times New Roman"
+                                run.font.size = Pt(10)
+                                if row_index < layout["headers"]:
+                                    run.font.bold = False
+                        # 原生公式的字号写入数学文字节点, 防止 PRAUC 表头回退到正文的 12 pt.
+                        for math_run in cell_element.iter(qn("m:r")):
+                            run_properties = math_run.find(qn("w:rPr"))
+                            if run_properties is None:
+                                run_properties = OxmlElement("w:rPr")
+                                math_run.insert(1 if math_run.find(qn("m:rPr")) is not None else 0, run_properties)
+                            for tag in ("sz", "szCs"):
+                                size = run_properties.find(qn("w:" + tag))
+                                if size is None:
+                                    size = OxmlElement("w:" + tag)
+                                    run_properties.append(size)
+                                size.set(qn("w:val"), "20")
+                        column_index += span
+                following = table._tbl.getnext()
+                note = None
+                if following is not None and following.tag == qn("w:p"):
+                    note = next((paragraph for paragraph in word.paragraphs if paragraph._p is following), None)
+                has_note = note is not None and note.style.name == TABLE_NOTE_STYLE
+                for cell in table.rows[-1].cells:
+                    for paragraph in cell.paragraphs:
+                        paragraph.paragraph_format.keep_with_next = has_note
+                if has_note:
+                    note.paragraph_format.page_break_before = False
+                    note.paragraph_format.first_line_indent = Pt(0)
+                    note.paragraph_format.line_spacing = 1.0
+                    note.paragraph_format.space_before = Pt(4)
+                    note.paragraph_format.space_after = Pt(6)
+                    note.paragraph_format.keep_together = True
+                    note.paragraph_format.keep_with_next = False
+                    for run in note.runs:
+                        run.font.name = "Times New Roman"
+                        run.font.size = Pt(9)
+                    for math_run in following.iter(qn("m:r")):
+                        run_properties = math_run.find(qn("w:rPr"))
+                        if run_properties is None:
+                            run_properties = OxmlElement("w:rPr")
+                            math_run.insert(1 if math_run.find(qn("m:rPr")) is not None else 0, run_properties)
+                        for tag in ("sz", "szCs"):
+                            size = run_properties.find(qn("w:" + tag))
+                            if size is None:
+                                size = OxmlElement("w:" + tag)
+                                run_properties.append(size)
+                            size.set(qn("w:val"), "18")
+            word.save(completed_word)
+        if figure_specs or sized_edited_figures:
+            from docx.oxml.ns import qn
+            from docx.shared import Inches
+            from lxml import etree
+
             word = Document(completed_word)
             marked = set()
+            paragraphs = {id(paragraph._p): paragraph for paragraph in word.paragraphs}
             for shape in word.inline_shapes:
                 properties = shape._inline.docPr
                 token = properties.get("title")
-                if token not in figure_specs:
+                if token in figure_specs:
+                    metadata = {key: figure_specs[token][key] for key in ("path", "resolved", "name")}
+                    prefix = PPT_TITLE_PREFIX
+                    if "display_width" in figure_specs[token]:
+                        metadata["display_width"] = figure_specs[token]["display_width"]
+                elif token and token.startswith(PPT_EDITED_TITLE_PREFIX):
+                    encoded = token[len(PPT_EDITED_TITLE_PREFIX):]
+                    metadata = json.loads(zlib.decompress(base64.urlsafe_b64decode(encoded + "=" * (-len(encoded) % 4))))
+                    if "display_width" not in metadata:
+                        continue
+                    prefix = PPT_EDITED_TITLE_PREFIX
+                else:
                     continue
-                metadata = {key: figure_specs[token][key] for key in ("path", "resolved", "name")}
+                paragraph_element = shape._inline.getparent()
+                while paragraph_element is not None and paragraph_element.tag != qn("w:p"):
+                    paragraph_element = paragraph_element.getparent()
+                caption_paragraphs = []
+                following = paragraph_element.getnext() if paragraph_element is not None else None
+                while following is not None and following.tag == qn("w:p"):
+                    caption = paragraphs.get(id(following))
+                    if caption is None or caption.style.name not in ("Figure Caption", "Image Caption"):
+                        break
+                    caption_paragraphs.append(caption)
+                    following = following.getnext()
+                if "display_width" in metadata:
+                    if prefix == PPT_TITLE_PREFIX:
+                        display_width = metadata["display_width"]
+                        width = Inches(float(display_width[:-2]))
+                        section = word.sections[0]
+                        if width > section.page_width - section.left_margin - section.right_margin:
+                            raise ValueError(f"PPT 图片显示宽度超过版心: {display_width}")
+                        shape.height = round(shape.height * width / shape.width)
+                        shape.width = width
+                    if paragraph_element is not None:
+                        image_paragraph = paragraphs.get(id(paragraph_element))
+                        if image_paragraph is not None:
+                            image_paragraph.paragraph_format.keep_with_next = bool(caption_paragraphs)
+                        for index, caption in enumerate(caption_paragraphs):
+                            caption.paragraph_format.keep_together = True
+                            caption.paragraph_format.keep_with_next = index < len(caption_paragraphs) - 1
+                # 最终 Word 图注基线同时保留文字、原生数学和格式; 作者修改任一段后不恢复旧 PPT 指令.
+                metadata["caption_markup"] = [etree.tostring(caption._p, method="c14n", exclusive=True).decode("utf-8")
+                                              for caption in caption_paragraphs]
                 metadata["markup"] = picture_markup(shape._inline)
                 encoded = base64.urlsafe_b64encode(zlib.compress(json.dumps(metadata, ensure_ascii=False).encode("utf-8"))).decode("ascii").rstrip("=")
-                properties.set("title", PPT_TITLE_PREFIX + encoded)
-                marked.add(token)
+                properties.set("title", prefix + encoded)
+                if token in figure_specs:
+                    marked.add(token)
             if marked != set(figure_specs):
                 raise RuntimeError(f"Word 图片标记不完整：{sorted(set(figure_specs) - marked)}")
             word.save(completed_word)
@@ -1183,6 +1406,8 @@ def _remove_generated_styles(document: dict, citation_markers: dict[str, str]) -
             style = dict(attrs[2]).get("custom-style", "")
             if style == BIBLIOGRAPHY_STYLE:
                 return None
+            if style == TABLE_NOTE_STYLE:
+                return {"t": "Div", "c": [["", ["table-note"], []], clean(blocks)]}
             return clean(blocks)
         if kind == "Span":
             attrs, inlines = value["c"]
@@ -1359,6 +1584,7 @@ def word_to_markdown(source: Path, target: Path) -> None:
     pandoc = ensure_dependencies()
     from docx import Document
     from docx.oxml.ns import qn
+    from lxml import etree
     source = source.resolve()
     target = target.resolve()
     if source == target:
@@ -1366,15 +1592,145 @@ def word_to_markdown(source: Path, target: Path) -> None:
     TEMP_ROOT.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="manuscript_media_", dir=TEMP_ROOT) as temporary:
         media_root = Path(temporary)
+        source_word = Document(source)
+        pandoc_source = source
+        if any((description is not None and description.get(qn("w:val"), "").startswith(BOOKTABS_DESCRIPTION_PREFIX))
+               for table in source_word.tables for description in [table._tbl.tblPr.find(qn("w:tblDescription"))]):
+            # Pandoc 会把表格说明拼入表题; 只在临时解析副本中去除本工具的来源标记.
+            parsed_word = Document(source)
+            for table in parsed_word.tables:
+                description = table._tbl.tblPr.find(qn("w:tblDescription"))
+                if description is not None and description.get(qn("w:val"), "").startswith(BOOKTABS_DESCRIPTION_PREFIX):
+                    table._tbl.tblPr.remove(description)
+            pandoc_source = media_root / "source_without_layout_metadata.docx"
+            parsed_word.save(pandoc_source)
         document = _as_json(
             pandoc, "", "docx+styles",
-            [str(source), f"--extract-media={media_root}"],
+            [str(pandoc_source), f"--extract-media={media_root}"],
         )
+        # 保留 Word 图注段的 AST 身份, 之后只合并或消费这些段, 不按数量跳过正文.
+        source_caption_blocks = []
+        pending = list(reversed(document["blocks"]))
+        while pending:
+            node = pending.pop()
+            if isinstance(node, list):
+                pending.extend(reversed(node))
+            elif isinstance(node, dict):
+                if node.get("t") == "Div" and dict(node["c"][0][2]).get("custom-style") in ("Figure Caption", "Image Caption"):
+                    source_caption_blocks.extend(node["c"][1])
+                if "c" in node:
+                    pending.append(node["c"])
+        source_caption_ids = {id(block) for block in source_caption_blocks}
         citations = {}
         _remove_generated_styles(document, citations)
         _normalize_equation_spacing(document)
         _normalize_group_char_underbraces(document)
-        source_word = Document(source)
+        # 三线表按 Word 中的实际文字和合并关系回转, 排版选项从表格说明中恢复.
+        source_tables = []
+        source_notes = []
+        booktabs_math = {}
+        pending = list(reversed(document["blocks"]))
+        while pending:
+            node = pending.pop()
+            if isinstance(node, list):
+                pending.extend(reversed(node))
+            elif isinstance(node, dict):
+                if node.get("t") == "Table":
+                    source_tables.append(node)
+                elif node.get("t") == "Div" and "table-note" in node["c"][0][1]:
+                    source_notes.append(node)
+                if "c" in node:
+                    pending.append(node["c"])
+        math_sources = []
+        for table, block in zip(source_word.tables, source_tables):
+            description = table._tbl.tblPr.find(qn("w:tblDescription"))
+            marker = description.get(qn("w:val"), "") if description is not None else ""
+            if marker.startswith(BOOKTABS_DESCRIPTION_PREFIX):
+                math_sources.append(([block["c"][3], block["c"][4], block["c"][5]], table._tbl))
+        notes = [paragraph for paragraph in source_word.paragraphs if paragraph.style.name == TABLE_NOTE_STYLE]
+        math_sources.extend((block["c"][1], note._p) for block, note in zip(source_notes, notes))
+        caption_paragraphs = [paragraph for paragraph in source_word.paragraphs
+                              if paragraph.style.name in ("Figure Caption", "Image Caption")
+                              and (paragraph.text.strip() or next(paragraph._p.iter(qn("m:oMath")), None) is not None)]
+        math_sources.extend(([block], paragraph._p) for block, paragraph in zip(source_caption_blocks, caption_paragraphs))
+        # Pandoc 回读会丢失数学正体; 依据 Word 的实际 m:sty="p" 恢复正体字母, 如 PRAUC.
+        for blocks, element in math_sources:
+            math_nodes = []
+            pending = [blocks]
+            while pending:
+                node = pending.pop()
+                if isinstance(node, list):
+                    pending.extend(reversed(node))
+                elif isinstance(node, dict):
+                    if node.get("t") == "Math":
+                        math_nodes.append(node)
+                    elif "c" in node:
+                        pending.append(node["c"])
+            for node, formula in zip(math_nodes, element.iter(qn("m:oMath"))):
+                letter_fragments = []
+                fragment = ""
+                fragment_normal = False
+                previous_parent = None
+                for run in formula.iter(qn("m:r")):
+                    style = run.find("./" + qn("m:rPr") + "/" + qn("m:sty"))
+                    text = "".join(item.text or "" for item in run.iter(qn("m:t")))
+                    letters = re.fullmatch(r"[A-Za-z]+", text)
+                    normal = style is not None and style.get(qn("m:val")) == "p"
+                    if fragment and (not letters or normal != fragment_normal or run.getparent() is not previous_parent):
+                        letter_fragments.append((fragment, fragment_normal))
+                        fragment = ""
+                    if letters:
+                        fragment += text
+                        fragment_normal = normal
+                        previous_parent = run.getparent()
+                if fragment:
+                    letter_fragments.append((fragment, fragment_normal))
+                expression = node["c"][1]
+                matches = [match for match in re.finditer(r"\\[A-Za-z]+|[A-Za-z]+", expression) if not match.group(0).startswith("\\")]
+                if [match.group(0) for match in matches] == [fragment for fragment, _ in letter_fragments]:
+                    for match, (_, normal) in reversed(list(zip(matches, letter_fragments))):
+                        if normal and not expression[:match.start()].endswith((r"\mathrm{", r"\text{", r"\operatorname{")):
+                            expression = expression[:match.start()] + r"\mathrm{" + match.group(0) + "}" + expression[match.end():]
+                    node["c"][1] = expression
+        for table, block in zip(source_word.tables, source_tables):
+            description = table._tbl.tblPr.find(qn("w:tblDescription"))
+            marker = description.get(qn("w:val"), "") if description is not None else ""
+            if not marker.startswith(BOOKTABS_DESCRIPTION_PREFIX):
+                continue
+            layout = json.loads(marker[len(BOOKTABS_DESCRIPTION_PREFIX):])
+            block["c"][0][2].append(["layout", "booktabs"])
+            proportions = layout["widths"]
+            if not sum(proportions):
+                actual_widths = [column.width for column in table.columns]
+                proportions = [width / sum(actual_widths) for width in actual_widths]
+            for column, proportion in zip(block["c"][2], proportions):
+                if proportion:
+                    column[1] = {"t": "ColWidth", "c": proportion}
+            rows = list(block["c"][3][1])
+            for body in block["c"][4]:
+                rows.extend(body[2] + body[3])
+            rows.extend(block["c"][5][1])
+            # Word 插删数据行后, 通栏合并的组标题仍跟随实际表行, 不沿用旧行号.
+            groups = [index for index, row in enumerate(table.rows)
+                      if layout["groups"] and index >= layout["headers"] and len(row._tr.tc_lst) == 1
+                      and row._tr.tc_lst[0].grid_span == len(table.columns)]
+            for index in groups:
+                if index < len(rows):
+                    rows[index][0][1].append("table-group")
+            # 合并表格会输出为 HTML; 临时替换数学节点, 避免 Pandoc 把公式降为斜体字母和 HTML 下标.
+            pending = [block["c"]]
+            while pending:
+                node = pending.pop()
+                if isinstance(node, list):
+                    pending.extend(reversed(node))
+                elif isinstance(node, dict):
+                    if node.get("t") == "Math":
+                        token = f"MDBOOKTABSMATH{len(booktabs_math) + 1:06d}"
+                        booktabs_math[token] = "$" + node["c"][1] + "$"
+                        node.clear()
+                        node.update({"t": "Str", "c": token})
+                    elif "c" in node:
+                        pending.append(node["c"])
         for anchor in source_word.element.body.iter(qn("wp:anchor")):
             properties = anchor.find(qn("wp:docPr"))
             title = properties.get("title", "") if properties is not None else ""
@@ -1382,6 +1738,7 @@ def word_to_markdown(source: Path, target: Path) -> None:
                 raise ValueError("PPT 图集图片已改为 Word 浮动对象，无法可靠回转；请改为与文字在一行后重试")
         marked_images = {}
         edited_images = {}
+        source_paragraphs = {id(paragraph._p): paragraph for paragraph in source_word.paragraphs}
         for shape in source_word.inline_shapes:
             inline = shape._inline
             title = inline.docPr.get("title", "")
@@ -1398,7 +1755,18 @@ def word_to_markdown(source: Path, target: Path) -> None:
             except (ValueError, IndexError, KeyError, zlib.error) as exc:
                 raise ValueError("Word 中的 PPT 图名标记已损坏") from exc
             if prefix == PPT_TITLE_PREFIX:
-                marked_images.setdefault(relation, []).append((metadata, picture_markup(inline), source_word.part.related_parts[relation].blob))
+                paragraph_element = inline.getparent()
+                while paragraph_element is not None and paragraph_element.tag != qn("w:p"):
+                    paragraph_element = paragraph_element.getparent()
+                caption_markup = []
+                following = paragraph_element.getnext() if paragraph_element is not None else None
+                while following is not None and following.tag == qn("w:p"):
+                    caption = source_paragraphs.get(id(following))
+                    if caption is None or caption.style.name not in ("Figure Caption", "Image Caption"):
+                        break
+                    caption_markup.append(etree.tostring(caption._p, method="c14n", exclusive=True).decode("utf-8"))
+                    following = following.getnext()
+                marked_images.setdefault(relation, []).append((metadata, picture_markup(inline), source_word.part.related_parts[relation].blob, caption_markup))
             else:
                 edited_images.setdefault(relation, []).append(metadata)
         figure_indices = {}
@@ -1406,7 +1774,12 @@ def word_to_markdown(source: Path, target: Path) -> None:
         rendered_figures = {}
         recovered = {}
         blocks = []
-        for block in document["blocks"]:
+        skip_captions = False
+        for block_index, block in enumerate(document["blocks"]):
+            if skip_captions:
+                if id(block) in source_caption_ids:
+                    continue
+                skip_captions = False
             image_nodes = []
             pending = [block]
             while pending:
@@ -1421,6 +1794,17 @@ def word_to_markdown(source: Path, target: Path) -> None:
             if len(image_nodes) != 1:
                 blocks.append(block)
                 continue
+            caption_tail = []
+            for following in document["blocks"][block_index + 1:]:
+                if id(following) not in source_caption_ids:
+                    break
+                caption_tail.append(following)
+            if caption_tail:
+                if block.get("t") == "Figure":
+                    block["c"][1][1].extend(caption_tail)
+                else:
+                    block = {"t": "Figure", "c": [["", [], []], [None, caption_tail], [block]]}
+                skip_captions = True
             image_node = image_nodes[0]
             relation = Path(image_node["c"][2][0]).stem
             edited_candidates = edited_images.get(relation, [])
@@ -1434,19 +1818,28 @@ def word_to_markdown(source: Path, target: Path) -> None:
                         markdown_origin = Path(os.path.relpath(edited_origin["resolved"], target.parent)).as_posix()
                     except ValueError:
                         markdown_origin = Path(edited_origin["resolved"]).as_posix()
-                origin = json.dumps({"path": markdown_origin, "name": edited_origin["name"]}, ensure_ascii=False)
+                origin_data = {"path": markdown_origin, "name": edited_origin["name"]}
+                if "display_width" in edited_origin:
+                    origin_data["display_width"] = edited_origin["display_width"]
+                origin = json.dumps(origin_data, ensure_ascii=False)
                 blocks.append({"t": "RawBlock", "c": ["html", f"<!-- pptfig-edited {origin} -->"]})
                 image_node["c"][2][1] = ""
-                blocks.append(block)
+                if block.get("t") == "Figure":
+                    image_node["c"][1] = []
+                    blocks.append({"t": "Para", "c": [image_node]})
+                    blocks.append({"t": "Div", "c": [["", ["ppt-figure-caption"], [["figure-name", edited_origin["name"]]]], block["c"][1][1]]})
+                else:
+                    blocks.append(block)
                 continue
             candidates = marked_images.get(relation, [])
             if not candidates:
                 blocks.append(block)
                 continue
-            metadata, current_markup, word_pixels = candidates.pop(0)
+            metadata, current_markup, word_pixels, caption_markup = candidates.pop(0)
             ppt_path = Path(metadata["resolved"])
             name = metadata["name"]
-            unchanged = current_markup == metadata["markup"] and ppt_path.is_file()
+            unchanged = (current_markup == metadata["markup"] and ppt_path.is_file()
+                         and "caption_markup" in metadata and caption_markup == metadata["caption_markup"])
             if unchanged:
                 try:
                     if ppt_path not in figure_indices:
@@ -1475,23 +1868,43 @@ def word_to_markdown(source: Path, target: Path) -> None:
                     markdown_path = ppt_path.as_posix()
             if unchanged:
                 token = f"MDPPTRECOVERED{len(recovered) + 1:06d}"
-                recovered[token] = f'{{{{pptfig:"{markdown_path}"|{name}}}}}'
+                width_option = "|width=" + metadata["display_width"] if "display_width" in metadata else ""
+                recovered[token] = f'{{{{pptfig:"{markdown_path}"|{name}{width_option}}}}}'
                 blocks.append({"t": "Para", "c": [{"t": "Str", "c": token}]})
             else:
                 image_node["c"][2][1] = ""
-                origin = json.dumps({"path": markdown_path, "name": name}, ensure_ascii=False)
+                origin_data = {"path": markdown_path, "name": name}
+                if "display_width" in metadata:
+                    origin_data["display_width"] = metadata["display_width"]
+                origin = json.dumps(origin_data, ensure_ascii=False)
                 blocks.append({"t": "RawBlock", "c": ["html", f"<!-- pptfig-edited {origin} -->"]})
-                blocks.append(block)
-                print(f"提示：Word 图片或 PPT 来源已有变化，已保留 Word 图片并脱离图集引用：{ppt_path} | {name}", file=sys.stderr)
+                if block.get("t") == "Figure":
+                    image_node["c"][1] = []
+                    blocks.append({"t": "Para", "c": [image_node]})
+                    blocks.append({"t": "Div", "c": [["", ["ppt-figure-caption"], [["figure-name", name]]], block["c"][1][1]]})
+                else:
+                    blocks.append(block)
+                print(f"提示：Word 图片、图注或 PPT 来源已有变化，已保留 Word 图及图注并脱离图集引用：{ppt_path} | {name}", file=sys.stderr)
         document["blocks"] = blocks
         images = _export_images(document, media_root, target)
+        for block in source_tables:
+            if block.get("t") == "Table" and dict(block["c"][0][2]).get("layout") == "booktabs":
+                # 即使没有合并单元格也保留 HTML 属性, 避免普通管道表语法丢失三线表选项.
+                table_document = {"pandoc-api-version": document["pandoc-api-version"], "meta": {}, "blocks": [block]}
+                markup = run_pandoc(pandoc, json.dumps(table_document, ensure_ascii=False), "json", "html", ["--wrap=none"])
+                block.clear()
+                block.update({"t": "RawBlock", "c": ["html", markup]})
         markdown = run_pandoc(
             pandoc, json.dumps(document, ensure_ascii=False), "json", PANDOC_OUTPUT,
             ["--wrap=none"],
         )
-        markdown = re.sub(r"<table\b[^>]*>", "<table>", markdown, flags=re.I)
-        markdown = re.sub(r"<colgroup>.*?</colgroup>\s*", "", markdown, flags=re.I | re.S)
-        for token, literal in {**citations, **images, **recovered}.items():
+        for match in reversed(list(HTML_TABLE.finditer(markdown))):
+            markup = match.group(0)
+            if not re.search(r'\bdata-layout=["\']booktabs["\']', markup, re.I):
+                markup = re.sub(r"<table\b[^>]*>", "<table>", markup, flags=re.I)
+                markup = re.sub(r"<colgroup>.*?</colgroup>\s*", "", markup, flags=re.I | re.S)
+                markdown = markdown[:match.start()] + markup + markdown[match.end():]
+        for token, literal in {**citations, **images, **recovered, **booktabs_math}.items():
             markdown = markdown.replace(token, literal)
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(_normalize_markdown_spacing(markdown), encoding="utf-8")

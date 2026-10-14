@@ -1154,6 +1154,12 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                             "groups": [index for index, row in enumerate(rows) if "table-group" in row[0][1]],
                             "widths": [width.get("c", 0) for _, width in node["c"][2]],
                         }
+                        options = dict(node["c"][0][2])
+                        for option in ("outline", "col-rules", "pagination", "page-break"):
+                            if option in options:
+                                layout[option] = options[option]
+                        if any("table-divider" in row[0][1] for row in rows):
+                            layout["dividers"] = [index for index, row in enumerate(rows) if "table-divider" in row[0][1]]
                     table_layouts.append(layout)
                 if "c" in node:
                     pending.append(node["c"])
@@ -1184,6 +1190,14 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
             for table, layout in zip(word.tables, table_layouts):
                 if layout is None:
                     continue
+                if layout.get("page-break") == "before":
+                    # 在表题前起新页, 让短表完整呈现, 不给格内段落增加分页标记.
+                    preceding = table._tbl.getprevious()
+                    if preceding is not None and preceding.tag == qn("w:p"):
+                        caption = next((paragraph for paragraph in word.paragraphs if paragraph._p is preceding), None)
+                        style = preceding.find(".//" + qn("w:pStyle"))
+                        if caption is not None and style is not None and style.get(qn("w:val")) == "TableCaption":
+                            caption.paragraph_format.page_break_before = True
                 properties = table._tbl.tblPr
                 for tag in ("tblStyle", "tblLook", "tblBorders", "tblCellMar", "tblLayout", "tblDescription"):
                     for old in properties.findall(qn("w:" + tag)):
@@ -1194,7 +1208,7 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                 borders = OxmlElement("w:tblBorders")
                 for edge in ("top", "bottom", "left", "right", "insideH", "insideV"):
                     border = OxmlElement("w:" + edge)
-                    border.set(qn("w:val"), "single" if edge in ("top", "bottom") else "nil")
+                    border.set(qn("w:val"), "single" if edge in ("top", "bottom") or layout.get("outline") == "box" and edge in ("left", "right") else "nil")
                     border.set(qn("w:sz"), "6")
                     border.set(qn("w:color"), "000000")
                     borders.append(border)
@@ -1206,6 +1220,7 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                 if not sum(proportions):
                     proportions = [1 / len(table.columns)] * len(table.columns)
                 column_widths = [int(available_width * proportion / sum(proportions)) for proportion in proportions]
+                column_rules = {int(column) for column in layout.get("col-rules", "").split(",") if column}
                 for column, width in zip(table.columns, column_widths):
                     column.width = width
                 for row_index, row in enumerate(table.rows):
@@ -1231,14 +1246,17 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                             margins.append(margin)
                         cell_properties.append(margins)
                         rule = ("bottom" if row_index == layout["headers"] - 1 else
-                                "top" if row_index in layout["groups"] and row_index > layout["headers"] else None)
-                        if rule is not None:
+                                "top" if row_index in layout["groups"] and row_index > layout["headers"] or row_index in layout.get("dividers", []) else None)
+                        # 仅在明确的受体/条件组边界画竖线, 如第 2 与第 6 列之后.
+                        edges = ([rule] if rule is not None else []) + (["right"] if column_index + span in column_rules else [])
+                        if edges:
                             cell_borders = OxmlElement("w:tcBorders")
-                            border = OxmlElement("w:" + rule)
-                            border.set(qn("w:val"), "single")
-                            border.set(qn("w:sz"), "4")
-                            border.set(qn("w:color"), "000000")
-                            cell_borders.append(border)
+                            for edge in edges:
+                                border = OxmlElement("w:" + edge)
+                                border.set(qn("w:val"), "single")
+                                border.set(qn("w:sz"), "4")
+                                border.set(qn("w:color"), "000000")
+                                cell_borders.append(border)
                             cell_properties.append(cell_borders)
                         for paragraph in cell.paragraphs:
                             paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT if column_index == 0 else WD_ALIGN_PARAGRAPH.CENTER
@@ -1246,7 +1264,11 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                             paragraph.paragraph_format.line_spacing = 1.0
                             paragraph.paragraph_format.space_before = Pt(0)
                             paragraph.paragraph_format.space_after = Pt(0)
-                            paragraph.paragraph_format.keep_with_next = True
+                            paragraph.paragraph_format.keep_with_next = layout.get("pagination") != "rows"
+                            if layout.get("pagination") == "rows":
+                                # 允许按完整表行分页, 清除 Word 编辑视图中的段落分页标记.
+                                paragraph.paragraph_format.keep_together = False
+                                paragraph.paragraph_format.page_break_before = False
                             for run in paragraph.runs:
                                 run.font.name = "Times New Roman"
                                 run.font.size = Pt(10)
@@ -1272,7 +1294,7 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                 has_note = note is not None and note.style.name == TABLE_NOTE_STYLE
                 for cell in table.rows[-1].cells:
                     for paragraph in cell.paragraphs:
-                        paragraph.paragraph_format.keep_with_next = has_note
+                        paragraph.paragraph_format.keep_with_next = has_note and layout.get("pagination") != "rows"
                 if has_note:
                     note.paragraph_format.page_break_before = False
                     note.paragraph_format.first_line_indent = Pt(0)
@@ -1699,6 +1721,9 @@ def word_to_markdown(source: Path, target: Path) -> None:
                 continue
             layout = json.loads(marker[len(BOOKTABS_DESCRIPTION_PREFIX):])
             block["c"][0][2].append(["layout", "booktabs"])
+            for option in ("outline", "col-rules", "pagination", "page-break"):
+                if option in layout:
+                    block["c"][0][2].append([option, layout[option]])
             proportions = layout["widths"]
             if not sum(proportions):
                 actual_widths = [column.width for column in table.columns]
@@ -1717,6 +1742,9 @@ def word_to_markdown(source: Path, target: Path) -> None:
             for index in groups:
                 if index < len(rows):
                     rows[index][0][1].append("table-group")
+            for index in layout.get("dividers", []):
+                if index < len(rows):
+                    rows[index][0][1].append("table-divider")
             # 合并表格会输出为 HTML; 临时替换数学节点, 避免 Pandoc 把公式降为斜体字母和 HTML 下标.
             pending = [block["c"]]
             while pending:
@@ -1892,6 +1920,12 @@ def word_to_markdown(source: Path, target: Path) -> None:
                 # 即使没有合并单元格也保留 HTML 属性, 避免普通管道表语法丢失三线表选项.
                 table_document = {"pandoc-api-version": document["pandoc-api-version"], "meta": {}, "blocks": [block]}
                 markup = run_pandoc(pandoc, json.dumps(table_document, ensure_ascii=False), "json", "html", ["--wrap=none"])
+                # HTML writer 将 9.5% 列宽截成 9%; 用原始比例恢复小数, 避免往返后十列表被压窄.
+                proportions = [column[1].get("c", 0) for column in block["c"][2]]
+                if sum(proportions):
+                    widths = iter(proportion / sum(proportions) * 100 for proportion in proportions)
+                    markup = re.sub(r'(<col\b[^>]*\bstyle="[^"]*?\bwidth:)\s*[^;"%]+%', lambda match: match.group(1) + format(next(widths), ".12g") + "%", markup)
+                    markup = re.sub(r'(<table\b[^>]*\bstyle="[^"]*?\bwidth:)\s*[^;"%]+%', r'\g<1>100%', markup)
                 block.clear()
                 block.update({"t": "RawBlock", "c": ["html", markup]})
         markdown = run_pandoc(

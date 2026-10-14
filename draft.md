@@ -213,7 +213,9 @@ These cases showed that the receptor structure imposes steric constraints, where
 ### Evaluation protocol
 In practical cryo-EM structure determination, researchers work with unannotated three-dimensional density maps and unknown binding sites. To assess automated modelling in this setting, we connected Find, Match and Build into a single end-to-end pipeline. We evaluated region detection and identity matching across all ligand categories, and full pose reconstruction for organic small molecules with no missing atoms.
 
-Find ranks candidate ligand regions by descending mean probability, yielding Rank 1, Rank 2 and subsequent candidates. For each PDB entry, the pipeline examines these candidates in order for up to $K$ attempts. A PDB entry is classified as successful if any attempt within this budget succeeds.
+{{pptfig:"画图/E2E评价计费规则.pptx"|e2e-accounting-rules-draft}}
+
+Find ranks candidate ligand regions by descending mean probability, yielding Rank 1, Rank 2 and subsequent candidates. For each PDB entry, the pipeline examines these candidates in order for up to $K$ attempts. A PDB entry is classified as successful if any attempt within this budget succeeds. The attempt-accounting rules for the two end-to-end evaluation settings are summarised in {{figref:e2e-accounting-rules-draft}}.
 
 For end-to-end region detection and identity matching across all ligand categories, we applied the following accounting rules. A false-positive candidate predicted by Find consumes one attempt, after which the pipeline examines the next candidate. If a candidate corresponds to a ground-truth ligand with at least 30% coverage in both directions, Match assigns its ligand identity. Correct identity matching completes the task; incorrect matching consumes one attempt. The pipeline continues until the task succeeds or the $K$-attempt budget is exhausted.
 

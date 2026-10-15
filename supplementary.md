@@ -67,6 +67,16 @@ For a PDB entry containing $N$ ground-truth ligands, let $f(t)$ denote the numbe
 
 Like top-k success, ligand completion ratio evaluates two basic end-to-end capabilities of our pipeline. These comprise detection and identity matching across all ligand categories, and detection, identity matching and modelling of single-residue organic small molecules with no missing atoms. Both metrics use the same accounting rules and test sets for each task. The all-ligand test set contains 179 PDBs and 2,502 ligand instances; the small-molecule subset contains 77 PDBs and 446 instances. Each task was also evaluated with deposited receptors (GT) and CryoAtom2-reconstructed receptors (CA2).
 
+### Fair Find–correct Match–Build comparison with Emap2lig
+
+To compare the combined detection and modelling capabilities directly, we supplied both LigandSeek and Emap2lig with the correct ligand SMILES ({{figref:supp-find-correct-match-build}}). We evaluated Find–correct Match–Build completion on the same 77 PDBs containing 446 single-residue organic small molecules with no missing atoms. LigandSeek used PocketXMol-tuned centre docking guided by predicted blob centroids, whereas Emap2lig used its native blob-guided Build model. Background candidates consumed one attempt, and out-of-scope foreground candidates were skipped without charge. Undetected instances remained in the full denominator throughout the completion analysis.
+
+For top-1 poses with RMSD <3 Å, mean completion at a 100% budget was 63.2% for GT, 49.6% for CA2 and 38.2% for Emap2lig. Increasing the budget to 300% raised these values to 64.2%, 55.0% and 43.3%, respectively. Using best-of-50 poses at the same threshold, completion at a 100% budget reached 70.5%, 58.0% and 42.5%, respectively. At a 300% budget, the corresponding completion values were 71.5%, 66.3% and 50.0%, respectively.
+
+The gap between best-of-50 and top-1 completion showed that some correct poses had been generated but were not ranked first. With either receptor input, the combination of LigandSeek-Find and PocketXMol-tuned recovered more small-molecule instances within the same attempt budget.
+
+{{pptfig:"画图/Find-Match-Build公平对比.pptx"|supp-find-correct-match-build|width=5.5in}}
+
 ### Detection and identity matching across all ligand classes
 
 For detection and identity matching across all ligand classes, increasing the relative attempt budget from 100% to 300% raised mean instance completion. Completion increased from 51.1% to 58.8% for CA2 and from 62.1% to 67.5% for GT({{figref:supp-e2e-completion-all}}). The corresponding medians increased from 50.0% and 66.7% to 60.2% and 71.4%, respectively. A relative attempt budget of 100% has particular practical significance. This corresponds to a scenario in which ligand identities and numbers are known to the user and can constrain the end-to-end pipeline. Under these conditions, our pipeline recovered most of the ligand instances({{figref:supp-e2e-completion-all}}).
@@ -97,7 +107,7 @@ For top-1 poses with RMSD <3 Å, mean completion for CA2 was 47.7% and 53.0% at 
 
 {{pptfig:"画图/E2E实例完成度.pptx"|supp-e2e-completion-small}}
 
-<table data-layout="booktabs" data-outline="box" data-col-rules="2,6" data-pagination="rows">
+<table data-layout="booktabs" data-outline="box" data-col-rules="2,6" data-pagination="rows" data-page-break="before">
 <caption>Table 2 | Small-molecule instance completion (%).</caption>
 <colgroup><col style="width: 14%"/><col style="width: 10%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/></colgroup>
 <thead>

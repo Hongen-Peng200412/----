@@ -104,6 +104,10 @@ Across the 179 test PDB entries, each complex contained an average of 14.0 groun
 
 {{pptfig:"画图/stage1结果.pptx"|stage1-main-sixpanel}}
 
+We further measured ligand-instance detection completion across increasing attempt budgets ({{figref:find-only-instance-completion}}). For each PDB containing $N$ reference instances, relative budget $\rho$ allowed $\lfloor\rho N\rfloor$ charged attempts. Completion was the fraction of distinct instances detected, averaged equally across PDB entries. At a 100% budget, mean completion was 66.4% for GT and 55.6% for CA2 across all ligands. For the small-molecule subset, the corresponding values were 76.3% and 64.2%, respectively. Increasing the budget to 300% raised these four values to 71.7%, 63.3%, 77.3% and 72.4%, respectively. Small-molecule detection with deposited receptors was already close to its full-candidate ceiling at 100%. By contrast, CA2 continued to recover additional instances from lower-ranked candidates.
+
+{{pptfig:"画图/Find-Match-Build公平对比.pptx"|find-only-instance-completion}}
+
 ### Stage 1: Representative cases
 
 Four representative cases showed that LigandSeek-Find covered ligand regions more completely than the density-only method Emap2lig-Find and detected regions that it missed ({{figref:stage1-fourcase-main|a–d}}). In the viral replication-associated protein complex 9PQM, both methods detected most of the region occupied by the ATP analogue ATPγS. LigandSeek-Find and Emap2lig-Find achieved Dice scores of 0.816 and 0.766 for this ligand instance, respectively ({{figref:stage1-fourcase-main|a}}). For cholesterol in 9UWI, Emap2lig-Find predictions were concentrated within the ground-truth ligand region, achieving a precision of 0.990 but covering only 0.300 of that region. LigandSeek-Find increased coverage to 0.812, recovering more of the missed ligand region ({{figref:stage1-fourcase-main|b}}). At the NADPH binding site in 9WUP, Emap2lig-Find produced no prediction overlapping the ground-truth ligand region. LigandSeek-Find covered 0.922 of that region in the same comparison ({{figref:stage1-fourcase-main|c}}). Similarly, at the ADP site in 9RMI, Emap2lig-Find covered only 0.103 of the ground-truth region, whereas LigandSeek-Find covered 0.883 ({{figref:stage1-fourcase-main|d}}). These local comparisons demonstrated advantages in both detecting ligand regions and delineating their spatial boundaries more accurately.
@@ -187,11 +191,17 @@ The fine-tuned model was also effective with CryoAtom2-reconstructed receptors. 
 
 ### Stage 3: Comparison with Emap2lig-Build
 
-We also compared PocketXMol-tuned using Centre pockets with Emap2lig-Build, a ligand pose prediction tool that uses cryo-EM density without receptor information. Emap2lig-Build accepts a guiding region and a cryo-EM density map; in its default workflow, the guiding region is the three-dimensional blob predicted by Emap2lig-Find in the preceding stage. A fair comparison therefore required restricting evaluation to ligand instances for which Emap2lig-Find returned a corresponding blob. Of the 446 small-molecule test instances, Emap2lig-Find returned qualifying blobs for only 237 that shared at least 30% bidirectional coverage with the ground-truth ligand region. So, we compared PocketXMol-tuned and Emap2lig-Build only on these instances ({{figref:stage3-find-hit-head-to-head}}).
+We also compared PocketXMol-tuned using Centre pockets with Emap2lig-Build, a ligand pose prediction tool that uses cryo-EM density without receptor information. Emap2lig-Build accepts a guiding region and a cryo-EM density map; in its default workflow, the guiding region is the three-dimensional blob predicted by Emap2lig-Find in the preceding stage. A fair comparison therefore required restricting evaluation to ligand instances for which Emap2lig-Find returned a corresponding blob. We tested instances successfully detected by Emap2lig-Find with at least 30% bidirectional coverage of the reference ligand region. We compared PocketXMol-tuned and Emap2lig-Build on the 237 instances with evaluable poses ({{figref:stage3-find-hit-head-to-head}}).
 
 Across these 237 jointly evaluable instances, PocketXMol-tuned using Centre pockets substantially outperformed Emap2lig-Build. With deposited and CryoAtom2-reconstructed receptors, median top-1 RMSD was 0.90 Å and 1.01 Å, respectively, substantially below Emap2lig-Build's 1.85 Å. Median best-of-50 RMSD was 0.65 Å and 0.70 Å, respectively, also substantially below Emap2lig-Build's 1.33 Å.
 
 {{pptfig:"画图/stage3结果.pptx"|stage3-find-hit-head-to-head}}
+
+We next guided docking with each Find model's predicted regions and compared the two Build models on jointly detected instances ({{figref:stage3-predicted-region-head-to-head}}). LigandSeek2-Find and Emap2lig-Find jointly detected 235 instances with GT receptors and 230 with CA2 receptors. Both Build models received the correct, exact SMILES for each instance. PocketXMol-tuned defined its Centre pocket around the LigandSeek2-Find blob centroid, whereas Emap2lig-Build used the three-dimensional blob predicted by Emap2lig-Find.
+
+For the GT comparison, median top-1 RMSD was 0.85 Å for PocketXMol-tuned and 1.83 Å for Emap2lig-Build. Median best-of-50 RMSD was 0.63 Å and 1.32 Å, respectively. With CA2 receptors, median top-1 RMSD was 1.02 Å and 1.83 Å, respectively. The corresponding median best-of-50 RMSD values were 0.71 Å and 1.32 Å. PocketXMol-tuned therefore retained higher pose accuracy under both receptor conditions when docking was guided by the respective predicted ligand regions.
+
+{{pptfig:"画图/Find-Match-Build公平对比.pptx"|stage3-predicted-region-head-to-head}}
 
 ### Stage 3: Representative cases
 

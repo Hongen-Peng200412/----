@@ -51,32 +51,33 @@ def main():
     """按论文证据顺序生成三页同源图, 所有点、文字和线条随后转换成原生PPT形状.
 
     manifest.json为list[dict], 每页包含stem、id、width/height(pt)和中英notes, 不含手写图号.
-    第1页Find-only为2×2; 第2页GT和CA2公平对接各两个面板; 第3页2列6行依次Emap2lig、CA2、GT.
+    第1页Find-only为2行3列, 同列比较全配体与小分子; 第2页GT和CA2公平对接各两个面板; 第3页2列6行依次Emap2lig、CA2、GT.
     """
     BUILD.mkdir(parents=True, exist_ok=True)
     data = json.loads(DATA.read_text(encoding='utf-8'))
     panels = {item['id']: item for item in data['panels']}
     manifest = []
     handles = [Line2D([], [], color=MEAN_COLOR, linewidth=1.8, marker='o', markersize=3.2, label='Mean'), Line2D([], [], color=MEDIAN_COLOR, linewidth=1.05, marker='D', markerfacecolor='none', markersize=3.5, label='Median'), Line2D([], [], color='#7F8C97', marker='o', linestyle='none', markersize=3, label='Individual PDB')]
-    base_zh = '每个PDB包含N个目标实例，相对预算ρ允许floor(ρN)次计费尝试，完成度为成功的不同实例数/N。绿线与圆点、蓝线与菱形分别表示PDB等权均值和中位数；灰点和小提琴表示50%、100%、200%及300%预算下的PDB分布。'
-    base_en = 'For N target instances per PDB, relative budget ρ allows floor(ρN) charged attempts. Completion is the number of distinct successful instances divided by N. Green lines and circles show the PDB-equal mean, and blue lines and diamonds show the median. Grey points and violins show PDB distributions at 50%, 100%, 200% and 300% budgets.'
+    base_zh = r'每个PDB包含$N$个目标实例，相对预算$\rho$允许$\lfloor\rho N\rfloor$次计费尝试，完成度为成功的不同实例数除以$N$。绿线与圆点、蓝线与菱形分别表示PDB等权均值和中位数；灰点和小提琴表示$50\%$、$100\%$、$200\%$及$300\%$预算下的PDB分布。'
+    base_en = r'For $N$ target instances per PDB, relative budget $\rho$ allows $\lfloor\rho N\rfloor$ charged attempts. Completion is the number of distinct successful instances divided by $N$. Green lines and circles show the PDB-equal mean, and blue lines and diamonds show the median. Grey points and violins show PDB distributions at $50\%$, $100\%$, $200\%$ and $300\%$ budgets.'
 
-    fig = plt.figure(figsize=(180 / 25.4, 130 / 25.4))
-    grid = fig.add_gridspec(2, 2, left=0.11, right=0.97, bottom=0.13, top=0.79, wspace=0.28, hspace=0.47)
-    # 上排全配体、下排合格小分子; 两列分别GT/CA2, 分母来自已发布完成度面板.
-    for index, (scope, domain) in enumerate((('find_full', 'GT'), ('find_full', 'CA2'), ('find_small', 'GT'), ('find_small', 'CA2'))):
+    fig = plt.figure(figsize=(180 / 25.4, 145 / 25.4))
+    grid = fig.add_gridspec(2, 3, left=0.085, right=0.99, bottom=0.13, top=0.79, wspace=0.31, hspace=0.47)
+    # 上排全配体、下排合格小分子; 三列为GT、CA2与Emap2lig, 只增加既有候选的统计视图.
+    for index, (scope, domain) in enumerate((('find_full', 'GT'), ('find_full', 'CA2'), ('find_full', 'Emap2lig'), ('find_small', 'GT'), ('find_small', 'CA2'), ('find_small', 'Emap2lig'))):
         panel = next(item for item in data['panels'] if item['scope'] == scope and item['domain'] == domain)
-        ax = fig.add_subplot(grid[index // 2, index % 2])
+        ax = fig.add_subplot(grid[index // 3, index % 3])
         draw_panel(ax, panel, f"{'All ligands' if scope == 'find_full' else 'Small molecules'}, {domain}", chr(97 + index), True)
-        if index % 2 == 0:
-            ax.set_ylabel('Instance completion (%)', fontsize=8)
-        if index >= 2:
-            ax.set_xlabel('Relative attempt budget (%)', fontsize=8)
+        if index % 3 == 0:
+            ax.set_ylabel('Detected instances (%)', fontsize=8)
+        if index >= 3:
+            ax.set_xlabel('Relative candidate count (%)', fontsize=7.5)
         else:
             ax.tick_params(axis='x', labelbottom=False)
-    fig.text(0.11, 0.97, 'Ligand detection across attempt budgets', fontsize=10.5, weight='bold', va='top')
-    fig.legend(handles=handles, loc='upper left', bbox_to_anchor=(0.10, 0.91), ncol=3, frameon=False, fontsize=7.5)
-    captions = ('LigandSeek2-Find的配体实例检出完成度。a,b，全配体，179个PDB、2,502个实例；c,d，单残基无缺失原子的有机小分子，77个PDB、446个实例。左列为沉积受体(GT)，右列为CryoAtom2重建受体(CA2)。双向覆盖均≥0.3、几何均值最大的既有对应定义命中；不检查身份匹配或对接。全配体每个blob计费，小分子中背景计费、真实范围外前景免费。' + base_zh, 'Ligand-instance detection completion by LigandSeek2-Find. a,b, All ligands, comprising 179 PDBs and 2,502 instances. c,d, Single-residue organic small molecules with no missing atoms, comprising 77 PDBs and 446 instances. Left, deposited receptors (GT). Right, CryoAtom2-reconstructed receptors (CA2). Hits use the frozen correspondence with bidirectional coverage ≥0.3 and maximal geometric mean, without identity or docking requirements. Every blob is charged for all ligands; for small molecules, background blobs are charged and out-of-scope foreground blobs are skipped.' + ' ' + base_en)
+    fig.text(0.085, 0.97, 'Ligand detection across ranked candidates', fontsize=10.5, weight='bold', va='top')
+    fig.legend(handles=handles, loc='upper left', bbox_to_anchor=(0.075, 0.91), ncol=3, frameon=False, fontsize=7.5)
+    # Find-only使用候选数量解释, 不引入端到端测评的尝试计费术语; 数值与取整仍沿用冻结统计.
+    captions = (r'LigandSeek2-Find与Emap2lig-Find的配体实例检出比较。a–c，全配体，179个PDB、2,502个实例；d–f，单残基无缺失原子的有机小分子，77个PDB、446个实例。左、中列分别为LigandSeek2-Find使用沉积受体(GT)和CryoAtom2重建受体(CA2)，右列为Emap2lig-Find。候选与真实实例的双向覆盖均不低于$0.3$，并取几何平均最大的对应。横轴为依序考察的候选数相对于该PDB真实实例数的比例；$100\%$表示两者数量相同。全配体考察全部候选；小分子仅排除对应范围外真实配体的候选，保留背景候选。纵轴为检出的不同实例比例。绿线与圆点、蓝线与菱形分别表示PDB等权均值和中位数；灰点和小提琴表示$50\%$、$100\%$、$200\%$及$300\%$候选数量下的PDB分布。', r'Ligand-instance detection by LigandSeek2-Find and Emap2lig-Find. a–c, All ligands, comprising 179 PDBs and 2,502 instances. d–f, Single-residue organic small molecules with no missing atoms, comprising 77 PDBs and 446 instances. Left and middle, LigandSeek2-Find with deposited receptors (GT) and CryoAtom2-reconstructed receptors (CA2), respectively. Right, Emap2lig-Find. Each candidate is assigned to the instance with maximal geometric-mean coverage among pairs with bidirectional coverage of at least $0.3$. The x-axis shows the number of candidates examined relative to the reference instance count per PDB; $100\%$ denotes equal counts. All candidates are examined for all ligands. For small molecules, candidates corresponding to out-of-scope ligands are omitted, while background candidates remain. The y-axis shows the fraction of distinct instances detected. Green lines and circles show the PDB-equal mean, and blue lines and diamonds show the median. Grey points and violins show PDB distributions at relative candidate counts of $50\%$, $100\%$, $200\%$ and $300\%$.')
     save_figure(fig, '01_find_only', 'find-only-instance-completion', *captions, manifest)
 
     fig = plt.figure(figsize=(180 / 25.4, 145 / 25.4))
@@ -90,7 +91,7 @@ def main():
         draw_rmsd(ax, pair, pose, f"{domain}, {'Top-1 pose' if pose == 'top1' else 'Best of 50'}", chr(97 + index), bounds)
     fig.text(0.11, 0.98, 'Docking guided by predicted ligand regions', fontsize=10.5, weight='bold', va='top')
     gt, ca2 = data['pairs']['GT'], data['pairs']['CA2']
-    captions = (f"预测配体区域引导下的PocketXMol-tuned与Emap2lig-Build对接比较。a,b，沉积受体(GT)条件下LigandSeek2-Find与Emap2lig-Find共同命中的{gt['common_count']}个实例；c,d，CryoAtom2重建受体(CA2)条件下共同命中的{ca2['common_count']}个实例。RMSD分布分别包含{gt['numeric_count']}和{ca2['numeric_count']}个配对实例。PocketXMol-tuned以LigandSeek2-Find完整blob的质心选取15 Å中心口袋；Emap2lig-Build使用其Find产生的原生三维blob。两者均给定正确SMILES，以100步生成50个候选。左列为模型评分首选构象，右列为50个候选中的最低重原子RMSD。散点表示实例，箱体为25–75百分位，中线为中位数，须为5–95百分位。纵轴为对数刻度；细虚线表示2 Å和3 Å。", f"Docking performance of PocketXMol-tuned and Emap2lig-Build using predicted ligand regions. a,b, Deposited receptor (GT) comparison, comprising {gt['common_count']} instances detected by both LigandSeek2-Find and Emap2lig-Find. c,d, CryoAtom2-reconstructed receptor (CA2) comparison, comprising {ca2['common_count']} instances detected by both methods. The RMSD distributions contain {gt['numeric_count']} and {ca2['numeric_count']} paired instances, respectively. PocketXMol-tuned uses the full LigandSeek2-Find blob centroid to define a 15 Å centre pocket; Emap2lig-Build uses its native predicted three-dimensional blob. Both receive the correct SMILES and generate 50 candidates over 100 sampling steps. Left, model-ranked top-1 poses. Right, lowest heavy-atom RMSD among 50 candidates. Points represent instances, boxes span the 25th–75th percentiles, centre lines show medians and whiskers span the 5th–95th percentiles. The y-axis is logarithmic. Dashed lines mark 2 Å and 3 Å.")
+    captions = (rf"预测配体区域引导下的PocketXMol-tuned与Emap2lig-Build对接比较。a,b，沉积受体(GT)条件下LigandSeek2-Find与Emap2lig-Find共同命中的{gt['common_count']}个实例；c,d，CryoAtom2重建受体(CA2)条件下共同命中的{ca2['common_count']}个实例。RMSD分布分别包含{gt['numeric_count']}和{ca2['numeric_count']}个配对实例。PocketXMol-tuned以LigandSeek2-Find完整blob的质心选取$15\,\mathrm{{Å}}$中心口袋；Emap2lig-Build使用其Find产生的原生三维blob。两者均给定正确SMILES，以100步生成50个候选。左列为模型评分首选构象，右列为50个候选中的最低重原子RMSD。散点表示实例，箱体为25–75百分位，中线为中位数，须为5–95百分位。纵轴为对数刻度；细虚线表示$2\,\mathrm{{Å}}$和$3\,\mathrm{{Å}}$。", rf"Docking performance of PocketXMol-tuned and Emap2lig-Build using predicted ligand regions. a,b, Deposited receptor (GT) comparison, comprising {gt['common_count']} instances detected by both LigandSeek2-Find and Emap2lig-Find. c,d, CryoAtom2-reconstructed receptor (CA2) comparison, comprising {ca2['common_count']} instances detected by both methods. The RMSD distributions contain {gt['numeric_count']} and {ca2['numeric_count']} paired instances, respectively. PocketXMol-tuned uses the full LigandSeek2-Find blob centroid to define a $15\,\mathrm{{Å}}$ centre pocket; Emap2lig-Build uses its native predicted three-dimensional blob. Both receive the correct SMILES and generate 50 candidates over 100 sampling steps. Left, model-ranked top-1 poses. Right, lowest heavy-atom RMSD among 50 candidates. Points represent instances, boxes span the 25th–75th percentiles, centre lines show medians and whiskers span the 5th–95th percentiles. The y-axis is logarithmic. Dashed lines mark $2\,\mathrm{{Å}}$ and $3\,\mathrm{{Å}}$.")
     save_figure(fig, '02_predicted_pose', 'stage3-predicted-region-head-to-head', *captions, manifest)
 
     fig = plt.figure(figsize=(180 / 25.4, 222 / 25.4))
@@ -115,7 +116,7 @@ def main():
             fig.text(0.11, ax.get_position().y1 + 0.043, {'Emap2lig': 'Emap2lig', 'CA2': 'LigandSeek, CryoAtom2 receptor', 'GT': 'LigandSeek, deposited receptor'}[domain], fontsize=9.0, fontweight='bold', va='bottom')
     fig.text(0.11, 0.98, 'Find–Build completion with correct ligand identities', fontsize=10.5, weight='bold', va='top')
     fig.legend(handles=handles, loc='upper left', bbox_to_anchor=(0.10, 0.955), ncol=3, frameon=False, fontsize=7.5)
-    captions = ('假定身份匹配正确时单残基无缺失原子有机小分子的定位与建模完成度。各面板包含相同的77个PDB、446个实例。a–d，Emap2lig；e–h，CryoAtom2受体下的LigandSeek；i–l，沉积受体下的LigandSeek。每组上行为首选构象，下行为best-of-50；左、右列分别要求重原子RMSD严格<2 Å和<3 Å。所有已对应合格小分子的blob均给定正确SMILES；LigandSeek使用PocketXMol-tuned单次中心对接，Emap2lig使用原生blob引导。背景计费，真实范围外前景免费；未检出与失败实例保留分母。' + base_zh, 'Find–Build completion of single-residue organic small molecules with no missing atoms, assuming correct ligand identities. Every panel contains the same 77 PDBs and 446 instances. a–d, Emap2lig. e–h, LigandSeek with CryoAtom2 receptors. i–l, LigandSeek with deposited receptors. Within each group, top and bottom rows show top-1 and best-of-50 poses; left and right columns require heavy-atom RMSD strictly <2 Å and <3 Å. Every blob corresponding to an eligible small molecule receives the correct SMILES. LigandSeek uses single-pass PocketXMol-tuned centre docking, whereas Emap2lig uses its native guiding blob. Background blobs are charged, and out-of-scope foreground blobs are skipped. Undetected and failed instances remain in the denominator.' + ' ' + base_en)
+    captions = (r'假定身份匹配正确时单残基无缺失原子有机小分子的定位与建模完成度。各面板包含相同的77个PDB、446个实例。a–d，Emap2lig；e–h，CryoAtom2受体下的LigandSeek；i–l，沉积受体下的LigandSeek。每组上行为首选构象，下行为best-of-50；左、右列分别要求重原子RMSD严格$<2\,\mathrm{Å}$和$<3\,\mathrm{Å}$。所有已对应合格小分子的blob均给定正确SMILES；LigandSeek使用PocketXMol-tuned单次中心对接，Emap2lig使用原生blob引导。背景计费，真实范围外前景免费；未检出与失败实例保留分母。' + base_zh, r'Find–Build completion of single-residue organic small molecules with no missing atoms, assuming correct ligand identities. Every panel contains the same 77 PDBs and 446 instances. a–d, Emap2lig. e–h, LigandSeek with CryoAtom2 receptors. i–l, LigandSeek with deposited receptors. Within each group, top and bottom rows show top-1 and best-of-50 poses; left and right columns require heavy-atom RMSD strictly $<2\,\mathrm{Å}$ and $<3\,\mathrm{Å}$. Every blob corresponding to an eligible small molecule receives the correct SMILES. LigandSeek uses single-pass PocketXMol-tuned centre docking, whereas Emap2lig uses its native guiding blob. Background blobs are charged, and out-of-scope foreground blobs are skipped. Undetected and failed instances remain in the denominator.' + ' ' + base_en)
     save_figure(fig, '03_assume_matched', 'supp-find-correct-match-build', *captions, manifest)
     (BUILD / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print('Prepared three editable-source figure pages.')

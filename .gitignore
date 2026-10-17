@@ -18,6 +18,9 @@ __pycache__/
 画图/画图代码/stage1/*
 !画图/画图代码/stage1/ligandseek1_comparison/
 !画图/画图代码/stage1/ligandseek1_comparison/**
+!画图/画图代码/stage1/find_completion_20261017/
+!画图/画图代码/stage1/find_completion_20261017/assemble_data.py
+!画图/画图代码/stage1/find_completion_20261017/README.md
 !画图/画图代码/stage1/main_sixpanel_20260929/
 画图/画图代码/stage1/main_sixpanel_20260929/*
 !画图/画图代码/stage1/main_sixpanel_20260929/svg_to_scene.py

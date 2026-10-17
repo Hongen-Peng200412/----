@@ -27,6 +27,7 @@ def main():
         - sources/{GT,CA2,Emap2lig}/docking_results.jsonl: 每blob一条, matched_occurrence_id连接真实实例; pose_min_rmsd_A的1/50为原模型Top-1和best-of-50距离, 单位Å, 失败为None.
         - completion.json: 原24个panels, 逐PDB分母、精确预算曲线和分布不再重算.
         - sources/Emap2lig/find_metadata: inventory.json固定179/2502分母; per_pdb的原交集、区域大小、概率及选择标志沿用原对应; identities.jsonl与emap2lig_candidates.jsonl固定77/446小分子视图.
+        - 画图/formal/Stage1_find_completion_20261017/panels.json: Stage1全部小分子的94/821统计; 只追加论文面板, 不覆盖原Stage3视图.
     产物:
         - data.json: dict, panels为三域面板列表; pairs[GT/CA2]含共同实例数、配对数值实例及两模型统计.
         - paired_pose.csv: 共同命中的全部实例, 含两种模型的Top-1和best距离, 缺失为空, 不填替代数值.
@@ -87,6 +88,7 @@ def main():
         examined_counts[pdb] = examined
     small = make_panel('find_small_Emap2lig', 'find_small', 'Emap2lig', small_counts, small_successes, small_candidates, examined_counts, None, None)
     panels.extend([full, small])
+    panels.extend(json.loads((PROJECT / '画图/formal/Stage1_find_completion_20261017/panels.json').read_text(encoding='utf-8'))['panels'])
     pairs, table = {}, []
     for domain in ('GT', 'CA2'):
         common = sorted(direct[domain].keys() & direct['Emap2lig'].keys())  # 两套Find均命中的实例, 保留失败分母.

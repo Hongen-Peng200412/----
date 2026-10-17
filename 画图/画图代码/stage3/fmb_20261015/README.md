@@ -8,7 +8,7 @@
 
 ### data.json
 
-`assemble_data.py` 在 `画图/formal/fmb_20261015/` 写出此字典。`panels` 保留三个条件的原24个完成度面板，并加入从冻结Find记录派生的Emap2lig全配体／完整小分子Find-only面板，共26个。完整PDB分母、各预算分布和精确事件曲线沿用原汇总函数。`pairs.GT`、`pairs.CA2` 各含：
+`assemble_data.py` 在 `画图/formal/fmb_20261015/` 写出此字典。`panels` 保留三个条件的原24个完成度面板、既有Emap2lig全配体／Stage3小分子两个面板，并追加Stage1全部小分子的三个面板，共29个。Fig.4下排只读取新增的`find_stage1_small`，不使用旧`find_small`。完整PDB分母、各预算分布和精确事件曲线沿用原汇总函数。`pairs.GT`、`pairs.CA2` 各含：
 
 - `common_count`：两种 Find 共同命中的实例总数。
 - `all_rows`：共同命中实例列表，按 PDB 和原 occurrence 编号连接。`tuned_blob`、`emap_blob` 保留各自来源 blob 编号；四项距离为模型 Top-1 与 best-of-50 的世界坐标 RMSD，单位 Å，失败为 `null`。
@@ -20,11 +20,11 @@
 
 ### 完成度面板
 
-新增两个Emap2lig Find-only面板的输入位于`sources/Emap2lig/find_metadata/`：`inventory.json`固定179个PDB／2502实例；`per_pdb/<pdb>.npz`共179份，保存原交集矩阵、两类区域体素数、实例编号、原生blob编号、概率均值和选择标志；`identities.jsonl`和`emap2lig_candidates.jsonl`固定77个PDB／446个完整小分子及其全部候选。`sources.json`保存上述182份文件的服务器原位置、字节数和SHA256；没有重新运行Find或Build。
+既有两个Emap2lig Find-only面板的输入位于`sources/Emap2lig/find_metadata/`：`inventory.json`固定179个PDB／2502实例；`per_pdb/<pdb>.npz`共179份，保存原交集矩阵、两类区域体素数、实例编号、原生blob编号、概率均值和选择标志；`identities.jsonl`和`emap2lig_candidates.jsonl`固定77个PDB／446个完整小分子及其全部候选。`sources.json`保存上述182份文件的服务器原位置、字节数和SHA256；没有重新运行Find或Build。
 
-全配体对应直接调用Matcher既有`_target_from_intersections`，保留双向覆盖不低于0.3、最大几何均值及并列时较小原实例编号。完整小分子使用已冻结的`target_scope`与`matched_occurrence_id`。两类图均调用AdaLigand既有`make_panel`汇总，不引入第二套计数算法。Find-only图内横轴使用`Relative candidate count (%)`，表示依序考察的候选数相对于真实实例数的比例；小分子序列只排除对应范围外真实配体的候选，背景保留。
+全配体对应直接调用Matcher既有`_target_from_intersections`，保留双向覆盖不低于0.3、最大几何均值及并列时较小原实例编号。旧Stage3小分子面板使用已冻结的`target_scope`与`matched_occurrence_id`。既有两类面板均调用AdaLigand既有`make_panel`汇总，不引入第二套计数算法。Find-only图内横轴使用`Relative candidate count (%)`，表示依序考察的候选数相对于真实实例数的比例；小分子序列只排除对应范围外真实配体的候选，背景保留。
 
-完成度为一个 PDB 中已经成功处理的不同实例数除以该 PDB 的目标实例数 N；相对预算 ρ 对应向下取整的 floor(ρN) 次计费尝试。小分子面板固定 77 个 PDB、446 个实例，全配体 Find-only 固定 179 个 PDB、2,502 个实例，未检出和零候选 PDB 保留。均值和中位数均在完整 PDB 轴上计算，均值为 PDB 等权宏平均。
+Stage1全部小分子的统计来自`../../stage1/find_completion_20261017/assemble_data.py`，数据为`画图/formal/Stage1_find_completion_20261017/panels.json`，固定94个PDB、821个实例；不限制单残基、原子完整性、Match或对接结果。完成度为一个PDB中检出的不同实例数除以其目标实例数。旧`find_small`、`assume`与`actual`仍固定77个PDB、446个Stage3实例；全配体Find-only固定179个PDB、2,502个实例。相对数量沿既有取整方式确定，未检出和零候选PDB保留。均值和中位数均在完整 PDB 轴上计算，均值为 PDB 等权宏平均。
 
 - `curve.budget_percent`、`curve.mean`、`curve.median`：长度相同的列表，依次为预算事件百分比、该事件后的平均完成比例和中位完成比例；绘图只转换比例单位，不重算事件。
 - `distributions["50"/"100"/"200"/"300"]`：相应预算下每 PDB 一条记录；`pdb_id` 定位 PDB，`completion` 为 [0,1] 的完成比例。散点与小提琴使用同一分布。
@@ -36,7 +36,7 @@
 
 | 图标识 | 排列 | 科学内容 |
 |---|---|---|
-| `find-only-instance-completion` | 2行3列 | 全配体／小分子 × GT／CA2／Emap2lig，纯Find实例检出比较 |
+| `find-only-instance-completion` | 2行3列 | 全配体179／2502、全部小分子94／821 × GT／CA2／Emap2lig，纯Find实例检出比较 |
 | `stage3-predicted-region-head-to-head` | 2×2 | GT／CA2 两项共同命中比较，各有 Top-1 与 best-of-50 |
 | `supp-find-correct-match-build` | 2列6行 | Emap2lig、LigandSeek-CA2、LigandSeek-GT，各有 Top-1／best × 严格2／3 Å |
 
@@ -55,7 +55,7 @@
 
 ## 使用顺序
 
-从论文仓库根依次执行：
+先从论文仓库根运行`& D:/Anaconda/python.exe -B 画图/画图代码/stage1/find_completion_20261017/assemble_data.py`，再依次执行：
 
 ```powershell
 python 画图/画图代码/stage3/fmb_20261015/assemble_data.py

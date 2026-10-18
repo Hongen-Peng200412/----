@@ -1,0 +1,1 @@
+{"candidate_id": 0, "components": [{"auth_asym_id": "A", "auth_seq_id": 1201, "ccd_id": "1GC", "icode": "", "index": 1, "label_asym_id": "G", "label_seq_id": 1201}], "inter_bonds": [], "is_covalent": false, "kind": "CCD", "n_heavy_atoms": 31, "object_key": "CCD:1GC", "pdb_id": "9shy", "polymer_length": 1, "type_tag": "small_molecule"}

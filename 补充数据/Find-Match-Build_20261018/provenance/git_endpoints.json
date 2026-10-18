@@ -1,0 +1,112 @@
+{
+  "论文草稿": {
+    "repository": "C:\\Users\\15919\\Desktop\\论文草稿",
+    "head": "54aa38455678afedcfd71eabfd3f7d144242fef3",
+    "branch": "main",
+    "committed_code": [
+      {
+        "path": "画图/画图代码/stage1/find_completion_20261017/assemble_data.py",
+        "sha256": "efb85f387c23b22b7f507bf17ae4dfaa0b31aa2a8f67fb8b22846fb5364f2465"
+      },
+      {
+        "path": "画图/画图代码/stage3/fmb_20261015/assemble_data.py",
+        "sha256": "40b8595902da20c239ba9e8410d6834a0a195cc516cd5423f658f82bbfb345fd"
+      },
+      {
+        "path": "画图/画图代码/stage3/fmb_20261015/plot.py",
+        "sha256": "fe38cc7da073bcae556c65c6b1d7befffd7a13470752d50162159948d0ff2b2a"
+      },
+      {
+        "path": "画图/画图代码/stage3/fmb_20261015/svg_shapes.py",
+        "sha256": "e65e62a4172191d157373a664a8cd1c782aef318f47fc6acea24b038f321f9e7"
+      },
+      {
+        "path": "画图/画图代码/stage3/fmb_20261015/assemble.mjs",
+        "sha256": "bbbc1c82633177247a387bd7e670008e5ccf7f1c8d0a35d0dcc0fc1de62c7f18"
+      },
+      {
+        "path": "画图/画图代码/stage3/fmb_20261015/ppt_metadata.py",
+        "sha256": "d98475be0c43b3064e8d4e5f26ad2537b22b2a94a993df437850d036858b1c46"
+      }
+    ],
+    "reviewed_ppt": {
+      "commit": "dc8818b",
+      "path": "画图/Find-Match-Build公平对比.pptx",
+      "sha256": "fd9294134a70527a05ebf1d53aa53f7afdefc95d5555ae464ebb8e7db218d45e",
+      "status": "2026-10-17验收版；当前工作区PPT为作者后续编辑，不在本次提交内"
+    },
+    "authoring_rule": "main是作者当前写作进度；不合并旧实验分支、不恢复旧正文；潜在选图方向不是最终决定",
+    "research_branch": "codex/fig4-stage1-small-molecules"
+  },
+  "AdaLigand": {
+    "repository": "C:\\Users\\15919\\Desktop\\AdaLigand",
+    "head": "ec91aa11859608164f662e31ce81b96f8b9fc0a5",
+    "branch": "Learn/CUMULATIVE",
+    "committed_code": [
+      {
+        "path": "ligandseek_pipeline/run.py",
+        "sha256": "1360a588ef0a6cd662b69e72cedb9d3fd270d54f4cb9b165bd95dd8e418bc238"
+      },
+      {
+        "path": "ligandseek_pipeline/find.py",
+        "sha256": "f94126058f107f1a2914656bad7635b20e9a3c57a68b3b927bb40b65462a6a01"
+      },
+      {
+        "path": "ligandseek_pipeline/match.py",
+        "sha256": "8335c1a5038f3d4113b8dd70bde88590b00cae2fb51eedaa6a5578816910af80"
+      },
+      {
+        "path": "ligandseek_pipeline/build.py",
+        "sha256": "249259fa5f71187275b5c7e4d0a3e7eff85e78f227b8707da84a3b513e478594"
+      },
+      {
+        "path": "ligandseek_pipeline/evaluate.py",
+        "sha256": "e382be7480dead0ebb336606b6c50ec6c9684b509bf90fdb456d9896dd98d400"
+      },
+      {
+        "path": "ligandseek_pipeline/completion.py",
+        "sha256": "d1a688e721285f19e6ea8b55c15a3417fdd7c7aab9341fdffbea63d8a1a26a7c"
+      },
+      {
+        "path": "ligandseek_pipeline/artifacts.py",
+        "sha256": "22d97b645237f1b86219641961e4af7b572625355f7b2dab9c78c3934f9194a0"
+      }
+    ]
+  },
+  "Emap2lig": {
+    "repository": "C:\\Users\\15919\\Desktop\\Emap2lig",
+    "head": "7a08a1246b6a19cf9be2ed7c882ab1da879c82eb",
+    "branch": "Learn/CUMULATIVE",
+    "committed_code": [
+      {
+        "path": "测试Find出来的Build/main-code/run_build.py",
+        "sha256": "93d10f1f9f049e2cd2d411f7727b003a43e0900b7f410ed03719d90c04b63c8b"
+      },
+      {
+        "path": "测试Find出来的Build/main-code/evaluate_build.py",
+        "sha256": "3d61c896c50e64f5a8c048441a75d142af8af3eec316dcd1b62585bd9c9b786d"
+      }
+    ]
+  },
+  "PocketXMol": {
+    "repository": "C:\\Users\\15919\\Desktop\\PocketXMol",
+    "head": "b22ebfb862354c2c121623d7dcf0c192b9b2a830",
+    "branch": "Learn/CUMULATIVE"
+  },
+  "Matcher": {
+    "repository": "C:\\Users\\15919\\Desktop\\Matcher",
+    "head": "b0e23a7651579aa67074c5410ebaa4e96719328b",
+    "branch": "Learn/CUMULATIVE",
+    "committed_code": [
+      {
+        "path": "test_smallmolecule/build_manifest.py",
+        "sha256": "3373bff5ac38ea61c3084100b950953f78fdba519dc08d10cbe8af309e1421ca"
+      }
+    ]
+  },
+  "Pocket_Plus": {
+    "repository": "C:\\Users\\15919\\Desktop\\Pocket_Plus",
+    "head": "52cafbd4b1a3ceb7e014ad3ff492ddf79c6a7d59",
+    "branch": "Learn/CUMULATIVE"
+  }
+}

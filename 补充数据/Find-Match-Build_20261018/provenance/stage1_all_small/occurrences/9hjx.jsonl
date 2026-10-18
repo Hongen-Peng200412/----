@@ -1,0 +1,1 @@
+{"candidate_id": 0, "components": [{"auth_asym_id": "B", "auth_seq_id": 500, "ccd_id": "NAP", "icode": "", "index": 1, "label_asym_id": "G", "label_seq_id": 500}], "inter_bonds": [], "is_covalent": false, "kind": "CCD", "n_heavy_atoms": 48, "object_key": "CCD:NAP", "pdb_id": "9hjx", "polymer_length": 1, "type_tag": "small_molecule"}

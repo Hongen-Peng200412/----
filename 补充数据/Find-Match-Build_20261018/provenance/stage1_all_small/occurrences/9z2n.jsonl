@@ -1,0 +1,1 @@
+{"candidate_id": 0, "components": [{"auth_asym_id": "A", "auth_seq_id": 801, "ccd_id": "SAH", "icode": "", "index": 1, "label_asym_id": "C", "label_seq_id": 801}], "inter_bonds": [], "is_covalent": false, "kind": "CCD", "n_heavy_atoms": 26, "object_key": "CCD:SAH", "pdb_id": "9z2n", "polymer_length": 1, "type_tag": "small_molecule"}

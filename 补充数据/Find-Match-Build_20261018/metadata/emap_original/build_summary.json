@@ -1,0 +1,13 @@
+{
+  "denominator": 243,
+  "statuses": {
+    "build_filter_failed": 6,
+    "complete": 237
+  },
+  "top1_lt2A": 134,
+  "top1_lt3A": 200,
+  "top5_lt2A": 166,
+  "top5_lt3A": 211,
+  "best_lt2A": 194,
+  "best_lt3A": 219
+}

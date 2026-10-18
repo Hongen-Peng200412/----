@@ -1,0 +1,30 @@
+[
+  {
+    "file": "论文草稿.nature.docx",
+    "sha256": "ffe58080ac1397aacd6f2fbd328ea297c5a73a56205034ae5c9fa03610a23828",
+    "figures": 17,
+    "fig4_native_math": 6,
+    "only_fig4_image_changed": true
+  },
+  {
+    "file": "论文草稿.operation.docx",
+    "sha256": "2ecdb7bcfee3a465c9c4b4b8dab16dd418bf93a47cbb1003b70a37755472c56c",
+    "figures": 17,
+    "fig4_native_math": 6,
+    "only_fig4_image_changed": true
+  },
+  {
+    "file": "draft.nature.docx",
+    "sha256": "398d17fd20596891483cddcc808dd262ee34aef8f44c901ce787f2bd1fc70386",
+    "figures": 17,
+    "fig4_native_math": 6,
+    "only_fig4_image_changed": true
+  },
+  {
+    "file": "draft.operation.fmb.docx",
+    "sha256": "317489fbe5a3482be04df0e53e71c73a0fef1bd6fb19d6d8d51feefd1f00ddab",
+    "figures": 17,
+    "fig4_native_math": 6,
+    "only_fig4_image_changed": true
+  }
+]

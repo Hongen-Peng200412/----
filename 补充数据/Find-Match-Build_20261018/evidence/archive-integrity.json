@@ -1,0 +1,29 @@
+{
+  "copied_source_files": 140,
+  "source_bytes": 13011026,
+  "archive_sha_files": 145,
+  "source_copies_identical": true,
+  "json_jsonl_valid": true,
+  "panels": 29,
+  "stage1_small_pdbs": 94,
+  "stage1_small_instances": 821,
+  "paired_rows": 465,
+  "gt_common_numeric": [
+    235,
+    231
+  ],
+  "ca2_common_numeric": [
+    230,
+    228
+  ],
+  "author_files_and_index_preserved_before_staging": [
+    "paper",
+    "ada",
+    "emap",
+    "pocket"
+  ],
+  "no_models_or_server_actions": true,
+  "check_date": "2026-10-18",
+  "scope": "本次仅归档与handoff；不是作者当前稿件或PPT的重新验收",
+  "git_byte_preservation": "目录局部.gitattributes设置* -text；逐项核对Git索引字节"
+}

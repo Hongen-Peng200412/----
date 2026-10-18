@@ -1,0 +1,58 @@
+[
+  {
+    "panel_id": "assume_Emap2lig_pose1_rmsd2.0",
+    "scope": "assume",
+    "domain": "Emap2lig",
+    "pdb_count": 77,
+    "occurrence_count": 446,
+    "mean": 0.2668292746214824,
+    "median": 0.0,
+    "success_occurrence_count": 134,
+    "zero_completion_pdb_count": 46,
+    "full_completion_pdb_count": 13,
+    "raw_candidate_count": 30561,
+    "charged_attempt_count": 30531
+  },
+  {
+    "panel_id": "assume_Emap2lig_pose1_rmsd3.0",
+    "scope": "assume",
+    "domain": "Emap2lig",
+    "pdb_count": 77,
+    "occurrence_count": 446,
+    "mean": 0.4462709728943495,
+    "median": 0.2,
+    "success_occurrence_count": 200,
+    "zero_completion_pdb_count": 35,
+    "full_completion_pdb_count": 28,
+    "raw_candidate_count": 30561,
+    "charged_attempt_count": 30531
+  },
+  {
+    "panel_id": "assume_Emap2lig_pose50_rmsd2.0",
+    "scope": "assume",
+    "domain": "Emap2lig",
+    "pdb_count": 77,
+    "occurrence_count": 446,
+    "mean": 0.4193580589684486,
+    "median": 0.25,
+    "success_occurrence_count": 194,
+    "zero_completion_pdb_count": 36,
+    "full_completion_pdb_count": 24,
+    "raw_candidate_count": 30561,
+    "charged_attempt_count": 30531
+  },
+  {
+    "panel_id": "assume_Emap2lig_pose50_rmsd3.0",
+    "scope": "assume",
+    "domain": "Emap2lig",
+    "pdb_count": 77,
+    "occurrence_count": 446,
+    "mean": 0.5142986522856653,
+    "median": 0.5,
+    "success_occurrence_count": 219,
+    "zero_completion_pdb_count": 28,
+    "full_completion_pdb_count": 33,
+    "raw_candidate_count": 30561,
+    "charged_attempt_count": 30531
+  }
+]

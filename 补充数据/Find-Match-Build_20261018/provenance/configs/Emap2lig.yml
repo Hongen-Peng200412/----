@@ -1,0 +1,72 @@
+# Emap2lig 条件的 Find–Build 配置：Find 产生原生区域，Build 使用给定的正确 SMILES 生成姿态。
+# 入口：python -m ligandseek_pipeline <本文件路径>。run.py::run_pipeline 将配置交给各阶段读取。
+# 顶层 stages 描述运行环境，find/match/build/evaluate 分别描述组件输入和计算参数。
+
+# --- 产物根与输入条件 ---
+# run.py::run_pipeline 保存配置副本；各阶段在同一 root 下读取和发布文件。
+root: /storage/penghongen/Adaligand_E2E/test/test_0  # str，Find、Match、Build 和评价的统一产物根
+domain: Emap2lig  # str，GT 为沉积受体，CA2 为 CryoAtom2 受体，Emap2lig 为官方 Find/Build 组件
+candidate_file: /storage/penghongen/Adaligand_E2E/test/test_0/inputs/stage3/emap2lig_candidates.jsonl  # str，区域候选 JSONL；包含 blob 编号、世界中心、真实对应及 Stage3 范围
+
+# --- 各阶段的解释器、代码和环境 ---
+# run.py::run_pipeline 按 find → match → build → evaluate 启动子进程。
+# project_root 同时作为工作目录和 Python 导入根；每个阶段继承启动环境，再加入 environment。
+# OpenMP、MKL、OpenBLAS 的进程内线程数由 run_pipeline 设为 1。
+stages:
+  find:
+    python: /home/penghongen/anaconda3/envs/Emap2lig_find_py310_cu121/bin/python  # str，运行 ligandseek_pipeline.find 的解释器
+    project_root: /home/penghongen/Feedback/Emap2lig/releases/Emap2lig_d1e46744d92e/Emap2lig  # str，该组件的工作目录及 Python 导入根
+    environment: {}  # dict[str,str]，本阶段没有附加环境变量
+  match:  # run_pipeline 在 Emap2lig 条件下跳过此阶段
+    python: /home/penghongen/anaconda3/envs/Emap2lig_find_py310_cu121/bin/python  # str，运行 ligandseek_pipeline.match 的解释器
+    project_root: /home/penghongen/Feedback/Emap2lig/releases/Emap2lig_d1e46744d92e/Emap2lig  # str，该组件的工作目录及 Python 导入根
+    environment: {}  # dict[str,str]，本阶段没有附加环境变量
+  build:
+    python: /home/penghongen/anaconda3/envs/Emap2lig_find_py310_cu121/bin/python  # str，运行 ligandseek_pipeline.build 的解释器
+    project_root: /home/penghongen/Feedback/Emap2lig/releases/Emap2lig_d1e46744d92e/Emap2lig  # str，该组件的工作目录及 Python 导入根
+    environment:  # dict[str,str]，传给该阶段子进程的环境变量
+      CC: /home/penghongen/anaconda3/envs/Emap2lig_find_py310_cu121/bin/x86_64-conda-linux-gnu-gcc  # str，Emap2lig 原生依赖编译所用的 C 编译器
+  evaluate:
+    python: /home/penghongen/anaconda3/envs/Emap2lig_find_py310_cu121/bin/python  # str，运行 ligandseek_pipeline.evaluate 的解释器
+    project_root: /home/penghongen/Feedback/Emap2lig/releases/Emap2lig_d1e46744d92e/Emap2lig  # str，该组件的工作目录及 Python 导入根
+    environment: {}  # dict[str,str]，本阶段没有附加环境变量
+
+# --- Find 的已有结果与原生命令 ---
+# find.py::run_find 读取 completion_file；文件存在时复用结果，缺少时按 commands 顺序执行。
+# environment 在 Find 阶段环境的基础上加入，供下面的原生命令读取。
+find:
+  # 对应原生 Find 及其区域产物；概率、掩码和 blob 位于 find/Emap2lig/held_out_test_0/。
+  completion_file: /storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/complete.json  # str，Find 完成记录；存在即读取，缺少时执行 commands 后写出
+  environment: {}  # dict[str,str]，Find 原生命令沿用本阶段环境
+  # list[list[str]]，外层按顺序执行命令，内层为直接传给 subprocess.run 的参数列表。
+  # 每行将一个选项及其值放在一起；引号中的数字也是字符串命令参数。
+  commands:
+    # Emap2lig 官方 Find 和区域提取
+    - [
+        "/home/penghongen/anaconda3/envs/Emap2lig_find_py310_cu121/bin/python",  # 该命令实际启动的 Python 解释器
+        "/home/penghongen/Feedback/Emap2lig/releases/Emap2lig_d1e46744d92e/Emap2lig/复现Find/run_emap2lig_find_held_out.py",  # Emap2lig-Find 原入口脚本
+        "--pdb-json", "/storage/penghongen/AdaLigand/held_out/split/held_out_06_chain/test_0.json",  # 完整测试 PDB 清单
+        "--pair-list-jsonl", "/storage/penghongen/AdaLigand/Ori_Data/raw/pair_list.jsonl",  # PDB 与 EMDB 的原始配对表
+        "--map-root", "/storage/penghongen/AdaLigand/Ori_Data/raw/emdb_maps",  # 原始实验密度地图目录
+        "--output-root", "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig",  # 该 Find 组件的产物根
+        "--gpu", "0",  # Emap2lig-Find 使用的可见 GPU 编号；命令参数保存为字符串
+        "--detection-batch-size", "16"  # Emap2lig-Find 检测前向批量；命令参数保存为字符串
+      ]
+
+# --- Build 的请求、模型和采样 ---
+# build.py::run_build 按候选编号查找 result.json，已有结果直接复用，其余交给原采样器。
+# known 使用 Stage3 对应实例的精确 SMILES；match 使用 Matcher 的预测身份并按类别选择小分子。
+build:
+  identity_source: known  # str，化学身份来源；known 取 target_smiles，match 取 predicted_smiles
+  output_root: /storage/penghongen/Adaligand_E2E/test/test_0/build/Emap2lig  # str，该模型和输入条件的 Build 产物根
+  num_candidates: 50  # int，传给模型 predict_args.multiplicity；原 run_one 同样固定为 50
+  num_steps: 100  # int，传给模型 num_sampling_steps；原 run_one 同样固定为 100
+  native_adapter_root: /home/penghongen/Feedback/Emap2lig/releases/Emap2lig_d1e46744d92e/Emap2lig/测试Find出来的Build/main-code  # str，导入 Emap2lig 原 run_build 和 evaluate_build 的目录
+  # 配对清单中的 occurrence_id 是真实实例编号，blob_id 是 Find 原生区域编号。
+  native_subset: /storage/penghongen/Adaligand_E2E/test/test_0/build/Emap2lig/find_hit_subset.jsonl  # str，原 Find 命中配对 JSONL；以 pdb_id + blob_id 查原生 blob、精确 SMILES 和输入筛选状态
+
+# --- CPU 姿态评价与完成度汇总 ---
+# evaluate.py::evaluate_candidate 读取已有姿态和指标；evaluate_pipeline 汇总完整候选轨迹。
+evaluate:
+  workers: 16  # int，ProcessPoolExecutor 的逐 blob CPU 评价进程数；主进程按输入顺序组装结果
+  smiles_coords_root: /storage/penghongen/AdaLigand/Ori_Data/smiles_assets/SMILE_coords/v1  # str，记录共享 RMSD 坐标包位置；当前 Emap2lig 评价器实际读取 paths.TRUTH_COORDS

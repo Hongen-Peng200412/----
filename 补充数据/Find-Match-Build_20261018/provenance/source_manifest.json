@@ -1,0 +1,1107 @@
+{
+  "date": "2026-10-18",
+  "scientific_content": "已验收统计与元数据快照；图文展示由作者在main继续调整",
+  "repeated_model_inference": false,
+  "server_mutation": false,
+  "files": [
+    {
+      "file": "metadata/figure_data/data.json",
+      "bytes": 4502604,
+      "sha256": "535479a1a5f86a9978a14703babadafa646cd95529b0144a7335a98ca9645815",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\data.json",
+      "role": "29个面板及共同命中姿态比较的已验收数据"
+    },
+    {
+      "file": "metadata/figure_data/summary.json",
+      "bytes": 18438,
+      "sha256": "17db5dcca6dc7faf7c82dbd1cfc7c1c172430caf77cbd9f282b6f14d3393f36d",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\summary.json",
+      "role": "29个面板及共同命中姿态比较的已验收数据"
+    },
+    {
+      "file": "metadata/figure_data/paired_pose.csv",
+      "bytes": 43248,
+      "sha256": "b96b5901b7c9a6fed31ad0cfe5b9667b43e191a85777b9821715431249245ada",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\paired_pose.csv",
+      "role": "29个面板及共同命中姿态比较的已验收数据"
+    },
+    {
+      "file": "metadata/pipeline/GT/completion.json",
+      "bytes": 1385802,
+      "sha256": "50ef9ac06132404a911fba1df59880e9b0f19cac886eb86bed642f7dfef2ab3b",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\GT\\completion.json",
+      "role": "统一管线已完成的逐blob姿态或完成度事实",
+      "server_source": "/storage/penghongen/Adaligand_E2E/test/test_0/evaluation/GT/completion.json"
+    },
+    {
+      "file": "metadata/pipeline/GT/docking_results.jsonl",
+      "bytes": 128881,
+      "sha256": "71d351f8fa798f32087926179c1233e60fa0bfb869cb95316d2d96f3d2be9488",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\GT\\docking_results.jsonl",
+      "role": "统一管线已完成的逐blob姿态或完成度事实",
+      "server_source": "/storage/penghongen/Adaligand_E2E/test/test_0/evaluation/GT/docking_results.jsonl"
+    },
+    {
+      "file": "metadata/pipeline/GT/summary.json",
+      "bytes": 3752,
+      "sha256": "832cf8c6410826b7ec29905c9b9f9da5651ddace0a3c19b533fb7be205600299",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\GT\\summary.json",
+      "role": "统一管线已完成的逐blob姿态或完成度事实",
+      "server_source": "/storage/penghongen/Adaligand_E2E/test/test_0/evaluation/GT/summary.json"
+    },
+    {
+      "file": "metadata/pipeline/CA2/completion.json",
+      "bytes": 1384320,
+      "sha256": "26fbe691757e46683b31045ffa0bfcae2cb56d6a33bd26e9fab83cd6c87c67b6",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\CA2\\completion.json",
+      "role": "统一管线已完成的逐blob姿态或完成度事实",
+      "server_source": "/storage/penghongen/Adaligand_E2E/test/test_0/evaluation/CA2/completion.json"
+    },
+    {
+      "file": "metadata/pipeline/CA2/docking_results.jsonl",
+      "bytes": 124522,
+      "sha256": "d73d7acceb52cfcca3320f10407734ff762e0ff364b528faddf3885ef2145d12",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\CA2\\docking_results.jsonl",
+      "role": "统一管线已完成的逐blob姿态或完成度事实",
+      "server_source": "/storage/penghongen/Adaligand_E2E/test/test_0/evaluation/CA2/docking_results.jsonl"
+    },
+    {
+      "file": "metadata/pipeline/CA2/summary.json",
+      "bytes": 3816,
+      "sha256": "8f1f8af535d9484dc89e56eacb142011ac6c3b479dfa1e022703a099fa6f6172",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\CA2\\summary.json",
+      "role": "统一管线已完成的逐blob姿态或完成度事实",
+      "server_source": "/storage/penghongen/Adaligand_E2E/test/test_0/evaluation/CA2/summary.json"
+    },
+    {
+      "file": "metadata/pipeline/Emap2lig/completion.json",
+      "bytes": 407033,
+      "sha256": "143228f7795d8aeb69ad17b14fa748b9d87ba744a3a2e2405cda590463bd0d18",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\Emap2lig\\completion.json",
+      "role": "统一管线已完成的逐blob姿态或完成度事实",
+      "server_source": "/storage/penghongen/Adaligand_E2E/test/test_0/evaluation/Emap2lig/completion.json"
+    },
+    {
+      "file": "metadata/pipeline/Emap2lig/docking_results.jsonl",
+      "bytes": 97912,
+      "sha256": "7b9547f1d477f7687490b5c5753a43fbb893a69e7754757a9c5e7a4557884701",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\Emap2lig\\docking_results.jsonl",
+      "role": "统一管线已完成的逐blob姿态或完成度事实",
+      "server_source": "/storage/penghongen/Adaligand_E2E/test/test_0/evaluation/Emap2lig/docking_results.jsonl"
+    },
+    {
+      "file": "metadata/pipeline/Emap2lig/summary.json",
+      "bytes": 1558,
+      "sha256": "fb64e1593c00ab1c8e669343401e68f0b9b60f367a612bc6a648fde512bf0d9b",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\Emap2lig\\summary.json",
+      "role": "统一管线已完成的逐blob姿态或完成度事实",
+      "server_source": "/storage/penghongen/Adaligand_E2E/test/test_0/evaluation/Emap2lig/summary.json"
+    },
+    {
+      "file": "metadata/stage1_all_small/panels.json",
+      "bytes": 459555,
+      "sha256": "a5bb97aeb23471b4ee7439436355ca5b3cfff0a0dcc26ee58e57c41e6f96900f",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\panels.json",
+      "role": "Stage1全部小分子94-PDB/821-instance统计"
+    },
+    {
+      "file": "metadata/stage1_all_small/summary.json",
+      "bytes": 2564,
+      "sha256": "a35edeb716b9d9fcc6601e52fdbfb687446cc00e90d88c5927f477856e01a2d5",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\summary.json",
+      "role": "Stage1全部小分子94-PDB/821-instance统计"
+    },
+    {
+      "file": "provenance/stage1_all_small/sources.json",
+      "bytes": 21315,
+      "sha256": "8570854debb0ad01a91cbb764689edc325425ba40fbf325cf5f51f076588cc34",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\sources.json",
+      "role": "原Stage1来源与94份实例类别文件的散列记录"
+    },
+    {
+      "file": "provenance/stage1_all_small/provenance.json",
+      "bytes": 658,
+      "sha256": "7b1ff06cd867d0195d3a615764cc95746beab5bbc22b50b85fb629c4b25584e5",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\provenance.json",
+      "role": "原Stage1来源与94份实例类别文件的散列记录"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/10tu.jsonl",
+      "bytes": 668,
+      "sha256": "98ec2f7179512f554332a7cc16481a7c8ad9f5863a6742881f95072fd3b5294b",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\10tu.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/10tu/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/11jb.jsonl",
+      "bytes": 26448,
+      "sha256": "ba9c4edf2e8a17be3b545ed35c77e06d17f088e1515a610a5bb592e5b9d28ede",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\11jb.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/11jb/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/21fy.jsonl",
+      "bytes": 668,
+      "sha256": "253d9151b136439a51bd85ff18c7ee9dfb6c4c7d0276a37963a1b817b8fb3477",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\21fy.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/21fy/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/21kr.jsonl",
+      "bytes": 3093,
+      "sha256": "50d3f308aa7864c66abc10bddb7fd1876ae221051e1919ae466a3a8ca3b5cd62",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\21kr.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/21kr/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/22rd.jsonl",
+      "bytes": 335,
+      "sha256": "1907744856b7a8ffa85feb45384c80c75c8e330f3e71e3922c6b5a9ef1ace1c9",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\22rd.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/22rd/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/23xk.jsonl",
+      "bytes": 670,
+      "sha256": "5fcf8d2d72f4320d0ac1f76b09aa016be39be11680d588d0abded0f42489c1b3",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\23xk.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/23xk/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/28ik.jsonl",
+      "bytes": 7612,
+      "sha256": "e76d6961d9496ba5615520ce926c2a3b76aee97ecdcd1f5ce00f13f62af98e8d",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\28ik.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/28ik/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/30ga.jsonl",
+      "bytes": 6556,
+      "sha256": "da3d9373c6c96c7c5012f3712264b9e2300d7a8456bf2664e3b9b8df2f1a42f0",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\30ga.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/30ga/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9bjj.jsonl",
+      "bytes": 6276,
+      "sha256": "3064bb020a89f344e04639260dfdf1c6aefe65847f206e327baddf7eb52687f9",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9bjj.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9bjj/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9dpi.jsonl",
+      "bytes": 670,
+      "sha256": "a072f393f45ad9f9563df973e61a10a46c2b4623e969e55d185c906c4162ea14",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9dpi.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9dpi/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9eeq.jsonl",
+      "bytes": 11916,
+      "sha256": "05fd306b42246f3d0121019e6bf0d08ee6317c39ae2320ffbee4f2669aa55117",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9eeq.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9eeq/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9h03.jsonl",
+      "bytes": 1318,
+      "sha256": "0204c73e173fd8a7f74bdd093064f72337a501672f42574171bd401f7bbde01e",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9h03.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9h03/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9h50.jsonl",
+      "bytes": 982,
+      "sha256": "ef5212b813def6f8e52c6f032ce3886b75887c2fd74f74c8740b7ebdb3318c72",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9h50.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9h50/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9hjq.jsonl",
+      "bytes": 678,
+      "sha256": "2f6cd1aaf2cd24f73138b6e31aa593d1dc44e41a4008621d559cdb46ce402bec",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9hjq.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9hjq/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9hjx.jsonl",
+      "bytes": 335,
+      "sha256": "b99356c6419a7597cffc8496d62435c422d44d48f8190f080a6127fec92820fe",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9hjx.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9hjx/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9hyu.jsonl",
+      "bytes": 83547,
+      "sha256": "14386e0ca95aed0be726169fa728150d19f7d9734394c55fd4e11fcf80403987",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9hyu.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9hyu/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9ian.jsonl",
+      "bytes": 1980,
+      "sha256": "497eabea921550f8d25ed7f29deaac05887c5468bceb95b3cea0f1a08e8087f2",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9ian.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ian/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9kpz.jsonl",
+      "bytes": 2345,
+      "sha256": "11e9bc04949ecd2ac379cdfecde6a0f1224f4bb131a578b3699e1e59b8ee17bb",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9kpz.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9kpz/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9l5i.jsonl",
+      "bytes": 2672,
+      "sha256": "20d2115cd7fcfb41eed8a7bb121a6d2ca9cd83b47f00a26ad7f6d30f7d2941ab",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9l5i.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9l5i/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9l76.jsonl",
+      "bytes": 1005,
+      "sha256": "eafad3c6cb47109394dd14528a338565db93dcd05bee4a4bb64cef6cebe9a4d9",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9l76.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9l76/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9lfa.jsonl",
+      "bytes": 339,
+      "sha256": "21894b037d0a3455d4eb01f10a5cbd77f98f72ef719f172fabc8d931a4737477",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9lfa.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9lfa/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9llg.jsonl",
+      "bytes": 1344,
+      "sha256": "2af7168d6604bbba082db3dbcd8e087ccdc62a1717fa09aaa5673b4c1b4f9901",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9llg.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9llg/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9lov.jsonl",
+      "bytes": 2943,
+      "sha256": "92cd159de6fff1dbea197004c0b65692e4db88eeaad69edb90d50a03cc451224",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9lov.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9lov/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9lqt.jsonl",
+      "bytes": 6038,
+      "sha256": "cf875539314c8ed0db4e6b59e61bb953f9310a8173dffe87c852b4457c66fa21",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9lqt.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9lqt/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9lw1.jsonl",
+      "bytes": 6682,
+      "sha256": "794d620748cd9c705c087c7fc4d0eed4b4f6a05527d3f2db4920456d2e7b9ea8",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9lw1.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9lw1/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9nal.jsonl",
+      "bytes": 1984,
+      "sha256": "f133bdcaa2de20a23e46edb897314823b2f9e496f620188120f05753c08fa642",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9nal.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9nal/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9nc9.jsonl",
+      "bytes": 3686,
+      "sha256": "6a45da6dbbf907e0f0ff27173ad1cf6e96f4b44a2d86e218df64361f3ac90a32",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9nc9.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9nc9/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9nnc.jsonl",
+      "bytes": 668,
+      "sha256": "61304742e2d5fa7a7c16d84790da59e98591ad475d0b5a0870167ef5fe8047e1",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9nnc.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9nnc/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9nvn.jsonl",
+      "bytes": 8692,
+      "sha256": "2957c5ad94640375aa2431782ec5630e7d678af556cfded2d2040a024b7670e1",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9nvn.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9nvn/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9nvs.jsonl",
+      "bytes": 1705,
+      "sha256": "02efbe6cc4c5cbd797e6180b79d6ceff758d90ea158229e909237ca6d6471e9a",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9nvs.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9nvs/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9o4e.jsonl",
+      "bytes": 9224,
+      "sha256": "c5a87d0c9c4075e63c630145708cb3d3000de38b7ad28029c6ead4cd932cb1d5",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9o4e.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9o4e/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9o8p.jsonl",
+      "bytes": 1950,
+      "sha256": "37b03d815a23d0f8ec1f1bc68473d017ce59c39116a023ad5fcb0a704e66b1ba",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9o8p.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9o8p/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9okp.jsonl",
+      "bytes": 2596,
+      "sha256": "3f62f8c585a795cb5457ded8d471ef01749dfae9d5b45e10ce2d1678c7f48978",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9okp.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9okp/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9oq7.jsonl",
+      "bytes": 5969,
+      "sha256": "0391ab1e135bf335e6b8035df2f1782ba9fb44fe1f3e5d1b117943716177f3ae",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9oq7.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9oq7/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9pqm.jsonl",
+      "bytes": 3938,
+      "sha256": "d3fc2a57bdb5c74e9bac2cb2617a678204dcad7f707b2969caa7994634959404",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9pqm.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9pqm/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9pxt.jsonl",
+      "bytes": 1333,
+      "sha256": "240c8796ab65ec3c830297d0eb2dd89750dcab9decc7023fbba0e8d9924ae5d0",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9pxt.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9pxt/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9q05.jsonl",
+      "bytes": 1685,
+      "sha256": "c85753e96d9edc33452e1826f27a5a6e5283bbc69e13cec28342256446f8f303",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9q05.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9q05/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9q0n.jsonl",
+      "bytes": 2692,
+      "sha256": "b119ee64344fe73452c3604ba2d53bf830a765b757789de4d02ac542ea169929",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9q0n.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9q0n/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9q16.jsonl",
+      "bytes": 337,
+      "sha256": "2f428cd8a86bd8a85a7d9b626974892014c895243472ef9376e74bb60ad2c827",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9q16.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9q16/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9q33.jsonl",
+      "bytes": 660,
+      "sha256": "c1daf7c2dda2d2592fb728272f727a407af7e341fd8cda54ba2deaa5d38bcfd0",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9q33.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9q33/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9qgy.jsonl",
+      "bytes": 1998,
+      "sha256": "a79f1dd3e8077b9a68a5c71eec9cabce536a0b0a6558b2a75e6553c8f3e7cf97",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9qgy.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qgy/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9qh7.jsonl",
+      "bytes": 2638,
+      "sha256": "7326227b95c989da272204152e2b4fb1a1450d2c86180f3f96abbf49260f81d6",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9qh7.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qh7/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9qhk.jsonl",
+      "bytes": 674,
+      "sha256": "6f65fa69f06d33bce16bace4c333dee48fe234f9b0d5541aa2f73629ffe59c3c",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9qhk.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qhk/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9qid.jsonl",
+      "bytes": 656,
+      "sha256": "bbb2bd480faa2f4fc8c4c1afa5e0aa75f4c0054f6117ac235c587d3209265d77",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9qid.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qid/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9qkz.jsonl",
+      "bytes": 977,
+      "sha256": "88e5f52ee6e74d86fae07b788fa1d849658f2d3a1048655d29c534ac081f79a3",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9qkz.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qkz/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9qru.jsonl",
+      "bytes": 1317,
+      "sha256": "f28b94e97e9088967235786f317056f89e2e3fee53bbea16a221676979640cd0",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9qru.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qru/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9qsx.jsonl",
+      "bytes": 339,
+      "sha256": "b56d05e427e1fd27a5406fc46c79a6faeba8570cabc3088d084d923ff43eb82d",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9qsx.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qsx/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9r2g.jsonl",
+      "bytes": 2345,
+      "sha256": "65513c57cc6e6249c53debc425fff63ce44211a41d07e3581cfde22780f011ef",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9r2g.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9r2g/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9r3d.jsonl",
+      "bytes": 337,
+      "sha256": "fe1b950a34b85114d3d4c14f2a868cd148b2997fb70af5aa36b3c568308c6ed4",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9r3d.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9r3d/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9r4i.jsonl",
+      "bytes": 2588,
+      "sha256": "91487a156c6313b782bb77f90f387b528b09acf0f8cbfac101546d3ad59e4b8d",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9r4i.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9r4i/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9r7l.jsonl",
+      "bytes": 1680,
+      "sha256": "176251e3bdde1a6dcd1c78ca9ad7c9a026ee096848b58eb8f88916e2c0e62861",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9r7l.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9r7l/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9r85.jsonl",
+      "bytes": 333,
+      "sha256": "f86f6ab874e6afad3cd8a2abb8b023adc7dd08fb2d2824113bd0f0c23484cb9d",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9r85.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9r85/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9rd8.jsonl",
+      "bytes": 2329,
+      "sha256": "b3da2dded3924bddfc7a9e1dd47f9da76bd74f75b2905e78e83e2573ef96ff80",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9rd8.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9rd8/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9rmi.jsonl",
+      "bytes": 2010,
+      "sha256": "5e6ab59f2b9c5240baebfe36b5b3cbef75791cddfd042d21ee27608d27524499",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9rmi.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9rmi/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9ryn.jsonl",
+      "bytes": 20210,
+      "sha256": "8b5484ee865694f8af733e14e5dffa44e0f178e650a735e6e5efde1f8f9cbacc",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9ryn.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ryn/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9s7j.jsonl",
+      "bytes": 2624,
+      "sha256": "f2045eafede8c8c47dbd574496837316fa8a0df9191c1db489b9cb737174e662",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9s7j.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9s7j/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9shy.jsonl",
+      "bytes": 337,
+      "sha256": "520e1aa40c232c8d3e943ed53c5586eed4c88afe745650c40a384e6bdcefcba9",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9shy.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9shy/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9ta3.jsonl",
+      "bytes": 3920,
+      "sha256": "0604c7e3d13367d07d9f1fed49698902ccbec7460c05e4ad55b92aedd521c542",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9ta3.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ta3/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9u3a.jsonl",
+      "bytes": 2680,
+      "sha256": "0be2b00f2304beb4d38fafe127908ba77260faa3d1669d0530150584581f967e",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9u3a.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9u3a/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9u7j.jsonl",
+      "bytes": 3938,
+      "sha256": "273b8134db70c988c785566e89e17732d2e78b6f603f4aaae9fc490d5f29ac41",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9u7j.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9u7j/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9ub7.jsonl",
+      "bytes": 6103,
+      "sha256": "e77b3f2ef1f658a6c770170a7c0418e153c4e2557d97a0a6c315b3eda9bee897",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9ub7.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ub7/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9ui6.jsonl",
+      "bytes": 4693,
+      "sha256": "ce369981e7d1b35b9f1a9afa2c95884497257efc02a5ce96f8db320bbd3385b8",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9ui6.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ui6/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9ujf.jsonl",
+      "bytes": 6574,
+      "sha256": "b63f4186c93190c48db9d9f3e272c191c8653dd443392218a46450c250d9a0bd",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9ujf.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ujf/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9up2.jsonl",
+      "bytes": 1004,
+      "sha256": "34dae573f0d54d0287b498a5f5ddc0e0ecd0956cd59a29dbd0b3b3158fec4390",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9up2.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9up2/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9uuh.jsonl",
+      "bytes": 1340,
+      "sha256": "f8a9af1dd314c18ebdc4ee003b6805db7841e4e09ea38584e62238ad211a1a0b",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9uuh.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9uuh/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9uur.jsonl",
+      "bytes": 991,
+      "sha256": "4c93bba948714967d2528262948380b2e0e4293c94a63c8c231caeda2ae495e2",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9uur.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9uur/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9uvz.jsonl",
+      "bytes": 660,
+      "sha256": "d67d0af065ce7471f3d178b4a5def8fcf856b6092c8bfac1eda9eeabe1e5b26f",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9uvz.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9uvz/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9uwi.jsonl",
+      "bytes": 1340,
+      "sha256": "6313b36ca19cbdb03839d4db3da72fec4fe05c90722e8ca560f5e5792480cf49",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9uwi.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9uwi/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9v7o.jsonl",
+      "bytes": 2261,
+      "sha256": "c6d7215f06d30f67d4ec2a5a06fe2c40bc10da54595e1fe5c8ea49446f3bfd98",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9v7o.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9v7o/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9vap.jsonl",
+      "bytes": 3003,
+      "sha256": "ca342b3859307b512b421f3c8ccec6cec7ba9f236c1ea3db90538258561bc92d",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9vap.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9vap/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9vc6.jsonl",
+      "bytes": 1326,
+      "sha256": "5d8b826fc8e66750f0428d0b529f7e422dbe05b6b6eec4f1e2cf8e8e430b16e4",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9vc6.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9vc6/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9vcu.jsonl",
+      "bytes": 335,
+      "sha256": "9ae64297754c00b5b95b1e0fc55d2e4ce1214e7098069d8c324c586bd2c45da6",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9vcu.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9vcu/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9vfi.jsonl",
+      "bytes": 5246,
+      "sha256": "453205edf4caa9d2584cd1ad901e63221f9d2d235464794d98f4b61755b9305f",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9vfi.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9vfi/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9vs4.jsonl",
+      "bytes": 674,
+      "sha256": "7175bdfe85852dc8f1bde413127a6eb961cc31f02c247ae1ec42ef4058f9274f",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9vs4.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9vs4/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9w0x.jsonl",
+      "bytes": 8722,
+      "sha256": "6b5d0b559b543f5657ecb5a1b218590c2be261d80bdd8cb42d5fa570066ea769",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9w0x.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9w0x/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9w7x.jsonl",
+      "bytes": 6074,
+      "sha256": "e7dc541a00b6250898141070beff8404318daec011fad278e87c620c91d1ab2a",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9w7x.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9w7x/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9wfu.jsonl",
+      "bytes": 1320,
+      "sha256": "aad5c1c85d2d58e2f1b886a496c8ec41df5c4f4c1aaa2fc90824852ead736b8b",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9wfu.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9wfu/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9wq3.jsonl",
+      "bytes": 2010,
+      "sha256": "7619a0378f634d9108221f9e0bb78a27752d417ef13ed217ed018e0d599ee9aa",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9wq3.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9wq3/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9wup.jsonl",
+      "bytes": 2696,
+      "sha256": "0ed10b2538a586e73b60cd76e86f466b60567b1ea298795a1f15a80a6307fdd2",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9wup.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9wup/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9x0x.jsonl",
+      "bytes": 4708,
+      "sha256": "bdcd8e662c56b1d8c8869ce05fb501327abcdabcf1b689f42cfd80c4fb4101eb",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9x0x.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9x0x/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9x1m.jsonl",
+      "bytes": 4582,
+      "sha256": "aab9f5ccb89c003afe15aaf8a245aaeccd88733ae2a54bdd3e55d46a5ff37c02",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9x1m.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9x1m/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9x29.jsonl",
+      "bytes": 674,
+      "sha256": "6bab35425d0092bc1ac112bdcba6b1606da47cbeb00428d53efb3b768caed230",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9x29.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9x29/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9xd0.jsonl",
+      "bytes": 1005,
+      "sha256": "fdfbd3d9479ca0061a4be2b65f7c4693b29f988986d9070077ab4b50bd499ecb",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9xd0.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9xd0/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9xzl.jsonl",
+      "bytes": 983,
+      "sha256": "5e8e13060257ba66bbb1acfaac91df489b5e74ed8544b1d01a53e1307bb95d27",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9xzl.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9xzl/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9z2n.jsonl",
+      "bytes": 335,
+      "sha256": "99279bc9a2ab09d1ba0d8f5a0c266db21ed83f6ea816b650572b3c11cc37d686",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9z2n.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9z2n/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9z2u.jsonl",
+      "bytes": 335,
+      "sha256": "13d073f8fabc90505ffe4feadaf79dda225e80d2272ad835abada40bb5a89d6c",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9z2u.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9z2u/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9z3d.jsonl",
+      "bytes": 335,
+      "sha256": "433d6e694d3bf61b4d2aa90b98a3196b4851c43f4006416d03d97084087bb6af",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9z3d.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9z3d/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9z6t.jsonl",
+      "bytes": 1340,
+      "sha256": "d13aa909e427a4835632062ac8330e5b78a1ab8a821dfe71d404c790982d0442",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9z6t.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9z6t/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9z6w.jsonl",
+      "bytes": 10062,
+      "sha256": "e2e7a0a26375ec9d2e2c4074f5f935d75fcc889915b657b59a4e478f2109ff83",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9z6w.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9z6w/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9zaw.jsonl",
+      "bytes": 676,
+      "sha256": "4de2105f5a81a3194fa32e2f3fa7d80e1ada5cbd82f5627a192711ee9ae6f3af",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9zaw.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9zaw/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9zdx.jsonl",
+      "bytes": 1320,
+      "sha256": "475aed36d974cc7b03d142959cd89d59b5b7d2e1ef85e22b89a994ede2489c50",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9zdx.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9zdx/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9zgf.jsonl",
+      "bytes": 979,
+      "sha256": "dfe1394bb3458ea50c5407fb97dcbc20dddbc0c8782b37d7e235f142cba281f0",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9zgf.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9zgf/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9zjz.jsonl",
+      "bytes": 660,
+      "sha256": "64824cf149408d292eee8e105abbbfe59d637a2bbdd1da957711966e6898d848",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9zjz.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9zjz/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/stage1_all_small/occurrences/9zkm.jsonl",
+      "bytes": 9461,
+      "sha256": "2b7697b69e0a5369ba5e94548e0097db61a4e0715efcda2d3ca631b054a68439",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\Stage1_find_completion_20261017\\sources\\occurrences\\9zkm.jsonl",
+      "role": "原类别实例记录；Stage1分母证据",
+      "server_source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9zkm/occurrences.jsonl"
+    },
+    {
+      "file": "provenance/find/sources.json",
+      "bytes": 51256,
+      "sha256": "48de5d1d556d76b363026aa1493dfd63874ed5891174a5c5d3423a0eebe708d4",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\Emap2lig\\find_metadata\\sources.json",
+      "role": "完整Find原始来源索引、179-PDB全配体轴或77-PDB Stage3身份轴"
+    },
+    {
+      "file": "provenance/find/inventory.json",
+      "bytes": 11452,
+      "sha256": "74730fd65109dd1a16cd7987683458e713eb8192c9f73bbc8f148b1bc1abd381",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\Emap2lig\\find_metadata\\inventory.json",
+      "role": "完整Find原始来源索引、179-PDB全配体轴或77-PDB Stage3身份轴"
+    },
+    {
+      "file": "provenance/find/identities.jsonl",
+      "bytes": 82146,
+      "sha256": "59bf62e2c361445ad545d17fe90ff87974afd9a40c4943c7b451bf7ab7662bca",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\formal\\fmb_20261015\\sources\\Emap2lig\\find_metadata\\identities.jsonl",
+      "role": "完整Find原始来源索引、179-PDB全配体轴或77-PDB Stage3身份轴"
+    },
+    {
+      "file": "metadata/emap_original/find_hit_subset.jsonl",
+      "bytes": 127197,
+      "sha256": "2e0b904eb4328af661e5287447e86ba835141c98cb4f6341220b9868200284f1",
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\测试Find出来的Build\\结果与日志\\正式产物\\find_hit_subset.jsonl",
+      "role": "第一次243实例Build及GT位点PocketXMol比较的原始结果，不冒充预测区域公平比较",
+      "server_source": "/storage/penghongen/Emap2lig/stage3_find_hit_build/find_hit_subset.jsonl"
+    },
+    {
+      "file": "metadata/emap_original/find_hit_summary.json",
+      "bytes": 341,
+      "sha256": "95d48cb43336f3036d0873c200c67ffb2dd8e1b8a99d6ed36fc57bbbd417f62f",
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\测试Find出来的Build\\结果与日志\\正式产物\\find_hit_summary.json",
+      "role": "第一次243实例Build及GT位点PocketXMol比较的原始结果，不冒充预测区域公平比较",
+      "server_source": "/storage/penghongen/Emap2lig/stage3_find_hit_build/find_hit_summary.json"
+    },
+    {
+      "file": "metadata/emap_original/build_occurrences.jsonl",
+      "bytes": 3233956,
+      "sha256": "824f94c0b0aa368e35943b4bbc02f24c4be0d6a7a35500e2ffc5b585adbcb171",
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\测试Find出来的Build\\结果与日志\\正式产物\\build_occurrences.jsonl",
+      "role": "第一次243实例Build及GT位点PocketXMol比较的原始结果，不冒充预测区域公平比较",
+      "server_source": "/storage/penghongen/Emap2lig/stage3_find_hit_build/build_occurrences.jsonl"
+    },
+    {
+      "file": "metadata/emap_original/build_summary.json",
+      "bytes": 215,
+      "sha256": "467e9036c86affdfb503bd9582da6fdc4de108471c7668f66e41e8491d1f6bb7",
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\测试Find出来的Build\\结果与日志\\正式产物\\build_summary.json",
+      "role": "第一次243实例Build及GT位点PocketXMol比较的原始结果，不冒充预测区域公平比较",
+      "server_source": "/storage/penghongen/Emap2lig/stage3_find_hit_build/build_summary.json"
+    },
+    {
+      "file": "metadata/emap_original/build_status.jsonl",
+      "bytes": 52873,
+      "sha256": "f5d9385b07e380f5e4196c4c1bae92a2d926d25afa514e14041b615dc7254e27",
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\测试Find出来的Build\\结果与日志\\正式产物\\build_status.jsonl",
+      "role": "第一次243实例Build及GT位点PocketXMol比较的原始结果，不冒充预测区域公平比较",
+      "server_source": "/storage/penghongen/Emap2lig/stage3_find_hit_build/build_status.jsonl"
+    },
+    {
+      "file": "metadata/emap_original/pocket_comparison.json",
+      "bytes": 405119,
+      "sha256": "f3df7e9a7034a3f28574d886da3f8971bab8cc153c7010e680c2bb95e590baed",
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\测试Find出来的Build\\结果与日志\\正式产物\\pocket_comparison.json",
+      "role": "第一次243实例Build及GT位点PocketXMol比较的原始结果，不冒充预测区域公平比较",
+      "server_source": "/storage/penghongen/Emap2lig/stage3_find_hit_build/pocket_comparison.json"
+    },
+    {
+      "file": "metadata/emap_original/SHA256SUMS",
+      "bytes": 531,
+      "sha256": "4851d70cb5b65b2a6b9af78cf5b0e649eb43971bd96bf33e7438591174d9761f",
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\测试Find出来的Build\\结果与日志\\正式产物\\SHA256SUMS",
+      "role": "第一次243实例Build及GT位点PocketXMol比较的原始结果，不冒充预测区域公平比较"
+    },
+    {
+      "file": "reference_logs/AdaLigand/总日志.md",
+      "bytes": 10753,
+      "sha256": "2ead5cc7cfa621e9adfacd3727d2c543d838dbc5471dfd2fe45e2c7202db487e",
+      "source": "C:\\Users\\15919\\Desktop\\AdaLigand\\测评数据代码\\端到端测评\\结果与日志\\总日志.md",
+      "git_commit": "ec91aa11859608164f662e31ce81b96f8b9fc0a5",
+      "role": "2026-10-16已提交历史日志；展示布局和Stage1小分子范围以本handoff纠偏为准"
+    },
+    {
+      "file": "reference_logs/AdaLigand/GT.md",
+      "bytes": 3753,
+      "sha256": "f942751ce5fba949b7efef15269a77bea1c4ae5ba28ea22baa01e8b68da3f06d",
+      "source": "C:\\Users\\15919\\Desktop\\AdaLigand\\测评数据代码\\端到端测评\\结果与日志\\GT.md",
+      "git_commit": "ec91aa11859608164f662e31ce81b96f8b9fc0a5",
+      "role": "2026-10-16已提交历史日志；展示布局和Stage1小分子范围以本handoff纠偏为准"
+    },
+    {
+      "file": "reference_logs/AdaLigand/CA2.md",
+      "bytes": 3755,
+      "sha256": "f93a08cc068a6dc01358b3b716873ef0a961dcef1af7907d1bea8cfd21d99d40",
+      "source": "C:\\Users\\15919\\Desktop\\AdaLigand\\测评数据代码\\端到端测评\\结果与日志\\CA2.md",
+      "git_commit": "ec91aa11859608164f662e31ce81b96f8b9fc0a5",
+      "role": "2026-10-16已提交历史日志；展示布局和Stage1小分子范围以本handoff纠偏为准"
+    },
+    {
+      "file": "reference_logs/AdaLigand/Emap2lig.md",
+      "bytes": 3293,
+      "sha256": "06977819c661a54a3ca26526ce385bcc3a742c1139f73076425f55d7b5667929",
+      "source": "C:\\Users\\15919\\Desktop\\AdaLigand\\测评数据代码\\端到端测评\\结果与日志\\Emap2lig.md",
+      "git_commit": "ec91aa11859608164f662e31ce81b96f8b9fc0a5",
+      "role": "2026-10-16已提交历史日志；展示布局和Stage1小分子范围以本handoff纠偏为准"
+    },
+    {
+      "file": "reference_logs/Emap2lig/总结果.md",
+      "bytes": 3149,
+      "sha256": "7f2cfa3dd6d4cde6e656848a2cb28c814f9ad6a5d7b6c56bfed485cb0d01dba4",
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\测试Find出来的Build\\结果与日志\\总结果.md",
+      "git_commit": "7a08a1246b6a19cf9be2ed7c882ab1da879c82eb",
+      "role": "2026-09-29原Build实验历史日志"
+    },
+    {
+      "file": "reference_logs/Emap2lig/Emap2lig结果 & 追溯性日志.md",
+      "bytes": 5999,
+      "sha256": "581b78b2467c053b71a4d23868ec06703654094bbe6fd54d2dd89b1777e73f23",
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\测试Find出来的Build\\结果与日志\\Emap2lig结果 & 追溯性日志.md",
+      "git_commit": "7a08a1246b6a19cf9be2ed7c882ab1da879c82eb",
+      "role": "2026-09-29原Build实验历史日志"
+    },
+    {
+      "file": "reference_logs/Emap2lig/PocketXmol系列的结果  & 追溯性日志 .md",
+      "bytes": 3169,
+      "sha256": "9663a7fdcb0e17fac8284ca2c421cdc227ff231a51b003137602023c47baab46",
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\测试Find出来的Build\\结果与日志\\PocketXmol系列的结果  & 追溯性日志 .md",
+      "git_commit": "7a08a1246b6a19cf9be2ed7c882ab1da879c82eb",
+      "role": "2026-09-29原Build实验历史日志"
+    },
+    {
+      "file": "provenance/configs/GT.yml",
+      "bytes": 12289,
+      "sha256": "a0f92249a528ac92c7ec4d645097e0c23c0c637a87dee15de3a22117528299ca",
+      "source": "C:\\Users\\15919\\Desktop\\AdaLigand\\测评数据代码\\端到端测评\\configs\\GT.yml",
+      "git_commit": "ec91aa11859608164f662e31ce81b96f8b9fc0a5",
+      "role": "实际正式组件路径、权重和科学预算；保存副本，不自动提交作业"
+    },
+    {
+      "file": "provenance/configs/CA2.yml",
+      "bytes": 12437,
+      "sha256": "03abceec4bcff7cdb976263ee8a4f8d695a60190e92b752742ffccaccf2b1644",
+      "source": "C:\\Users\\15919\\Desktop\\AdaLigand\\测评数据代码\\端到端测评\\configs\\CA2.yml",
+      "git_commit": "ec91aa11859608164f662e31ce81b96f8b9fc0a5",
+      "role": "实际正式组件路径、权重和科学预算；保存副本，不自动提交作业"
+    },
+    {
+      "file": "provenance/configs/Emap2lig.yml",
+      "bytes": 6481,
+      "sha256": "7b5eb812e369a4dc41e4a957d876247e3f87751fcbfaed543dc01a028b7a198b",
+      "source": "C:\\Users\\15919\\Desktop\\AdaLigand\\测评数据代码\\端到端测评\\configs\\Emap2lig.yml",
+      "git_commit": "ec91aa11859608164f662e31ce81b96f8b9fc0a5",
+      "role": "实际正式组件路径、权重和科学预算；保存副本，不自动提交作业"
+    },
+    {
+      "file": "evidence/fig4_20261017/membership-gate.json",
+      "bytes": 10951,
+      "sha256": "26bec5d3741099607a5efaf8d89f6654f559188a6443152dff0e27bee4247424",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\temp\\fig4_stage1_all_small_20261017\\membership-gate.json",
+      "role": "2026-10-17已完成的统计、PPT或Word验收；不作为作者当前工作稿验收"
+    },
+    {
+      "file": "evidence/fig4_20261017/result-gate.json",
+      "bytes": 342,
+      "sha256": "f09b33b02b0233952d6b7b88adb93feb9bf0c28c7521c88a5032cf8f9c03679e",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\temp\\fig4_stage1_all_small_20261017\\result-gate.json",
+      "role": "2026-10-17已完成的统计、PPT或Word验收；不作为作者当前工作稿验收"
+    },
+    {
+      "file": "evidence/fig4_20261017/synthetic-gate.json",
+      "bytes": 266,
+      "sha256": "57db9999a3ad2c363250bc0a3abc403c7b748ea71a9970cd279e05cf040de15e",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\temp\\fig4_stage1_all_small_20261017\\synthetic-gate.json",
+      "role": "2026-10-17已完成的统计、PPT或Word验收；不作为作者当前工作稿验收"
+    },
+    {
+      "file": "evidence/fig4_20261017/ppt-final-preservation.json",
+      "bytes": 138,
+      "sha256": "95328d1f0915bb6acf8048115b0c1c7f6c6be07c50d095c9999b40ad15259ca1",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\temp\\fig4_stage1_all_small_20261017\\ppt-final-preservation.json",
+      "role": "2026-10-17已完成的统计、PPT或Word验收；不作为作者当前工作稿验收"
+    },
+    {
+      "file": "evidence/fig4_20261017/ppt-native-structure.json",
+      "bytes": 716,
+      "sha256": "d4af1e83b965f1b3fb17d9dadaebe20d581d747467a31df5b7c5e0a976951dfa",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\temp\\fig4_stage1_all_small_20261017\\ppt-native-structure.json",
+      "role": "2026-10-17已完成的统计、PPT或Word验收；不作为作者当前工作稿验收"
+    },
+    {
+      "file": "evidence/fig4_20261017/word-structure.json",
+      "bytes": 879,
+      "sha256": "d7cf2f08dba87e2ad1f5193f14eca430b3c1268769b528859447c38f5a8e0d55",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\temp\\fig4_stage1_all_small_20261017\\word-structure.json",
+      "role": "2026-10-17已完成的统计、PPT或Word验收；不作为作者当前工作稿验收"
+    },
+    {
+      "file": "evidence/fig4_20261017/visual-qa.json",
+      "bytes": 371,
+      "sha256": "61649f260516afa157b666d63d15247cc37e5e957fd57ef7cd78cf5e62786fe9",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\temp\\fig4_stage1_all_small_20261017\\visual-qa.json",
+      "role": "2026-10-17已完成的统计、PPT或Word验收；不作为作者当前工作稿验收"
+    },
+    {
+      "file": "evidence/fig4_20261017/page-equivalence.json",
+      "bytes": 1210,
+      "sha256": "e2a8d7aedf73568c372579d848f03d4aa2feee0c50d34b4705c6b7da066f5117",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\temp\\fig4_stage1_all_small_20261017\\page-equivalence.json",
+      "role": "2026-10-17已完成的统计、PPT或Word验收；不作为作者当前工作稿验收"
+    },
+    {
+      "file": "evidence/figures_20261016/final-structure.json",
+      "bytes": 2418,
+      "sha256": "9c5437d68f8b98ecc0bf0d45bcc5ba67f30971f6fbd5e72758c79580a3c1dd5c",
+      "source": "C:\\Users\\15919\\Desktop\\论文草稿\\temp\\fmb_20261015\\final-structure.json",
+      "role": "2026-10-16八份Word及三页PPT已完成验收"
+    },
+    {
+      "file": "evidence/pipeline/git-equivalence.json",
+      "bytes": 5597,
+      "sha256": "ee0e1dd14e6f1021e521541c8d95dc42745e7f32cae4b095cc8111e69f38f54d",
+      "source": "C:\\Users\\15919\\Desktop\\AdaLigand\\tmp\\pipeline-test0-unification\\git-equivalence.json",
+      "role": "AdaLigand实现与学习端点等价证据"
+    }
+  ]
+}

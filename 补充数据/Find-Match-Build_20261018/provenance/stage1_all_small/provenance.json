@@ -1,0 +1,14 @@
+{
+  "stage1_statistics": {
+    "path": "画图\\formal\\Stage1_main_sixpanel_20260929\\data\\server_metrics_and_pr.json",
+    "sha256": "b08b95d7c4046cd3a94479216e278f9d62a0c0c912198abe0e02ff81efd9d62f"
+  },
+  "full_find_fields_container": {
+    "path": "画图\\formal\\E2E_accounting_20261004\\sources\\full_matcher.json",
+    "sha256": "2ddfb14c063c8cdbe1ffebeb7be9493ae6014d73bf6e6be9eaca1746cb85495d",
+    "read_identity_predictions": false
+  },
+  "emap_metadata_source_manifest": "画图/formal/fmb_20261015/sources/Emap2lig/find_metadata/sources.json",
+  "occurrence_source_manifest": "sources.json",
+  "repeated_model_inference": false
+}

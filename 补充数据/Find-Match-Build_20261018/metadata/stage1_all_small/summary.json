@@ -1,0 +1,110 @@
+[
+  {
+    "domain": "GT",
+    "pdb_count": 94,
+    "occurrence_count": 821,
+    "all_candidates_final": {
+      "mean": 0.743645597900917,
+      "median": 1.0,
+      "success_occurrence_count": 444,
+      "zero_completion_pdb_count": 10,
+      "full_completion_pdb_count": 58,
+      "raw_candidate_count": 918,
+      "charged_attempt_count": 829
+    },
+    "relative_candidate_count": {
+      "0": {
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "50": {
+        "mean": 0.2599511009085477,
+        "median": 0.3333333333333333
+      },
+      "100": {
+        "mean": 0.7052590730782221,
+        "median": 1.0
+      },
+      "200": {
+        "mean": 0.7210392149221936,
+        "median": 1.0
+      },
+      "300": {
+        "mean": 0.7330073000285766,
+        "median": 1.0
+      }
+    }
+  },
+  {
+    "domain": "CA2",
+    "pdb_count": 94,
+    "occurrence_count": 821,
+    "all_candidates_final": {
+      "mean": 0.6850862494479516,
+      "median": 1.0,
+      "success_occurrence_count": 418,
+      "zero_completion_pdb_count": 13,
+      "full_completion_pdb_count": 50,
+      "raw_candidate_count": 947,
+      "charged_attempt_count": 864
+    },
+    "relative_candidate_count": {
+      "0": {
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "50": {
+        "mean": 0.23791878924857646,
+        "median": 0.2967032967032967
+      },
+      "100": {
+        "mean": 0.5981976061763297,
+        "median": 0.6666666666666666
+      },
+      "200": {
+        "mean": 0.645724547320292,
+        "median": 0.8125
+      },
+      "300": {
+        "mean": 0.6850862494479516,
+        "median": 1.0
+      }
+    }
+  },
+  {
+    "domain": "Emap2lig",
+    "pdb_count": 94,
+    "occurrence_count": 821,
+    "all_candidates_final": {
+      "mean": 0.5420296606466819,
+      "median": 0.5833333333333333,
+      "success_occurrence_count": 333,
+      "zero_completion_pdb_count": 27,
+      "full_completion_pdb_count": 37,
+      "raw_candidate_count": 34567,
+      "charged_attempt_count": 34541
+    },
+    "relative_candidate_count": {
+      "0": {
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "50": {
+        "mean": 0.19089562919350156,
+        "median": 0.0
+      },
+      "100": {
+        "mean": 0.44180503302843727,
+        "median": 0.3333333333333333
+      },
+      "200": {
+        "mean": 0.496108914725936,
+        "median": 0.5
+      },
+      "300": {
+        "mean": 0.5155442666080964,
+        "median": 0.5
+      }
+    }
+  }
+]

@@ -1,0 +1,566 @@
+[
+  {
+    "pdb_id": "9lfa",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9lfa/occurrences.jsonl",
+    "sha256": "21894b037d0a3455d4eb01f10a5cbd77f98f72ef719f172fabc8d931a4737477",
+    "byte_count": 339
+  },
+  {
+    "pdb_id": "9bjj",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9bjj/occurrences.jsonl",
+    "sha256": "3064bb020a89f344e04639260dfdf1c6aefe65847f206e327baddf7eb52687f9",
+    "byte_count": 6276
+  },
+  {
+    "pdb_id": "9q33",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9q33/occurrences.jsonl",
+    "sha256": "c1daf7c2dda2d2592fb728272f727a407af7e341fd8cda54ba2deaa5d38bcfd0",
+    "byte_count": 660
+  },
+  {
+    "pdb_id": "9uuh",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9uuh/occurrences.jsonl",
+    "sha256": "f8a9af1dd314c18ebdc4ee003b6805db7841e4e09ea38584e62238ad211a1a0b",
+    "byte_count": 1340
+  },
+  {
+    "pdb_id": "23xk",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/23xk/occurrences.jsonl",
+    "sha256": "5fcf8d2d72f4320d0ac1f76b09aa016be39be11680d588d0abded0f42489c1b3",
+    "byte_count": 670
+  },
+  {
+    "pdb_id": "9ryn",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ryn/occurrences.jsonl",
+    "sha256": "8b5484ee865694f8af733e14e5dffa44e0f178e650a735e6e5efde1f8f9cbacc",
+    "byte_count": 20210
+  },
+  {
+    "pdb_id": "9wq3",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9wq3/occurrences.jsonl",
+    "sha256": "7619a0378f634d9108221f9e0bb78a27752d417ef13ed217ed018e0d599ee9aa",
+    "byte_count": 2010
+  },
+  {
+    "pdb_id": "9r7l",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9r7l/occurrences.jsonl",
+    "sha256": "176251e3bdde1a6dcd1c78ca9ad7c9a026ee096848b58eb8f88916e2c0e62861",
+    "byte_count": 1680
+  },
+  {
+    "pdb_id": "9nal",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9nal/occurrences.jsonl",
+    "sha256": "f133bdcaa2de20a23e46edb897314823b2f9e496f620188120f05753c08fa642",
+    "byte_count": 1984
+  },
+  {
+    "pdb_id": "9wfu",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9wfu/occurrences.jsonl",
+    "sha256": "aad5c1c85d2d58e2f1b886a496c8ec41df5c4f4c1aaa2fc90824852ead736b8b",
+    "byte_count": 1320
+  },
+  {
+    "pdb_id": "21fy",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/21fy/occurrences.jsonl",
+    "sha256": "253d9151b136439a51bd85ff18c7ee9dfb6c4c7d0276a37963a1b817b8fb3477",
+    "byte_count": 668
+  },
+  {
+    "pdb_id": "9nc9",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9nc9/occurrences.jsonl",
+    "sha256": "6a45da6dbbf907e0f0ff27173ad1cf6e96f4b44a2d86e218df64361f3ac90a32",
+    "byte_count": 3686
+  },
+  {
+    "pdb_id": "9w7x",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9w7x/occurrences.jsonl",
+    "sha256": "e7dc541a00b6250898141070beff8404318daec011fad278e87c620c91d1ab2a",
+    "byte_count": 6074
+  },
+  {
+    "pdb_id": "9dpi",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9dpi/occurrences.jsonl",
+    "sha256": "a072f393f45ad9f9563df973e61a10a46c2b4623e969e55d185c906c4162ea14",
+    "byte_count": 670
+  },
+  {
+    "pdb_id": "9qh7",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qh7/occurrences.jsonl",
+    "sha256": "7326227b95c989da272204152e2b4fb1a1450d2c86180f3f96abbf49260f81d6",
+    "byte_count": 2638
+  },
+  {
+    "pdb_id": "9nnc",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9nnc/occurrences.jsonl",
+    "sha256": "61304742e2d5fa7a7c16d84790da59e98591ad475d0b5a0870167ef5fe8047e1",
+    "byte_count": 668
+  },
+  {
+    "pdb_id": "9o4e",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9o4e/occurrences.jsonl",
+    "sha256": "c5a87d0c9c4075e63c630145708cb3d3000de38b7ad28029c6ead4cd932cb1d5",
+    "byte_count": 9224
+  },
+  {
+    "pdb_id": "9zaw",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9zaw/occurrences.jsonl",
+    "sha256": "4de2105f5a81a3194fa32e2f3fa7d80e1ada5cbd82f5627a192711ee9ae6f3af",
+    "byte_count": 676
+  },
+  {
+    "pdb_id": "9nvn",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9nvn/occurrences.jsonl",
+    "sha256": "2957c5ad94640375aa2431782ec5630e7d678af556cfded2d2040a024b7670e1",
+    "byte_count": 8692
+  },
+  {
+    "pdb_id": "9shy",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9shy/occurrences.jsonl",
+    "sha256": "520e1aa40c232c8d3e943ed53c5586eed4c88afe745650c40a384e6bdcefcba9",
+    "byte_count": 337
+  },
+  {
+    "pdb_id": "9r3d",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9r3d/occurrences.jsonl",
+    "sha256": "fe1b950a34b85114d3d4c14f2a868cd148b2997fb70af5aa36b3c568308c6ed4",
+    "byte_count": 337
+  },
+  {
+    "pdb_id": "9qgy",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qgy/occurrences.jsonl",
+    "sha256": "a79f1dd3e8077b9a68a5c71eec9cabce536a0b0a6558b2a75e6553c8f3e7cf97",
+    "byte_count": 1998
+  },
+  {
+    "pdb_id": "9wup",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9wup/occurrences.jsonl",
+    "sha256": "0ed10b2538a586e73b60cd76e86f466b60567b1ea298795a1f15a80a6307fdd2",
+    "byte_count": 2696
+  },
+  {
+    "pdb_id": "9s7j",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9s7j/occurrences.jsonl",
+    "sha256": "f2045eafede8c8c47dbd574496837316fa8a0df9191c1db489b9cb737174e662",
+    "byte_count": 2624
+  },
+  {
+    "pdb_id": "9r85",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9r85/occurrences.jsonl",
+    "sha256": "f86f6ab874e6afad3cd8a2abb8b023adc7dd08fb2d2824113bd0f0c23484cb9d",
+    "byte_count": 333
+  },
+  {
+    "pdb_id": "9uwi",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9uwi/occurrences.jsonl",
+    "sha256": "6313b36ca19cbdb03839d4db3da72fec4fe05c90722e8ca560f5e5792480cf49",
+    "byte_count": 1340
+  },
+  {
+    "pdb_id": "9hjq",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9hjq/occurrences.jsonl",
+    "sha256": "2f6cd1aaf2cd24f73138b6e31aa593d1dc44e41a4008621d559cdb46ce402bec",
+    "byte_count": 678
+  },
+  {
+    "pdb_id": "9okp",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9okp/occurrences.jsonl",
+    "sha256": "3f62f8c585a795cb5457ded8d471ef01749dfae9d5b45e10ce2d1678c7f48978",
+    "byte_count": 2596
+  },
+  {
+    "pdb_id": "9vcu",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9vcu/occurrences.jsonl",
+    "sha256": "9ae64297754c00b5b95b1e0fc55d2e4ce1214e7098069d8c324c586bd2c45da6",
+    "byte_count": 335
+  },
+  {
+    "pdb_id": "9vfi",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9vfi/occurrences.jsonl",
+    "sha256": "453205edf4caa9d2584cd1ad901e63221f9d2d235464794d98f4b61755b9305f",
+    "byte_count": 5246
+  },
+  {
+    "pdb_id": "9rd8",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9rd8/occurrences.jsonl",
+    "sha256": "b3da2dded3924bddfc7a9e1dd47f9da76bd74f75b2905e78e83e2573ef96ff80",
+    "byte_count": 2329
+  },
+  {
+    "pdb_id": "9q0n",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9q0n/occurrences.jsonl",
+    "sha256": "b119ee64344fe73452c3604ba2d53bf830a765b757789de4d02ac542ea169929",
+    "byte_count": 2692
+  },
+  {
+    "pdb_id": "9hyu",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9hyu/occurrences.jsonl",
+    "sha256": "14386e0ca95aed0be726169fa728150d19f7d9734394c55fd4e11fcf80403987",
+    "byte_count": 83547
+  },
+  {
+    "pdb_id": "9uur",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9uur/occurrences.jsonl",
+    "sha256": "4c93bba948714967d2528262948380b2e0e4293c94a63c8c231caeda2ae495e2",
+    "byte_count": 991
+  },
+  {
+    "pdb_id": "9q16",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9q16/occurrences.jsonl",
+    "sha256": "2f428cd8a86bd8a85a7d9b626974892014c895243472ef9376e74bb60ad2c827",
+    "byte_count": 337
+  },
+  {
+    "pdb_id": "9v7o",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9v7o/occurrences.jsonl",
+    "sha256": "c6d7215f06d30f67d4ec2a5a06fe2c40bc10da54595e1fe5c8ea49446f3bfd98",
+    "byte_count": 2261
+  },
+  {
+    "pdb_id": "9zdx",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9zdx/occurrences.jsonl",
+    "sha256": "475aed36d974cc7b03d142959cd89d59b5b7d2e1ef85e22b89a994ede2489c50",
+    "byte_count": 1320
+  },
+  {
+    "pdb_id": "9vc6",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9vc6/occurrences.jsonl",
+    "sha256": "5d8b826fc8e66750f0428d0b529f7e422dbe05b6b6eec4f1e2cf8e8e430b16e4",
+    "byte_count": 1326
+  },
+  {
+    "pdb_id": "9up2",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9up2/occurrences.jsonl",
+    "sha256": "34dae573f0d54d0287b498a5f5ddc0e0ecd0956cd59a29dbd0b3b3158fec4390",
+    "byte_count": 1004
+  },
+  {
+    "pdb_id": "9h03",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9h03/occurrences.jsonl",
+    "sha256": "0204c73e173fd8a7f74bdd093064f72337a501672f42574171bd401f7bbde01e",
+    "byte_count": 1318
+  },
+  {
+    "pdb_id": "9rmi",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9rmi/occurrences.jsonl",
+    "sha256": "5e6ab59f2b9c5240baebfe36b5b3cbef75791cddfd042d21ee27608d27524499",
+    "byte_count": 2010
+  },
+  {
+    "pdb_id": "9qkz",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qkz/occurrences.jsonl",
+    "sha256": "88e5f52ee6e74d86fae07b788fa1d849658f2d3a1048655d29c534ac081f79a3",
+    "byte_count": 977
+  },
+  {
+    "pdb_id": "9pqm",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9pqm/occurrences.jsonl",
+    "sha256": "d3fc2a57bdb5c74e9bac2cb2617a678204dcad7f707b2969caa7994634959404",
+    "byte_count": 3938
+  },
+  {
+    "pdb_id": "9qru",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qru/occurrences.jsonl",
+    "sha256": "f28b94e97e9088967235786f317056f89e2e3fee53bbea16a221676979640cd0",
+    "byte_count": 1317
+  },
+  {
+    "pdb_id": "9r2g",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9r2g/occurrences.jsonl",
+    "sha256": "65513c57cc6e6249c53debc425fff63ce44211a41d07e3581cfde22780f011ef",
+    "byte_count": 2345
+  },
+  {
+    "pdb_id": "10tu",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/10tu/occurrences.jsonl",
+    "sha256": "98ec2f7179512f554332a7cc16481a7c8ad9f5863a6742881f95072fd3b5294b",
+    "byte_count": 668
+  },
+  {
+    "pdb_id": "9z2n",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9z2n/occurrences.jsonl",
+    "sha256": "99279bc9a2ab09d1ba0d8f5a0c266db21ed83f6ea816b650572b3c11cc37d686",
+    "byte_count": 335
+  },
+  {
+    "pdb_id": "9w0x",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9w0x/occurrences.jsonl",
+    "sha256": "6b5d0b559b543f5657ecb5a1b218590c2be261d80bdd8cb42d5fa570066ea769",
+    "byte_count": 8722
+  },
+  {
+    "pdb_id": "11jb",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/11jb/occurrences.jsonl",
+    "sha256": "ba9c4edf2e8a17be3b545ed35c77e06d17f088e1515a610a5bb592e5b9d28ede",
+    "byte_count": 26448
+  },
+  {
+    "pdb_id": "9ta3",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ta3/occurrences.jsonl",
+    "sha256": "0604c7e3d13367d07d9f1fed49698902ccbec7460c05e4ad55b92aedd521c542",
+    "byte_count": 3920
+  },
+  {
+    "pdb_id": "9eeq",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9eeq/occurrences.jsonl",
+    "sha256": "05fd306b42246f3d0121019e6bf0d08ee6317c39ae2320ffbee4f2669aa55117",
+    "byte_count": 11916
+  },
+  {
+    "pdb_id": "9xd0",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9xd0/occurrences.jsonl",
+    "sha256": "fdfbd3d9479ca0061a4be2b65f7c4693b29f988986d9070077ab4b50bd499ecb",
+    "byte_count": 1005
+  },
+  {
+    "pdb_id": "9llg",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9llg/occurrences.jsonl",
+    "sha256": "2af7168d6604bbba082db3dbcd8e087ccdc62a1717fa09aaa5673b4c1b4f9901",
+    "byte_count": 1344
+  },
+  {
+    "pdb_id": "9kpz",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9kpz/occurrences.jsonl",
+    "sha256": "11e9bc04949ecd2ac379cdfecde6a0f1224f4bb131a578b3699e1e59b8ee17bb",
+    "byte_count": 2345
+  },
+  {
+    "pdb_id": "9vap",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9vap/occurrences.jsonl",
+    "sha256": "ca342b3859307b512b421f3c8ccec6cec7ba9f236c1ea3db90538258561bc92d",
+    "byte_count": 3003
+  },
+  {
+    "pdb_id": "9vs4",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9vs4/occurrences.jsonl",
+    "sha256": "7175bdfe85852dc8f1bde413127a6eb961cc31f02c247ae1ec42ef4058f9274f",
+    "byte_count": 674
+  },
+  {
+    "pdb_id": "9z6t",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9z6t/occurrences.jsonl",
+    "sha256": "d13aa909e427a4835632062ac8330e5b78a1ab8a821dfe71d404c790982d0442",
+    "byte_count": 1340
+  },
+  {
+    "pdb_id": "9ujf",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ujf/occurrences.jsonl",
+    "sha256": "b63f4186c93190c48db9d9f3e272c191c8653dd443392218a46450c250d9a0bd",
+    "byte_count": 6574
+  },
+  {
+    "pdb_id": "30ga",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/30ga/occurrences.jsonl",
+    "sha256": "da3d9373c6c96c7c5012f3712264b9e2300d7a8456bf2664e3b9b8df2f1a42f0",
+    "byte_count": 6556
+  },
+  {
+    "pdb_id": "9qhk",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qhk/occurrences.jsonl",
+    "sha256": "6f65fa69f06d33bce16bace4c333dee48fe234f9b0d5541aa2f73629ffe59c3c",
+    "byte_count": 674
+  },
+  {
+    "pdb_id": "9ian",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ian/occurrences.jsonl",
+    "sha256": "497eabea921550f8d25ed7f29deaac05887c5468bceb95b3cea0f1a08e8087f2",
+    "byte_count": 1980
+  },
+  {
+    "pdb_id": "9r4i",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9r4i/occurrences.jsonl",
+    "sha256": "91487a156c6313b782bb77f90f387b528b09acf0f8cbfac101546d3ad59e4b8d",
+    "byte_count": 2588
+  },
+  {
+    "pdb_id": "9qid",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qid/occurrences.jsonl",
+    "sha256": "bbb2bd480faa2f4fc8c4c1afa5e0aa75f4c0054f6117ac235c587d3209265d77",
+    "byte_count": 656
+  },
+  {
+    "pdb_id": "9u3a",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9u3a/occurrences.jsonl",
+    "sha256": "0be2b00f2304beb4d38fafe127908ba77260faa3d1669d0530150584581f967e",
+    "byte_count": 2680
+  },
+  {
+    "pdb_id": "9ub7",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ub7/occurrences.jsonl",
+    "sha256": "e77b3f2ef1f658a6c770170a7c0418e153c4e2557d97a0a6c315b3eda9bee897",
+    "byte_count": 6103
+  },
+  {
+    "pdb_id": "9hjx",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9hjx/occurrences.jsonl",
+    "sha256": "b99356c6419a7597cffc8496d62435c422d44d48f8190f080a6127fec92820fe",
+    "byte_count": 335
+  },
+  {
+    "pdb_id": "9zjz",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9zjz/occurrences.jsonl",
+    "sha256": "64824cf149408d292eee8e105abbbfe59d637a2bbdd1da957711966e6898d848",
+    "byte_count": 660
+  },
+  {
+    "pdb_id": "9zkm",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9zkm/occurrences.jsonl",
+    "sha256": "2b7697b69e0a5369ba5e94548e0097db61a4e0715efcda2d3ca631b054a68439",
+    "byte_count": 9461
+  },
+  {
+    "pdb_id": "9uvz",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9uvz/occurrences.jsonl",
+    "sha256": "d67d0af065ce7471f3d178b4a5def8fcf856b6092c8bfac1eda9eeabe1e5b26f",
+    "byte_count": 660
+  },
+  {
+    "pdb_id": "9u7j",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9u7j/occurrences.jsonl",
+    "sha256": "273b8134db70c988c785566e89e17732d2e78b6f603f4aaae9fc490d5f29ac41",
+    "byte_count": 3938
+  },
+  {
+    "pdb_id": "9z3d",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9z3d/occurrences.jsonl",
+    "sha256": "433d6e694d3bf61b4d2aa90b98a3196b4851c43f4006416d03d97084087bb6af",
+    "byte_count": 335
+  },
+  {
+    "pdb_id": "9zgf",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9zgf/occurrences.jsonl",
+    "sha256": "dfe1394bb3458ea50c5407fb97dcbc20dddbc0c8782b37d7e235f142cba281f0",
+    "byte_count": 979
+  },
+  {
+    "pdb_id": "9l5i",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9l5i/occurrences.jsonl",
+    "sha256": "20d2115cd7fcfb41eed8a7bb121a6d2ca9cd83b47f00a26ad7f6d30f7d2941ab",
+    "byte_count": 2672
+  },
+  {
+    "pdb_id": "9lov",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9lov/occurrences.jsonl",
+    "sha256": "92cd159de6fff1dbea197004c0b65692e4db88eeaad69edb90d50a03cc451224",
+    "byte_count": 2943
+  },
+  {
+    "pdb_id": "9oq7",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9oq7/occurrences.jsonl",
+    "sha256": "0391ab1e135bf335e6b8035df2f1782ba9fb44fe1f3e5d1b117943716177f3ae",
+    "byte_count": 5969
+  },
+  {
+    "pdb_id": "9lw1",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9lw1/occurrences.jsonl",
+    "sha256": "794d620748cd9c705c087c7fc4d0eed4b4f6a05527d3f2db4920456d2e7b9ea8",
+    "byte_count": 6682
+  },
+  {
+    "pdb_id": "9z6w",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9z6w/occurrences.jsonl",
+    "sha256": "e2e7a0a26375ec9d2e2c4074f5f935d75fcc889915b657b59a4e478f2109ff83",
+    "byte_count": 10062
+  },
+  {
+    "pdb_id": "28ik",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/28ik/occurrences.jsonl",
+    "sha256": "e76d6961d9496ba5615520ce926c2a3b76aee97ecdcd1f5ce00f13f62af98e8d",
+    "byte_count": 7612
+  },
+  {
+    "pdb_id": "9l76",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9l76/occurrences.jsonl",
+    "sha256": "eafad3c6cb47109394dd14528a338565db93dcd05bee4a4bb64cef6cebe9a4d9",
+    "byte_count": 1005
+  },
+  {
+    "pdb_id": "9x0x",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9x0x/occurrences.jsonl",
+    "sha256": "bdcd8e662c56b1d8c8869ce05fb501327abcdabcf1b689f42cfd80c4fb4101eb",
+    "byte_count": 4708
+  },
+  {
+    "pdb_id": "9xzl",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9xzl/occurrences.jsonl",
+    "sha256": "5e8e13060257ba66bbb1acfaac91df489b5e74ed8544b1d01a53e1307bb95d27",
+    "byte_count": 983
+  },
+  {
+    "pdb_id": "9nvs",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9nvs/occurrences.jsonl",
+    "sha256": "02efbe6cc4c5cbd797e6180b79d6ceff758d90ea158229e909237ca6d6471e9a",
+    "byte_count": 1705
+  },
+  {
+    "pdb_id": "21kr",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/21kr/occurrences.jsonl",
+    "sha256": "50d3f308aa7864c66abc10bddb7fd1876ae221051e1919ae466a3a8ca3b5cd62",
+    "byte_count": 3093
+  },
+  {
+    "pdb_id": "9lqt",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9lqt/occurrences.jsonl",
+    "sha256": "cf875539314c8ed0db4e6b59e61bb953f9310a8173dffe87c852b4457c66fa21",
+    "byte_count": 6038
+  },
+  {
+    "pdb_id": "9x29",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9x29/occurrences.jsonl",
+    "sha256": "6bab35425d0092bc1ac112bdcba6b1606da47cbeb00428d53efb3b768caed230",
+    "byte_count": 674
+  },
+  {
+    "pdb_id": "9pxt",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9pxt/occurrences.jsonl",
+    "sha256": "240c8796ab65ec3c830297d0eb2dd89750dcab9decc7023fbba0e8d9924ae5d0",
+    "byte_count": 1333
+  },
+  {
+    "pdb_id": "9q05",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9q05/occurrences.jsonl",
+    "sha256": "c85753e96d9edc33452e1826f27a5a6e5283bbc69e13cec28342256446f8f303",
+    "byte_count": 1685
+  },
+  {
+    "pdb_id": "9h50",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9h50/occurrences.jsonl",
+    "sha256": "ef5212b813def6f8e52c6f032ce3886b75887c2fd74f74c8740b7ebdb3318c72",
+    "byte_count": 982
+  },
+  {
+    "pdb_id": "22rd",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/22rd/occurrences.jsonl",
+    "sha256": "1907744856b7a8ffa85feb45384c80c75c8e330f3e71e3922c6b5a9ef1ace1c9",
+    "byte_count": 335
+  },
+  {
+    "pdb_id": "9x1m",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9x1m/occurrences.jsonl",
+    "sha256": "aab9f5ccb89c003afe15aaf8a245aaeccd88733ae2a54bdd3e55d46a5ff37c02",
+    "byte_count": 4582
+  },
+  {
+    "pdb_id": "9z2u",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9z2u/occurrences.jsonl",
+    "sha256": "13d073f8fabc90505ffe4feadaf79dda225e80d2272ad835abada40bb5a89d6c",
+    "byte_count": 335
+  },
+  {
+    "pdb_id": "9o8p",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9o8p/occurrences.jsonl",
+    "sha256": "37b03d815a23d0f8ec1f1bc68473d017ce59c39116a023ad5fcb0a704e66b1ba",
+    "byte_count": 1950
+  },
+  {
+    "pdb_id": "9qsx",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9qsx/occurrences.jsonl",
+    "sha256": "b56d05e427e1fd27a5406fc46c79a6faeba8570cabc3088d084d923ff43eb82d",
+    "byte_count": 339
+  },
+  {
+    "pdb_id": "9ui6",
+    "source": "/storage/penghongen/AdaLigand/Ori_Data/parse/9ui6/occurrences.jsonl",
+    "sha256": "ce369981e7d1b35b9f1a9afa2c95884497257efc02a5ce96f8db320bbd3385b8",
+    "byte_count": 4693
+  }
+]

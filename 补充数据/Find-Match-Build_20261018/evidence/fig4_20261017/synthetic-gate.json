@@ -1,0 +1,1 @@
+{"pass": true, "cases": ["zero candidates retain denominator", "background advances candidate position", "global non-small assignment is skipped despite small overlap", "duplicate blob consumes position without double counting", "same behaviour in GT/CA2/Emap2lig"]}

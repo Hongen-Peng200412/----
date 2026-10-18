@@ -1,0 +1,1098 @@
+{
+  "source_root": "/storage/penghongen/Adaligand_E2E/test/test_0",
+  "files": [
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/inputs/inventory.json",
+      "local": "inventory.json",
+      "sha256": "74730fd65109dd1a16cd7987683458e713eb8192c9f73bbc8f148b1bc1abd381",
+      "bytes": 11452
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/inputs/stage3/identities.jsonl",
+      "local": "identities.jsonl",
+      "sha256": "59bf62e2c361445ad545d17fe90ff87974afd9a40c4943c7b451bf7ab7662bca",
+      "bytes": 82146
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/inputs/stage3/emap2lig_candidates.jsonl",
+      "local": "emap2lig_candidates.jsonl",
+      "sha256": "1b701039b096bd3a62a8d4f62f1b0f795aef021c47ec580e3a9e655876252c99",
+      "bytes": 15730830
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9oh4.npz",
+      "local": "per_pdb/9oh4.npz",
+      "sha256": "c3497267b9f48221c95d1965748ce012dc7b5d39535ac584303e3e730b5e26e1",
+      "bytes": 12865
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9z6w.npz",
+      "local": "per_pdb/9z6w.npz",
+      "sha256": "77bb3784449682d7aa0ba1e94f226f9fd49dea6e128aaea03aefc34a506efb3d",
+      "bytes": 13346
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9shx.npz",
+      "local": "per_pdb/9shx.npz",
+      "sha256": "063d4811245f642a6d0e8e4d4957e9be444caa072ea57b31e8d3cf4901e9f22c",
+      "bytes": 7398
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9i2g.npz",
+      "local": "per_pdb/9i2g.npz",
+      "sha256": "dd75ce253488e55bad69ef3a81277d7abf8e37b6ce220c116ea27fd24f50850a",
+      "bytes": 13673
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9z6t.npz",
+      "local": "per_pdb/9z6t.npz",
+      "sha256": "e109d7cd27fea8b3cd79b9960a3ca811c91b43af7ce09ee61109773652dbff31",
+      "bytes": 8982
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9z2u.npz",
+      "local": "per_pdb/9z2u.npz",
+      "sha256": "db508163738170ffbb376487907f8e76407bbeffc25550b11a2f8e8a3e3797a0",
+      "bytes": 6807
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9q0n.npz",
+      "local": "per_pdb/9q0n.npz",
+      "sha256": "f160f99c4febc091953e25ec936c5d1e940a5ae93785e4cab27c1f316113ff91",
+      "bytes": 7674
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9lex.npz",
+      "local": "per_pdb/9lex.npz",
+      "sha256": "73ee76aa24ed709310394908c420b0455ff0e6f521c7d4fdaf2ccd2c8097448c",
+      "bytes": 9671
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9zgf.npz",
+      "local": "per_pdb/9zgf.npz",
+      "sha256": "d8cf30a5486e7a477aec43950b937b1c3af7eb4a66f299dd0fd63ef788218ef0",
+      "bytes": 10096
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9gja.npz",
+      "local": "per_pdb/9gja.npz",
+      "sha256": "7e4734b9c68c154fee1c81a6117faf056726f08b004e020bee8a521c6dbe3041",
+      "bytes": 8513
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9h50.npz",
+      "local": "per_pdb/9h50.npz",
+      "sha256": "e8052c3b5602f6c65b0721fc9268d03ff944c35b3e7d081d88688637cfc0ebd6",
+      "bytes": 6300
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9hvy.npz",
+      "local": "per_pdb/9hvy.npz",
+      "sha256": "35af731f6261ba029881866ce965a0700c9078df97242fb821ace50d208aad2d",
+      "bytes": 6501
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/30yx.npz",
+      "local": "per_pdb/30yx.npz",
+      "sha256": "e1e623a96b74208d53f126c1e97907cd898344983f0aae5f130afc991e2a94de",
+      "bytes": 8619
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9zaw.npz",
+      "local": "per_pdb/9zaw.npz",
+      "sha256": "58f5f919d2362050192e6fb7d3e33b3e7fd12c9817fe3c4371ec26c6c6a9f478",
+      "bytes": 7076
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nfa.npz",
+      "local": "per_pdb/9nfa.npz",
+      "sha256": "987b8ab2140f2a63cc2dc7b8ff242331e174bd4014178685dff87431a41a3a6a",
+      "bytes": 10658
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/10tu.npz",
+      "local": "per_pdb/10tu.npz",
+      "sha256": "3f43669f980c068f9baac3c6af2a7da51e967c137de31e6933abfe5e4b54fc82",
+      "bytes": 9013
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9dei.npz",
+      "local": "per_pdb/9dei.npz",
+      "sha256": "3a144596e7790a0d0aa70529a5d17737bb0bb8384b09f98ca478804fa679cca6",
+      "bytes": 20393
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9vbo.npz",
+      "local": "per_pdb/9vbo.npz",
+      "sha256": "68d7c37570199fb23d62a4f9a23b6a08b6ff81b2575df38c9ffab9956989d8cb",
+      "bytes": 7553
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9y66.npz",
+      "local": "per_pdb/9y66.npz",
+      "sha256": "9e43763524f9b989c351b6d2c1f7cc04de934a849054f23e20c832c8bf827a32",
+      "bytes": 8397
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9vcu.npz",
+      "local": "per_pdb/9vcu.npz",
+      "sha256": "cb66bfead1c1bbf7948dc2fc3bf7d83f3b7d3c7185a90456b06e2b20584ca0b5",
+      "bytes": 7071
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9z2n.npz",
+      "local": "per_pdb/9z2n.npz",
+      "sha256": "37bd11dd0c38c0f88b2d000441f152569e9c5e90393dfc4465d4031a79f35bc0",
+      "bytes": 6693
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9lw1.npz",
+      "local": "per_pdb/9lw1.npz",
+      "sha256": "92c23ce06070d998dbc9de7ccb5a2079d1ea1a37ababcb3352e61288e93d88af",
+      "bytes": 10643
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/11zv.npz",
+      "local": "per_pdb/11zv.npz",
+      "sha256": "ef7dd28a57983ffba042175911edd4136440defe4891b1b3bed3751dc63a2f55",
+      "bytes": 7389
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ujf.npz",
+      "local": "per_pdb/9ujf.npz",
+      "sha256": "51a884dd0a9ab0829f7fd348c9cc57929f26f758c7b100bb03c2a6c2ce13d1c7",
+      "bytes": 11367
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9vap.npz",
+      "local": "per_pdb/9vap.npz",
+      "sha256": "ab1a3739b440999f601e2527fbd7df4167731cdfc430b80af68ec58cfa86698a",
+      "bytes": 7443
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9pxt.npz",
+      "local": "per_pdb/9pxt.npz",
+      "sha256": "13f845fdaa1890ab10ade83ab2012efe6e39c0ec5d2ce4a8f5bb04c0ccbe82ba",
+      "bytes": 8048
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9gjg.npz",
+      "local": "per_pdb/9gjg.npz",
+      "sha256": "4209b7507cd4997e538a278c871e6bd57b4e57a03607600b33affb64b62f6d2f",
+      "bytes": 19496
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/21wj.npz",
+      "local": "per_pdb/21wj.npz",
+      "sha256": "6f8e80e74542516304e2fbb1344a33f24c6b5cdca6c541d8430447efde544af1",
+      "bytes": 6152
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9vs4.npz",
+      "local": "per_pdb/9vs4.npz",
+      "sha256": "d25b38440185e0093168e1a71ef06069975dea065bf850bf01f352e9adde8273",
+      "bytes": 7663
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nzs.npz",
+      "local": "per_pdb/9nzs.npz",
+      "sha256": "f991bdabd70fea43f9a37cba51aeacddd0a8032e9680b725632b7b2185035526",
+      "bytes": 7769
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/11hu.npz",
+      "local": "per_pdb/11hu.npz",
+      "sha256": "7bcac7c9de9255e539dfeb1d647268f695bfcca54197cdfcb7712d4013d7f8f2",
+      "bytes": 6331
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9j5o.npz",
+      "local": "per_pdb/9j5o.npz",
+      "sha256": "d6369421ceb837cdd408288e64a6f0e3b8023902c6992f449b0862744cf9234d",
+      "bytes": 5840
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9h03.npz",
+      "local": "per_pdb/9h03.npz",
+      "sha256": "63cd05045ff61fc3fd4467b83a9e722b04c3f7cbc62abcff1d40f3fd987fc2e0",
+      "bytes": 14059
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9mi8.npz",
+      "local": "per_pdb/9mi8.npz",
+      "sha256": "337e06ab37e1984720adfcdacaa4437bb6838aafc1ffc225aaae1c5967e877ff",
+      "bytes": 6861
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9r3d.npz",
+      "local": "per_pdb/9r3d.npz",
+      "sha256": "5963864d25ad4b7a591d66e22846a91c4bc8c0dc87aea6dd60860c09a598a5b6",
+      "bytes": 23141
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9wq3.npz",
+      "local": "per_pdb/9wq3.npz",
+      "sha256": "9f36fa2aab81c5e31a643903cbf57b2689e7f7c609a620cb3d2d709ac8288a90",
+      "bytes": 7797
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/11rn.npz",
+      "local": "per_pdb/11rn.npz",
+      "sha256": "0898e5b2bcd97ed44a1196067562151990e48d1eff9943128efb8a112b140143",
+      "bytes": 9664
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9lyi.npz",
+      "local": "per_pdb/9lyi.npz",
+      "sha256": "404401c5de5b6f07b41ca3b6cc6bc322a1342e0bf07aebb85270534d31cd455f",
+      "bytes": 6679
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9qhk.npz",
+      "local": "per_pdb/9qhk.npz",
+      "sha256": "54f667dec94b4278e3da888c3e51cdc4ab6a924366689650b7460341ab169b1e",
+      "bytes": 9145
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9l5i.npz",
+      "local": "per_pdb/9l5i.npz",
+      "sha256": "221a048ae8ce86944eaf27e22e7d9008d99a70c1a30df046f259aa3dc6be1194",
+      "bytes": 6735
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ov8.npz",
+      "local": "per_pdb/9ov8.npz",
+      "sha256": "3aeaa8c4f5d9ddb70fdc1dce94e4b601ebfcf7e729b2a68514e9ffd56c0f8945",
+      "bytes": 16461
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nak.npz",
+      "local": "per_pdb/9nak.npz",
+      "sha256": "f3c73dd49cf40f93c4cebb756b08e73303e88458bde9586d6a0cdfe557fa9827",
+      "bytes": 6179
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nas.npz",
+      "local": "per_pdb/9nas.npz",
+      "sha256": "d51bfea079513428af37d846b223fe0b5252f19589005603d0536b8eacf4964f",
+      "bytes": 10703
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/30za.npz",
+      "local": "per_pdb/30za.npz",
+      "sha256": "6a466a4c17a9f34dbf304c7d704f7b03fbc4f8c8c650298bb773455969227b14",
+      "bytes": 8820
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9z6z.npz",
+      "local": "per_pdb/9z6z.npz",
+      "sha256": "e829421a5d79f350c00ce18bd17e6ac54e3f21e0d4091a52380daba0afef25d6",
+      "bytes": 6422
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9k32.npz",
+      "local": "per_pdb/9k32.npz",
+      "sha256": "76348a592adceb8b0959b321c7211506d07c64d4ef1d7ae007075eeb26efb345",
+      "bytes": 5985
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/28lu.npz",
+      "local": "per_pdb/28lu.npz",
+      "sha256": "1ec4b37429a6bf558719e0483912547c45e45a84bb0b9ac03212c09fe44328da",
+      "bytes": 7368
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/11jb.npz",
+      "local": "per_pdb/11jb.npz",
+      "sha256": "4659cad1370f2d4999d4f96b97b39273b73c5fe8cd782c5118c7502fb7178d23",
+      "bytes": 51157
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9v43.npz",
+      "local": "per_pdb/9v43.npz",
+      "sha256": "1980d11923c7fc3ce212eab84496bc3bacdeda0ed6622118180ae9b3c8fb38cc",
+      "bytes": 6501
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9oaa.npz",
+      "local": "per_pdb/9oaa.npz",
+      "sha256": "35647834b3e07e3a839cc1c86bcd865d30f3ba6485563b8218292e5f3f77e381",
+      "bytes": 8608
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9vui.npz",
+      "local": "per_pdb/9vui.npz",
+      "sha256": "0137854fd350192c7bd72dfbb9ecdeec47143eccb030e7449b5f584d1b324b98",
+      "bytes": 8811
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9w7x.npz",
+      "local": "per_pdb/9w7x.npz",
+      "sha256": "3f0ffdd112e09597332ea829829e50676882b521475e98aed93d6168e12395f1",
+      "bytes": 17434
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9uvz.npz",
+      "local": "per_pdb/9uvz.npz",
+      "sha256": "311b4ed68f898f1c68ebc84dd8341ab1ba8d0eb0eb1367ca724be5210cb6cc71",
+      "bytes": 8977
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nvn.npz",
+      "local": "per_pdb/9nvn.npz",
+      "sha256": "9cd953356e99450c621532e3e8a94171e28e5eb950b8b0f13e254e090164d5f9",
+      "bytes": 8875
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9lov.npz",
+      "local": "per_pdb/9lov.npz",
+      "sha256": "dbb7142a54330878e8207bf6e78b2f6785e412e300b94f38e35fe75299920e77",
+      "bytes": 7576
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9o4e.npz",
+      "local": "per_pdb/9o4e.npz",
+      "sha256": "174996d13f258dfa4466346278ccd9933a64c52ee71d014f4a6a6a506037430d",
+      "bytes": 14590
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9u3a.npz",
+      "local": "per_pdb/9u3a.npz",
+      "sha256": "6d58268e44ccd66cba187b2bb458c34b4f857fb364fa7c94f1d7f4dff99b1928",
+      "bytes": 7113
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9rmi.npz",
+      "local": "per_pdb/9rmi.npz",
+      "sha256": "12fdfa6a64ed00f6b8a41e548f8108eee5929155c1972efb4d72fac3016e90bc",
+      "bytes": 14109
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9xd0.npz",
+      "local": "per_pdb/9xd0.npz",
+      "sha256": "adf0a35faccb473c458034848e3b25143984cfffdb0ac872669875143ba7471b",
+      "bytes": 7541
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9wff.npz",
+      "local": "per_pdb/9wff.npz",
+      "sha256": "97be4e27f479498d5bdc5e7381c40dca0d1f070474a91bb2f6190ad96e0613b0",
+      "bytes": 10363
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9x0x.npz",
+      "local": "per_pdb/9x0x.npz",
+      "sha256": "fae567da79897b530796ea3d2ac23f7a542e0ba0203d1fb5777a346534609541",
+      "bytes": 11554
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9uuh.npz",
+      "local": "per_pdb/9uuh.npz",
+      "sha256": "78b114a2cff4e36e5f050fb187433c8dcd267d392ed4bdcd0d696445e5d4f3b5",
+      "bytes": 9911
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9wmh.npz",
+      "local": "per_pdb/9wmh.npz",
+      "sha256": "8aae1525f70d5c5dbd5b40aae94efdd73567e5ca30b81afc4cc0865bfb970240",
+      "bytes": 7659
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9sj2.npz",
+      "local": "per_pdb/9sj2.npz",
+      "sha256": "9b26f784b37df56062aa6e30b70526fd80b13494125ddd5b24c3df158b2cc7eb",
+      "bytes": 8804
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9q05.npz",
+      "local": "per_pdb/9q05.npz",
+      "sha256": "22349c77be6bdb16b8ec1e8da610b70a802d508bda576d20acf7c6ecac5c391f",
+      "bytes": 14457
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ozi.npz",
+      "local": "per_pdb/9ozi.npz",
+      "sha256": "bcbc7b59115c2a16b9138162aed62f05cc7c2c025b591af68d0b714affc095ae",
+      "bytes": 24628
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9v7o.npz",
+      "local": "per_pdb/9v7o.npz",
+      "sha256": "c9459013083fc3df7900744348cfd8fbaad567be3df2331412a1fd22612f73ed",
+      "bytes": 9220
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9kbz.npz",
+      "local": "per_pdb/9kbz.npz",
+      "sha256": "1d0cc32affd40f65c5c0d774eef66f1c052fb0c66bca873889d49ff9942f5879",
+      "bytes": 10470
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9iu8.npz",
+      "local": "per_pdb/9iu8.npz",
+      "sha256": "ea347636e43321a94df6714bcb55285c4324fc419320746ead16f85233496389",
+      "bytes": 6428
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nbh.npz",
+      "local": "per_pdb/9nbh.npz",
+      "sha256": "071f590ed5c098e6db0c035fe42560f7da0f86643c597225c704913feef50bd6",
+      "bytes": 6516
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ylu.npz",
+      "local": "per_pdb/9ylu.npz",
+      "sha256": "1bf345c2f1ee8a189b59a53e2b28ed311e3f7dd4a2b96b3d7b43112b9110a4d1",
+      "bytes": 9395
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9dpi.npz",
+      "local": "per_pdb/9dpi.npz",
+      "sha256": "f4ebc7894374a60faeb750f99fb96e12e3acd08617c9096812940ffa21b702dc",
+      "bytes": 9804
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9qgy.npz",
+      "local": "per_pdb/9qgy.npz",
+      "sha256": "828100197211c622333aab9e0e9c13233fa256a1b6d10443c95c9fca1c2acc7b",
+      "bytes": 13646
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9r2g.npz",
+      "local": "per_pdb/9r2g.npz",
+      "sha256": "f79cbb78b83290b55bd70b6989c425f95ca213f5270bbcc8604f29b9373d489d",
+      "bytes": 7079
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ifc.npz",
+      "local": "per_pdb/9ifc.npz",
+      "sha256": "3c3057ab9d9a502e8ae47a54de55a0ec7945e9c1c827c2f07128d74e8bc573ba",
+      "bytes": 16052
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9r1r.npz",
+      "local": "per_pdb/9r1r.npz",
+      "sha256": "8e3ce92e46f80b6025c0dd4a0ef6f64052bb14cac692e911cfbfae57098c72e3",
+      "bytes": 10038
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9o0l.npz",
+      "local": "per_pdb/9o0l.npz",
+      "sha256": "a174ffb4b76d618aa055f9537bbb528860001be4e07a9f08759f5ff3df5012ab",
+      "bytes": 14644
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ian.npz",
+      "local": "per_pdb/9ian.npz",
+      "sha256": "976e55cb6d444fe3be7cdd606e5c31d441fc26b1eeb4ac59b65fd2397c4c9aaa",
+      "bytes": 7364
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9xzs.npz",
+      "local": "per_pdb/9xzs.npz",
+      "sha256": "f4d816f6338f0ead70acd2f79e6917ba020b1a67e667172c1ceaee38ebd87ab6",
+      "bytes": 5966
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nvv.npz",
+      "local": "per_pdb/9nvv.npz",
+      "sha256": "a787f352efa4c3ea567ab1e6b28bd017d50c94dc787c56d7000f2ef1a3c9f973",
+      "bytes": 10153
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9llg.npz",
+      "local": "per_pdb/9llg.npz",
+      "sha256": "52c1b2d9639bb1426aa36a1b1fa557c647b5a44113852ddc0b4873a83787334c",
+      "bytes": 9795
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/21kr.npz",
+      "local": "per_pdb/21kr.npz",
+      "sha256": "66e617c3e6e995cb5e99e7f30b892ce0ceac1591ff666f96502fd8875e5a96a6",
+      "bytes": 11429
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9sdl.npz",
+      "local": "per_pdb/9sdl.npz",
+      "sha256": "7e615a634d32e469155123f3526acda19b43a9437e42f64bed95aef5bf993bf3",
+      "bytes": 7999
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9vfi.npz",
+      "local": "per_pdb/9vfi.npz",
+      "sha256": "7e12fb67b6adc4b21d6a33275cfe9c970b1a8f1127253c23b5ff2de0189999b9",
+      "bytes": 8690
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/10rj.npz",
+      "local": "per_pdb/10rj.npz",
+      "sha256": "73d4860e248c82422799138e5cb6c98538e96b739d0180bc4ae17e92b4653fcc",
+      "bytes": 7980
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nvs.npz",
+      "local": "per_pdb/9nvs.npz",
+      "sha256": "4fe8a7b3b6252be0b92ff5ff8b34855d5f00d10e9474fceb24ceda98728fd25c",
+      "bytes": 6797
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nnz.npz",
+      "local": "per_pdb/9nnz.npz",
+      "sha256": "ab40013fb1b3339a508b9dad1cc2d688e2042ffb28691e9b1a289e5565d7dafc",
+      "bytes": 8241
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9mbz.npz",
+      "local": "per_pdb/9mbz.npz",
+      "sha256": "ce674e39a202d0db3b05b2c8e4af6eda0fc35415cafc4db21cda7d7577baeb92",
+      "bytes": 9619
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/11cq.npz",
+      "local": "per_pdb/11cq.npz",
+      "sha256": "627dcf97645eead335cacb2195998c4f77a0d8fba72f7ae064e08bd40fbdf6c8",
+      "bytes": 10768
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9qsx.npz",
+      "local": "per_pdb/9qsx.npz",
+      "sha256": "c578a7b179640cdf90b8ba8a3b8b4e8dd93164643edea5e8c2b8f6458a926257",
+      "bytes": 8212
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9kby.npz",
+      "local": "per_pdb/9kby.npz",
+      "sha256": "060ebfdd919e8b5fc6cd5f50944331dd528b3fc98d2de51e836147d0191edca4",
+      "bytes": 6132
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9uwi.npz",
+      "local": "per_pdb/9uwi.npz",
+      "sha256": "63b9dfe296889d5e692daf3de53bc48175897bcc6d6f2b365f56db1b63f10d9b",
+      "bytes": 9327
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9hyu.npz",
+      "local": "per_pdb/9hyu.npz",
+      "sha256": "7584f95146630c87da9fd3f5e744861dd835775c657ccc6db0f9cf55478104c6",
+      "bytes": 11346
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/10ft.npz",
+      "local": "per_pdb/10ft.npz",
+      "sha256": "6bc437f95992b3ae72f13b05d58dd7c6d410342a227832a5c9d8813aa6575bc2",
+      "bytes": 7913
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9bjj.npz",
+      "local": "per_pdb/9bjj.npz",
+      "sha256": "a0f930ec0cd321168b9f6ce7d261d61560472e8b076b3f0757cf582e7b0e1adc",
+      "bytes": 10560
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9qid.npz",
+      "local": "per_pdb/9qid.npz",
+      "sha256": "162ff793be7ff86829e03adf5e71117bd0e2c8623e128da5c92a3151c600bb6d",
+      "bytes": 8018
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9iub.npz",
+      "local": "per_pdb/9iub.npz",
+      "sha256": "cdde6469a993364f8cf4501c88eddda37f936217cdd248674fd6cb0ad2bc2a3a",
+      "bytes": 6820
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nc9.npz",
+      "local": "per_pdb/9nc9.npz",
+      "sha256": "fd5b31d1c38beba47594301258d6f75cf178a59a05f35e40073c58e4fe5b8dd1",
+      "bytes": 11162
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9r7l.npz",
+      "local": "per_pdb/9r7l.npz",
+      "sha256": "22387ce51b1fc6f8e0edd115a4ce302b4ca31173a8321fb6de4ed9bafd638362",
+      "bytes": 12896
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9okp.npz",
+      "local": "per_pdb/9okp.npz",
+      "sha256": "a573d5b09b1ddf5eac3cd67ba6b2e63fcc258955530ff4cc4717fb9156c905f1",
+      "bytes": 6573
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9iua.npz",
+      "local": "per_pdb/9iua.npz",
+      "sha256": "551bb2a8c50ae880e4e74a8376ec0a7c645f30c16a5306007a32edd2464f6a62",
+      "bytes": 7320
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9l76.npz",
+      "local": "per_pdb/9l76.npz",
+      "sha256": "b3a530086fb0f5cb7917e094ef8fa80b5999bb66c501901ff0efb3994b8149c1",
+      "bytes": 7935
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9wup.npz",
+      "local": "per_pdb/9wup.npz",
+      "sha256": "45253df9ae1336d951dcf214e55d26c5ffc51be2c8999376ebf68e506eb09bb5",
+      "bytes": 8783
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9iu5.npz",
+      "local": "per_pdb/9iu5.npz",
+      "sha256": "fd0d3eace986f3ae8aba0f0cd1ee8f51860e10a03e2937fc581243f8d177e540",
+      "bytes": 5930
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9pqm.npz",
+      "local": "per_pdb/9pqm.npz",
+      "sha256": "d4a2e4c6fc160bd4dfb1efc7d4aa460fc637ce5f21ce95089f8f5fd5792cd61e",
+      "bytes": 9582
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9liq.npz",
+      "local": "per_pdb/9liq.npz",
+      "sha256": "73390a3bbdc1c47b6d0275e43614df6869cc3388cfd769247ed921cf03cbf53c",
+      "bytes": 9614
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9hjq.npz",
+      "local": "per_pdb/9hjq.npz",
+      "sha256": "be5ecb6c54b1b8dffb4ab41bf63a68d376630789e5c3c4a0b4f133024d9a1036",
+      "bytes": 6565
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9k31.npz",
+      "local": "per_pdb/9k31.npz",
+      "sha256": "f4d10cd6d0fac935fa22dc8cd3f0cfd5bc3ee132ac9b15a99f17076eac3e5ea6",
+      "bytes": 6075
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ui6.npz",
+      "local": "per_pdb/9ui6.npz",
+      "sha256": "e964f400c9cc86ea5369b00239da893b6f0e0b96994616e38d3b0a59e24c3e43",
+      "bytes": 7166
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9rm9.npz",
+      "local": "per_pdb/9rm9.npz",
+      "sha256": "fac00bc5e2740ca708cdd791b77a3cb2153acabfe452c4dc4bd960c12ccf246f",
+      "bytes": 10231
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9xd6.npz",
+      "local": "per_pdb/9xd6.npz",
+      "sha256": "b0c300d9f7eea5322bf38c4860643ec2793064add7ebef5b908ec234b5c8280c",
+      "bytes": 6123
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/21fy.npz",
+      "local": "per_pdb/21fy.npz",
+      "sha256": "8542cc485150536ecec7760a5aa44c8a5f19c8a76ab92a7516ae6dea87f48e51",
+      "bytes": 6731
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9w0x.npz",
+      "local": "per_pdb/9w0x.npz",
+      "sha256": "1c93aa9f0fa31515efb01f043f6946abb3f79c80e40803ba74f80b07f615ec82",
+      "bytes": 16431
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ub7.npz",
+      "local": "per_pdb/9ub7.npz",
+      "sha256": "6105bf2f226eb485dadff035ba1fc1065bff5d79549611fc6fe55a3ea6d5650d",
+      "bytes": 8951
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9oq7.npz",
+      "local": "per_pdb/9oq7.npz",
+      "sha256": "12da355bd0673e1748ef357e6fd7c736885ed126c626b56a58c108217f257113",
+      "bytes": 15564
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9k9g.npz",
+      "local": "per_pdb/9k9g.npz",
+      "sha256": "1f3bf3691a57e532ee28b535ece8e030e89d6dae2df28531864d1d5ff91b7556",
+      "bytes": 8384
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nnc.npz",
+      "local": "per_pdb/9nnc.npz",
+      "sha256": "72151b6f70a4440c2e04b53e452f2a44b804ba578d387e96bbab814400432fb2",
+      "bytes": 12191
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9kpz.npz",
+      "local": "per_pdb/9kpz.npz",
+      "sha256": "eb85bbcc4e4ea7a80f945d4a37037912d80e1476069edfd25975960af001c002",
+      "bytes": 9066
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9k9j.npz",
+      "local": "per_pdb/9k9j.npz",
+      "sha256": "aea7772354e98c94feb4665e0475b99430d328680eff342411c10f4b7e170d11",
+      "bytes": 8615
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9q33.npz",
+      "local": "per_pdb/9q33.npz",
+      "sha256": "883a2300447de7b6824a41ca0acd3228f6d0540baee730c30b9351ec1ed79d29",
+      "bytes": 7326
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9nal.npz",
+      "local": "per_pdb/9nal.npz",
+      "sha256": "5f78075dd3fce38a3db81d7edbdd97fe06330954633fd9231feb8f6d0ed434b4",
+      "bytes": 6745
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/21cn.npz",
+      "local": "per_pdb/21cn.npz",
+      "sha256": "4dbc1e62075ada6cf6fbe5733aec12722c678a2ce915f0cba4b171543af4e638",
+      "bytes": 6715
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9zkm.npz",
+      "local": "per_pdb/9zkm.npz",
+      "sha256": "029dcf60955de43f47f15c73a16ff3360444f564d947625baddf308fb1df885c",
+      "bytes": 10695
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9qru.npz",
+      "local": "per_pdb/9qru.npz",
+      "sha256": "8d9e34ad364cb44c6ba0e4b83d6811b5cd6a8f5fb397ada4a7291bb124733248",
+      "bytes": 9505
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9r4i.npz",
+      "local": "per_pdb/9r4i.npz",
+      "sha256": "56d2ad50150e7d09a1c9519556fc112971616aa7ccbf032aca7a4545e32449be",
+      "bytes": 6740
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9jbt.npz",
+      "local": "per_pdb/9jbt.npz",
+      "sha256": "fb3e83a8ffba944d10ff4ac53c947d292cb223ab31f58013e9c3d0e566bab934",
+      "bytes": 6477
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9qkz.npz",
+      "local": "per_pdb/9qkz.npz",
+      "sha256": "346c8fb604f31d1254ab9ed65d3ea3eacc02ad8efd53dce60f0c6a3fe54310f4",
+      "bytes": 7626
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9wdc.npz",
+      "local": "per_pdb/9wdc.npz",
+      "sha256": "a365700738351fe730125e51311cf9835e0f062ad94f0b7e5f72c953c4f94bcc",
+      "bytes": 6484
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9eeq.npz",
+      "local": "per_pdb/9eeq.npz",
+      "sha256": "43b6770c35443549eef056f62b2bf72857f916541d92142fc88cabda71ea11e7",
+      "bytes": 11185
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9v7s.npz",
+      "local": "per_pdb/9v7s.npz",
+      "sha256": "25be3f86c6e94420126f900de3b313e62c423ed0b5d599272b7460b4cf3add7b",
+      "bytes": 7967
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9wfu.npz",
+      "local": "per_pdb/9wfu.npz",
+      "sha256": "40805d82d99c8c8efcc4788e92b9dc08045eaf931290f70d6d121f9b7080b992",
+      "bytes": 8612
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9x29.npz",
+      "local": "per_pdb/9x29.npz",
+      "sha256": "3262aa3d2d45cfcbd2cf8e24a1569c5032e0b8d44d73fea28f91a47b6c90f04a",
+      "bytes": 12589
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9xzl.npz",
+      "local": "per_pdb/9xzl.npz",
+      "sha256": "65572c287030bbcadaf94d46046e542b91d5fc21c87a1246036c364024840efd",
+      "bytes": 11230
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9x1m.npz",
+      "local": "per_pdb/9x1m.npz",
+      "sha256": "7aad39a67da2ef245c76fb80b2e178f88a44134c17dfa1aca3f1b0f9cc914c84",
+      "bytes": 11502
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ndw.npz",
+      "local": "per_pdb/9ndw.npz",
+      "sha256": "e76fcc333569ee9fb4257c97f94656bd6caf62f96f246b9be818dd6f609f330f",
+      "bytes": 11147
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9q16.npz",
+      "local": "per_pdb/9q16.npz",
+      "sha256": "3e197407cb9810a4b5d2470d10e935837339bd681c4fc4794fcacdf19cd396a1",
+      "bytes": 12986
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9w04.npz",
+      "local": "per_pdb/9w04.npz",
+      "sha256": "65f4bf1b615d8c5096ee15bc34d0e2abf3e07d032e22ccbd799b525d6298b26b",
+      "bytes": 6846
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9swa.npz",
+      "local": "per_pdb/9swa.npz",
+      "sha256": "a64556094f25a31a23ea7696e37f1bcc9b9bad8def0bff0c299dd28dcdac26a5",
+      "bytes": 7035
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ta3.npz",
+      "local": "per_pdb/9ta3.npz",
+      "sha256": "a268d4addf9525973d322562ad613058fd7d4a4e65fb3aa42df2474aece04dc0",
+      "bytes": 8857
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/30ga.npz",
+      "local": "per_pdb/30ga.npz",
+      "sha256": "ceb683e82ce5973f778270cb18f138cb548eebd7f6dbf615bae693f6ab4709ab",
+      "bytes": 10705
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9opq.npz",
+      "local": "per_pdb/9opq.npz",
+      "sha256": "6409eb802a3cddd8b010c534994b2b68da9795d20d1040cdce59ed23cb3b77c6",
+      "bytes": 11581
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9vc6.npz",
+      "local": "per_pdb/9vc6.npz",
+      "sha256": "ff5b5fd69b3fe9390af38c37883f19591bb6ddf93bb1a02a51cbbb2c8fd842a0",
+      "bytes": 11882
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9qh7.npz",
+      "local": "per_pdb/9qh7.npz",
+      "sha256": "17b7859617aa518809b8ced626a09f6212349a6503f157cf5b8dae1397df4e9c",
+      "bytes": 7356
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/23xk.npz",
+      "local": "per_pdb/23xk.npz",
+      "sha256": "92261dccfa57678d916d98bf768efc03ab17c0d1b8ceb67901a6fc1c99c9943b",
+      "bytes": 10185
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ter.npz",
+      "local": "per_pdb/9ter.npz",
+      "sha256": "7d3198211d219948f3abf12c635ba2c25e1762e6dcf43dc9ad2ead095799b2fa",
+      "bytes": 9161
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ygu.npz",
+      "local": "per_pdb/9ygu.npz",
+      "sha256": "28c1f206d698d94a3d21bab33b30612eafc6e3baa91868ea9451437337e6674b",
+      "bytes": 20476
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9on3.npz",
+      "local": "per_pdb/9on3.npz",
+      "sha256": "3ff6e9f55751144a973c8e7407570f08eb8eac0b343e427c67c3c6f9176390a6",
+      "bytes": 14131
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9i3p.npz",
+      "local": "per_pdb/9i3p.npz",
+      "sha256": "4e26f7e19ea72f78d6e46aa2377710b040994cf469a291e6373d0a1814bee708",
+      "bytes": 10579
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9pko.npz",
+      "local": "per_pdb/9pko.npz",
+      "sha256": "e0928e999f6ff7d00d5320435e1a7d0632e4d85ea062a89b89da41965ebc5b7d",
+      "bytes": 8638
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9u7j.npz",
+      "local": "per_pdb/9u7j.npz",
+      "sha256": "47b99bb80de2a8a92f68dc7a1cd33d815b49bdc4324a9800e6b259a55a82d924",
+      "bytes": 10106
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9up2.npz",
+      "local": "per_pdb/9up2.npz",
+      "sha256": "ada760b3c9249ac5de3a06f165db291560774e911e3e604253c7466ccbbcc78c",
+      "bytes": 8162
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/11hl.npz",
+      "local": "per_pdb/11hl.npz",
+      "sha256": "f9d437081de2fc42c8a0f7ea99bc3e9582197b1bc47c34e499cccb152756890f",
+      "bytes": 18767
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9rma.npz",
+      "local": "per_pdb/9rma.npz",
+      "sha256": "646b4393407537d8cc4b16aabd24e43739ce02a595f50c5f76891868b8979331",
+      "bytes": 7854
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9zdx.npz",
+      "local": "per_pdb/9zdx.npz",
+      "sha256": "c7fb0fb7569186963db54ec4e925fe0bf6fe69c8eaf49eec2ee49213425839d6",
+      "bytes": 16459
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9z3d.npz",
+      "local": "per_pdb/9z3d.npz",
+      "sha256": "cad090bb0f0e1ff541666f85c31a4181844c4b7e6069f65456b025a68788d330",
+      "bytes": 6452
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9shy.npz",
+      "local": "per_pdb/9shy.npz",
+      "sha256": "2efc1a6c887598d2c17fa0ba21ebf0c61d01edaa826a5f6c6babbf6858b6333f",
+      "bytes": 10049
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/28ik.npz",
+      "local": "per_pdb/28ik.npz",
+      "sha256": "20f9572eaf73bbff10433c0919ff5df93791ff24775625067dd2b838baccb01f",
+      "bytes": 12062
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9pxg.npz",
+      "local": "per_pdb/9pxg.npz",
+      "sha256": "27cb4119b33fad45e60d7d076a634bc3d34e74f95e055d3f699fe7997a2de3f6",
+      "bytes": 6706
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9uat.npz",
+      "local": "per_pdb/9uat.npz",
+      "sha256": "8f808b4e9c6eb6dc6638c9661c288622aa1bbd92f300c6dd3cc24bfd52266135",
+      "bytes": 7130
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/30yu.npz",
+      "local": "per_pdb/30yu.npz",
+      "sha256": "a1e2730b3c99c73b63128bbd7be4577ccb0803c3e4e64139e1749765490b8291",
+      "bytes": 21961
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9r85.npz",
+      "local": "per_pdb/9r85.npz",
+      "sha256": "4afd5c320546d8fcae14684192c5c7a2163538e6799d77d68573bdaa0393dab6",
+      "bytes": 8007
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9v7q.npz",
+      "local": "per_pdb/9v7q.npz",
+      "sha256": "79cd6dc5a42466b4135a68261c6161532941a6117a58ecb844f9b499820b0ed5",
+      "bytes": 9483
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9ryn.npz",
+      "local": "per_pdb/9ryn.npz",
+      "sha256": "200d5b8ce9e8470b967c674c67218d95fb215b429efd6f0264ff5b99da6288e1",
+      "bytes": 8995
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9zjz.npz",
+      "local": "per_pdb/9zjz.npz",
+      "sha256": "d6b6684ba8897b3919177bc73e649417ff1dd7bafbb03bc1c24bfc02e55e227d",
+      "bytes": 9802
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9vbv.npz",
+      "local": "per_pdb/9vbv.npz",
+      "sha256": "9299a52f09003e4b7fe5aaff477012a4b6982200c6ab8c1e7fdc341795ae5c01",
+      "bytes": 12041
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9k30.npz",
+      "local": "per_pdb/9k30.npz",
+      "sha256": "c88c99a5aa03cbef1c88786b8efc896d49f5e22d497efbdae5251023c351c4c9",
+      "bytes": 7274
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9lfa.npz",
+      "local": "per_pdb/9lfa.npz",
+      "sha256": "5b23f6c97f7e7b7517ca284413e857159b67a851605f2f51520b853172699778",
+      "bytes": 8027
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9teo.npz",
+      "local": "per_pdb/9teo.npz",
+      "sha256": "1f26e09c059b928d3f0b50a790bb1074be4fee6e495f7fb0443bfdcc8b1367fb",
+      "bytes": 13483
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9rd8.npz",
+      "local": "per_pdb/9rd8.npz",
+      "sha256": "7cc60493ef64700a4837643fa58e3bf5a20f6eb9381c67827cd42e09c5b12be6",
+      "bytes": 8236
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9k2z.npz",
+      "local": "per_pdb/9k2z.npz",
+      "sha256": "2e3df5a5f37d8fb0bcc98f41b1b32a116664237f38a593935bf87411a4335199",
+      "bytes": 5998
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9s7j.npz",
+      "local": "per_pdb/9s7j.npz",
+      "sha256": "5dd390c9a1f988158b898c7b05836d9698a2490a5933585de829c880d39d5f58",
+      "bytes": 6914
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9uur.npz",
+      "local": "per_pdb/9uur.npz",
+      "sha256": "23052d9d21f73fc6220ecf5258e40c881ce9cafd1af983a4b18f796665bb7e8d",
+      "bytes": 9073
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/22rd.npz",
+      "local": "per_pdb/22rd.npz",
+      "sha256": "208fdc5905e0297e0cd44360e8a458f0eaca8e6ac4306ed765eb18329f463391",
+      "bytes": 11414
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9lrm.npz",
+      "local": "per_pdb/9lrm.npz",
+      "sha256": "41b88bba0f1aef9069126d8f1e44b167f03ed9031a6c691bbde1aaf3dec23273",
+      "bytes": 7577
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9lqj.npz",
+      "local": "per_pdb/9lqj.npz",
+      "sha256": "2eb9738f9f891a03d9a9ae8ff3d91102f187760505d48b2a3155b1692686dbed",
+      "bytes": 6084
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9lqt.npz",
+      "local": "per_pdb/9lqt.npz",
+      "sha256": "e2168bc7776ea94c28612c487b56b0eb9df46e8bb7a1ecece539da021559a509",
+      "bytes": 7271
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9if5.npz",
+      "local": "per_pdb/9if5.npz",
+      "sha256": "ddee797bdae00c3d8a627e5d026222edb1ea9741b4cd0a8c45e1d78d7f13d89c",
+      "bytes": 13009
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9o8p.npz",
+      "local": "per_pdb/9o8p.npz",
+      "sha256": "b4d27b96a27c851655133f82299c6585b361c00244df1209627729489fc2722b",
+      "bytes": 7932
+    },
+    {
+      "source": "/storage/penghongen/Adaligand_E2E/test/test_0/find/Emap2lig/held_out_test_0/evaluation/per_pdb/9hjx.npz",
+      "local": "per_pdb/9hjx.npz",
+      "sha256": "4eddea7fea81612b21a48652c454ddd2010634f7432291d468f783ea282edc84",
+      "bytes": 6226
+    }
+  ],
+  "repeated_inference": false
+}

@@ -1,0 +1,126 @@
+# CA2 条件的 Find–Match–Build 配置：使用 CryoAtom2 受体和相应模拟密度，实验密度与 GT 共用。
+# 入口：python -m ligandseek_pipeline <本文件路径>。run.py::run_pipeline 将配置交给各阶段读取。
+# 顶层 stages 描述运行环境，find/match/build/evaluate 分别描述组件输入和计算参数。
+
+# --- 产物根与输入条件 ---
+# run.py::run_pipeline 保存配置副本；各阶段在同一 root 下读取和发布文件。
+root: /storage/penghongen/Adaligand_E2E/test/test_0  # str，Find、Match、Build 和评价的统一产物根
+domain: CA2  # str，GT 为沉积受体，CA2 为 CryoAtom2 受体，Emap2lig 为官方 Find/Build 组件
+candidate_file: /storage/penghongen/Adaligand_E2E/test/test_0/inputs/stage3/cryoatom2_candidates.jsonl  # str，区域候选 JSONL；包含 blob 编号、世界中心、真实对应及 Stage3 范围
+
+# --- 各阶段的解释器、代码和环境 ---
+# run.py::run_pipeline 按 find → match → build → evaluate 启动子进程。
+# project_root 同时作为工作目录和 Python 导入根；每个阶段继承启动环境，再加入 environment。
+# OpenMP、MKL、OpenBLAS 的进程内线程数由 run_pipeline 设为 1。
+stages:
+  find:
+    python: /home/penghongen/anaconda3/envs/Pocket_Plus_centos7_cu121_allgpu/bin/python  # str，运行 ligandseek_pipeline.find 的解释器
+    project_root: /home/penghongen/Feedback/Pocket_Plus/releases/Pocket_Plus_d24c9e99c664/Pocket_Plus  # str，该组件的工作目录及 Python 导入根
+    environment: {}  # dict[str,str]，本阶段没有附加环境变量
+  match:
+    python: /home/penghongen/anaconda3/envs/Pocket_Plus_centos7_cu121_allgpu/bin/python  # str，运行 ligandseek_pipeline.match 的解释器
+    project_root: /home/penghongen/My_Project/Matcher  # str，该组件的工作目录及 Python 导入根
+    environment: {}  # dict[str,str]，本阶段没有附加环境变量
+  build:
+    python: /storage/penghongen/PocketXMol/runtime/venv/bin/python  # str，运行 ligandseek_pipeline.build 的解释器
+    project_root: /home/penghongen/Feedback/PocketXMol/releases/PocketXMol_f4d72bbea387/PocketXMol  # str，该组件的工作目录及 Python 导入根
+    environment: {}  # dict[str,str]，本阶段没有附加环境变量
+  evaluate:
+    python: /storage/penghongen/PocketXMol/runtime/venv/bin/python  # str，运行 ligandseek_pipeline.evaluate 的解释器
+    project_root: /home/penghongen/Feedback/PocketXMol/releases/PocketXMol_f4d72bbea387/PocketXMol  # str，该组件的工作目录及 Python 导入根
+    environment: {}  # dict[str,str]，本阶段没有附加环境变量
+
+# --- Find 的已有结果与原生命令 ---
+# find.py::run_find 读取 completion_file；文件存在时复用结果，缺少时按 commands 顺序执行。
+# environment 在 Find 阶段环境的基础上加入，供下面的原生命令读取。
+find:
+  completion_file: /storage/penghongen/Adaligand_E2E/test/test_0/find/LigandSeek2/CA2/complete.json  # str，Find 完成记录；存在即读取，缺少时执行 commands 后写出
+  environment:  # dict[str,str]，加入 Find 原生命令的环境变量
+    ADALIGAND_DATA_ROOT: /storage/penghongen/Adaligand_infered_receptor_data/cryoatom2/test_0_chain06/Ori_Data  # str，Find 原生命令读取的受体、实验密度和模拟密度资产根
+  # list[list[str]]，外层按顺序执行命令，内层为直接传给 subprocess.run 的参数列表。
+  # 每行将一个选项及其值放在一起；引号中的数字也是字符串命令参数。
+  commands:
+    # 完整地图概率前向
+    - [
+        "/home/penghongen/anaconda3/envs/Pocket_Plus_centos7_cu121_allgpu/bin/python",  # 该命令实际启动的 Python 解释器
+        "-m", "src.inference.cli", "probability",  # Python 模块及其 Find 子命令
+        "--config", "/home/penghongen/Feedback/Pocket_Plus/releases/Pocket_Plus_d24c9e99c664/Pocket_Plus/configs/inference/stage1_v3.yaml",  # Find 的模型推理配置 YAML
+        "--producer", "CA2",  # 受体输入条件，同时决定 Find 产物的条件目录
+        "--pdb-json", "/storage/penghongen/AdaLigand/held_out/split/held_out_06_chain/test_0.json",  # 完整测试 PDB 清单
+        "--split", "held_out_test_0",  # 输出划分目录名
+        "--output-root", "/storage/penghongen/Adaligand_E2E/test/test_0/find/LigandSeek2",  # 该 Find 组件的产物根
+        "--checkpoint", "/home/penghongen/Feedback/Pocket_Plus/logs/AdaLigand_Stage1_pdb_centric_resume-Find_1-pdb_centric_2/Find_1-pdb_centric_2_resume____Find_1_pdb_centric_2_job368455_20260909T071535_a2_pdb_centric_2_resume/checkpoints/TOP_epoch_04_score_0.6654.ckpt",  # Find 模型参数
+        "--resolved-config", "/home/penghongen/Feedback/Pocket_Plus/logs/AdaLigand_Stage1_pdb_centric_resume-Find_1-pdb_centric_2/Find_1-pdb_centric_2_resume____Find_1_pdb_centric_2_job368455_20260909T071535_a2_pdb_centric_2_resume/config.yaml",  # 与 Find checkpoint 配套保存的模型配置
+        "--model-code-source", "training_snapshot"  # training_snapshot 从训练代码快照恢复模型
+      ]
+
+    # 按已有语义阈值提取完整 blob
+    - [
+        "/home/penghongen/anaconda3/envs/Pocket_Plus_centos7_cu121_allgpu/bin/python",  # 该命令实际启动的 Python 解释器
+        "-m", "src.inference.cli", "blobs",  # Python 模块及其 Find 子命令
+        "--config", "/home/penghongen/Feedback/Pocket_Plus/releases/Pocket_Plus_d24c9e99c664/Pocket_Plus/configs/inference/stage1_v3.yaml",  # Find 的模型推理配置 YAML
+        "--producer", "CA2",  # 受体输入条件，同时决定 Find 产物的条件目录
+        "--pdb-json", "/storage/penghongen/AdaLigand/held_out/split/held_out_06_chain/test_0.json",  # 完整测试 PDB 清单
+        "--split", "held_out_test_0",  # 输出划分目录名
+        "--output-root", "/storage/penghongen/Adaligand_E2E/test/test_0/find/LigandSeek2",  # 该 Find 组件的产物根
+        "--alpha", "2",  # F-alpha 中的 alpha；2 对应 F2
+        "--semantic-parameters", "/storage/penghongen/AdaLigand_stage1_inference/Find_1/真实受体/artifacts/Find_1/tuning/F2_semantic.json"  # 已保存的语义阈值参数 JSON，供完整 blob 提取使用
+      ]
+
+    # 围绕 blob 计算 80³ 特征、48³ 裁块和区域选择结果
+    - [
+        "/home/penghongen/anaconda3/envs/Pocket_Plus_centos7_cu121_allgpu/bin/python",  # 该命令实际启动的 Python 解释器
+        "-m", "src.inference.cli", "centered",  # Python 模块及其 Find 子命令
+        "--config", "/home/penghongen/Feedback/Pocket_Plus/releases/Pocket_Plus_d24c9e99c664/Pocket_Plus/configs/inference/stage1_v3.yaml",  # Find 的模型推理配置 YAML
+        "--producer", "CA2",  # 受体输入条件，同时决定 Find 产物的条件目录
+        "--pdb-json", "/storage/penghongen/AdaLigand/held_out/split/held_out_06_chain/test_0.json",  # 完整测试 PDB 清单
+        "--split", "held_out_test_0",  # 输出划分目录名
+        "--output-root", "/storage/penghongen/Adaligand_E2E/test/test_0/find/LigandSeek2",  # 该 Find 组件的产物根
+        "--checkpoint", "/home/penghongen/Feedback/Pocket_Plus/logs/AdaLigand_Stage1_pdb_centric_resume-Find_1-pdb_centric_2/Find_1-pdb_centric_2_resume____Find_1_pdb_centric_2_job368455_20260909T071535_a2_pdb_centric_2_resume/checkpoints/TOP_epoch_04_score_0.6654.ckpt",  # Find 模型参数
+        "--resolved-config", "/home/penghongen/Feedback/Pocket_Plus/logs/AdaLigand_Stage1_pdb_centric_resume-Find_1-pdb_centric_2/Find_1-pdb_centric_2_resume____Find_1_pdb_centric_2_job368455_20260909T071535_a2_pdb_centric_2_resume/config.yaml",  # 与 Find checkpoint 配套保存的模型配置
+        "--model-code-source", "training_snapshot",  # training_snapshot 从训练代码快照恢复模型
+        "--alpha", "2",  # F-alpha 中的 alpha；2 对应 F2
+        "--forward-min-voxels", "8",  # 参与 centered 局部前向的最小来源区域体素数
+        "--selection-parameters", "/storage/penghongen/AdaLigand_stage1_inference/Find_1/真实受体/artifacts/Find_1/tuning/F2_gaussian.json",  # 已保存的 Gaussian 区域选择参数 JSON
+        "--continue-on-blob-exceed"  # 独立布尔开关；遇到超出 80³ 框的区域时保留提示并继续处理
+      ]
+
+# --- Build 的请求、模型和采样 ---
+# build.py::run_build 按候选编号查找 result.json，已有结果直接复用，其余交给原采样器。
+# known 使用 Stage3 对应实例的精确 SMILES；match 使用 Matcher 的预测身份并按类别选择小分子。
+build:
+  identity_source: known  # str，化学身份来源；known 取 target_smiles，match 取 predicted_smiles
+  output_root: /storage/penghongen/Adaligand_E2E/test/test_0/build/PocketXMol-tuned/CA2  # str，该模型和输入条件的 Build 产物根
+  num_candidates: 50  # int，每个 blob 请求的姿态候选数，成功与失败均占原采样预算
+  num_steps: 100  # int，每个候选的去噪采样步数
+  model_name: local_cov-C-strongest1-CA2  # str，写入 PocketXMol 结果的模型名称
+  train_config: /home/penghongen/Feedback/PocketXMol/releases/PocketXMol_f4d72bbea387/PocketXMol/configs/docking/local_cov-C-T0-RA.yml  # str，恢复 PocketXMol 模型结构和采样配置所用的训练 YAML
+  checkpoint: /storage/penghongen/PocketXMol/training/local_cov-C-T0-RA-b72/checkpoints/step=24800.ckpt  # str，local_cov 中心模型的 best 参数文件
+  receptor_root: /storage/penghongen/Adaligand_infered_receptor_data/cryoatom2/test_0_chain06/Ori_Data  # str，受体原子和实验／模拟密度资产根；由 ConditionedDockingDataset 读取
+  smiles_root: /storage/penghongen/AdaLigand/Ori_Data/smiles_assets  # str，公共精确 SMILES 图和自同构 NPZ 所在目录
+  knn: 32  # int，传给原数据构造的受体近邻数
+  batch_size: 50  # int，单次 PocketXMol 采样批量；与总候选数 num_candidates 分开
+  device: cuda  # str，PocketXMol 模型和采样张量所在设备
+  seed_base: 43200000  # int，新请求的种子为 seed_base + 4*index + 1；index 为筛选后候选的 0 基位置，已有请求沿用保存的种子
+
+# --- CPU 姿态评价与完成度汇总 ---
+# evaluate.py::evaluate_candidate 读取已有姿态和指标；evaluate_pipeline 汇总完整候选轨迹。
+evaluate:
+  workers: 16  # int，ProcessPoolExecutor 的逐 blob CPU 评价进程数；主进程按输入顺序组装结果
+  smiles_coords_root: /storage/penghongen/AdaLigand/Ori_Data/smiles_assets/SMILE_coords/v1  # str，最终 RMSD 参考坐标根；_reference_molecule 按真实实例编号读取
+  all_identities: /storage/penghongen/Adaligand_E2E/test/test_0/inputs/stage3/identities.jsonl  # str，77 个 PDB 的带 type_tag 身份清单；按 pdb_id + smiles 查预测类别
+
+# --- Matcher 的身份预测与清单 ---
+# match.py::run_match 读取 result_file；文件存在时复用预测，缺少时调用 Matcher 的 _run_matcher_condition。
+# 全配体预测通过 pdb_id + source_blob_index 接回 Stage3 候选。
+match:
+  identity_file: /storage/penghongen/Adaligand_E2E/test/test_0/inputs/stage3/identities.jsonl  # str，带类别的精确身份 JSONL；identity_source=match 时据此选择 small_molecule 答案
+  result_file: /storage/penghongen/Adaligand_E2E/test/test_0/match/all_ligand/CA2/evaluation.json  # str，活动 Matcher 预测文件；读取 predictions[condition] 中的候选答案
+  checkpoint: /storage/penghongen/Matcher/runs/strongest-1/train_strongest1_revised_job378587_20260920T230727/BEST.pt  # str，strongest-1 的 BEST 参数文件；模型由其训练 release 恢复
+  manifest: /storage/penghongen/Adaligand_E2E/test/test_0/inputs/all_ligand/CA2/manifest.json  # str，Matcher 全配体候选、身份及共享图／语言资产的读取入口
+  split: held_out_test_0  # str，manifest.splits 中要读取的划分键
+  condition: cryoatom2_receptor  # str，预测文件中的条件键；GT 对应 real_receptor，CA2 对应 cryoatom2_receptor
+  batch_size: 32  # int，一次 GPU 前向的区域候选数；沿用 strongest-1 原 H100 测试批量
+  num_workers: 0  # int，Matcher DataLoader 工作进程数；0 表示在当前进程加载
+  pp_top_k: 2048  # int，strongest-1 按 Find 概率保留的 PP 空间点数量上限
+  cache_gib_per_worker: 2.0  # float，Matcher 每个 Dataset 副本的 PDB 缓存上限，单位 GiB；0 关闭缓存

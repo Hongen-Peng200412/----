@@ -1,0 +1,116 @@
+{
+  "base": "81c87aa736b5907aa32b47ddf4e28171386a9558",
+  "implementation_branch": "codex/find-match-build-pipeline",
+  "implementation_endpoint": "16a73c3315af1affe2ceb12e1ab5d9d25268ce7d",
+  "learning_branch": "Learn/find-match-build-pipeline",
+  "learning_endpoint": "91bdf0ed8863707463636b821f7724aaf918b64b",
+  "cumulative_endpoint": "91bdf0ed8863707463636b821f7724aaf918b64b",
+  "implementation_tree": "ec0d56ef1d4d9822fcbe77d2b53d1a66fe1be8dc",
+  "learning_tree": "ec0d56ef1d4d9822fcbe77d2b53d1a66fe1be8dc",
+  "path_differences": [],
+  "python_ast_equal": [
+    "ligandseek_pipeline/__init__.py",
+    "ligandseek_pipeline/__main__.py",
+    "ligandseek_pipeline/artifacts.py",
+    "ligandseek_pipeline/build.py",
+    "ligandseek_pipeline/completion.py",
+    "ligandseek_pipeline/evaluate.py",
+    "ligandseek_pipeline/find.py",
+    "ligandseek_pipeline/match.py",
+    "ligandseek_pipeline/run.py",
+    "tests/pipeline/test_cache_and_evaluation.py"
+  ],
+  "configs_and_entry_equal": [
+    {
+      "path": "测评数据代码/端到端测评/configs/CA2.yml",
+      "sha256": "a61a417c0a05bc11aebafe0b188b146848dedd731d33e45a5c8bb7eed621de71"
+    },
+    {
+      "path": "测评数据代码/端到端测评/configs/Emap2lig.yml",
+      "sha256": "2c683f313595341120f4930c532120eb83cae9e6a053b9866bd7e5370ffb35be"
+    },
+    {
+      "path": "测评数据代码/端到端测评/configs/GT.yml",
+      "sha256": "74f275854e62ed8cbeb487f5dfa5f50bb6b3c56416b39f1e555a7c6b2f45f26f"
+    },
+    {
+      "path": "测评数据代码/端到端测评/sh/run.sh",
+      "sha256": "754cc13a29f5d5b56ed223687dfdd4468bbad9e66761262d89626fbda35145a3"
+    }
+  ],
+  "implementation_test": {
+    "exit_code": 0,
+    "stdout": "EVALUATION_COMPLETE Emap2lig 2\nEVALUATION_COMPLETE Emap2lig 2\n",
+    "stderr": "test_cached_build_does_not_load_model (test_cache_and_evaluation.PipelineTest.test_cached_build_does_not_load_model) ... ok\ntest_worker_error_does_not_publish_partial_total (test_cache_and_evaluation.PipelineTest.test_worker_error_does_not_publish_partial_total) ... ok\ntest_workers_keep_results_order_and_denominator (test_cache_and_evaluation.PipelineTest.test_workers_keep_results_order_and_denominator) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.696s\n\nOK\n"
+  },
+  "learning_test": {
+    "exit_code": 0,
+    "stdout": "EVALUATION_COMPLETE Emap2lig 2\nEVALUATION_COMPLETE Emap2lig 2\n",
+    "stderr": "test_cached_build_does_not_load_model (test_cache_and_evaluation.PipelineTest.test_cached_build_does_not_load_model) ... ok\ntest_worker_error_does_not_publish_partial_total (test_cache_and_evaluation.PipelineTest.test_worker_error_does_not_publish_partial_total) ... ok\ntest_workers_keep_results_order_and_denominator (test_cache_and_evaluation.PipelineTest.test_workers_keep_results_order_and_denominator) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.877s\n\nOK\n"
+  },
+  "learning_commits": [
+    {
+      "hash": "d5d4cb19093b01a10a9c29bcbf1e112ea188bf4a",
+      "message": "docs(pipeline): define unified assets evaluation scope and result provenance",
+      "paths": [
+        "CLAUDE/memory/handoffs/2026-10-16-find-match-build-unification.md",
+        "CLAUDE/memory/index.json",
+        "CLAUDE/memory/projects/adaligand.json",
+        "ligandseek_pipeline/README.md",
+        "文档/mapping/计划执行映射.md",
+        "测评数据代码/test_and_pipeline.md",
+        "测评数据代码/端到端测评/结果与日志/CA2.md",
+        "测评数据代码/端到端测评/结果与日志/Emap2lig.md",
+        "测评数据代码/端到端测评/结果与日志/GT.md",
+        "测评数据代码/端到端测评/结果与日志/总日志.md"
+      ]
+    },
+    {
+      "hash": "523aa0a7eeccfca3ca8aea2cb6ed15c1f58b31b3",
+      "message": "feat(pipeline): establish scientific artifact IO and exact completion accounting",
+      "paths": [
+        "ligandseek_pipeline/__init__.py",
+        "ligandseek_pipeline/artifacts.py",
+        "ligandseek_pipeline/completion.py"
+      ]
+    },
+    {
+      "hash": "9a086a47147764bcc9a721d4e04037fe40ce130f",
+      "message": "feat(pipeline): reuse native Find Match and Build stages",
+      "paths": [
+        "ligandseek_pipeline/find.py",
+        "ligandseek_pipeline/match.py",
+        "ligandseek_pipeline/build.py"
+      ]
+    },
+    {
+      "hash": "f03841e2f68d8e6c682f2ae0a904d8ff7ea79910",
+      "message": "feat(pipeline): assemble ordered pose evaluation and derived views",
+      "paths": [
+        "ligandseek_pipeline/evaluate.py"
+      ]
+    },
+    {
+      "hash": "ecd92b4b05aa7092c0d952be85608fd5093c49ac",
+      "message": "feat(pipeline): connect isolated environments and frozen experiment configs",
+      "paths": [
+        "ligandseek_pipeline/run.py",
+        "ligandseek_pipeline/__main__.py",
+        "测评数据代码/端到端测评/sh/run.sh",
+        "测评数据代码/端到端测评/configs/CA2.yml",
+        "测评数据代码/端到端测评/configs/Emap2lig.yml",
+        "测评数据代码/端到端测评/configs/GT.yml"
+      ]
+    },
+    {
+      "hash": "91bdf0ed8863707463636b821f7724aaf918b64b",
+      "message": "test(pipeline): verify cache reuse ordered workers and preserved denominators",
+      "paths": [
+        "tests/pipeline/test_cache_and_evaluation.py"
+      ]
+    }
+  ],
+  "latest_commit_is_unique": true,
+  "worktree_clean": true,
+  "pushed": false
+}

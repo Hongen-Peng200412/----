@@ -1,0 +1,1 @@
+{"candidate_id": 0, "components": [{"auth_asym_id": "A", "auth_seq_id": 401, "ccd_id": "937", "icode": "", "index": 1, "label_asym_id": "B", "label_seq_id": 401}], "inter_bonds": [], "is_covalent": false, "kind": "CCD", "n_heavy_atoms": 38, "object_key": "CCD:937", "pdb_id": "22rd", "polymer_length": 1, "type_tag": "small_molecule"}

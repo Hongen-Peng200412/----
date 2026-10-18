@@ -1,0 +1,85 @@
+{
+  "word": [
+    {
+      "file": "论文草稿.nature.docx",
+      "sha256": "27ace919a6300766f0880ea1a6e2ce0762432ffca26231039c5c2ab33af203fb",
+      "images": 17,
+      "tables": 0,
+      "unresolved_markers": 0,
+      "pages": 52,
+      "text_outside_page": 0
+    },
+    {
+      "file": "论文草稿.operation.docx",
+      "sha256": "dd811468e588dffeee7053a39ccc17d22053aa3865914360a0e2e6fd2cbada82",
+      "images": 17,
+      "tables": 0,
+      "unresolved_markers": 0,
+      "pages": 46,
+      "text_outside_page": 0
+    },
+    {
+      "file": "draft.nature.docx",
+      "sha256": "6ce18c5fb3f26406da3c98d11d8907252c54e7aabe59030f6e615fcb9ef123fb",
+      "images": 17,
+      "tables": 0,
+      "unresolved_markers": 0,
+      "pages": 57,
+      "text_outside_page": 0
+    },
+    {
+      "file": "draft.operation.fmb.docx",
+      "sha256": "440198a2b3933761d4d855e5c4d91a0f274ff124ed17a6a24a802f59a7535354",
+      "images": 17,
+      "tables": 0,
+      "unresolved_markers": 0,
+      "pages": 50,
+      "text_outside_page": 0
+    },
+    {
+      "file": "补充材料.nature.docx",
+      "sha256": "28845a179a483bb3fd2620415f35c631b4020cc6db7029b1585653fa793bd8c8",
+      "images": 4,
+      "tables": 4,
+      "unresolved_markers": 0,
+      "pages": 12,
+      "text_outside_page": 0
+    },
+    {
+      "file": "补充材料.operation.docx",
+      "sha256": "59cf506fb9ef8b59039f3e89413672b554e5766d25de3997643328cabf2b3f1a",
+      "images": 4,
+      "tables": 4,
+      "unresolved_markers": 0,
+      "pages": 9,
+      "text_outside_page": 0
+    },
+    {
+      "file": "supplementary.nature.docx",
+      "sha256": "b94bf28e3c1c13f565b97c35ec9a942a68a2c3bfa71ec379faddad8c2c286c96",
+      "images": 4,
+      "tables": 4,
+      "unresolved_markers": 0,
+      "pages": 13,
+      "text_outside_page": 0
+    },
+    {
+      "file": "supplementary.operation.fmb.docx",
+      "sha256": "8886e77628f2313911b862b17917689284cbdb5f678ad3dcad0937487cd38cef",
+      "images": 4,
+      "tables": 4,
+      "unresolved_markers": 0,
+      "pages": 10,
+      "text_outside_page": 0
+    }
+  ],
+  "total_pages": 249,
+  "ppt_sha256": "0aaa7f0e3391d85d99d5bc14da6654d08b7ef36d036c0de63b5ffe30412cb1ad",
+  "editable_shapes": [
+    2204,
+    1998,
+    4123
+  ],
+  "raster_pictures": 0,
+  "renderer": "Microsoft Word native PDF export, PyMuPDF 120dpi PNG"
+}

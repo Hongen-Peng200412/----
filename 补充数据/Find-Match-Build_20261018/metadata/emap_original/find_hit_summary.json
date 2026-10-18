@@ -1,0 +1,17 @@
+{
+  "full_occurrences": 446,
+  "find_hit_pdbs": 56,
+  "find_top1": 39,
+  "find_top5": 128,
+  "find_best": 243,
+  "build_ready": 237,
+  "build_filter_failed": [
+    "9llg/3",
+    "9lw1/2",
+    "9o8p/0",
+    "9q05/4",
+    "9ui6/5",
+    "9uwi/3"
+  ],
+  "subset_path": "/storage/penghongen/Emap2lig/stage3_find_hit_build/find_hit_subset.jsonl"
+}

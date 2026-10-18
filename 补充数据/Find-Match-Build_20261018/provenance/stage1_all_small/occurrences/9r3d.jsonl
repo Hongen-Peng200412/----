@@ -1,0 +1,1 @@
+{"candidate_id": 0, "components": [{"auth_asym_id": "A", "auth_seq_id": 2401, "ccd_id": "IHP", "icode": "", "index": 1, "label_asym_id": "R", "label_seq_id": 2401}], "inter_bonds": [], "is_covalent": false, "kind": "CCD", "n_heavy_atoms": 36, "object_key": "CCD:IHP", "pdb_id": "9r3d", "polymer_length": 1, "type_tag": "small_molecule"}

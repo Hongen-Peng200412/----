@@ -1,0 +1,11 @@
+{
+  "original_26_panels_identical": true,
+  "pose_pairs_identical": true,
+  "new_stage1_panels": 3,
+  "pdb_count": 94,
+  "occurrence_count": 821,
+  "candidate_and_ignored_counts_equal_original_stage1": true,
+  "emap_npz_hashes_equal_original_stage1": true,
+  "ada_evaluate_unchanged": true,
+  "author_staged_patch_unchanged": true
+}

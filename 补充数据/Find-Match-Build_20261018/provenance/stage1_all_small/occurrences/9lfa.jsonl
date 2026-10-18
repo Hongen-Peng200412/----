@@ -1,0 +1,1 @@
+{"candidate_id": 0, "components": [{"auth_asym_id": "A", "auth_seq_id": 401, "ccd_id": "A1EJF", "icode": "", "index": 1, "label_asym_id": "C", "label_seq_id": 401}], "inter_bonds": [], "is_covalent": false, "kind": "CCD", "n_heavy_atoms": 36, "object_key": "CCD:A1EJF", "pdb_id": "9lfa", "polymer_length": 1, "type_tag": "small_molecule"}

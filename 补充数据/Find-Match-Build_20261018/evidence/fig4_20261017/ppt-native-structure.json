@@ -1,0 +1,41 @@
+{
+  "figures": [
+    {
+      "slide": 1,
+      "editable_shapes": 3504,
+      "raster_images": 0
+    },
+    {
+      "slide": 2,
+      "editable_shapes": 1998,
+      "raster_images": 0
+    },
+    {
+      "slide": 3,
+      "editable_shapes": 4123,
+      "raster_images": 0
+    }
+  ],
+  "rotated_labels": [
+    {
+      "shape_id": "21",
+      "actual_rotated_bounds_emu": [
+        173835.5,
+        2972139.5,
+        300835.5,
+        4035078.5
+      ],
+      "inside_slide": true
+    },
+    {
+      "shape_id": "2275",
+      "actual_rotated_bounds_emu": [
+        173835.5,
+        5022521.5,
+        300835.5,
+        6085460.5
+      ],
+      "inside_slide": true
+    }
+  ]
+}

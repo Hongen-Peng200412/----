@@ -1,0 +1,22 @@
+{
+  "pages": 206,
+  "unchanged_body_pages": 200,
+  "visually_reviewed_pages": {
+    "论文草稿.nature.pdf": [
+      11
+    ],
+    "论文草稿.operation.pdf": [
+      11
+    ],
+    "draft.nature.pdf": [
+      13,
+      14
+    ],
+    "draft.operation.fmb.pdf": [
+      11,
+      12
+    ]
+  },
+  "fig4_caption_same_page": true,
+  "result": "pass"
+}

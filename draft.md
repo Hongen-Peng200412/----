@@ -226,14 +226,14 @@ These cases showed that the receptor structure imposes steric constraints, where
 
 ## End-to-end
 
-### Evaluation protocol
+### Evaluation protocol (completion ratio)
 In practical cryo-EM structure determination, researchers work with unannotated three-dimensional density maps and unknown binding sites. To assess automated modelling in this setting, we connected Find, Match and Build into a single end-to-end pipeline. We evaluated region detection and identity matching across all ligand categories, and full pose reconstruction for organic small molecules with no missing atoms.
 
 {{pptfig:"画图/E2E评价计费规则.pptx"|e2e-accounting-rules-draft}}
 
-Find ranks candidate ligand regions by descending mean probability, yielding Rank 1, Rank 2 and subsequent candidates. For each PDB entry, the pipeline examines these candidates in order for up to $K$ attempts. A PDB entry is classified as successful if any attempt within this budget succeeds. The attempt-accounting rules for the two end-to-end evaluation settings are summarised in {{figref:e2e-accounting-rules-draft}}.
+Find ranks candidate ligand regions by descending mean probability, yielding Rank 1, Rank 2 and subsequent candidates. For each PDB entry, the pipeline examines these candidates in order within a specified relative attempt budget. End-to-end region detection and identity matching across all ligand categories require both Find and Match to succeed. Full pose reconstruction for organic small molecules with no missing atoms requires Find, Match and Build to succeed. Unsupported ligand types are skipped, whereas model prediction errors, including false positives, remain counted. For a PDB entry containing $N$ eligible ligands, a relative attempt budget $\rho$ allows $\lfloor\rho N\rfloor$ attempts. We report the fraction of ground-truth ligand instances successfully processed within this budget, termed the completion ratio. The attempt-accounting rules are summarised in {{figref:e2e-accounting-rules-draft}} and detailed below.
 
-For end-to-end region detection and identity matching across all ligand categories, we applied the following accounting rules. A false-positive candidate predicted by Find consumes one attempt, after which the pipeline examines the next candidate. If a candidate corresponds to a ground-truth ligand with at least 30% coverage in both directions, Match assigns its ligand identity. Correct identity matching completes the task; incorrect matching consumes one attempt. The pipeline continues until the task succeeds or the $K$-attempt budget is exhausted.
+For end-to-end region detection and identity matching across all ligand categories, we applied the following accounting rules. A false-positive candidate predicted by Find consumes one attempt, after which the pipeline examines the next candidate. If a candidate corresponds to a ground-truth ligand with at least 30% coverage in both directions, Match assigns its ligand identity. Correct identity matching successfully processes that ground-truth ligand instance; incorrect matching consumes one attempt. The pipeline continues until the attempt budget is exhausted.
 
 For end-to-end modelling of single-residue small molecules with no missing atoms, false-positive candidates likewise consume one attempt before the next candidate is examined.
 
@@ -243,25 +243,62 @@ If a candidate corresponds to a small molecule with at least 30% bidirectional c
 
 According to the aforementioned rules, when a ligand outside the single-residue, complete organic small-molecule subset is correctly detected and matched, we still skip docking and charge no attempt. This ensures that all evaluated docking tasks use the same downstream tool, PocketXMol-tuned. However, a region corresponding to a true non-small-molecule ligand is charged if it is misidentified as a small molecule. In this case, it is actually an unmatched distractor and counts as a failed attempt.
 
-### End-to-end region detection and identity matching across ligand categories
+### Fair Find–correct Match–Build comparison with Emap2lig
 
-{{pptfig:"画图/E2E结果.pptx"|e2e-all-find-match}}
+To compare the combined detection and modelling capabilities directly, we supplied both LigandSeek and Emap2lig with the correct ligand SMILES ({{figref:supp-find-correct-match-build}}). We evaluated Find–correct Match–Build completion on the same 77 PDBs containing 446 single-residue organic small molecules with no missing atoms. LigandSeek used PocketXMol-tuned centre docking guided by predicted blob centroids, whereas Emap2lig used its native blob-guided Build model. Background candidates consumed one attempt, and out-of-scope foreground candidates were skipped without charge. Undetected instances remained in the full denominator throughout the completion analysis.
 
-We first evaluated end-to-end ligand-region detection and identity matching in 179 independent test PDB entries ({{figref:e2e-all-find-match}}). These entries contained coexisting ligand categories, including small molecules, ions and sugars. Under the strictest single-attempt condition ($K=1$), end-to-end region detection and identity matching succeeded in 120 entries (67.0%) with CryoAtom2-reconstructed receptors (CA2), while region detection alone succeeded in 134 entries (74.9%). With deposited receptors (GT), the corresponding counts were 142 (79.3%) for joint success and 148 (82.7%) for region detection alone. As the attempt budget increased to 10, end-to-end success rates rapidly plateaued at 87.7% with CA2 receptors and 92.2% with GT receptors. By comparison, Emap2lig-Find detected ligand regions but could not identify their chemical identities. It detected regions in only 71 entries (39.7%) at $K=1$ and 93 entries (52.0%) within $K \le 10$.
+For top-1 poses with RMSD <3 Å, mean completion at a 100% budget was 63.2% for GT, 49.6% for CA2 and 38.2% for Emap2lig. Increasing the budget to 300% raised these values to 64.2%, 55.0% and 43.3%, respectively. Using best-of-50 poses at the same threshold, completion at a 100% budget reached 70.5%, 58.0% and 42.5%, respectively. At a 300% budget, the corresponding completion values were 71.5%, 66.3% and 50.0%, respectively. With correct identities supplied to both pipelines, LigandSeek completed more instances, demonstrating its combined advantage in localisation and pose reconstruction.
 
-### End-to-end reconstruction of all-atom small-molecule poses
+The gap between best-of-50 and top-1 completion showed that some correct poses had been generated but were not ranked first. With either receptor input, the combination of LigandSeek-Find and PocketXMol-tuned recovered more small-molecule instances within the same attempt budget.
 
-{{pptfig:"画图/E2E结果.pptx"|e2e-small-pipeline}}
+{{pptfig:"画图/Find-Match-Build公平对比.pptx"|supp-find-correct-match-build|width=5.5in}}
 
-We evaluated the full end-to-end reconstruction pipeline (detection, matching, and pose reconstruction) for single-residue organic small molecules with no missing atoms across 77 PDB entries which contain at least one of them ({{figref:e2e-small-pipeline|b,c}}). In all evaluations, PocketXMol-tuned used the centroid of the ligand region predicted by Find to define the binding site and pocket, without relying on ground-truth ligand coordinates. We tested the pipeline using both deposited receptors ({{figref:e2e-small-pipeline|b}}) and CryoAtom2-reconstructed receptors ({{figref:e2e-small-pipeline|c}}), where in the latter, no deposited structural information was used at any stage of the pipeline.
+### Detection and identity matching across all ligand classes
 
-The strictest evaluation allowed one attempt ($K=1$), selected only the top-1 pose and required RMSD < 2 Å. Under this criterion, 34/77 entries (44.2%) succeeded with CryoAtom2-reconstructed receptors, compared with 44/77 (57.1%) with deposited receptors. At RMSD < 3 Å, the corresponding counts were 41/77 (53.2%) and 50/77 (64.9%). Allowing up to 10 charged attempts ($K \le 10$) increased top-1 success with CryoAtom2-reconstructed receptors to 46/77 entries (59.7%) at RMSD < 2 Å and 52/77 (67.5%) at RMSD < 3 Å. With deposited receptors, 51/77 entries (66.2%) and 55/77 (71.4%) achieved success at RMSD < 2 Å and < 3 Å, respectively.
+For detection and identity matching across all ligand classes, increasing the relative attempt budget from 100% to 300% raised mean instance completion. Completion increased from 51.1% to 58.8% for CA2 and from 62.1% to 67.5% for GT({{figref:supp-e2e-completion-all}}). The corresponding medians increased from 50.0% and 66.7% to 60.2% and 71.4%, respectively. A relative attempt budget of 100% has particular practical significance. This corresponds to a scenario in which ligand identities and numbers are known to the user and can constrain the end-to-end pipeline. Under these conditions, our pipeline recovered most of the ligand instances({{figref:supp-e2e-completion-all}}).
 
-For best-of-50 poses within $K \le 10$, success at RMSD < 2 Å reached 67.5% and 75.3% with CryoAtom2-reconstructed and deposited receptors, respectively. At RMSD < 3 Å, the corresponding success rates were 75.3% and 76.6%.
+{{pptfig:"画图/E2E实例完成度.pptx"|supp-e2e-completion-all}}
 
-{{figref:e2e-small-pipeline|a}} further separates the success rates of individual pipeline stages. Within the first 10 charged attempts ($K \le 10$), Find alone succeeded in 88.3% and 89.6% of entries with CryoAtom2-reconstructed and deposited receptors, respectively. Both exceeded Emap2lig-Find's success rate of 70.1% in this subset. Requiring both Find and Match to succeed yielded rates of 81.8% and 83.1%, respectively.
+<table data-layout="booktabs" data-outline="box" data-col-rules="1,3" data-pagination="rows">
+<caption>Table 1 | All-ligand instance completion (%).</caption>
+<colgroup><col style="width: 16%"/><col style="width: 21%"/><col style="width: 21%"/><col style="width: 21%"/><col style="width: 21%"/></colgroup>
+<thead>
+<tr><th rowspan="2">Receptor</th><th colspan="2">100%</th><th colspan="2">300%</th></tr>
+<tr><th>Mean</th><th>Median</th><th>Mean</th><th>Median</th></tr>
+</thead>
+<tbody>
+<tr><td>GT</td><td>62.1</td><td>66.7</td><td>67.5</td><td>71.4</td></tr>
 
+<tr><td>CA2</td><td>51.1</td><td>50.0</td><td>58.8</td><td>60.2</td></tr>
 
+</tbody>
+</table>
+<p class="table-note">Means are PDB-equal macro means; medians were calculated across the same 179 PDBs.</p>
+
+### Modelling organic small molecules with one residue and no missing atoms
+
+Successful processing of a small-molecule instance requires successful detection by Find, correct identity assignment by Match and a PocketXMol-tuned pose with a heavy-atom RMSD below the specified threshold. We report results under eight combinations of the following test conditions. These combine GT or CA2 receptors, top-1 or best-of-50 poses, and heavy-atom RMSD thresholds of <2 Å or <3 Å.
+
+For top-1 poses with RMSD <3 Å, mean completion for CA2 was 47.7% and 53.0% at 100% and 300% budgets, respectively. The corresponding GT values were 60.1% and 61.1% ({{figref:supp-e2e-completion-small}}). For best-of-50 poses, mean completion was 54.7% and 62.8% for CA2, and 66.0% and 66.9% for GT, respectively. The gap between best pose and top-1 pose shows that many correct poses had already been generated but were not ranked first.
+
+{{pptfig:"画图/E2E实例完成度.pptx"|supp-e2e-completion-small}}
+
+<table data-layout="booktabs" data-outline="box" data-col-rules="2,6" data-pagination="rows" data-page-break="before">
+<caption>Table 2 | Small-molecule instance completion (%).</caption>
+<colgroup><col style="width: 14%"/><col style="width: 10%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/></colgroup>
+<thead>
+<tr><th rowspan="3">Pose</th><th rowspan="3">RMSD</th><th colspan="4">CA2</th><th colspan="4">GT</th></tr>
+<tr><th colspan="2">100%</th><th colspan="2">300%</th><th colspan="2">100%</th><th colspan="2">300%</th></tr>
+<tr><th>Mean</th><th>Median</th><th>Mean</th><th>Median</th><th>Mean</th><th>Median</th><th>Mean</th><th>Median</th></tr>
+</thead>
+<tbody>
+<tr><td rowspan="2">Top-1</td><td>&lt;2 Å</td><td>41.1</td><td>16.7</td><td>44.9</td><td>25.0</td><td>55.1</td><td>75.0</td><td>55.1</td><td>75.0</td></tr>
+<tr><td>&lt;3 Å</td><td>47.7</td><td>33.3</td><td>53.0</td><td>50.0</td><td>60.1</td><td>100.0</td><td>61.1</td><td>100.0</td></tr>
+<tr class="table-divider"><td rowspan="2">Best</td><td>&lt;2 Å</td><td>49.1</td><td>50.0</td><td>55.9</td><td>83.3</td><td>63.5</td><td>100.0</td><td>64.4</td><td>100.0</td></tr>
+<tr><td>&lt;3 Å</td><td>54.7</td><td>66.7</td><td>62.8</td><td>100.0</td><td>66.0</td><td>100.0</td><td>66.9</td><td>100.0</td></tr>
+</tbody>
+</table>
+<p class="table-note">Means and medians were calculated across the same 77 PDBs.</p>
 
 ### Representative cases
 

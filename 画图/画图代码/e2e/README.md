@@ -1,5 +1,17 @@
 # 端到端结果图
 
+## 当前图集与 Find–Build 直接比较
+
+`画图/E2E结果.pptx` 当前包含四页：全配体 top-k success、小分子 top-k success、给定正确身份的完整 Find–Build 完成度曲线，以及正文使用的四面板分组柱状图。前三页沿用已有组件和双语图注；第四页图内只有图例、面板条件和坐标标签，评价前提写在图注中。
+
+运行 `D:/Anaconda/python.exe -B 画图/画图代码/e2e/plot_find_build_direct.py` 生成第四页的同源图形与装配清单。输入为 `画图/formal/fmb_20261015/data.json` 中的十二个 `assume` 面板；每个面板含相同的77个PDB、446个小分子实例。脚本只读取100%和300%预算的既有逐PDB完成比例，不重新推理或修改计费。柱高为PDB等权均值；同一77-PDB轴进行10,000次有放回重采样，所有条件共用索引，以2.5%和97.5%分位数给出区间。
+
+输出统一位于 `temp/emap2lig_direct_20261020/`：`source_data.csv` 保存1,848个逐PDB观测，字段为面板、构象数、RMSD阈值（Å）、预算（%）、方法、PDB编号和完成比例（0–1）；`summary.csv` 保存24根柱的PDB数、均值及区间上下界（均为%）。`direct.svg`、`direct.pdf`和`direct.png`共享同一几何；`manifest.json`保存唯一图名、180×118 mm尺寸和双语图注，`scenes.json`增加原生形状清单，长度与坐标单位为pt。新页图名为`e2e-find-build-direct-comparison`，旧曲线页仍为`supp-find-correct-match-build`。
+
+本轮PPT原生归并与验收脚本位于上述临时目录。当前发布位置和执行证据见[执行记录](../../../RULES/执行记录.md)。下面保留早期top-k图的生成说明，不作为当前四页图集的发布清单。
+
+## 历史 top-k 绘图流程
+
 正文现在使用两份一页一图的可编辑 PPT：`画图/E2E结果_全配体.pptx`
 显示 179 个 PDB 的 Find/Find+Match，`画图/E2E结果_小分子三联图.pptx`
 按 a/b/c 堆叠 77 个 PDB 的 Find/Find+Match、真实受体单次 local_cov-C

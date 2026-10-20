@@ -84,3 +84,9 @@ The strictest evaluation allowed one attempt ($K=1$), selected only the top-1 po
 For best-of-50 poses within $K \le 10$, success at RMSD < 2 Å reached 67.5% and 75.3% with CryoAtom2-reconstructed and deposited receptors, respectively. At RMSD < 3 Å, the corresponding success rates were 75.3% and 76.6%.
 
 {{figref:e2e-small-pipeline|a}} further separates the success rates of individual pipeline stages. Within the first 10 charged attempts ($K \le 10$), Find alone succeeded in 88.3% and 89.6% of entries with CryoAtom2-reconstructed and deposited receptors, respectively. Both exceeded Emap2lig-Find's success rate of 70.1% in this subset. Requiring both Find and Match to succeed yielded rates of 81.8% and 83.1%, respectively.
+
+## Find–Build comparison with correct ligand identities
+
+Full completion curves and per-PDB distributions for the Find–Build comparison with correct ligand identities are shown in {{figref:supp-find-correct-match-build}}.
+
+{{pptfig:"画图/E2E结果.pptx"|supp-find-correct-match-build|width=5.5in}}

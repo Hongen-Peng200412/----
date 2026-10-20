@@ -112,7 +112,7 @@ We compared LigandSeek-Find using either deposited or CryoAtom2-reconstructed re
 
 Panels c and d compare LigandSeek-Find directly against Emap2lig-Find using $\operatorname{one-to-one\ PRAUC}_{0.3}$ ({{figref:stage1-main-sixpanel|c,d}}). With CryoAtom2-reconstructed receptors, LigandSeek-Find outperformed Emap2lig-Find on 112 structures, performed comparably on 40 and was inferior on only 27 across the full test set ({{figref:stage1-main-sixpanel|c}}), demonstrating a substantial overall advantage. Emap2lig primarily targets small-molecule identification and modelling, and its detection performance was better for small molecules than across all ligand categories, as shown in {{figref:stage1-main-sixpanel|a,b}}.
 
-{{pptfig:"画图/Find-Match-Build公平对比.pptx"|find-only-instance-completion}}
+{{pptfig:"画图/stage1结果.pptx"|find-only-instance-completion}}
 
 {{figref:find-only-instance-completion}} shows the number of ground-truth instances recovered at different candidate count thresholds. At equal candidate counts, LigandSeek2-Find recovered more ligand instances than Emap2lig-Find ({{figref:find-only-instance-completion}}). A relative candidate count of 100% limits the number of predicted candidates examined to the ground-truth instance count in that PDB. At 100%, mean detection completion across all ligands was 55.6% with CA2 and 66.4% with GT, compared with 25.9% for Emap2lig-Find. In the small-molecule subset, the corresponding values were 59.8% and 70.5%, compared with 44.2% for Emap2lig-Find. At 300%, the candidate count limit was three times the ground-truth instance count. Small-molecule completion reached 68.5% for CA2 and 73.3% for GT, whereas Emap2lig-Find reached 51.6%. LigandSeek2-Find therefore concentrated more true ligand instances among the highest-ranked candidates under both receptor conditions.
 
@@ -205,7 +205,7 @@ We performed a fair comparison between LigandSeek's small-molecule docking engin
 
 Of the 446 test small-molecule instances, Emap2lig-Find returned qualifying blobs with at least 30% bidirectional coverage for 237 instances. Under the same criterion, LigandSeek-Find successfully detected 304 instances with deposited receptors and 293 instances with CryoAtom2-reconstructed receptors. When restricted to instances jointly detected and evaluable by both pipelines, the original small-molecule test set yielded 231 pairs under the deposited-receptor condition and 228 pairs under the CryoAtom2 condition. These subsets served as the benchmarks for directly comparing PocketXMol-tuned against Emap2lig-Build.
 
-{{pptfig:"画图/Find-Match-Build公平对比.pptx"|stage3-predicted-region-head-to-head}}
+{{pptfig:"画图/stage3结果.pptx"|stage3-predicted-region-head-to-head}}
 
 {{figref:stage3-predicted-region-head-to-head}} compares the LigandSeek and Emap2lig docking modules. Our model maintained higher accuracy across all tested conditions. Among the shared GT instances, median top-1 RMSD was 0.85 Å for PocketXMol-tuned and 1.83 Å for Emap2lig-Build. Median best RMSD was 0.63 Å and 1.32 Å, respectively. This advantage was maintained with CryoAtom2-reconstructed receptors ({{figref:stage3-predicted-region-head-to-head}}).
 
@@ -293,13 +293,15 @@ For top-1 poses with RMSD <3 Å, mean completion for CA2 was 47.7% and 53.0% at 
 
 ### Fair comparison with Emap2lig
 
-{{pptfig:"画图/Find-Match-Build公平对比.pptx"|supp-find-correct-match-build|width=5.5in}}
+{{pptfig:"画图/E2E结果.pptx"|e2e-find-build-direct-comparison}}
 
-Emap2lig can localise and build ligands, but it cannot match chemical identities to detected blobs. Consequently, it cannot be compared directly with our full end-to-end pipeline. To compare their combined detection and modelling capabilities directly, we supplied both LigandSeek and Emap2lig with the ground-truth ligand SMILES ({{figref:supp-find-correct-match-build}}), assuming an ideal, always-successful Match stage for both methods. We then evaluated both pipelines on the same 77 PDBs containing 446 single-residue organic small molecules with no missing atoms. LigandSeek used PocketXMol-tuned centre docking guided by predicted blob centroids, whereas Emap2lig used its native blob-guided Build model. Background candidates consumed one attempt, and out-of-scope foreground candidates were skipped without consuming an attempt. Undetected instances remained in the full denominator throughout the completion analysis.
+Emap2lig can localise and build ligands, but it cannot match chemical identities to detected blobs. Consequently, it cannot be compared directly with our full end-to-end pipeline. To compare their combined detection and modelling capabilities directly, we supplied both LigandSeek and Emap2lig with the ground-truth ligand SMILES ({{figref:e2e-find-build-direct-comparison}}), assuming an ideal, always-successful Match stage for both methods. We then evaluated both pipelines on the same 77 PDBs containing 446 single-residue organic small molecules with no missing atoms. LigandSeek used PocketXMol-tuned centre docking guided by predicted blob centroids, whereas Emap2lig used its native blob-guided Build model. Background candidates consumed one attempt, and out-of-scope foreground candidates were skipped without consuming an attempt. Undetected instances remained in the full denominator throughout the completion analysis.
 
 For top-1 poses with RMSD <3 Å, mean completion at a 100% budget was 63.2% for GT, 49.6% for CA2 and 38.2% for Emap2lig. Increasing the budget to 300% raised these values to 64.2%, 55.0% and 43.3%, respectively. Using best-of-50 poses at the same threshold, completion at a 100% budget reached 70.5%, 58.0% and 42.5%, respectively. At a 300% budget, the corresponding completion values were 71.5%, 66.3% and 50.0%, respectively. With correct identities supplied to both pipelines, LigandSeek completed more instances, demonstrating its combined advantage in localisation and pose reconstruction.
 
-Emap2lig is not a fully automated end-to-end modelling tool, but an interactive, semi-automated tool that relies on users to assign the correct SMILES to each detected blob. Even under the favourable assumption of perfect identity matching for Emap2lig, comparison of {{figref:supp-find-correct-match-build}} and {{figref:supp-e2e-completion-small}} shows that the full LigandSeek pipeline still outperforms it.
+Emap2lig is not a fully automated end-to-end modelling tool, but an interactive, semi-automated tool that relies on users to assign the correct SMILES to each detected blob. Even under the favourable assumption of perfect identity matching for Emap2lig, comparison of {{figref:e2e-find-build-direct-comparison}} and {{figref:supp-e2e-completion-small}} shows that the full LigandSeek pipeline still outperforms it.
+
+Full completion curves and per-PDB distributions are shown in Supplementary Fig. 4.
 
 ### Representative cases
 

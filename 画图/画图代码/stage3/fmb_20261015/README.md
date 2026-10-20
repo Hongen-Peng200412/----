@@ -2,6 +2,8 @@
 
 本目录从统一管线结果生成三页论文图，不执行 Find、Match、Build 或姿态评价。图中的完成度沿用已冻结的逐 PDB 分布和精确阶梯事件；姿态图使用共同命中实例的配对数值，不用真实中心对接替代预测中心对接。
 
+当前三页分别发布到`画图/stage1结果.pptx`、`画图/stage3结果.pptx`和`画图/E2E结果.pptx`，不再保留独立的`Find-Match-Build公平对比.pptx`。图名与双语图注保持；下列入口仍生成三页候选稿，再按图名归并到各自图集。正文使用的新分组柱状图由`../../e2e/plot_find_build_direct.py`生成，原十二面板完成度页用于补充材料。
+
 ## 数据与产物
 
 输入根是论文仓库的 `画图/formal/fmb_20261015/sources/`。GT、CA2、Emap2lig 每个目录各有 `docking_results.jsonl`、`completion.json`，直接来自服务器统一根 `Adaligand_E2E/test/test_0/evaluation/`。
@@ -34,11 +36,11 @@ Stage1全部小分子的统计来自`../../stage1/find_completion_20261017/assem
 
 所有渲染与装配中间文件位于 `temp/fmb_20261015/`，包括三组 SVG/PDF/PNG、对齐报告、`manifest.json`、`scenes.json` 和候选 PPT。
 
-| 图标识 | 排列 | 科学内容 |
-|---|---|---|
-| `find-only-instance-completion` | 2行3列 | 全配体179／2502、全部小分子94／821 × GT／CA2／Emap2lig，纯Find实例检出比较 |
-| `stage3-predicted-region-head-to-head` | 2×2 | GT／CA2 两项共同命中比较，各有 Top-1 与 best-of-50 |
-| `supp-find-correct-match-build` | 2列6行 | Emap2lig、LigandSeek-CA2、LigandSeek-GT，各有 Top-1／best × 严格2／3 Å |
+| 图标识 | 排列 | 科学内容 | 当前图集 |
+|---|---|---|---|
+| `find-only-instance-completion` | 2行3列 | 全配体179／2502、全部小分子94／821 × GT／CA2／Emap2lig，纯Find实例检出比较 | stage1结果.pptx |
+| `stage3-predicted-region-head-to-head` | 2×2 | GT／CA2 两项共同命中比较，各有 Top-1 与 best-of-50 | stage3结果.pptx |
+| `supp-find-correct-match-build` | 2列6行 | Emap2lig、LigandSeek-CA2、LigandSeek-GT，各有 Top-1／best × 严格2／3 Å | E2E结果.pptx |
 
 `manifest.json` 是按页排列的字典列表，每页包含图标识、点单位的宽高及双语图注。`svg_shapes.py` 复用现有 SVG 形状展开代码，将文字、散点、箱体、阶梯与小提琴分别保留为可编辑对象；`assemble.mjs` 将这些同源几何装配为原生 PPT，不重新计算统计。`ppt_metadata.py` 复用既有 PowerPoint 文件接口，将双语图注写入备注、唯一图标识写入传统批注，并导出实际渲染供验收；需要 Windows PowerPoint 与 pywin32。
 

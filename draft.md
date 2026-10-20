@@ -226,36 +226,26 @@ These cases showed that the receptor structure imposes steric constraints, where
 
 ## End-to-end
 
-### Evaluation protocol (completion ratio)
+### Evaluation protocol
 In practical cryo-EM structure determination, researchers work with unannotated three-dimensional density maps and unknown binding sites. To assess automated modelling in this setting, we connected Find, Match and Build into a single end-to-end pipeline. We evaluated region detection and identity matching across all ligand categories, and full pose reconstruction for organic small molecules with no missing atoms.
 
-{{pptfig:"画图/E2E评价计费规则.pptx"|e2e-accounting-rules-draft}}
+LigandSeek2-Find ranks candidate ligand regions by descending mean probability, yielding Rank 1, Rank 2 and subsequent candidates. End-to-end region detection and identity matching across all ligand categories require both Find and Match to succeed. Full pose reconstruction for organic small molecules with no missing atoms requires Find, Match and Build to succeed.
 
-Find ranks candidate ligand regions by descending mean probability, yielding Rank 1, Rank 2 and subsequent candidates. For each PDB entry, the pipeline examines these candidates in order within a specified relative attempt budget. End-to-end region detection and identity matching across all ligand categories require both Find and Match to succeed. Full pose reconstruction for organic small molecules with no missing atoms requires Find, Match and Build to succeed. We report the fraction of ground-truth ligand instances successfully processed corresponding to certain budget. The attempt-accounting rules are summarised in {{figref:e2e-accounting-rules-draft}} and detailed below.
+For each PDB entry, the pipeline examines these candidates in order within a specified relative attempt budget. Unsupported ligand types are skipped, whereas model prediction errors, including false positives, remain counted. For a PDB entry containing $N$ eligible ligands, a relative attempt budget $\rho$ allows $\lfloor\rho N\rfloor$ attempts. We report the fraction of qualified ground-truth ligand instances successfully processed within this budget, termed the completion ratio, which is a function of $\rho$. The detailed evaluation protocol is described in Methods ({{figref:e2e-accounting-rules-draft}}).
 
-For end-to-end region detection and identity matching across all ligand categories, we applied the following accounting rules. A false-positive candidate predicted by Find consumes one attempt, after which the pipeline examines the next candidate. If a candidate is not false-positive that corresponds to a ground-truth ligand with at least 30% coverage in both directions, Match assigns its ligand identity. Correct identity matching successfully processes that ground-truth ligand instance; incorrect matching consumes one attempt. The pipeline continues until the attempt budget is exhausted.
 
-For end-to-end modelling of single-residue small molecules with no missing atoms, false-positive candidates likewise consume one attempt before the next candidate is examined.
 
-If a candidate corresponds to a non-small-molecule ligand but Match assigns a small-molecule identity, the attempt is counted as a failure and charged. Otherwise, the candidate is skipped without consuming the attempt budget.
 
-If a candidate corresponds to a small molecule with at least 30% bidirectional coverage, incorrect identity matching consumes one attempt. A correctly matched small molecule that fails the single-residue, no-missing-atom criteria is skipped without charge. Otherwise, PocketXMol-tuned performs docking, and success is determined from the top-1 or best-of-50 pose and the corresponding RMSD threshold.
 
-According to the aforementioned rules, when a ligand outside the single-residue, complete organic small-molecule subset is correctly detected and matched, we still skip docking and charge no attempt. This ensures that all evaluated docking tasks use the same downstream tool, PocketXMol-tuned. However, a region corresponding to a true non-small-molecule ligand is charged if it is misidentified as a small molecule. In this case, it is actually an unmatched distractor and counts as a failed attempt. For a PDB entry containing $N$ eligible ligands, a relative attempt budget $\rho$ allows $\lfloor\rho N\rfloor$ attempts, and the completion ratio is the portion of successfully processed PDB, a function of it.
 
-### Fair Find–correct Match–Build comparison with Emap2lig
 
-To compare the combined detection and modelling capabilities directly, we supplied both LigandSeek and Emap2lig with the correct ligand SMILES ({{figref:supp-find-correct-match-build}}). We evaluated Find–correct Match–Build completion on the same 77 PDBs containing 446 single-residue organic small molecules with no missing atoms. LigandSeek used PocketXMol-tuned centre docking guided by predicted blob centroids, whereas Emap2lig used its native blob-guided Build model. Background candidates consumed one attempt, and out-of-scope foreground candidates were skipped without charge. Undetected instances remained in the full denominator throughout the completion analysis.
 
-For top-1 poses with RMSD <3 Å, mean completion at a 100% budget was 63.2% for GT, 49.6% for CA2 and 38.2% for Emap2lig. Increasing the budget to 300% raised these values to 64.2%, 55.0% and 43.3%, respectively. Using best-of-50 poses at the same threshold, completion at a 100% budget reached 70.5%, 58.0% and 42.5%, respectively. At a 300% budget, the corresponding completion values were 71.5%, 66.3% and 50.0%, respectively. With correct identities supplied to both pipelines, LigandSeek completed more instances, demonstrating its combined advantage in localisation and pose reconstruction.
 
-The gap between best-of-50 and top-1 completion showed that some correct poses had been generated but were not ranked first. With either receptor input, the combination of LigandSeek-Find and PocketXMol-tuned recovered more small-molecule instances within the same attempt budget.
 
-{{pptfig:"画图/Find-Match-Build公平对比.pptx"|supp-find-correct-match-build|width=5.5in}}
 
 ### Detection and identity matching across all ligand classes
 
-For detection and identity matching across all ligand classes, increasing the relative attempt budget from 100% to 300% raised mean instance completion. Completion increased from 51.1% to 58.8% for CA2 and from 62.1% to 67.5% for GT({{figref:supp-e2e-completion-all}}). The corresponding medians increased from 50.0% and 66.7% to 60.2% and 71.4%, respectively. A relative attempt budget of 100% has particular practical significance. This corresponds to a scenario in which ligand identities and numbers are known to the user and can constrain the end-to-end pipeline. Under these conditions, our pipeline recovered most of the ligand instances({{figref:supp-e2e-completion-all}}).
+For detection and identity matching across all ligand classes, increasing the relative attempt budget from 100% to 300% raised mean instance completion. Completion increased from 51.1% to 58.8% for CA2 and from 62.1% to 67.5% for GT ({{figref:supp-e2e-completion-all}}). The corresponding medians increased from 50.0% and 66.7% to 60.2% and 71.4%, respectively. A relative attempt budget of 100% has particular practical significance. This corresponds to a scenario in which ligand identities and numbers are known to the user and can constrain the end-to-end pipeline. Under these conditions, our pipeline recovered most of the ligand instances ({{figref:supp-e2e-completion-all}}).
 
 {{pptfig:"画图/E2E实例完成度.pptx"|supp-e2e-completion-all}}
 
@@ -299,6 +289,17 @@ For top-1 poses with RMSD <3 Å, mean completion for CA2 was 47.7% and 53.0% at 
 </tbody>
 </table>
 <p class="table-note">Means and medians were calculated across the same 77 PDBs.</p>
+
+
+### Fair comparison with Emap2lig
+
+{{pptfig:"画图/Find-Match-Build公平对比.pptx"|supp-find-correct-match-build|width=5.5in}}
+
+Emap2lig can localise and build ligands, but it cannot match chemical identities to detected blobs. Consequently, it cannot be compared directly with our full end-to-end pipeline. To compare their combined detection and modelling capabilities directly, we supplied both LigandSeek and Emap2lig with the ground-truth ligand SMILES ({{figref:supp-find-correct-match-build}}), assuming an ideal, always-successful Match stage for both methods. We then evaluated both pipelines on the same 77 PDBs containing 446 single-residue organic small molecules with no missing atoms. LigandSeek used PocketXMol-tuned centre docking guided by predicted blob centroids, whereas Emap2lig used its native blob-guided Build model. Background candidates consumed one attempt, and out-of-scope foreground candidates were skipped without consuming an attempt. Undetected instances remained in the full denominator throughout the completion analysis.
+
+For top-1 poses with RMSD <3 Å, mean completion at a 100% budget was 63.2% for GT, 49.6% for CA2 and 38.2% for Emap2lig. Increasing the budget to 300% raised these values to 64.2%, 55.0% and 43.3%, respectively. Using best-of-50 poses at the same threshold, completion at a 100% budget reached 70.5%, 58.0% and 42.5%, respectively. At a 300% budget, the corresponding completion values were 71.5%, 66.3% and 50.0%, respectively. With correct identities supplied to both pipelines, LigandSeek completed more instances, demonstrating its combined advantage in localisation and pose reconstruction.
+
+Emap2lig is not a fully automated end-to-end modelling tool, but an interactive, semi-automated tool that relies on users to assign the correct SMILES to each detected blob. Even under the favourable assumption of perfect identity matching for Emap2lig, comparison of {{figref:supp-find-correct-match-build}} and {{figref:supp-e2e-completion-small}} shows that the full LigandSeek pipeline still outperforms it.
 
 ### Representative cases
 
@@ -580,3 +581,20 @@ PocketXMol fine-tuning used the same training, validation and test partitions de
 We introduced modifications to the PocketXMol network to incorporate cryo-EM density as an additional conditioning input. As described above, 56 density channels and 50 receptor-feature channels were constructed and concatenated into a 106-channel voxel representation. Before each atomic-coordinate update in the PocketXMol network, a 3D convolutional module with global average pooling (GAP) extracts density and receptor signals surrounding each atom. These extracted signals are then injected into the existing atom representations via Feature-wise Linear Modulation (FiLM).
 
 Because the original PocketXMol does not support nucleic acid atoms, we added a linear layer to encode them into the receptor representation. All other architectural components remain unchanged, including the backbone network, the original feature representations, and the diffusion noise-addition and denoising schedules. During fine-tuning, the newly introduced modules were randomly initialized, while all remaining parameters were initialized from the official pretrained PocketXMol checkpoint.
+
+
+### End-to-end evaluation process
+
+{{pptfig:"画图/E2E评价计费规则.pptx"|e2e-accounting-rules-draft}}
+
+We evaluated two end-to-end tasks: region detection and identity matching across all ligand categories, and full pose reconstruction for organic small molecules with no missing atoms. The attempt-accounting rules are summarised in {{figref:e2e-accounting-rules-draft}} and detailed below.
+
+For end-to-end region detection and identity matching across all ligand categories, we applied the following accounting rules. A false-positive candidate predicted by Find consumes one attempt, after which the pipeline examines the next candidate. If a candidate is not a false positive and shares at least 30% bidirectional coverage with a ground-truth ligand, Match assigns its ligand identity. Correct identity matching successfully processes that ground-truth ligand instance; incorrect matching consumes one attempt. The pipeline continues until the attempt budget is exhausted.
+
+For end-to-end modelling of single-residue small molecules with no missing atoms, false-positive candidates likewise consume one attempt before the next candidate is examined.
+
+If a candidate corresponds to a non-small-molecule ligand but Match assigns a small-molecule identity, the attempt is counted as a failure and consumes one attempt. Otherwise, the candidate is skipped without consuming the attempt budget.
+
+If a candidate corresponds to a small molecule with at least 30% bidirectional coverage, incorrect identity matching consumes one attempt. A correctly matched small molecule that fails the single-residue, no-missing-atom criteria is skipped without consuming an attempt. Otherwise, PocketXMol-tuned performs docking, and success is determined from the top-1 or best-of-50 pose and the corresponding RMSD threshold.
+
+According to the aforementioned rules, when a ligand outside the single-residue, complete organic small-molecule subset is correctly detected and matched, we still skip docking without consuming an attempt. This ensures that all evaluated docking tasks use the same downstream tool, PocketXMol-tuned. However, a region corresponding to a true non-small-molecule ligand consumes one attempt if it is misidentified as a small molecule. In this case, it is actually an unmatched distractor and counts as a failed attempt.

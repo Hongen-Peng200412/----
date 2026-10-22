@@ -585,7 +585,7 @@ We introduced modifications to the PocketXMol network to incorporate cryo-EM den
 Because the original PocketXMol does not support nucleic acid atoms, we added a linear layer to encode them into the receptor representation. All other architectural components remain unchanged, including the backbone network, the original feature representations, and the diffusion noise-addition and denoising schedules. During fine-tuning, the newly introduced modules were randomly initialized, while all remaining parameters were initialized from the official pretrained PocketXMol checkpoint.
 
 
-### End-to-end evaluation process
+## End-to-end evaluation process
 
 {{pptfig:"画图/E2E评价计费规则.pptx"|e2e-accounting-rules-draft}}
 

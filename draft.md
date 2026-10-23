@@ -14,7 +14,7 @@ The second is chemical identity matching, the Match bottleneck. Even after a lig
 
 The third is pose reconstruction, the Build bottleneck. After the binding region and chemical identity have been determined, generative docking models such as DiffDock[@corso2023diffdock] and PocketXMol[@pocketxmol] usually rely primarily on receptor structures, failing to exploit experimental density to guide pose generation. Conversely, density-only deep learning tools such as Emap2lig-Build[@umap2lig] omit protein and nucleic acid receptors, struggling to reconcile density fitting with receptor-environment constraints. Classical non-deep-learning methods, including EMERALD, GemSpot and ChemEM, can incorporate both the receptor environment and experimental density for pose search or optimisation[@muenks2023emerald; @robertson2020gemspot; @sweeney2024chemem]. However, they are computationally slow and remain disconnected from upstream localisation and identity matching.
 
-To address these bottlenecks and unify localisation, matching and pose reconstruction, we developed LigandSeek, an automated end-to-end framework based on joint density and receptor modelling ({{figref:fig-overview_v2,fig-method-v4}}). Across all three stages, the neural networks share a unified representation that jointly encodes the experimental density, receptor-derived simulated and difference densities, and the chemical and geometric environments of receptor atoms.
+To address these bottlenecks and unify localisation, matching and pose reconstruction, we developed LigandSeek, an automated end-to-end framework based on joint density and receptor modelling ({{figref:fig-overview_v2,fig-method-v8}}). Across all three stages, the neural networks share a unified representation that jointly encodes the experimental density, receptor-derived simulated and difference densities, and the chemical and geometric environments of receptor atoms.
 
 LigandSeek follows a three-stage Find–Match–Build workflow:
 
@@ -34,7 +34,7 @@ We represent protein and nucleic acid receptors uniformly as $A = \{(a_i, x_i)\}
 
 Let $M_{exp} \in \mathbb{R}^{D \times H \times W}$ denote the voxelised three-dimensional cryo-EM density map. The receptor structure yields a simulated density map $M_{sim} \in \mathbb{R}^{D \times H \times W}$ of the same dimensions. From $M_{exp}$ and $M_{sim}$, we construct a 56-channel multi-view density bank $M \in \mathbb{R}^{56 \times D \times H \times W}$.
 
-{{figref:fig-overview_v2}} shows the model inputs, outputs and overall workflow. LigandSeek reconstructs ligand poses end to end through three stages: Find, Match and Build. The 50-dimensional receptor-atom features and the multi-view density bank are the main inputs shared by all three stages. {{figref:fig-method-v4}} shows the overall network architecture, with further details provided in Methods.
+{{figref:fig-overview_v2}} shows the model inputs, outputs and overall workflow. LigandSeek reconstructs ligand poses end to end through three stages: Find, Match and Build. The 50-dimensional receptor-atom features and the multi-view density bank are the main inputs shared by all three stages. {{figref:fig-method-v8}} shows the overall network architecture, with further details provided in Methods.
 
 Find combines receptor information and experimental density information to predict ligand regions. It produces $J$ candidate ligand regions (blobs), expressed as:
 
@@ -64,7 +64,7 @@ Build takes a specified initial binding site $p \in R^3$, a small-molecule ident
 
 We tested the framework on a non-redundant set of 179 PDB entries. To evaluate Find's localisation performance, we computed semantic and instance-level metrics for each full density map. To evaluate Match's identity matching and Build's molecular docking performance, we assessed the relevant ligands from these PDB entries.
 
-{{pptfig:"画图/Method总图.pptx"|fig-method-v4}}
+{{pptfig:"画图/Method总图.pptx"|fig-method-v8}}
 
 # Results
 
@@ -321,7 +321,7 @@ In 30GA ({{figref:e2e-flow-30ga}}), Find's Rank 1 candidate was a background fal
 
 # Methods
 
-{{figref:fig-method-v4}} shows the network architecture and information flow of the Find–Match–Build framework. The three stages share density and receptor-atom input representations ({{figref:fig-method-v4|a}}). They sequentially localise ligand regions ({{figref:fig-method-v4|b}}), match candidate regions to ligand identities ({{figref:fig-method-v4|c}}) and reconstruct all-atom ligand poses ({{figref:fig-method-v4|d}}).
+{{figref:fig-method-v8}} shows the network architecture and information flow of the Find–Match–Build framework. The three stages share density and receptor-atom input representations. They sequentially localise ligand regions ({{figref:fig-method-v8|a}}), match candidate regions to ligand identities ({{figref:fig-method-v8|b}}) and reconstruct all-atom ligand poses ({{figref:fig-method-v8|c}}).
 
 ## Data sources and sample partitioning
 
@@ -512,7 +512,7 @@ Let $\{ S_k \}_{k=1}^{K}$ denote the chemical identities in a PDB entry, represe
 
 In parallel, we use RDKit to generate ideal three-dimensional ligand conformations $\{ S_{k}^{graph} \}_{k=1}^{K}$, which are encoded as three-dimensional molecular graphs. Node features comprise atomic number, formal charge and ring information, whereas edge features comprise bond type and ring information.
 
-For each SMILES $S_{i} \in \{ S_k \}_{k=1}^{K}$, its language representation serves as the query for two attention operations ({{figref:fig-method-v4|c}}). Graph attention operates on its own molecular graph, whereas context attention operates on the language representations of other SMILES in the same PDB entry:
+For each SMILES $S_{i} \in \{ S_k \}_{k=1}^{K}$, its language representation serves as the query for two attention operations ({{figref:fig-method-v8|b}}). Graph attention operates on its own molecular graph, whereas context attention operates on the language representations of other SMILES in the same PDB entry:
 
 $$
 \hat{S_{i}} = Attention(q=S_{i}^{language}, kv=S_{i}^{graph}), \qquad \tilde{S_{i}} = Attention(q=S_{i}^{language}, kv=\{S_{k}^{language}\}_{k \ne i})

@@ -1,0 +1,185 @@
+runscript "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/visualization/stage1-fourcase-main/base/open_data.py" 9x0x
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/visualization/stage1-fourcase-main/base/common_style.cxc"
+hide #2,3 cartoons
+cartoon (#2,3 & (#4 :< 12))
+volume #1 step 1 level 0.5047464370727539
+volume zone #1 nearAtoms #4 range 5 newMap false minimalBounds true
+windowsize 960 720
+show #4 models
+view #4 orient
+turn y 30
+turn x -20
+turn z 0
+turn y 90
+turn z 90
+view #4
+zoom pixelSize 0.06314289915100242
+zoom 0.85
+clip off
+view name local
+windowsize 960 675
+show #2 models
+cartoon #2
+view #2 orient
+turn x -20
+turn y 30
+view #2 pad 0.08
+clip off
+view name overview
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/visualization/stage1-fourcase-main/base/common_style.cxc"
+windowsize 960 675
+hide models
+show #1,2,9,12 models
+cartoon #2
+transparency #2 0 target c
+volume unzone #1
+volume #1 region all step 1 style surface color #92949c level 0.5047464370727539 transparency 0.65
+volume #9 style surface transparency 0.6
+view overview
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/baseline/overview.png" width 1600 height 1125 supersample 2
+hide #2,3 cartoons
+cartoon (#2,3 & (#4 :< 12))
+volume #1 step 1 level 0.5047464370727539
+volume zone #1 nearAtoms #4 range 5 newMap false minimalBounds true
+windowsize 960 720
+volume #1 style surface color #c9c9d2 transparency 0.80
+transparency #2,3 40 target c
+hide models
+show #2 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/baseline/receptor_real.png" width 1440 height 1080 supersample 2
+hide models
+show #3 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/baseline/receptor_ca2.png" width 1440 height 1080 supersample 2
+hide models
+show #4,8 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/baseline/gt.png" width 1440 height 1080 supersample 2
+hide models
+show #1,2,4,5 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/baseline/find_real.png" width 1440 height 1080 supersample 2
+hide models
+show #1,3,4,6 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/baseline/find_ca2.png" width 1440 height 1080 supersample 2
+hide models
+show #1,4,7 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/baseline/emap.png" width 1440 height 1080 supersample 2
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/visualization/stage1-fourcase-main/base/common_style.cxc"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/visualization/stage1-fourcase-main/base/contrast_style.cxc"
+windowsize 960 675
+hide models
+show #1,2,9,12 models
+cartoon #2
+transparency #2 0 target c
+volume unzone #1
+volume #1 region all step 1 style surface color #92949c level 0.5047464370727539 transparency 0.65
+volume #9 style surface transparency 0.6
+view overview
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/contrast/overview.png" width 1600 height 1125 supersample 2
+hide #2,3 cartoons
+cartoon (#2,3 & (#4 :< 12))
+volume #1 step 1 level 0.5047464370727539
+volume zone #1 nearAtoms #4 range 5 newMap false minimalBounds true
+windowsize 960 720
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/visualization/stage1-fourcase-main/base/contrast_style.cxc"
+hide models
+show #2 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/contrast/receptor_real.png" width 1440 height 1080 supersample 2
+hide models
+show #3 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/contrast/receptor_ca2.png" width 1440 height 1080 supersample 2
+hide models
+show #4,8 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/contrast/gt.png" width 1440 height 1080 supersample 2
+hide models
+show #1,2,4,5 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/contrast/find_real.png" width 1440 height 1080 supersample 2
+hide models
+show #1,3,4,6 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/contrast/find_ca2.png" width 1440 height 1080 supersample 2
+hide models
+show #1,4,7 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/contrast/emap.png" width 1440 height 1080 supersample 2
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/visualization/stage1-fourcase-main/base/common_style.cxc"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/visualization/stage1-fourcase-main/base/density_style.cxc"
+windowsize 960 675
+hide models
+show #1,2,9,12 models
+cartoon #2
+transparency #2 0 target c
+volume unzone #1
+volume #1 region all step 1 style surface color #92949c level 0.5047464370727539 transparency 0.65
+volume #9 style surface transparency 0.6
+view overview
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/density/overview.png" width 1600 height 1125 supersample 2
+hide #2,3 cartoons
+cartoon (#2,3 & (#4 :< 12))
+volume #1 step 1 level 0.5047464370727539
+volume zone #1 nearAtoms #4 range 5 newMap false minimalBounds true
+windowsize 960 720
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/visualization/stage1-fourcase-main/base/density_style.cxc"
+hide models
+show #2 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/density/receptor_real.png" width 1440 height 1080 supersample 2
+hide models
+show #3 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/density/receptor_ca2.png" width 1440 height 1080 supersample 2
+hide models
+show #4,8 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/density/gt.png" width 1440 height 1080 supersample 2
+hide models
+show #1,2,4,5 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/density/find_real.png" width 1440 height 1080 supersample 2
+hide models
+show #1,3,4,6 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/density/find_ca2.png" width 1440 height 1080 supersample 2
+hide models
+show #1,4,7 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/density/emap.png" width 1440 height 1080 supersample 2
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/visualization/stage1-fourcase-main/base/common_style.cxc"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/visualization/stage1-fourcase-main/base/contrast_style.cxc"
+hide #2,3 cartoons
+cartoon (#2,3 & (#4 :< 12))
+volume #1 step 1 level 0.5047464370727539
+volume zone #1 nearAtoms #4 range 5 newMap false minimalBounds true
+hide models
+show #1,2,4,5 models
+view local
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/stage1/output/stage1-fourcase-main/base/regenerated/9x0x/session.cxs" includeMaps true

@@ -1,0 +1,17 @@
+# 9BJJ: 完整实验地图沿用受体 named view, 同朝向、同原点、同 Å/pixel.
+close all
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9bjj/global_session.cxs"
+windowsize 960 720
+label delete #7 models
+hide models
+show #22 models
+volume #22 style surface step 1 level 0.021095575764775276 color #8e9ca5 transparency 0.15 surfaceSmoothing false
+volume #22 region all
+volume unzone #22
+view global_structure
+clip off
+view matrix
+zoom
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/display/regenerated/9bjj/renders/global_density_same_scale.png" width 1440 height 1080 supersample 2
+log save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/display/regenerated/9bjj/global_density_same_scale_commands.html"

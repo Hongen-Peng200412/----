@@ -1,0 +1,7 @@
+# 提高清晰度的配色. 先执行 common_style.cxc, 再执行本文件.
+color #2,3 #94ad9f target c
+transparency #2,3 55 target c
+color #4,12 & C #c97b29
+volume #1 style mesh color #75838b transparency 0.45 squareMesh true meshLighting false
+volume #5-7,9-11 color #239fd0 transparency 0.60
+volume #8 color #9fbfc7 transparency 0.70

@@ -1,0 +1,16 @@
+hide #2,3 cartoons
+cartoon (#2,3 & (#4 :< 15))
+volume #1 step 1 level 0.021095575764775276
+volume zone #1 nearAtoms #4 range 7 newMap false minimalBounds true
+windowsize 960 720
+show #4 models
+view #4 orient
+turn y 35
+turn x -25
+turn z 0
+view #4
+zoom pixelSize 0.04056466122468313
+zoom 0.85
+zoom 1.05
+clip off
+view name local

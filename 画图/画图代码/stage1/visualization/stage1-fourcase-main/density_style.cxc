@@ -1,0 +1,7 @@
+# 灰色密度表面配合不透明蓝色预测网格，避免多层透明表面遮挡。
+color #2,3 #94ad9f target c
+transparency #2,3 70 target c
+color #4,12 & C #c97b29
+volume #1 style surface color #7c858b transparency 0.82 surfaceSmoothing false
+volume #5-7,9-11 style mesh color #239fd0 transparency 0 meshLighting false squareMesh true
+volume #8 style mesh color #8daeb8 transparency 0 meshLighting false squareMesh true

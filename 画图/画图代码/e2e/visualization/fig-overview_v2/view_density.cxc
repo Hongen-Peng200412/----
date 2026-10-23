@@ -1,0 +1,9 @@
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/fig-overview_v2/素材/9hjx_drawing.mrc"
+volume #1 level 2.6 step 3 color #b8c2c9 style surface
+set bgColor white
+lighting soft
+camera ortho
+view orient
+turn x -25
+turn y 35
+view

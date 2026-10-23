@@ -1,0 +1,69 @@
+> 本轮目录与当前追溯入口：本目录已按固定5×3结构迁移。当前图名、输入、科学口径、实际命令及生成位置以[所属追溯文档](../图表追溯.md)为准；下文有日期或历史版本的装配命令只作历史说明。冻结输入在所属output，重绘写temp或regenerated，正式PPT仍在画图根目录。
+
+# Stage3 构象案例图
+
+主图比较六个测试实例的原排序 Top-1，三例说明官方 PocketXMol 的密度偏离，三例说明 Emap2lig-Build 的受体碰撞。PPT 第四页依次保留 9LLG、9LFA、9BJJ、30GA 四个备选，与主图六例合计十个不重复实例。正文只引用六例主图；这些案例用于解释结构误差，不代替图 7、图 8 的总体统计。
+
+当前重绘按 `measure_cases.py → make_geometry.py → render_figure.py` 顺序执行，冻结科学输入位于 `stage3/output/stage3-cases-main/assets/`；新 `case_metrics.json`、`cases.json`、`geometry.json`、`deck_layout.json` 和四页图稿全部写入同目录的 `regenerated/`，不覆盖原留档。原始指标和显示几何均已与新生成值完整比较一致，来源见[阶段追溯](../图表追溯.md)。取数与筛选入口在 `source_tools/`，默认离线绘图不访问服务器。
+
+## 成品与来源
+
+- [stage3可视化.pptx](../../../../stage3可视化.pptx)：四页分别为主图、三例密度偏离、三例受体碰撞、四例备选。图名是各页 `@@stage3-cases-*` 批注，图注在备注中。分子键、原子、密度网格、受体、碰撞线、比例尺和文字均为 PowerPoint 原生图形，无整面板位图。
+- [cases.json](../../output/stage3-cases-main/cases.json)：十个实例的身份、四种构象指标、来源与显示视角。`official`、`tuned`、`build` 是预测，`gt` 是沉积参考。
+- [case_metrics.csv](../../output/stage3-cases-main/case_metrics.csv)：三种预测的 RMSD、密度覆盖百分比、碰撞原子对数、碰撞配体原子数、最短受体距离，按 PDB/occurrence/方法对齐。
+- `画图/画图代码/stage3/output/stage3-cases-main/assets/<PDB>_<occurrence>/arrays.npz`：冻结的三维坐标及局部实验密度；同目录 `metadata.json` 保存精确 SMILES、候选编号、原评价值和服务器来源。`source_sha256.json` 保存这二十个本地文件的 SHA-256。
+- `geometry.json`：十例的统一显示投影，保存线段、原子圆形、视角、每 Å 像素数。`deck_layout.json` 保存四页的文字与图形位置，`captions.json` 保存图注。
+- `stage3-cases-*.png/svg/pdf`：Python 预览、可编辑 SVG 与矢量 PDF。`*.powerpoint.png` 是 PowerPoint 实际导出预览。`*.alignment.json` 与 `*.pdf.collisions.json` 是面板对齐、文字遮挡核查报告。
+
+数组字段：`gt/official/tuned/build` 为 `(N, 3)` 配体重原子世界 XYZ 坐标，单位 Å；`element` 为 `(N,)` 原子序数；`bonds` 为 `(B, 3)` 原子索引对及键级。`receptor_xyz` 为 `(R, 3)` 标准蛋白质/核酸重原子坐标，其他 `receptor_*` 字段按同一受体索引对齐。`density` 为 `(Z, Y, X)` 实验密度；`origin` 为裁取后的 XYZ 边界角点，`voxel_size` 为实际 XYZ 间距，体素中心为 `origin+(index_XYZ+0.5)*voxel_size`。`contour` 为源资产的 `contour_canonical` 推荐阈值。每例密度裁取范围覆盖参考与三种预测的联合包围盒并向外增加 9 Å；不依方法更换密度。
+
+PocketXMol-official 对应 `official-SMILES/test/C0`，PocketXMol-tuned 对应 `local_cov-C-T0-RA/test/C0`，均使用真实受体。两者使用既有 `top1_sample_index`；Build 使用 `consistency_iou` 原排序首位，源路径为 `/storage/penghongen/Emap2lig/stage3_find_hit_build/`。各路径逐例保存在 `metadata.json.sources`。本任务只读获取冻结产物，没有新推理、重新排名或刚体叠合。
+
+## 指标与取景
+
+RMSD 直接读取既有重原子对称校正评价。D 是在每个预测重原子处三线性插值实验密度、再统计达到推荐阈值的比例；它不是 Q-score。Clash 沿用 PocketXMol 的距离严格小于 `0.75*(r_ligand+r_receptor)` 的重原子对定义；范德华半径已与服务器 RDKit `GetRvdw` 逐项核对。受体副本保留距四种构象联合原子集合 8 Å 内的标准受体原子，足以覆盖该阈值下全部碰撞。UNK、水及其他非标准受体类别不进入计数。
+
+网格来自原实验密度在推荐阈值下的等值面，只显示距沉积配体重原子 2 Å 内的已有面片，不增加人为封口。受体背景使用距沉积配体 3.5 Å 内或任一方法涉及碰撞的残基，显示其中位于取景范围内的原子与键。三列共用取景、正交相机、网格和 5 Å 比例尺。PCA 仅确定显示方向，不用于计算 RMSD。视野边缘的背景线段作二维裁切。
+
+受体使用橄榄绿色（`#7B8C55`，透明度 0.85），密度网格保持灰色。预测配体的全部原子及键统一使用方法颜色：官方 PocketXMol 为橙色、微调版为蓝色、Build 为紫色；沉积参考为青绿色，不再按元素另着色。红色仅表示实际碰撞的虚线接触及受体原子标记；Clash 为 0 的面板没有这些红色标记。
+
+先依据冻结指标筛查 28 个实例，`screening_metrics.json` 保存筛查结果。主图取三个官方 RMSD 高、tuned RMSD 低且密度覆盖提高的例子，以及三个 Build 有碰撞、tuned 无碰撞且 RMSD 较低的例子。未将碰撞最多作为唯一选择标准，也未改变原候选排序。
+
+| 用途 | PDB/occurrence | 配体与链/残基 |
+|---|---|---|
+| 密度偏离 | 9q16/0、9ub7/3、9r3d/0 | XG4 A:1201、Y01 A:701、IHP A:2401 |
+| 受体碰撞 | 9u7j/2、9wup/2、9wq3/5 | GDU A:801、FAD A:1103、1SY G:401 |
+| 备选密度偏离 | 9llg/2、9lfa/0 | CLR R:603、A1EJF A:401 |
+| 备选受体碰撞 | 9bjj/16、30ga/7 | A1AP0 E:1001、ATP L:401 |
+
+原主图中的 9bjj/16、30ga/7 现列入第四页 c/d，冻结来源、坐标及指标仍保存在十例资产包中。互换只改变展示位置，不改变任何模型候选、原排序或计算指标。
+
+## 重绘与编译
+
+离线测量与绘图使用本机 `D:/Anaconda/python.exe` 的 NumPy、SciPy、Matplotlib、scikit-image。以下是绘图命令，不是模型实验命令：
+
+```powershell
+D:/Anaconda/python.exe 画图/画图代码/stage3/visualization/stage3-cases-main/measure_cases.py
+D:/Anaconda/python.exe 画图/画图代码/stage3/visualization/stage3-cases-main/make_geometry.py
+D:/Anaconda/python.exe 画图/画图代码/stage3/visualization/stage3-cases-main/render_figure.py
+```
+
+`build_deck.mjs` 使用 bundled Node 的 `@oai/artifact-tool`，读取 `regenerated/deck_layout.json` 与冻结 `captions.json`，直接写入独立图名和备注，经过结构检查后把新候选保存到 `output/stage3-cases-main/regenerated/`。正式图注仍在作者PPT备注中维护；当前输入及命令见[阶段追溯](../图表追溯.md)。
+
+旧 [publish_ppt.ps1](../../../archive/visualization/publication-history/stage3/stage3-cases-main/publish_ppt.ps1) 已归档，不作为当前调用入口。它会重复追加图名并覆盖正式PPT，不能用于更新作者当前图集。
+
+正文编译命令：
+
+```powershell
+python md_to_word.py --output 论文草稿.nature.Stage3可视化.docx
+python md_to_word_operation.py --output 论文草稿.operation.Stage3可视化.docx
+```
+
+2026-10-03 初版：已完成两类各三例主图、四个备选、正文与 PPT 图注；离线复算与筛查值逐项相同。四页对齐及 PDF 文字遮挡报告通过，最小 PDF 字号 7.41 pt。源代码预检查的唯一提示是没有 TIFF：本图为矢量线图，PDF/SVG 为矢量导出，600 dpi PNG 只作预览。初版 Nature Word 为 42 页、Operation Word 为 33 页，图分别位于第 22 页和第 17 页；两份 Word 均保留全部 13 张 PPT 引用和 209 个原生公式，Nature Word 回转恢复了本图的 PPT 引用。
+
+2026-10-03 按作者确认修订：受体改为橄榄绿色，取消配体元素杂色，主图 d/e 从 9BJJ、30GA 换为第四页的 9U7J、9WUP，第四页案例及顺序保留。以作者当前 PPT 备注为底稿，仅替换案例名称及“受体为浅灰色”一词，其余图注逐字保留；正文只同步对应案例与数值。主图六例中 tuned 的 RMSD 均低于另外两种方法。二十个冻结来源文件的 SHA-256 均保持不变。
+
+本次四页对齐、PDF 字号及文字遮挡核查通过；PPT 版式核查无越界对象，四页分别有 2364、1000、1375、1568 个原生图形，均没有位图面板。重新编译当前 Markdown 后，Nature Word 为 45 页，主图在第 24 页、图注在第 25 页；Operation Word 为 35 页，主图在第 18 页、图注在第 19 页。已核查全稿页面总览及新图、图注、对应正文页面；两份 Word 图注均与批准后的 PPT 备注逐字相同，保留 13 张 PPT 引用及 209 个原生公式。作者原稿、原 PPT 备注及旧 Word 备份位于 `temp/stage3_cases/revision_20261003/`，编译和页面核查产物位于 `temp/stage3_cases/word_nature/`、`word_operation/`。
+
+
+2026-10-03 备用页互换：第四页 c/d 改为主图换下的 9BJJ–A1AP0、30GA–ATP，并同步该页备注；a/b、前三页及其备注保留。主图六例与第四页四例合计十个不同实例。已通过原生 PowerPoint 导出、版式、字号及文字遮挡检查。正文和 Word 未改动，本次无需重编译；副本及核查记录位于 `temp/stage3_cases/side_alternatives_20261003/`。

@@ -1,0 +1,9 @@
+[
+  {"pdb":"9bjj","blob":0,"group":"direct","role":"main"},
+  {"pdb":"30ga","blob":1,"group":"background","role":"main"},
+  {"pdb":"9llg","blob":0,"group":"direct","role":"alternative"},
+  {"pdb":"9rd8","blob":0,"group":"direct","role":"alternative"},
+  {"pdb":"9qru","blob":1,"group":"background","role":"alternative"},
+  {"pdb":"9wup","blob":2,"group":"scope_skip","role":"alternative"},
+  {"pdb":"9xzl","blob":1,"group":"scope_skip","role":"alternative"}
+]

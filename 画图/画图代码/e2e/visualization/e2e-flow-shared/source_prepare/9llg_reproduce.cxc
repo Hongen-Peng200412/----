@@ -1,0 +1,115 @@
+# 9LLG：从零加载并完整复现。所有外观、相机、区域和导出均为原生 ChimeraX 命令。
+# 模型固定：#1实验密度，#2实际CA2受体，#3沉积配体，#4冻结Top-1姿态，#5GT区域，#6GT受体，#7起按原排序的blob。
+close all
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/9llg/assets/density.mrc"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/9llg/assets/ca2_receptor.cif"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/9llg/assets/reference.sdf"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/9llg/assets/prediction.sdf"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/9llg/assets/gt_area.mrc"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/9llg/assets/gt_receptor.cif"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/9llg/assets/blob_0.mrc"
+set bgColor white
+camera ortho
+windowsize 960 720
+lighting soft
+material dull
+graphics silhouettes false
+hide models
+hide #2,6 atoms
+cartoon #2,6
+color #2,6 #81a58b target c
+color #2,6 #81a58b target ab
+transparency #2,6 45 target c
+hide #3,4 cartoons
+style #3,4 stick
+size #3,4 stickRadius 0.18
+color #3 #26a6a1 target ab
+color #4 #3169b3 target ab
+# 禁用按元素着色，红黄蓝元素点不会混进方法色。
+volume #1 style mesh step 1 level 0.009667073376476765 color #a0a9ad transparency 0.45 squareMesh true meshLighting false
+volume #5 level 0.5 step 1 style mesh color #26a6a1 transparency 0.35
+volume #7 level 0.5 step 1 style surface transparency 0.30 surfaceSmoothing false
+volume #7 color #e9983c
+# 候选范围相机仅由已冻结blob确定，不移动模型、不做结构对齐。
+show #7 models
+view #7 orient
+turn y 25
+turn x -20
+view #7 pad 0.14
+clip off
+view name overview
+hide models
+show #1 models
+volume unzone #1
+volume #1 region all
+view overview
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/regenerated/9llg/renders/input_density.png" width 1440 height 1080 supersample 2
+hide models
+show #2 models
+view overview
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/regenerated/9llg/renders/input_ca2.png" width 1440 height 1080 supersample 2
+hide models
+show #6 models
+view overview
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/regenerated/9llg/renders/input_gt.png" width 1440 height 1080 supersample 2
+hide models
+show #1,2,7 models
+transparency #2,6 70 target c
+volume #1 transparency 0.75
+volume #7 transparency 0.10
+view overview
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/regenerated/9llg/renders/find.png" width 1440 height 1080 supersample 2
+# 局部视角用于并排核对GT区域、预测blob和姿态，三者共用同一朝向与尺度。
+hide #2,6 cartoons
+# 局部受体改为纤细统一绿色的棒状, 避免cartoon遮住配体和密度。
+show (#2,6 & (#3 :< 6)) atoms
+style #2,6 stick
+size #2,6 stickRadius 0.055
+transparency #2,6 50 target ab
+show #3,4,7 models
+view #3 orient
+turn y 35
+turn x -25
+view #3,4 pad 0.12
+clip off
+view name local
+volume zone #1 nearAtoms #3 range 4 newMap false minimalBounds true
+volume #1 transparency 0.45
+hide models
+show #3,5,6 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/regenerated/9llg/renders/local_gt.png" width 1440 height 1080 supersample 2
+hide models
+show #1,2,7 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/regenerated/9llg/renders/local_find.png" width 1440 height 1080 supersample 2
+hide models
+show #1,2,3,4 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/regenerated/9llg/renders/pose.png" width 1440 height 1080 supersample 2
+# Match身份示意复用同一已保存分子图，坐标只是展示姿态，不代表另一轮推理。
+hide models
+show #4 models
+view #4 orient
+turn y 35
+turn x -25
+view #4 pad 0.12
+clip off
+view name identity
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/regenerated/9llg/renders/identity.png" width 1440 height 1080 supersample 2
+# 保存含地图和命名视角的完整会话；最终停在局部姿态图，便于手动学习。
+hide models
+show #1,2,3,4 models
+view local
+view matrix
+zoom
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/regenerated/9llg/session.cxs" includeMaps true
+log save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/source/regenerated/9llg/commands.html"

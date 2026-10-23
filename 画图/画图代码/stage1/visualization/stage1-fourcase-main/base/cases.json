@@ -1,0 +1,544 @@
+[
+  {
+    "pdb": "9pqm",
+    "occurrence": {
+      "candidate_id": 0,
+      "components": [
+        {
+          "auth_asym_id": "A",
+          "auth_seq_id": 401,
+          "ccd_id": "AGS",
+          "icode": "",
+          "index": 1,
+          "label_asym_id": "G",
+          "label_seq_id": 401
+        }
+      ],
+      "inter_bonds": [],
+      "is_covalent": false,
+      "kind": "CCD",
+      "n_heavy_atoms": 31,
+      "object_key": "CCD:AGS",
+      "pdb_id": "9pqm",
+      "polymer_length": 1,
+      "type_tag": "small_molecule"
+    },
+    "global": {
+      "candidate_count": 6,
+      "coverage_prauc_0p3": 1.0,
+      "coverage_prauc_0p5": 1.0,
+      "coverage_prauc_0p6": 1.0,
+      "ignored_candidate_count": 0,
+      "one_to_one_prauc_0p3": 1.0,
+      "one_to_one_prauc_0p5": 1.0,
+      "one_to_one_prauc_0p6": 1.0,
+      "pdb_id": "9pqm",
+      "resolution_angstrom": 3.18,
+      "semantic_dice": 0.7951273532668881,
+      "semantic_fn": 135,
+      "semantic_fp": 790,
+      "semantic_tp": 1795,
+      "small_gt_count": 6,
+      "selected_count": 6,
+      "matched_count_0p3": 6,
+      "one_to_one_precision_0p3": 1.0,
+      "one_to_one_recall_0p3": 1.0
+    },
+    "real": {
+      "blob": 4,
+      "intersection": 307,
+      "precision": 0.7206572769953051,
+      "recall": 0.941717791411043,
+      "dice": 0.8164893617021277,
+      "gt_size": 326,
+      "pred_size": 426,
+      "selected_count": 6
+    },
+    "cryo": {
+      "blob": 1,
+      "intersection": 302,
+      "precision": 0.7294685990338164,
+      "recall": 0.9263803680981595,
+      "dice": 0.8162162162162162,
+      "gt_size": 326,
+      "pred_size": 414,
+      "selected_count": 6
+    },
+    "emap": {
+      "blob": 138,
+      "intersection": 275,
+      "precision": 0.701530612244898,
+      "recall": 0.843558282208589,
+      "dice": 0.766016713091922,
+      "gt_size": 326,
+      "pred_size": 392,
+      "selected_count": 255
+    },
+    "group": 1
+  },
+  {
+    "pdb": "9wq3",
+    "occurrence": {
+      "candidate_id": 3,
+      "components": [
+        {
+          "auth_asym_id": "E",
+          "auth_seq_id": 401,
+          "ccd_id": "1SY",
+          "icode": "",
+          "index": 1,
+          "label_asym_id": "J",
+          "label_seq_id": 401
+        }
+      ],
+      "inter_bonds": [],
+      "is_covalent": false,
+      "kind": "CCD",
+      "n_heavy_atoms": 45,
+      "object_key": "CCD:1SY",
+      "pdb_id": "9wq3",
+      "polymer_length": 1,
+      "type_tag": "small_molecule"
+    },
+    "global": {
+      "candidate_count": 7,
+      "coverage_prauc_0p3": 1.0,
+      "coverage_prauc_0p5": 1.0,
+      "coverage_prauc_0p6": 1.0,
+      "ignored_candidate_count": 0,
+      "one_to_one_prauc_0p3": 1.0,
+      "one_to_one_prauc_0p5": 1.0,
+      "one_to_one_prauc_0p6": 1.0,
+      "pdb_id": "9wq3",
+      "resolution_angstrom": 3.27,
+      "semantic_dice": 0.8209338122113905,
+      "semantic_fn": 244,
+      "semantic_fp": 803,
+      "semantic_tp": 2400,
+      "small_gt_count": 6,
+      "selected_count": 6,
+      "matched_count_0p3": 6,
+      "one_to_one_precision_0p3": 1.0,
+      "one_to_one_recall_0p3": 1.0
+    },
+    "real": {
+      "blob": 1,
+      "intersection": 414,
+      "precision": 0.7992277992277992,
+      "recall": 0.9409090909090909,
+      "dice": 0.8643006263048016,
+      "gt_size": 440,
+      "pred_size": 518,
+      "selected_count": 6
+    },
+    "cryo": {
+      "blob": 3,
+      "intersection": 415,
+      "precision": 0.7919847328244275,
+      "recall": 0.9431818181818182,
+      "dice": 0.8609958506224067,
+      "gt_size": 440,
+      "pred_size": 524,
+      "selected_count": 12
+    },
+    "emap": {
+      "blob": 22,
+      "intersection": 62,
+      "precision": 0.6262626262626263,
+      "recall": 0.1409090909090909,
+      "dice": 0.2300556586270872,
+      "gt_size": 440,
+      "pred_size": 99,
+      "selected_count": 38
+    },
+    "group": 1
+  },
+  {
+    "pdb": "9uwi",
+    "occurrence": {
+      "candidate_id": 3,
+      "components": [
+        {
+          "auth_asym_id": "B",
+          "auth_seq_id": 502,
+          "ccd_id": "CLR",
+          "icode": "",
+          "index": 1,
+          "label_asym_id": "H",
+          "label_seq_id": 502
+        }
+      ],
+      "inter_bonds": [],
+      "is_covalent": false,
+      "kind": "CCD",
+      "n_heavy_atoms": 28,
+      "object_key": "CCD:CLR",
+      "pdb_id": "9uwi",
+      "polymer_length": 1,
+      "type_tag": "small_molecule"
+    },
+    "global": {
+      "candidate_count": 14,
+      "coverage_prauc_0p3": 0.7928571428571429,
+      "coverage_prauc_0p5": 0.65,
+      "coverage_prauc_0p6": 0.65,
+      "ignored_candidate_count": 0,
+      "one_to_one_prauc_0p3": 0.7928571428571429,
+      "one_to_one_prauc_0p5": 0.65,
+      "one_to_one_prauc_0p6": 0.65,
+      "pdb_id": "9uwi",
+      "resolution_angstrom": 2.8,
+      "semantic_dice": 0.5042897998093422,
+      "semantic_fn": 784,
+      "semantic_fp": 256,
+      "semantic_tp": 529,
+      "small_gt_count": 4,
+      "selected_count": 3,
+      "matched_count_0p3": 2,
+      "one_to_one_precision_0p3": 0.6666666666666666,
+      "one_to_one_recall_0p3": 0.5
+    },
+    "real": {
+      "blob": 2,
+      "intersection": 268,
+      "precision": 0.8993288590604027,
+      "recall": 0.8121212121212121,
+      "dice": 0.8535031847133758,
+      "gt_size": 330,
+      "pred_size": 298,
+      "selected_count": 3
+    },
+    "cryo": {
+      "blob": 3,
+      "intersection": 267,
+      "precision": 0.89,
+      "recall": 0.8090909090909091,
+      "dice": 0.8476190476190476,
+      "gt_size": 330,
+      "pred_size": 300,
+      "selected_count": 6
+    },
+    "emap": {
+      "blob": 80,
+      "intersection": 99,
+      "precision": 0.99,
+      "recall": 0.3,
+      "dice": 0.4604651162790698,
+      "gt_size": 330,
+      "pred_size": 100,
+      "selected_count": 247
+    },
+    "group": 1,
+    "selection_note": "PDB级排名放宽，局部两种Find的Dice均约0.85，Emap2lig仅覆盖30%；选择结构规模较小且局部差异清楚的例子。"
+  },
+  {
+    "pdb": "9x0x",
+    "occurrence": {
+      "candidate_id": 7,
+      "components": [
+        {
+          "auth_asym_id": "T",
+          "auth_seq_id": 801,
+          "ccd_id": "PTY",
+          "icode": "",
+          "index": 1,
+          "label_asym_id": "JA",
+          "label_seq_id": 801
+        }
+      ],
+      "inter_bonds": [],
+      "is_covalent": false,
+      "kind": "CCD",
+      "n_heavy_atoms": 50,
+      "object_key": "CCD:PTY",
+      "pdb_id": "9x0x",
+      "polymer_length": 1,
+      "type_tag": "small_molecule"
+    },
+    "global": {
+      "candidate_count": 31,
+      "coverage_prauc_0p3": 1.0,
+      "coverage_prauc_0p5": 1.0,
+      "coverage_prauc_0p6": 1.0,
+      "ignored_candidate_count": 0,
+      "one_to_one_prauc_0p3": 1.0,
+      "one_to_one_prauc_0p5": 1.0,
+      "one_to_one_prauc_0p6": 1.0,
+      "pdb_id": "9x0x",
+      "resolution_angstrom": 2.45,
+      "semantic_dice": 0.7754411681795118,
+      "semantic_fn": 1690,
+      "semantic_fp": 2293,
+      "semantic_tp": 6877,
+      "small_gt_count": 14,
+      "selected_count": 19,
+      "matched_count_0p3": 14,
+      "one_to_one_precision_0p3": 0.7368421052631579,
+      "one_to_one_recall_0p3": 1.0
+    },
+    "real": {
+      "blob": 10,
+      "intersection": 506,
+      "precision": 0.8227642276422764,
+      "recall": 0.826797385620915,
+      "dice": 0.8247758761206194,
+      "gt_size": 612,
+      "pred_size": 615,
+      "selected_count": 19
+    },
+    "cryo": {
+      "blob": 9,
+      "intersection": 500,
+      "precision": 0.8431703204047217,
+      "recall": 0.8169934640522876,
+      "dice": 0.8298755186721992,
+      "gt_size": 612,
+      "pred_size": 593,
+      "selected_count": 15
+    },
+    "emap": {
+      "blob": 203,
+      "intersection": 286,
+      "precision": 0.43137254901960786,
+      "recall": 0.4673202614379085,
+      "dice": 0.44862745098039214,
+      "gt_size": 612,
+      "pred_size": 663,
+      "selected_count": 432
+    },
+    "group": 1
+  },
+  {
+    "pdb": "9bjj",
+    "occurrence": {
+      "candidate_id": 18,
+      "components": [
+        {
+          "auth_asym_id": "F",
+          "auth_seq_id": 1001,
+          "ccd_id": "A1AP0",
+          "icode": "",
+          "index": 1,
+          "label_asym_id": "Z",
+          "label_seq_id": 1001
+        }
+      ],
+      "inter_bonds": [],
+      "is_covalent": false,
+      "kind": "CCD",
+      "n_heavy_atoms": 28,
+      "object_key": "CCD:A1AP0",
+      "pdb_id": "9bjj",
+      "polymer_length": 1,
+      "type_tag": "small_molecule"
+    },
+    "global": {
+      "candidate_count": 13,
+      "coverage_prauc_0p3": 0.9924242424242424,
+      "coverage_prauc_0p5": 0.9924242424242424,
+      "coverage_prauc_0p6": 0.9924242424242424,
+      "ignored_candidate_count": 0,
+      "one_to_one_prauc_0p3": 0.9924242424242424,
+      "one_to_one_prauc_0p5": 0.9924242424242424,
+      "one_to_one_prauc_0p6": 0.9924242424242424,
+      "pdb_id": "9bjj",
+      "resolution_angstrom": 3.06,
+      "semantic_dice": 0.7354601226993865,
+      "semantic_fn": 410,
+      "semantic_fp": 1746,
+      "semantic_tp": 2997,
+      "small_gt_count": 11,
+      "selected_count": 13,
+      "matched_count_0p3": 11,
+      "one_to_one_precision_0p3": 0.8461538461538461,
+      "one_to_one_recall_0p3": 1.0
+    },
+    "real": {
+      "blob": 10,
+      "intersection": 220,
+      "precision": 0.7432432432432432,
+      "recall": 0.7284768211920529,
+      "dice": 0.7357859531772575,
+      "gt_size": 302,
+      "pred_size": 296,
+      "selected_count": 13
+    },
+    "cryo": {
+      "blob": 12,
+      "intersection": 196,
+      "precision": 0.7567567567567568,
+      "recall": 0.6490066225165563,
+      "dice": 0.6987522281639929,
+      "gt_size": 302,
+      "pred_size": 259,
+      "selected_count": 14
+    },
+    "emap": {
+      "blob": 216,
+      "intersection": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "dice": 0.0,
+      "gt_size": 302,
+      "pred_size": 149,
+      "selected_count": 305,
+      "nearest_gt_voxel_angstrom": 1.4166518418531473
+    },
+    "group": 2
+  },
+  {
+    "pdb": "9wup",
+    "occurrence": {
+      "candidate_id": 3,
+      "components": [
+        {
+          "auth_asym_id": "A",
+          "auth_seq_id": 1104,
+          "ccd_id": "NDP",
+          "icode": "",
+          "index": 1,
+          "label_asym_id": "F",
+          "label_seq_id": 1104
+        }
+      ],
+      "inter_bonds": [],
+      "is_covalent": false,
+      "kind": "CCD",
+      "n_heavy_atoms": 31,
+      "object_key": "CCD:NDP",
+      "pdb_id": "9wup",
+      "polymer_length": 1,
+      "type_tag": "small_molecule"
+    },
+    "global": {
+      "candidate_count": 8,
+      "coverage_prauc_0p3": 1.0,
+      "coverage_prauc_0p5": 0.875,
+      "coverage_prauc_0p6": 0.33958333333333335,
+      "ignored_candidate_count": 0,
+      "one_to_one_prauc_0p3": 0.875,
+      "one_to_one_prauc_0p5": 0.875,
+      "one_to_one_prauc_0p6": 0.33958333333333335,
+      "pdb_id": "9wup",
+      "resolution_angstrom": 2.68,
+      "semantic_dice": 0.8356667119749898,
+      "semantic_fn": 226,
+      "semantic_fp": 983,
+      "semantic_tp": 3074,
+      "small_gt_count": 8,
+      "selected_count": 7,
+      "matched_count_0p3": 7,
+      "one_to_one_precision_0p3": 1.0,
+      "one_to_one_recall_0p3": 0.875
+    },
+    "real": {
+      "blob": 5,
+      "intersection": 296,
+      "precision": 0.5736434108527132,
+      "recall": 0.9221183800623053,
+      "dice": 0.7072879330943848,
+      "gt_size": 321,
+      "pred_size": 516,
+      "selected_count": 7
+    },
+    "cryo": {
+      "blob": 5,
+      "intersection": 297,
+      "precision": 0.5823529411764706,
+      "recall": 0.9252336448598131,
+      "dice": 0.7148014440433214,
+      "gt_size": 321,
+      "pred_size": 510,
+      "selected_count": 7
+    },
+    "emap": {
+      "blob": 91,
+      "intersection": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "dice": 0.0,
+      "gt_size": 321,
+      "pred_size": 1106,
+      "selected_count": 157,
+      "nearest_gt_voxel_angstrom": 3.726816510266011
+    },
+    "group": 2
+  },
+  {
+    "pdb": "9rmi",
+    "occurrence": {
+      "candidate_id": 2,
+      "components": [
+        {
+          "auth_asym_id": "C",
+          "auth_seq_id": 401,
+          "ccd_id": "ADP",
+          "icode": "",
+          "index": 1,
+          "label_asym_id": "I",
+          "label_seq_id": 401
+        }
+      ],
+      "inter_bonds": [],
+      "is_covalent": false,
+      "kind": "CCD",
+      "n_heavy_atoms": 27,
+      "object_key": "CCD:ADP",
+      "pdb_id": "9rmi",
+      "polymer_length": 1,
+      "type_tag": "small_molecule"
+    },
+    "global": {
+      "candidate_count": 8,
+      "coverage_prauc_0p3": 1.0,
+      "coverage_prauc_0p5": 1.0,
+      "coverage_prauc_0p6": 0.1111111111111111,
+      "ignored_candidate_count": 0,
+      "one_to_one_prauc_0p3": 1.0,
+      "one_to_one_prauc_0p5": 1.0,
+      "one_to_one_prauc_0p6": 0.1111111111111111,
+      "pdb_id": "9rmi",
+      "resolution_angstrom": 3.92,
+      "semantic_dice": 0.5814696485623003,
+      "semantic_fn": 179,
+      "semantic_fp": 1917,
+      "semantic_tp": 1456,
+      "small_gt_count": 6,
+      "selected_count": 8,
+      "matched_count_0p3": 6,
+      "one_to_one_precision_0p3": 0.75,
+      "one_to_one_recall_0p3": 1.0
+    },
+    "real": {
+      "blob": 2,
+      "intersection": 241,
+      "precision": 0.6070528967254408,
+      "recall": 0.8827838827838828,
+      "dice": 0.7194029850746269,
+      "gt_size": 273,
+      "pred_size": 397,
+      "selected_count": 8
+    },
+    "cryo": {
+      "blob": 2,
+      "intersection": 221,
+      "precision": 0.3960573476702509,
+      "recall": 0.8095238095238095,
+      "dice": 0.5318892900120337,
+      "gt_size": 273,
+      "pred_size": 558,
+      "selected_count": 14
+    },
+    "emap": {
+      "blob": 468,
+      "intersection": 28,
+      "precision": 0.1830065359477124,
+      "recall": 0.10256410256410256,
+      "dice": 0.13145539906103287,
+      "gt_size": 273,
+      "pred_size": 153,
+      "selected_count": 923
+    },
+    "group": 2
+  }
+]

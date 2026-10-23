@@ -1,0 +1,12 @@
+# 9QRU v2: 仅删除原生目标排名标签, 保留完整地图/CA2/全部blob/原相机.
+close all
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9qru/global_session.cxs"
+windowsize 960 720
+view global_find
+label delete #8 models
+view matrix
+zoom
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/display/regenerated/9qru/renders/global_find.png" width 1440 height 1080 supersample 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/display/regenerated/9qru/global_session.cxs" includeMaps false
+log save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/display/regenerated/9qru/commands.html"

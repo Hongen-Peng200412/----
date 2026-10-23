@@ -1,0 +1,157 @@
+# 9XZL: 每个视图为一个端到端行动, 所有三维显示均使用 ChimeraX 1.10.1 原生命令.
+# #1-6 沿用旧固定模型顺序, #7起为全部原 blob, 最后为完整实验图.
+close all
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9xzl/assets/density.mrc"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9xzl/assets/ca2_receptor.cif"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9xzl/assets/reference.sdf"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9xzl/assets/prediction.sdf"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9xzl/assets/gt_area.mrc"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9xzl/assets/gt_receptor.cif"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9xzl/assets/blob_0.mrc"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9xzl/assets/blob_1.mrc"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9xzl/assets/blob_2.mrc"
+open "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/9xzl/assets/full_density.mrc"
+set bgColor white
+camera ortho
+windowsize 960 720
+lighting soft
+material dull
+graphics silhouettes false
+hide models
+hide #2,6 atoms
+cartoon #2,6
+color #2,6 #81a58b target c
+color #2,6 #81a58b target ab
+transparency #2,6 20 target c
+hide #3,4 cartoons
+style #3,4 stick
+size #3,4 stickRadius 0.20
+color #3 #26a6a1 target ab
+color #4 #3169b3 target ab
+volume #1 style mesh step 1 level 0.007440028712153435 color #a0a9ad transparency 0.55 squareMesh true meshLighting false
+volume #5 style mesh step 1 level 0.5 color #26a6a1 transparency 0.20
+volume #10 style surface step 1 level 0.007440028712153435 color #8e9ca5 transparency 0.15 surfaceSmoothing false
+volume #10 region all
+volume unzone #10
+volume #7 style surface step 1 level 0.5 color #b3a290 transparency 0.05 surfaceSmoothing false
+volume #8 style surface step 1 level 0.5 color #e9983c transparency 0.05 surfaceSmoothing false
+volume #9 style surface step 1 level 0.5 color #cbd0d2 transparency 0.05 surfaceSmoothing false
+# 全局相机由完整实验图确定, 不以16A旧裁图代替全图.
+show #10 models
+view #10 orient
+turn y 25
+turn x -20
+view #10 pad 0.06
+clip off
+view name global
+view matrix
+zoom
+view name global_density
+show #2,6 models
+show #2,6 atoms
+view #2,6 orient
+turn y 25
+turn x -20
+view #2,6 pad 0.07
+clip off
+view name global_structure
+view matrix
+zoom
+view #2,6,7,8,9 pad 0.07
+clip off
+view name global_find
+view matrix
+zoom
+hide #2,6 atoms
+hide models
+show #10 models
+view global_density
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/renders/global_density.png" width 1440 height 1080 supersample 2
+hide models
+show #2 models
+view global_structure
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/renders/global_ca2.png" width 1440 height 1080 supersample 2
+hide models
+show #6,3 models
+view global_structure
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/renders/global_gt.png" width 1440 height 1080 supersample 2
+hide models
+show #10,2,7,8,9 models
+view global_find
+volume #10 transparency 0.78
+transparency #2 0 target c
+label #8 models text "2" color #ad6515 bgColor white height fixed size 24 offset 4,4,0 onTop true
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/renders/global_find.png" width 1440 height 1080 supersample 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/global_session.cxs" includeMaps false
+label delete #8 models
+# 完整地图保留独立MRC及全局会话外部引用, 局部CXS嵌入所需局部图和所有blob.
+close #10
+hide models
+hide #2,6 cartoons
+hide #2,6 atoms
+show (#2,6 & (#3 :< 6)) atoms
+style #2,6 stick
+size #2,6 stickRadius 0.055
+transparency #2,6 45 target ab
+show #3,4,8 models
+view #3 orient
+turn y 35
+turn x -25
+view #3,4,8 pad 0.25
+clip off
+view name local
+view matrix
+zoom
+volume zone #1 nearAtoms #3 range 4 newMap false minimalBounds true
+hide models
+show #3,5,6 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/renders/local_gt.png" width 1440 height 1080 supersample 2
+hide models
+show #1,2,8 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/renders/local_find.png" width 1440 height 1080 supersample 2
+hide models
+show #8 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/renders/blob_alone.png" width 1440 height 1080 supersample 2
+# Dock三种视图共用冻结Top1和local相机, 不对齐或重新优化.
+hide models
+hide #2 atoms
+cartoon (#2 & (#3 :< 8))
+transparency #2 68 target c
+surface (#2 & (#3 :< 6)) enclose (#2 & (#3 :< 6)) color #81a58b transparency 78
+show #2,4 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/renders/dock_receptor.png" width 1440 height 1080 supersample 2
+hide #2 surfaces
+hide #2 cartoons
+hide models
+volume #1 color #516773 transparency 0.12
+show #1,4 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/renders/dock_density.png" width 1440 height 1080 supersample 2
+hide models
+show #3,4 models
+view local
+wait 2
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/renders/dock_gt_overlay.png" width 1440 height 1080 supersample 2
+# 回到目标局部并嵌入所需地图, session.cxs可直接学习/编辑.
+hide models
+hide #2,6 atoms
+show (#2,6 & (#3 :< 6)) atoms
+volume zone #1 nearAtoms #3 range 4 newMap false minimalBounds true
+volume #1 transparency 0.55
+show #1,2,3,4 models
+view local
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/session.cxs" includeMaps true
+log save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/e2e-flow/views/regenerated/9xzl/commands.html"

@@ -1,0 +1,18 @@
+# 公共外观设置. 仅使用 ChimeraX 原生命令, 不定义别名.
+set bgColor white
+camera ortho
+lighting soft
+material dull
+graphics silhouettes false
+hide models
+hide #2,3 atoms
+cartoon #2,3
+color #2,3 #aaaab5 target c
+transparency #2,3 40 target c
+style #4,12 ball
+color #4,12 byelement
+color #4,12 & C #8e9098
+size #4,12 stickRadius 0.18
+volume #1 style surface color #c9c9d2 transparency 0.80 surfaceSmoothing false
+volume #5-11 style surface level 0.5 step 1 color #27a9e0 transparency 0.50 surfaceSmoothing false
+volume #8 color #7fcfe7 transparency 0.55

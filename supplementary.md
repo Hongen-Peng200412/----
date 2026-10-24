@@ -1,46 +1,17 @@
 # Supplementary Information
 
-## Stage 1: Comparison of LigandSeek2-Find with LigandSeek
 
-Our first-generation model, LigandSeek, localised ligands in cryo-electron microscopy (cryo-EM) density maps without the Match and Build stages for identity matching and pose reconstruction. We compared its strongest version (LigandSeek-PV) with LigandSeek2-Find on the same full test set and small-molecule test subset. The evaluation definitions and presentation followed those used for the comparison with Emap2lig-Find.
+## Stage 1: Ablation of LigandSeek-Find
 
-On the full test set, LigandSeek2-Find outperformed LigandSeek across all three detection metrics ({{figref:ligandseek2-vs-ligandseek1|a}}). These comprised semantic Dice and one-to-one PRAUC at coverage thresholds of 0.3 and 0.5. When using the deposited receptors, one-to-one $\mathrm{PRAUC}_{0.3}$ was 0.517 for LigandSeek and 0.663 for LigandSeek2-Find. When using CryoAtom2-reconstructed (CA2) receptors, it increased from 0.440 to 0.541. Paired comparisons using CA2 receptors showed higher values for LigandSeek2-Find in 79 PDBs, equal values in 69, and higher values for LigandSeek in 31 ({{figref:ligandseek2-vs-ligandseek1|c}}).
-
-LigandSeek2-Find also showed an overall advantage in the small-molecule test subset. For deposited receptors, one-to-one $\mathrm{PRAUC}_{0.3}$ increased from 0.621 to 0.701. For CA2 receptors, one-to-one $\mathrm{PRAUC}_{0.3}$ increased from 0.568 to 0.573 ({{figref:ligandseek2-vs-ligandseek1|b}}). In paired CA2 comparisons, LigandSeek2-Find performed better than, as well as, or worse than LigandSeek in 27, 46 and 21 PDBs, respectively ({{figref:ligandseek2-vs-ligandseek1|d}}). Per-PDB precision and recall distributions are shown in {{figref:ligandseek2-vs-ligandseek1|e,f}}.
-
-LigandSeek2-Find showed a much larger average advantage over LigandSeek across all ligands than within the small-molecule category alone. We attribute this difference mainly to the change in foreground block sampling during training. LigandSeek sampled ligands in a way resembling weighting by heavy-atom count. LigandSeek2-Find sampled all ligand instances within each PDB equally, regardless of heavy-atom count. Across all preprocessed data, small molecules contained 38.49 heavy atoms on average, compared with 17.02 across all ligand instances. The first-generation model therefore placed greater emphasis on small molecules during training.
-
-{{pptfig:"画图/LigandSeek2_vs_LigandSeek1.pptx"|ligandseek2-vs-ligandseek1|width=5.6in}}
-
-<table data-layout="booktabs" data-pagination="rows">
-<caption>Table 3 | Stage 1 detection performance of two LigandSeek generations on the full test set and small-molecule test subset.</caption>
-<colgroup><col style="width: 28%"/><col style="width: 12%"/><col style="width: 12%"/><col style="width: 12%"/><col style="width: 12%"/><col style="width: 12%"/><col style="width: 12%"/></colgroup>
-<thead>
-<tr><th rowspan="2">Model</th><th colspan="3">CA2 receptors</th><th colspan="3">Deposited receptors</th></tr>
-<tr><th>Dice</th><th>$\mathrm{PRAUC}_{0.3}$</th><th>$\mathrm{PRAUC}_{0.5}$</th><th>Dice</th><th>$\mathrm{PRAUC}_{0.3}$</th><th>$\mathrm{PRAUC}_{0.5}$</th></tr>
-</thead>
-<tbody>
-<tr class="table-group"><td colspan="7"><em>All ligands</em></td></tr>
-<tr><td>LigandSeek</td><td>0.355</td><td>0.440</td><td>0.261</td><td>0.419</td><td>0.517</td><td>0.315</td></tr>
-<tr><td>LigandSeek2-Find</td><td><strong>0.477</strong></td><td><strong>0.541</strong></td><td><strong>0.447</strong></td><td><strong>0.584</strong></td><td><strong>0.663</strong></td><td><strong>0.558</strong></td></tr>
-<tr class="table-group"><td colspan="7"><em>Small molecules</em></td></tr>
-<tr><td>LigandSeek</td><td>0.460</td><td>0.568</td><td>0.483</td><td>0.511</td><td>0.621</td><td>0.539</td></tr>
-<tr><td>LigandSeek2-Find</td><td><strong>0.482</strong></td><td><strong>0.573</strong></td><td><strong>0.499</strong></td><td><strong>0.576</strong></td><td><strong>0.701</strong></td><td><strong>0.605</strong></td></tr>
-</tbody>
-</table>
-<p class="table-note">Dice denotes semantic Dice; PRAUC denotes one-to-one PRAUC, with subscripts indicating bidirectional coverage thresholds between predicted and ground-truth regions. CA2 denotes CryoAtom2-reconstructed receptors; deposited receptors correspond to GT. Bold values indicate the higher score in each column within each ligand group.</p>
-
-## Stage 1: Ablation of LigandSeek2-Find
-
-As shown in Table 4, we compared six model variants on the same full test set to assess the contributions of individual designs to ligand detection. Starting with a 3D U-Net receiving experimental density alone(Density only), we added difference density(+ Difference density), a multi-view density bank(+ Density bank) and receptor-atom features(+ Receptor features). We then introduced centroid-aware positional encoding in the receptor embedding head(+ Centroid encoding), followed by the final LigandSeek2-Find model. The final model used receptor-atom binding probabilities predicted by the point-cloud branch for Gaussian candidate scoring, while other models used conventional inference without Gaussian candidate scoring.
+As shown in Table 4, we compared six model variants on the same full test set to assess the contributions of individual designs to ligand detection. Starting with a 3D U-Net receiving experimental density alone(Density only), we added difference density(+ Difference density), a multi-view density bank(+ Density bank) and receptor-atom features(+ Receptor features). We then introduced centroid-aware positional encoding in the receptor embedding head(+ Centroid encoding), followed by the final LigandSeek-Find model. The final model used receptor-atom binding probabilities predicted by the point-cloud branch for Gaussian candidate scoring, while other models used conventional inference without Gaussian candidate scoring.
 
 According to Table 4, adding difference density improved all metrics under both GT and CA2 conditions. Moreover, the multi-view density bank further improved overall detection ability. It is noteworthy that when constructing multi-view density bank, the deterministic transformations of the same experimental and simulated receptor density do not add any additional information, but highlight ligand signals across contrasts and spatial scales while suppressing dominant receptor density.
 
 
-Futhermore, we can observe that injecting the receptor information explicitly, adding centroid-aware positional encoding in the receptor embedding head, and introducing Gaussian scoring during inference also generally raise model performance to varying degrees. We refer to the model with all components as LigandSeek2-Find, which has the best overall performance.
+Futhermore, we can observe that injecting the receptor information explicitly, adding centroid-aware positional encoding in the receptor embedding head, and introducing Gaussian scoring during inference also generally raise model performance to varying degrees. We refer to the model with all components as LigandSeek-Find, which has the best overall performance.
 
 <table data-layout="booktabs" data-pagination="rows">
-<caption>Table 4 | Internal ablation of LigandSeek2-Find on the full test set.</caption>
+<caption>Table 4 | Internal ablation of LigandSeek-Find on the full test set.</caption>
 <colgroup><col style="width: 28%"/><col style="width: 12%"/><col style="width: 12%"/><col style="width: 12%"/><col style="width: 12%"/><col style="width: 12%"/><col style="width: 12%"/></colgroup>
 <thead>
 <tr><th rowspan="2">Model</th><th colspan="3">CA2 receptors</th><th colspan="3">Deposited receptors</th></tr>
@@ -52,7 +23,7 @@ Futhermore, we can observe that injecting the receptor information explicitly, a
 <tr><td>+ Density bank</td><td>0.453</td><td>0.508</td><td>0.427</td><td><strong>0.585</strong></td><td><u>0.643</u></td><td><strong>0.561</strong></td></tr>
 <tr><td>+ Receptor features</td><td>0.463</td><td>0.520</td><td>0.437</td><td>0.570</td><td>0.631</td><td>0.554</td></tr>
 <tr><td>+ Centroid encoding</td><td><strong>0.483</strong></td><td><u>0.536</u></td><td><u>0.444</u></td><td>0.583</td><td>0.633</td><td>0.539</td></tr>
-<tr><td>LigandSeek2-Find</td><td><u>0.477</u></td><td><strong>0.541</strong></td><td><strong>0.447</strong></td><td><u>0.584</u></td><td><strong>0.663</strong></td><td><u>0.558</u></td></tr>
+<tr><td>LigandSeek-Find</td><td><u>0.477</u></td><td><strong>0.541</strong></td><td><strong>0.447</strong></td><td><u>0.584</u></td><td><strong>0.663</strong></td><td><u>0.558</u></td></tr>
 </tbody>
 </table>
 <p class="table-note">Dice denotes semantic Dice; PRAUC denotes one-to-one PRAUC, with subscripts indicating bidirectional coverage thresholds between predicted and ground-truth regions. CA2 denotes CryoAtom2-reconstructed receptors; deposited receptors correspond to GT. Bold and underlined values indicate the highest and second-highest scores in each column, respectively.</p>

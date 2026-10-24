@@ -1,0 +1,21 @@
+<!doctype html><meta charset="utf-8"><title>多配体画图</title>
+<h2>多配体画图：ligwork</h2>
+<p>面板负责选择评估模式、预算、过滤和构象。受体、实验密度、真实配体等参考材料在官方 Models 面板独立开关。</p>
+<p>切换模式、受体条件、预算会按新配置设置预测显隐；颜色、表示方式、视角和密度阈值保留。清除过滤保留手动隐藏；reset 恢复预设显隐。保存、重开会话恢复实际编辑状态。</p>
+<pre>ligwork view find_match
+ligwork condition CA2
+ligwork budget 100
+ligwork filter foreground
+ligwork filter all
+ligwork pose best
+ligwork labels identity on
+ligwork labels correctness on
+ligwork reset
+ligwork focus 16
+ligwork pocket 16
+ligwork home
+ligwork overview
+ligwork save
+ligwork export</pre>
+<p>模式名：find_all（全配体 Find）、find_small（Stage 1 小分子 Find）、find_match、find_build（给定正确身份）、pipeline（实际 Find–Match–Build）。预算：50、100、200、300、all。过滤：all、foreground、small、eligible。构象：top1、best、both。</p>
+<p>home 是“回到本例初始总览”按钮对应的命令。它恢复 CA2、Find+Match、100%、无过滤，显示真实配体和 CA2 受体，隐藏地图和真实区域。颜色、透明度和密度阈值保留。overview 只恢复全局视角。</p>

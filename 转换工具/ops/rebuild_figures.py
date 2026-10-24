@@ -141,6 +141,8 @@ def commands_for(figure: str, build: Path) -> list[list]:
     if figure == "fig-method-v8":
         prefix="e2e/visualization/fig-method-v8/"
         return [[PYMOL,"-B",CODE/(prefix+"ops/"+name)] for name in ("render_receptor.py","render_density.py","render_build_pose.py")]+[p(prefix+"assemble.py")]
+    if figure == 'multiligand-workbench' or figure.startswith('multiligand-workbench-'):
+        return [p('e2e/visualization/multiligand-workbench/ops/rebuild.py','--figure',figure,'--build-root',build)]
     raise ValueError(f"图名未登记重建步骤: {figure}")
 
 

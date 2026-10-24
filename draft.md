@@ -249,22 +249,6 @@ For detection and identity matching across all ligand classes, increasing the re
 
 {{pptfig:"画图/E2E实例完成度.pptx"|supp-e2e-completion-all}}
 
-<table data-layout="booktabs" data-outline="box" data-col-rules="1,3" data-pagination="rows">
-<caption>Table 1 | All-ligand instance completion (%).</caption>
-<colgroup><col style="width: 16%"/><col style="width: 21%"/><col style="width: 21%"/><col style="width: 21%"/><col style="width: 21%"/></colgroup>
-<thead>
-<tr><th rowspan="2">Receptor</th><th colspan="2">100%</th><th colspan="2">300%</th></tr>
-<tr><th>Mean</th><th>Median</th><th>Mean</th><th>Median</th></tr>
-</thead>
-<tbody>
-<tr><td>GT</td><td>62.1</td><td>66.7</td><td>67.5</td><td>71.4</td></tr>
-
-<tr><td>CA2</td><td>51.1</td><td>50.0</td><td>58.8</td><td>60.2</td></tr>
-
-</tbody>
-</table>
-<p class="table-note">Means are PDB-equal macro means; medians were calculated across the same 179 PDBs.</p>
-
 ### End-to-end modelling of small molecules
 
 Successful processing of a small-molecule instance requires successful detection by Find, correct identity assignment by Match and a PocketXMol-tuned pose with a heavy-atom RMSD below the specified threshold. We report results under eight combinations of the following test conditions. These combine GT or CA2 receptors, top-1 or best-of-50 poses, and heavy-atom RMSD thresholds of <2 Å or <3 Å.
@@ -272,23 +256,6 @@ Successful processing of a small-molecule instance requires successful detection
 For top-1 poses with RMSD <3 Å, mean completion for CA2 was 47.7% and 53.0% at 100% and 300% budgets, respectively. The corresponding GT values were 60.1% and 61.1% ({{figref:supp-e2e-completion-small}}). For best-of-50 poses, mean completion was 54.7% and 62.8% for CA2, and 66.0% and 66.9% for GT, respectively. The gap between best pose and top-1 pose shows that many correct poses had already been generated but were not ranked first.
 
 {{pptfig:"画图/E2E实例完成度.pptx"|supp-e2e-completion-small}}
-
-<table data-layout="booktabs" data-outline="box" data-col-rules="2,6" data-pagination="rows" data-page-break="before">
-<caption>Table 2 | Small-molecule instance completion (%).</caption>
-<colgroup><col style="width: 14%"/><col style="width: 10%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/><col style="width: 9.5%"/></colgroup>
-<thead>
-<tr><th rowspan="3">Pose</th><th rowspan="3">RMSD</th><th colspan="4">CA2</th><th colspan="4">GT</th></tr>
-<tr><th colspan="2">100%</th><th colspan="2">300%</th><th colspan="2">100%</th><th colspan="2">300%</th></tr>
-<tr><th>Mean</th><th>Median</th><th>Mean</th><th>Median</th><th>Mean</th><th>Median</th><th>Mean</th><th>Median</th></tr>
-</thead>
-<tbody>
-<tr><td rowspan="2">Top-1</td><td>&lt;2 Å</td><td>41.1</td><td>16.7</td><td>44.9</td><td>25.0</td><td>55.1</td><td>75.0</td><td>55.1</td><td>75.0</td></tr>
-<tr><td>&lt;3 Å</td><td>47.7</td><td>33.3</td><td>53.0</td><td>50.0</td><td>60.1</td><td>100.0</td><td>61.1</td><td>100.0</td></tr>
-<tr class="table-divider"><td rowspan="2">Best</td><td>&lt;2 Å</td><td>49.1</td><td>50.0</td><td>55.9</td><td>83.3</td><td>63.5</td><td>100.0</td><td>64.4</td><td>100.0</td></tr>
-<tr><td>&lt;3 Å</td><td>54.7</td><td>66.7</td><td>62.8</td><td>100.0</td><td>66.0</td><td>100.0</td><td>66.9</td><td>100.0</td></tr>
-</tbody>
-</table>
-<p class="table-note">Means and medians were calculated across the same 77 PDBs containing 446 eligible small-molecule instances. Eligible small molecules are single-residue organic small molecules with no atoms missing relative to their templates.</p>
 
 
 ### Fair comparison with Emap2lig

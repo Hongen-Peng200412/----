@@ -60,7 +60,7 @@ $$
 
 Once Find locates a ligand region and Match assigns its chemical identity, downstream molecular docking tools can reconstruct the three-dimensional ligand pose. While we provide modular interfaces to standard docking tools, we developed a density-guided variant of PocketXMol as the default Build model. Specifically, PocketXMol was adapted with local density conditioning and fine-tuned from official weights, enabling pose generation constrained by both the receptor environment and experimental density.
 
-Build takes a specified initial binding site $p \in R^3$, a small-molecule identity represented by SMILES and the surrounding pocket environment $P$. It also accepts optional guiding density information $M \in \mathbb{R}^{D \times H \times W}$ and generates all-atom coordinates for the small molecule.
+Build takes a specified initial binding site $p \in R^3$, a small-molecule identity represented by SMILES[@weininger1988smiles] and the surrounding pocket environment $P$. It also accepts optional guiding density information $M \in \mathbb{R}^{D \times H \times W}$ and generates all-atom coordinates for the small molecule.
 
 We tested the framework on a non-redundant set of 179 PDB entries. To evaluate Find's localisation performance, we computed semantic and instance-level metrics for each full density map. To evaluate Match's identity matching and Build's molecular docking performance, we assessed the relevant ligands from these PDB entries.
 
@@ -82,7 +82,7 @@ $$
 
 where $\vert{}\cdot\vert{}$ denotes the number of voxels in a region.
 
-At the instance level, predicted instances $\{B_i\}_{i=1}^{N_{pred}}$ and ground-truth instances $\{G_j\}_{j=1}^{N_{gt}}$ form the two vertex sets of a bipartite graph. An edge connects $B_i$ and $G_j$ if each covers at least a fraction $\tau$ of the other. We then used the Hungarian algorithm to obtain a maximum matching between the two sets. Let $N^{\mathrm{1to1}}_{\tau}$ be the number of successfully matched instance pairs. We define one-to-one precision and recall as:
+At the instance level, predicted instances $\{B_i\}_{i=1}^{N_{pred}}$ and ground-truth instances $\{G_j\}_{j=1}^{N_{gt}}$ form the two vertex sets of a bipartite graph. An edge connects $B_i$ and $G_j$ if each covers at least a fraction $\tau$ of the other. We then used the Hungarian algorithm[@kuhn1955hungarian] to obtain a maximum matching between the two sets. Let $N^{\mathrm{1to1}}_{\tau}$ be the number of successfully matched instance pairs. We define one-to-one precision and recall as:
 
 $$
 \operatorname{1to1P}_{\tau}
@@ -319,15 +319,23 @@ In 30GA ({{figref:e2e-flow-30ga}}), Find's Rank 1 candidate was a background fal
 
 {{pptfig:"画图/E2E案例可视化-端到端流程版_v3.pptx"|e2e-flow-30ga}}
 
+# Discussion
+
+Experimental cryo-EM density and macromolecular receptors provide complementary constraints for ligand modelling. Density maps delineate the ligand's spatial position and shape, whereas receptors provide the pocket's geometric and chemical environment. By jointly encoding both sources across region localisation, identity matching and pose reconstruction, LigandSeek generates ligand poses consistent with experimental density and the receptor environment. This advantage persists with CryoAtom2-reconstructed receptors, showing that automatically reconstructed receptor structures provide effective structural information for ligand modelling.
+
+Find and Match were evaluated across all ligand classes, whereas end-to-end pose reconstruction was benchmarked on single-residue organic small molecules with complete heavy-atom coordinates. Restricting the benchmark to single-residue organic small molecules defines a consistent evaluation scope for PocketXMol-tuned, the default Build engine. Excluding structures with missing atoms serves as a quality filter and provides complete reference coordinates for heavy-atom RMSD evaluation. Other small molecules and ligand classes can likewise be modelled by integrating suitable downstream docking tools. Given the diversity of ligands, these tools differ in their supported ligand classes and input requirements. By separating upstream localisation and identity matching from downstream pose generation, LigandSeek allows users to select appropriate tools through its modular Build interface.
+
+In conclusion, given the candidate ligand identities present in a complex, LigandSeek unifies region localisation, chemical identity matching and pose reconstruction into an automated end-to-end workflow. The workflow can operate with or without deposited receptor structures as input. By bridging automated macromolecular structure reconstruction and all-atom ligand modelling, LigandSeek provides a practical foundation for the complete structural interpretation of cryo-EM complexes.
+
 # Methods
 
 {{figref:fig-method-v8}} shows the network architecture and information flow of the Find–Match–Build framework. The three stages share density and receptor-atom input representations. They sequentially localise ligand regions ({{figref:fig-method-v8|a}}), match candidate regions to ligand identities ({{figref:fig-method-v8|b}}) and reconstruct all-atom ligand poses ({{figref:fig-method-v8|c}}).
 
 ## Data sources and sample partitioning
 
-We downloaded cryo-EM density maps from EMDB and their corresponding PDB structures from the RCSB database. We selected samples with a resolution of <4 Å and CC >0.65. We then partitioned the dataset into mutually disjoint training, validation, calibration, and test sets. The test set contained non-redundant samples first released after 1 January 2026, whereas the other three sets contained samples released before that date.
+We downloaded cryo-EM density maps from EMDB[@wwpdb2024emdb] and their corresponding PDB structures from the RCSB database[@berman2000pdb]. We selected samples with a resolution of <4 Å and CC >0.65. We then partitioned the dataset into mutually disjoint training, validation, calibration, and test sets. The test set contained non-redundant samples first released after 1 January 2026, whereas the other three sets contained samples released before that date.
 
-We used sequence comparisons performed by MMseqs2 to define redundancy between protein and nucleic acid complexes. Two protein sequences were considered similar if their alignment had ≥30% identity and ≥80% coverage in both directions. For nucleic acid sequences, the identity threshold was ≥80%, with the same bidirectional coverage requirement. A pair of PDB entries was considered redundant if the number of similar chains reached ≥60% of the comparable chains in either entry.
+We used sequence comparisons performed by MMseqs2[@steinegger2017mmseqs2] to define redundancy between protein and nucleic acid complexes. Two protein sequences were considered similar if their alignment had ≥30% identity and ≥80% coverage in both directions. For nucleic acid sequences, the identity threshold was ≥80%, with the same bidirectional coverage requirement. A pair of PDB entries was considered redundant if the number of similar chains reached ≥60% of the comparable chains in either entry.
 
 We then removed redundant samples from the candidate test set at the PDB-entry level, namely, by selecting a maximal independent set in the PDB-graph defined by the redundancy relationships. Each sample in the final test set was non-redundant with every sample in the training, validation, and calibration sets. All pairs of samples within the test set were also non-redundant.
 
@@ -348,7 +356,7 @@ Find, Match and Build all extract information from density maps and receptor ato
 
 The multi-view density bank organises complementary views of density into a local representation shared by Find, Match and Build.
 
-Using Chimera, we generated a simulated receptor density map $M_{\mathrm{sim}}$ from the input receptor structure on the same grid as the experimental cryo-EM density map $M_{\mathrm{exp}}$. We resampled both maps to a voxel spacing of 1 Å and aligned them to a common physical coordinate system and voxel grid. These two maps served as the source inputs for constructing the multi-view density bank.
+Using Chimera[@pettersen2004chimera], we generated a simulated receptor density map $M_{\mathrm{sim}}$ from the input receptor structure on the same grid as the experimental cryo-EM density map $M_{\mathrm{exp}}$. We resampled both maps to a voxel spacing of 1 Å and aligned them to a common physical coordinate system and voxel grid. These two maps served as the source inputs for constructing the multi-view density bank.
 
 On the set of voxels containing receptor atoms, $\Omega_{\mathrm{rec}}$, we fitted a scale coefficient $a$ and offset $b$ by least squares. This fit minimised the root-mean-square error between the experimental and scaled simulated densities:
 
@@ -437,13 +445,13 @@ Given the receptor-atom set $A$ defined above and the experimental cryo-EM densi
 
 We represent density maps as voxel grids and receptor atoms as point clouds with features. Find jointly models these representations with a hybrid point–voxel network. The voxel branch predicts ligand-region probabilities from the complete local density field. The point-cloud branch resolves receptor geometry and chemistry, producing auxiliary features, including receptor-atom binding probabilities, for Find and Match training and inference. The network comprises a receptor embedding head, a voxel branch, a point-cloud branch and prediction heads. Multiscale information fusion and recycling connect these components within the network.
 
-The receptor embedding head supplies processed atom representations to both the voxel branch and point-cloud branch. Before the voxel branch, it embeds receptor atoms, encodes their centre positions and softly scatters the encoded features onto the voxel grid. The projected features are concatenated with the 56 density channels as input to a 3D U-Net. Before the point-cloud branch, Point Transformer V3 attention modules and progressive cropping process the initial atom features to provide the point-cloud input.
+The receptor embedding head supplies processed atom representations to both the voxel branch and point-cloud branch. Before the voxel branch, it embeds receptor atoms, encodes their centre positions[@park2022fastpointtransformer] and softly scatters the encoded features onto the voxel grid. The projected features are concatenated with the 56 density channels as input to a 3D U-Net[@cicek20163dunet]. Before the point-cloud branch, Point Transformer V3[@wu2024ptv3] attention modules and progressive cropping process the initial atom features to provide the point-cloud input.
 
 The voxel branch uses a 3D U-Net with an encoder–decoder architecture. Self-attention at low-resolution layers models long-range spatial relationships, while skip connections restore high-resolution features. The main output head predicts ligand-region probabilities from the voxel features. Auxiliary heads predict receptor-binding regions, protein backbone atom classes, nucleic acid backbone atom classes and inverse distance to the nearest ligand. The network samples pseudo atoms $P$ from regions with high predicted ligand-region probabilities. Convolutional layers extract surrounding density information to initialise their features. These pseudo atoms enter the point-cloud branch together with receptor atoms $A$ encoded by the receptor embedding head.
 
-The point-cloud branch uses the U-Net-style encoder–decoder architecture of Point Transformer V3. Space-filling curves jointly serialise receptor atoms $A$ and pseudo atoms $P$, while point-cloud convolutions provide conditional positional encoding. At multiple resolutions, the network performs learnable weighted sampling over the $3^3$ neighbourhoods of $A$ and $P$ in voxel feature maps at the corresponding scale. Feature modulation injects the voxel branch's density information into atom representations, allowing the point-cloud branch to access intermediate voxel features at multiple levels. The receptor-atom representations are supervised by predicting whether each receptor atom belongs to a receptor binding region, whereas the pseudo atom representations are supervised by predicting whether each pseudo atom lies within a ligand region.
+The point-cloud branch uses the U-Net-style encoder–decoder architecture of Point Transformer V3[@wu2024ptv3]. Space-filling curves jointly serialise receptor atoms $A$ and pseudo atoms $P$, while point-cloud convolutions provide conditional positional encoding. At multiple resolutions, the network performs learnable weighted sampling over the $3^3$ neighbourhoods of $A$ and $P$ in voxel feature maps at the corresponding scale. Feature modulation injects the voxel branch's density information into atom representations, allowing the point-cloud branch to access intermediate voxel features at multiple levels. The receptor-atom representations are supervised by predicting whether each receptor atom belongs to a receptor binding region, whereas the pseudo atom representations are supervised by predicting whether each pseudo atom lies within a ligand region.
 
-Following AlphaFold3, the Find network also incorporates a recycling mechanism. Voxel and point-cloud features from each iteration are fed back as additional inputs to the corresponding branches in the next iteration. Training randomly used one to three recycling iterations, whereas inference used a fixed three iterations.
+Following AlphaFold3[@abramson2024alphafold3], the Find network also incorporates a recycling mechanism. Voxel and point-cloud features from each iteration are fed back as additional inputs to the corresponding branches in the next iteration. Training randomly used one to three recycling iterations, whereas inference used a fixed three iterations.
 
 ### Losses and supervision
 
@@ -474,11 +482,11 @@ The protein backbone head predicts probabilities over five channels: background,
 
 The point-cloud branch performs binary classification of receptor atoms and sampled pseudo atoms. A receptor atom is positive if and only if a ligand atom lies within 4 Å. A pseudo atom is positive if and only if it lies within a ligand region. The loss $\mathcal L_{\mathrm{receptor\text{-}prob}}$ supervises receptor atoms, whereas $\mathcal L_{\mathrm{pseudo\text{-}prob}}$ supervises pseudo atoms.
 
-The ligand-distance loss uses mean squared error (MSE) for the distance prediction. All other losses combine focal loss ($\gamma=2$) and Dice loss with weights of 0.7 and 0.3, respectively.
+The ligand-distance loss uses mean squared error (MSE) for the distance prediction. All other losses combine focal loss ($\gamma=2$)[@lin2017focal] and Dice loss[@milletari2016vnet] with weights of 0.7 and 0.3, respectively.
 
 ### Inference and post-processing
 
-As in training, Find uses $80^{3}$ voxel blocks as its basic input during inference. Sliding-window inference with a stride of 30 and a Gaussian kernel with $\sigma=0.5$ produces the full ligand-region probability map $\hat{Y}$. We threshold this map at a fixed probability $t_{\mathrm{sem}}$ to obtain candidate blobs, which are then filtered by Gaussian scoring. We selected $t_{\mathrm{sem}}$ to maximise the semantic F1 score on the calibration set. Gaussian-scoring parameters were also searched on the calibration set, then fixed together with the probability threshold for testing.
+As in training, Find uses $80^{3}$ voxel blocks as its basic input during inference. Sliding-window inference with a stride of 30 and a Gaussian kernel with $\sigma=0.5$ produces the full ligand-region probability map $\hat{Y}$[@isensee2021nnunet]. We threshold this map at a fixed probability $t_{\mathrm{sem}}$ to obtain candidate blobs, which are then filtered by Gaussian scoring. We selected $t_{\mathrm{sem}}$ to maximise the semantic F1 score on the calibration set. Gaussian-scoring parameters were also searched on the calibration set, then fixed together with the probability threshold for testing.
 
 During inference, we apply 26-connected-component analysis to voxels satisfying $\hat{Y}\ge t_{\mathrm{sem}}$, yielding candidate ligand regions (blobs) $\{B_j\}_{j=1}^{J}$. We then compute a Gaussian score for each of these candidate regions as follows.
 
@@ -508,11 +516,11 @@ After completing Find training and calibration, we froze its weights and perform
 
 ### Ligand-identity representation and encoding
 
-Let $\{ S_k \}_{k=1}^{K}$ denote the chemical identities in a PDB entry, represented by SMILES. For each identity, the ligand language model SMI-TED produces a 768-dimensional feature vector. A linear layer embeds this vector into the language representation $S_{k}^{language} \in R^{256}$.
+Let $\{ S_k \}_{k=1}^{K}$ denote the chemical identities in a PDB entry, represented by SMILES. For each identity, the ligand language model SMI-TED[@soares2025smited] produces a 768-dimensional feature vector. A linear layer embeds this vector into the language representation $S_{k}^{language} \in R^{256}$.
 
 In parallel, we use RDKit to generate ideal three-dimensional ligand conformations $\{ S_{k}^{graph} \}_{k=1}^{K}$, which are encoded as three-dimensional molecular graphs. Node features comprise atomic number, formal charge and ring information, whereas edge features comprise bond type and ring information.
 
-For each SMILES $S_{i} \in \{ S_k \}_{k=1}^{K}$, its language representation serves as the query for two attention operations ({{figref:fig-method-v8|b}}). Graph attention operates on its own molecular graph, whereas context attention operates on the language representations of other SMILES in the same PDB entry:
+For each SMILES $S_{i} \in \{ S_k \}_{k=1}^{K}$, its language representation serves as the query for two attention operations[@vaswani2017attention] ({{figref:fig-method-v8|b}}). Graph attention operates on its own molecular graph, whereas context attention operates on the language representations of other SMILES in the same PDB entry:
 
 $$
 \hat{S_{i}} = Attention(q=S_{i}^{language}, kv=S_{i}^{graph}), \qquad \tilde{S_{i}} = Attention(q=S_{i}^{language}, kv=\{S_{k}^{language}\}_{k \ne i})
@@ -526,7 +534,7 @@ Let $\{B_j\}_{j=1}^{J}$ denote the candidate regions predicted by Find within th
 
 Match also incorporates auxiliary features from the surrounding pocket, defined as receptor atoms within the candidate region's 10 Å envelope. Further auxiliary inputs include hidden features within the blob from the highest-resolution of the LigandSeek-Find 3D-UNet decoder, together with additionally sampled pseudo atoms and their features.
 
-Pooling and attention encode these auxiliary features to further modulate the base density summary $h_j^{\mathrm{vox}}$. For each auxiliary feature type, mean and maximum pooling produce a pooled summary vector. In parallel, cross-attention uses $h_j^{\mathrm{vox}}$ as the query and the corresponding auxiliary features as keys and values to produce an attention summary vector. The two summary vectors are concatenated and passed through a MLP. A FiLM module then uses this output to modulate the base summary $h_j^{\mathrm{vox}}$. The modulated representation is used for both foreground classification and ligand-identity matching.
+Pooling and attention encode these auxiliary features to further modulate the base density summary $h_j^{\mathrm{vox}}$. For each auxiliary feature type, mean and maximum pooling produce a pooled summary vector. In parallel, cross-attention uses $h_j^{\mathrm{vox}}$ as the query and the corresponding auxiliary features as keys and values to produce an attention summary vector. The two summary vectors are concatenated and passed through a MLP. A FiLM[@perez2018film] module then uses this output to modulate the base summary $h_j^{\mathrm{vox}}$. The modulated representation is used for both foreground classification and ligand-identity matching.
 
 ### Scoring and selection
 
@@ -572,15 +580,15 @@ We set the foreground and identity loss weights to $\lambda_{\mathrm{fg}}=0.3$ a
 
 ### Overview
 
-Through spatial localisation by Find and identity assignment by Match, downstream docking tools receive both the target binding site and the ligand identity (SMILES). This allows Build to function as a modular, plug-and-play interface that can theoretically accommodate diverse downstream docking tools (such as Vina, DiffDock, or Emap2lig-Build) tailored to specific ligand classes.
+Through spatial localisation by Find and identity assignment by Match, downstream docking tools receive both the target binding site and the ligand identity (SMILES). This allows Build to function as a modular, plug-and-play interface that can theoretically accommodate diverse downstream docking tools (such as Vina[@trott2010vina], DiffDock, or Emap2lig-Build) tailored to specific ligand classes.
 
-However, existing deep learning docking tools typically consider either the receptor environment alone or the experimental density alone, leaving a critical gap in joint modelling. To address this limitation and provide an effective out-of-the-box solution for organic small molecules, we developed PocketXMol-tuned as our default Build engine. Specifically, we extended PocketXMol, a unified generative model for small molecules, to incorporate local cryo-EM density as an explicit conditioning signal, initialising it with official weights and fine-tuning it on single-residue organic small molecules.
+However, existing deep learning docking tools typically consider either the receptor environment alone or the experimental density alone, leaving a critical gap in joint modelling. To address this limitation and provide an effective out-of-the-box solution for organic small molecules, we developed PocketXMol-tuned as our default Build engine. Specifically, we extended PocketXMol[@pocketxmol], a unified generative model for small molecules, to incorporate local cryo-EM density as an explicit conditioning signal, initialising it with official weights and fine-tuning it on single-residue organic small molecules.
 
 ### PocketXMol fine-tuning experiments
 
 PocketXMol fine-tuning used the same training, validation and test partitions described above. From each PDB entry in these partitions, we included all single-residue small molecules without missing atoms. The training, validation and test sets contained 65,290, 781 and 446 ligand instances, respectively. No probability or score threshold required calibration at this stage, so a calibration set was unnecessary.
 
-We introduced modifications to the PocketXMol network to incorporate cryo-EM density as an additional conditioning input. As described above, 56 density channels and 50 receptor-feature channels were constructed and concatenated into a 106-channel voxel representation. Before each atomic-coordinate update in the PocketXMol network, a 3D convolutional module with global average pooling (GAP) extracts density and receptor signals surrounding each atom. These extracted signals are then injected into the existing atom representations via Feature-wise Linear Modulation (FiLM).
+We introduced modifications to the PocketXMol network to incorporate cryo-EM density as an additional conditioning input. As described above, 56 density channels and 50 receptor-feature channels were constructed and concatenated into a 106-channel voxel representation. Before each atomic-coordinate update in the PocketXMol network, a 3D convolutional module with global average pooling (GAP) extracts density and receptor signals surrounding each atom. These extracted signals are then injected into the existing atom representations via Feature-wise Linear Modulation (FiLM)[@perez2018film].
 
 Because the original PocketXMol does not support nucleic acid atoms, we added a linear layer to encode them into the receptor representation. All other architectural components remain unchanged, including the backbone network, the original feature representations, and the diffusion noise-addition and denoising schedules. During fine-tuning, the newly introduced modules were randomly initialized, while all remaining parameters were initialized from the official pretrained PocketXMol checkpoint.
 
@@ -600,3 +608,5 @@ If a candidate corresponds to a non-small-molecule ligand but Match assigns a sm
 If a candidate corresponds to a small molecule with at least 30% bidirectional coverage, incorrect identity matching consumes one attempt. A correctly matched small molecule that fails the single-residue, no-missing-atom criteria is skipped without consuming an attempt. Otherwise, PocketXMol-tuned performs docking, and success is determined from the top-1 or best-of-50 pose and the corresponding RMSD threshold.
 
 According to the aforementioned rules, when a ligand outside the single-residue, complete organic small-molecule subset is correctly detected and matched, we still skip docking without consuming an attempt. This ensures that all evaluated docking tasks use the same downstream tool, PocketXMol-tuned. However, a region corresponding to a true non-small-molecule ligand consumes one attempt if it is misidentified as a small molecule. In this case, it is actually an unmatched distractor and counts as a failed attempt.
+
+These end-to-end evaluation rules are stricter than the requirements of practical use. A Find candidate that fails to meet the 30% bidirectional coverage requirement is classified as a false positive. This applies even if it still provides sufficient shape and position information for Match and Build to complete the subsequent steps correctly. Match can also classify a false-positive Find candidate as background, rejecting it at the second stage, but the candidate still counts as one failed attempt.

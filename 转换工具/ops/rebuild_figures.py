@@ -131,8 +131,8 @@ def commands_for(figure: str, build: Path) -> list[list]:
     if figure == "stage3-cases-main":
         prefix="stage3/visualization/stage3-cases-main/"
         return [p(prefix+"measure_cases.py"),p(prefix+"make_geometry.py"),p(prefix+"render_figure.py"),n(prefix+"build_deck.mjs")]
-    if figure == "stage1-fourcase-main":
-        return native_commands(figure,build)+[n("stage1/visualization/stage1-fourcase-main/build_deck.mjs")]
+    if figure in ("stage1-fourcase-main", "stage1-threecase-main"):
+        return native_commands("stage1-fourcase-main",build)+[n("stage1/visualization/stage1-fourcase-main/build_deck.mjs")]
     if figure.startswith("e2e-flow-"):
         frozen=CODE/"e2e/output/e2e-flow"
         return native_commands(figure,build)+[p("e2e/visualization/e2e-flow-shared/draw_identities.py","--source-root",frozen/"source","--output-root",build/"display"),n(f"e2e/visualization/{figure}/build_deck.mjs")]

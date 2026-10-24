@@ -120,11 +120,11 @@ Across the 179 test PDB entries, each complex contained an average of 14.0 groun
 
 ### Stage 1: Representative cases
 
-Four representative cases showed that LigandSeek-Find covered ligand regions more completely than the density-only method Emap2lig-Find and detected regions that it missed ({{figref:stage1-fourcase-main|a–d}}). In the viral replication-associated protein complex 9PQM, both methods detected most of the region occupied by the ATP analogue ATPγS. LigandSeek-Find and Emap2lig-Find achieved Dice scores of 0.816 and 0.766 for this ligand instance, respectively ({{figref:stage1-fourcase-main|a}}). For cholesterol in 9UWI, Emap2lig-Find predictions were concentrated within the ground-truth ligand region, achieving a precision of 0.990 but covering only 0.300 of that region. LigandSeek-Find increased coverage to 0.812, recovering more of the missed ligand region ({{figref:stage1-fourcase-main|b}}). At the NADPH binding site in 9WUP, Emap2lig-Find produced no prediction overlapping the ground-truth ligand region. LigandSeek-Find covered 0.922 of that region in the same comparison ({{figref:stage1-fourcase-main|c}}). Similarly, at the ADP site in 9RMI, Emap2lig-Find covered only 0.103 of the ground-truth region, whereas LigandSeek-Find covered 0.883 ({{figref:stage1-fourcase-main|d}}). These local comparisons demonstrated advantages in both detecting ligand regions and delineating their spatial boundaries more accurately.
+Three representative cases showed that LigandSeek-Find covered ligand regions more completely than the density-only method Emap2lig-Find and detected regions that it missed ({{figref:stage1-threecase-main|a–c}}). For cholesterol in 9UWI, Emap2lig-Find predictions were concentrated within the ground-truth ligand region, achieving a precision of 0.990 but covering only 0.300 of that region. LigandSeek-Find increased coverage to 0.812, recovering more of the missed ligand region ({{figref:stage1-threecase-main|a}}). At the NADPH binding site in 9WUP, Emap2lig-Find produced no prediction overlapping the ground-truth ligand region. LigandSeek-Find covered 0.922 of that region in the same comparison ({{figref:stage1-threecase-main|b}}). Similarly, at the ADP site in 9RMI, Emap2lig-Find covered only 0.103 of the ground-truth region, whereas LigandSeek-Find covered 0.883 ({{figref:stage1-threecase-main|c}}). These local comparisons demonstrated advantages in both detecting ligand regions and delineating their spatial boundaries more accurately.
 
-LigandSeek-Find retained its main detection and coverage advantages in these cases when deposited receptor structures were replaced with receptors automatically reconstructed by CryoAtom2. With reconstructed receptors, the instance Dice scores for 9PQM, 9UWI and 9WUP were 0.816, 0.848 and 0.715, respectively. These scores were close to those obtained with deposited receptors and exceeded those of Emap2lig-Find ({{figref:stage1-fourcase-main|a–c}}). The 9RMI case illustrated a loss of precision after receptor replacement. For this ligand instance, the predicted region extended beyond the ligand, reducing precision from 0.607 to 0.396 and the Dice score from 0.719 to 0.532 ({{figref:stage1-fourcase-main|d}}). Nevertheless, the prediction still covered 0.810 of the ground-truth ligand region, and its Dice score exceeded the 0.131 achieved by Emap2lig-Find. Thus, across these four cases, LigandSeek-Find usually retained good detection performance with CryoAtom2-reconstructed receptors when deposited receptor structures were unavailable.
+LigandSeek-Find retained its main detection and coverage advantages in these cases when deposited receptor structures were replaced with receptors automatically reconstructed by CryoAtom2. With reconstructed receptors, the instance Dice scores for 9UWI and 9WUP were 0.848 and 0.715, respectively. These scores were close to those obtained with deposited receptors and exceeded those of Emap2lig-Find ({{figref:stage1-threecase-main|a–b}}). The 9RMI case illustrated a loss of precision after receptor replacement. For this ligand instance, the predicted region extended beyond the ligand, reducing precision from 0.607 to 0.396 and the Dice score from 0.719 to 0.532 ({{figref:stage1-threecase-main|c}}). Nevertheless, the prediction still covered 0.810 of the ground-truth ligand region, and its Dice score exceeded the 0.131 achieved by Emap2lig-Find. Thus, across these three cases, LigandSeek-Find usually retained good detection performance with CryoAtom2-reconstructed receptors when deposited receptor structures were unavailable.
 
-{{pptfig:"画图/stage1可视化.pptx"|stage1-fourcase-main}}
+{{pptfig:"画图/stage1可视化.pptx"|stage1-threecase-main}}
 
 ## Stage 2
 
@@ -305,15 +305,11 @@ Full completion curves and per-PDB distributions are shown in Supplementary Fig.
 
 ### Representative cases
 
-We selected three representative cases to illustrate the end-to-end pipeline for all-atom small-molecule pose reconstruction, using CryoAtom2-reconstructed rather than deposited receptor structures as input ({{figref:e2e-flow-9llg,e2e-flow-9bjj,e2e-flow-30ga}}).
+We selected two representative cases to illustrate the end-to-end pipeline for all-atom small-molecule pose reconstruction, using CryoAtom2-reconstructed rather than deposited receptor structures as input ({{figref:e2e-flow-9llg,e2e-flow-30ga}}).
 
 In 9LLG ({{figref:e2e-flow-9llg}}), Find's Rank 1 candidate hit the ground-truth ligand region of A1EKL (R:602). Match correctly identified A1EKL among the three candidate identities PLM, A1EKL and CLR. PocketXMol-tuned then generated a top-1 pose with a heavy-atom RMSD of 0.88 Å.
 
 {{pptfig:"画图/E2E案例可视化-端到端流程版_v3.pptx"|e2e-flow-9llg}}
-
-In 9BJJ ({{figref:e2e-flow-9bjj}}), Find's Rank 1 candidate hit the ground-truth ligand region of ATP (B:901). Match correctly identified ATP among the three candidate identities ATP, A1AP0 and Mg²⁺. PocketXMol-tuned then generated a top-1 pose with subångström accuracy, achieving a heavy-atom RMSD of 0.80 Å.
-
-{{pptfig:"画图/E2E案例可视化-端到端流程版_v3.pptx"|e2e-flow-9bjj}}
 
 In 30GA ({{figref:e2e-flow-30ga}}), Find's Rank 1 candidate was a background false positive and consumed one search attempt. The Rank 2 candidate then hit ATP (N:401), and Match correctly identified ATP. PocketXMol-tuned subsequently generated a pose with a heavy-atom RMSD of 1.04 Å.
 

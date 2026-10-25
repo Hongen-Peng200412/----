@@ -9,7 +9,7 @@ VIEW_NAMES = {
     "find_all": "Find · 全配体",
     "find_small": "Find · 小分子",
     "find_match": "Find+Match · 全配体",
-    "find_build": "Find+Build · 给定正确身份",
+    "find_build": "Find+Build · 合格小分子（给定正确配体）",
     "pipeline": "Find+Match+Build · 合格小分子",
 }
 FILTER_NAMES = {"all": "无过滤", "foreground": "排除假阳性", "small": "仅小分子", "eligible": "仅合格小分子"}

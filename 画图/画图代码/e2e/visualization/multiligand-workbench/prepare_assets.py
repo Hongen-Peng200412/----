@@ -81,7 +81,9 @@ def write_cif(path, coords, elements, names, residues, chains, resids):
         "auth_asym_id": list(chains),
         "pdbx_PDB_model_num": ["1"] * n,
     }
-    fields.update({f"Cartn_{axis}": [f"{x:.5f}" for x in coords[:, i]] for i, axis in enumerate("xyz")})
+    fields.update(
+        {f"Cartn_{axis}": [f"{x:.5f}" for x in coords[:, i]] for i, axis in enumerate("xyz")}
+    )
     out = MMCIFIO()
     out.set_dict({"data_": path.stem, **{"_atom_site." + k: v for k, v in fields.items()}})
     out.save(str(path))
@@ -154,6 +156,7 @@ for case in catalog["cases"]:
         "set bgColor white",
         "camera ortho",
         "lighting soft",
+        "lighting depthCue false",
         "graphics silhouettes true width 1",
         "windowsize 1000 760",
     ]
@@ -205,15 +208,25 @@ for case in catalog["cases"]:
     coords = np.load(source / "ligand_coords.npz")
     for o in case["occurrences"]:
         oid = o["candidate_id"]
+        # 短名称使用原沉积位置, 不能从导出的 SDF 残基编号反推 PDB 位置.
+        component = o["components"][0]
+        site = f'{component["auth_asym_id"]}{component["auth_seq_id"]}{component["icode"]}'
+        suffix = f'{o["display_name"]}_{site}'
+        if len(o["components"]) > 1:
+            suffix = f'{component["ccd_id"]}_{site}_plus{len(o["components"])-1}'
+        suffix = re.sub(r"[^A-Za-z0-9_.+-]+", "_", suffix)
         f = assets / "references" / f"occ_{oid}.sdf"
         template = np.load(
-            args.data_root / "templates" / (re.sub(r"[^A-Za-z0-9_.-]+", "_", o["object_key"]) + ".npz"),
+            args.data_root
+            / "templates"
+            / (re.sub(r"[^A-Za-z0-9_.-]+", "_", o["object_key"]) + ".npz"),
             allow_pickle=True,
         )
         reference_sdf(f, o, coords, template)
         models.append(
             {
                 "key": f"ref_{oid}",
+                "display_name": f"ref_{oid}_{suffix}",
                 "id": f"3.{oid+1}",
                 "file": f.relative_to(folder).as_posix(),
                 "kind": "reference",
@@ -231,6 +244,7 @@ for case in catalog["cases"]:
         models.append(
             {
                 "key": f"area_{oid}",
+                "display_name": f"area_{oid}_{suffix}",
                 "id": f"4.{oid+1}",
                 "file": f.relative_to(folder).as_posix(),
                 "kind": "area",
@@ -245,7 +259,9 @@ for case in catalog["cases"]:
                     identities.append((r["target_smiles"], o["display_name"]))
     smiles_names = {
         i["smiles"]: next(
-            o["display_name"] for o in case["occurrences"] if o["candidate_id"] in i["occurrence_ids"]
+            o["display_name"]
+            for o in case["occurrences"]
+            if o["candidate_id"] in i["occurrence_ids"]
         )
         for i in case["identities"]
     }
@@ -304,7 +320,9 @@ for case in catalog["cases"]:
                 ranking = json.loads((rf / "ranking.json").read_text(encoding="utf-8"))
                 metrics = json.loads((rf / "evaluation_metrics.json").read_text(encoding="utf-8"))
                 top = next(m for m in metrics if m["sample_index"] == ranking["top1_sample_index"])
-                good = [m for m in metrics if m["rmsd_A"] is not None and m["sdf_index"] is not None]
+                good = [
+                    m for m in metrics if m["rmsd_A"] is not None and m["sdf_index"] is not None
+                ]
                 best = min(good, key=lambda m: (m["rmsd_A"], m["sample_index"])) if good else None
                 blocks = (rf / "poses.sdf").read_text(encoding="utf-8").split("$$$$")
                 for pose, metric, child in [("top1", top, 1), ("best", best, 2)]:
@@ -338,14 +356,16 @@ for case in catalog["cases"]:
                     assert abs(best["rmsd_A"] - run["pose_min_rmsd_A"]["50"]) < 1e-8
     for m in models:
         commands.append(f'open "{(folder/m["file"]).as_posix()}" id #{m["id"]}')
-        commands.append(f'rename #{m["id"]} "{m["key"]}"')
+        commands.append(f'rename #{m["id"]} "{m.get("display_name", m["key"])}"')
         if m["kind"] in ["density", "area", "blob"]:
             commands.append(
                 f'volume #{m["id"]} step {2 if pdb=="11jb" and m["kind"]=="density" else 1} level {m.get("level",0.5):.10g} style {"mesh" if m["kind"] in ["area","density"] else "surface"}'
             )
         elif m["kind"] in ["identity", "correctness"]:
             color = (
-                "#3d3d3d" if m["kind"] == "identity" else ("#009e73" if m["text"] == "correct" else "#b56b47")
+                "#3d3d3d"
+                if m["kind"] == "identity"
+                else ("#009e73" if m["text"] == "correct" else "#b56b47")
             )
             commands.extend(
                 [
@@ -386,27 +406,47 @@ for case in catalog["cases"]:
             "size #3 stickRadius 0.22",
             "color #3 #e69f00",
             "color #2 #a5a9ad",
-            "color #4 #8d9299",
+            "color #4 #e69f00",
+            "transparency #4 0 target s",
             "color #10,11 #009e73",
             "style #20,21 stick",
             "size #20,21 stickRadius 0.25",
             "color #20,21 #009e73",
         ]
     )
-    commands.extend(
-        [f"name recGT #1.1", f"name recCA2 #1.2", f"name exp #2.1", f"name simGT #2.2", f"name simCA2 #2.3"]
-    )
-    commands.extend([f'name ref{o["candidate_id"]} #3.{o["candidate_id"]+1}' for o in case["occurrences"]])
+    # Models 面板勾选 area 时只打开该体积父模型. 预先开启其 surface 子模型,
+    # 再用 #! 精确隐藏体积本身, 才能让一次勾选直接出现网格.
     commands.extend(
         [
-            "view #1.2 orient",
+            "show #4 models",
+            "volume #4 style mesh level 0.5 meshLighting false",
+            "hide " + "|".join("#!" + m["id"] for m in models if m["kind"] == "area") + " models",
+        ]
+    )
+    commands.extend(
+        [
+            f"name recGT #1.1",
+            f"name recCA2 #1.2",
+            f"name exp #2.1",
+            f"name simGT #2.2",
+            f"name simCA2 #2.3",
+        ]
+    )
+    commands.extend(
+        [f'name ref{o["candidate_id"]} #3.{o["candidate_id"]+1}' for o in case["occurrences"]]
+    )
+    commands.extend(
+        [
+            "view #1.2 orient clip false",
             "zoom 0.9",
             "view name overview",
             f'ligwork open "{(folder/"scene.json").as_posix()}"',
         ]
     )
     scene = {**case, "models": models, "contour": contour, "folder": folder.as_posix(), "schema": 1}
-    (folder / "scene.json").write_text(json.dumps(scene, ensure_ascii=False, indent=2), encoding="utf-8")
+    (folder / "scene.json").write_text(
+        json.dumps(scene, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     (folder / "load.cxc").write_text("\n".join(commands) + "\n", encoding="utf-8")
     with (folder / "poses.csv").open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(pose_rows[0]))

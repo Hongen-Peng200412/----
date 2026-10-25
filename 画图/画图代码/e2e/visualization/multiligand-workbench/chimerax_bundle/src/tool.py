@@ -49,11 +49,18 @@ class LigandWorkbench(ToolInstance):
             self.controls = {}
             options = [
                 ("view", "评估模式", list(VIEW_NAMES.items())),
-                ("condition", "预测采用的受体", [("CA2", "CA2 · CryoAtom2 受体"), ("GT", "GT · 沉积受体")]),
+                (
+                    "condition",
+                    "预测采用的受体",
+                    [("CA2", "CA2 · CryoAtom2 受体"), ("GT", "GT · 沉积受体")],
+                ),
                 (
                     "budget",
                     "尝试预算",
-                    [(x, x + "%" if x != "all" else "全部候选") for x in ["50", "100", "200", "300", "all"]],
+                    [
+                        (x, x + "%" if x != "all" else "全部候选")
+                        for x in ["50", "100", "200", "300", "all"]
+                    ],
                 ),
                 ("filter", "画面过滤", list(FILTER_NAMES.items())),
                 (
@@ -73,7 +80,10 @@ class LigandWorkbench(ToolInstance):
                 combo.currentIndexChanged.connect(lambda _, k=key: self._ui_change(k))
                 self.controls[key] = combo
                 form.addRow(title, combo)
-            for key, text in [("identity", "显示 Match 预测身份"), ("correctness", "显示 Match 正误标记")]:
+            for key, text in [
+                ("identity", "显示 Match 预测身份"),
+                ("correctness", "显示 Match 正误标记"),
+            ]:
                 check = QCheckBox(text)
                 check.toggled.connect(lambda _, k=key: self._ui_change(k))
                 self.controls[key] = check
@@ -86,7 +96,10 @@ class LigandWorkbench(ToolInstance):
             layout.addWidget(button)
             self.focus_combo = QComboBox()
             layout.addWidget(self.focus_combo)
-            for text, action in [("聚焦所选配体", "focus"), ("只显示它周围 5 Å 口袋和 1.7 Å 密度", "pocket")]:
+            for text, action in [
+                ("聚焦所选配体", "focus"),
+                ("只显示它周围 5 Å 口袋和 1.7 Å 密度", "pocket"),
+            ]:
                 button = QPushButton(text)
                 button.clicked.connect(
                     lambda _, a=action: self._command(a + " " + str(self.focus_combo.currentData()))
@@ -124,7 +137,9 @@ class LigandWorkbench(ToolInstance):
             else widget.currentData()
         )
         self._command(
-            ("labels " + key + " " + value) if key in ["identity", "correctness"] else key + " " + str(value)
+            ("labels " + key + " " + value)
+            if key in ["identity", "correctness"]
+            else key + " " + str(value)
         )
 
     def attach(self, scene, model_refs, config, overrides, apply):
@@ -133,13 +148,16 @@ class LigandWorkbench(ToolInstance):
         self.models = model_refs
         self.config = dict(config)
         self.overrides = dict(overrides)
-        self.handlers.append(self.session.triggers.add_handler(MODEL_DISPLAY_CHANGED, self._observe))
+        self.handlers.append(
+            self.session.triggers.add_handler(MODEL_DISPLAY_CHANGED, self._observe)
+        )
         self.handlers.append(self.session.triggers.add_handler(REMOVE_MODELS, self._observe))
         if self.session.ui.is_gui:
             self.focus_combo.clear()
             for o in scene["occurrences"]:
                 self.focus_combo.addItem(
-                    f"{o['display_name']} · {o['site']} · 实例 {o['candidate_id']}", o["candidate_id"]
+                    f"{o['display_name']} · {o['site']} · 实例 {o['candidate_id']}",
+                    o["candidate_id"],
                 )
             self.title_label.setText(scene["pdb_id"].upper() + " · 多配体画图")
         self.last = self.actual()
@@ -167,7 +185,9 @@ class LigandWorkbench(ToolInstance):
         expected = selected_keys(self.scene, self.config)
         wanted = {k: k in expected for k in self.models}
         candidates = {
-            (d, r["source_blob_index"]): r for d, v in self.scene["domains"].items() for r in v["candidates"]
+            (d, r["source_blob_index"]): r
+            for d, v in self.scene["domains"].items()
+            for r in v["candidates"]
         }
         info = {m["key"]: m for m in self.scene["models"] if m["kind"] in MANAGED}
         for key, value in self.overrides.items():
@@ -188,9 +208,13 @@ class LigandWorkbench(ToolInstance):
             if roots:
                 # 先关整组, 再开需要的叶对象; show 会自动开启祖先组.
                 # 避免短暂打开全部构象和标签, 也缩短 Log 中的对象清单.
-                run(self.session, "hide " + ("|".join("#" + x for x in roots)) + " models", log=True)
+                run(
+                    self.session, "hide " + ("|".join("#" + x for x in roots)) + " models", log=True
+                )
             ids = [
-                "#" + self.models[k].id_string for k in affected if not self.models[k].deleted and wanted[k]
+                "#" + self.models[k].id_string
+                for k in affected
+                if not self.models[k].deleted and wanted[k]
             ]
             if ids:
                 run(self.session, "show " + "|".join(ids) + " models", log=True)
@@ -337,7 +361,7 @@ def workbench_command(session, action, argument="", value=""):
         target = f"#3.{oid+1}"
         domain = tool.config["condition"]
         receptor = "#1.2" if domain == "CA2" else "#1.1"
-        command = f"show {target} models; show {target} atoms; view {target}; cofr {target}; zoom 0.75"
+        command = f"show {target} models; show {target} atoms; view {target} clip false; cofr {target}; zoom 0.75"
         if action == "pocket":
             command = (
                 f"hide #1 cartoons; hide #1 atoms; show {receptor} models; show {receptor}&({target}:<5) atoms; style {receptor} stick; show #2.1 models; volume #2.1 style mesh step 1; volume zone #2.1 nearAtoms {target} range 1.7 newMap false minimalBounds true; "
@@ -345,7 +369,8 @@ def workbench_command(session, action, argument="", value=""):
             )
         run(session, command, log=True)
     elif action == "overview":
-        run(session, "view overview", log=True)
+        # 旧会话的命名视角可能记录了裁剪平面, 返回后明确解除, 避免再次切掉模型.
+        run(session, "view overview; clip off", log=True)
     elif action == "home":
         # 初始总览是一条主动恢复命令, 不参与状态栏自动观察; 不重新载入材料或读取会话文件.
         tool.config = dict(DEFAULT)
@@ -355,8 +380,37 @@ def workbench_command(session, action, argument="", value=""):
             session,
             "hide #1 models; hide #1 atoms; hide #1 cartoons; hide #1 surfaces; "
             "show #1.2 models; cartoon #1.2; show #3 models; show #3 atoms; style #3 stick; "
-            "hide #2|#4 models; view overview",
+            "hide #2 models; show #4 models; hide "
+            + "|".join("#!" + m["id"] for m in tool.scene["models"] if m["kind"] == "area")
+            + " models; hide #!4 models; view overview; clip off",
             log=True,
+        )
+    elif action == "upgrade":
+        # 旧个人会话显式升级: 只从同例 scene.json 补充显示名称, 不替换预算记录或实际编辑状态.
+        metadata = json.loads(
+            (Path(tool.scene["folder"]) / "scene.json").read_text(encoding="utf-8")
+        )
+        names = {m["key"]: m["display_name"] for m in metadata["models"] if "display_name" in m}
+        by_id = {m.id_string: m for m in session.models.list()}
+        for m in tool.scene["models"]:
+            if m["key"] in names:
+                m["display_name"] = names[m["key"]]
+                run(session, f'rename #{m["id"]} "{m["display_name"]}"', log=True)
+        # 只准备原本关闭的 area. 保留父组与体积的开关, 以及已可见区域的手动样式与颜色.
+        areas = [m for m in tool.scene["models"] if m["kind"] == "area"]
+        hidden = [m for m in areas if not by_id[m["id"]].display]
+        off = [
+            m.id_string
+            for m in session.models.list()
+            if m.id[0] == 4 and not m.display and len(m.id) <= 2
+        ]
+        if hidden:
+            run(session, "show " + "|".join("#" + m["id"] for m in hidden) + " models", log=True)
+            if off:
+                run(session, "hide " + "|".join("#!" + i for i in off) + " models", log=True)
+        run(session, "lighting depthCue false; clip off", log=True)
+        session.logger.info(
+            "已更新参考名称并解除深度淡化和裁剪; 原配色、视角与显隐保留. 请另存个人会话."
         )
     elif action == "unzone":
         run(session, "volume unzone #2.1; volume #2.1 region all; show #2.1 models", log=True)
@@ -370,17 +424,23 @@ def workbench_command(session, action, argument="", value=""):
         run(
             session,
             f'save "{f.as_posix()}"'
-            + (" includeMaps false" if action == "save" else " width 2400 height 1800 supersample 3"),
+            + (
+                " includeMaps false"
+                if action == "save"
+                else " width 2400 height 1800 supersample 3"
+            ),
             log=True,
         )
         session.logger.info("已另存：" + str(f))
     elif action == "status":
         report = tool.report()
         if argument:
-            Path(argument).write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+            Path(argument).write_text(
+                json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
+            )
         session.logger.info(json.dumps(report, ensure_ascii=False))
         return report
     else:
         raise UserError(
-            "操作: view, condition, budget, filter, pose, labels, reset, focus, pocket, home, overview, unzone, save, export, status"
+            "操作: view, condition, budget, filter, pose, labels, reset, focus, pocket, home, overview, upgrade, unzone, save, export, status"
         )

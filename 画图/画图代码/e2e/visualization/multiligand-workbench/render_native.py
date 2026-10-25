@@ -34,7 +34,12 @@ def native(command, opener, port):
     if result.get("error") or errors or bugs:
         raise RuntimeError(
             json.dumps(
-                {"command": command, "error": result.get("error"), "messages": errors, "bugs": bugs},
+                {
+                    "command": command,
+                    "error": result.get("error"),
+                    "messages": errors,
+                    "bugs": bugs,
+                },
                 ensure_ascii=False,
             )
         )
@@ -49,6 +54,9 @@ parser.add_argument("--port", type=int, default=61113)
 parser.add_argument("--width", type=int, default=1800)
 parser.add_argument("--height", type=int, default=1400)
 parser.add_argument("--supersample", type=int, default=2)
+parser.add_argument(
+    "--initial-only", action="store_true", help="只更新九例初始会话, 不覆盖已有示范图和逐视图会话"
+)
 args = parser.parse_args()
 opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
 index = json.loads((args.data_root / "view_index.json").read_text(encoding="utf-8"))
@@ -67,7 +75,7 @@ for pdb in pdbs:
         opener,
         args.port,
     )
-    for row in (r for r in index if r["pdb"] == pdb):
+    for row in (r for r in index if r["pdb"] == pdb and not args.initial_only):
         name = row["view"]
         cxc = folder / "views" / (name + ".cxc")
         image = folder / "exports" / (name + ".png")
@@ -89,7 +97,9 @@ for pdb in pdbs:
         # 局部图只允许登记的完整流水线 top-1 构象, 没有合法构象时只显示参考与密度.
         if "occurrence_id" in row:
             pose_ids = [
-                m["id"] for m in scene["models"] if m["kind"] == "pose" and m["key"] in actual["visible"]
+                m["id"]
+                for m in scene["models"]
+                if m["kind"] == "pose" and m["key"] in actual["visible"]
             ]
             assert pose_ids == ([row["prediction_model"]] if row["prediction_model"] else []), (
                 pdb,
@@ -117,7 +127,14 @@ for pdb in pdbs:
         opener,
         args.port,
     )
-    (args.data_root / "render_receipt.json").write_text(
-        json.dumps(receipt, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-print("NATIVE_RENDER_PASS", len(receipt), "views", flush=True)
+    if args.initial_only:
+        receipt.append(
+            {"pdb": pdb, "session": str(folder / "initial.cxs"), "materials": len(scene["models"])}
+        )
+        print(pdb, "initial session saved", flush=True)
+    (
+        args.data_root / ("initial_receipt.json" if args.initial_only else "render_receipt.json")
+    ).write_text(json.dumps(receipt, ensure_ascii=False, indent=2), encoding="utf-8")
+print(
+    "NATIVE_INITIAL_PASS" if args.initial_only else "NATIVE_RENDER_PASS", len(receipt), flush=True
+)

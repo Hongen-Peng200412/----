@@ -21,11 +21,14 @@ for file in sorted(args.data_root.glob("*/scene.json")):
     views.mkdir(exist_ok=True)
     fields = [
         "model_id",
+        "key",
         "name",
         "kind",
         "condition",
         "blob_id",
         "occurrence_id",
+        "reference_name",
+        "reference_site",
         "pose",
         "sample_index",
         "sdf_index",
@@ -37,14 +40,21 @@ for file in sorted(args.data_root.glob("*/scene.json")):
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
         for m in scene["models"]:
+            occurrence = next(
+                (o for o in scene["occurrences"] if o["candidate_id"] == m.get("occurrence_id")),
+                None,
+            )
             w.writerow(
                 {
                     "model_id": "#" + m["id"],
-                    "name": m["key"],
+                    "key": m["key"],
+                    "name": m.get("display_name", m["key"]),
                     "kind": m["kind"],
                     "condition": m.get("domain", ""),
                     "blob_id": m.get("blob", ""),
                     "occurrence_id": m.get("occurrence_id", ""),
+                    "reference_name": occurrence["display_name"] if occurrence else "",
+                    "reference_site": occurrence["site"] if occurrence else "",
                     "pose": m.get("pose", ""),
                     "sample_index": m.get("sample_index", ""),
                     "sdf_index": m.get("sdf_index", ""),
@@ -85,7 +95,9 @@ for file in sorted(args.data_root.glob("*/scene.json")):
                 poses = [
                     m
                     for m in scene["models"]
-                    if m["kind"] == "pose" and m["domain"] == domain and m["blob"] == r["source_blob_index"]
+                    if m["kind"] == "pose"
+                    and m["domain"] == domain
+                    and m["blob"] == r["source_blob_index"]
                 ]
                 w.writerow(
                     {
@@ -161,7 +173,9 @@ for file in sorted(args.data_root.glob("*/scene.json")):
     ]
     for oid in local:
         o = next(o for o in scene["occurrences"] if o["candidate_id"] == oid)
-        parameter.append(f"| {o['display_name']} {o['site']} | {oid} | #3.{oid+1} | `ligwork pocket {oid}` |")
+        parameter.append(
+            f"| {o['display_name']} {o['site']} | {oid} | #3.{oid+1} | `ligwork pocket {oid}` |"
+        )
     parameter += [
         "",
         "完整对象编号见 `对象索引.csv`；候选与参考的对应见 `候选索引.csv`。空的计费号表示免费跳过；背景候选没有参考实例。",
@@ -200,10 +214,12 @@ for file in sorted(args.data_root.glob("*/scene.json")):
             "color #3 #e69f00",
             "volume unzone #2.1",
             "volume #2.1 region all",
-            "hide #2|#4 models",
+            "hide #2 models",
+            "hide #!4 models",
             "graphics silhouettes false",
             "lighting soft",
-            "view overview",
+            "lighting depthCue false",
+            "ligwork overview",
         ]
         for task in ["find_match", "pipeline"]:
             cmd = [f"ligwork view {task}"] + common + ["ligwork reset"]
@@ -215,7 +231,9 @@ for file in sorted(args.data_root.glob("*/scene.json")):
             if task == "pipeline":
                 for m in scene["models"]:
                     if m["kind"] == "pose" and m["domain"] == domain:
-                        color = "#009e73" if m["rmsd_A"] is not None and m["rmsd_A"] < 2 else "#b56b47"
+                        color = (
+                            "#009e73" if m["rmsd_A"] is not None and m["rmsd_A"] < 2 else "#b56b47"
+                        )
                         cmd.append(f'color #{m["id"]} {color}')
             name = f"{domain}_{task}"
             (views / (name + ".cxc")).write_text("\n".join(cmd) + "\n", encoding="utf-8")
@@ -229,7 +247,7 @@ for file in sorted(args.data_root.glob("*/scene.json")):
             )
         for oid in local:
             cmd = [
-                "view overview",
+                "ligwork overview",
                 f"ligwork condition {domain}",
                 "ligwork view pipeline",
                 "ligwork budget 100",
@@ -272,6 +290,7 @@ for file in sorted(args.data_root.glob("*/scene.json")):
                 "transparency #2.1 0 target s",
                 "graphics silhouettes false",
                 "lighting soft",
+                "lighting depthCue false",
                 "turn y 20",
                 "turn x -15",
                 "zoom 0.8",
@@ -294,4 +313,9 @@ for file in sorted(args.data_root.glob("*/scene.json")):
 (args.data_root / "view_index.json").write_text(
     json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8"
 )
-print("native example views", len(index), "case indexes", len(list(args.data_root.glob("*/scene.json"))))
+print(
+    "native example views",
+    len(index),
+    "case indexes",
+    len(list(args.data_root.glob("*/scene.json"))),
+)

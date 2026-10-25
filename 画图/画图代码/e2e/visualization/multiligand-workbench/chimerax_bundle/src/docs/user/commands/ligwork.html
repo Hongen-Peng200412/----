@@ -17,5 +17,7 @@ ligwork home
 ligwork overview
 ligwork save
 ligwork export</pre>
-<p>模式名：find_all（全配体 Find）、find_small（Stage 1 小分子 Find）、find_match、find_build（给定正确身份）、pipeline（实际 Find–Match–Build）。预算：50、100、200、300、all。过滤：all、foreground、small、eligible。构象：top1、best、both。</p>
+<p>模式名：find_all（全配体 Find）、find_small（全部小分子 Find）、find_match、find_build（合格小分子，给定正确配体身份）、pipeline（合格小分子，实际 Find–Match–Build）。预算：50、100、200、300、all。过滤：all、foreground、small、eligible。构象：top1、best、both。五种模式不控制真实配体的显隐。</p>
 <p>home 是“回到本例初始总览”按钮对应的命令。它恢复 CA2、Find+Match、100%、无过滤，显示真实配体和 CA2 受体，隐藏地图和真实区域。颜色、透明度和密度阈值保留。overview 只恢复全局视角。</p>
+<p>focus 与 pocket 不添加裁剪；home 与 overview 解除裁剪。远处变淡时使用 lighting depthCue false；模型被前后切掉时使用 clip off。真实区域默认橙色网格，勾选 area 即可显示。</p>
+<p>旧个人会话可执行 ligwork upgrade 补充参考名称并解除淡化与裁剪，保留原配色、相机和预测显隐；随后用 ligwork save 另存。预算内显示耗尽前考察过的 blob，包括免费跳过和假阳性；过滤不补入预算外候选。</p>

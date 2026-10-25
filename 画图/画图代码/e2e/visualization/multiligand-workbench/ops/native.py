@@ -34,4 +34,6 @@ print(
         ensure_ascii=False,
     )[:3000]
 )
-assert data.get("error") is None, data.get("error")
+assert not data.get("error"), data.get("error")
+assert not data.get("log messages", {}).get("error"), data.get("log messages", {}).get("error")
+assert not data.get("log messages", {}).get("bug"), data.get("log messages", {}).get("bug")

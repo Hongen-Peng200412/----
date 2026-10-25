@@ -4,6 +4,8 @@
 
 九例原件、MRC/CIF/SDF、初始会话、56组示范视图和材料索引已生成；五种模式的科学计数、GUI保存恢复及旧temp屏蔽的九例完整重建均已通过。第一版为[十页可编辑候选图](../../../../多配体交互候选图_20261023.pptx)，完成证据见[执行记录](执行记录.md)。
 
+当前面板和九例initial为1.0.7，增加参考身份/位置名称，区域默认橙色网格，聚焦不添加裁剪，初始关闭深度淡化。D盘原有 `views/*.cxs`、`exports/*.png` 和作者PPT图像保留10月23日版本；`views/*.cxc` 已更新为当前命令。新一轮56视图只用于独立重建验收；既有个人edit会话不覆盖。
+
 ## 文件实际位置
 
 下面两段列出同一物理目录中的不同用途文件。案例目录实际为 `9bjj`、`11jb`、`9lov`、`9okp`、`30ga`、`9ujf`、`9wup`、`9lw1`、`9llg`。
@@ -107,11 +109,11 @@ D:/AdaLigand_Visualization/
 
 没有对应的 CA2 blob 10 则含 `foreground_target=false, matched_occurrence_id=null, target_smiles=null, target_category=null, is_small=false, is_eligible=false, identity_correct=false, runs=[]`；它仍有一个预测身份 ATP，但不能当作真实ATP实例。`runs=[]` 也可能表示某候选没有既有建模输出，不能将其RMSD写成0。`sample_index/sdf_index` 的0是有效编号；只有null表示缺少编号。`expected` 的一条完整记录如 `expected.find_match["100"]={"pdb_id":"9bjj","success_count":10,"target_count":19,"attempt_budget":19,"completion":0.5263157894736842}`；计数及预算为整数，completion为success_count/target_count的浮点数。
 
-`trace` 只保留source_blob_index、raw_rank、attempt_index、action、target_scope、identity_correct、matched_occurrence_id，供核对原完整流水线计费；原完整记录仍由evaluation_sources定位。`expected[模式][50/100/200/300]` 是原冻结的pdb_id、success_count、target_count、attempt_budget、completion；例如9BJJ GT Find+Match 100%为10/19，完成度10/19。
+`trace` 只保留source_blob_index、raw_rank、attempt_index、action、target_scope、identity_correct、matched_occurrence_id，供核对原完整流水线计费；原完整记录仍由evaluation_sources定位。原流程中的 `continue` 表示本次考察后跳到下一候选；是否免费以 `attempt_index=null` 为准，不能只看英文动作名。画面仍纳入预算耗尽前遇到的免费跳过候选；假阳性消耗尝试额度。`expected[模式][50/100/200/300]` 是原冻结的pdb_id、success_count、target_count、attempt_budget、completion；例如9BJJ GT Find+Match 100%为10/19，完成度10/19。
 
 ### models 与 poses.csv
 
-`models` 每项描述一个可独立显隐的材料：`key` 如CA2_blob_0，`id` 如10.1（命令中写#10.1），`file` 为案例目录相对文件名，`kind` 为receptor/density/reference/area/blob/pose/identity/correctness。`domain` 仅在材料属于CA2或GT时出现，`blob`与`occurrence_id`分别表示候选与真实实例编号。
+`models` 每项描述一个可独立显隐的材料：`key` 如CA2_blob_0，`id` 如10.1（命令中写#10.1），`file` 为案例目录相对文件名，`kind` 为receptor/density/reference/area/blob/pose/identity/correctness。`domain` 仅在材料属于CA2或GT时出现，`blob`与`occurrence_id`分别表示候选与真实实例编号。reference和area另有字符串 `display_name`，如 `ref_0_ATP_A901`、`area_0_ATP_A901`，作为Models中显示名；原 `key=ref_0/area_0` 与编号不变。名字中的A901取原 `components[].auth_asym_id/auth_seq_id/icode`，不取导出SDF的临时残基编号。多残基短名仅列首组分及位置，以 `plus2` 表示另有两个残基；完整组成仍在 `components`。
 
 密度项含浮点 `level`、三整数列表 `shape_zyx`、三浮点列表 `origin_xyz_A/spacing_xyz_A`。这里 `origin_xyz_A` 是 MRC 的首个采样中心，已包含下文的半体素修正。受体项含整数 `atoms`。姿态项另含字符串列表 `views`、`pose`（top1或best）、整数 `sample_index`（原零基采样号）、整数 `sdf_index`（原零基SDF记录号）、`rmsd_A`（Å单位浮点数或null）、字符串 `output_dir`。标签项含字符串 `text`；其CTR标记是注字位置，不是预测原子。
 
@@ -119,7 +121,7 @@ D:/AdaLigand_Visualization/
 
 ### 两份索引CSV
 
-`对象索引.csv` 列model_id/name/kind/condition对应models的id/key/kind/domain，其余blob_id、occurrence_id、pose、sample_index、sdf_index、rmsd_A、file保持同义；views用竖线分隔。与该材料无关的列为空。
+`对象索引.csv` 列model_id/key/name/kind/condition对应models的id/key/显示名/kind/domain。name优先取display_name，没有时取key；例如 `#3.1,ref_0,ref_0_ATP_A901` 连接同一个实例。reference_name/reference_site在真实配体及其区域中填原身份与沉积位置，如 `ATP,A:901`；其他材料留空。其余blob_id、occurrence_id、pose、sample_index、sdf_index、rmsd_A、file保持同义；views用竖线分隔。与该材料无关的列为空。
 
 `候选索引.csv` 每项对应一个条件的一份blob，**condition 与 blob_id 共同标识候选**；同号CA2/GT不是同一个对象。blob_id、blob_model、rank、probability_mean、selected连接原候选；reference_instance/name/site连接真实实例；foreground/small/eligible及identity_correct是布尔值，predicted_identity是显示名称。full_attempt/small_find_attempt/find_build_attempt/pipeline_attempt分别是该模式计费号，空值为免费跳过。top1_model/best_model用竖线列出关联模型号，空值表示该候选没有相应已存构象。完整表头及实际首行为：
 

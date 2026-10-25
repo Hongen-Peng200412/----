@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name="ChimeraX-LigandWorkbench",
-    version="1.0.6",
+    version="1.0.7",
     description="多配体交互画图与预算显示",
     author="Manuscript authors",
     url="https://www.rbvi.ucsf.edu/chimerax/",

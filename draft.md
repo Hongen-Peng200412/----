@@ -28,17 +28,23 @@ We evaluated the framework on 179 complexes comprising 2,502 ligand instances. U
 
 {{pptfig:"画图/总览图.pptx"|fig-overview_v2|width=5.5in}}
 
-LigandSeek is an automated three-stage framework that reconstructs all-atom ligand poses from experimental cryo-EM density maps ({{figref:fig-overview_v2}}). Inputs comprise a density map, a protein or nucleic acid receptor structure, and candidate ligand identities represented by SMILES strings[@weininger1988smiles]. The receptor structure can be either a deposited structure or a model reconstructed automatically from the density map by CryoAtom2[@cryoatom2_2025], enabling automated ligand modelling without requiring manually built receptors.
+LigandSeek is an automated three-stage framework that reconstructs all-atom ligand poses from experimental cryo-EM density maps ({{figref:fig-overview_v2,fig-method-v8}}). Inputs comprise an experimental cryo-EM density map, a receptor structure, and candidate ligand identities represented by SMILES strings[@weininger1988smiles]. The receptor can be a deposited structure or a model reconstructed automatically from the density map by CryoAtom2[@cryoatom2_2025]. The latter enables automated ligand modelling without manually built receptors. Density information is encoded as a 56-channel multi-view density bank using spatial transformations, while receptor atoms are represented by 50-dimensional features. These atom features encode element types, residue identities, physicochemical properties and local packing environments.
 
-LigandSeek decomposes ligand structure determination into three sequential stages: Find, Match and Build ({{figref:fig-overview_v2,fig-method-v8}}). Using a hybrid point–voxel network, LigandSeek-Find (Find) combines voxel-density signals and receptor context to locate candidate ligand regions (blobs; {{figref:fig-method-v8|a}}). LigandSeek-Match (Match) assigns chemical identities to these regions through a cross-modal network, while excluding residual false positives ({{figref:fig-method-v8|b}}). Find and Match support organic small molecules, metal ions, sugars and other ligand classes. LigandSeek-Build (Build) combines the binding site located by Find and identity assigned by Match with the receptor pocket and experimental density ({{figref:fig-method-v8|c}}). Its default model, density-guided PocketXMol (DG-PocketXMol), adapts PocketXMol[@pocketxmol] with local density conditioning for small-molecule pose generation, while a modular interface also supports other downstream docking tools.
+In the first stage, LigandSeek-Find (hereafter Find) uses a hybrid point–voxel network to locate candidate ligand regions (blobs) and extract auxiliary features ({{figref:fig-method-v8|a}}). A receptor embedding head encodes atom representations, projects them onto the voxel grid and supplies processed atom tokens to the point-cloud branch. In the voxel branch, a 3D U-Net[@cicek20163dunet] combines the density bank with projected receptor-atom features to predict voxelwise ligand-region probabilities and auxiliary features. In the point-cloud branch, Point Transformer V3[@wu2024ptv3] encodes receptor-atom representations and integrates multiscale voxel features through learnable neighbourhood sampling. An AlphaFold3-style[@abramson2024alphafold3] recycling mechanism iteratively refines representations across both branches. Find operates on $80^3$ voxel crops, combining overlapping predictions through sliding-window inference to obtain a whole-map probability map. The inference process, comprising thresholding, connected-component analysis, and filtering, subsequently yields candidate blobs for Match.
+
+In the second stage, LigandSeek-Match (hereafter Match) assigns chemical identities to candidate blobs and classifies them as foreground or background to exclude residual false positives ({{figref:fig-method-v8|b}}). It supports organic small molecules, metal ions, sugars and other ligand classes. Match pairs a candidate encoder with an identity encoder in a cross-modal architecture. For each candidate blob, the candidate encoder applies a 3D U-Net to a local $48^3$ voxel crop to obtain a base voxel summary. Mean and maximum pooling, cross-attention and feature-wise linear modulation (FiLM)[@perez2018film] integrate surrounding pocket atoms, blob features and auxiliary features from Find into the final candidate representation. In parallel, the identity encoder processes user-provided SMILES strings within the same PDB entry. Using SMI-TED[@soares2025smited] language representations as queries, it applies graph attention over RDKit-derived molecular graphs encoded by a graph neural network (GNN). Context attention incorporates information from co-occurring ligand identities, and these signals are fused into each identity representation. A foreground head predicts the foreground probability of each candidate, while cosine scoring over learned linear projections generates the candidate-to-identity matching score matrix.
+
+In the third stage, LigandSeek-Build (hereafter Build) receives the binding site located by Find and the SMILES identity assigned by Match ({{figref:fig-method-v8|c}}). It combines these inputs with the surrounding receptor pocket and local density to reconstruct an all-atom ligand pose. Its default engine for organic small molecules, density-guided PocketXMol (DG-PocketXMol), adapts the generative model PocketXMol[@pocketxmol] through density-conditioned fine-tuning. DG-PocketXMol incorporates experimental density into pose generation, guiding ligand reconstruction to satisfy both density contours and pocket chemical constraints. Build also provides a modular interface that supports other downstream docking tools, including Vina[@trott2010vina], DiffDock[@corso2023diffdock] and EMERALD[@muenks2023emerald].
 
 # Results
 
 ## LigandSeek-Find improves ligand-region detection
 
-We evaluated Find on 179 cryo-EM density maps with resolutions below 4.0 Å, released after 1 January 2026 and non-redundant with training data. These complexes contained 2,502 deposited ligand instances spanning multiple classes, including organic small molecules, metal ions and sugars. The small-molecule subset comprised 821 instances across 94 complexes within this benchmark. We compared LigandSeek-Find with deposited receptors (GT) or CryoAtom2-reconstructed receptors (CA2) against the density-only baseline Emap2lig-Find[@umap2lig].
+We evaluated Find on 179 cryo-EM density maps with resolutions below 4.0 Å, containing ligands, released after 1 January 2026, and non-redundant with the training, validation, and internal datasets. These complexes contained 2,502 deposited ligand instances spanning multiple classes, including organic small molecules, metal ions and sugars. The small-molecule subset comprised 821 instances distributed across 94 complexes. We compared LigandSeek-Find with deposited receptors (GT) or CryoAtom2-reconstructed receptors (CA2) against the density-only baseline Emap2lig-Find[@umap2lig].
 
-We assessed voxel-wise overlap using semantic Dice and ligand-instance detection using instance-level precision, recall and precision–recall area under the curve (PRAUC). Instance-level metrics used one-to-one matching at a bidirectional coverage threshold of 0.3. We also evaluated PRAUC at the stricter threshold of 0.5 (Methods).
+We assessed voxel-wise overlap using semantic Dice, and evaluated ligand-instance detection using instance-level metrics, including precision, recall, and the precision–recall area under the curve (PRAUC). Instance-level metrics used one-to-one matching at a bidirectional coverage threshold of 0.3. We also evaluated PRAUC at the stricter threshold of 0.5 (Methods).
+
+—————————— 【改到这里啦】—————————— 
 
 With CA2 receptors, mean Dice increased from 0.050 for Emap2lig-Find to 0.477, and instance-level $\mathrm{PRAUC}_{0.3}$ increased from 0.255 to 0.541 ({{figref:stage1-overall-performance|a}}). With GT receptors, LigandSeek-Find achieved a mean Dice of 0.584 and an instance-level $\mathrm{PRAUC}_{0.3}$ of 0.663. The advantage persisted for small molecules, with corresponding PRAUC scores of 0.573 for CA2 and 0.701 for GT, compared with 0.462 for Emap2lig-Find ({{figref:stage1-overall-performance|b}}).
 
@@ -438,7 +444,7 @@ Candidate $B_j$ is predicted as positive if and only if $s_j$ exceeds the fixed 
 
 The first score term measures the candidate's own density confidence. The second rewards nearby receptor atoms predicted to be close to a ligand, whereas the third penalises nearby receptor atoms predicted to be distant from ligands.
 
-### Evaluation metrics
+### Stage 1:Evaluation metrics
 
 For each PDB entry, let $\{B_i\}_{i=1}^{N_{\mathrm{pred}}}$ denote the final predicted candidate regions and $\{G_j\}_{j=1}^{N_{\mathrm{gt}}}$ the ground-truth ligand regions. Semantic Dice measures overlap between the unions of predicted and ground-truth regions:
 
@@ -459,6 +465,40 @@ Precision is zero for an empty prediction set; a ground-truth instance cannot co
 Detection completion measures the fraction of distinct ground-truth instances recovered within a relative candidate count. Candidates retain the original ordering, with selected candidates first and remaining candidates afterwards. Within each group, candidates are ordered by descending mean voxel probability, with ties resolved by original blob index. Each candidate is assigned to the ground-truth instance with maximal geometric-mean coverage among pairs meeting the bidirectional threshold of 0.3. Repeated hits occupy candidate positions but increase completion only at the first detection of an instance. For $N$ target instances and relative candidate count $\rho$, at most $\lfloor\rho N\rfloor$ candidates are examined.
 
 All-ligand evaluation includes 179 PDB entries and 2,502 instances; small-molecule evaluation includes 94 PDB entries and 821 instances. In the small-molecule evaluation, candidates are first assigned across all ligand classes, and those assigned to non-small-molecule instances are omitted. Unassigned background candidates remain, as do repeated hits in completion analysis. P/R matching uses the retained final candidates; completion follows cumulative first detections along the candidate order. Metrics are averaged equally across PDB entries, retaining zero-detection entries. Confidence intervals for means use 10,000 PDB bootstrap resamples with seed 20260922 and percentile limits of 2.5% and 97.5%. Methods and candidate limits within the same cohort share resampling indices.
+
+
+
+### Stage 1: Evaluation metrics
+
+For a given PDB structure, let the model predict $N_{pred}$ three-dimensional candidate blobs, $\{B_i\}_{i=1}^{N_{pred}}$. The structure contains $N_{gt}$ ground-truth ligand instances, $\{G_j\}_{j=1}^{N_{gt}}$, where $G_j$ denotes the ligand region of instance $j$. We set the bidirectional coverage threshold to $\tau \in \{0.3, 0.5\}$.
+
+We evaluated Find at both the semantic and instance levels. At the semantic level, the Dice score measured the overlap between the unions of predicted and ground-truth ligand regions:
+
+$$
+\mathrm{Dice}=\frac{2\left|\left(\bigcup_i B_i\right)\cap\left(\bigcup_j G_j\right)\right|}{\left|\bigcup_i B_i\right|+\left|\bigcup_j G_j\right|},
+$$
+
+where $\vert{}\cdot\vert{}$ denotes the number of voxels in a region.
+
+At the instance level, predicted instances $\{B_i\}_{i=1}^{N_{pred}}$ and ground-truth instances $\{G_j\}_{j=1}^{N_{gt}}$ form the two vertex sets of a bipartite graph. An edge connects $B_i$ and $G_j$ if each covers at least a fraction $\tau$ of the other. We then used the Hungarian algorithm[@kuhn1955hungarian] to obtain a maximum matching between the two sets. Let $N^{\mathrm{1to1}}_{\tau}$ be the number of successfully matched instance pairs. We define one-to-one precision and recall as:
+
+$$
+\operatorname{1to1P}_{\tau}
+=
+\frac{N^{\mathrm{1to1}}_{\tau}}{N_{\mathrm{pred}}},
+\qquad
+\operatorname{1to1R}_{\tau}
+=
+\frac{N^{\mathrm{1to1}}_{\tau}}{N_{\mathrm{gt}}},
+$$
+
+These quantities yield the one-to-one F1 score at threshold $\tau$, $\operatorname{1to1F1}_{\tau}$. Ranking predicted instances by their mean voxel probability yields the corresponding one-to-one precision–recall area under the curve (PRAUC), $\operatorname{1to1PRAUC}_{\tau}$. We use "1to1" and "one-to-one" interchangeably depending on the context.
+
+One-to-one metrics exclude both one-to-many and many-to-one matches between predicted and ground-truth instances. For example, if one predicted blob covers several ground-truth ligands, at most one pair can count as a successful match. These metrics require accurate instance localisation and separation, penalising incorrect splitting or merging as well as localisation errors. They therefore provide a precise assessment of the model's performance.
+
+We also evaluated the fraction of detected instances as a function of relative candidate count, which normalises the number of examined candidates by the ground-truth instance count per PDB. A ground-truth instance was considered detected if it was matched to a predicted blob at the $\tau=0.3$ bidirectional coverage threshold.
+
+All metrics were evaluated across all ligands and for small molecules only. In the small-molecule evaluation, non-small-molecule ground-truth ligands, such as sugars and metal ions, and the candidate blobs matched to them were excluded from numerators, denominators and candidate counts.
 
 ## Stage 2: Match
 

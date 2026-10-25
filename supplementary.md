@@ -1,6 +1,20 @@
 # Supplementary Information
 
 
+## Ligand-region detection at a stricter coverage threshold
+
+We evaluated instance-level PRAUC at a stricter bidirectional coverage threshold of 0.5 using the same all-ligand and small-molecule cohorts. These comprised 179 PDB entries with 2,502 instances and 94 PDB entries with 821 small-molecule instances, respectively. For all ligands, PDB-equal means were 0.558 with GT receptors and 0.447 with CA2 receptors, compared with 0.126 for Emap2lig-Find ({{figref:stage1-strict-threshold|a}}). The corresponding small-molecule scores were 0.605, 0.499 and 0.293, preserving the same advantage ({{figref:stage1-strict-threshold|b}}).
+
+{{pptfig:"画图/stage1结果.pptx"|stage1-strict-threshold}}
+
+## Complete detection curves across ranked candidates
+
+We compared detection completion across the full candidate-count range and retained the distribution of results across individual PDB entries ({{figref:stage1-completion-curves}}). All-ligand evaluation included 179 PDB entries and 2,502 instances; small-molecule evaluation included 94 PDB entries and 821 instances. Both evaluated Find alone, without requiring identity matching or pose reconstruction. Candidate–instance pairs required bidirectional coverage of at least 0.3, and each instance contributed only its first detection. Relative candidate counts of 100% and 300% allowed examining up to one and three times the ground-truth instance count, respectively.
+
+From 100% to 300%, mean completion across all ligands increased from 66.4% to 71.7% with GT receptors and from 55.6% to 63.3% with CA2 receptors. Emap2lig-Find increased from 25.9% to 30.1% over the same candidate-count range. Corresponding small-molecule changes were 70.5% to 73.3% for GT, 59.8% to 68.5% for CA2 and 44.2% to 51.6% for Emap2lig-Find. LigandSeek-Find therefore recovered more true instances under the same candidate-count limits. Means weight PDB entries equally, while background candidates and repeated hits retain their candidate positions. The small-molecule evaluation omits only candidates assigned to non-small-molecule instances.
+
+{{pptfig:"画图/stage1结果.pptx"|stage1-completion-curves}}
+
 ## Stage 1: Ablation of LigandSeek-Find
 
 As shown in Table 4, we compared six model variants on the same full test set to assess the contributions of individual designs to ligand detection. Starting with a 3D U-Net receiving experimental density alone(Density only), we added difference density(+ Difference density), a multi-view density bank(+ Density bank) and receptor-atom features(+ Receptor features). We then introduced centroid-aware positional encoding in the receptor embedding head(+ Centroid encoding), followed by the final LigandSeek-Find model. The final model used receptor-atom binding probabilities predicted by the point-cloud branch for Gaussian candidate scoring, while other models used conventional inference without Gaussian candidate scoring.
@@ -26,7 +40,7 @@ Futhermore, we can observe that injecting the receptor information explicitly, a
 <tr><td>LigandSeek-Find</td><td><u>0.477</u></td><td><strong>0.541</strong></td><td><strong>0.447</strong></td><td><u>0.584</u></td><td><strong>0.663</strong></td><td><u>0.558</u></td></tr>
 </tbody>
 </table>
-<p class="table-note">Dice denotes semantic Dice; PRAUC denotes one-to-one PRAUC, with subscripts indicating bidirectional coverage thresholds between predicted and ground-truth regions. CA2 denotes CryoAtom2-reconstructed receptors; deposited receptors correspond to GT. Bold and underlined values indicate the highest and second-highest scores in each column, respectively.</p>
+<p class="table-note">Dice denotes semantic Dice; PRAUC denotes instance-level PRAUC, with subscripts indicating bidirectional coverage thresholds between predicted and ground-truth regions. CA2 denotes CryoAtom2-reconstructed receptors; deposited receptors correspond to GT. Bold and underlined values indicate the highest and second-highest scores in each column, respectively.</p>
 
 ## Stage 3: End-to-end top-k success
 

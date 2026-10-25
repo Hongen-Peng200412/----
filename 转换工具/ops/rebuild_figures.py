@@ -107,6 +107,9 @@ def commands_for(figure: str, build: Path) -> list[list]:
     node = [NODE]
     p=lambda relative,*args:python+[CODE/relative,*args]
     n=lambda relative,*args:node+[CODE/relative,*args]
+    if figure in ("stage1-overall-performance", "stage1-candidate-quality", "stage1-strict-threshold", "stage1-completion-curves"):
+        prefix="stage1/calculate/stage1-results-revision/"
+        return [p(prefix+"plot.py"),n(prefix+"build_deck.mjs")]
     if figure.startswith("supp-e2e-completion-"):
         return [p(f"e2e/calculate/{figure}/plot.py"),p("e2e/calculate/e2e-instance-completion/svg_shapes.py"),n("e2e/calculate/e2e-instance-completion/assemble.mjs")]
     if figure in ("find-only-instance-completion","stage3-predicted-region-head-to-head","supp-find-correct-match-build"):

@@ -38,7 +38,7 @@ plt.rcParams.update({
 METHODS = ("L2_GT", "L2_CA2", "L1_GT", "L1_CA2")  # 四个模型/受体条件的固定展示顺序; GT 是沉积受体, CA2 是 CryoAtom2 重建受体.
 COLORS = {"L2_GT": "#007C83", "L2_CA2": "#566AB4", "L1_GT": "#7D8990", "L1_CA2": "#B08A60"}  # 一个方法在柱图、散点和分布中始终使用同一颜色.
 LABELS = {"L2_GT": "LigandSeek2-Find (GT)", "L2_CA2": "LigandSeek2-Find (CA2)", "L1_GT": "LigandSeek (GT)", "L1_CA2": "LigandSeek (CA2)"}  # 模型显示名使用全文标准名称, 受体简称由每页双语图注定义.
-TITLE = {"bar": "Overall scores", "paired": "CA2: one-to-one PRAUC₀.₃", "violin": "CA2: one-to-one detection₀.₃"}  # Calibri 支持阈值 Unicode 下标, 保持 SVG 普通 text 节点, 不引入 mathtext 的 tspan.
+TITLE = {"bar": "Overall scores", "paired": "CA2: instance-level PRAUC₀.₃", "violin": "CA2: instance-level detection₀.₃"}  # Calibri 支持阈值 Unicode 下标, 保持 SVG 普通 text 节点, 不引入 mathtext 的 tspan.
 COMPOSITE_SIZE = (163.0 / 25.4, 190.0 / 25.4)  # (2,), 完整图宽/高, 单位 inch; 正文缩到 147 mm 宽时字号仍高于 5 pt.
 SINGLE_SIZE = (89.0 / 25.4, 85.0 / 25.4)  # (2,), 单图宽/高, 单位 inch; PowerPoint 只等比缩放同一 SVG 场景.
 DPI = 350  # PNG 查看图每 inch 像素数; SVG/PDF 和 PowerPoint 数据几何仍是矢量.
@@ -52,9 +52,9 @@ def draw_panel(fig: plt.Figure, block: dict, kind: str, rect: list[float], lette
         - block: dict, 一个冻结集合; n 是 PDB 数, models 的各指标值、均值区间和分布均已计算.
         - block.models[*].values: dict, 以下五项无量纲指标与 block.ids 逐项对齐; N 是 block.n.
             - dice: list[float], (N,), 逐 PDB 语义 F1.
-            - prauc_0p3: list[float], (N,), 双向覆盖 0.3 下的逐 PDB 一对一 PRAUC.
-            - prauc_0p5: list[float], (N,), 双向覆盖 0.5 下的逐 PDB 一对一 PRAUC.
-            - precision: list[float], (N,), 双向覆盖 0.3 下的逐 PDB 一对一精确率.
+            - prauc_0p3: list[float], (N,), 双向覆盖 0.3 下的逐 PDB 实例级 PRAUC.
+            - prauc_0p5: list[float], (N,), 双向覆盖 0.5 下的逐 PDB 实例级 PRAUC.
+            - precision: list[float], (N,), 双向覆盖 0.3 下的逐 PDB 实例级精确率.
             - recall: list[float], (N,), 双向覆盖 0.3 下的逐 PDB 一对一召回率.
         - block.models[*].bars[*]: dict, dice/prauc_0p3/prauc_0p5 各自的冻结均值和区间.
             - mean: float, 当前指标的 PDB 等权均值.
@@ -91,13 +91,13 @@ def draw_panel(fig: plt.Figure, block: dict, kind: str, rect: list[float], lette
                 ax.vlines(center, stats["lower"], stats["upper"], color=color, linewidth=0.95, zorder=4)
                 ax.hlines([stats["lower"], stats["upper"]], center - 0.043, center + 0.043, color=color, linewidth=0.95, zorder=4)
                 ax.hlines(stats["mean"], center - 0.070, center + 0.070, color=color, linewidth=1.5, zorder=5)
-        ax.set(xlim=(-0.50, 2.50), ylim=(-0.025, 1.035), yticks=[0, 0.5, 1], ylabel="Score", xticks=[0, 1, 2], xticklabels=["Semantic\nDice", "One-to-one\nPRAUC₀.₃", "One-to-one\nPRAUC₀.₅"])
+        ax.set(xlim=(-0.50, 2.50), ylim=(-0.025, 1.035), yticks=[0, 0.5, 1], ylabel="Score", xticks=[0, 1, 2], xticklabels=["Semantic\nDice", "Instance-level\nPRAUC₀.₃", "Instance-level\nPRAUC₀.₅"])
         ax.tick_params(axis="x", length=0, pad=5)
         ax.grid(axis="y", color="#E7EBED", linewidth=0.45)
         ax.set_axisbelow(True)
     elif kind == "paired":
-        x = np.asarray(block["models"]["L1_CA2"]["values"]["prauc_0p3"], dtype=float)  # (N,), 横轴是同一 PDB 的 LigandSeek/CA2 一对一 PRAUC₀.₃.
-        y = np.asarray(block["models"]["L2_CA2"]["values"]["prauc_0p3"], dtype=float)  # (N,), 纵轴是与 x 逐 PDB 配对的 LigandSeek2-Find/CA2 一对一 PRAUC₀.₃.
+        x = np.asarray(block["models"]["L1_CA2"]["values"]["prauc_0p3"], dtype=float)  # (N,), 横轴是同一 PDB 的 LigandSeek/CA2 实例级 PRAUC₀.₃.
+        y = np.asarray(block["models"]["L2_CA2"]["values"]["prauc_0p3"], dtype=float)  # (N,), 纵轴是与 x 逐 PDB 配对的 LigandSeek2-Find/CA2 实例级 PRAUC₀.₃.
         resolution = np.asarray(block["resolution"], dtype=float)  # (N,), 与 x/y 对齐的实验分辨率, 单位 Å.
         for start in np.arange(0.0, 1.0, 0.05):
             segment = [start, min(start + 0.025, 1.0)]  # (2,), 等值线的一段横/纵指标坐标; 实体分段使原生 PowerPoint 保留同一虚线几何.
@@ -225,20 +225,20 @@ def render_figures(plot_data: Path, output_root: Path, build_root: Path, nature_
         scope_cn = f"完整配体集合, {block['n']} 个 PDB" if cohort == "full" else f"小分子集合, {block['n']} 个 PDB、821 个小分子实例"
         scope_en = f"all ligands, {block['n']} PDB entries" if cohort == "full" else f"small molecules, {block['n']} PDB entries and 821 small-molecule instances"
         if kind == "bar":
-            detail_cn = "语义 Dice、一对一 PRAUC₀.₃ 和 PRAUC₀.₅. 柱高为 PDB 等权均值, 点为全部逐 PDB 指标, 误差线为 10,000 次 PDB bootstrap 的 95% 均值区间; 四方法和三指标在各集合内共享重采样索引, seed=20260922."
-            detail_en = "Semantic Dice and one-to-one precision–recall area under the curve (PRAUC) at bidirectional coverage thresholds of 0.3 and 0.5. Bars show equally weighted PDB means, points show every PDB value and error bars show 95% confidence intervals from 10,000 PDB bootstrap resamples. All four conditions and three metrics share resampling indices within each cohort (seed=20260922)."
+            detail_cn = "语义 Dice、实例级 PRAUC₀.₃ 和 PRAUC₀.₅. 柱高为 PDB 等权均值, 点为全部逐 PDB 指标, 误差线为 10,000 次 PDB bootstrap 的 95% 均值区间; 四方法和三指标在各集合内共享重采样索引, seed=20260922."
+            detail_en = "Semantic Dice and instance-level precision–recall area under the curve (PRAUC) at bidirectional coverage thresholds of 0.3 and 0.5. Bars show equally weighted PDB means, points show every PDB value and error bars show 95% confidence intervals from 10,000 PDB bootstrap resamples. All four conditions and three metrics share resampling indices within each cohort (seed=20260922)."
         elif kind == "paired":
             counts = block["paired_counts"]  # 三个冻结方向计数, 不从 x/y 重新比较或计算统计检验.
-            detail_cn = f"CA2 输入下一对一 PRAUC₀.₃ 的逐 PDB 配对比较. 横轴为 LigandSeek, 纵轴为 LigandSeek2-Find, 虚线为等值线, 点颜色为实验密度图分辨率. LigandSeek2-Find 较高、相等、LigandSeek 较高分别为 {counts['l2_higher']}、{counts['equal']}、{counts['l1_higher']} 个 PDB; 相等定义为差值绝对值不超过 1e-12."
-            detail_en = f"Paired PDB comparison of one-to-one precision–recall area under the curve (PRAUC) at a bidirectional coverage threshold of 0.3 with CA2 receptors. The x and y axes show LigandSeek and LigandSeek2-Find, respectively, the dashed line marks equality and point colours show experimental-map resolution. LigandSeek2-Find is higher for {counts['l2_higher']} PDB entries, values are equal for {counts['equal']} and LigandSeek is higher for {counts['l1_higher']}; equality means an absolute difference of at most 1e-12."
+            detail_cn = f"CA2 输入下实例级 PRAUC₀.₃ 的逐 PDB 配对比较. 横轴为 LigandSeek, 纵轴为 LigandSeek2-Find, 虚线为等值线, 点颜色为实验密度图分辨率. LigandSeek2-Find 较高、相等、LigandSeek 较高分别为 {counts['l2_higher']}、{counts['equal']}、{counts['l1_higher']} 个 PDB; 相等定义为差值绝对值不超过 1e-12."
+            detail_en = f"Paired PDB comparison of instance-level precision–recall area under the curve (PRAUC) at a bidirectional coverage threshold of 0.3 with CA2 receptors. The x and y axes show LigandSeek and LigandSeek2-Find, respectively, the dashed line marks equality and point colours show experimental-map resolution. LigandSeek2-Find is higher for {counts['l2_higher']} PDB entries, values are equal for {counts['equal']} and LigandSeek is higher for {counts['l1_higher']}; equality means an absolute difference of at most 1e-12."
         else:
             detail_cn = "CA2 输入下一对一₀.₃ 精确率和召回率分布. 点为全部逐 PDB 指标, 包括 0/1 端点; 白点为中位数, 粗线为四分位范围. 小提琴使用在 0/1 两端反射的 Gaussian KDE, 无量纲 bw_method 因子为 0.045, 不对 P/R 另做 bootstrap."
-            detail_en = "Distributions of one-to-one precision and recall at a bidirectional coverage threshold of 0.3 with CA2 receptors. Points show every PDB value, including endpoints at 0 and 1, white points mark medians and thick lines mark interquartile ranges. Violin widths use Gaussian kernel density estimation reflected at both boundaries with a dimensionless bw_method factor of 0.045. No bootstrap intervals are calculated for precision or recall."
+            detail_en = "Distributions of instance-level precision and recall at a bidirectional coverage threshold of 0.3 with CA2 receptors. Points show every PDB value, including endpoints at 0 and 1, white points mark medians and thick lines mark interquartile ranges. Violin widths use Gaussian kernel density estimation reflected at both boundaries with a dimensionless bw_method factor of 0.045. No bootstrap intervals are calculated for precision or recall."
         caption_cn = f"LigandSeek2-Find 与 LigandSeek 的配体区域检测比较: {scope_cn}. {detail_cn} 下标表示预测与真实区域的双向覆盖下限. GT 为沉积受体, CA2 为 CryoAtom2 重建受体."
         caption_en = f"Ligand-region detection by LigandSeek2-Find and LigandSeek: {scope_en}. {detail_en} GT denotes deposited receptors and CA2 denotes CryoAtom2-reconstructed receptors."
         captions[letter] = caption_cn + "\nENGLISH:\n" + caption_en
-    composite_cn = "LigandSeek2-Find 与 LigandSeek 的配体区域检出。比较 LigandSeek2-Find 与第一代 LigandSeek 在沉积受体（GT）和 CryoAtom2 重建受体（CA2）条件下的表现。左列为全配体测试集（179 个 PDB，2,502 个配体实例），右列为小分子测试子集（94 个 PDB，821 个小分子实例）。\n\na、b，逐 PDB Dice 和覆盖阈值为 0.3、0.5 的一对一 PRAUC。误差线表示对 PDB 条目进行 10,000 次 bootstrap 重采样得到的均值 95% 区间。\n\nc、d，CA2 受体条件下 LigandSeek2-Find 与 LigandSeek 的逐 PDB 直接比较。全配体中，LigandSeek2-Find 更高、相等、更低的 PDB 数分别为 79、69、31；小分子中分别为 27、46、21。\n\ne、f，CA2 受体条件下，覆盖阈值为 0.3 的一对一精确率和召回率。每个点代表一个 PDB 条目；白色空心圆和粗线分别表示中位数和四分位区间。"
-    composite_en = "Ligand-region detection by LigandSeek2-Find and LigandSeek. LigandSeek2-Find and the first-generation LigandSeek are compared using deposited (GT) or CryoAtom2-reconstructed (CA2) receptor structures. The left column shows all ligands (179 PDB entries, 2,502 instances); the right shows only small molecules (94 PDB entries, 821 instances).\n\na, b, Per-PDB Dice scores and one-to-one PRAUC at thresholds of 0.3 and 0.5. Error bars show 95% intervals for the mean from 10,000 bootstrap resamples of PDB entries.\n\nc, d, Direct comparisons of LigandSeek2-Find with LigandSeek using CryoAtom2-reconstructed receptors. LigandSeek2-Find performs better, comparably or worse on 79/69/31 PDB entries for all ligands and 27/46/21 for small molecules, respectively.\n\ne, f, One-to-one precision and recall at a threshold of 0.3 using CryoAtom2-reconstructed receptors. Each point represents one PDB entry; open white circles and thick bars indicate the median and interquartile range, respectively."
+    composite_cn = "LigandSeek2-Find 与 LigandSeek 的配体区域检出。比较 LigandSeek2-Find 与第一代 LigandSeek 在沉积受体（GT）和 CryoAtom2 重建受体（CA2）条件下的表现。左列为全配体测试集（179 个 PDB，2,502 个配体实例），右列为小分子测试子集（94 个 PDB，821 个小分子实例）。\n\na、b，逐 PDB Dice 和覆盖阈值为 0.3、0.5 的实例级 PRAUC。误差线表示对 PDB 条目进行 10,000 次 bootstrap 重采样得到的均值 95% 区间。\n\nc、d，CA2 受体条件下 LigandSeek2-Find 与 LigandSeek 的逐 PDB 直接比较。全配体中，LigandSeek2-Find 更高、相等、更低的 PDB 数分别为 79、69、31；小分子中分别为 27、46、21。\n\ne、f，CA2 受体条件下，覆盖阈值为 0.3 的实例级精确率和召回率。每个点代表一个 PDB 条目；白色空心圆和粗线分别表示中位数和四分位区间。"
+    composite_en = "Ligand-region detection by LigandSeek2-Find and LigandSeek. LigandSeek2-Find and the first-generation LigandSeek are compared using deposited (GT) or CryoAtom2-reconstructed (CA2) receptor structures. The left column shows all ligands (179 PDB entries, 2,502 instances); the right shows only small molecules (94 PDB entries, 821 instances).\n\na, b, Per-PDB Dice scores and instance-level PRAUC at thresholds of 0.3 and 0.5. Error bars show 95% intervals for the mean from 10,000 bootstrap resamples of PDB entries.\n\nc, d, Direct comparisons of LigandSeek2-Find with LigandSeek using CryoAtom2-reconstructed receptors. LigandSeek2-Find performs better, comparably or worse on 79/69/31 PDB entries for all ligands and 27/46/21 for small molecules, respectively.\n\ne, f, Instance-level precision and recall at a threshold of 0.3 using CryoAtom2-reconstructed receptors. Each point represents one PDB entry; open white circles and thick bars indicate the median and interquartile range, respectively."
     pages = []  # list[dict], 同源 SVG 场景、双语备注和图名, 顺序决定 PowerPoint 页序.
     for page_index, stem in enumerate(stems):
         composite = page_index == 6

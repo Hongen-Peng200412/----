@@ -1,6 +1,6 @@
 # Abstract
 
-Cryo-electron microscopy (cryo-EM) has advanced three-dimensional structure determination of macromolecular complexes. De novo modelling algorithms, including ModelAngelo and CryoAtom2, have automated the construction of protein and nucleic acid backbones. However, fully automated, accurate end-to-end reconstruction of ligands involved in catalysis, allosteric regulation and drug action remains challenging. Existing tools address individual steps, with inefficient connections between region localisation, chemical identity matching and pose reconstruction. Here we introduce LigandSeek, a fully automated end-to-end framework that jointly models density and receptor information through three stages: Find, Match and Build. On a benchmark of 179 complexes, Find achieved a $\operatorname{one-to-one\ PRAUC}_{0.3}$ of 0.541, increasing to 0.663 with deposited receptor structures. Both exceeded the score of 0.255 achieved by the density-only method Emap2lig-Find. Match achieved 86.6% overall matching accuracy, with a mean matching time of 0.09 s per candidate region. For Build, we incorporated continuous cryo-EM density-field constraints into a receptor-based generative model and fine-tuned it. This reduced the median root-mean-square deviation (RMSD) of top-1 small-molecule poses from 1.55 Å to 1.14 Å. In end-to-end blind evaluation without deposited receptor structures as input, LigandSeek achieved a mean completion rate of 62.8% across 77 PDB entries. With deposited receptor structures, this rate increased to 66.9%. LigandSeek provides an efficient, fully automated workflow from continuous three-dimensional cryo-EM density maps to all-atom ligand poses.
+Cryo-electron microscopy (cryo-EM) has advanced three-dimensional structure determination of macromolecular complexes. De novo modelling algorithms, including ModelAngelo and CryoAtom2, have automated the construction of protein and nucleic acid backbones. However, fully automated, accurate end-to-end reconstruction of ligands involved in catalysis, allosteric regulation and drug action remains challenging. Existing tools address individual steps, with inefficient connections between region localisation, chemical identity matching and pose reconstruction. Here we introduce LigandSeek, a fully automated end-to-end framework that jointly models density and receptor information through three stages: Find, Match and Build. On a benchmark of 179 complexes, Find achieved a $\mathrm{PRAUC}^{\mathrm{instance}}_{0.3}$ of 0.541, increasing to 0.663 with deposited receptor structures. Both exceeded the score of 0.255 achieved by the density-only method Emap2lig-Find. Match achieved 86.6% overall matching accuracy, with a mean matching time of 0.09 s per candidate region. For Build, we incorporated continuous cryo-EM density-field constraints into a receptor-based generative model and fine-tuned it. This reduced the median root-mean-square deviation (RMSD) of top-1 small-molecule poses from 1.55 Å to 1.14 Å. In end-to-end blind evaluation without deposited receptor structures as input, LigandSeek achieved a mean completion rate of 62.8% across 77 PDB entries. With deposited receptor structures, this rate increased to 66.9%. LigandSeek provides an efficient, fully automated workflow from continuous three-dimensional cryo-EM density maps to all-atom ligand poses.
 
 # Introduction
 
@@ -22,66 +22,37 @@ LigandSeek follows a three-stage Find–Match–Build workflow:
 2. LigandSeek-Match uses a cross-modal matching network with graph and context attention. It integrates ligand language representations, molecular graph representations and contextual information from other ligand identities in the same complex. This enables rapid, accurate identity matching across a broad range of ligand types, including small molecules, metal ions and sugars.
 3. LigandSeek-Build fine-tunes the generative model PocketXMol with local density conditioning. This enables generated poses to satisfy both experimental density contours and pocket chemical constraints, thereby improving sampling accuracy.
 
-We evaluated the framework on 179 complexes comprising 2,502 ligand instances. Under blind evaluation conditions, only receptors modelled de novo by CryoAtom2 were used, with no deposited receptor structures provided as input. All three LigandSeek components outperformed their respective baselines. Find achieved a $\operatorname{one-to-one\ PRAUC}_{0.3}$ of 0.541, compared with 0.255 for Emap2lig-Find. Match achieved 86.6% overall matching accuracy, with a mean matching time of 0.09 s per candidate region, substantially faster than conventional reverse docking. Build reduced the median root-mean-square deviation (RMSD) of top-1 poses from 1.55 Å with the official model to 1.14 Å. In end-to-end blind evaluation across 77 complexes containing organic small molecules, LigandSeek achieved an all-atom modelling mean completion rate of 62.8%. LigandSeek connects ligand localisation, identity matching and pose reconstruction to generate accurate all-atom ligand poses from cryo-EM density maps. It provides a new tool for drug discovery and high-throughput cryo-EM screening.
+We evaluated the framework on 179 complexes comprising 2,502 ligand instances. Under blind evaluation conditions, only receptors modelled de novo by CryoAtom2 were used, with no deposited receptor structures provided as input. All three LigandSeek components outperformed their respective baselines. Find achieved a $\mathrm{PRAUC}^{\mathrm{instance}}_{0.3}$ of 0.541, compared with 0.255 for Emap2lig-Find. Match achieved 86.6% overall matching accuracy, with a mean matching time of 0.09 s per candidate region, substantially faster than conventional reverse docking. Build reduced the median root-mean-square deviation (RMSD) of top-1 poses from 1.55 Å with the official model to 1.14 Å. In end-to-end blind evaluation across 77 complexes containing organic small molecules, LigandSeek achieved an all-atom modelling mean completion rate of 62.8%. LigandSeek connects ligand localisation, identity matching and pose reconstruction to generate accurate all-atom ligand poses from cryo-EM density maps. It provides a new tool for drug discovery and high-throughput cryo-EM screening.
 
-# Overview
+# Overview of LigandSeek
 
-{{pptfig:"画图/总览图.pptx"|fig-overview_v2}}
+{{pptfig:"画图/总览图.pptx"|fig-overview_v2|width=5.5in}}
 
-LigandSeek is an automated three-stage framework that reconstructs all-atom ligand poses from experimental cryo-EM density maps ({{figref:fig-overview_v2}}). The framework accepts a three-dimensional cryo-EM density map, a protein or nucleic acid receptor structure, and the candidate ligand identities present in the complex, represented by SMILES strings[@weininger1988smiles]. The receptor structure can be either a deposited structure or a model reconstructed automatically from the density map by CryoAtom2[@cryoatom2_2025], enabling automated ligand modelling without requiring manually built receptors.
+LigandSeek is an automated three-stage framework that reconstructs all-atom ligand poses from experimental cryo-EM density maps ({{figref:fig-overview_v2}}). Inputs comprise a density map, a protein or nucleic acid receptor structure, and candidate ligand identities represented by SMILES strings[@weininger1988smiles]. The receptor structure can be either a deposited structure or a model reconstructed automatically from the density map by CryoAtom2[@cryoatom2_2025], enabling automated ligand modelling without requiring manually built receptors.
 
-LigandSeek decomposes ligand structure determination into three sequential stages: Find, Match and Build ({{figref:fig-overview_v2,fig-method-v8}}). First, LigandSeek-Find (hereafter Find) scans the entire complex, fusing continuous voxel-density signals with receptor context through a hybrid point–voxel network, to isolate discrete three-dimensional candidate ligand regions (blobs; {{figref:fig-method-v8|b}}). Second, LigandSeek-Match (hereafter Match) use a cross-modal architect to assign each valid candidate region to its corresponding chemical identity across diverse ligand classes, including organic small molecules, metal ions and sugars ({{figref:fig-method-v8|c}}). Third, LigandSeek-Build (hereafter Build) gets the localised binding site and the assigned ligand identity from the Find and Match, generate all-atom three-dimensional ligand poses under the receptor and density constraint({{figref:fig-method-v8|d}}). While Build provides modular interfaces to accommodate standard molecular docking tools, we developed density-guided PocketXMol (DG-PocketXMol)—which incorporates local cryo-EM density conditioning into PocketXMol[@pocketxmol]—as the default generative engine to ensure that reconstructed small-molecule poses simultaneously satisfy experimental density contours and pocket steric constraints.
+LigandSeek decomposes ligand structure determination into three sequential stages: Find, Match and Build ({{figref:fig-overview_v2,fig-method-v8}}). Using a hybrid point–voxel network, LigandSeek-Find (Find) combines voxel-density signals and receptor context to locate candidate ligand regions (blobs; {{figref:fig-method-v8|a}}). LigandSeek-Match (Match) assigns chemical identities to these regions through a cross-modal network, while excluding residual false positives ({{figref:fig-method-v8|b}}). Find and Match support organic small molecules, metal ions, sugars and other ligand classes. LigandSeek-Build (Build) combines the binding site located by Find and identity assigned by Match with the receptor pocket and experimental density ({{figref:fig-method-v8|c}}). Its default model, density-guided PocketXMol (DG-PocketXMol), adapts PocketXMol[@pocketxmol] with local density conditioning for small-molecule pose generation, while a modular interface also supports other downstream docking tools.
 
 # Results
 
-## LigandSeek segments ligand densities correctly
+## LigandSeek-Find improves ligand-region detection
 
-### Stage 1: Benchmark dataset and evaluation protocol
+We evaluated Find on 179 cryo-EM density maps with resolutions below 4.0 Å, released after 1 January 2026 and non-redundant with training data. These complexes contained 2,502 deposited ligand instances spanning multiple classes, including organic small molecules, metal ions and sugars. The small-molecule subset comprised 821 instances across 94 complexes within this benchmark. We compared LigandSeek-Find with deposited receptors (GT) or CryoAtom2-reconstructed receptors (CA2) against the density-only baseline Emap2lig-Find[@umap2lig].
 
+We assessed voxel-wise overlap using semantic Dice and ligand-instance detection using instance-level precision, recall and precision–recall area under the curve (PRAUC). Instance-level metrics used one-to-one matching at a bidirectional coverage threshold of 0.3. We also evaluated PRAUC at the stricter threshold of 0.5 (Methods).
 
-We evaluated LigandSeek on a non-redundant benchmark of 179 cryo-EM density maps (resolution < 4.0 Å) released after 1 January 2026. Across these 179 macromolecular complexes, the full benchmark comprises 2,502 deposited ligand instances spanning multiple chemical classes, including organic small molecules, metal ions and sugars. We also evaluated Find on the small-molecule subset of this benchmark, comprising 821 organic small-molecule instances across 94 complexes. For each complex, we tested LigandSeek-Find under two receptor input conditions: deposited receptor structures (GT) or receptor structures reconstructed de novo from the experimental density maps by CryoAtom2 (CA2), and compared it against the density-only baseline Emap2lig-Find[@umap2lig].
+With CA2 receptors, mean Dice increased from 0.050 for Emap2lig-Find to 0.477, and instance-level $\mathrm{PRAUC}_{0.3}$ increased from 0.255 to 0.541 ({{figref:stage1-overall-performance|a}}). With GT receptors, LigandSeek-Find achieved a mean Dice of 0.584 and an instance-level $\mathrm{PRAUC}_{0.3}$ of 0.663. The advantage persisted for small molecules, with corresponding PRAUC scores of 0.573 for CA2 and 0.701 for GT, compared with 0.462 for Emap2lig-Find ({{figref:stage1-overall-performance|b}}).
 
-We assessed ligand-region detection at both the semantic and instance levels (see Methods for formal definitions). At the semantic level, we used the Dice score to measure the overall voxel-wise overlap between the union of predicted candidate blobs and the union of ground-truth ligand regions across each density map. We also evaluated detection at the instance level. Specifically, a predicted blob and a ground-truth ligand instance were considered mutually compatible if each covered at least a fraction $\tau \in \{0.3, 0.5\}$ of the other's volume, and optimal bipartite matching via the Hungarian algorithm[@kuhn1955hungarian] was applied to enforce strict single-instance correspondence. Based on this matching, we computed instance-level precision ($\operatorname{instance\ precision}_{\tau}$) and instance-level recall ($\operatorname{instance\ recall}_{\tau}$) which further yield the $\operatorname{instance\ PRAUC}_{\tau}$ metrics. 
+{{pptfig:"画图/stage1结果.pptx"|stage1-overall-performance}}
 
+Paired comparisons confirmed that the advantage extended across individual complexes ({{figref:stage1-overall-performance|c,d}}). With CA2 receptors, LigandSeek-Find scored higher than Emap2lig-Find on 112 complexes, equally on 40 and lower on 27 across all ligands. At the stricter coverage threshold of 0.5, instance-level PRAUC remained higher with both receptor sources, including in the small-molecule subset (Supplementary Fig. 1).
 
+Across the 179 complexes, each contained an average of 14.0 ground-truth ligand instances, whereas Emap2lig-Find produced an average of 353.9 candidate regions. Its mean instance-level precision was 0.037, compared with 0.631 for LigandSeek-Find with CA2 receptors; mean recall was 0.312 versus 0.594 ({{figref:stage1-candidate-quality|a}}). LigandSeek-Find therefore reduced false positives while recovering more ligand instances, with the same pattern observed for small molecules ({{figref:stage1-candidate-quality|b}}). At the voxel level, additional false-positive density also reduced the overlap measured by Dice.
 
-【我目前的可能提案：把 detection completion 这个完成度图和 stage1-main-sixpanel 的 e f 拼起来，当作"对Emap2lig假阳性的诊断/进一步分析"，所以后续：我们把图重新组合之外，同时特别地把解释 detection completion 的解释放到后面————即，先解释 dice instance-level + 放 stage1-main-sixpanel 的 a-d；再点出假阳性多、解释 detection completion + 放 find-only-instance-completion】
+To assess detection under limited candidate counts, we measured the fraction of distinct ligand instances recovered from ranked candidates. Relative candidate counts of 100% and 300% permit examining up to one and three times the ground-truth instance count per complex, respectively. At 100%, mean detection completion across all ligands was 55.6% with CA2 and 66.4% with GT, compared with 25.9% for Emap2lig-Find ({{figref:stage1-candidate-quality|c}}). For small molecules, the corresponding values were 59.8%, 70.5% and 44.2% ({{figref:stage1-candidate-quality|d}}). At 300%, small-molecule completion reached 68.5% with CA2 and 73.3% with GT, compared with 51.6% for Emap2lig-Find.
 
-【"案例优先并入第二张图，展示同一复合物的真实区域、LigandSeek-Find 全部预测、Emap2lig 全部预测，并配同一区域的局部放大。具体病例需要先核对全局预测素材，不能直接采用版本1举例的 PDB；当前三个局部案例也不能直接承担“全局假阳性”的证据职责。"——————你的判断没问题。说理的优先级就是：【全局map-level】Emap2lig有很多假阳性(特别地：找假阳性在受体上的例子可以说明"Emap2lig因为没有受体信息，会把受体误认为配体"；找假阳性离受体很远的例子可以说明"Emap2lig因为没有受体信息，会凭空预测与受体无关（很远）的假阳性"；而与之比较我们并非如此)————>【局部instance-level】Emap2lig因为没有受体约束，预测的blob可能部分地长在了受体上（而与之比较我们并非如此）。】
+{{pptfig:"画图/stage1结果.pptx"|stage1-candidate-quality}}
 
-
-
-
-
-{{pptfig:"画图/stage1结果.pptx"|stage1-main-sixpanel}}
-
-Panels a, c and e of {{figref:stage1-main-sixpanel}} show predictions on the full test set. Panels b, d and f show evaluations restricted to small molecules.
-
-We compared LigandSeek-Find using either deposited or CryoAtom2-reconstructed receptors with the density-only method Emap2lig-Find ({{figref:stage1-main-sixpanel|a,b}}). Across the full test set, their mean Dice scores were 0.584, 0.477 and 0.050, respectively. Their mean $\operatorname{one-to-one\ PRAUC}_{0.3}$ scores were 0.663, 0.541 and 0.255, respectively ({{figref:stage1-main-sixpanel|a}}). At the stricter matching threshold of 0.5, their mean $\operatorname{one-to-one\ PRAUC}_{0.5}$ scores were 0.558, 0.447 and 0.126, respectively. LigandSeek-Find outperformed Emap2lig-Find even without deposited receptor structures as input, and this trend persisted in the small-molecule test subset.
-
-Panels c and d compare LigandSeek-Find directly against Emap2lig-Find using $\operatorname{one-to-one\ PRAUC}_{0.3}$ ({{figref:stage1-main-sixpanel|c,d}}). With CryoAtom2-reconstructed receptors, LigandSeek-Find outperformed Emap2lig-Find on 112 structures, performed comparably on 40 and was inferior on only 27 across the full test set ({{figref:stage1-main-sixpanel|c}}), demonstrating a substantial overall advantage. Emap2lig primarily targets small-molecule identification and modelling, and its detection performance was better for small molecules than across all ligand categories, as shown in {{figref:stage1-main-sixpanel|a,b}}.
-
-
-
-
-
-
-
-{{pptfig:"画图/stage1结果.pptx"|find-only-instance-completion}}
-
-In addition, to evaluate how effectively each method concentrates true ligands among its top-ranked predictions, we measured the detected instances ratio (detection completion) at $\tau = 0.3$ as a function of the relative candidate count, which normalises the number of examined top-ranked candidates by the number of ground-truth ligand instances in each complex. All metrics were evaluated both across all ligand categories and on the small-molecule subset alone, where non-small-molecule instances and the candidate blobs matched to them were excluded from the evaluation (see Methods).
-
-{{figref:find-only-instance-completion}} shows the number of ground-truth instances recovered at different candidate count thresholds. At equal candidate counts, LigandSeek-Find recovered more ligand instances than Emap2lig-Find ({{figref:find-only-instance-completion}}). A relative candidate count of 100% limits the number of predicted candidates examined to the ground-truth instance count in that PDB. At 100%, mean detection completion across all ligands was 55.6% with CA2 and 66.4% with GT, compared with 25.9% for Emap2lig-Find. In the small-molecule subset, the corresponding values were 59.8% and 70.5%, compared with 44.2% for Emap2lig-Find. At 300%, the candidate count limit was three times the ground-truth instance count. Small-molecule completion reached 68.5% for CA2 and 73.3% for GT, whereas Emap2lig-Find reached 51.6%. LigandSeek-Find therefore concentrated more true ligand instances among the highest-ranked candidates under both receptor conditions.
-
-Across the 179 test PDB entries, each complex contained an average of 14.0 ground-truth ligand instances, whereas Emap2lig-Find predicted an average of 353.9 candidate regions per entry. This flood of false positives severely undermined its precision despite acceptable recall ({{figref:stage1-main-sixpanel|e,f}}). Low precision directly depressed the semantic Dice score of Emap2lig-Find. However, true-positive instances generally ranked above false-positive instances among its predictions ({{figref:find-only-instance-completion}}). Both the detected instances ratio and one-to-one PRAUC are strongly influenced by candidate ranking quality, and their scores were somewhat higher than semantic Dice. Because downstream tasks cannot tolerate overwhelming candidate pools, inflating recall at the expense of precision is impractical. In contrast, LigandSeek-Find balanced precision and recall effectively ({{figref:stage1-main-sixpanel|e,f}}).
-
-### Stage 1: Representative cases
-
-Three representative cases showed that LigandSeek-Find covered ligand regions more completely than the density-only method Emap2lig-Find and detected regions that it missed ({{figref:stage1-threecase-main|a–c}}). For cholesterol in 9UWI, Emap2lig-Find predictions were concentrated within the ground-truth ligand region, achieving a precision of 0.990 but covering only 0.300 of that region. LigandSeek-Find increased coverage to 0.812, recovering more of the missed ligand region ({{figref:stage1-threecase-main|a}}). At the NADPH binding site in 9WUP, Emap2lig-Find produced no prediction overlapping the ground-truth ligand region. LigandSeek-Find covered 0.922 of that region in the same comparison ({{figref:stage1-threecase-main|b}}). Similarly, at the ADP site in 9RMI, Emap2lig-Find covered only 0.103 of the ground-truth region, whereas LigandSeek-Find covered 0.883 ({{figref:stage1-threecase-main|c}}). These local comparisons demonstrated advantages in both detecting ligand regions and delineating their spatial boundaries more accurately.
-
-LigandSeek-Find retained its main detection and coverage advantages in these cases when deposited receptor structures were replaced with receptors automatically reconstructed by CryoAtom2. With reconstructed receptors, the instance Dice scores for 9UWI and 9WUP were 0.848 and 0.715, respectively. These scores were close to those obtained with deposited receptors and exceeded those of Emap2lig-Find ({{figref:stage1-threecase-main|a–b}}). The 9RMI case illustrated a loss of precision after receptor replacement. For this ligand instance, the predicted region extended beyond the ligand, reducing precision from 0.607 to 0.396 and the Dice score from 0.719 to 0.532 ({{figref:stage1-threecase-main|c}}). Nevertheless, the prediction still covered 0.810 of the ground-truth ligand region, and its Dice score exceeded the 0.131 achieved by Emap2lig-Find. Thus, across these three cases, LigandSeek-Find usually retained good detection performance with CryoAtom2-reconstructed receptors when deposited receptor structures were unavailable.
-
-{{pptfig:"画图/stage1可视化.pptx"|stage1-threecase-main}}
+Emap2lig-Find was closer to LigandSeek-Find in instance-level PRAUC and detection completion than in semantic Dice. Its highest-ranked candidates therefore retained substantial ligand-detection signal despite the much larger final candidate pool. LigandSeek-Find recovered more true instances at both candidate limits, providing a more compact input for downstream identity assignment. Complete detection curves and per-PDB distributions are shown in Supplementary Fig. 2.
 
 ## Stage 2
 
@@ -122,7 +93,7 @@ We refer to the main model, which integrates the full voxel features, pocket con
 
 With deposited receptors, strongest achieved an overall matching accuracy of 87.8% and a foreground F1 of 86.0%. Matching accuracy was 92.5% for small molecules and 93.1% for metal ions, both exceeding the 70.8% (201/284) achieved for sugars. The voxel-only model achieved a foreground F1 of 84.1% and an overall matching accuracy of 83.7%. Its matching accuracy was slightly lower than that of strongest (87.8%) but substantially higher than those of density-only (78.6%) and pocket-only (79.4%). These comparisons indicated that the full voxel feature set contributed substantially to ligand discrimination.
 
-With CryoAtom2-reconstructed receptors, strongest still achieved 86.6% overall matching accuracy and a foreground F1 of 82.9%, which showed no marked decline for any of the four models. By contrast, Find showed a little reduction in ligand localisation performance ({{figref:stage1-main-sixpanel|a,b}}). Match was therefore more robust to the change in receptor source.
+With CryoAtom2-reconstructed receptors, strongest still achieved 86.6% overall matching accuracy and a foreground F1 of 82.9%, which showed no marked decline for any of the four models. By contrast, Find showed a little reduction in ligand localisation performance ({{figref:stage1-overall-performance|a,b}}). Match was therefore more robust to the change in receptor source.
 
 {{pptfig:"画图/stage2结果_忽视2+2例子.pptx"|stage2-strongest-pair}}
 
@@ -225,7 +196,7 @@ For top-1 poses with RMSD <3 Å, mean completion at a 100% budget was 63.2% for 
 
 Emap2lig is not a fully automated end-to-end modelling tool, but an interactive, semi-automated tool that relies on users to assign the correct SMILES to each detected blob. Even under the favourable assumption of perfect identity matching for Emap2lig, comparison of {{figref:e2e-find-build-direct-comparison}} and {{figref:supp-e2e-completion-small}} shows that the full LigandSeek pipeline still outperforms it.
 
-Full completion curves and per-PDB distributions are shown in Supplementary Fig. 4.
+Full completion curves and per-PDB distributions are shown in Supplementary Fig. 5.
 
 ### Representative cases
 
@@ -252,13 +223,15 @@ In conclusion, given the candidate ligand identities present in a complex, Ligan
 
 # Methods
 
+## Framework formulation
+
 LigandSeek takes protein and nucleic acid receptor structures, either deposited or automatically modelled by CryoAtom2, together with three-dimensional cryo-EM density maps.
 
 We represent protein and nucleic acid receptors uniformly as $A = \{(a_i, x_i)\}_{i=1}^{n}$. Here, $n$ is the number of receptor atoms, and $x_i \in \mathbb{R}^3$ is the spatial position of atom $i$. The representation $a_i$ encodes the atom's attributes, such as its element type and amino acid or nucleotide type. These attributes are represented by a 50-dimensional feature vector for each receptor atom.
 
 Let $M_{exp} \in \mathbb{R}^{D \times H \times W}$ denote the voxelised three-dimensional cryo-EM density map. The receptor structure yields a simulated density map $M_{sim} \in \mathbb{R}^{D \times H \times W}$ of the same dimensions. From $M_{exp}$ and $M_{sim}$, we construct a 56-channel multi-view density bank $M \in \mathbb{R}^{56 \times D \times H \times W}$.
 
-{{figref:fig-overview_v2}} shows the model inputs, outputs and overall workflow. LigandSeek reconstructs ligand poses end to end through three stages: Find, Match and Build. The 50-dimensional receptor-atom features and the multi-view density bank are the main inputs shared by all three stages. {{figref:fig-method-v8}} shows the overall network architecture, with further details provided in Methods.
+The 50-dimensional receptor-atom features and the multi-view density bank are the main inputs shared by Find, Match and Build.
 
 Find combines receptor information and experimental density information to predict ligand regions. It produces $J$ candidate ligand regions (blobs), expressed as:
 
@@ -465,39 +438,27 @@ Candidate $B_j$ is predicted as positive if and only if $s_j$ exceeds the fixed 
 
 The first score term measures the candidate's own density confidence. The second rewards nearby receptor atoms predicted to be close to a ligand, whereas the third penalises nearby receptor atoms predicted to be distant from ligands.
 
-### Stage 1: Evaluation metrics
+### Evaluation metrics
 
-For a given PDB structure, let the model predict $N_{pred}$ three-dimensional candidate blobs, $\{B_i\}_{i=1}^{N_{pred}}$. The structure contains $N_{gt}$ ground-truth ligand instances, $\{G_j\}_{j=1}^{N_{gt}}$, where $G_j$ denotes the ligand region of instance $j$. We set the bidirectional coverage threshold to $\tau \in \{0.3, 0.5\}$.
-
-We evaluated Find at both the semantic and instance levels. At the semantic level, the Dice score measured the overlap between the unions of predicted and ground-truth ligand regions:
+For each PDB entry, let $\{B_i\}_{i=1}^{N_{\mathrm{pred}}}$ denote the final predicted candidate regions and $\{G_j\}_{j=1}^{N_{\mathrm{gt}}}$ the ground-truth ligand regions. Semantic Dice measures overlap between the unions of predicted and ground-truth regions:
 
 $$
 \mathrm{Dice}=\frac{2\left|\left(\bigcup_i B_i\right)\cap\left(\bigcup_j G_j\right)\right|}{\left|\bigcup_i B_i\right|+\left|\bigcup_j G_j\right|},
 $$
 
-where $\vert{}\cdot\vert{}$ denotes the number of voxels in a region.
+where $|\cdot|$ denotes voxel count; Dice does not use the instance-matching threshold.
 
-At the instance level, predicted instances $\{B_i\}_{i=1}^{N_{pred}}$ and ground-truth instances $\{G_j\}_{j=1}^{N_{gt}}$ form the two vertex sets of a bipartite graph. An edge connects $B_i$ and $G_j$ if each covers at least a fraction $\tau$ of the other. We then used the Hungarian algorithm[@kuhn1955hungarian] to obtain a maximum matching between the two sets. Let $N^{\mathrm{1to1}}_{\tau}$ be the number of successfully matched instance pairs. We define one-to-one precision and recall as:
+For instance-level metrics, a candidate and a ground-truth instance are compatible when each covers at least a fraction $\tau$ of the other. We evaluated $\tau\in\{0.3,0.5\}$ and used the Hungarian algorithm[@kuhn1955hungarian] to obtain a maximum one-to-one matching. If $N_{\tau}^{\mathrm{match}}$ pairs are matched, instance-level precision and recall are:
 
 $$
-\operatorname{1to1P}_{\tau}
-=
-\frac{N^{\mathrm{1to1}}_{\tau}}{N_{\mathrm{pred}}},
-\qquad
-\operatorname{1to1R}_{\tau}
-=
-\frac{N^{\mathrm{1to1}}_{\tau}}{N_{\mathrm{gt}}},
+P_{\tau}^{\mathrm{instance}}=\frac{N_{\tau}^{\mathrm{match}}}{N_{\mathrm{pred}}},\qquad R_{\tau}^{\mathrm{instance}}=\frac{N_{\tau}^{\mathrm{match}}}{N_{\mathrm{gt}}}.
 $$
 
-These quantities yield the one-to-one F1 score at threshold $\tau$, $\operatorname{1to1F1}_{\tau}$. Ranking predicted instances by their mean voxel probability yields the corresponding one-to-one precision–recall area under the curve (PRAUC), $\operatorname{1to1PRAUC}_{\tau}$. We use "1to1" and "one-to-one" interchangeably depending on the context.
+Precision is zero for an empty prediction set; a ground-truth instance cannot contribute more than one successful pair. Ranking candidates by confidence and varying the retained candidate set yields the instance-level precision–recall curve and its area, $\mathrm{PRAUC}_{\tau}^{\mathrm{instance}}$.
 
-One-to-one metrics exclude both one-to-many and many-to-one matches between predicted and ground-truth instances. For example, if one predicted blob covers several ground-truth ligands, at most one pair can count as a successful match. These metrics require accurate instance localisation and separation, penalising incorrect splitting or merging as well as localisation errors. They therefore provide a precise assessment of the model's performance.
+Detection completion measures the fraction of distinct ground-truth instances recovered within a relative candidate count. Candidates retain the original ordering, with selected candidates first and remaining candidates afterwards. Within each group, candidates are ordered by descending mean voxel probability, with ties resolved by original blob index. Each candidate is assigned to the ground-truth instance with maximal geometric-mean coverage among pairs meeting the bidirectional threshold of 0.3. Repeated hits occupy candidate positions but increase completion only at the first detection of an instance. For $N$ target instances and relative candidate count $\rho$, at most $\lfloor\rho N\rfloor$ candidates are examined.
 
-We also evaluated the fraction of detected instances as a function of relative candidate count, which normalises the number of examined candidates by the ground-truth instance count per PDB. A ground-truth instance was considered detected if it was matched to a predicted blob at the $\tau=0.3$ bidirectional coverage threshold.
-
-All metrics were evaluated across all ligands and for small molecules only. In the small-molecule evaluation, non-small-molecule ground-truth ligands, such as sugars and metal ions, and the candidate blobs matched to them were excluded from numerators, denominators and candidate counts.
-
-
+All-ligand evaluation includes 179 PDB entries and 2,502 instances; small-molecule evaluation includes 94 PDB entries and 821 instances. In the small-molecule evaluation, candidates are first assigned across all ligand classes, and those assigned to non-small-molecule instances are omitted. Unassigned background candidates remain, as do repeated hits in completion analysis. P/R matching uses the retained final candidates; completion follows cumulative first detections along the candidate order. Metrics are averaged equally across PDB entries, retaining zero-detection entries. Confidence intervals for means use 10,000 PDB bootstrap resamples with seed 20260922 and percentile limits of 2.5% and 97.5%. Methods and candidate limits within the same cohort share resampling indices.
 
 ## Stage 2: Match
 

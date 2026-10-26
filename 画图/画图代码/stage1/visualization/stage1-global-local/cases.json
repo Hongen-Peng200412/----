@@ -1,0 +1,12 @@
+[
+  {"pdb":"9bjj", "role":"primary", "occurrence_id":1,
+   "local_blobs":{"cryo":3,"emap":143,"real":0},
+   "receptor_fp_blob":148,"remote_fp_blob":20,
+   "global_turns":[["x",-20],["y",30]],
+   "local_turns":[["y",35],["x",-25]]},
+  {"pdb":"9wup", "role":"backup", "occurrence_id":0,
+   "local_blobs":{"cryo":1,"emap":100,"real":0},
+   "receptor_fp_blob":139,"remote_fp_blob":2,
+   "global_turns":[["x",-20],["y",30]],
+   "local_turns":[["y",35],["x",-25]]}
+]

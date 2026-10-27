@@ -19,14 +19,17 @@ process.env.RUNTIME_NODE_MODULES ??= 'C:/Users/15919/.cache/codex-runtimes/codex
 const root = repoRoot;
 const runtime = 'C:/Users/15919/.cache/codex-runtimes/codex-primary-runtime/dependencies';
 process.env.RUNTIME_NODE_MODULES = `${runtime}/node/node_modules`;
-const skill = 'C:/Users/15919/.codex/plugins/cache/openai-primary-runtime/presentations/26.1015.12040/skills/presentations';
+// skill 指向本机已安装的 PPT 包校验工具, 不属于科学输入或临时产物.
+const skill = 'C:/Users/15919/.codex/plugins/cache/openai-primary-runtime/presentations/26.1025.11240/skills/presentations';
 const require = createRequire(`${runtime}/node/node_modules/@oai/artifact-tool/package.json`);
 const { Presentation, PresentationFile } = await import(pathToFileURL(require.resolve('@oai/artifact-tool')).href);
 const { finalizePresentation } = await import(pathToFileURL(`${skill}/container_tools/artifact_tool_utils.mjs`).href);
-const output = path.join(root, '画图/画图代码/stage3/output/stage3-cases-main');
+// output 指向当前条件的冻结案例及其图注; 未指定时仍读取原无 level 目录.
+const output = process.env.FIGURE_SOURCE_ROOT ? path.resolve(process.env.FIGURE_SOURCE_ROOT) : path.join(root, '画图/画图代码/stage3/output/stage3-cases-main');
 const temporary = process.env.FIGURE_BUILD_ROOT ? path.resolve(process.env.FIGURE_BUILD_ROOT) : path.join(root, 'temp/stage3_cases/deck');
 await fs.mkdir(temporary, { recursive: true });
-const regenerated=process.env.FIGURE_RENDER_ROOT ? path.resolve(process.env.FIGURE_RENDER_ROOT) : path.join(root,'画图/画图代码/stage3/output/stage3-cases-main/regenerated');
+// regenerated 保存本条件的新图稿和候选图集, 与 output 中冻结科学输入分开.
+const regenerated=process.env.FIGURE_RENDER_ROOT ? path.resolve(process.env.FIGURE_RENDER_ROOT) : path.join(output,'regenerated');
 await fs.mkdir(regenerated,{recursive:true});
 const requestedName=process.argv[2]??'stage3-cases';
 if(path.basename(requestedName)!==requestedName) throw new Error('候选文件名不得含目录');
@@ -118,7 +121,7 @@ for (const page of pages) {
 const candidatePath = path.join(temporary, 'candidate.pptx');
 await (await PresentationFile.exportPptx(presentation)).save(candidatePath);
 const result = await finalizePresentation({
-  workspaceDir: (process.env.FIGURE_BUILD_ROOT??root), candidatePath, finalPath: path.join(regenerated,candidateName),
+  workspaceDir: root, candidatePath, finalPath: path.join(regenerated,candidateName),
   pythonExecutable: `${runtime}/python/python.exe`,
   integrityValidatorPath: `${skill}/container_tools/inspect_presentation_package_integrity.py`,
   layoutValidatorPath: `${skill}/container_tools/inspect_presentation_layout_geometry.py`,

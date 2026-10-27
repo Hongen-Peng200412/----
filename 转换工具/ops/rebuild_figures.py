@@ -19,7 +19,7 @@ from zipfile import ZipFile
 
 from lxml import etree as XML
 
-from figure_provenance import Deck, load_records, relationship_target, set_comment_text, xml_bytes
+from figure_provenance import Deck, comment_text, load_records, relationship_target, set_comment_text, xml_bytes
 
 ROOT = Path(__file__).resolve().parents[2]
 CODE = ROOT / "画图/画图代码"
@@ -103,6 +103,8 @@ def native_commands(figure: str, build: Path) -> list[list]:
 
 def commands_for(figure: str, build: Path) -> list[list]:
     """按稳定图名装配既有完整步骤；同组算法保持共享，临时文件统一由环境定位。"""
+    # 后缀只区分保留的无 level 图; 科学条件由 main 显式绑定, 同一模板无需复制.
+    figure = figure.removesuffix("-NO_LEVEL")
     python = [sys.executable,"-X","utf8","-B"]
     node = [NODE]
     p=lambda relative,*args:python+[CODE/relative,*args]
@@ -134,7 +136,7 @@ def commands_for(figure: str, build: Path) -> list[list]:
         return [p("e2e/calculate/e2e-find-build-direct-comparison/plot_find_build_direct.py"),n("e2e/calculate/e2e-find-build-direct-comparison/assemble.mjs")]
     if figure == "e2e-accounting-rules-draft":
         return [p("e2e/calculate/e2e-accounting/build_ppt.py","--rules-only")]
-    if figure == "stage3-cases-main":
+    if figure in ("stage3-cases-main", "stage3-cases-density", "stage3-cases-clash"):
         prefix="stage3/visualization/stage3-cases-main/"
         return [p(prefix+"measure_cases.py"),p(prefix+"make_geometry.py"),p(prefix+"render_figure.py"),n(prefix+"build_deck.mjs")]
     if figure in ("stage1-fourcase-main", "stage1-threecase-main"):
@@ -160,6 +162,20 @@ def finish_candidate(figure: str, build: Path, records: list, generated_captions
         if path.name=='rebuilt.pptx' or any(word in path.parts for word in ("backups","rendered")):continue
         try:
             deck=Deck(path)
+            if figure.endswith('-NO_LEVEL'):
+                # 为本次旧条件候选的全部页面补后缀, 避免未登记辅助页误接新条件备注; 不改图形.
+                for original_name in list(deck.figures):
+                    if original_name.endswith('-NO_LEVEL'):
+                        continue
+                    qualified_name = original_name + '-NO_LEVEL'
+                    page = deck.figures.pop(original_name)
+                    for part in page.comments:
+                        for comment in deck.comments(part):
+                            if comment_text(comment).strip() == '@@' + original_name:
+                                set_comment_text(comment, '@@' + qualified_name)
+                                deck.changed.add(part)
+                    page.names = [qualified_name]
+                    deck.figures[qualified_name] = page
             if figure in deck.figures:candidates.append((path,deck))
         except (ValueError,KeyError):
             continue
@@ -228,6 +244,20 @@ def main() -> int:
         environment['NODE_OPTIONS']='--require='+str(SUPPORT/'node_guard.cjs')
         environment['MPLCONFIGDIR']=str(build/'matplotlib')
         environment['STAGE1_FIGURE_VERSION']='v5'
+        record = next(item for item in records if item.metadata.get('figure') == figure)
+        # 追溯 inputs 明确绑定科学条件; 不能按同名 data.json 或全局默认值猜测使用哪次实验.
+        explicit_level = any('explicit_emdb_level' in path for path in record.metadata.get('inputs', []))
+        environment['EMAP2LIG_CONDITION'] = 'explicit_emdb_level' if explicit_level else 'no_level'
+        if explicit_level:
+            # 新共享统计只服务 level 条件的公平对接/完成度; 原无 level JSON 永久保留原位.
+            level_root = CODE / 'e2e/output/find-build-shared/explicit_emdb_level'
+            environment['FIND_BUILD_DATA'] = str(level_root / 'data.json')
+            environment['E2E_TOPK_DATA'] = str(level_root / 'topk_data.json')
+            # 新病例资产保持原 GT-C0 输入和科学定义, 只替换相应条件的 Emap2lig Top-1.
+            environment['FIGURE_SOURCE_ROOT'] = str(CODE / 'stage3/output/stage3-cases-main/explicit_emdb_level')
+        else:
+            for name in ('FIND_BUILD_DATA', 'E2E_TOPK_DATA', 'FIGURE_SOURCE_ROOT'):
+                environment.pop(name, None)
         steps=[];receipt={'figure':figure,'build':str(build),'old_temp_blocked':True,'steps':steps,'passed':False}
         print(f'重建 {figure}',flush=True)
         try:

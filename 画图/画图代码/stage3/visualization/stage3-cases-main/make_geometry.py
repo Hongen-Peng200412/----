@@ -12,7 +12,8 @@ from scipy.spatial import cKDTree
 from skimage.measure import marching_cubes
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / 'AGENTS.md').is_file() and (p / '论文草稿.md').is_file())
-FROZEN = ROOT / '画图/画图代码/stage3/output/stage3-cases-main'
+# FROZEN 指向本次读取的科学条件目录, 其 assets 保存原排序首位坐标和原实验密度.
+FROZEN = Path(os.environ['FIGURE_SOURCE_ROOT']) if 'FIGURE_SOURCE_ROOT' in os.environ else ROOT / '画图/画图代码/stage3/output/stage3-cases-main'
 OUT = Path(os.environ['FIGURE_RENDER_ROOT']) if 'FIGURE_RENDER_ROOT' in os.environ else FROZEN / 'regenerated'
 SOURCE = FROZEN / 'assets'
 COLORS = dict(official='#CD8750', tuned='#4878B6', build='#94669C', gt='#279D98', receptor='#7B8C55', density='#A5AFB7', clash='#C43D43')
@@ -55,6 +56,10 @@ def bonds_layer(points, bonds, color, width, alpha, name):
 
 # 保存全部十个冻结实例的几何; 各页实际展示实例由 render_figure.py 选择.
 groups = [('density', [('9q16',0),('9ub7',3),('9r3d',0)]), ('clash', [('9bjj',16),('30ga',7),('9wq3',5)]), ('alternatives', [('9llg',2),('9lfa',0),('9u7j',2),('9wup',2)])]
+if 'FIGURE_SOURCE_ROOT' in os.environ:
+    # 本条件 case_selection.json 的两组各五个实例均生成几何, 主图只选其中各三个.
+    selection = json.loads((FROZEN / 'case_selection.json').read_text(encoding='utf-8'))
+    groups = [(group, [tuple(key) for key in selection[group]]) for group in ['density', 'clash']]
 metrics = {(r['pdb_id'],r['occurrence_id']): r for r in json.loads((OUT/'case_metrics.json').read_text(encoding='utf-8'))}
 cases = []
 geometry = []

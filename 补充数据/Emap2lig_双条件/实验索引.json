@@ -2,10 +2,10 @@
   "schema_version": 1,
   "path_base": "paper_repository_root",
   "paper_state": {
-    "current_emap2lig_condition": "no_level",
+    "current_emap2lig_condition": "explicit_emdb_level",
     "planned_main_condition": "explicit_emdb_level",
     "planned_supplement_condition": "no_level",
-    "manuscript_and_slides_switched": false
+    "manuscript_and_slides_switched": true
   },
   "cohorts": {
     "find_all": {
@@ -75,7 +75,11 @@
         "build_summary": "补充数据/Emap2lig_双条件/explicit_emdb_level/build/build_summary.json",
         "final_audit": "补充数据/Emap2lig_双条件/explicit_emdb_level/inputs/final_audit.json",
         "metadata_inventory": "补充数据/Emap2lig_双条件/explicit_emdb_level/provenance/metadata_inventory.json",
-        "source_code_receipt": "补充数据/Emap2lig_双条件/explicit_emdb_level/provenance/source_code_receipt.json"
+        "source_code_receipt": "补充数据/Emap2lig_双条件/explicit_emdb_level/provenance/source_code_receipt.json",
+        "stage1_plot_data": "画图/画图代码/stage1/output/stage1-results-revision/explicit_emdb_level/data/plot_data.json",
+        "shared_figure_data": "画图/画图代码/e2e/output/find-build-shared/explicit_emdb_level/data.json",
+        "docking_cases": "画图/画图代码/stage3/output/stage3-cases-main/explicit_emdb_level/assets",
+        "case_selection": "画图/画图代码/stage3/output/stage3-cases-main/explicit_emdb_level/case_selection.json"
       },
       "server_paths": {
         "scientific_root": "/storage/penghongen/Emap2lig/contour_level_20261026",

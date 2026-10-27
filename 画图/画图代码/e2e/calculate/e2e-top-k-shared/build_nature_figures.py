@@ -8,15 +8,18 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 import win32com.client
 
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / 'AGENTS.md').is_file() and (p / '论文草稿.md').is_file())
-DATA_PATH = next(p for p in Path(__file__).resolve().parents if (p / 'AGENTS.md').is_file() and (p / '论文草稿.md').is_file()) / '画图/画图代码/e2e/output/e2e-top-k/data.json'
-OUTPUT_DIR = ROOT / "temp/e2e-top-k"
-TEMP_DIR = ROOT / "temp"
+# DATA_PATH: 指定条件的冻结整数计数; 默认入口保留原 no_level 科学结果.
+DATA_PATH = Path(os.environ['E2E_TOPK_DATA']) if 'E2E_TOPK_DATA' in os.environ else ROOT / '画图/画图代码/e2e/output/e2e-top-k/data.json'
+# OUTPUT_DIR/TEMP_DIR: 本次候选 PPT 与导出预览位置, 不覆盖正式图集或原冻结计数.
+OUTPUT_DIR = Path(os.environ['FIGURE_BUILD_ROOT']) if 'FIGURE_BUILD_ROOT' in os.environ else ROOT / "temp/e2e-top-k"
+TEMP_DIR = OUTPUT_DIR if 'FIGURE_BUILD_ROOT' in os.environ else ROOT / "temp"
 FIGURE_WIDTH = 519.0  # 183 mm，双栏成品宽度。
 COLORS = {
     "ink": "263746",

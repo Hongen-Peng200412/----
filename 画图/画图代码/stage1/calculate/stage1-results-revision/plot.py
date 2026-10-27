@@ -44,6 +44,7 @@ def draw_panel(ax, kind, cohort, data, summary):
     cohort 为 full 或 small；data 保留原始 values、bars、distribution。
     summary 的键为 (cohort, model, budget)，每项含 mean/lower/upper，
     比例单位为 0–1；逐 PDB 结果和方法顺序都保持原样。
+    paired_metric 在新条件取 dice, 旧条件缺省 oto03; 配对 x/y 均为 (N_pdb,), 与当前 cohort 的同一 PDB 轴对齐, full 为179、small 为94.
     """
     block = data["cohorts"][cohort]
     if kind in ("overall", "strict"):
@@ -64,8 +65,10 @@ def draw_panel(ax, kind, cohort, data, summary):
         ax.set(xlim=(-0.5, len(metrics) - 0.5), xticks=range(len(metrics)), xticklabels=labels, ylabel="Score", ylim=(0, 1.06), yticks=[0, 0.5, 1])
         ax.tick_params(axis="x", length=0, pad=6)
     elif kind == "paired":
-        x = np.asarray(block["models"]["Emap"]["values"]["oto03"])
-        y = np.asarray(block["models"]["Cryo"]["values"]["oto03"])
+        # 新主图配对语义 Dice; no_level 的旧图仍使用原实例 PRAUC.
+        metric = data["paired_metric"] if "paired_metric" in data else "oto03"
+        x = np.asarray(block["models"]["Emap"]["values"][metric])
+        y = np.asarray(block["models"]["Cryo"]["values"][metric])
         ax.plot([0, 1], [0, 1], color="#8B969F", linewidth=0.8, linestyle=(0, (3, 3)), zorder=1)
         points = ax.scatter(x, y, c=block["resolution"], cmap="viridis_r", vmin=1, vmax=4, s=13, edgecolor="white", linewidth=0.3, alpha=0.8, zorder=2, clip_on=False)
         ax.set(xlim=(0, 1), ylim=(0, 1), xticks=[0, 0.5, 1], yticks=[0, 0.5, 1], xlabel="Emap2lig-Find", ylabel="LigandSeek-Find (CA2)", aspect="equal")
@@ -81,7 +84,8 @@ def draw_panel(ax, kind, cohort, data, summary):
         colourbar.solids.set_edgecolor("face")
         colourbar.solids.set_linewidth(0.2)
         counts = block["paired_counts"]
-        ax.set_xlabel(f"Emap2lig-Find\nHigher / equal / lower: {counts['find_higher']} / {counts['equal']} / {counts['emap_higher']}", fontsize=7.2)
+        xlabel = f"Emap2lig-Find\nHigher / equal / lower:\n{counts['find_higher']} / {counts['equal']} / {counts['emap_higher']}" if "paired_metric" in data else f"Emap2lig-Find\nHigher / equal / lower: {counts['find_higher']} / {counts['equal']} / {counts['emap_higher']}"
+        ax.set_xlabel(xlabel, fontsize=7.2)
     elif kind == "precision_recall":
         for metric_index, metric in enumerate(("precision", "recall")):
             for model_index, model in enumerate(MODELS):
@@ -168,8 +172,17 @@ def main():
     """按固定图契约生成四张图，所有可再生输出只写本次 build 目录。"""
     build = Path(os.environ["FIGURE_BUILD_ROOT"]) if "FIGURE_BUILD_ROOT" in os.environ else ROOT / "temp/stage1_revision_20261025/figures"
     build.mkdir(parents=True, exist_ok=True)
-    data = json.loads((CODE / "stage1/output/stage1-main-sixpanel/v5/data/plot_data.json").read_text(encoding="utf-8"))
-    panels = json.loads((CODE / "e2e/output/find-build-shared/data.json").read_text(encoding="utf-8"))["panels"]
+    # 当前主图读取显式 level 的冻结统计; no_level 只用于重建已区分的旧条件图.
+    condition = os.environ.get("EMAP2LIG_CONDITION", "explicit_emdb_level")
+    assert condition in ("explicit_emdb_level", "no_level"), "必须明确选择已登记的 Emap2lig 条件"
+    # level_data 指向本轮新统计, 不覆盖原 v5 数据或旧共享完成度数据.
+    level_data = CODE / "stage1/output/stage1-results-revision/explicit_emdb_level/data"
+    # plot_path 指向当前条件的逐 PDB 指标、区间与小提琴分布; 旧 v5 保留原位.
+    plot_path = level_data / "plot_data.json" if condition == "explicit_emdb_level" else CODE / "stage1/output/stage1-main-sixpanel/v5/data/plot_data.json"
+    # completion_path 指向当前条件的全配体和全部小分子完成度面板; 不读取 Build 子集替代它们.
+    completion_path = level_data / "completion_panels.json" if condition == "explicit_emdb_level" else CODE / "e2e/output/find-build-shared/data.json"
+    data = json.loads(plot_path.read_text(encoding="utf-8"))
+    panels = json.loads(completion_path.read_text(encoding="utf-8"))["panels"]
     completion = {}
     summary = {}
     source_rows = []
@@ -209,27 +222,41 @@ def main():
         "stage1-candidate-quality": "候选区域质量与有限候选数量下的配体检出。" + common_zh + "\na, b，双向覆盖阈值0.3下，全配体和小分子的实例级精确率与召回率。小提琴表示分布，淡色点为逐PDB结果，白色圆点与粗线为中位数和四分位范围。\nc, d，全配体和小分子在100%及300%相对候选数量下的平均检出完成度。100%表示考察的候选数上限等于该PDB的真实实例数，300%为其三倍。候选与真实实例的双向覆盖均至少为0.3；候选归属覆盖率几何均值最大的真实实例，每个实例只累计首次检出。小分子视图忽略归属于非小分子的候选，保留背景与重复命中。柱高为PDB等权均值；误差条为10,000次PDB bootstrap的95%区间。\nENGLISH:\nCandidate-region quality and ligand detection at limited candidate counts. " + common_en + "\na, b, Instance-level precision and recall for all ligands and small molecules, respectively, at a bidirectional coverage threshold of 0.3. Violins show distributions, faint points show individual PDB entries, and white circles and thick lines indicate medians and interquartile ranges.\nc, d, Mean detection completion for all ligands and small molecules at relative candidate counts of 100% and 300%. These limits equal one and three times the ground-truth instance count per PDB, respectively. Candidates are assigned by maximal geometric-mean coverage among pairs satisfying bidirectional coverage of at least 0.3. Each instance contributes only its first detection. The small-molecule evaluation omits candidates assigned to other ligand classes but retains background candidates and repeated hits. Bars show PDB-equal means; error bars show 95% intervals from 10,000 PDB bootstrap resamples.",
         "stage1-strict-threshold": "更严格覆盖阈值下的配体区域检出。" + common_zh + "\na, b，全配体和小分子在双向覆盖阈值0.5下的实例级PRAUC。柱高与横线表示PDB等权均值，淡色点表示各PDB结果；误差条为10,000次PDB bootstrap的95%区间。\nENGLISH:\nLigand-region detection at a stricter coverage threshold. " + common_en + "\na, b, Instance-level PRAUC for all ligands and small molecules, respectively, at a bidirectional coverage threshold of 0.5. Bars and horizontal marks show PDB-equal means; faint points show individual PDB entries. Error bars show 95% intervals from 10,000 PDB bootstrap resamples.",
     }
+    if condition == "explicit_emdb_level":
+        counts = [data["cohorts"][cohort]["paired_counts"] for cohort in ("full", "small")]
+        counts_text = " and ".join(f"{item['find_higher']}/{item['equal']}/{item['emap_higher']}" for item in counts)
+        captions["stage1-overall-performance"] = "配体区域检出的整体表现。" + common_zh + "\na, d，全配体和小分子的语义Dice，以及双向覆盖阈值0.3下的实例级PRAUC。柱高与横线为PDB等权均值，淡色点为逐PDB结果；误差条为10,000次PDB bootstrap的95%区间。\nb, e，同一PDB上CA2条件的LigandSeek-Find与Emap2lig-Find的语义Dice比较；虚线表示分数相等，点颜色表示实验密度图分辨率。较高、相等、较低的PDB数分别为141/15/23和68/7/19。\nc, f，双向覆盖阈值0.3下，全配体和小分子的实例级精确率与召回率。小提琴表示分布，淡色点为逐PDB结果，白色圆点与粗线为中位数和四分位范围。\nENGLISH:\nOverall performance of ligand-region detection. " + common_en + "\na, d, Semantic Dice, and instance-level PRAUC at a bidirectional coverage threshold of 0.3, for all ligands and small molecules, respectively. Bars and horizontal marks show PDB-equal means; faint points show individual PDB entries. Error bars show 95% intervals from 10,000 PDB bootstrap resamples.\nb, e, Paired semantic Dice comparisons between LigandSeek-Find (CA2) and Emap2lig-Find. Each point represents one PDB entry; colours indicate map resolution, and dashed lines indicate equal scores. Higher/equal/lower counts are " + counts_text + " for all ligands and small molecules, respectively.\nc, f, Instance-level precision and recall for all ligands and small molecules, respectively, at a bidirectional coverage threshold of 0.3. Violins show distributions, faint points show individual PDB entries, and white circles and thick lines indicate medians and interquartile ranges."
     manifest = []
     plt.rcParams.update({"mathtext.fontset": "custom", "mathtext.rm": "Calibri", "mathtext.it": "Calibri:italic", "mathtext.bf": "Calibri:bold", "mathtext.default": "regular"})
     specifications = (("stage1-overall-performance", ("overall", "paired"), 170), ("stage1-candidate-quality", ("precision_recall", "completion"), 132), ("stage1-strict-threshold", ("strict",), 78))
     for figure_id, kinds, height_mm in specifications:
+        six_panel = figure_id == "stage1-overall-performance" and condition == "explicit_emdb_level"
+        if six_panel:
+            height_mm = 155
         fig = plt.figure(figsize=(180 / 25.4, height_mm / 25.4))
-        if figure_id == "stage1-overall-performance":
+        if six_panel:
+            grid = fig.add_gridspec(2, 3, left=0.085, right=0.955, bottom=0.16, top=0.87, wspace=0.60, hspace=0.70)
+            # 六面板按行排列测试范围, 按列排列整体、配对和 P/R; 不改变现有图元.
+            positions = [(row, col, kind, cohort) for row, cohort in enumerate(("full", "small")) for col, kind in enumerate(("overall", "paired", "precision_recall"))]
+        elif figure_id == "stage1-overall-performance":
             grid = fig.add_gridspec(2, 2, left=0.105, right=0.91, bottom=0.12, top=0.86, wspace=0.48, hspace=0.48, height_ratios=[0.78, 1.2])
+            positions = [(row, col, kind, cohort) for row, kind in enumerate(kinds) for col, cohort in enumerate(("full", "small"))]
         else:
             grid = fig.add_gridspec(len(kinds), 2, left=0.105, right=0.985, bottom=0.13 if len(kinds) == 2 else 0.24, top=0.83 if len(kinds) == 2 else 0.68, wspace=0.31, hspace=0.60)
+            positions = [(row, col, kind, cohort) for row, kind in enumerate(kinds) for col, cohort in enumerate(("full", "small"))]
         fig.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.54, 0.985), ncol=3, frameon=False, fontsize=7.6, handlelength=1.2, columnspacing=1.2)
-        for row, kind in enumerate(kinds):
-            for col, cohort in enumerate(("full", "small")):
-                ax = fig.add_subplot(grid[row, col])
-                draw_panel(ax, kind, cohort, data, summary)
-                letter = chr(97 + row * 2 + col)
-                ax.set_gid(letter)
-                ax.annotate(letter, xy=(0, 1), xycoords="axes fraction", xytext=(-27, 8), textcoords="offset points", fontsize=10, fontweight="bold", va="bottom", annotation_clip=False)
-                title = "All ligands" if cohort == "full" else "Small molecules"
-                if kind == "paired":
-                    title += r" · instance-level $\mathbf{PRAUC}_{0.3}$"
-                ax.set_title(title, loc="left", pad=10, fontweight="bold")
+        for row, col, kind, cohort in positions:
+            ax = fig.add_subplot(grid[row, col])
+            if six_panel:
+                ax.set_box_aspect(1)
+            draw_panel(ax, kind, cohort, data, summary)
+            letter = chr(97 + row * (3 if six_panel else 2) + col)
+            ax.set_gid(letter)
+            ax.annotate(letter, xy=(0, 1), xycoords="axes fraction", xytext=(-27, 8), textcoords="offset points", fontsize=10, fontweight="bold", va="bottom", annotation_clip=False)
+            title = "All ligands" if cohort == "full" else "Small molecules"
+            if kind == "paired":
+                title += " · Dice" if six_panel else r" · instance-level $\mathbf{PRAUC}_{0.3}$"
+            ax.set_title(title, loc="left", pad=10, fontweight="bold")
         export_figure(fig, figure_id, captions[figure_id], build, manifest)
 
     fig = plt.figure(figsize=(180 / 25.4, 142 / 25.4))

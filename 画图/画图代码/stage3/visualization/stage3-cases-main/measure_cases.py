@@ -14,7 +14,8 @@ from scipy.ndimage import map_coordinates
 from scipy.spatial.distance import cdist
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / 'AGENTS.md').is_file() and (p / '论文草稿.md').is_file())
-SOURCE = ROOT/'画图/画图代码/stage3/output/stage3-cases-main'
+# SOURCE 指向当前条件的冻结案例资产; 未指定时保持原无 level 输入目录.
+SOURCE = Path(os.environ['FIGURE_SOURCE_ROOT']) if 'FIGURE_SOURCE_ROOT' in os.environ else ROOT/'画图/画图代码/stage3/output/stage3-cases-main'
 OUTPUT = Path(os.environ['FIGURE_RENDER_ROOT']) if 'FIGURE_RENDER_ROOT' in os.environ else SOURCE/'regenerated'
 OUTPUT.mkdir(parents=True,exist_ok=True)
 # 已与服务器 RDKit GetRvdw 逐项核对; 键为原子序数, 值为范德华半径 Å.

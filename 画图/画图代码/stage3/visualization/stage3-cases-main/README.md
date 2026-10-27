@@ -2,6 +2,27 @@
 
 # Stage3 构象案例图
 
+显式 EMDB level 条件的病例资产位于 `stage3/output/stage3-cases-main/explicit_emdb_level/`。设置 `FIGURE_SOURCE_ROOT` 为该绝对路径后，以下同一套测量、几何与绘图程序读取新条件；不设置时仍读取原无 level 资产。新条件的 `case_selection.json` 定义两组各五个候选与各三个正文主选，所有新输出写该条件的 `regenerated/`，正式 PPT 由作者批准的追加页流程更新。
+
+新条件 `assets/<pdb>_<occurrence>/` 每例保存 `arrays.npz`、`metadata.json` 和从新运行原评分第一名取得的 `build_top1.cif`。NPZ 字段、世界坐标、原地图推荐阈值、密度覆盖比例 D 与受体碰撞定义沿用下文；元数据新增 `condition="explicit_emdb_level"` 和 `source_files`，后者按服务器原路径保存 `size` 字节数及 `sha256`，如原 CIF、`LIG.npz`、两种 PocketXMol 的 SDF 和受体／地图元数据。`source_map_sha256` 是原完整地图的已冻结身份，不重新散列整个地图。Build CIF 按该次 `LIG.npz.atom_names` 对齐重原子；两种 PocketXMol 仍为 GT 受体、C0 口袋、原评分 Top-1。C0 使用沉积配体中心定义口袋，不是 Find 预测 blob 的中心。
+
+`case_selection.json` 的 `density`、`clash` 为各五个 `[pdb_id,occurrence_id]`，如 `["9q16",0]`；`main_density`、`main_clash` 为其中各三个主选。`screen.json` 保存 181 个满足 DG RMSD <1.5 Å 且低于新 Build 的原指标候选，`shortlist.json` 保存按两类 RMSD 差与原主图优先取得的 31 个实例；`screening/assets/` 与 `screening/case_metrics.json` 保留这 31 例的原件和同定义测量。`selected_case_metrics.json/.csv` 保存十例选择、正文标记以及三种预测的 RMSD、密度比例和碰撞计数；`source_sha256.json` 保存十例资产文件的大小和散列。十例均满足 DG 的 RMSD 最低、Clash 为 0、D 不低于另外两种方法；9WQ3/5 的 D 与 Build 并列。
+
+新条件重建使用下面相同入口，不新增模型推理或绘图后端。`FIGURE_RENDER_ROOT` 可显式指定本次临时生成目录；省略时为该 `FIGURE_SOURCE_ROOT` 下的 `regenerated/`。`FIGURE_BUILD_ROOT` 仅指定候选 PPT 的临时装配位置，不改变科学输入。
+
+```powershell
+$env:FIGURE_SOURCE_ROOT=(Resolve-Path '画图/画图代码/stage3/output/stage3-cases-main/explicit_emdb_level').Path
+python -X utf8 -B 画图/画图代码/stage3/visualization/stage3-cases-main/measure_cases.py
+python -X utf8 -B 画图/画图代码/stage3/visualization/stage3-cases-main/make_geometry.py
+python -X utf8 -B 画图/画图代码/stage3/visualization/stage3-cases-main/render_figure.py
+```
+
+Node 装配仍使用 `build_deck.mjs`，从同一 `FIGURE_SOURCE_ROOT/captions.json` 读取当前作者主图备注的最小修订副本，生成 `stage3-cases-main` 六例主图和 `stage3-cases-density`／`stage3-cases-clash` 两张各五例候选页。输出画布维持 980×1256 布局像素，与现有正式 PPT 相同。没有整面板位图，配体、受体、网格和碰撞线继续是可编辑原生图形。
+
+## 原无 level 模板与历史记录
+
+以下保留原无 level 版本的病例、资产与发布记录；新条件以本文件开头的独立目录和 `case_selection.json` 为准。
+
 主图比较六个测试实例的原排序 Top-1，三例说明官方 PocketXMol 的密度偏离，三例说明 Emap2lig-Build 的受体碰撞。PPT 第四页依次保留 9LLG、9LFA、9BJJ、30GA 四个备选，与主图六例合计十个不重复实例。正文只引用六例主图；这些案例用于解释结构误差，不代替图 7、图 8 的总体统计。
 
 当前重绘按 `measure_cases.py → make_geometry.py → render_figure.py` 顺序执行，冻结科学输入位于 `stage3/output/stage3-cases-main/assets/`；新 `case_metrics.json`、`cases.json`、`geometry.json`、`deck_layout.json` 和四页图稿全部写入同目录的 `regenerated/`，不覆盖原留档。原始指标和显示几何均已与新生成值完整比较一致，来源见[阶段追溯](../图表追溯.md)。取数与筛选入口在 `source_tools/`，默认离线绘图不访问服务器。

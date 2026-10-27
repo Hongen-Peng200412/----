@@ -22,7 +22,8 @@ from audit_panel_alignment import require_matplotlib_panel_alignment
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / 'AGENTS.md').is_file() and (p / '论文草稿.md').is_file())
 BUILD = Path(os.environ["FIGURE_BUILD_ROOT"]) if "FIGURE_BUILD_ROOT" in os.environ else ROOT / "temp/fmb_20261015"
-DATA = ROOT / "画图/画图代码/e2e/output/find-build-shared/data.json"
+# DATA: 当前图明确指定的冻结汇总; 未指定时保持原 no_level 数据入口, 不自动寻找所谓最新结果.
+DATA = Path(os.environ["FIND_BUILD_DATA"]) if "FIND_BUILD_DATA" in os.environ else ROOT / "画图/画图代码/e2e/output/find-build-shared/data.json"
 COLORS = {"GT": "#00878B", "CA2": "#596BC0", "Emap2lig": "#A57948"}
 MEAN_COLOR = "#00878B"  # 所有受体条件共用的均值轨迹颜色, 不用于区分 GT 与 CA2.
 MEDIAN_COLOR = "#3A64C8"  # 中位数轨迹颜色; 较细的实线覆盖均值线时仍可分别辨认.

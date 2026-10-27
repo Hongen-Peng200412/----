@@ -1,6 +1,12 @@
 # Stage 1 主结果与候选质量图
 
-本目录从已冻结的 Stage 1 统计生成两张正文图和两张补充图。所有绘图组件通过 SVG 转成原生 PPT 文字、线条、柱、散点和路径。候选图集只写本次构建目录，追加原图集是另外的发布步骤。
+本目录从已冻结的 Stage 1 统计生成主结果及补充候选图。所有绘图组件通过 SVG 转成原生 PPT 文字、线条、柱、散点和路径。候选图集只写本次构建目录，追加原图集是另外的发布步骤。
+
+当前默认条件为 `explicit_emdb_level`，读取 `stage1/output/stage1-results-revision/explicit_emdb_level/data/{plot_data.json,completion_panels.json}`；新 `stage1-overall-performance` 为两行三列，上行全配体、下行全部小分子，依列为总体指标、逐 PDB 语义 Dice 配对、实例 P/R。原图元、方法颜色、bootstrap 和小提琴定义保持。`stage1-candidate-quality` 仍生成原四面板候选，供候选预算结果在补充材料中选用；`stage1-strict-threshold` 与 `stage1-completion-curves` 同步读取新条件。`EMAP2LIG_CONDITION=no_level` 显式选择旧冻结输入及原四面板主性能版式，不覆盖旧产物。
+
+该环境变量用于直接运行 `plot.py`。使用统一重建入口时，旧条件必须选择带后缀的图名，例如 `python -X utf8 -B 转换工具/ops/rebuild_figures.py --figure stage1-overall-performance-NO_LEVEL`；统一入口以追溯记录绑定条件，不依赖外部遗留环境变量。
+
+新 `plot_data.json` 增加 `condition="explicit_emdb_level"` 和 `paired_metric="dice"`；其余字段沿原契约，`paired_counts` 相应按语义 Dice 计算。`statistics_summary.json` 保存各指标均值、配对数及完成度，`small_per_pdb.jsonl` 保存94个PDB的小分子并集TP/FP/FN和实例指标。`data/gt_masks/<pdb>.npz` 是94份原始真值稀疏掩码，`gt_masks/sources.json` 逐份记录服务器原路径、字节数与SHA-256；`data/provenance/small_molecule_recompute.py` 冻结原小分子评价定义。GT／CA2的全部既有绘图统计保持原样，原Emap小分子P/R与PRAUC已逐PDB复现后才应用新条件。
 
 ## 代码与阅读顺序
 
@@ -22,7 +28,7 @@
 
 ```text
 <FIGURE_BUILD_ROOT>/
-├─ stage1-overall-performance.{svg,pdf,png}  # 四面板整体性能
+├─ stage1-overall-performance.{svg,pdf,png}  # level 六面板／no_level 四面板整体性能
 ├─ stage1-candidate-quality.{svg,pdf,png}    # P/R与完成度
 ├─ stage1-strict-threshold.{svg,pdf,png}     # 0.5阈值补充图
 ├─ stage1-completion-curves.{svg,pdf,png}    # 完整六面板曲线

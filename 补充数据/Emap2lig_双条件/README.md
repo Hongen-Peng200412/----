@@ -1,15 +1,15 @@
 # Emap2lig：无 level 与显式推荐 level 的结果资产
 
-这里把两次合法的 Emap2lig 测试分开索引。`no_level` 是10.27之前的图文使用的原实验；`explicit_emdb_level` 是显式提供 EMDB 推荐密度 level 的已完成实验。新实验的元数据实物已复制到论文仓库，旧实验原件保留原位。当前正文、PPT、图注和 Word 尚未切换数据源。————————————注意，后续 Emap2lig-level 版本的数据和可视化要进入正文，no_level版本仍保留，但放到补充材料里。
+这里把两次合法的 Emap2lig 测试分开索引。当前正文及相关图使用 `explicit_emdb_level`，即显式提供 EMDB 推荐密度 level 的实验；10 月 27 日之前使用的 `no_level` 原结果已独立收入补充材料。两条件的原始结果分别保留，旧 PPT 页的独立图名加 `-NO_LEVEL` 后缀，新页追加在原图集中。
 
-先读 [实验索引](实验索引.json) 确定条件和位置，再读对应科学文件。后续正文拟使用 `explicit_emdb_level`，`no_level` 拟进入补充材料；顺序与已确认版面见 [后续安排](后续安排.md)，复制与验收见 [接入记录](接入记录.md)。这些是资产索引，不替代八份 `图表追溯.md` 对实际展示的逐图登记。
+先读 [实验索引](实验索引.json) 确定条件和位置，再读对应科学文件。资产复制与验收见 [接入记录](接入记录.md)，本轮图文切换见 [执行记录](../../talk/emap2lig_switch_20261027/执行记录.md)；[后续安排](后续安排.md) 保留接入时确认的工作顺序。这些是资产索引，不替代八份 `图表追溯.md` 对实际展示的逐图登记。
 
 ## 条件与测试范围
 
 | 固定条件名 | 实际预处理 | 本地入口 | 当前展示状态 |
 | --- | --- | --- | --- |
-| `no_level` | 未显式传入推荐值，原实跑入口的清零阈值为 0 | [旧归档](../Find-Match-Build_20261018/README.md)，其他原位缓存列于索引 | 仍为当前图文数据 |
-| `explicit_emdb_level` | 向官方入口传入推荐值 L；官方 `contour_ratio=0.5`，实际清零阈值 L/2 | 本目录 `explicit_emdb_level/` | 元数据已接入，尚未绘图替换 |
+| `no_level` | 未显式传入推荐值，原实跑入口的清零阈值为 0 | [旧归档](../Find-Match-Build_20261018/README.md)，其他原位缓存列于索引 | 补充材料独立小节；旧图名均以 `-NO_LEVEL` 区分 |
+| `explicit_emdb_level` | 向官方入口传入推荐值 L；官方 `contour_ratio=0.5`，实际清零阈值 L/2 | 本目录 `explicit_emdb_level/`，派生图表数据见索引 | 正文比较及其补充分析；不带后缀的新页 |
 
 L 是原图尺度的 EMDB 推荐密度值；178 份来源为 AUTHOR，1 份为 EMDB。它不是原子坐标真值，也不是给 Build 的真实结合区域。Find 仍自行预测 blob；Build 使用选中的预测 blob 与冻结的正确 SMILES。负密度置零、官方 1 Å 重采样、第 98 百分位归一化与内容裁剪沿用原管线。原地图与真值网格不同，评价时按世界坐标插值，而不是按数组下标叠合。
 
@@ -78,7 +78,7 @@ L 是原图尺度的 EMDB 推荐密度值；178 份来源为 AUTHOR，1 份为 E
       └─ import_validation.json            # 本次源、目标与保护范围核对（接入验收）
 ```
 
-本地没有原始连续密度、完整概率图、原生 blob NPZ、掩码 MRC 或 CIF。它们仍在 `/storage/penghongen/Emap2lig/contour_level_20261026/`，相对布局与镜像相同；准确单文件路径见 `maps.json.input_map`、`mapping.json.official_probability`、请求的 `blob_path` 与姿态的 `cif`。`LIG.npz` 是化学输入，不是预测姿态或参考真值。后续可视化选定病例后再读取对应大型原件，不能沿用无 level 的密度或姿态冒充新病例。
+本归档不包含原始连续密度、完整概率图、原生 blob NPZ、掩码 MRC 或 CIF。完整原件仍在 `/storage/penghongen/Emap2lig/contour_level_20261026/`，相对布局与镜像相同；准确单文件路径见 `maps.json.input_map`、`mapping.json.official_probability`、请求的 `blob_path` 与姿态的 `cif`。`LIG.npz` 是化学输入，不是预测姿态或参考真值。当前十个病例已另存新条件 Top-1 CIF、绘图数组和来源散列，位置由索引的 `docking_cases` 指定；这不代表全部大型原件已镜像。
 
 ## 主要产物：身份与条件
 
@@ -86,7 +86,7 @@ L 是原图尺度的 EMDB 推荐密度值；178 份来源为 AUTHOR，1 份为 E
 
 顶层是 JSON object。`schema_version=1` 固定本版字段；`path_base="paper_repository_root"` 表示所有 `identity_path`、`level_path` 和 `local_paths` 均相对论文仓库根，而不是相对本文件。`server_paths` 是 Linux 服务器绝对路径，不能作为本地文件读取。
 
-`paper_state` 的 `current_emap2lig_condition="no_level"` 表示现有展示；`planned_main_condition="explicit_emdb_level"` 与 `planned_supplement_condition="no_level"` 表示已决定的后续方向；`manuscript_and_slides_switched=false` 表示此次没有完成图文替换。
+`paper_state` 的 `current_emap2lig_condition="explicit_emdb_level"` 表示正文现有展示；`planned_main_condition="explicit_emdb_level"` 与 `planned_supplement_condition="no_level"` 保留原计划字段，现已落实；`manuscript_and_slides_switched=true` 表示正文与 PPT 已完成切换。新条件的 `stage1_plot_data`、`shared_figure_data`、`docking_cases` 和 `case_selection` 分别定位当前检出统计、共同命中与端到端统计、十例素材及三加三正文选择，均相对论文仓库根目录。
 
 `cohorts` 按上述三个范围键保存整数 `pdb_count`、`instance_count` 及身份位置 `identity_path`；小分子另有 `category_field="type_tag"`、`category="small_molecule"`，分别指原文件分类字段及所取类别。`conditions` 只含两个固定条件键；每项的 `label_zh` 为中文名称，`normalization` 描述是否显式传入 level。旧条件的 `explicit_level=false`、`effective_threshold=0`；新条件的 `explicit_level=true`、`contour_ratio=0.5`、`effective_threshold_expression="level * contour_ratio"` 与 `level_path` 定义逐图阈值。`local_paths` 的键说明本地文件用途，如 `build_full_test` 指向 446 行完整结果；旧条件没有该键，不意味着其余未命中被算作成功。`server_paths` 定位原 Find／Build／统一比较或新科学根／release。新条件 `executed_source_commit` 是真正运行的源码提交，`counts` 都是整数观察计数，如 `find_blobs=2474`、`build_complete_instances=251`，不代表百分比或宏平均。
 
@@ -204,10 +204,10 @@ P 是一个 PDB 的预测 blob 数，G 是该 PDB 的全部真实实例数。数
 
 `build_status.jsonl` 按实例保存尝试状态，重试不删除旧行，最后一行决定评价读取哪个 `result_dir`；正常含 `generated`、成功含 `seed`，异常可含 `error`。原门控／正式命令、环境、状态与完整字段说明见 [源契约快照](explicit_emdb_level/provenance/source_records/README.md)；本次来源核对见 `provenance/import_validation.json`，其计数与散列用于核对接入完整性。原执行历史只保存在 `source_records/日志/`，本次过程在 [接入记录](接入记录.md)。这些记录不会自动启动运行。
 
-本次验收 JSON 中，`cohorts` 的两元素整数列表按 `[PDB数,实例数]` 排列，如 `find_all_small=[94,821]`；`build_statuses` 是状态到实例数的映射，如 `complete=251`。`metadata_files_verified_source_and_destination`、`metadata_bytes`、`deployed_source_files_verified` 分别为核对文件数、字节数与源码证据文件数；`protected_existing_files_verified` 为旧归档与既有修改的保护文件数。`checked_at` 是带时区的本地核查时间，`passed` 表示本次核对全部通过；`same_build_identities_and_smiles_as_no_level`、`source_git_refs_and_status_unchanged` 为对应核对的布尔值。`paper_head_unchanged`、`paper_branch_unchanged` 保存未变的 Git 提交和分支；`current_display_condition="no_level"`、`manuscript_and_slides_switched=false`、`server_contacted=false` 明确此次交付范围。其余整数计数是候选、零候选 PDB、化学包、评分文件和本地链接的实际核对数量。
+资产接入时的验收 JSON 中，`cohorts` 的两元素整数列表按 `[PDB数,实例数]` 排列，如 `find_all_small=[94,821]`；`build_statuses` 是状态到实例数的映射，如 `complete=251`。`metadata_files_verified_source_and_destination`、`metadata_bytes`、`deployed_source_files_verified` 分别为核对文件数、字节数与源码证据文件数；`protected_existing_files_verified` 为旧归档与既有修改的保护文件数。`checked_at` 是带时区的本地核查时间，`passed` 表示该次核对全部通过；`same_build_identities_and_smiles_as_no_level`、`source_git_refs_and_status_unchanged` 为对应核对的布尔值。`paper_head_unchanged`、`paper_branch_unchanged` 保存当时未变的 Git 提交和分支；`current_display_condition="no_level"`、`manuscript_and_slides_switched=false`、`server_contacted=false` 仅记录接入阶段，不代表当前展示。当前条件以实验索引的 `paper_state` 为准。其余整数计数是候选、零候选 PDB、化学包、评分文件和本地链接的实际核对数量。
 
 ## 论文追溯与使用顺序
 
-Stage1 统计从新逐 PDB NPZ／JSONL 与原类别轴派生；Stage3 配对从 `(条件,pdb_id,occurrence_id)` 重新连接；新病例需读取对应条件原始 CIF／密度，并重新计算相应几何指标；端到端图须沿完整 446 实例保留未命中与筛选失败。旧 `metadata/figure_data/data.json` 和当前绘图缓存仍全是 `no_level`，不能只改标签来切换条件。
+Stage1 当前统计由新逐 PDB NPZ／JSONL 与原类别轴派生；Stage3 配对按 `(条件,pdb_id,occurrence_id)` 重新连接；十个病例使用对应条件的原排序 Top-1 CIF，重新计算原地图密度覆盖与受体碰撞；端到端图沿完整 446 实例保留未命中与筛选失败。旧 `metadata/figure_data/data.json` 与未带条件的历史缓存仍为 `no_level`；当前新图读取索引中独立的 `explicit_emdb_level` 派生产物，不能只改标签来切换条件。
 
 实际图表登记仍在 [Stage1 计算](../../画图/画图代码/stage1/calculate/图表追溯.md)、[Stage3 计算](../../画图/画图代码/stage3/calculate/图表追溯.md)、[Stage3 可视化](../../画图/画图代码/stage3/visualization/图表追溯.md)、[端到端计算](../../画图/画图代码/e2e/calculate/图表追溯.md) 和 [端到端可视化](../../画图/画图代码/e2e/visualization/图表追溯.md)。后续新增缓存、图名或补充材料副本应显式带条件；共用统计代码可以，两个条件的科学输入和产物目录必须可区分。

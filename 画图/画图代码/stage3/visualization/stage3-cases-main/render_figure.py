@@ -16,7 +16,9 @@ sys.path.insert(0,'C:/Users/15919/.codex/skills/nature-figure/scripts')
 from audit_panel_alignment import require_matplotlib_panel_alignment
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / 'AGENTS.md').is_file() and (p / '论文草稿.md').is_file())
-OUT=Path(os.environ['FIGURE_RENDER_ROOT']) if 'FIGURE_RENDER_ROOT' in os.environ else ROOT/'画图/画图代码/stage3/output/stage3-cases-main/regenerated'
+# SOURCE 指向当前条件的冻结资产根; OUT 保存其重新生成的图稿, 不写冻结原件.
+SOURCE = Path(os.environ['FIGURE_SOURCE_ROOT']) if 'FIGURE_SOURCE_ROOT' in os.environ else ROOT/'画图/画图代码/stage3/output/stage3-cases-main'
+OUT=Path(os.environ['FIGURE_RENDER_ROOT']) if 'FIGURE_RENDER_ROOT' in os.environ else SOURCE/'regenerated'
 geometry=json.loads((OUT/'geometry.json').read_text(encoding='utf-8'))
 cases={(r['pdb_id'],r['occurrence_id']):r for r in json.loads((OUT/'cases.json').read_text(encoding='utf-8'))}
 mpl.rcParams.update({'font.family':'Arial','font.size':8,'svg.fonttype':'none','pdf.fonttype':42})
@@ -67,13 +69,22 @@ density_keys = [('9q16',0),('9ub7',3),('9r3d',0)]
 clash_keys = [('9u7j',2),('9wup',2),('9wq3',5)]
 alternative_keys = [('9llg',2),('9lfa',0),('9bjj',16),('30ga',7)]
 # 第四页 c/d 收纳主图换下的 9BJJ/30GA; 六个主图案例与四个备选互不重复.
-settings=[('main','stage3-cases-main',[by_key[k] for k in density_keys+clash_keys]),('density','stage3-cases-density',[by_key[k] for k in density_keys]),('clash','stage3-cases-clash',[by_key[k] for k in clash_keys]),('alternatives','stage3-cases-alternatives',[by_key[k] for k in alternative_keys])]
+if 'FIGURE_SOURCE_ROOT' in os.environ:
+    # case_selection.json 保存明确条件的实例名单; 页内样式仍由下面的同一模板绘制.
+    selection = json.loads((SOURCE / 'case_selection.json').read_text(encoding='utf-8'))
+    density_keys = [tuple(key) for key in selection['density']]
+    clash_keys = [tuple(key) for key in selection['clash']]
+    main_keys = [tuple(key) for key in selection['main_density'] + selection['main_clash']]
+    settings = [('main','stage3-cases-main',[by_key[k] for k in main_keys]),('density','stage3-cases-density',[by_key[k] for k in density_keys]),('clash','stage3-cases-clash',[by_key[k] for k in clash_keys])]
+else:
+    settings=[('main','stage3-cases-main',[by_key[k] for k in density_keys+clash_keys]),('density','stage3-cases-density',[by_key[k] for k in density_keys]),('clash','stage3-cases-clash',[by_key[k] for k in clash_keys]),('alternatives','stage3-cases-alternatives',[by_key[k] for k in alternative_keys])]
 for name, figure_name, rows in settings:
     W,H=980,76+len(rows)*188+52
     width_mm = 183
     fig=plt.figure(figsize=(width_mm/25.4,width_mm/25.4*H/W),facecolor='white')
     page=dict(name=name,figure_name=figure_name,width=W,height=H,items=[])
-    for col,(method,label) in enumerate([('official','PocketXMol-official'),('tuned','PocketXMol-tuned'),('build','Emap2lig-Build')]):
+    tuned_label = 'DG-PocketXmol' if 'FIGURE_SOURCE_ROOT' in os.environ else 'PocketXMol-tuned'
+    for col,(method,label) in enumerate([('official','PocketXMol-official'),('tuned',tuned_label),('build','Emap2lig-Build')]):
         text(fig,label,30+col*312,12,23,294,27,True,geometry['colors'][method],page['items'],W,H)
     for row_index, row in enumerate(rows):
         key=(row['pdb_id'],row['occurrence_id']);case=cases[key]
@@ -119,4 +130,4 @@ for name, figure_name, rows in settings:
     plt.close(fig)
     pages.append(page)
 (OUT/'deck_layout.json').write_text(json.dumps(pages),encoding='utf-8')
-print('Rendered four figure pages and layout manifests')
+print(f'Rendered {len(pages)} figure pages and layout manifests')

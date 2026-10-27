@@ -107,6 +107,9 @@ def commands_for(figure: str, build: Path) -> list[list]:
     node = [NODE]
     p=lambda relative,*args:python+[CODE/relative,*args]
     n=lambda relative,*args:node+[CODE/relative,*args]
+    if figure.startswith('fig-overview_v3') or figure.startswith('fig-method-v9'):
+        prefix='e2e/visualization/fig12-revision/'
+        return [p(prefix+'prepare_geometry.py'),[PYMOL,'-B',CODE/(prefix+'render_structures.py')],n(prefix+'build_components.mjs'),p(prefix+'assemble.py')]
     if figure in ("stage1-overall-performance", "stage1-candidate-quality", "stage1-strict-threshold", "stage1-completion-curves"):
         prefix="stage1/calculate/stage1-results-revision/"
         return [p(prefix+"plot.py"),n(prefix+"build_deck.mjs")]
@@ -149,7 +152,7 @@ def commands_for(figure: str, build: Path) -> list[list]:
     raise ValueError(f"图名未登记重建步骤: {figure}")
 
 
-def finish_candidate(figure: str, build: Path, records: list) -> dict:
+def finish_candidate(figure: str, build: Path, records: list, generated_captions: bool=False) -> dict:
     """选择本次候选，补入作者双语备注与完整来源；原正式PPT始终只读。"""
     record=next(record for record in records if record.metadata.get("figure")==figure)
     candidates=[]
@@ -168,13 +171,16 @@ def finish_candidate(figure: str, build: Path, records: list) -> dict:
         name=page_record.metadata.get('figure')
         if page_record.metadata['kind']!='figure' or name not in deck.figures:continue
         current=Deck(ROOT/page_record.metadata['pptx'])
-        slide=deck.figures[name];author_slide=current.figures[name]
+        slide=deck.figures[name];author_slide=current.figures.get(name)
         for owner,page in ((deck,slide),(current,author_slide)):
+            if page is None:
+                source_note=None
+                continue
             rel=page.part.rsplit('/',1)[0]+'/_rels/'+page.part.rsplit('/',1)[1]+'.rels'
             note=next((relationship_target(page.part,x.get('Target')) for x in owner.tree(rel) if x.get('Type')==notes_type),None)
             if owner is deck:target_note=note
             else:source_note=note
-        if target_note and source_note:
+        if target_note and source_note and not generated_captions:
             ns={"p":"http://schemas.openxmlformats.org/presentationml/2006/main","a":"http://schemas.openxmlformats.org/drawingml/2006/main"}
             source_body=current.tree(source_note).xpath('//p:sp[p:nvSpPr/p:nvPr/p:ph[@type="body"]]/p:txBody',namespaces=ns)
             target_body=deck.tree(target_note).xpath('//p:sp[p:nvSpPr/p:nvPr/p:ph[@type="body"]]/p:txBody',namespaces=ns)
@@ -194,7 +200,7 @@ def finish_candidate(figure: str, build: Path, records: list) -> dict:
     assert figure in reread.figures and reread.managed()[record.identifier]
     image_files=[str(p.relative_to(build)) for p in build.rglob('*') if p.suffix.lower() in ('.png','.svg','.pdf')]
     if not image_files:raise ValueError(f"没有本次生成的图稿: {figure}")
-    return {"candidate":"rebuilt.pptx","figure":figure,"image_files":image_files,"slide_count":len(reread.slides),"source_comment_synced":True,"annotated_figures":annotated,"author_caption_preserved":caption_preserved}
+    return {"candidate":"rebuilt.pptx","figure":figure,"image_files":image_files,"slide_count":len(reread.slides),"source_comment_synced":True,"annotated_figures":annotated,"author_caption_preserved":caption_preserved,"generated_captions_requested":generated_captions}
 
 
 def main() -> int:
@@ -203,6 +209,7 @@ def main() -> int:
     group.add_argument('--figure',action='append',help='稳定图名，可重复指定')
     group.add_argument('--all',action='store_true',help='重建四稿当前引用的全部图')
     parser.add_argument('--build-root',type=Path,help='新的仓库temp子目录；已有非空单图目录不复用')
+    parser.add_argument('--generated-captions',action='store_true',help='本轮明确修订图注时保留新生成图注；默认沿用已有作者图注')
     args=parser.parse_args();errors=[];records=load_records(ROOT,errors)
     if errors:raise ValueError('\n'.join(errors))
     names=[r.metadata['figure'] for r in records if r.metadata['kind']=='figure']
@@ -225,7 +232,7 @@ def main() -> int:
         print(f'重建 {figure}',flush=True)
         try:
             for command in commands_for(figure,build):run_step(command,build,environment,steps)
-            receipt.update(finish_candidate(figure,build,records));receipt['passed']=True
+            receipt.update(finish_candidate(figure,build,records,args.generated_captions));receipt['passed']=True
         except Exception as error:
             receipt['error']=str(error);raise
         finally:

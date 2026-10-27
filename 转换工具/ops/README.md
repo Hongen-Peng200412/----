@@ -51,4 +51,6 @@ python -X utf8 -B 转换工具/ops/figure_provenance.py --check
 
 图名可重复指定；`--build-root temp/<新目录>`可显式选择新批次根。构建目录通过环境参数传给全部前后步骤，SVG、manifest、scenes及候选必须属于同次运行。Python和Node对旧temp实际读取及冻结输入写入报错；原生渲染也加载相同Python审计并只执行本次生成、路径已重定向的脚本。它不会清空用户已有temp。
 
+默认保留正式 PPT 中已有的作者图注，新增加的备选页沿用本次生成图注。本轮明确同时修订图注时，可加 `--generated-captions` 保留本次新图注，避免旧图注覆盖新版面板编号或结构实例；该选项只影响候选，不回写正式 PPT。
+
 检查器只读验证登记、代码文件、Python符号、静态可识别的传递导入、共享关系和批注一致；无法穷举任意动态代码或自然语言实验断言。完整验收须实际执行重建命令。测试入口为`转换工具/test_figure_provenance.py`与`转换工具/test_figure_rebuild.py`，覆盖批注保全、并发保存、共享导入、旧temp读取和冻结写保护。

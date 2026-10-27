@@ -1,0 +1,697 @@
+{
+    "_id": "67846bafc7dd968497e72fa8",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Xia M"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Zhang H"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-05-27T00:00:00",
+            "processing_site": "PDBc"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "2018YFA0508100",
+                    "country": "China",
+                    "funding_body": "Ministry of Science and Technology (MoST, China)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "81722044",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "91753115",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "21778049",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "81861148018",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "2018ZX09711002",
+                    "country": "China",
+                    "funding_body": "Ministry of Science and Technology (MoST, China)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-01-08T00:00:00",
+            "header_release": "2026-05-27T00:00:00",
+            "map_release": "2026-05-27T00:00:00",
+            "update": "2026-05-27T00:00:00"
+        },
+        "keywords": "GPCR, bradykinin receptor, MEMBRANE PROTEIN/IMMUNE SYSTEM, MEMBRANE PROTEIN-IMMUNE SYSTEM complex",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-05-27T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBj",
+            "last_processing": "PDBc"
+        },
+        "title": "Cryo-EM structure of human bradykinin receptor B1R bound to antagonist ELN441958"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0009-0005-8476-3252",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Xia M"
+                        },
+                        {
+                            "ORCID": "0000-0003-4879-2951",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Zhang H"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Cryo-EM structure of human bradykinin receptor B1R bound to antagonist ELN441958"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-63043",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of human bradykinin receptor B1R bound to antagonist ELN441958",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9lfa",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-63043",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "238.08"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "238.08"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "238.08"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 256,
+                        "row": 256,
+                        "sec": 256
+                    },
+                    "file": "emd_63043_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-63043::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93"
+                        }
+                    },
+                    "size_kbytes": 67109,
+                    "spacing": {
+                        "x": 256,
+                        "y": 256,
+                        "z": 256
+                    },
+                    "statistics": {
+                        "average": 4.526177e-05,
+                        "maximum": 1.3280982,
+                        "minimum": -0.57299143,
+                        "std": 0.036364727
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "238.08"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "238.08"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "238.08"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 256,
+                        "row": 256,
+                        "sec": 256
+                    },
+                    "file": "emd_63043_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-63043::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93"
+                        }
+                    },
+                    "size_kbytes": 67109,
+                    "spacing": {
+                        "x": 256,
+                        "y": 256,
+                        "z": 256
+                    },
+                    "statistics": {
+                        "average": 5.3930326e-05,
+                        "maximum": 1.1518807,
+                        "minimum": -0.5781999,
+                        "std": 0.03630609
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "238.08"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "238.08"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "238.08"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.45,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 256,
+            "row": 256,
+            "sec": 256
+        },
+        "file": "emd_63043.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-63043::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.93"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.93"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.93"
+            }
+        },
+        "size_kbytes": 67109,
+        "spacing": {
+            "x": 256,
+            "y": 256,
+            "z": 256
+        },
+        "statistics": {
+            "average": -0.0034141564,
+            "maximum": 3.7169785,
+            "minimum": -2.5449138,
+            "std": 0.05817313
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.038958917999999995"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "B1 bradykinin receptor,Kappa-type opioid receptor"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 7108,
+                            "valueOf_": "Spodoptera frugiperda"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P46663"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P41145"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P46663"
+                            }
+                        ],
+                        "string": "ASSWPPLELQSSNQSQLFPQNATACDNAPEAWDLLHRVLPTFIISICFFGLLGNLFVLLVFLLPRRQLNVAEIYLANLAA SDLVFVLGLPFWAENIWNQFNWPFGALLCRVINGVIKANLFIKIFLVVAICQDRYRVLVHPMASRRQQRRRQARVTCVLI WVVGGLLSIPTFLLRSIQAVPDLNITACILLLPHEAWHFARIVELNILGFLLPLAAIVFFNYHILASLRTVRLLSGSREK DRNLRRITRLVLVVVVAFLVCWAPYHFFAFLEFLFQVQAVRGCFWEDFIDLGLQLANFFAFTNSSLNPVIYVFVGRLFRT KVWELYKQCTPKSLAPISSS"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.018816033"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Nanobody 6"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9844,
+                            "valueOf_": "Lama glama"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 7108,
+                            "valueOf_": "Spodoptera frugiperda"
+                        }
+                    },
+                    "sequence": {
+                        "string": "MLLVNQSHQGFNKEHTSKMVSAIVLYVLLAAAAHSAFAMAQVQLQESGGGLVQAGESLRLSCAASGTIFRLYDMGWYRRV SGNQRELVASITSGGSTKYGDSVKGRFTISRDNAKNTVYLQMSSLKPEDTAVYYCNAEYRTGIWEELLDGWGQGTQVTVS SHHHHHHEPEA"
+                    }
+                },
+                {
+                    "formula": "A1EJF",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000501019"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "7-chloranyl-2-[3-[(9-pyridin-4-yl-3,9-diazaspiro[5.5]undecan-3-yl)carbonyl]phenyl]-3H-isoindol-1-one"
+                    },
+                    "number_of_copies": "1"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "bradykinin receptor B1R with kappa-type opioid receptor ICL3 in complex with Nb6, ELN441958"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.057"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "bradykinin receptor B1R with kappa-type opioid receptor ICL3 in complex with Nb6, ELN441958"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 9606,
+                                "valueOf_": "Homo sapiens"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "OTHER"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 198063,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.5"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "OTHER"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "pdb_model": {
+                                    "pdb_id": "7EIB"
+                                },
+                                "type_of_model": "PDB ENTRY"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "OTHER",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.6"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

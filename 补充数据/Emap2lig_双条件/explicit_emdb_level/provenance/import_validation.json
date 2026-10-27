@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-10-27T12:26:10.333672+08:00",
+  "passed": true,
+  "metadata_files_verified_source_and_destination": 1428,
+  "metadata_bytes": 21380471,
+  "deployed_source_files_verified": 66,
+  "cohorts": {
+    "find_all": [
+      179,
+      2502
+    ],
+    "find_all_small": [
+      94,
+      821
+    ],
+    "build_eligible": [
+      77,
+      446
+    ]
+  },
+  "same_build_identities_and_smiles_as_no_level": true,
+  "find_blobs": 2474,
+  "empty_find_pdbs": 15,
+  "build_statuses": {
+    "complete": 251,
+    "find_miss": 186,
+    "build_filter_failed": 9
+  },
+  "ligand_input_packages": 251,
+  "score_csv_files": 251,
+  "protected_existing_files_verified": 177,
+  "local_document_links_verified": 53,
+  "paper_head_unchanged": "aefc14eac594a147f7cef44e2df42f795a8dffe8",
+  "paper_branch_unchanged": "main",
+  "source_git_refs_and_status_unchanged": true,
+  "current_display_condition": "no_level",
+  "manuscript_and_slides_switched": false,
+  "server_contacted": false
+}

@@ -1,0 +1,714 @@
+{
+    "_id": "67846bacc7dd968497e72f4a",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Qu Q"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Zhou Z"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-22T00:00:00",
+            "processing_site": "PDBc"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "32371256",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "32171194",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "32401007",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-01-07T00:00:00",
+            "header_release": "2026-04-22T00:00:00",
+            "map_release": "2026-04-22T00:00:00",
+            "update": "2026-04-22T00:00:00"
+        },
+        "keywords": "Cys-loop receptor, homopentamer, cation channel, zinc-binding state, MEMBRANE PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-22T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBj",
+            "last_processing": "PDBc"
+        },
+        "title": "Cryo-EM structure of human ZAC in zinc partially binding state in nanodisc"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0002-2432-4283",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Zhou Z"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Long Y"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Chao Y"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Yang C"
+                        },
+                        {
+                            "ORCID": "0000-0002-6639-8897",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Tang YQ"
+                        },
+                        {
+                            "ORCID": "0000-0001-8893-434X",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Shu Y"
+                        },
+                        {
+                            "ORCID": "0000-0003-1522-0500",
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Zhu H"
+                        },
+                        {
+                            "ORCID": "0000-0002-7927-5052",
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Jensen AA"
+                        },
+                        {
+                            "ORCID": "0000-0002-5753-2599",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Qu Q"
+                        }
+                    ],
+                    "country": "UK",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41912481"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1038/s41421-026-00878-5"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2056-5968"
+                        }
+                    ],
+                    "journal": "Cell Discov",
+                    "journal_abbreviation": "Cell Discov",
+                    "published": true,
+                    "title": "Structural basis of human zinc-activated channel (ZAC) signaling and modulation.",
+                    "volume": "12",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-63036",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of human ZAC in zinc partially binding state in nanodisc",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9lex",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-63036",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "279.6"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "279.6"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "279.6"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 300,
+                        "row": 300,
+                        "sec": 300
+                    },
+                    "file": "emd_63036_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-63036::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93200004"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93200004"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93200004"
+                        }
+                    },
+                    "size_kbytes": 108001,
+                    "spacing": {
+                        "x": 300,
+                        "y": 300,
+                        "z": 300
+                    },
+                    "statistics": {
+                        "average": 0.0010039468,
+                        "maximum": 0.8848368,
+                        "minimum": -0.7353647,
+                        "std": 0.09475954
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "279.6"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "279.6"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "279.6"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 300,
+                        "row": 300,
+                        "sec": 300
+                    },
+                    "file": "emd_63036_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-63036::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93200004"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93200004"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93200004"
+                        }
+                    },
+                    "size_kbytes": 108001,
+                    "spacing": {
+                        "x": 300,
+                        "y": 300,
+                        "z": 300
+                    },
+                    "statistics": {
+                        "average": 0.0010032852,
+                        "maximum": 0.9719741,
+                        "minimum": -0.7678855,
+                        "std": 0.09491728
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "instance_type": "modelling",
+                    "refinement_protocol": "RIGID BODY FIT",
+                    "refinement_space": "REAL"
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "279.6"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "279.6"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "279.6"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.2,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 300,
+            "row": 300,
+            "sec": 300
+        },
+        "file": "emd_63036.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-63036::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.93200004"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.93200004"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.93200004"
+            }
+        },
+        "size_kbytes": 108001,
+        "spacing": {
+            "x": 300,
+            "y": 300,
+            "z": 300
+        },
+        "statistics": {
+            "average": 0.001168944,
+            "maximum": 1.7546366,
+            "minimum": -1.1599752,
+            "std": 0.050931446
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "ec_number": [
+                        "3.4.22.29"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.07883085899999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Ligand-gated cation channel ZACN,Genome polyprotein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 39054,
+                            "valueOf_": "Human enterovirus 71"
+                        }
+                    },
+                    "number_of_copies": "5",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q401N2"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "B6F2F5"
+                            }
+                        ],
+                        "string": "MMALWSLLHLTFLGFSITLLLVHGQGFQGTAAIWPSLFNVNLSKKVQESIQIPNNGSAPLLVDVRVFVSNVFNVDILRYT MSSMLLLRLSWLDTRLAWNTSAHPRHAITLPWESLWTPRLTILEALWVDWRDQSPQARVDQDGHVKLNLALTTETNCNFE LLHFPRDHSNCSLSFYALSNTAMELEFQAHVVNEIVSVKREYVVYDLKTQVPPQQLVPCFQVTLRLKNTALKSIIALLVP AEALLLADVCGGLLPLRAIERIGYKVTLLLSYLVLHSSLVQALPSSSSCNPLLIYYFTILLLLLFLSTIETVLLAGLLAR GNLGAKSGPSPAPRGEQREHGNPGPHPAEEPSRGVKGSQRSWPETADRIFFLVYVVGVLCTQFVFAGIWMWAACKSDAAP GEAAPHGRRPRLSDLEVLFQGPEFWSHPQFEKGGGSGGGSGGSAWSHPQFEKEFDIDYKDDDDKSRMVSKGEELFTGVVP ILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLTYGVQCFSRYPDHMKQHDFFKSAMPEGYV QERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIED GSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITLGMDELYK"
+                    }
+                },
+                {
+                    "formula": "ZN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "6.5409e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ZINC ION"
+                    },
+                    "number_of_copies": "2"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "ZAC in complex with zinc ion"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "ZAC in complex with zinc ion"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 9606,
+                                "valueOf_": "Homo sapiens"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "ANGULAR RECONSTITUTION"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 111743,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.85"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF"
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "ANGULAR RECONSTITUTION"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.5"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 8.0
+                            },
+                            "grid": {
+                                "material": "GOLD",
+                                "mesh": 300,
+                                "model": "Quantifoil R1.2/1.3",
+                                "pretreatment": {
+                                    "atmosphere": "AIR",
+                                    "pressure": {
+                                        "units": "kPa",
+                                        "valueOf_": "260.0"
+                                    },
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "50"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                }
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "277.15"
+                                },
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

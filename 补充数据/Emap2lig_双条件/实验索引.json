@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "path_base": "paper_repository_root",
+  "paper_state": {
+    "current_emap2lig_condition": "no_level",
+    "planned_main_condition": "explicit_emdb_level",
+    "planned_supplement_condition": "no_level",
+    "manuscript_and_slides_switched": false
+  },
+  "cohorts": {
+    "find_all": {
+      "pdb_count": 179,
+      "instance_count": 2502,
+      "identity_path": "补充数据/Find-Match-Build_20261018/provenance/find/inventory.json"
+    },
+    "find_all_small": {
+      "pdb_count": 94,
+      "instance_count": 821,
+      "identity_path": "补充数据/Find-Match-Build_20261018/provenance/stage1_all_small/occurrences",
+      "category_field": "type_tag",
+      "category": "small_molecule"
+    },
+    "build_eligible": {
+      "pdb_count": 77,
+      "instance_count": 446,
+      "identity_path": "补充数据/Emap2lig_双条件/explicit_emdb_level/inputs/test.jsonl"
+    }
+  },
+  "conditions": {
+    "no_level": {
+      "label_zh": "未显式提供 level 的原实验",
+      "normalization": {
+        "explicit_level": false,
+        "effective_threshold": 0
+      },
+      "local_paths": {
+        "archive": "补充数据/Find-Match-Build_20261018",
+        "find_per_pdb": "画图/画图代码/e2e/output/find-build-shared/sources/Emap2lig/find_metadata/per_pdb",
+        "find_source_inventory": "补充数据/Find-Match-Build_20261018/provenance/find/sources.json",
+        "stage1_plot_data": "画图/画图代码/stage1/output/stage1-main-sixpanel/v5/data/plot_data.json",
+        "build_requests": "补充数据/Find-Match-Build_20261018/metadata/emap_original/find_hit_subset.jsonl",
+        "build_poses": "补充数据/Find-Match-Build_20261018/metadata/emap_original/build_occurrences.jsonl",
+        "shared_figure_data": "补充数据/Find-Match-Build_20261018/metadata/figure_data/data.json",
+        "docking_cases": "画图/画图代码/stage3/output/stage3-cases-main/assets"
+      },
+      "server_paths": {
+        "find": "/storage/penghongen/AdaLigand_stage1_inference/Emap2lig/official_find_li/held_out_test_0",
+        "build": "/storage/penghongen/Emap2lig/stage3_find_hit_build",
+        "unified_comparison": "/storage/penghongen/Adaligand_E2E/test/test_0"
+      },
+      "counts": {
+        "find_hit_instances": 243,
+        "build_complete_instances": 237,
+        "build_filter_failed_instances": 6
+      }
+    },
+    "explicit_emdb_level": {
+      "label_zh": "显式提供 EMDB 推荐 level 的独立实验",
+      "normalization": {
+        "explicit_level": true,
+        "level_path": "补充数据/Emap2lig_双条件/explicit_emdb_level/inputs/maps.json",
+        "contour_ratio": 0.5,
+        "effective_threshold_expression": "level * contour_ratio"
+      },
+      "local_paths": {
+        "archive": "补充数据/Emap2lig_双条件/explicit_emdb_level",
+        "inputs": "补充数据/Emap2lig_双条件/explicit_emdb_level/inputs",
+        "find_per_pdb": "补充数据/Emap2lig_双条件/explicit_emdb_level/find/held_out_test_0/evaluation/per_pdb",
+        "find_metrics": "补充数据/Emap2lig_双条件/explicit_emdb_level/find/held_out_test_0/evaluation/official_find_li.metrics.json",
+        "find_per_pdb_metrics": "补充数据/Emap2lig_双条件/explicit_emdb_level/find/held_out_test_0/evaluation/official_find_li.jsonl",
+        "find_mapped_candidates": "补充数据/Emap2lig_双条件/explicit_emdb_level/find/held_out_test_0/mapped",
+        "build_requests": "补充数据/Emap2lig_双条件/explicit_emdb_level/build/find_hit_subset.jsonl",
+        "build_poses": "补充数据/Emap2lig_双条件/explicit_emdb_level/build/build_occurrences.jsonl",
+        "build_full_test": "补充数据/Emap2lig_双条件/explicit_emdb_level/build/build_all_occurrences.jsonl",
+        "build_summary": "补充数据/Emap2lig_双条件/explicit_emdb_level/build/build_summary.json",
+        "final_audit": "补充数据/Emap2lig_双条件/explicit_emdb_level/inputs/final_audit.json",
+        "metadata_inventory": "补充数据/Emap2lig_双条件/explicit_emdb_level/provenance/metadata_inventory.json",
+        "source_code_receipt": "补充数据/Emap2lig_双条件/explicit_emdb_level/provenance/source_code_receipt.json"
+      },
+      "server_paths": {
+        "scientific_root": "/storage/penghongen/Emap2lig/contour_level_20261026",
+        "release": "/home/penghongen/Feedback/Emap2lig/releases/Emap2lig_3c489443d595/Emap2lig"
+      },
+      "executed_source_commit": "37b0d9e7ad2a1b18fa096d91f154619085cee907",
+      "counts": {
+        "find_pdbs": 179,
+        "find_instances": 2502,
+        "find_blobs": 2474,
+        "empty_find_pdbs": 15,
+        "find_hit_instances": 260,
+        "build_complete_instances": 251,
+        "build_filter_failed_instances": 9,
+        "find_miss_instances": 186,
+        "cif_poses": 12550
+      }
+    }
+  }
+}

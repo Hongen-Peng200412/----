@@ -1,0 +1,17 @@
+{
+  "pdb_id": "30yu",
+  "emdb_id": "EMD-58151",
+  "level": 0.123,
+  "effective_threshold": 0.0615,
+  "source": "AUTHOR",
+  "metadata_path": "/storage/penghongen/AdaLigand/Ori_Data/reports/meta/30yu.meta.json",
+  "metadata_sha256": "66d26bc48745f0b09e3da20462af22733108dcc6d4c3bd4b062bc1bb7240bc80",
+  "contour_ratio": 0.5,
+  "input_map": "/storage/penghongen/AdaLigand/Ori_Data/raw/emdb_maps/emd_58151.map.gz",
+  "normalization_mode": "explicit_emdb_level",
+  "output_dir": "/storage/penghongen/Emap2lig/contour_level_20261026/find/held_out_test_0/raw_find_outputs/30yu",
+  "blobs_dir": "/storage/penghongen/Emap2lig/contour_level_20261026/find/held_out_test_0/raw_find_outputs/30yu/find_blobs",
+  "blob_count": 174,
+  "status_code": 0,
+  "status": "ok"
+}

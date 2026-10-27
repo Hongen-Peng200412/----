@@ -1,0 +1,878 @@
+{
+    "_id": "687d6c9d6e5018e151aeb393",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Du T"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Wang J"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Wu S"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Ru H"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-05-27T00:00:00",
+            "processing_site": "PDBc"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "32371344",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-07-13T00:00:00",
+            "header_release": "2026-05-27T00:00:00",
+            "map_release": "2026-05-27T00:00:00",
+            "update": "2026-05-27T00:00:00"
+        },
+        "keywords": "Measles virus RNA-dependent RNA polymerase complex bound to viral protein C, VIRAL PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-05-27T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBj",
+            "last_processing": "PDBc"
+        },
+        "title": "Cryo-EM structure of the human measles virus RNA-dependent RNA polymerase complex bound to viral protein C"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Du T"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Wang J"
+                        },
+                        {
+                            "ORCID": "0009-0009-4352-7121",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Yang C"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Xue R"
+                        },
+                        {
+                            "ORCID": "0000-0002-0729-3569",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Chen Y"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Jie K"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Zhang X"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Zhang L"
+                        },
+                        {
+                            "ORCID": "0000-0002-7787-6452",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Song G"
+                        },
+                        {
+                            "ORCID": "0000-0002-8608-3067",
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "Zhang Q"
+                        },
+                        {
+                            "ORCID": "0000-0002-4736-4755",
+                            "instance_type": "author",
+                            "order": 11,
+                            "valueOf_": "Wu S"
+                        },
+                        {
+                            "ORCID": "0000-0002-7761-193X",
+                            "instance_type": "author",
+                            "order": 12,
+                            "valueOf_": "Ru H"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41941628"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1073/pnas.2522978123"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "1091-6490"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0040"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ASTM",
+                            "valueOf_": "PNASA6"
+                        }
+                    ],
+                    "first_page": "e2522978123",
+                    "journal": "PNAS",
+                    "journal_abbreviation": "PNAS",
+                    "last_page": "e2522978123",
+                    "published": true,
+                    "title": "Structural insights into measles virus RNA synthesis regulation and pan-paramyxoviral polymerase inhibition by ERDRP-0519.",
+                    "volume": "123",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-65364",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of the human measles virus RNA-dependent RNA polymerase complex bound to viral protein C",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9vui",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-65364",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "306.36002"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "306.36002"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "306.36002"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_65364_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-65364::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8510001"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8510001"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8510001"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 0.00034788513,
+                        "maximum": 0.62756693,
+                        "minimum": -0.329722,
+                        "std": 0.025281377
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "306.36002"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "306.36002"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "306.36002"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_65364_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-65364::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8510001"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8510001"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8510001"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 0.00034840492,
+                        "maximum": 0.6319432,
+                        "minimum": -0.33855128,
+                        "std": 0.025302825
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_65364_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "306.36002"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "306.36002"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "306.36002"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.143,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 360,
+            "row": 360,
+            "sec": 360
+        },
+        "file": "emd_65364.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-65364::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.8510001"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.8510001"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.8510001"
+            }
+        },
+        "size_kbytes": 186625,
+        "spacing": {
+            "x": 360,
+            "y": 360,
+            "z": 360
+        },
+        "statistics": {
+            "average": -5.6627516e-05,
+            "maximum": 1.852684,
+            "minimum": -1.3615878,
+            "std": 0.037849706
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "details": "N-terminal MBP tag, 3C cleavage site,Sequence reference for Measles virus genotype A-vaccine is not available at the time of biocuration. Current sequence reference is from UniProt id P35974.",
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.066334383"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Maltose/maltodextrin-binding periplasmic protein,Phosphoprotein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1056493,
+                            "valueOf_": "Measles virus genotype A-vaccine"
+                        }
+                    },
+                    "number_of_copies": "4",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 7108,
+                            "valueOf_": "Spodoptera frugiperda"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P0AEX9"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P35974"
+                            }
+                        ],
+                        "string": "MGSSHHHHHHGTKTEEGKLVIWINGDKGYNGLAEVGKKFEKDTGIKVTVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFG GYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEALSLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALM FNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLTFLVDLIKNKHMNADTDYSIAEAAFNKGETAMTING PWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNKELAKEFLENYLLTDEGLEAVNKDKPLGAVALKSYE EELAKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAASGRQTVDEALKDAQTGTDYDIPTTLEVLFQGPLGSGD YYDDELFSDVQDIKTALAKIHEDNQKIISKLESLLLLKGEVESIKKQINRQNISISTLEGHLSSIMIAIPGLGKDPNDPT ADVEINPDLKPIIGRDSGRALAEVLKKPVASRQLQGMTNGRTSSRGQLLKEFQPKPIGKKMSSAVGFVPDTGPASRSVIR SIIKSSRLEEDRKRYLMTLLDDIKGANDLAKFHQMLMKIIMK"
+                    }
+                },
+                {
+                    "details": "N terminal HisMBP tag, 3C cleavage site, TEV cleavage site, C-terminal Strep II and FLAG tag,Sequence reference for Measles virus genotype A-vaccine is not available at the time of biocuration. Current sequence reference is from UniProt id P35975.",
+                    "ec_number": [
+                        "2.7.7.48"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.297006906"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Maltose/maltodextrin-binding periplasmic protein,RNA-directed RNA polymerase L,Strep II and FLAG tag"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 32630,
+                            "valueOf_": "synthetic construct"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 7108,
+                            "valueOf_": "Spodoptera frugiperda"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P0AEX9"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P35975"
+                            }
+                        ],
+                        "string": "MGSSHHHHHHGTKTEEGKLVIWINGDKGYNGLAEVGKKFEKDTGIKVTVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFG GYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEALSLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALM FNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLTFLVDLIKNKHMNADTDYSIAEAAFNKGETAMTING PWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNKELAKEFLENYLLTDEGLEAVNKDKPLGAVALKSYE EELAKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAASGRQTVDEALKDAQTGTDYDIPTTLEVLFQGPLGSMD SLSVNQILYPEVHLDSPIVTNKIVAILEYARVPHAYSLEDPTLCQNIKHRLKNGFSNQMIINNVEVGNVIKSKLRSYPAH SHIPYPNCNQDLFNIEDKESTRKIRELLKKGNSLYSKVSDKVFQCLRDTNSRLGLGSELREDIKEKVINLGVYMHSSQWF EPFLFWFTVKTEMRSVIKSQTHTCHRRRHTPVFFTGSSVELLISRDLVAIISKESQHVYYLTFELVLMYCDVIEGRLMTE TAMTIDARYTELLGRVRYMWKLIDGFFPALGNPTYQIVAMLEPLSLAYLQLRDITVELRGAFLNHCFTEIHDVLDQNGFS DEGTYHELIEALDYIFITDDIHLTGEIFSFFRSFGHPRLEAVTAAENVRKYMNQPKVIVYETLMKGHAIFCGIIINGYRD RHGGSWPPLTLPLHAADTIRNAQASGEGLTHEQCVDNWKSFAGVKFGCFMPLSLDSDLTMYLKDKALAALQREWDSVYPK EFLRYDPPKGTGSRRLVDVFLNDSSFDPYDVIMYVVSGAYLHDPEFNLSYSLKEKEIKETGRLFAKMTYKMRACQVIAEN LISNGIGKYFKDNGMAKDEHDLTKALHTLAVSGVPKDLKESHRGGPVLKTYSRSPVHTSTRNVRAAKGFIGFPQVIRQDQ DTDHPENMEAYETVSAFITTDLKKYCLNWRYETISLFAQRLNEIYGLPSFFQWLHKRLETSVLYVSDPHCPPDLDAHIPL YKVPNDQIFIKYPMGGIEGYCQKLWTISTIPYLYLAAYESGVRIASLVQGDNQTIAVTKRVPSTWPYNLKKREAARVTRD YFVILRQRLHDIGHHLKANETIVSSHFFVYSKGIYYDGLLVSQSLKSIARCVFWSETIVDETRAACSNIATTMAKSIERG YDRYLAYSLNVLKVIQQILISLGFTINSTMTRDVVIPLLTNNDLLIRMALLPAPIGGMNYLNMSRLFVRNIGDPVTSSIA DLKRMILASLMPEETLHQVMTQQPGDSSFLDWASDPYSANLVCVQSITRLLKNITARFVLIHSPNPMLKGLFHDDSKEED EGLAAFLMDRHIIVPRAAHEILDHSVTGARESIAGMLDTTKGLIRASMRKGGLTSRVITRLSNYDYEQFRAGMVLLTGRK RNVLIDKESCSVQLARALRSHMWARLARGRPIYGLEVPDVLESMRGHLIRRHETCVICECGSVNYGWFFVPSGCQLDDID KETSSLRVPYIGSTTDERTDMKLAFVRAPSRSLRSAVRIATVYSWAYGDDDSSWNEAWLLARQRANVSLEELRVITPIST STNLAHRLRDRSTQVKYSGTSLVRVARYTTISNDNLSFVISDKKVDTNFIYQQGMLLGLGVLETLFRLEKDTGSSNTVLH LHVETDCCVIPMIDHPRIPSSRKLELRAELCTNPLIYDNAPLIDRDTTRLYTQSHRRHLVEFVTWSTPQLYHILAKSTAL SMIDLVTKFEKDHMNEISALIGDDDINSFITEFLVIEPRLFTIYLGQCAAINWAFDVHYHRPSGKYQMGELLSSFLSRMS KGVFKVLVNALSHPKIYKKFWHCGIIEPIHGPSLDAQNLHTTVCNMVYTCYMTYLDLLLNEELEEFTFLLCESDEDVVPD RFDNIQAKHLCVLADLYCQPGACPPIRGLRPVEKCAVLTDHIKAEARLSPAGSSWNINPIIVDHYSCSLTYLRRGSIKQI RLRVDPGFIFDALAEVNVSQPKIGSNNISNMSIKAFRPPHDDVAKLLKDINTSKHNLPISGGNLANYEIHAFRRIGLNSS ACYKAVEISTLIRRCLEPGEDGLFLGEGSGSMLITYKEILKLNKCFYNSGVSANSRSGQRELAPYPSEVGLVEHRMGVGN IVKVLFNGRPEVTWVGSVDCFNFIVSNIPTSSVGFIHSDIETLPNKDTIEKLEELAAILSMALLLGKIGSILVIKLMPFS GDFVQGFISYVGSYYREVNLVYPRYSNFISTESYLVMTDLKANRLMNPEKIKQQIIESSVRTSPGLIGHILSIKQLSCIQ AIVGDVVSRGDINPTLKKLTPIEQVLINCGLAINGPKLCKELIHHDVASGQDGLLNSILILYRELARFKDNRRSQQGMFH AYPVLVSSRQRELISRITRKFWGHILLYSGNRKLINKFIQNLKSGYLILDLHQNIFVKNLSKSEKQIIMTGGLKREWVFK VTVKETKEWYKLVGYSALIKDSRENLYFQGSGWSHPQFEKGGGSGGGSGGSAWSHPQFEKGSDYKDDDDK"
+                    }
+                },
+                {
+                    "details": "N-terminal HisMBP tag, 3C cleavage site, TEV cleavage site, C-terminal GFP and FLAG tag,Sequence reference for Measles virus genotype A-vaccine is not available at the time of biocuration. Current sequence reference is from UniProt id P35977.",
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.094418805"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Maltose/maltodextrin-binding periplasmic protein,Protein C,Green fluorescent protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 6100,
+                            "valueOf_": "Aequorea victoria"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 7108,
+                            "valueOf_": "Spodoptera frugiperda"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P0AEX9"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P35977"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P42212"
+                            }
+                        ],
+                        "string": "MGSSHHHHHHGTKTEEGKLVIWINGDKGYNGLAEVGKKFEKDTGIKVTVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFG GYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEALSLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALM FNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLTFLVDLIKNKHMNADTDYSIAEAAFNKGETAMTING PWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNKELAKEFLENYLLTDEGLEAVNKDKPLGAVALKSYE EELAKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAASGRQTVDEALKDAQTGTDYDIPTTLEVLFQGPLGSMS KTDWNASGLSRPSPSAHWPSRKLWQHGQKYQTTQDRSEPPAGKRRQAVRVSANHASQQLDQLKAVHLASAVRDLERAMTT LKLWESPQEISRHQALGYSVIMFMITAVKRLRESKMLTLSWFNQALMVIAPYQEETMNLKTAMWILANLIPRDMLSLTGD LLPSLWGSGLLMLKLQKEGRSTSSSRENLYFQGNGSSGSMVSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYG KLTLKFICTTGKLPVPWPTLVTTLTYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLV NRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHY LSTQSKLSKDPNEKRDHMVLLEFVTAAGITLGMDELYKDYKDDDDK"
+                    }
+                },
+                {
+                    "formula": "ZN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "6.5409e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ZINC ION"
+                    },
+                    "number_of_copies": "3"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "3"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Measles virus RNA-dependent RNA polymerase complex bound to viral protein C"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.75"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Measles virus RNA-dependent RNA polymerase complex bound to viral protein C"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 1056493,
+                                "valueOf_": "Measles virus genotype A-vaccine"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "projection_matching_processing": {},
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "PROJECTION MATCHING"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 591603,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.72"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "projection_matching_processing": {},
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "PROJECTION MATCHING"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "52.52"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOQUANTUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.5"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.0"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "details": "300mM NaCl, 25mM HEPES, 1mM TCEP, 6mM MgCl2",
+                                "ph": 7.5
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "1.2"
+                            },
+                            "details": "This sample was monodisperse.",
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

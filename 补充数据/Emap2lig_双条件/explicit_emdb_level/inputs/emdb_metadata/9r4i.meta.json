@@ -1,0 +1,854 @@
+{
+    "_id": "68214ada6e5018e151a80ea0",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Fairall L"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Schwabe JWR"
+                }
+            ]
+        },
+        "composite_map": true,
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-02-25T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "222493/Z/21/Z",
+                    "country": "United Kingdom",
+                    "funding_body": "Wellcome Trust",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-05-07T00:00:00",
+            "header_release": "2026-02-25T00:00:00",
+            "map_release": "2026-02-25T00:00:00",
+            "update": "2026-02-25T00:00:00"
+        },
+        "keywords": "HDAC1 DNTTIP1 MIDEAS histone deacetylase complex, GENE REGULATION",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-25T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "An auto inhibitory loop in the MiDAC histone deacetylase complex"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0001-9456-3047",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Fairall L"
+                        },
+                        {
+                            "ORCID": "0000-0002-6337-3504",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Sirvydis K"
+                        },
+                        {
+                            "ORCID": "0000-0003-2863-4374",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Turnbull RE"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Knottnerus SJ"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Gonchar O"
+                        },
+                        {
+                            "ORCID": "0000-0003-1303-0009",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Muskett FW"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Jukes-Jones R"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "van Brussel L"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "van de Geer E"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "van Gassen K"
+                        },
+                        {
+                            "ORCID": "0000-0002-2542-0250",
+                            "instance_type": "author",
+                            "order": 11,
+                            "valueOf_": "Badenhorst P"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 12,
+                            "valueOf_": "Johnson D"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 13,
+                            "valueOf_": "Terhal PA"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 14,
+                            "valueOf_": "van Hasselt PM"
+                        },
+                        {
+                            "ORCID": "0000-0001-5247-6965",
+                            "instance_type": "author",
+                            "order": 15,
+                            "valueOf_": "van Jaarsveld RH"
+                        },
+                        {
+                            "ORCID": "0000-0003-2865-4383",
+                            "instance_type": "author",
+                            "order": 16,
+                            "valueOf_": "Schwabe JW"
+                        }
+                    ],
+                    "country": "UK",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41290615"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1038/s41467-025-65472-x"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2041-1723"
+                        }
+                    ],
+                    "first_page": "10472",
+                    "journal": "Nat Commun",
+                    "journal_abbreviation": "Nat Commun",
+                    "last_page": "10472",
+                    "published": true,
+                    "title": "A de novo missense variant in MIDEAS results in increased deacetylase activity of the MiDAC HDAC complex causing a neurodevelopmental syndrome.",
+                    "volume": "16",
+                    "year": "2025"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "emdb_id": "EMD-53563",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "consensus EM volume"
+                    }
+                },
+                {
+                    "emdb_id": "EMD-53564",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "emdb_id": "EMD-53565",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "emdb_id": "EMD-53566",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-53563",
+                    "content_type": "consensus EM volume",
+                    "db_name": "EMDB",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-53564",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-53565",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-53566",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-53567",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "An auto inhibitory loop in the MiDAC histone deacetylase complex",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9r4i",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-53567",
+    "interpretation": {
+        "modelling_list": {
+            "modelling": [
+                {
+                    "details": "Initial model was built using Modelangelo and compared with PDB entry 6Z2J",
+                    "initial_model": [
+                        {
+                            "access_code": "6Z2J",
+                            "chain": {
+                                "initial_model_type": "experimental model",
+                                "source_name": "PDB"
+                            },
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling",
+                    "overall_bvalue": 100.7,
+                    "refinement_protocol": "AB INITIO MODEL",
+                    "refinement_space": "REAL"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "Composite map",
+        "axis_order": {
+            "fast": "Z",
+            "medium": "Y",
+            "slow": "X"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "333.878"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "333.878"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "333.878"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 8.0,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 278,
+            "row": 278,
+            "sec": 278
+        },
+        "file": "emd_53567.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-53567::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "1.201"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "1.201"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "1.201"
+            }
+        },
+        "size_kbytes": 85940,
+        "spacing": {
+            "x": 278,
+            "y": 278,
+            "z": 278
+        },
+        "statistics": {
+            "average": 0.0016098027,
+            "maximum": 54.850548,
+            "minimum": -21.305948,
+            "std": 1.0768232
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "ec_number": [
+                        "3.5.1.98"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.055178906"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Histone deacetylase 1"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q13547"
+                            }
+                        ],
+                        "string": "MAQTQGTRRKVCYYYDGDVGNYYYGQGHPMKPHRIRMTHNLLLNYGLYRKMEIYRPHKANAEEMTKYHSDDYIKFLRSIR PDNMSEYSKQMQRFNVGEDCPVFDGLFEFCQLSTGGSVASAVKLNKQQTDIAVNWAGGLHHAKKSEASGFCYVNDIVLAI LELLKYHQRVLYIDIDIHHGDGVEEAFYTTDRVMTVSFHKYGEYFPGTGDLRDIGAGKGKYYAVNYPLRDGIDDESYEAI FKPVMSKVMEMFQPSAVVLQCGSDSLSGDRLGCFNLTIKGHAKCVEFVKSFNLPMLMLGGGGYTIRNVARCWTYETAVAL DTEIPNELPYNDYFEYFGPDFKLHISPSNMTNQNTNEYLEKIKQRLFENLRMLPHAPGVQMQAIPEDAIPEESGDEDEDD PDKRISICSSDKRIACEEEFSDSEEEGEGGRKNSSNFKKAKRVKTEDEKEKDPEEKKEVTEEEKTKEEKPEAKGVKEEVK LA"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.029268565999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Mitotic deacetylase-associated SANT domain protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q6PJG2"
+                            }
+                        ],
+                        "string": "TPYQSHLRSPVRLADHPSERSFELPPYTPPPILSPVREGSGLYFNAIISTSTIPAPPPITPKSAHRTLLRTNSAEVTPPV LSVMGEATPVSIEPRINVGSRFQAEIPLMRDRALAAADPHKADLVWQPWEDLESSREKQRQVEDLLTAACSSIFPGAGTN QELALHCLHESRGDILETLNKLLLKKPLRPHNHPLATYHYTGSDQWKMAERKLFNKGIAIYKKDFFLVQKLIQTKTVAQC VEFYYTYKKQVKIGRNGTLT"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.037074433999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Deoxynucleotidyltransferase terminal-interacting protein 1"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q9H147"
+                            }
+                        ],
+                        "string": "MGATGDAEQPRGPSGAERGGLELGDAGAAGQLVLTNPWNIMIKHRQVQRRGRRSQMTTSFTDPAISMDLLRAVLQPSINE EIQTVFNKYMKFFQKAALNVRDNVGEEVDAEQLIQEACRSCLEQAKLLFSDGEKVIPRLTHELPGIKRGRQAEEECAHRG SPLPKKRKGRPPGHILSSDRAAAGMVWKPKSCEPIRREGPKWDPARLNESTTFVLGSRANKALGMGGTRGRIYIKHPHLF KYAADPQDKHWLAEQHHMRATGGKMAYLLIEEDIRDLAASDDYRGCLDLKLEELKSFVLPSWMVEKMRKYMETLRTENEH RAVEAPPQT"
+                    }
+                },
+                {
+                    "formula": "IHP",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0006600349999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "INOSITOL HEXAKISPHOSPHATE"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "ZN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "6.5409e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ZINC ION"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "K",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "3.9098e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "POTASSIUM ION"
+                    },
+                    "number_of_copies": "4"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Dimeric complex of HDAC1:MIDEAS:DNTTIP1"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.225"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Dimeric complex of HDAC1:MIDEAS:DNTTIP1"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 9606,
+                                "valueOf_": "Homo sapiens"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.4.1"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.4.1"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_classes_used": 1,
+                            "number_images_used": 305895,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.92"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.4.1"
+                                    }
+                                ]
+                            }
+                        },
+                        "final_three_d_classification": {
+                            "number_classes": 5,
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.4.1"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "particle_selection": [
+                            {
+                                "instance_type": "particle_selection",
+                                "number_selected": 3618574
+                            }
+                        ],
+                        "startup_model": [
+                            {
+                                "details": "Ab initio",
+                                "instance_type": "startup_model",
+                                "type_of_model": "OTHER"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "alignment_procedure": {
+                                "zemlin_tableau": {}
+                            },
+                            "c2_aperture_diameter": {
+                                "units": "\u00b5m",
+                                "valueOf_": "50.0"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "46.7"
+                                        },
+                                        "average_exposure_time": {
+                                            "units": "s",
+                                            "valueOf_": "2.0"
+                                        },
+                                        "digitization_details": {
+                                            "dimensions": {
+                                                "height": {
+                                                    "units": "pixel",
+                                                    "valueOf_": "4092"
+                                                },
+                                                "width": {
+                                                    "units": "pixel",
+                                                    "valueOf_": "5760"
+                                                }
+                                            }
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOQUANTUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_grids_imaged": 1,
+                                        "number_real_images": 10709
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.4"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.2"
+                            },
+                            "nominal_magnification": 105000.0,
+                            "specimen_holder_model": "FEI TITAN KRIOS AUTOGRID HOLDER",
+                            "temperature": {
+                                "temperature_max": {
+                                    "units": "K",
+                                    "valueOf_": "100.0"
+                                },
+                                "temperature_min": {
+                                    "units": "K",
+                                    "valueOf_": "77.0"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "10.0"
+                                        },
+                                        "formula": "C8H18N2O4S",
+                                        "instance_type": "component",
+                                        "name": "HEPES"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "25.0"
+                                        },
+                                        "formula": "KCl",
+                                        "instance_type": "component",
+                                        "name": "Potassium Chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "micromolar",
+                                            "valueOf_": "1.0"
+                                        },
+                                        "formula": "C6H18O24P6",
+                                        "instance_type": "component",
+                                        "name": "Inositol Hexaphosphate"
+                                    }
+                                ],
+                                "details": "10 mM HEPES, 25 mM KCl, 1 micromolar Inositol Hexaphosphate",
+                                "ph": 7.5
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "0.2"
+                            },
+                            "details": "Crosslinked with 0.1% formaldehyde and 0.0625% glutaraldehyde",
+                            "grid": {
+                                "material": "GOLD",
+                                "mesh": 300,
+                                "model": "Quantifoil R1.2/1.3",
+                                "pretreatment": {
+                                    "type_": "GLOW DISCHARGE"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "CARBON",
+                                        "film_topology": "HOLEY",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "277"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

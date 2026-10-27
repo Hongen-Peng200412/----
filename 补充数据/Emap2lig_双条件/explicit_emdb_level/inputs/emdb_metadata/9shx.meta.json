@@ -1,0 +1,1104 @@
+{
+    "_id": "68b4c8f06e5018e15134d8d3",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Fuglsang A"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Montoya G"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-02-18T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "NNF14CC0001",
+                    "country": "Denmark",
+                    "funding_body": "Novo Nordisk Foundation",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-08-28T00:00:00",
+            "header_release": "2026-02-04T00:00:00",
+            "map_release": "2026-02-04T00:00:00",
+            "update": "2026-02-18T00:00:00"
+        },
+        "keywords": "CRISPR-Cas Type I-F HNH nuclease, RNA BINDING PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-04T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_ASTM",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_ASTM",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-18T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Type I-F_HNH variant Cascade bound to dsDNA, HNH domain in middle position"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Fuglsang A"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Rout SS"
+                        },
+                        {
+                            "ORCID": "0000-0002-2944-1112",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Koutna EB"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Sofos N"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Gallego AR"
+                        },
+                        {
+                            "ORCID": "0000-0002-8269-3941",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Montoya G"
+                        }
+                    ],
+                    "country": "UK",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41603736"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1093/nar/gkag053"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "1362-4962"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0389"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ASTM",
+                            "valueOf_": "NARHAD"
+                        }
+                    ],
+                    "journal": "Nucleic Acids Res",
+                    "journal_abbreviation": "Nucleic Acids Res",
+                    "published": true,
+                    "title": "Conformational dynamics of CRISPR-Cas type I-F-HNH inform nickase engineering in a cascade scaffold.",
+                    "volume": "54",
+                    "year": "2026"
+                }
+            },
+            "secondary_citation": [
+                {
+                    "citation_type": {
+                        "author": [
+                            {
+                                "ORCID": "0000-0003-3921-3209",
+                                "instance_type": "author",
+                                "order": 7,
+                                "valueOf_": "Liebschner D"
+                            },
+                            {
+                                "ORCID": "0000-0002-5052-991X",
+                                "instance_type": "author",
+                                "order": 8,
+                                "valueOf_": "Afonine PV"
+                            },
+                            {
+                                "instance_type": "author",
+                                "order": 9,
+                                "valueOf_": "Baker ML"
+                            },
+                            {
+                                "instance_type": "author",
+                                "order": 10,
+                                "valueOf_": "Bunkoczi G"
+                            },
+                            {
+                                "ORCID": "0000-0003-2492-979X",
+                                "instance_type": "author",
+                                "order": 11,
+                                "valueOf_": "Chen VB"
+                            },
+                            {
+                                "instance_type": "author",
+                                "order": 12,
+                                "valueOf_": "Croll TI"
+                            },
+                            {
+                                "ORCID": "0000-0002-4871-2096",
+                                "instance_type": "author",
+                                "order": 13,
+                                "valueOf_": "Hintze B"
+                            },
+                            {
+                                "ORCID": "0000-0001-6690-8458",
+                                "instance_type": "author",
+                                "order": 14,
+                                "valueOf_": "Hung LW"
+                            },
+                            {
+                                "instance_type": "author",
+                                "order": 15,
+                                "valueOf_": "Jain S"
+                            },
+                            {
+                                "instance_type": "author",
+                                "order": 16,
+                                "valueOf_": "McCoy AJ"
+                            },
+                            {
+                                "ORCID": "0000-0001-8857-9464",
+                                "instance_type": "author",
+                                "order": 17,
+                                "valueOf_": "Moriarty NW"
+                            },
+                            {
+                                "ORCID": "0000-0003-3107-2202",
+                                "instance_type": "author",
+                                "order": 18,
+                                "valueOf_": "Oeffner RD"
+                            },
+                            {
+                                "ORCID": "0000-0001-9633-6067",
+                                "instance_type": "author",
+                                "order": 19,
+                                "valueOf_": "Poon BK"
+                            },
+                            {
+                                "instance_type": "author",
+                                "order": 20,
+                                "valueOf_": "Prisant MG"
+                            },
+                            {
+                                "ORCID": "0000-0001-8273-0047",
+                                "instance_type": "author",
+                                "order": 21,
+                                "valueOf_": "Read RJ"
+                            },
+                            {
+                                "ORCID": "0000-0002-3311-2944",
+                                "instance_type": "author",
+                                "order": 22,
+                                "valueOf_": "Richardson JS"
+                            },
+                            {
+                                "instance_type": "author",
+                                "order": 23,
+                                "valueOf_": "Richardson DC"
+                            },
+                            {
+                                "ORCID": "0000-0002-8346-9247",
+                                "instance_type": "author",
+                                "order": 24,
+                                "valueOf_": "Sammito MD"
+                            },
+                            {
+                                "ORCID": "0000-0002-0623-3214",
+                                "instance_type": "author",
+                                "order": 25,
+                                "valueOf_": "Sobolev OV"
+                            },
+                            {
+                                "instance_type": "author",
+                                "order": 26,
+                                "valueOf_": "Stockwell DH"
+                            },
+                            {
+                                "ORCID": "0000-0001-6384-0320",
+                                "instance_type": "author",
+                                "order": 27,
+                                "valueOf_": "Terwilliger TC"
+                            },
+                            {
+                                "instance_type": "author",
+                                "order": 28,
+                                "valueOf_": "Urzhumtsev AG"
+                            },
+                            {
+                                "instance_type": "author",
+                                "order": 29,
+                                "valueOf_": "Videau LL"
+                            },
+                            {
+                                "instance_type": "author",
+                                "order": 30,
+                                "valueOf_": "Williams CJ"
+                            },
+                            {
+                                "ORCID": "0000-0001-9333-8219",
+                                "instance_type": "author",
+                                "order": 31,
+                                "valueOf_": "Adams PD"
+                            }
+                        ],
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "PUBMED",
+                                "valueOf_": "31588918"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "DOI",
+                                "valueOf_": "doi:10.1107/S2059798319011471"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "CSD",
+                                "valueOf_": "0353"
+                            }
+                        ],
+                        "journal_abbreviation": "Acta Crystallogr D Struct Biol .",
+                        "published": true,
+                        "title": "Macromolecular structure determination using X-rays, neutrons and electrons: recent developments in Phenix",
+                        "year": "2019"
+                    },
+                    "instance_type": "secondary_citation"
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-54919",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Type I-F_HNH variant Cascade bound to dsDNA, HNH domain in middle position",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9shx",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-54919",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "304.5"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "304.5"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "304.5"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 420,
+                        "row": 420,
+                        "sec": 420
+                    },
+                    "file": "emd_54919_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-54919::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.725"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.725"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.725"
+                        }
+                    },
+                    "size_kbytes": 296353,
+                    "spacing": {
+                        "x": 420,
+                        "y": 420,
+                        "z": 420
+                    },
+                    "statistics": {
+                        "average": 0.0002741937,
+                        "maximum": 0.83925706,
+                        "minimum": -0.4905964,
+                        "std": 0.057255127
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "304.5"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "304.5"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "304.5"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 420,
+                        "row": 420,
+                        "sec": 420
+                    },
+                    "file": "emd_54919_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-54919::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.725"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.725"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.725"
+                        }
+                    },
+                    "size_kbytes": 296353,
+                    "spacing": {
+                        "x": 420,
+                        "y": 420,
+                        "z": 420
+                    },
+                    "statistics": {
+                        "average": 0.0002707811,
+                        "maximum": 0.8730413,
+                        "minimum": -0.4798098,
+                        "std": 0.05698541
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "304.5"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "304.5"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "304.5"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.06,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 420,
+            "row": 420,
+            "sec": 420
+        },
+        "file": "emd_54919.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-54919::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.725"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.725"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.725"
+            }
+        },
+        "size_kbytes": 296353,
+        "spacing": {
+            "x": 420,
+            "y": 420,
+            "z": 420
+        },
+        "statistics": {
+            "average": 0.0018388407,
+            "maximum": 1.9826263,
+            "minimum": -0.02802155,
+            "std": 0.029094335
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.038700172"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Cas7f"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2053611,
+                            "valueOf_": "Selenomonas sp."
+                        }
+                    },
+                    "number_of_copies": "6",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0AAX7FM28"
+                            }
+                        ],
+                        "string": "MAANKKATNVTLKSRPENLSFARCLNTTEAKFWQTDFLKRHTFKLPLLITDKAVLASKGHEMPPDKLEKEIMDPNPQKSQ SCTLSTECDTLRIDFGIKVLPVKESMYSCSDYNYRTAIYQKIDEYIAEDGFLTLAKRYVNNIANARFLWRNRKGAEIIET IVTIEDKEYPSFNSKSFNLDTFVEDNATINEIAQQIADTFAGKREYLNIYVTCFVKIGCAMEVYPSQEMTFDDDDKGKKL FKFEGSAGMHSQKINNALRTIDTWYPDYTTYEFPIPVENYGAARSIGIPFRPDTKSFYKLIDRMILKNEDLPIEDKHYVM AILIRGGMFSKKQEK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.028703134999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Cas5f"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2053611,
+                            "valueOf_": "Selenomonas sp."
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0AAX7FM22"
+                            }
+                        ],
+                        "string": "MMKGYILLEKVNIENANAFNNIIVGIPAITSFLGFARALERKLNAKEIAIRINGVGLEFHEYELKGYKNKRGQYVTSCPL PGSIPGQNEKKLDAHIMNQAYIDLNMSFLLEVEGPHVDMSTCKSIKSTMETLRIAGGIIRNYKKIRLIDTLADIPYGYFL TLRQDNLNDAAGDDMLDKMIHALQQEDTLVPIAVGFKALSEVGHVEGQRDPEKDHCFVESIFSLGGFECSKILEDINSCL WRYKTEEGLYLCTII"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.043706288999999995"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Cas8f fusion with HNH"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2053611,
+                            "valueOf_": "Selenomonas sp."
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0AAX7FM29"
+                            }
+                        ],
+                        "string": "MLRSKHHHHSGHHHTGHHHHSGSHHHTGGSGENLYFQGSGGLRNKILAAISQKIPEEQKINKYIEGLFQSIDKNHLATHV AKFTETNSPGNIGAYDILSSDMNCGYLDTANAGWKEPDIVTNDAKYKRPQGFVAMEMSDGRTVMEHLQEDSAELRHEMEE LTDKYDEIRDGILNMPSMQPYRTNQFIKQVFFPVGGSYHLLSILPSTVLNYEVSDRLYRSKIPKIRLRLLSSNAASTTGS RLVSKNKWPLVFQALPPKFLEKNLAKALDKEYLLPDINIDELEGVDNGCLIDEALLPLIIDEGKRKGEGNYRPRHLRDER KEETVQAFLDKYGYCNIPVGYEVHHIVPLSQGGADSIKNMIMLSIEHHERVTEAHASYFKWRNT"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.020735873"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Cas6f"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2053611,
+                            "valueOf_": "Selenomonas sp."
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0AAX7FM27"
+                            }
+                        ],
+                        "string": "MFSQILIIKPGTGISPNIIISEDIFPVLHSLFVEHDKKFGITFPAYSFDKKGHLGNIIEVLSEDKEALASLCLEEHLAEV TDYVKVKKEITFTDDYVLFKRIREENQYETTARRMRKRGHTELGRPLEMHIKKKNQQIFCHAYIKVKSASTGQSYNIFLA PTDIKHGSFSAYGLLRGDTHA"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.014233218999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Non-target strand"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2053611,
+                            "valueOf_": "Selenomonas sp."
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "(DA)(DA)(DA)(DA)(DA)(DG)(DC)(DG)(DG)(DA)(DG)(DA)(DA)(DG)(DT)(DC)(DA)(DT)(DT)(DT) (DA)(DA)(DT)(DA)(DA)(DG)(DG)(DC)(DC)(DA)(DC)(DT)(DG)(DT)(DT)(DA)(DA)(DA)(DA)(DA) (DC)(DC)(DG)(DT)(DA)(DC)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.014062044"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Target strand"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2053611,
+                            "valueOf_": "Selenomonas sp."
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "(DG)(DT)(DA)(DC)(DA)(DA)(DT)(DT)(DT)(DT)(DT)(DA)(DA)(DC)(DA)(DG)(DT)(DG)(DG)(DC) (DC)(DT)(DT)(DA)(DT)(DT)(DA)(DA)(DA)(DT)(DG)(DA)(DC)(DT)(DT)(DC)(DT)(DC)(DC)(DG) (DC)(DT)(DT)(DT)(DT)(DT)"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 7,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.019502576"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "crRNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2053611,
+                            "valueOf_": "Selenomonas sp."
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "UUUAGAAGGAGAAGUCAUUUAAUAAGGCCACUGUUAAAAAGUGUACCGCCGGAUAGGCG(23G)"
+                    }
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 8,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 9,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "1"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Type I-F_HNH effector complex bound to dsDNA"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.35"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Type I-F_HNH effector complex bound to dsDNA"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 2053611,
+                                "valueOf_": "Selenomonas sp."
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "NOT APPLICABLE"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 174646,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.4"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "NOT APPLICABLE"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.8"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.6"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "277"
+                                },
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

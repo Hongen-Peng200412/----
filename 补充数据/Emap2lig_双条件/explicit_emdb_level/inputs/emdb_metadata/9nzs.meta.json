@@ -1,0 +1,713 @@
+{
+    "_id": "67f3004c6e5018e151384353",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Guan K"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Taylor DW"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-08T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "F-1938",
+                    "country": "United States",
+                    "funding_body": "Welch Foundation",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-04-01T00:00:00",
+            "header_release": "2026-04-08T00:00:00",
+            "map_release": "2026-04-08T00:00:00",
+            "update": "2026-04-08T00:00:00"
+        },
+        "keywords": "RNA-guided endonuclease, RNA BINDING PROTEIN, RNA BINDING PROTEIN-DNA-RNA complex",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-08T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "Cryo-EM structure of OsCas12f-gRNA-DNA ternary complex. State III"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Guan K"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Ocampo RF"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Taylor DW"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Cryo-EM structure of CRISPR-Cas12f nucleases"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-49958",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of OsCas12f-gRNA-DNA ternary complex. State III",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9nzs",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-49958",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "Half Map A",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "300.8"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "300.8"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "300.8"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 320,
+                        "row": 320,
+                        "sec": 320
+                    },
+                    "file": "emd_49958_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-49958::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93999994"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93999994"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93999994"
+                        }
+                    },
+                    "size_kbytes": 131073,
+                    "spacing": {
+                        "x": 320,
+                        "y": 320,
+                        "z": 320
+                    },
+                    "statistics": {
+                        "average": 0.00054204644,
+                        "maximum": 0.6878264,
+                        "minimum": -0.34721428,
+                        "std": 0.039154995
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "Half Map B",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "300.8"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "300.8"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "300.8"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 320,
+                        "row": 320,
+                        "sec": 320
+                    },
+                    "file": "emd_49958_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-49958::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93999994"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93999994"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.93999994"
+                        }
+                    },
+                    "size_kbytes": 131073,
+                    "spacing": {
+                        "x": 320,
+                        "y": 320,
+                        "z": 320
+                    },
+                    "statistics": {
+                        "average": 0.0005480734,
+                        "maximum": 0.6948015,
+                        "minimum": -0.34654838,
+                        "std": 0.039474636
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "structure of OsCas12f-gRNA-DNA ternary complex. State III",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "300.8"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "300.8"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "300.8"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.1,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 320,
+            "row": 320,
+            "sec": 320
+        },
+        "file": "emd_49958.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-49958::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.93999994"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.93999994"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.93999994"
+            }
+        },
+        "size_kbytes": 131073,
+        "spacing": {
+            "x": 320,
+            "y": 320,
+            "z": 320
+        },
+        "statistics": {
+            "average": 0.0004836196,
+            "maximum": 0.46631894,
+            "minimum": -0.18578076,
+            "std": 0.012690541
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.049389547"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Cas12f"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1945593,
+                            "valueOf_": "Oscillibacter sp."
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "string": "MGKGVLAKVMKYELRYLDGCGDFSNMQEQVWALQRQTREILNRSIQIAFQWDCANSEHHRKTGEYLDLKTETGYKRLDGH IYNCLKGQYEDMATSNLNATIQKAWKKYNSSKKEILRGSMSIPSYKMNQPLTLDKNTVKLSEGERNPIVTLTLFSDKFKR AQGVSNVKFSMPLHDGTQRAIFANLMNGTYQLGECQLVYKRPKWFLFVTYKFPPVEHPLDPDKILGVDMGEACALYASTF GEHGYLKIDGGEITKYAKKMEARIRSMQKQAAHCGEGRIGHGTKTRVSVVYQAKDKVARFRDTINHRYSKALIDYALKNQ CGTIQMEDLTGIKEDTGFPKFLRHWTYYDLQSKIEAKAAEHGIQVVKINPRHTSQRCSRCGHIDKANRTSQADFCCTKCG FSANADFNASQNISIRNIDKIIAKAIGANRKQT"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.01383594"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Targer strand DNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1945593,
+                            "valueOf_": "Oscillibacter sp."
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "(DA)(DG)(DC)(DA)(DA)(DG)(DG)(DC)(DA)(DA)(DC)(DG)(DC)(DT)(DC)(DC)(DA)(DA)(DT)(DG) (DC)(DA)(DC)(DC)(DC)(DA)(DA)(DG)(DA)(DC)(DA)(DG)(DC)(DA)(DG)(DA)(DA)(DA)(DT)(DT) (DA)(DC)(DG)(DT)(DA)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.013878857"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Non-target strand DNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1945593,
+                            "valueOf_": "Oscillibacter sp."
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "(DT)(DA)(DC)(DG)(DT)(DA)(DA)(DT)(DT)(DT)(DC)(DT)(DG)(DC)(DT)(DG)(DT)(DC)(DT)(DT) (DG)(DG)(DG)(DT)(DG)(DC)(DA)(DT)(DT)(DG)(DG)(DA)(DG)(DC)(DG)(DT)(DT)(DG)(DC)(DC) (DT)(DT)(DG)(DC)(DT)"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.048870069999999995"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "guide RNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1945593,
+                            "valueOf_": "Oscillibacter sp."
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "AGGGCCGACUUCCCGGCCCAAAAUCGAGACAGUAGCCGUAAAACGUUGAGUUUCAGCGUGGGCGACACACUCGAAAAGGU UAAGAUAUGCACAUAGUAAUCCGUGCAUGAGCCGCGAAAGCGGCUUGAAGGUGCUGUCUUGGGUGCAUUGG"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.00111177"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "DNA target poly C"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1945593,
+                            "valueOf_": "Oscillibacter sp."
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "(DC)(DC)(DC)(DC)"
+                    }
+                },
+                {
+                    "formula": "ZN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "6.5409e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ZINC ION"
+                    },
+                    "number_of_copies": "1"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Ternary complex of OsCas12f-gRNA-DNA complex. State III"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 4
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 5
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Ternary complex of OsCas12f-gRNA-DNA complex. State III"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 1945593,
+                                "valueOf_": "Oscillibacter sp."
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 42153,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.68"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF"
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "200"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "SPOT SCAN",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "49.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS GLACIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.5"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.5"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 8.0
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

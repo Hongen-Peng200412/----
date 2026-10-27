@@ -1,0 +1,896 @@
+{
+    "_id": "671ec2a5c7dd968497da50ca",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Di Domenico V"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Mast T"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Cifuente JO"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Schulze J"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Litschko C"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Alcaide A"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Villegas JC"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Fiebig T"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Guerin ME"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-05-06T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "country": "Spain",
+                    "funding_body": "Ministry of Economy and Competitiveness (MINECO)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute Of Allergy and Infectious Diseases (NIH/NIAID)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "country": "Germany",
+                    "funding_body": "German Research Foundation (DFG)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2024-10-22T00:00:00",
+            "header_release": "2026-05-06T00:00:00",
+            "map_release": "2026-05-06T00:00:00",
+            "update": "2026-05-06T00:00:00"
+        },
+        "keywords": "Capsule polymerase, Haemophilus influenzae serotype b, Pathogens, BIOSYNTHETIC PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-05-06T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Haemophilus influenzae serotype b capsule polymerase bcs3"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Di Domenico V"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Mast T"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Cifuente JO"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Schulze J"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Litschko C"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Alcaide A"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Villegas JC"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Fiebig T"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Guerin ME"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Haemophilus influenzae serotype b capsule polymerase bcs3"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "8A0C",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "details": "X-Ray determined",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-51872",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Haemophilus influenzae serotype b capsule polymerase bcs3",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9h50",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-51872",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "235.08"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "235.08"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "235.08"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_51872_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-51872::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.653"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.653"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.653"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 0.002867052,
+                        "maximum": 1.7009157,
+                        "minimum": -0.048791856,
+                        "std": 0.0355265
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "235.08"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "235.08"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "235.08"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_51872_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-51872::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.653"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.653"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.653"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 0.0013586422,
+                        "maximum": 1.400433,
+                        "minimum": -1.2830272,
+                        "std": 0.15992026
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "235.08"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "235.08"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "235.08"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_51872_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-51872::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.653"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.653"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.653"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 0.0013555617,
+                        "maximum": 1.3804258,
+                        "minimum": -1.4556031,
+                        "std": 0.15999061
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "initial_model": [
+                        {
+                            "access_code": "8A0C",
+                            "chain": {
+                                "initial_model_type": "experimental model",
+                                "source_name": "PDB"
+                            },
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling"
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "235.08"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "235.08"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "235.08"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.08,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 360,
+            "row": 360,
+            "sec": 360
+        },
+        "file": "emd_51872.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-51872::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.653"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.653"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.653"
+            }
+        },
+        "size_kbytes": 186625,
+        "spacing": {
+            "x": 360,
+            "y": 360,
+            "z": 360
+        },
+        "statistics": {
+            "average": 0.001902771,
+            "maximum": 0.929965,
+            "minimum": -0.4840038,
+            "std": 0.030203028
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.137381172"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Bcs3"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 727,
+                            "valueOf_": "Haemophilus influenzae"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q2ERG0"
+                            }
+                        ],
+                        "string": "VDKTWLFGSYAWQGNPKALFLYMLVNCKETHECWWVADNEESMKSIKKSTGLKNITFTDSEKAKELFPHADVYVTENFRE SYPVYMNENIKVFNTWHGVGLKHIELALGMNSVLAESIVRKYVRNYDIYKNNVLFLTTSQAMEDHFLEDMAISKELIIRG KYPRNAVYGPNGIHTYDINTLLPKNKSQYSQTILFCPTYRIGAIQGVLNSLLPDFAKLEEVCRHKNQLFIVKVHPFMKKD NYFAEMSEKYKDSEYILFWNDDYDIYEAFNSIDLAIIDYSSIFYDLLDAGVEKFIRYVPDLDEYQNDLELIGDYADLTEG RIVKSFQQLLNCLDNANIKIISTKRKQYLMDYFFGFKKENKSMESLIADVDNCQLQPKSLKELHTFDIFDTLIRRSTLRP FSIFDYVRDKAKASGIKFPLALTENWINVRNRAEHDVRDIMRKTTFERQSDKIEITLDDIYTRLQKNLLLTDEQTDFLKQ AEIEAEIAHVEPIQKRINYLFSLKAKGHDVAMASDMYLPEDVIYKMLDRADTRLREIPLYLSSTIGYQKSTGKLYQHIFF DLDYQYSRWTHYGDNKHADGSVPRRLGIQTAVHDIDDFIPFENAMVNAMDNYNRYPAYQLATKMHRYRTQLVQENGFGNT LFETKYYNYAYVGASFVPYINWAIKDAIKRGYETIYFISRDGHFLKQIADKIIEIRGYNVKTKYIYGSRKAWRLPSFITK VDDETFWQFGNFVGMDSFEDLVKASYLSESELLSLFPEFESLRHAKHLRGEIAENIRKIFKNSPAYHEKVLAIAAEKRKM VRQYIQQEINPKEKFAFVEFWGRGYTQDTFGRLLNDAFGKEVKNPFYYVRSFTDDMGTSVRHNFILAPQNFSFFEPIFAQ TPYDSIPDYYEEKGRIEPIINHRDRSVSDLISEGLLKFTEDYLALNTQDEDYFDAALSQFNYQYQLNTPNDQFICNVFSE LKDNISSFGVEKPYAPALTLKQLESITSKQELDKLTQSIPISLSKSDVKVIDYYNKIQKNYNLPAYNSTPMRKAYAVNPL EQYVWSTQVPFRVLSLKQNSFYLDVSFAETTKRKDIFLKELNEIDVIAVDWLKGGVPRLLTEHGYITAHKDWVKKSFNDD KTNNIEEPKVKNKEKSKVLEVNTTVTNNNKQAIGKLDNNIDKSLEHHHHHH"
+                    }
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "PO4",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "9.4971e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "PHOSPHATE ION"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "77"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Physiological dimeric assembly of Bcs3"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Physiological dimeric assembly of Bcs3"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 727,
+                                "valueOf_": "Haemophilus influenzae"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.1"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "OTHER"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 1237334,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.72"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.2"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "OTHER"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "particle_selection": [
+                            {
+                                "instance_type": "particle_selection",
+                                "number_selected": 3447096
+                            }
+                        ],
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "pdb_model": {
+                                    "pdb_id": "8A0C"
+                                },
+                                "type_of_model": "PDB ENTRY"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "OTHER",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "52.26"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_real_images": 27663
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.0"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "formula": "Tris",
+                                        "instance_type": "component",
+                                        "name": "Tris"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "150.0"
+                                        },
+                                        "formula": "NaCl",
+                                        "instance_type": "component",
+                                        "name": "Sodium Chloride"
+                                    }
+                                ],
+                                "ph": 7.5
+                            },
+                            "grid": {
+                                "material": "COPPER",
+                                "model": "Quantifoil R1.2/1.3",
+                                "pretreatment": {
+                                    "type_": "GLOW DISCHARGE"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "CARBON",
+                                        "film_topology": "CONTINUOUS",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "90"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "277.15"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

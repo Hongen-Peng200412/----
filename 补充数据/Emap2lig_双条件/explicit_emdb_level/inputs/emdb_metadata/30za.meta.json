@@ -1,0 +1,746 @@
+{
+    "_id": "6a1384404c21aefa44c6b735",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Goulet A"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Cambillau C"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-06-17T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "ANR-21-CE11-0018-01",
+                    "country": "France",
+                    "funding_body": "Agence Nationale de la Recherche (ANR)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "ANR-10-INSB-05-02",
+                    "country": "France",
+                    "funding_body": "Agence Nationale de la Recherche (ANR)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "ANR-17-EURE-0003",
+                    "country": "France",
+                    "funding_body": "Agence Nationale de la Recherche (ANR)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2026-05-18T00:00:00",
+            "header_release": "2026-06-17T00:00:00",
+            "map_release": "2026-06-17T00:00:00",
+            "update": "2026-06-17T00:00:00"
+        },
+        "keywords": "Major tail protein, tail tube, siphophage, STRUCTURAL PROTEIN, VIRAL PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-06-17T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Part of the tail tube of the phage OE33PA"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Schmitt L"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Chaib A"
+                        },
+                        {
+                            "ORCID": "0009-0005-6423-4935",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Ptchelkine D"
+                        },
+                        {
+                            "ORCID": "0000-0002-9877-7621",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Kandiah E"
+                        },
+                        {
+                            "ORCID": "0000-0002-4175-6598",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Le Marrec C"
+                        },
+                        {
+                            "ORCID": "0000-0001-5502-4729",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Cambillau C"
+                        },
+                        {
+                            "ORCID": "0000-0002-5971-9488",
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Goulet A"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "42244550"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.64898/2026.05.20.726473"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2692-8205"
+                        }
+                    ],
+                    "journal": "bioRxiv",
+                    "journal_abbreviation": "bioRxiv",
+                    "published": true,
+                    "title": "Dynamic adhesion device of phage OE33PA drives Gram-positive host recognition.",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-58160",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Part of the tail tube of the phage OE33PA",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "30za",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-58160",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "annotation_details": "raw map",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "335.6"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "335.6"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "335.6"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 400,
+                        "row": 400,
+                        "sec": 400
+                    },
+                    "file": "emd_58160_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-58160::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.839"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.839"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.839"
+                        }
+                    },
+                    "size_kbytes": 256001,
+                    "spacing": {
+                        "x": 400,
+                        "y": 400,
+                        "z": 400
+                    },
+                    "statistics": {
+                        "average": 0.0023168358,
+                        "maximum": 0.5155609,
+                        "minimum": -0.24039118,
+                        "std": 0.021780679
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "335.6"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "335.6"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "335.6"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 400,
+                        "row": 400,
+                        "sec": 400
+                    },
+                    "file": "emd_58160_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-58160::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.839"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.839"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.839"
+                        }
+                    },
+                    "size_kbytes": 256001,
+                    "spacing": {
+                        "x": 400,
+                        "y": 400,
+                        "z": 400
+                    },
+                    "statistics": {
+                        "average": 0.0010865217,
+                        "maximum": 1.4028339,
+                        "minimum": -1.427282,
+                        "std": 0.16764858
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "335.6"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "335.6"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "335.6"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 400,
+                        "row": 400,
+                        "sec": 400
+                    },
+                    "file": "emd_58160_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-58160::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.839"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.839"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.839"
+                        }
+                    },
+                    "size_kbytes": 256001,
+                    "spacing": {
+                        "x": 400,
+                        "y": 400,
+                        "z": 400
+                    },
+                    "statistics": {
+                        "average": 0.001120198,
+                        "maximum": 1.4707047,
+                        "minimum": -1.3899921,
+                        "std": 0.1671996
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "sharpened map",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "335.6"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "335.6"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "335.6"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.24,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 400,
+            "row": 400,
+            "sec": 400
+        },
+        "file": "emd_58160.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-58160::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.839"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.839"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.839"
+            }
+        },
+        "size_kbytes": 256001,
+        "spacing": {
+            "x": 400,
+            "y": 400,
+            "z": 400
+        },
+        "statistics": {
+            "average": 0.002316836,
+            "maximum": 1.1003326,
+            "minimum": -0.58541834,
+            "std": 0.03814094
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.021346513999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Major tail protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2201414,
+                            "valueOf_": "Oenococcus phage phiOE33PA"
+                        }
+                    },
+                    "number_of_copies": "12",
+                    "sequence": {
+                        "string": "MATVGLKLVQLALVGPDGKILTDATTGLSANGVYAVDSGVFSAKTANITGLEAASTKVYGNNRVVDLQHTKGDSSVALDF NALPHDILMKILGQVSDGKGGYTQGDKPKVAMLITTDALAEDGQVYFGFRQGEIINPDFNNGTDTTTDTRNDDNLTYSPL DNPDWNNNPGKLWYSNETGFTQDIMLADVFQGYVAAAQSAS"
+                    }
+                },
+                {
+                    "formula": "CA",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "4.0078e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "CALCIUM ION"
+                    },
+                    "number_of_copies": "12"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Oenococcus phage phiOE33PA"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "virus_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Oenococcus phage phiOE33PA"
+                    },
+                    "parent": 0,
+                    "sci_species_name": {
+                        "ncbi": 2201414,
+                        "valueOf_": "Oenococcus phage phiOE33PA"
+                    },
+                    "supramolecule_id": 1,
+                    "virus_empty": false,
+                    "virus_enveloped": false,
+                    "virus_isolate": "OTHER",
+                    "virus_type": "VIRUS-LIKE PARTICLE"
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 8863,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.9"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "RANDOM ASSIGNMENT"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "40.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOQUANTUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.2"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

@@ -1,0 +1,669 @@
+{
+    "_id": "67c4dee1c7dd968497910fb1",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "ORCID": "0000-0002-5234-2294",
+                    "instance_type": "author",
+                    "valueOf_": "Nam H"
+                },
+                {
+                    "ORCID": "0000-0001-8811-9871",
+                    "instance_type": "author",
+                    "valueOf_": "Deme JC"
+                },
+                {
+                    "ORCID": "0000-0001-9287-8053",
+                    "instance_type": "author",
+                    "valueOf_": "Lea SM"
+                },
+                {
+                    "ORCID": "0000-0001-6730-0399",
+                    "instance_type": "author",
+                    "valueOf_": "Wolin SL"
+                }
+            ]
+        },
+        "composite_map": true,
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-03-04T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "CCR Core Funding for Lea Group",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Cancer Institute (NIH/NCI)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "CCR Core Funding for Wolin Group",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Cancer Institute (NIH/NCI)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-02-21T00:00:00",
+            "header_release": "2026-02-04T00:00:00",
+            "map_release": "2026-02-04T00:00:00",
+            "update": "2026-03-04T00:00:00"
+        },
+        "keywords": "Ro60 autoantigen, RNA chaperone, RNA folding, La autoantigen, RNA BINDING PROTEIN, RNA BINDING PROTEIN-RNA complex",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-04T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_ASTM",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_ASTM",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-11T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-03-04T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.2"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "Cryo-EM structure of Ro60/La/minimal misfolded pre-5S rRNA complex with Fab, composite map"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Nam H"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Deme JC"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Sim S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Boccitto M"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Lea SM"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Wolin SL"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41610850"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1016/j.cell.2025.12.030"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "1097-4172"
+                        }
+                    ],
+                    "first_page": "1135",
+                    "journal": "Cell",
+                    "journal_abbreviation": "Cell",
+                    "published": true,
+                    "title": "Mechanistic insights into RNA chaperoning by Ro60 and La autoantigens.",
+                    "volume": "189",
+                    "year": "2026"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "details": "consensus",
+                    "emdb_id": "EMD-49357",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "consensus EM volume"
+                    }
+                },
+                {
+                    "details": "N-term La/Fab focused",
+                    "emdb_id": "EMD-49358",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "details": "C-term La focused",
+                    "emdb_id": "EMD-49359",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-49357",
+                    "content_type": "consensus EM volume",
+                    "db_name": "EMDB",
+                    "details": "consensus",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-49358",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "N-term La/Fab focused",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-49359",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "C-term La focused",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-49360",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of Ro60/La/minimal misfolded pre-5S rRNA complex with Fab, composite map",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9nfa",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-49360",
+    "map": {
+        "annotation_details": "composite map",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "310.46402"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "310.46402"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "310.46402"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.05,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 448,
+            "row": 448,
+            "sec": 448
+        },
+        "file": "emd_49360.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-49360::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.693"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.693"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.693"
+            }
+        },
+        "size_kbytes": 359662,
+        "spacing": {
+            "x": 448,
+            "y": 448,
+            "z": 448
+        },
+        "statistics": {
+            "average": 0.000878457,
+            "maximum": 1.9542636,
+            "minimum": -0.034016486,
+            "std": 0.017932013
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.060726523"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "RNA-binding protein RO60"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 7108,
+                            "valueOf_": "Spodoptera frugiperda"
+                        }
+                    },
+                    "sequence": {
+                        "string": "MEESVNQMQPLNEKQIANSQDGYVWQVTDMNRLHRFLCFGSEGGTYYIKEQKLGLENAEALIRLIEDGRGCEVIQEIKSF SQEGRTTKQEPMLFALAICSQCSDISTKQAAFKAVSEVCRIPTHLFTFIQFKKDLKESMKCGMWGRALRKAIADWYNEKG GMALALAVTKYKQRNGWSHKDLLRLSHLKPSSEGLAIVTKYITKGWKEVHELYKEKALSVETEKLLKYLEAVEKVKRTKD ELEVIHLIEEHRLVREHLLTNHLKSKEVWKALLQEMPLTALLRNLGKMTANSVLEPGNSEVSLVCEKLCNEKLLKKARIH PFHILIALETYKTGHGLRGKLKWRPDEEILKALDAAFYKTFKTVEPTGKRFLLAVDVSASMNQRVLGSILNASTVAAAMC MVVTRTEKDSYVVAFSDEMVPCPVTTDMTLQQVLMAMSQIPAGGTDCSLPMIWAQKTNTPADVFIVFTDNETFAGGVHPA IALREYRKKMDIPAKLIVCGMTSNGFTIADPDDRGMLDMCGFDTGALDVIRNFTLDMI"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.047992273"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Lupus La protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P05455"
+                            }
+                        ],
+                        "string": "MAENGDNEKMAALEAKICHQIEYYFGDFNLPRDKFLKEQIKLDEGWVPLEIMIKFNRLNRLTTDFNVIVEALSKSKAELM EISEDKTKIRRSPSKPLPEVTDEYKNDVKNRSVYIKGFPTDATLDDIKEWLEDKGQVLNIQMRRTLHKAFKGSIFVVFDS IESAKKFVETPGQKYKETDLLILFKDDYFAKKNEERKQNKVEAKLRAKQEQEAKQKLEEDAEMKSLEEKIGCLLKFSGDL DDQTCREDLHILFSNHGEIKWIDFVRGAKEGIILFKEKAKEALGKAKDANNGNLQLRNKEVTWEVLEGEVEKEALKKIIE DQQESLNKWKSKGRRFKGKGKGNKAAQPGSGKGKVQFQGKKTKFASDDEHDEHDENGATGPVKRAREETDKEEPASKQQK TENGAGDQLEHHHHHH"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.02038698"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Minimal misfolded pre-5S rRNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 8355,
+                            "valueOf_": "Xenopus laevis"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "GCCUACCCGCACACUACCCUGUUCGCAGGGUCGGCGGUGGUUUUUCAUAGGCUUUUCAAAGUUU"
+                    }
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "1"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Ro60/La/minimal misfolded pre-5S rRNA complex"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Ro60/La/minimal misfolded pre-5S rRNA complex"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 9606,
+                                "valueOf_": "Homo sapiens"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 274169,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.7"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF"
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "53.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 8.0
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

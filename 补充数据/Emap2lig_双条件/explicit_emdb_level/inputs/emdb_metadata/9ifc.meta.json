@@ -1,0 +1,775 @@
+{
+    "_id": "67bba8fdc7dd9684977640d6",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Sun YE"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Spagnolo L"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-02-11T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "BB/W017571/1",
+                    "country": "United Kingdom",
+                    "funding_body": "Biotechnology and Biological Sciences Research Council (BBSRC)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-02-18T00:00:00",
+            "header_release": "2026-02-11T00:00:00",
+            "map_release": "2026-02-11T00:00:00",
+            "update": "2026-02-11T00:00:00"
+        },
+        "keywords": "Serine integrase, Recombinase, Site-specific DNA recombination, Bacteriophage, DNA BINDING PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-11T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "PhiC31 integrative synapse: CC dimer subregion"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Sun YE"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Aspinall L"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Joseph AP"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Colloms SD"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Stark WM"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Spagnolo L"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Structural mechanisms of unidirectional prophage integration and excision by serine integrases"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "details": "cc dimer subregion of EMD-52811",
+                    "emdb_id": "EMD-52811",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-52845",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Autoinhibited PhiC31 integrase dimer on attL sites",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-52811",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "cc dimer subregion of EMD-52811",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9ifc",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-52845",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "374.72"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "374.72"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "374.72"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 320,
+                        "row": 320,
+                        "sec": 320
+                    },
+                    "file": "emd_52845_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-52845::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.171"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.171"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.171"
+                        }
+                    },
+                    "size_kbytes": 131073,
+                    "spacing": {
+                        "x": 320,
+                        "y": 320,
+                        "z": 320
+                    },
+                    "statistics": {
+                        "average": 1.6640975e-05,
+                        "maximum": 0.07579717,
+                        "minimum": -0.046069812,
+                        "std": 0.002409388
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "374.72"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "374.72"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "374.72"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 320,
+                        "row": 320,
+                        "sec": 320
+                    },
+                    "file": "emd_52845_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-52845::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.171"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.171"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.171"
+                        }
+                    },
+                    "size_kbytes": 131073,
+                    "spacing": {
+                        "x": 320,
+                        "y": 320,
+                        "z": 320
+                    },
+                    "statistics": {
+                        "average": 1.5443355e-05,
+                        "maximum": 0.07954502,
+                        "minimum": -0.042869583,
+                        "std": 0.0024296523
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_52845_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "374.72"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "374.72"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "374.72"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.013,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 320,
+            "row": 320,
+            "sec": 320
+        },
+        "file": "emd_52845.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-52845::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "1.171"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "1.171"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "1.171"
+            }
+        },
+        "size_kbytes": 131073,
+        "spacing": {
+            "x": 320,
+            "y": 320,
+            "z": 320
+        },
+        "statistics": {
+            "average": 1.604991e-05,
+            "maximum": 0.09111294,
+            "minimum": -0.043024797,
+            "std": 0.0016284533
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.069394219"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Integrase"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 10719,
+                            "valueOf_": "Lomovskayavirus C31"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q9T221"
+                            }
+                        ],
+                        "string": "MGSSHHHHHHSSGLVPRGSHMDTYAGAYDRQSRERENSSAASPATQRSANEDKAADLQREVERDGGRFRFVGHFSEAPGT SAFGTAERPEFERILNECRAGRLNMIIVYDVSRFSRLKVMDAIPIVSELLALGVTIVSTQEGVFRQGNVMDLIHLIMRLD ASHKESSLKSAKILDTKNLQRELGGYVGGKAPYGFELVSETKEITRNGRMVNVVINKLAHSTTPLTGPFEFEPDVIRWWW REIKTHKHLPFKPGSQAAIHPGSITGLCKRMDADAVPTRGETIGKKTASSAWDPATVMRILRDPRIAGFAAEVIYKKKPD GTPTTKIEGYRIQRDPITLRPVELDCGPIIEPAEWYELQAWLDGRGRGKGLSRGQAILSAMDKLYCECGAVMTSKRGEES IKDSYRCRRRKVVDPSAPGQHEGTCNVSMAALDKFVAERIFNKIRHAEGDEETLALLWEAARRFGKLTEAPEKSGERANL VAERADALNALEELYEDRAAGAYDGPVGRKHFRKQQAALTLRQQGAEERLAELEAAEAPKLPLDQWFPEDADADPTGPKS WWGRASVDDKRVFVGLFVDKIVVTKSTTGRGQGTPIEKRASITWAKPPTDDDEDDAQDGTEDVAA"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.018667889"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attP_Fw"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 10719,
+                            "valueOf_": "Lomovskayavirus C31"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "(DC)(DG)(DG)(DG)(DA)(DG)(DT)(DA)(DG)(DT)(DG)(DC)(DC)(DC)(DC)(DA)(DA)(DC)(DT)(DG) (DG)(DG)(DG)(DT)(DA)(DA)(DC)(DC)(DT)(DT)(DT)(DG)(DA)(DG)(DT)(DT)(DC)(DT)(DC)(DT) (DC)(DA)(DG)(DT)(DT)(DG)(DG)(DG)(DG)(DG)(DC)(DG)(DT)(DA)(DG)(DG)(DG)(DT)(DC)(DG)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.018321736"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attP_Rv"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 10719,
+                            "valueOf_": "Lomovskayavirus C31"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "(DC)(DG)(DA)(DC)(DC)(DC)(DT)(DA)(DC)(DG)(DC)(DC)(DC)(DC)(DC)(DA)(DA)(DC)(DT)(DG) (DA)(DG)(DA)(DG)(DA)(DA)(DC)(DT)(DC)(DA)(DA)(DA)(DG)(DG)(DT)(DT)(DA)(DC)(DC)(DC) (DC)(DA)(DG)(DT)(DT)(DG)(DG)(DG)(DG)(DC)(DA)(DC)(DT)(DA)(DC)(DT)(DC)(DC)(DC)(DG)"
+                    }
+                },
+                {
+                    "formula": "ZN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "6.5409e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ZINC ION"
+                    },
+                    "number_of_copies": "1"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "PhiC31 integrative synapse: cc dimer subregion"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.1"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "PhiC31 integrative synapse: cc dimer subregion"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 10719,
+                                "valueOf_": "Lomovskayavirus C31"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "algorithm": "FOURIER SPACE",
+                            "applied_symmetry": {
+                                "point_group": "C1"
+                            },
+                            "number_classes_used": 1,
+                            "number_images_used": 29776,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.79"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "particle_selection": [
+                            {
+                                "instance_type": "particle_selection",
+                                "number_selected": 6090789
+                            }
+                        ],
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "59.8"
+                                        },
+                                        "average_exposure_time": {
+                                            "units": "s",
+                                            "valueOf_": "12.8"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_grids_imaged": 1,
+                                        "number_real_images": 10330
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.3000000000000003"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.7000000000000001"
+                            },
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "EPU"
+                                    }
+                                ]
+                            },
+                            "specialist_optics": {
+                                "energy_filter": {
+                                    "name": "TFS Selectris X",
+                                    "slit_width": {
+                                        "units": "eV",
+                                        "valueOf_": "20"
+                                    }
+                                }
+                            },
+                            "specimen_holder_model": "FEI TITAN KRIOS AUTOGRID HOLDER"
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.4
+                            },
+                            "grid": {
+                                "material": "COPPER",
+                                "mesh": 300,
+                                "model": "Quantifoil R1.2/1.3",
+                                "pretreatment": {
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "30"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                }
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

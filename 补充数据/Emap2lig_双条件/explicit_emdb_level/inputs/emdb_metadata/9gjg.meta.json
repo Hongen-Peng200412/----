@@ -1,0 +1,661 @@
+{
+    "_id": "66cbb35938e8b5db769b691d",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Gerard SF"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Higgins MK"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-02-11T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "country": "United Kingdom",
+                    "funding_body": "Wellcome Trust",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2024-08-22T00:00:00",
+            "header_release": "2026-02-11T00:00:00",
+            "map_release": "2026-02-11T00:00:00",
+            "update": "2026-02-11T00:00:00"
+        },
+        "keywords": "Entamoeba histolytica, lectin, Gal/GalNAc, trogocytosis, CELL ADHESION",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-11T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Entamoeba histolytica Gal/GalNAc lectin bound to monoclonal antibody CP33-H/L-LA22"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Gerard SF"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Higgins MK"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Structural basis for carbohydrate recognition by the Gal/GalNAc lectin of Entamoeba histolytica"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-51391",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Entamoeba histolytica Gal/GalNAc lectin bound to monoclonal antibody CP33-H/L-LA22",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9gjg",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-51391",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "599.04004"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "599.04004"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "599.04004"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 720,
+                        "row": 720,
+                        "sec": 720
+                    },
+                    "file": "emd_51391_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-51391::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8320001"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8320001"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8320001"
+                        }
+                    },
+                    "size_kbytes": 1492993,
+                    "spacing": {
+                        "x": 720,
+                        "y": 720,
+                        "z": 720
+                    },
+                    "statistics": {
+                        "average": 0.00018400582,
+                        "maximum": 2.1027524,
+                        "minimum": -0.58236426,
+                        "std": 0.031624734
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "599.04004"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "599.04004"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "599.04004"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 720,
+                        "row": 720,
+                        "sec": 720
+                    },
+                    "file": "emd_51391_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-51391::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8320001"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8320001"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8320001"
+                        }
+                    },
+                    "size_kbytes": 1492993,
+                    "spacing": {
+                        "x": 720,
+                        "y": 720,
+                        "z": 720
+                    },
+                    "statistics": {
+                        "average": 0.00018305685,
+                        "maximum": 2.084214,
+                        "minimum": -0.57133573,
+                        "std": 0.031622108
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_51391_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "599.04004"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "599.04004"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "599.04004"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.35,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 720,
+            "row": 720,
+            "sec": 720
+        },
+        "file": "emd_51391.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-51391::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.8320001"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.8320001"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.8320001"
+            }
+        },
+        "size_kbytes": 1492993,
+        "spacing": {
+            "x": 720,
+            "y": 720,
+            "z": 720
+        },
+        "statistics": {
+            "average": -0.00022886707,
+            "maximum": 6.877468,
+            "minimum": -4.922458,
+            "std": 0.04669818
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.10896592999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Galactose/N-acetyl-D-galactosamine lectin heavy subunit 1"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 294381,
+                            "valueOf_": "Entamoeba histolytica HM-1:IMSS"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P32022"
+                            }
+                        ],
+                        "string": "MKLLLLNILLLCCLADKLNEFSADIDYYDLGIMSRGKNAGSWYHSYEHQYDVFYYLAMQPWRHFVWTTCTTTDGNKECYK YTINEDHNVKVEDINKTDIKQDFCQKEYAYPIEKYEVDWDNVPVDEQRIESVDINGKTCFKYAAKRPLAYVYLNTKMTYA TKTEAYDVCRMDFIGGRSITFRSFNTENKAFIDQYNTNTTSKCLLKVYDNNVNTHLAIIFGITDSTVIKSLQENLSLLSQ LKTVKGVTLYYLKDDTYFTVNITLDQLKYDTLVKYTAGTGQVDPLINIAKNDLATKVADKSKDKNANDKIKRGTMIVLMD TALGSEFNAETEFDRKNISVHTVVLNRNKDPKITRSALRLVSLGPHYHEFTGNDEVNATITALFKGIRANLTERCDRDKC SGFCDAMNRCTCPMCCENDCFYTSCDVETGSCIPWPKAKPKAKKECPATCVGSYECKDLEGCVVTKYNDTCQPKVKCMVP YCDNDKNLTEVCKQKANCEADQKPSSDGYCWSYTCDQTTGFCKKDKRGKEMCTGKTNNCQEYVCDSEQRCSVRDKVCVKT SPYIEMSCYVAKCNLNTGMCENRLSCDTYSSCGGDSTGSVCKCDSTTGNKCQCNKVKNGNYCNSKNHEICDYTGTTPQCK VSNCTEDLVRDGCLIKRCNETSKTTYWENVDCSNTKIEFAKDDKSETMCKQYYSTTCLNGKCVVQAVGDVSNVGCGYCSM GTDNIITYHDDCNSRKSQCGNFNGKCIKGNDNSYSCVFEKDKTSSKSDNDICAECSSLTCPADTTYRTYTYDSKTGTCKA TVQPTPACSVCESGKFVEKCKDQKLERKVTLEDGKEYKYNIPKDCVNEQCIPRTYIDCLGNDDNFKSIYNFYLPCQAYVT ATYHYSSLFNLTSYKLHLPQSEEFMKEADKEAYCTYEITTRECKTCSLIETREKVQEVDLCAEETKNGGVPFKCKNNNCI I"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.033637863"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Galactose/N-acetyl-D-galactosamine lectin light subunit 1"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 294381,
+                            "valueOf_": "Entamoeba histolytica HM-1:IMSS"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q03077"
+                            }
+                        ],
+                        "string": "MIILVLLISYSFGKTQDGKDQLSPNYPYGKMNKDVNFNKPFTSAVDSYQIQQYAENGVFSANQENYVRAKCKTCCRVIFA SDYNYKTNTQFTDEDDKKGDERYVMDMEFDDKRSVRFRNGGYEQNILLRPLKQGNELQFFEFAPYRMYTSYAIPKRVHDI RGGANEGATLIIWPKNPPLSDAPGTRNQRFVYVHPYPTEWYPEYNSTTKYTQNGKTVIKTLKWPTYKRHFYLPYRLDVDL CYQARKATDGRSTWTGNKNLNTTSKSYQIIASRCSATEARQIFIPVFA"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.027653305"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "monoclonal antibody CP33-H/L-LA22 scFv"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "string": "ETGEVKLMESGGGVVQPGRSLRLSCAASGFRFSTYAIHWVRQAPGKGLEWVARISHDGSQTHYADSVQGRFGVSRDNSNY TAYVQLNSLRPDDTAVYFCARAYSSTPDYGMDVWGQGTAVTVSSGGSSRSSSSGGGGSGGGGDIEMTQSPSSLSASVGDR VTITCRASQSISSYLNWYQQKPGKAPKLLIYAASSLQSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQSYSTPRTF GQGTKVEIKRGTKHHHHHH"
+                    }
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Entamoeba histolytica Gal/GalNAc lectin heavy and light chains bound to monoclonal antibody CP33-H/L-LA22"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Entamoeba histolytica Gal/GalNAc lectin heavy and light chains bound to monoclonal antibody CP33-H/L-LA22"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 294381,
+                                "valueOf_": "Entamoeba histolytica HM-1:IMSS"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 275764,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.0"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF"
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "41.7"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "FEI TITAN KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.7000000000000001"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

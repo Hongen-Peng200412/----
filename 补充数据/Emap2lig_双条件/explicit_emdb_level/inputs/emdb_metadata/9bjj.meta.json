@@ -1,0 +1,740 @@
+{
+    "_id": "662ed0b838e8b5db7622813a",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Cruz VE"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Erzberger JP"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-01-21T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "I-1422",
+                    "country": "United States",
+                    "funding_body": "Robert A. Welch Foundation",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "V-I-0002-20230731",
+                    "country": "United States",
+                    "funding_body": "Robert A. Welch Foundation",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2024-04-25T00:00:00",
+            "header_release": "2026-01-21T00:00:00",
+            "map_release": "2026-01-21T00:00:00",
+            "update": "2026-01-21T00:00:00"
+        },
+        "keywords": "Ribosome biogenesis, AAA+ ATPase, TRANSLOCASE",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-01-21T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "Cryo-EM structure of NVL bound the the MM017 inhibitor"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0001-7743-6409",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Guo HH"
+                        },
+                        {
+                            "ORCID": "0000-0001-6328-4424",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Tao Y"
+                        },
+                        {
+                            "ORCID": "0000-0001-5338-0973",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Cruz VE"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Fang M"
+                        },
+                        {
+                            "ORCID": "0000-0003-2574-5298",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Khivansara V"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Xie S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Leach A"
+                        },
+                        {
+                            "ORCID": "0000-0002-4909-4103",
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Rivera-Cancel G"
+                        },
+                        {
+                            "ORCID": "0009-0002-2549-0520",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Barrows N"
+                        },
+                        {
+                            "ORCID": "0000-0003-1894-5742",
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "Williams N"
+                        },
+                        {
+                            "ORCID": "0009-0007-7820-9487",
+                            "instance_type": "author",
+                            "order": 11,
+                            "valueOf_": "Aurora A"
+                        },
+                        {
+                            "ORCID": "0000-0002-0266-8835",
+                            "instance_type": "author",
+                            "order": 12,
+                            "valueOf_": "Erzberger JP"
+                        },
+                        {
+                            "ORCID": "0000-0001-8816-5798",
+                            "instance_type": "author",
+                            "order": 13,
+                            "valueOf_": "De Brabander JK"
+                        },
+                        {
+                            "ORCID": "0000-0001-6253-4268",
+                            "instance_type": "author",
+                            "order": 14,
+                            "valueOf_": "Nijhawan D"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Dibenzothiazepinones are bioavailable inhibitors of NVL and cause p53-dependent apoptosis in cancer by blocking 60S ribosome assembly"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-44634",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of NVL bound the the MM017 inhibitor",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9bjj",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-44634",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "232.4"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "232.4"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "232.4"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 280,
+                        "row": 280,
+                        "sec": 280
+                    },
+                    "file": "emd_44634_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-44634::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        }
+                    },
+                    "size_kbytes": 87809,
+                    "spacing": {
+                        "x": 280,
+                        "y": 280,
+                        "z": 280
+                    },
+                    "statistics": {
+                        "average": 2.800023e-05,
+                        "maximum": 0.037487265,
+                        "minimum": -0.015596262,
+                        "std": 0.001584381
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "232.4"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "232.4"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "232.4"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 280,
+                        "row": 280,
+                        "sec": 280
+                    },
+                    "file": "emd_44634_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-44634::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        }
+                    },
+                    "size_kbytes": 87809,
+                    "spacing": {
+                        "x": 280,
+                        "y": 280,
+                        "z": 280
+                    },
+                    "statistics": {
+                        "average": 2.759438e-05,
+                        "maximum": 0.038515814,
+                        "minimum": -0.015769238,
+                        "std": 0.0015808672
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "232.4"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "232.4"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "232.4"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.012,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 280,
+            "row": 280,
+            "sec": 280
+        },
+        "file": "emd_44634.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-44634::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            }
+        },
+        "size_kbytes": 87809,
+        "spacing": {
+            "x": 280,
+            "y": 280,
+            "z": 280
+        },
+        "statistics": {
+            "average": 2.7817352e-05,
+            "maximum": 0.12044344,
+            "minimum": -0.05652284,
+            "std": 0.0042091967
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.09518199199999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Nuclear valosin-containing protein-like"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "6",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O15381"
+                            }
+                        ],
+                        "string": "MKPRPAGFVDNKLKQRVIQYLTSNKCGKYVDIGVLASDLQRVYSIDYGRRKRNAFRIQVEKVFSIISSEKELKNLTELED EHLAKRARQGEEDNEYTESYSDDDSSMEDYPDPQSANHMNSSLLSLYRKGNPDSVSNTPEMEQRETTSSTPRISSKTGSI PLKTPAKDSEGGWFIDKTPSVKKDSFFLDLSCEKSNPKKPITEIQDSKDSSLLESDMKRKGKLKNKGSKRKKEDLQEVDG EIEAVLQKKAKARGLEFQISNVKFEDVGGNDMTLKEVCKMLIHMRHPEVYHHLGVVPPRGVLLHGPPGCGKTLLAHAIAG ELDLPILKVAAPEIVSGVSGESEQKLRELFEQAVSNAPCIIFIDQIDAITPKREVASKDMERRIVAQLLTCMDDLNNVAA TARVLVIGATNRPDSLDPALRRAGRFDREICLGIPDEASRERILQTLCRKLRLPQAFDFCHLAHLTPGFVGADLMALCRE AAMCAVNRVLMKLQEQQKKNPEMEDLPSKGVQEERLGTEPTSETQDELQRLLGLLRDQDPLSEEQMQGLCIELNDFIVAL SSVQPSAKREGFVTVPNVTWADIGALEDIREELTMAILAPVRNPDQFKALGLVTPAGVLLAGPPGCGKTLLAKAVANESG LNFISVKGPELLNMYVGESERAVRQVFQRAKNSAPCVIFFDQVDALCPRRSDRETGASVRVVNQLLTEMDGLEARQQVFI MAATNRPDIIDPAILRPGRLDKTLFVGLPPPADRLAILKTITKNGTKPPLDADVNLEAIAGDLRCDCYTGADLSALVREA SICALRQEMARQKSGNEKGELKVSHKHFEEAFKKVRSSISKKDQIMYERLQESLSR"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.00333354"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Peptide substrate mimic"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "string": "HHHHHHHHHHHHHHHHHHHHHHHH"
+                    }
+                },
+                {
+                    "formula": "ATP",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000507181"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ADENOSINE-5'-TRIPHOSPHATE"
+                    },
+                    "number_of_copies": "9"
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "8"
+                },
+                {
+                    "formula": "A1AP0",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000394444"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "N-[10-(2-methoxyethyl)-11-oxo-10,11-dihydrodibenzo[b,f][1,4]thiazepin-7-yl]furan-3-carboxamide"
+                    },
+                    "number_of_copies": "2"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "NVL bound to MM017 inhibitor"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "NVL bound to MM017 inhibitor"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 9606,
+                                "valueOf_": "Homo sapiens"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 100118,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.06"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF"
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "1.4"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "OTHER",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.9000000000000001"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.6"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

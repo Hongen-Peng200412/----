@@ -1,0 +1,20 @@
+{
+  "full_occurrences": 446,
+  "find_hit_pdbs": 59,
+  "find_top1": 42,
+  "find_top5": 141,
+  "find_best": 260,
+  "build_ready": 251,
+  "build_filter_failed": [
+    "9lov/0",
+    "9nal/0",
+    "9nvs/1",
+    "9o4e/15",
+    "9o4e/20",
+    "9r2g/5",
+    "9vap/0",
+    "9x0x/0",
+    "9zkm/18"
+  ],
+  "subset_path": "/storage/penghongen/Emap2lig/contour_level_20261026/build/find_hit_subset.jsonl"
+}

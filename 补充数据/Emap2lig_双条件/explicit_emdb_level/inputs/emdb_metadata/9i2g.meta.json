@@ -1,0 +1,1102 @@
+{
+    "_id": "6796bf5dc7dd96849716a5a4",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Skorupskaite A"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Jasnauskaite M"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Malinauskaite L"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Pausch P"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-02-25T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "5342-2023",
+                    "country": "European Union",
+                    "funding_body": "European Molecular Biology Organization (EMBO)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-01-20T00:00:00",
+            "header_release": "2026-02-04T00:00:00",
+            "map_release": "2026-02-04T00:00:00",
+            "update": "2026-02-25T00:00:00"
+        },
+        "keywords": "Retron, Reverse transcriptase, DNA, RNA, TOPRIM, RNaseH, msDNA, ANTIVIRAL PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-04T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_citation_author.identifier_ORCID",
+                                        "_citation_author.name",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_citation_author.identifier_ORCID",
+                                        "_citation_author.name",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-25T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Cryo-EM structure of retron Eco2 (Ec67) in presence of Mg ions"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0009-0008-2445-6754",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Jasnauskaite M"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Juozapaitis J"
+                        },
+                        {
+                            "ORCID": "0009-0007-7643-180X",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Liegute T"
+                        },
+                        {
+                            "ORCID": "0000-0002-9528-360X",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Grigaitis R"
+                        },
+                        {
+                            "ORCID": "0000-0002-4124-4453",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Skorupskaite A"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Steinchen W"
+                        },
+                        {
+                            "ORCID": "0000-0002-6951-6449",
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Miksys A"
+                        },
+                        {
+                            "ORCID": "0000-0001-7516-2854",
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Truncaite L"
+                        },
+                        {
+                            "ORCID": "0009-0002-8735-2190",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Kazlauskaite K"
+                        },
+                        {
+                            "ORCID": "0000-0002-7177-4164",
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "Torres Jimenez MF"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 11,
+                            "valueOf_": "Khochare S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 12,
+                            "valueOf_": "Dudas G"
+                        },
+                        {
+                            "ORCID": "0000-0002-7826-0932",
+                            "instance_type": "author",
+                            "order": 13,
+                            "valueOf_": "Bange G"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 14,
+                            "valueOf_": "Malinauskaite L"
+                        },
+                        {
+                            "ORCID": "0000-0003-2188-0556",
+                            "instance_type": "author",
+                            "order": 15,
+                            "valueOf_": "Songailiene I"
+                        },
+                        {
+                            "ORCID": "0000-0001-8947-9107",
+                            "instance_type": "author",
+                            "order": 16,
+                            "valueOf_": "Pausch P"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41709047"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1038/s41594-026-01754-2"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "1545-9985"
+                        }
+                    ],
+                    "first_page": "330",
+                    "journal": "Nat Struct Mol Biol",
+                    "journal_abbreviation": "Nat Struct Mol Biol",
+                    "last_page": "340",
+                    "published": true,
+                    "title": "Structure and mechanism of antiphage retron Eco2.",
+                    "volume": "33",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-52584",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of retron Eco2 (Ec67) in presence of Mg ions",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "9I2F",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "details": "Eco2 structure without Mg",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "9S1F",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "details": "Activated Eco2 structure",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9i2g",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-52584",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "396.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "396.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "396.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_52584_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-52584::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 0.0003361229,
+                        "maximum": 2.1717548,
+                        "minimum": -0.6101901,
+                        "std": 0.045994237
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "396.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "396.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "396.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_52584_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-52584::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 0.0009603176,
+                        "maximum": 2.4051871,
+                        "minimum": -0.6849354,
+                        "std": 0.055004664
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "396.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "396.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "396.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_52584_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-52584::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 0.00097066606,
+                        "maximum": 2.2696855,
+                        "minimum": -0.7062934,
+                        "std": 0.05497521
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "initial_model": [
+                        {
+                            "chain": {
+                                "initial_model_type": "in silico model",
+                                "source_name": "AlphaFold"
+                            },
+                            "instance_type": "initial_model"
+                        },
+                        {
+                            "access_code": "D_1292144007",
+                            "chain": {
+                                "initial_model_type": "experimental model",
+                                "source_name": "Other"
+                            },
+                            "details": "Model from another deposition",
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling"
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "396.0"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "396.0"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "396.0"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.36,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 360,
+            "row": 360,
+            "sec": 360
+        },
+        "file": "emd_52584.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-52584::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "1.1"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "1.1"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "1.1"
+            }
+        },
+        "size_kbytes": 186625,
+        "spacing": {
+            "x": 360,
+            "y": 360,
+            "z": 360
+        },
+        "statistics": {
+            "average": 0.000671669,
+            "maximum": 4.4113274,
+            "minimum": -2.073619,
+            "std": 0.064626604
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "ec_number": [
+                        "2.7.7.49"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.068511922"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Retron Ec67 protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 662541,
+                            "valueOf_": "Escherichia coli NCTC 86"
+                        },
+                        "strain": "23"
+                    },
+                    "number_of_copies": "3",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 668369,
+                            "valueOf_": "Escherichia coli DH5[alpha]"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P21325"
+                            }
+                        ],
+                        "string": "MTKTSKLDALRAATSREDLAKILDVKLVFLTNVLYRIGSDNQYTQFTIPKKGKGVRTISAPTDRLKDIQRRICDLLSDCR DEIFAIRKISNNYSFGFERGKSIILNAYKHRGKQIILNIDLKDFFESFNFGRVRGYFLSNQDFLLNPVVATTLAKAACYN GTLPQGSPCSPIISNLICNIMDMRLAKLAKKYGCTYSRYADDITISTNKNTFPLEMATVQPEGVVLGKVLVKEIENSGFE INDSKTRLTYKTSRQEVTGLTVNRIVNIDRCYYKKTRALAHALYRTGEYKVPDENGVLVSGGLDKLEGMFGFIDQVDKFN NIKKKLNKQPDRYVLTNATLHGFKLKLNAREKAYSKFIYYKFFHGNTCPTIITEGKTDRIYLKAALHSLETSYPELFREK TDSKKKEINLNIFKSNEKTKYFLDLSGGTADLKKFVERYKNNYASYYGSVPKQPVIMVLDNDTGPSDLLNFLRNKVKSCP DDVTEMRKMKYIHVFYNLYIVLTPLSPSGEQTSMEDLFPKDILDIKIDGKKFNKNNDGDSKTEYGKHIFSMRVVRDKKRK IDFKAFCCIFDAIKDIKEHYKLMLNSGSWSHPQFEK"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.042593202999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "RNA (132-MER)"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 662541,
+                            "valueOf_": "Escherichia coli NCTC 86"
+                        },
+                        "strain": "23"
+                    },
+                    "number_of_copies": "3",
+                    "sequence": {
+                        "string": "CACGCAUGUAGGCAGAUUUGUUGGUUGUGAAUCGCAACCAGUGGCCUUAAUGGCAGGAGGAAUCGCCUCCCUAAAAUCCU UGAUUCAGAGCUAUACGGCAGGUGUGCUGUGCGAAGGAGUGCCUGCAUGCGU"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.020522113"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "msDNA (67-MER)"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 662541,
+                            "valueOf_": "Escherichia coli NCTC 86"
+                        },
+                        "strain": "23"
+                    },
+                    "number_of_copies": "3",
+                    "sequence": {
+                        "string": "(DT)(DC)(DC)(DT)(DT)(DC)(DG)(DC)(DA)(DC)(DA)(DG)(DC)(DA)(DC)(DA)(DC)(DC)(DT)(DG) (DC)(DC)(DG)(DT)(DA)(DT)(DA)(DG)(DC)(DT)(DC)(DT)(DG)(DA)(DA)(DT)(DC)(DA)(DA)(DG) (DG)(DA)(DT)(DT)(DT)(DT)(DA)(DG)(DG)(DG)(DA)(DG)(DG)(DC)(DG)(DA)(DT)(DT)(DC)(DC) (DT)(DC)(DC)(DT)(DG)(DC)(DC)"
+                    }
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "21"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Ternary complex of retron Eco2 (Ec67) with RNA and DNA in presence of Mg ions"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Ternary complex of retron Eco2 (Ec67) with RNA and DNA in presence of Mg ions"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 662541,
+                                "valueOf_": "Escherichia coli NCTC 86"
+                            },
+                            "strain": "23"
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "applied_symmetry": {
+                                "point_group": "C1"
+                            },
+                            "details": "symmetry expanded particles used for the final model.",
+                            "number_images_used": 1017678,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.0"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.6"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "particle_selection": [
+                            {
+                                "instance_type": "particle_selection",
+                                "number_selected": 544986
+                            }
+                        ],
+                        "startup_model": [
+                            {
+                                "insilico_model": "AlphaFold",
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "200"
+                            },
+                            "alignment_procedure": {
+                                "coma_free": {}
+                            },
+                            "calibrated_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "calibrated_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.0"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "30.31"
+                                        },
+                                        "average_exposure_time": {
+                                            "units": "s",
+                                            "valueOf_": "46.33"
+                                        },
+                                        "detector_mode": "COUNTING",
+                                        "digitization_details": {
+                                            "dimensions": {
+                                                "height": {
+                                                    "units": "pixel",
+                                                    "valueOf_": "4096"
+                                                },
+                                                "width": {
+                                                    "units": "pixel",
+                                                    "valueOf_": "4096"
+                                                }
+                                            }
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON III (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_grids_imaged": 1,
+                                        "number_real_images": 1988
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS GLACIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.0"
+                            },
+                            "nominal_magnification": 92000.0,
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "EPU",
+                                        "version": "3.10"
+                                    }
+                                ]
+                            },
+                            "specimen_holder_model": "FEI TITAN KRIOS AUTOGRID HOLDER"
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "100.0"
+                                        },
+                                        "instance_type": "component",
+                                        "name": "Tris-HCl"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "150.0"
+                                        },
+                                        "instance_type": "component",
+                                        "name": "NaCl"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "10.0"
+                                        },
+                                        "instance_type": "component",
+                                        "name": "MgCl2"
+                                    }
+                                ],
+                                "ph": 8.0
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "2"
+                            },
+                            "grid": {
+                                "details": "20 mA current",
+                                "material": "COPPER",
+                                "mesh": 300,
+                                "model": "Quantifoil R1.2/1.3",
+                                "pretreatment": {
+                                    "atmosphere": "AIR",
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "7"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "CARBON",
+                                        "film_thickness": {
+                                            "valueOf_": "2.0"
+                                        },
+                                        "film_topology": "HOLEY",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "277.15"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

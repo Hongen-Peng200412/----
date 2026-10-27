@@ -1,0 +1,714 @@
+{
+    "_id": "66d4edc238e8b5db76b470bc",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "ORCID": "0000-0003-4763-8928",
+                    "instance_type": "author",
+                    "valueOf_": "Clairfeuille T"
+                },
+                {
+                    "ORCID": "0000-0003-0447-1101",
+                    "instance_type": "author",
+                    "valueOf_": "Rudolph M"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-03-11T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "funding_body": "Not funded",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2024-08-29T00:00:00",
+            "header_release": "2026-03-11T00:00:00",
+            "map_release": "2026-03-11T00:00:00",
+            "update": "2026-03-11T00:00:00"
+        },
+        "keywords": "N-methyl hydantoinase Creatine catabolism Dihydrouracil DHU inhibitor, HYDROLASE",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-03-11T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Cryo-EM structure of NMHase in complex with DHU"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Clairfeuille T"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Rudolph M"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Structures of N-methyl hydantoinase reveal large conformational changes during catalysis and a novel prototypic mechanism"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-51451",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "instance_type": "db_reference"
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-51451",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "annotation_details": "Unsharpened map out of last round of non-uniform refinement",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "335.872"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "335.872"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "335.872"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 512,
+                        "row": 512,
+                        "sec": 512
+                    },
+                    "file": "emd_51451_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-51451::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.656"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.656"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.656"
+                        }
+                    },
+                    "size_kbytes": 536871,
+                    "spacing": {
+                        "x": 512,
+                        "y": 512,
+                        "z": 512
+                    },
+                    "statistics": {
+                        "average": 3.1455172e-06,
+                        "maximum": 0.22567888,
+                        "minimum": -0.104132175,
+                        "std": 0.0038822237
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "Half-map A out of last round of non-uniform refinement",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "335.872"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "335.872"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "335.872"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 512,
+                        "row": 512,
+                        "sec": 512
+                    },
+                    "file": "emd_51451_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-51451::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.656"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.656"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.656"
+                        }
+                    },
+                    "size_kbytes": 536871,
+                    "spacing": {
+                        "x": 512,
+                        "y": 512,
+                        "z": 512
+                    },
+                    "statistics": {
+                        "average": 6.7000896e-05,
+                        "maximum": 0.44545153,
+                        "minimum": -0.41141188,
+                        "std": 0.028813098
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "Half-map B out of last round of non-uniform refinement",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "335.872"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "335.872"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "335.872"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 512,
+                        "row": 512,
+                        "sec": 512
+                    },
+                    "file": "emd_51451_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-51451::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.656"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.656"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.656"
+                        }
+                    },
+                    "size_kbytes": 536871,
+                    "spacing": {
+                        "x": 512,
+                        "y": 512,
+                        "z": 512
+                    },
+                    "statistics": {
+                        "average": 6.493961e-05,
+                        "maximum": 0.44383082,
+                        "minimum": -0.450027,
+                        "std": 0.028868206
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_51451_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "Sharpened map (deepEMhancer) used for modeling",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "335.872"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "335.872"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "335.872"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.09,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 512,
+            "row": 512,
+            "sec": 512
+        },
+        "file": "emd_51451.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-51451::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.656"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.656"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.656"
+            }
+        },
+        "size_kbytes": 536871,
+        "spacing": {
+            "x": 512,
+            "y": 512,
+            "z": 512
+        },
+        "statistics": {
+            "average": 0.00077036786,
+            "maximum": 2.6548634,
+            "minimum": -0.09155534,
+            "std": 0.018014966
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "classification": "other",
+                    "instance_type": "other_macromolecule",
+                    "macromolecule_id": 1,
+                    "name": {
+                        "valueOf_": "N-methyl hydantoinase"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 37930,
+                            "valueOf_": "Glutamicibacter protophormiae"
+                        }
+                    },
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "string": "MKRIGVDVGGTFTDLYFSDDDQRIAVVEKVPSTPHDPSEAVINGIKKLCEKAGVSLSEIDQLVHGTTVATNTALTHTGAEVGMITTEGFRDILHIARHKKPHNFSLQQDLPWQTKPLIKRRYRLTVKERITAPHGEILVPLDEDEVRQRVRELKTAGVQAIAVCLLHSYLNPEHEQRIGEIVNEEFPEAYLSLSSEIVPLYREYERFSTTALNAYVGPRVSRYLHRLQEQAENLGYQREILLMQSSGGMVPIGEAAKRPVTLMMSGPVGGLIGGMWAAKQSGFENVVTLDIGGTSADIGVAYQGELRMRHLLDTKIGDHQAMVPMVDIDTIGAGGGSIAYVDAGGVFRVGPQSAGAVPGPVCYGRGGTEPTSTDAQVLLGRMRPDRILAGSGLDMDLDGARAAMQGLADKLGMSIEEAALGALQIQKFGMTQAIEQNSVRRGYDPRDFTLVAAGGAGALFACEIAAELEVPHVLVPAHPGIIAGIGLLATDEQYEFVATNRFSFASADAAVIQASYEQLEREANAQLDAEEVPAERRKIVWLADARYEGQGYEIRFVVPEGPVTTAWLDQAEAAFHDAHFEEYGHRFKGGTVEVINIRVEARAVMDELPTPEATQSGSLENALVETRPVTFQQAGKPVTLDTGFYDRAKMGIGTTFAGPVVIEQYDSTTVIPPGFTGTVDDAGNLVIACPAVTQTVEKLATPILMRVIGGALNSAAKEMASVLFRMSYSSIIRESEDLGAGLFDKDGNVLAESDSTPMFMGSMPKIVKGVISVLGDDIHDGDVILHNDPYLGATHSPDVAIIEPIFHDGELVGFAGASGQLIDNGGAFSGLMVDIQDVQSEGTIFRAVKVYEKGVRQESLIRHILNNTRTPTSNEGDFQAMIAACDLAKSRYLALVERYGRDSVRDAGQFWIDYSERMLRQEIAKIPDGVYETETGYLDDDGRNYGKKLPIVVKVIVEGDEITYDLTGSSEQVPTAYNCAFEGTTVSAFTFITRMMFLDEVAFPVFVPQNEGMLKPLKVIAPKGTIFNPNYPAATFSRFSQVQRAVDLALRALAPVMPERVTAGNSAHIHFMSYSGWDEKQGEYWVYLEVNEGSYGARQDSDGPDSVDNLIANTRNNPIEELEWRFPMRTDRYELREDPAAAGEYRGGIGIVRENTFLEDTAVTCEGERHDSDVPWGAYGGHDGLNASLIKNPGRDGEESWPSKVTGRQLQAGDSLQITVPSGGGFGDPLKRNPLQVLEDVLDGFTTTEAASRDYGVILKTVNGQLTVDLAATAVKRENAVSELSHTN"
+                    }
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Complex of NMHase and DHU"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Complex of NMHase and DHU"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 37930,
+                                "valueOf_": "Glutamicibacter protophormiae"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "ANGULAR RECONSTITUTION"
+                        },
+                        "final_reconstruction": {
+                            "applied_symmetry": {
+                                "point_group": "C2"
+                            },
+                            "number_images_used": 430323,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.1"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "v4.4"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "projection_matching_processing": {},
+                            "type_": "PROJECTION MATCHING"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "OTHER"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "39.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_grids_imaged": 1,
+                                        "number_real_images": 7046
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "JEOL CRYO ARM 300",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "3.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.5"
+                            },
+                            "nominal_magnification": 80000.0,
+                            "specialist_optics": {
+                                "energy_filter": {
+                                    "name": "In-column Omega Filter"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "details": "20 mM HEPES/NaOH pH 7.4, 100 mM NaCl, 100 mM MgCl2, 30 mM NH4Cl",
+                                "ph": 7.4
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "0.45"
+                            },
+                            "grid": {
+                                "material": "COPPER",
+                                "mesh": 300,
+                                "model": "Quantifoil R1.2/1.3"
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "80"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "301"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "instrument": "LEICA PLUNGER"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

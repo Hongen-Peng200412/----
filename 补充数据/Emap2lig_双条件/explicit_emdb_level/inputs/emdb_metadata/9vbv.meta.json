@@ -1,0 +1,876 @@
+{
+    "_id": "684612de6e5018e1510da2ac",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Fukuda Y"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Ishihama N"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Laohavisit A"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-06-03T00:00:00",
+            "processing_site": "PDBj"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "country": "Japan",
+                    "funding_body": "Japan Society for the Promotion of Science (JSPS)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-06-05T00:00:00",
+            "header_release": "2026-04-08T00:00:00",
+            "map_release": "2026-04-08T00:00:00",
+            "update": "2026-06-03T00:00:00"
+        },
+        "keywords": "leucine-rich repeat receptor-like kinase, SIGNALING PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 3,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-08T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-06-03T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBj",
+            "last_processing": "PDBj"
+        },
+        "title": "Cryo-EM structure of a CARD1 ectodomain H197A/H199A/H222A mutant"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Ishihama N"
+                        },
+                        {
+                            "ORCID": "0000-0002-7386-8201",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Fukuda Y"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Shirano Y"
+                        },
+                        {
+                            "ORCID": "0000-0003-0286-3646",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Fujimoto KJ"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Takizawa K"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Hiroyama R"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Ito H"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Nishimura M"
+                        },
+                        {
+                            "ORCID": "0000-0003-3933-8546",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Yanai T"
+                        },
+                        {
+                            "ORCID": "0000-0001-5337-5066",
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "Inoue T"
+                        },
+                        {
+                            "ORCID": "0000-0002-0349-3870",
+                            "instance_type": "author",
+                            "order": 11,
+                            "valueOf_": "Shirasu K"
+                        },
+                        {
+                            "ORCID": "0000-0002-7707-8928",
+                            "instance_type": "author",
+                            "order": 12,
+                            "valueOf_": "Laohavisit A"
+                        }
+                    ],
+                    "country": "UK",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "42151134"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1038/s41467-026-72573-8"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2041-1723"
+                        }
+                    ],
+                    "journal": "Nat Commun",
+                    "journal_abbreviation": "Nat Commun",
+                    "published": true,
+                    "title": "A copper-dependent redox-based hydrogen peroxide perception in plants.",
+                    "volume": "17",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-64934",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of a CARD1 ectodomain H197A/H199A/H222A mutant",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9vbv",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-64934",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "half map A",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "298.8"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "298.8"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "298.8"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_64934_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-64934::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 6.699087e-05,
+                        "maximum": 0.19363481,
+                        "minimum": -0.10802171,
+                        "std": 0.009707515
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "half map B",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "298.8"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "298.8"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "298.8"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_64934_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-64934::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 6.658508e-05,
+                        "maximum": 0.20571598,
+                        "minimum": -0.10232652,
+                        "std": 0.00974878
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "initial_model": [
+                        {
+                            "access_code": "AF-Q8GZ99-F1",
+                            "chain": {
+                                "initial_model_type": "in silico model",
+                                "source_name": "AlphaFold"
+                            },
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling",
+                    "refinement_protocol": "RIGID BODY FIT"
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_64934_msk_1.map",
+                    "instance_type": "segmentation"
+                },
+                {
+                    "file": "emd_64934_msk_2.map",
+                    "instance_type": "segmentation"
+                },
+                {
+                    "file": "emd_64934_msk_3.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "sharp map",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "298.8"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "298.8"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "298.8"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.133,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 360,
+            "row": 360,
+            "sec": 360
+        },
+        "file": "emd_64934.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-64934::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            }
+        },
+        "size_kbytes": 186625,
+        "spacing": {
+            "x": 360,
+            "y": 360,
+            "z": 360
+        },
+        "statistics": {
+            "average": 5.7949273e-06,
+            "maximum": 0.6734945,
+            "minimum": -0.4356494,
+            "std": 0.008467154
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "ec_number": [
+                        "2.7.11.1"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.097936039"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Leucine-rich repeat receptor protein kinase HPCA1,Maltose/maltodextrin-binding periplasmic protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 83333,
+                            "valueOf_": "Escherichia coli K12"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 4100,
+                            "valueOf_": "Nicotiana benthamiana"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q8GZ99"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P0AEX9"
+                            }
+                        ],
+                        "string": "LTNGLDASALNALKSEWTTPPDGWEGSDPCGTNWVGITCQNDRVVSISLGNLDLEGKLPADISFLSELRILDLSYNPKLS GPLPPNIGNLGKLRNLILVGCSFSGQIPESIGTLKELIYLSLNLNKFSGTIPPSIGLLSKLYWFDIADNQIEGELPVSNG TSAPGLDMLLQTKAFAFGKNKLSGNIPKELFSSNMSLIAVLFDGNQFTGEIPETLSLVKTLTVLRLDRNKLIGDIPSYLN NLTNLNELYLANNRFTGTLPNLTSLTSLYTLDVSNNTLDFSPIPSWISSLPSLSTLRMEGIQLNGPIPISFFSPPQLQTV ILKRNSIVESLDFGTDVSSQLEFVDLQYNEITDYKPSANKVLQVILANNPVCLEAGNGPSYCSAIQHNTSFSTLPTNCSP CEPGMEASPTCRCAYPFMGTLYFRSPSFSGLFNSTNFSILQKAIADFFKKFNYPVDSVGVRNIRENPTDHQLLIDLLVFP LGRESFNQTGMSLVGFAFSNQTYKPPPIFGPYIFKADLYKQFSGSAMKIEEGKLVIWINGDKGYNGLAEVGKKFEKDTGI KVTVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFGGYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEAL SLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALMFNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLT FLVDLIKNKHMNADTDYSIAEAAFNKGETAMTINGPWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNK ELAKEFLENYLLTDEGLEAVNKDKPLGAVALKSYEEELVKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAASG RQTVDEALKDAQT"
+                    }
+                },
+                {
+                    "formula": "NAG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000221208"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "2-acetamido-2-deoxy-beta-D-glucopyranose"
+                    },
+                    "number_of_copies": "3"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "CARD1"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "details": "CARD1 mutant, MBP fusion",
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "CARD1"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 3702,
+                                "valueOf_": "Arabidopsis thaliana"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "3.2"
+                                    }
+                                ]
+                            },
+                            "type_": "NONE"
+                        },
+                        "final_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "3.2"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 220439,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.61"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "3.2"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "3.2"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "particle_selection": [
+                            {
+                                "instance_type": "particle_selection",
+                                "number_selected": 1104287
+                            }
+                        ],
+                        "startup_model": [
+                            {
+                                "details": "AlphaFold2",
+                                "insilico_model": "predicted model",
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "200"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "40.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_grids_imaged": 1,
+                                        "number_real_images": 1100
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "JEOL CRYO ARM 200",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.2"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.7000000000000001"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "20.0"
+                                        },
+                                        "instance_type": "component",
+                                        "name": "Tris-HCl"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "150.0"
+                                        },
+                                        "formula": "NaCl",
+                                        "instance_type": "component",
+                                        "name": "sodium chloride"
+                                    }
+                                ],
+                                "ph": 7.5
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "0.2"
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "281"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "details": "3 microliters droplet, 5 seconds delay before blotting, 3 seconds blot, 0 second delay before plunging.. ",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

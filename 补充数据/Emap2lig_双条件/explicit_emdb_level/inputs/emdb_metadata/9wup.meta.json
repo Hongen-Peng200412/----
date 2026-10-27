@@ -1,0 +1,726 @@
+{
+    "_id": "68d07b486e5018e151813086",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Xie ZZ"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Li SY"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Liu ZW"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Li QR"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Huang J-W"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Chen C-C"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Guo R-T"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-05-27T00:00:00",
+            "processing_site": "PDBc"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-09-18T00:00:00",
+            "header_release": "2026-05-27T00:00:00",
+            "map_release": "2026-05-27T00:00:00",
+            "update": "2026-05-27T00:00:00"
+        },
+        "keywords": "self-sufficient P450, heme, oxidoreductase",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-05-27T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBj",
+            "last_processing": "PDBc"
+        },
+        "title": "Cryo-EM structure of full-length self-sufficient P450 in complex with NADPH from Shimazuella soli"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Xie ZZ"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Li SY"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Liu ZW"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Li QR"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Huang J-W"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Chen C-C"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Guo R-T"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Cryo-EM structure of full-length self-sufficient P450 in complex with NADPH from Shimazuella soli"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-66267",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of full-length self-sufficient P450 in complex with NADPH from Shimazuella soli",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9wup",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-66267",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "237.056"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "237.056"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "237.056"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 256,
+                        "row": 256,
+                        "sec": 256
+                    },
+                    "file": "emd_66267_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-66267::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.926"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.926"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.926"
+                        }
+                    },
+                    "size_kbytes": 67109,
+                    "spacing": {
+                        "x": 256,
+                        "y": 256,
+                        "z": 256
+                    },
+                    "statistics": {
+                        "average": 0.0007107664,
+                        "maximum": 0.92234975,
+                        "minimum": -0.47238,
+                        "std": 0.04902484
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "237.056"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "237.056"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "237.056"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 256,
+                        "row": 256,
+                        "sec": 256
+                    },
+                    "file": "emd_66267_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-66267::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.926"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.926"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.926"
+                        }
+                    },
+                    "size_kbytes": 67109,
+                    "spacing": {
+                        "x": 256,
+                        "y": 256,
+                        "z": 256
+                    },
+                    "statistics": {
+                        "average": 0.00069722446,
+                        "maximum": 0.9072449,
+                        "minimum": -0.44043916,
+                        "std": 0.048924197
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_66267_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "237.056"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "237.056"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "237.056"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.21,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 256,
+            "row": 256,
+            "sec": 256
+        },
+        "file": "emd_66267.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-66267::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.926"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.926"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.926"
+            }
+        },
+        "size_kbytes": 67109,
+        "spacing": {
+            "x": 256,
+            "y": 256,
+            "z": 256
+        },
+        "statistics": {
+            "average": 0.0003860453,
+            "maximum": 2.317279,
+            "minimum": -1.4653814,
+            "std": 0.05904527
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.121038234"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "bifunctional cytochrome P450/NADPH--P450 reductase"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1892854,
+                            "valueOf_": "Shimazuella soli"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "string": "MDEANIIPQPKTYGPLGNIPLIDKDKPILSFMKLAEEYGPIFRLQTPGDSTIVVSGHELVKEVCDESRFLKSAEGPLEKV RAFGGDGLFTSWTHEPNWRKAHNILMPTFSQRAMKDYHDMMVDIAVQLIQKWIRLNPDETVDVPDDMTRLTLDTIGLCGF NYRFNSYYRETPHPFITSMVRALDEAMHQTQRLDLQDKLMIRTKRQFQHDIQVMFSLVDSIIAERRAGKNQKENDLLSRM LNVSDPETGEKLDDENIRYQIITFLIAGHETTSGLLSFALYFLLKNPDKLKKAYEEVDQVLTGSTPTYKQVLHLKYVRMI LNEALRLWPTAPAFSLYAKEDTIIGGKYPVKKEQERITVLIPQLHRDKEAWGEDVEEFRPERFEDQNKVPHHAYKPFGNG QRACIGMQFALHEATLVLGMLLRHFEFIDYKDYQLDIKQTLTLKPGDFNIQVQPRNQPAFQQSVSVTEDVAAESKMEMKQ VKDHFDQKSTIQGLNNRPLLVLYGSDTGTAEGIARELADTATLHGVHTEVATLNERIGELPKEGAVLIVTSSYNGKPPSN AGQFVQWLEAVQAGELSGVQYAVFGCGDHNWASTYQDVPRFIDKQLAEKGAVRFSARGEGDVSGDFEEQFDQWKEKMWSD AIEAFGLEISDDVKKDQNTLSLQFVKGTGGSPLARSYEAVYAKVVENRELQSPDSGRSTRHIEITLPKGVSYQEGDHLGV LPANSKENVHRVLQKYKLNENDQVVLTASGRSMAHLPLAQEVSLRDLLLYSVELQDAATRAQIRELAAFTVCPPHKRELE ALLEEGIYQEQVLKKRISMLDLLEKYEACEMPFERFLELLHPLKPRYYSISSSPRLNSERASITVAVVRGPAWSGLGEYR GVASNYLADCKPGEDVMMFIRTPESNFQLPEESETPIIMVGPGTGLAPFRGFLQARDAMKQEGKTLGEAYLYFGCRNEAD FIYRKELEQYKKNGIMTLYIAFSRKEGIPKTYVQHVMASNAESLIRILDQGGRLYICGDGSRMAPEVEATLKNSYQEVHG AGEQEASQWLEKLQKDGQYAKDVWAGL"
+                    }
+                },
+                {
+                    "formula": "HEM",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000616487"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "PROTOPORPHYRIN IX CONTAINING FE"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "FMN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.00045634399999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "FLAVIN MONONUCLEOTIDE"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "FAD",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0007855499999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "FLAVIN-ADENINE DINUCLEOTIDE"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "NDP",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000745421"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "NADPH DIHYDRO-NICOTINAMIDE-ADENINE-DINUCLEOTIDE PHOSPHATE"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "2"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "bifunctional cytochrome P450"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "bifunctional cytochrome P450"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 1892854,
+                                "valueOf_": "Shimazuella soli"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 139104,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.68"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.4"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.5"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "details": "25 mM HEPES,150 mM NaCl, pH 7.5",
+                                "ph": 7.5
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

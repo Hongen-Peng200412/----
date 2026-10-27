@@ -1,0 +1,945 @@
+{
+    "_id": "6817eb816e5018e1518f2677",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Kovalova T"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Janczak M"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Adelroth P"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Hogbom M"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-03-18T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "KAW 2019.0043",
+                    "country": "Sweden",
+                    "funding_body": "Knut and Alice Wallenberg Foundation",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-04-30T00:00:00",
+            "header_release": "2026-03-04T00:00:00",
+            "map_release": "2026-03-04T00:00:00",
+            "update": "2026-03-18T00:00:00"
+        },
+        "keywords": "MEMBRANE PROTEIN, ACTINOBACTERIA, ELECTRON TRANSPORT",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-03-04T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_ASTM",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_citation_author.identifier_ORCID",
+                                        "_citation_author.name",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_ASTM",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_citation_author.identifier_ORCID",
+                                        "_citation_author.name",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-03-18T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Cytochrome bd II oxidase qOR-2 type from Mycobacterium smegmatis"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0002-0144-2463",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Kovalova T"
+                        },
+                        {
+                            "ORCID": "0009-0004-2291-8282",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Janczak M"
+                        },
+                        {
+                            "ORCID": "0000-0002-0961-328X",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Gamiz-Hernandez AP"
+                        },
+                        {
+                            "ORCID": "0000-0002-8779-6464",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Lundin D"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Sharma S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Vilhjalmsdottir J"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Sjostrand D"
+                        },
+                        {
+                            "ORCID": "0000-0003-4464-6324",
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Kaila VRI"
+                        },
+                        {
+                            "ORCID": "0000-0001-5574-9383",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Hogbom M"
+                        },
+                        {
+                            "ORCID": "0000-0003-0853-6785",
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "Adelroth P"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41805574"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1073/pnas.2515348123"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "1091-6490"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0040"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ASTM",
+                            "valueOf_": "PNASA6"
+                        }
+                    ],
+                    "first_page": "e2515348123",
+                    "journal": "PNAS",
+                    "journal_abbreviation": "PNAS",
+                    "last_page": "e2515348123",
+                    "published": true,
+                    "title": "The Mycobacterium smegmatis bd -II terminal oxidase employs a carboxylate shift mechanism.",
+                    "volume": "123",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-53529",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cytochrome bd II oxidase qOR-2 type from Mycobacterium smegmatis",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9r2g",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-53529",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "233.99998"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "233.99998"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "233.99998"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_53529_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-53529::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.65"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.65"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.65"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": -0.001662214,
+                        "maximum": 4.1999555,
+                        "minimum": -2.7453537,
+                        "std": 0.081747696
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "233.99998"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "233.99998"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "233.99998"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_53529_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-53529::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.65"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.65"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.65"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 0.00044477556,
+                        "maximum": 1.494341,
+                        "minimum": -1.093762,
+                        "std": 0.07959676
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "233.99998"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "233.99998"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "233.99998"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 360,
+                        "row": 360,
+                        "sec": 360
+                    },
+                    "file": "emd_53529_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-53529::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.65"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.65"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.65"
+                        }
+                    },
+                    "size_kbytes": 186625,
+                    "spacing": {
+                        "x": 360,
+                        "y": 360,
+                        "z": 360
+                    },
+                    "statistics": {
+                        "average": 0.00041616466,
+                        "maximum": 1.4764533,
+                        "minimum": -0.8838962,
+                        "std": 0.07800281
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "233.99998"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "233.99998"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "233.99998"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.208,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 360,
+            "row": 360,
+            "sec": 360
+        },
+        "file": "emd_53529.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-53529::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.65"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.65"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.65"
+            }
+        },
+        "size_kbytes": 186625,
+        "spacing": {
+            "x": 360,
+            "y": 360,
+            "z": 360
+        },
+        "statistics": {
+            "average": -0.0016622142,
+            "maximum": 1.1201259,
+            "minimum": -0.5614102,
+            "std": 0.029761707
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.050327875"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Cytochrome bd menaquinol oxidase subunit I"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1772,
+                            "valueOf_": "Mycolicibacterium smegmatis"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 1772,
+                            "valueOf_": "Mycolicibacterium smegmatis"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A653F9S4"
+                            }
+                        ],
+                        "string": "MVFTETLLLLAADGEPPGLLPARQQMAFSLGWHIVLACFGVAFPTMIFVVHRRGIVRDDAVALGLAQRWAKVSAVLFAIG AVSGTVLSFEMGLLWPGLMGRFGDVLGLPFAFEGLSFFVEAIFLGIYLYGWGRMPPRRHLLTLIPMGLAGIVGTFCVVSV NAWMNNPAGFRIVNGEVVDIDPWRAMFNSGVWLQFAHMWVAAFMLVGLVVSGVYAFGMLRGRVDTHHRLGFAVPFTFASV AAVAQPLIGHVLGMRIHDTQPAKLAAFELAQTTEGPAPLRLGGVLIDGEVHWALTIPRLGSIIARNSLDAPVPGLDGVPR SDWPPVNITHLAFQSMVGIGTLLAAVAVVYWLARWRGRDLLANRWFLRLSVITGPLAVLAVESGWVATEVGRQPWTVWKV LTTTEAASQSSGLWWSYVIVLVVYLGMTIGAVVVLRSMARRWRAGETDLPSPYGPPRTEARS"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.039166078"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Cytochrome bd-I oxidase subunit II"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1772,
+                            "valueOf_": "Mycolicibacterium smegmatis"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 1772,
+                            "valueOf_": "Mycolicibacterium smegmatis"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A2U9PXA2"
+                            }
+                        ],
+                        "string": "MTQATFVAMAMFLGVVIYALFAGADFGSGFYDLTAGDARSGAKVRTLVDHSIGPVWEANHVWLIYILVIWWTGFPRTFAA ATTTLFIPLALALTGIVLRGASFAFRKYSATVSQARLFGAIFAASSLISPFFLGTVAGAIASGRVPAEGYGDRIGSWLNP TSLVGGFLAVATCVFLAGVFLTADAARSGDNGLADSLRRRTLAVGVVTGLIVFAGLYPVAHDAPTLTAGLRTYAAPLLVI ALLAGVATVWLVFRRRYAISRIPAAVAVAAVVTGWGVGQYPWLLVDEVTIADAAGADATLTGLLIVVVLAGVIVLPALAY LLRLTQTEEWSRKLSGGSAENLYFQGWSHPQFEKGGGSGGGSGGSAWSHPQFEK"
+                    }
+                },
+                {
+                    "formula": "CDL",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0014640429999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "CARDIOLIPIN"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "HDD",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0006324869999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "CIS-HEME D HYDROXYCHLORIN GAMMA-SPIROLACTONE"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "HEB",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0006185030000000001"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "HEME B/C"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "MQ9",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0007852329999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MENAQUINONE-9"
+                    },
+                    "number_of_copies": "3"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 7,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "7"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Cytochrome bd II oxidase"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Cytochrome bd II oxidase"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 1772,
+                                "valueOf_": "Mycolicibacterium smegmatis"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 200084,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.8"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF"
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "93.4"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOQUANTUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.2"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.6"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.4
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

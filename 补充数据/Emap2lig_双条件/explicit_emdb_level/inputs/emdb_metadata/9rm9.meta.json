@@ -1,0 +1,883 @@
+{
+    "_id": "685885c26e5018e1513fbf28",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Fruergaard MU"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Andersen GR"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-29T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "funding_body": "Other private",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-06-18T00:00:00",
+            "header_release": "2026-04-29T00:00:00",
+            "map_release": "2026-04-29T00:00:00",
+            "update": "2026-04-29T00:00:00"
+        },
+        "keywords": "phagocytosis, integrin, opsonisation, IMMUNE SYSTEM",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-29T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Cryo-EM structure of alphaM/beta2 headpiece complex without alphaM I-domain - the consensus map from alphaM/beta2:C3d-anti-CR3-Nb headpiece complex"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0002-2963-992X",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Fruergaard MU"
+                        },
+                        {
+                            "ORCID": "0000-0001-6292-3319",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Andersen GR"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Cryo-EM structure of headpiece alphaM/beta2:C3d-anti-CR3-Nb complex"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "details": "Map 1 of alphaM/beta2:C3d-anti-CR3-Nb:MEM148-Fab complex",
+                    "emdb_id": "EMD-52188",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                },
+                {
+                    "details": "Map 2 of alphaM/beta2:C3d-anti-CR3-Nb:MEM148-Fab complex",
+                    "emdb_id": "EMD-52189",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                },
+                {
+                    "details": "Map 3 of alphaM/beta2:C3d-anti-CR3-Nb:MEM148-Fab complex",
+                    "emdb_id": "EMD-52190",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                },
+                {
+                    "details": "Cryo-EM structure of alphaM/beta2:C3d-anti-CR3-Nb:MEM148-Fab complex",
+                    "emdb_id": "EMD-52191",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-52188",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "Map 1 of alphaM/beta2:C3d-anti-CR3-Nb:MEM148-Fab complex",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-52189",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "Map 2 of alphaM/beta2:C3d-anti-CR3-Nb:MEM148-Fab complex",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-52190",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "Map 3 of alphaM/beta2:C3d-anti-CR3-Nb:MEM148-Fab complex",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-52191",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of alphaM/beta2:C3d-anti-CR3-Nb:MEM148-Fab complex",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-54052",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of alphaM/beta2 headpiece complex without alphaM I-domain",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9rm9",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-54052",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "Half map B",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "331.264"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "331.264"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "331.264"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 332,
+                        "row": 332,
+                        "sec": 332
+                    },
+                    "file": "emd_54052_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-54052::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9977832"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9977832"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9977832"
+                        }
+                    },
+                    "size_kbytes": 146378,
+                    "spacing": {
+                        "x": 332,
+                        "y": 332,
+                        "z": 332
+                    },
+                    "statistics": {
+                        "average": 0.00034881243,
+                        "maximum": 0.9694513,
+                        "minimum": -0.88843477,
+                        "std": 0.04440814
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "Half map A",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "331.264"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "331.264"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "331.264"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 332,
+                        "row": 332,
+                        "sec": 332
+                    },
+                    "file": "emd_54052_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-54052::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9977832"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9977832"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9977832"
+                        }
+                    },
+                    "size_kbytes": 146378,
+                    "spacing": {
+                        "x": 332,
+                        "y": 332,
+                        "z": 332
+                    },
+                    "statistics": {
+                        "average": 0.0003537095,
+                        "maximum": 0.9857008,
+                        "minimum": -0.73476994,
+                        "std": 0.044396404
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "instance_type": "modelling",
+                    "refinement_protocol": "FLEXIBLE FIT",
+                    "refinement_space": "REAL"
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_54052_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "Consensus map",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "331.264"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "331.264"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "331.264"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.1,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 332,
+            "row": 332,
+            "sec": 332
+        },
+        "file": "emd_54052.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-54052::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.9977832"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.9977832"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.9977832"
+            }
+        },
+        "size_kbytes": 146378,
+        "spacing": {
+            "x": 332,
+            "y": 332,
+            "z": 332
+        },
+        "statistics": {
+            "average": 0.0004207818,
+            "maximum": 0.73557746,
+            "minimum": -0.31441805,
+            "std": 0.012860961
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.083989734"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Isoform 2 of Integrin alpha-M"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P11215"
+                            }
+                        ],
+                        "string": "FNLDTENAMTFQENARGFGQSVVQLQGSRVVVGAPQEIVAANQRGSLYQCDYSTGSCEPIRLQVPVEAVNMSLGLSLAAT TSPPQLLACGPTVHQTCSENTYVKGLCFLFGSNLRQQPQKFPEALRGCPQEDSDIAFLIDGSGSIIPHDFRRMKEFVSTV MEQLKKSKTLFSLMQYSEEFRIHFTFKEFQNNPNPRSLVKPITQLLGRTHTATGIRKVVRELFNITNGARKNAFKILVVI TDGEKFGDPLGYEDVIPEADREGVIRYVIGVGDAFRSEKSRQELNTIASKPPRDHVFQVNNFEALKTIQNQLREKIFAIE GTQTGSSSSFEHEMSQEGFSAAITSNGPLLSTVGSYDWAGGVFLYTSKEKSTFINMTRVDSDMNDAYLGYAAAIILRNRV QSLVLGAPRYQHIGLVAMFRQNTGMWESNANVKGTQIGAYFGASLCSVDVDSNGSTDLVLIGAPHYYEQTRGGQVSVCPL PRGQRARWQCDAVLYGEQGQPWGRFGAALTVLGDVNGDKLTDVAIGAPGEEDNRGAVYLFHGTSGSGISPSHSQRIAGSK LSPRLQYFGQSLSGGQDLTMDGLVDLTVGAQGHVLLLRSQPVLRVKAIMEFNPREVARNVFECNDQVVKGKEAGEVRVCL HVQKSTRDRLREGQIQSVVTYDLALDSGRPHSRAVFNETKNSTRRQTQVLGLTQTCETLKLQLPNCIEDPVSPIVLRLNF SLVGTPLSAFGNLRPVLAEDAQRLFTALFPFEKNTGGENLYFQ"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.05228109399999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Integrin beta-2"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P05107"
+                            }
+                        ],
+                        "string": "QECTKFKVSSCRECIESGPGCTWCQKLNFTGPGDPDSIRCDTRPQLLMRGCAADDIMDPTSLAETQEDHNGGQKQLSPQK VTLYLRPGQAAAFNVTFRRAKGYPIDLYYLMDLSYSMLDDLRNVKKLGGDLLRALNEITESGRIGFGSFVDKTVLPFVNT HPDKLRNPCPNKEKECQPPFAFRHVLKLTNNSNQFQTEVGKQLISGNLDAPEGGLDAMMQVAACPEEIGWRNVTRLLVFA TDDGFHFAGDGKLGAILTPNDGRCHLEDNLYKRSNEFDYPSVGQLAHKLAENNIQPIFAVTSRMVKTYEKLTEIIPKSAV GELSEDSSNVVHLIKNAYNKLSSRVFLDHNALPDTLKVTYDSFCSNGVTHRNQPRGDCDGVQINVPITFQVKVTATECIQ EQSFVIRALGFTDIVTVQVLPQCECRCRDQSRDRSLCHGKGFLECGICRCDTGYIGKNCEPAAENLYFQ"
+                    }
+                },
+                {
+                    "formula": "CA",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "4.0078e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "CALCIUM ION"
+                    },
+                    "number_of_copies": "5"
+                },
+                {
+                    "formula": "NAG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 7,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000221208"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "2-acetamido-2-deoxy-beta-D-glucopyranose"
+                    },
+                    "number_of_copies": "3"
+                },
+                {
+                    "formula": "MN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 8,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "5.4938e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MANGANESE (II) ION"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 9,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "7"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "alphaM/beta2 headpiece complex"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "details": "alphaM/beta2 headpiece complex without alphaM I-domain (consensus map)",
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "kDa/nm",
+                            "valueOf_": "140"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "alphaM/beta2 headpiece complex"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 9606,
+                                "valueOf_": "Homo sapiens"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 370439,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.6"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "RANDOM ASSIGNMENT"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "OTHER"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "60.1"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            },
+                            "specialist_optics": {
+                                "energy_filter": {
+                                    "name": "GIF Bioquantum",
+                                    "slit_width": {
+                                        "units": "eV",
+                                        "valueOf_": "20"
+                                    }
+                                }
+                            },
+                            "specimen_holder_model": "FEI TITAN KRIOS AUTOGRID HOLDER"
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "M",
+                                            "valueOf_": "0.02"
+                                        },
+                                        "formula": "C8H18N2O4S",
+                                        "instance_type": "component",
+                                        "name": "HEPES"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "M",
+                                            "valueOf_": "0.15"
+                                        },
+                                        "formula": "NaCl",
+                                        "instance_type": "component",
+                                        "name": "sodium chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "M",
+                                            "valueOf_": "0.001"
+                                        },
+                                        "formula": "MnCl2",
+                                        "instance_type": "component",
+                                        "name": "mangenese chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "M",
+                                            "valueOf_": "2e-05"
+                                        },
+                                        "formula": "CaCl2",
+                                        "instance_type": "component",
+                                        "name": "calcium chloride"
+                                    }
+                                ],
+                                "ph": 7.5
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "2.88"
+                            },
+                            "grid": {
+                                "details": "25 mA current",
+                                "material": "GOLD",
+                                "mesh": 300,
+                                "model": "UltrAuFoil R0./1",
+                                "pretreatment": {
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "180"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "GOLD",
+                                        "film_topology": "HOLEY",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "277"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "details": "0.02 % w/v CHAPS added to sample just before vitrification. ",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

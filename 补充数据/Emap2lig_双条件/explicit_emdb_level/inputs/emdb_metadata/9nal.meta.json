@@ -1,0 +1,860 @@
+{
+    "_id": "67b272a4c7dd9684975d6d6d",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Sharma N"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "French JB"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-08T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "R35GM124898",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute of General Medical Sciences (NIH/NIGMS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "R01CA299056",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Cancer Institute (NIH/NCI)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-02-12T00:00:00",
+            "header_release": "2026-02-25T00:00:00",
+            "map_release": "2026-02-25T00:00:00",
+            "update": "2026-04-08T00:00:00"
+        },
+        "keywords": "iminophosphate ADP human phosphoribosylglycinamidine synthase, LIGASE",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-25T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-03-04T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.journal_volume",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.journal_volume",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-08T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.2"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "Cryo-EM structure of ternary complex of human phosphoribosylglycinamidine synthase with the intermediate (iminophosphate) and ADP bound at the synthase site."
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Sharma N"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Zhou W"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "French JB"
+                        }
+                    ],
+                    "country": "UK",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41688441"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1038/s41467-026-69423-y"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2041-1723"
+                        }
+                    ],
+                    "journal": "Nat Commun",
+                    "journal_abbreviation": "Nat Commun",
+                    "published": true,
+                    "title": "Structural and molecular basis for allosteric regulation and catalytic coupling of human phosphoribosylformylglycinamidine synthase.",
+                    "volume": "17",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-49198",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of intermediates (iminophosphate and ADP) bound at the synthase site of human phosphoribosylglycinamidine synthase",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9nal",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-49198",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "annotation_details": "Additional Map",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "208.64"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "208.64"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "208.64"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 320,
+                        "row": 320,
+                        "sec": 320
+                    },
+                    "file": "emd_49198_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-49198::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.652"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.652"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.652"
+                        }
+                    },
+                    "size_kbytes": 131073,
+                    "spacing": {
+                        "x": 320,
+                        "y": 320,
+                        "z": 320
+                    },
+                    "statistics": {
+                        "average": -0.0003626403,
+                        "maximum": 0.8809126,
+                        "minimum": -0.6823109,
+                        "std": 0.02774887
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "Half Map A",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "208.64"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "208.64"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "208.64"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 320,
+                        "row": 320,
+                        "sec": 320
+                    },
+                    "file": "emd_49198_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-49198::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.652"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.652"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.652"
+                        }
+                    },
+                    "size_kbytes": 131073,
+                    "spacing": {
+                        "x": 320,
+                        "y": 320,
+                        "z": 320
+                    },
+                    "statistics": {
+                        "average": 0.00019195631,
+                        "maximum": 0.40289104,
+                        "minimum": -0.32145998,
+                        "std": 0.03490542
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "Half Map B",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "208.64"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "208.64"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "208.64"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 320,
+                        "row": 320,
+                        "sec": 320
+                    },
+                    "file": "emd_49198_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-49198::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.652"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.652"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.652"
+                        }
+                    },
+                    "size_kbytes": 131073,
+                    "spacing": {
+                        "x": 320,
+                        "y": 320,
+                        "z": 320
+                    },
+                    "statistics": {
+                        "average": 0.00020076374,
+                        "maximum": 0.43059266,
+                        "minimum": -0.35913667,
+                        "std": 0.03474336
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "structure of intermediates (iminophosphate and ADP) bound at the synthase site of human phosphoribosylglycinamidine synthase",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "208.64"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "208.64"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "208.64"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.097,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 320,
+            "row": 320,
+            "sec": 320
+        },
+        "file": "emd_49198.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-49198::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.652"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.652"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.652"
+            }
+        },
+        "size_kbytes": 131073,
+        "spacing": {
+            "x": 320,
+            "y": 320,
+            "z": 320
+        },
+        "statistics": {
+            "average": 0.0027562384,
+            "maximum": 2.1923919,
+            "minimum": -0.0017905645,
+            "std": 0.04071533
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "ec_number": [
+                        "6.3.5.3"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.148495672"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Phosphoribosylformylglycinamidine synthase"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O15067"
+                            }
+                        ],
+                        "string": "MSPVLHFYVRPSGHEGAAPGHTRRKLQGKLPELQGVETELCYNVNWTAEALPSAEETKKLMWLFGCPLLLDDVARESWLL PGSNDLLLEVGPRLNFSTPTSTNIVSVCRATGLGPVDRVETTRRYRLSFAHPPSAEVEAIALATLHDRMTEQHFPHPIQS FSPESMPEPLNGPINILGEGRLALEKANQELGLALDSWDLDFYTKRFQELQRNPSTVEAFDLAQSNSEHSRHWFFKGQLH VDGQKLVHSLFESIMSTQESSNPNNVLKFCDNSSAIQGKEVRFLRPEDPTRPSRFQQQQGLRHVVFTAETHNFPTGVCPF SGATTGTGGRIRDVQCTGRGAHVVAGTAGYCFGNLHIPGYNLPWEDPSFQYPGNFARPLEVAIEASNGASDYGNKFGEPV LAGFARSLGLQLPDGQRREWIKPIMFSGGIGSMEADHISKEAPEPGMEVVKVGGPVYRIGVGGGAASSVQVQGDNTSDLD FGAVQRGDPEMEQKMNRVIRACVEAPKGNPICSLHDQGAGGNGNVLKELSDPAGAIIYTSRFQLGDPTLNALEIWGAEYQ ESNALLLRSPNRDFLTHVSARERCPACFVGTITGDRRIVLVDDRECPVRRNGQGDAPPTPLPTPVDLELEWVLGKMPRKE FFLQRKPPMLQPLALPPGLSVHQALERVLRLPAVASKRYLTNKVDRSVGGLVAQQQCVGPLQTPLADVAVVALSHEELIG AATALGEQPVKSLLDPKVAARLAVAEALTNLVFALVTDLRDVKCSGNWMWAAKLPGEGAALADACEAMVAVMAALGVAVD GGKDSLSMAARVGTETVRAPGSLVISAYAVCPDITATVTPDLKHPEGRGHLLYVALSPGQHRLGGTALAQCFSQLGEHPP DLDLPENLVRAFSITQGLLKDRLLCSGHDVSDGGLVTCLLEMAFAGNCGLQVDVPVPRVDVLSVLFAEEPGLVLEVQEPD LAQVLKRYRDAGLHCLELGHTGEAGPHAMVRVSVNGAVVLEEPVGELRALWEETSFQLDRLQAEPRCVAEEERGLRERMG PSYCLPPTFPKASVPREPGGPSPRVAILREEGSNGDREMADAFHLAGFEVWDVTMQDLCSGAIGLDTFRGVAFVGGFSYA DVLGSAKGWAAAVTFHPRAGAELRRFRKRPDTFSLGVCNGCQLLALLGWVGGDPNEDAAEMGPDSQPARPGLLLRHNLSG RYESRWASVRVGPGPALMLRGMEGAVLPVWSAHGEGYVAFSSPELQAQIEARGLAPLHWADDDGNPTEQYPLNPNGSPGG VAGICSCDGRHLAVMPHPERAVRPWQWAWRPPPFDTLTTSPWLQLFINARNWTLEGSCTRTRPLEQKLISEEDLAANDIL DYKDDDDKV"
+                    }
+                },
+                {
+                    "formula": "ADP",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000427201"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ADENOSINE-5'-DIPHOSPHATE"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "A1B7I",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000394166"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "N-[2-formamido-1-(phosphonooxy)ethylidene]-5-O-phosphono-beta-D-ribofuranosylamine"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "3"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "96"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "human phosphoribosylglycinamidine synthase"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "organelle_or_cellular_component_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "human phosphoribosylglycinamidine synthase"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 9606,
+                                "valueOf_": "Homo sapiens"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "projection_matching_processing": {},
+                            "type_": "PROJECTION MATCHING"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 110648,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.22"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF"
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "projection_matching_processing": {},
+                            "type_": "PROJECTION MATCHING"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "45.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.5"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.75"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.4
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

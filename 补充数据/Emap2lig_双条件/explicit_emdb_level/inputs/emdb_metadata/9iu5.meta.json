@@ -1,0 +1,1042 @@
+{
+    "_id": "66a6c8ef38e8b5db7647fc40",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Soma T"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Hiraizumi M"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Yamashita K"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Nishimasu H"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-03-04T00:00:00",
+            "processing_site": "PDBj"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "JPMJAX232F",
+                    "country": "Japan",
+                    "funding_body": "Japan Science and Technology",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "JPMJCR23B6",
+                    "country": "Japan",
+                    "funding_body": "Japan Science and Technology",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2024-07-20T00:00:00",
+            "header_release": "2026-03-04T00:00:00",
+            "map_release": "2026-03-04T00:00:00",
+            "update": "2026-03-04T00:00:00"
+        },
+        "keywords": "large serine recombinase, DNA BINDING PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-03-04T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBj",
+            "last_processing": "PDBj"
+        },
+        "title": "Cryo-EM structure of the large serine recombinase Bxb1 in complex with attP and attB (CA/CA CDN) in the post-strand exchange state"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Soma T"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Cryo-EM structure of the large serine recombinase Bxb1 in complex with attP and attB (CA/CA CDN) in the post-strand exchange state"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-60890",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of the large serine recombinase Bxb1 in complex with attP and attB (CA/CA CDN) in the post-strand exchange state",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9iu5",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-60890",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "282.1992"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "282.1992"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "282.1992"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 240,
+                        "row": 240,
+                        "sec": 240
+                    },
+                    "file": "emd_60890_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-60890::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.17583"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.17583"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.17583"
+                        }
+                    },
+                    "size_kbytes": 55297,
+                    "spacing": {
+                        "x": 240,
+                        "y": 240,
+                        "z": 240
+                    },
+                    "statistics": {
+                        "average": 0.0008477325,
+                        "maximum": 0.6737048,
+                        "minimum": -0.23486744,
+                        "std": 0.02744017
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "282.1992"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "282.1992"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "282.1992"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 240,
+                        "row": 240,
+                        "sec": 240
+                    },
+                    "file": "emd_60890_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-60890::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.17583"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.17583"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.17583"
+                        }
+                    },
+                    "size_kbytes": 55297,
+                    "spacing": {
+                        "x": 240,
+                        "y": 240,
+                        "z": 240
+                    },
+                    "statistics": {
+                        "average": 0.00083456596,
+                        "maximum": 0.69560164,
+                        "minimum": -0.26052755,
+                        "std": 0.027478095
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_60890_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "282.1992"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "282.1992"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "282.1992"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.03,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 240,
+            "row": 240,
+            "sec": 240
+        },
+        "file": "emd_60890.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-60890::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "1.17583"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "1.17583"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "1.17583"
+            }
+        },
+        "size_kbytes": 55297,
+        "spacing": {
+            "x": 240,
+            "y": 240,
+            "z": 240
+        },
+        "statistics": {
+            "average": 0.0015866348,
+            "maximum": 2.0109437,
+            "minimum": -0.0018141302,
+            "std": 0.02714196
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.056439948999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Integrase"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2902907,
+                            "valueOf_": "Mycobacterium phage Bxb1"
+                        }
+                    },
+                    "number_of_copies": "4",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q9B086"
+                            }
+                        ],
+                        "string": "MRALVVIRLSRVTDATTSPERQLESCQQLCAQRGWDVVGVAEDLDVSGAVDPFDRKRRPNLARWLAFEEQPFDVIVAYRV DRLTRSIRHLQQLVHWAEDHKKLVVSATEAHFDTTTPFAAVVIALMGTVAQMELEAIKERNRSAAHFNIRAGKYRGSLPP WGYLPTRVDGEWRLVPDPVQRERILEVYHRVVDNHEPLHLVAHDLNRRGVLSPKDYFAQLQGREPQGREWSATALKRSMI SEAMLGYATLNGKTVRDDDGAPLVRAEPILTREQLEALRAELVKTSRAKPAVSTPSLLLRVLFCAVCGEPAYKFAGGGRK HPRYRCRSMGFPKHCGNGTVAMAEWDAFCEEQVLDLLGDAERLEKVWVAGSDSAVELAEVNAELVDLTSLIGSPAYRAGS PQREALDARIAALAARQEELEGLEARPSGWEWRETGQRFGDWWREQDTAAKNTWLRSMNVRLTFDVRGGLTRTIDFGDLQ EYEQHLRLGSVVERLHTGMS"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.008315329"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attP-L"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2902907,
+                            "valueOf_": "Mycobacterium phage Bxb1"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "NC_002656.1"
+                            }
+                        ],
+                        "string": "(DG)(DT)(DG)(DG)(DT)(DT)(DT)(DG)(DT)(DC)(DT)(DG)(DG)(DT)(DC)(DA)(DA)(DC)(DC)(DA) (DC)(DC)(DG)(DC)(DG)(DG)(DT)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.007667961"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attP-R"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2902907,
+                            "valueOf_": "Mycobacterium phage Bxb1"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "NC_002656.1"
+                            }
+                        ],
+                        "string": "(DC)(DT)(DC)(DA)(DG)(DT)(DG)(DG)(DT)(DG)(DT)(DA)(DC)(DG)(DG)(DT)(DA)(DC)(DA)(DA) (DA)(DC)(DC)(DC)(DA)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0076779629999999995"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attP-L"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2902907,
+                            "valueOf_": "Mycobacterium phage Bxb1"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "NC_002656.1"
+                            }
+                        ],
+                        "string": "(DC)(DG)(DC)(DG)(DG)(DT)(DG)(DG)(DT)(DT)(DG)(DA)(DC)(DC)(DA)(DG)(DA)(DC)(DA)(DA) (DA)(DC)(DC)(DA)(DC)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.008292345999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attP-R"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2902907,
+                            "valueOf_": "Mycobacterium phage Bxb1"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "NC_002656.1"
+                            }
+                        ],
+                        "string": "(DT)(DG)(DG)(DG)(DT)(DT)(DT)(DG)(DT)(DA)(DC)(DC)(DG)(DT)(DA)(DC)(DA)(DC)(DC)(DA) (DC)(DT)(DG)(DA)(DG)(DA)(DC)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.007412754"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attB-L"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1772,
+                            "valueOf_": "Mycolicibacterium smegmatis"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "LN831039.1"
+                            }
+                        ],
+                        "string": "(DG)(DG)(DC)(DC)(DG)(DG)(DC)(DT)(DT)(DG)(DT)(DC)(DG)(DA)(DC)(DG)(DA)(DC)(DG)(DG) (DC)(DG)(DC)(DA)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 7,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.006704315999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attB-R"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1772,
+                            "valueOf_": "Mycolicibacterium smegmatis"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "LN831039.1"
+                            }
+                        ],
+                        "string": "(DC)(DT)(DC)(DC)(DG)(DT)(DC)(DG)(DT)(DC)(DA)(DG)(DG)(DA)(DT)(DC)(DA)(DT)(DC)(DC) (DG)(DG)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 8,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.006699307"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attB-L"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1772,
+                            "valueOf_": "Mycolicibacterium smegmatis"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "LN831039.1"
+                            }
+                        ],
+                        "string": "(DC)(DG)(DC)(DC)(DG)(DT)(DC)(DG)(DT)(DC)(DG)(DA)(DC)(DA)(DA)(DG)(DC)(DC)(DG)(DG) (DC)(DC)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 9,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0074047819999999995"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attB-R"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1772,
+                            "valueOf_": "Mycolicibacterium smegmatis"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "LN831039.1"
+                            }
+                        ],
+                        "string": "(DC)(DC)(DG)(DG)(DA)(DT)(DG)(DA)(DT)(DC)(DC)(DT)(DG)(DA)(DC)(DG)(DA)(DC)(DG)(DG) (DA)(DG)(DA)(DC)"
+                    }
+                },
+                {
+                    "formula": "ZN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 10,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "6.5409e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ZINC ION"
+                    },
+                    "number_of_copies": "4"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "The large serine recombinase Bxb1 in complex with attP and attB (CA/CA CDN) in the post-strand exchange state"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 4
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 5
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 6
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 7
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 8
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 9
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "The large serine recombinase Bxb1 in complex with attP and attB (CA/CA CDN) in the post-strand exchange state"
+                    },
+                    "parent": 0,
+                    "supramolecule_id": 1
+                },
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "large serine recombinase"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 2902907,
+                                "valueOf_": "Mycobacterium phage Bxb1"
+                            }
+                        }
+                    ],
+                    "parent": 1,
+                    "supramolecule_id": 2
+                },
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 4
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 5
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "attP"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 2902907,
+                                "valueOf_": "Mycobacterium phage Bxb1"
+                            },
+                            "synthetically_produced": true
+                        }
+                    ],
+                    "parent": 1,
+                    "supramolecule_id": 3
+                },
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 6
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 7
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 8
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 9
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "attB"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 1772,
+                                "valueOf_": "Mycolicibacterium smegmatis"
+                            },
+                            "synthetically_produced": true
+                        }
+                    ],
+                    "parent": 1,
+                    "supramolecule_id": 4
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "applied_symmetry": {
+                                "point_group": "C1"
+                            },
+                            "number_images_used": 149931,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.63"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "49.5"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOQUANTUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

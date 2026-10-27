@@ -1,0 +1,826 @@
+{
+    "_id": "68ec289b6e5018e151cb3f8d",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Kabasakal BV"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Buzas D"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Bufton J"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Berger-Schaffitzel C"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Berger I"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-29T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "210701/Z/18/Z; 106115/Z/14/Z; 202904/Z/16/Z; 206181/Z/17/Z",
+                    "country": "United Kingdom",
+                    "funding_body": "Wellcome Trust",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "BB/R000484/1",
+                    "country": "United Kingdom",
+                    "funding_body": "Biotechnology and Biological Sciences Research Council (BBSRC)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "EP/R013764/1",
+                    "country": "United Kingdom",
+                    "funding_body": "Engineering and Physical Sciences Research Council",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-10-04T00:00:00",
+            "header_release": "2026-03-25T00:00:00",
+            "map_release": "2026-03-25T00:00:00",
+            "update": "2026-04-29T00:00:00"
+        },
+        "keywords": "adenovirus, virus like particle, vaccine, dodecahedron",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-03-25T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation_author.identifier_ORCID",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation_author.identifier_ORCID",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-29T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Adenovirus dodecahedron"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Balchin G"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Kabasakal BV"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Strofaldi A"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Hall S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Fletcher C"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Buzas D"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Bufton JC"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Yadav SKN"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Shen D"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "Garzoni F"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 11,
+                            "valueOf_": "Bunzel HA"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 12,
+                            "valueOf_": "McManus JJ"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 13,
+                            "valueOf_": "Schaffitzel C"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 14,
+                            "valueOf_": "Berger I"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41840818"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1021/acssynbio.5c00757"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2161-5063"
+                        }
+                    ],
+                    "first_page": "1340",
+                    "journal": "ACS Synth Biol",
+                    "journal_abbreviation": "ACS Synth Biol",
+                    "last_page": "1352",
+                    "published": true,
+                    "title": "Engineering the ADDomer Nanoparticle Vaccine Scaffold for Improved Assembly and Enhanced Stability.",
+                    "volume": "15",
+                    "year": "2026"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "details": "Adenovirus dodecahedron",
+                    "emdb_id": "EMD-12989",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "associated EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-12989",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Adenovirus dodecahedron",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-55303",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Adenovirus dodecahedron",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9swa",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-55303",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "ChimpSELS Addomer half map1",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "419.99997"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "419.99997"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "419.99997"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 400,
+                        "row": 400,
+                        "sec": 400
+                    },
+                    "file": "emd_55303_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-55303::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.05"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.05"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.05"
+                        }
+                    },
+                    "size_kbytes": 256001,
+                    "spacing": {
+                        "x": 400,
+                        "y": 400,
+                        "z": 400
+                    },
+                    "statistics": {
+                        "average": -0.00012556248,
+                        "maximum": 0.0625336,
+                        "minimum": -0.013888957,
+                        "std": 0.004438162
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "ChimpSELS Addomer half map2",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "419.99997"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "419.99997"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "419.99997"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 400,
+                        "row": 400,
+                        "sec": 400
+                    },
+                    "file": "emd_55303_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-55303::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.05"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.05"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.05"
+                        }
+                    },
+                    "size_kbytes": 256001,
+                    "spacing": {
+                        "x": 400,
+                        "y": 400,
+                        "z": 400
+                    },
+                    "statistics": {
+                        "average": -0.00012587654,
+                        "maximum": 0.06329034,
+                        "minimum": -0.0144260265,
+                        "std": 0.004438373
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "instance_type": "modelling",
+                    "refinement_protocol": "AB INITIO MODEL"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "ChimpSELS Addomer map",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "419.99997"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "419.99997"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "419.99997"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.2,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 400,
+            "row": 400,
+            "sec": 400
+        },
+        "file": "emd_55303.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-55303::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "1.05"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "1.05"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "1.05"
+            }
+        },
+        "size_kbytes": 256001,
+        "spacing": {
+            "x": 400,
+            "y": 400,
+            "z": 400
+        },
+        "statistics": {
+            "average": 0.0008861205,
+            "maximum": 0.27034613,
+            "minimum": -0.14258933,
+            "std": 0.009610836
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.060838065999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Penton protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1123958,
+                            "valueOf_": "Chimpanzee adenovirus Y25"
+                        }
+                    },
+                    "number_of_copies": "60",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 10469,
+                            "valueOf_": "unidentified baculovirus"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "G9G849"
+                            }
+                        ],
+                        "string": "MMRRAYPEGPPPSYESVMQQAMAAAAAMQPPLEAPYVPPRYLAPTEGRNSIRYSELSPLYDTTRLYLVDNKSADIASLNY QNDHSNFLTTVVQNNDFTPTEASTQTINFDERSRWGGQLKTIMHTNMPNVNEFMYSNKFKARVMVSRKTPNGEFVTVTDG PGSQDILEYEWVEFELPEGNFSVTMTIDLMNNAIIDNYLAVGRQNGVLESDIGVKFDTRNFRLGWDPVTELVMPGVYTNE AFHPDIVLLPGCGVDFTESRLSNLLGIRKRQPFQEGFQIMYEDLEGGNIPALLDVDAYEKSKEESAAAARTAAVATASTE VDVRGDNFASPAAELVAAAEAAETESSRKIVIQPVEKDSKDRSYNVLPDKINTAYRSWYLAYNYGDPEKGVRSWTLLTTS DVTCGVEQVYWSLPDMMQDPVTFRSTRQVSNYPVVGAELLPVYSKSFFNEQAVYSQQLRAFTSLTHVFNRFPENQILVRP PAPTITTVSENVPALTDHGTLPLRSSIRGVQRVTVTDARRRTCPYVYKALGIVAPRVLSSRTF"
+                    }
+                },
+                {
+                    "formula": "K",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "3.9098e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "POTASSIUM ION"
+                    },
+                    "number_of_copies": "12"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Adenovirus dodecahedron"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "3.65"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Adenovirus dodecahedron"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 1123958,
+                                "valueOf_": "Chimpanzee adenovirus Y25"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "CTFFIND"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION",
+                                        "version": "3.1"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 147098,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.2"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION",
+                                        "version": "3.1"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION",
+                                        "version": "3.1"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "200"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "44.01"
+                                        },
+                                        "detector_mode": "SUPER-RESOLUTION",
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K2 SUMMIT (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "FEI TALOS ARCTICA",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.2"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.7000000000000001"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.4
+                            },
+                            "grid": {
+                                "material": "COPPER"
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE",
+                                "instrument": "LEICA EM GP"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

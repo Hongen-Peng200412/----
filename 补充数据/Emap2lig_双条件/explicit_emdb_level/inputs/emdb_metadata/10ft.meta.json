@@ -1,0 +1,631 @@
+{
+    "_id": "69769517d785ce09053bd043",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Li H"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Klein D"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-05-06T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Cancer Institute (NIH/NCI)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2026-01-17T00:00:00",
+            "header_release": "2026-02-25T00:00:00",
+            "map_release": "2026-02-25T00:00:00",
+            "update": "2026-05-06T00:00:00"
+        },
+        "keywords": "Receptor tyrosine kinase ROS1, ROS1-NELL2 complex, TRANSFERASE-SIGNALING PROTEIN complex, TRANSFERASE",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-25T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "Cryo-EM structure of receptor tyrosine kinase ROS1 in complex with NELL2"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Li H"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Zhang J"
+                        },
+                        {
+                            "ORCID": "0000-0002-5272-4380",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Li T"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Wang Y"
+                        },
+                        {
+                            "ORCID": "0000-0003-2429-1378",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Alarcon CR"
+                        },
+                        {
+                            "ORCID": "0000-0002-7188-0450",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Klein DE"
+                        }
+                    ],
+                    "country": "UK",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41698918"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1038/s41467-026-69630-7"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2041-1723"
+                        }
+                    ],
+                    "journal": "Nat Commun",
+                    "journal_abbreviation": "Nat Commun",
+                    "published": true,
+                    "title": "Clustering and a conformational switch drive activation of the mammalian receptor tyrosine kinase ROS1.",
+                    "volume": "17",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-75142",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "10ft",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-75142",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "half map A",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "264.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "264.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "264.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 320,
+                        "row": 320,
+                        "sec": 320
+                    },
+                    "file": "emd_75142_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-75142::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.825"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.825"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.825"
+                        }
+                    },
+                    "size_kbytes": 131073,
+                    "spacing": {
+                        "x": 320,
+                        "y": 320,
+                        "z": 320
+                    },
+                    "statistics": {
+                        "average": 0.00018194226,
+                        "maximum": 0.7407465,
+                        "minimum": -0.77547383,
+                        "std": 0.08881388
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "half map B",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "264.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "264.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "264.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 320,
+                        "row": 320,
+                        "sec": 320
+                    },
+                    "file": "emd_75142_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-75142::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.825"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.825"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.825"
+                        }
+                    },
+                    "size_kbytes": 131073,
+                    "spacing": {
+                        "x": 320,
+                        "y": 320,
+                        "z": 320
+                    },
+                    "statistics": {
+                        "average": 0.00018890199,
+                        "maximum": 0.80404294,
+                        "minimum": -0.76999325,
+                        "std": 0.08950911
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "map",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "264.0"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "264.0"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "264.0"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.119,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 320,
+            "row": 320,
+            "sec": 320
+        },
+        "file": "emd_75142.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-75142::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.825"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.825"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.825"
+            }
+        },
+        "size_kbytes": 131073,
+        "spacing": {
+            "x": 320,
+            "y": 320,
+            "z": 320
+        },
+        "statistics": {
+            "average": -4.433385e-05,
+            "maximum": 1.5712801,
+            "minimum": -1.028424,
+            "std": 0.02299159
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "ec_number": [
+                        "2.7.10.1"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "name": {
+                        "valueOf_": "Proto-oncogene tyrosine-protein kinase ROS"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 10090,
+                            "valueOf_": "Mus musculus"
+                        }
+                    },
+                    "sequence": {
+                        "string": "SLDQSTVLSSCLTSCVTNLGRQLDSGTRYNLSEACIHGCQFWNSVDQETCALKCNDTYATICERESCEVGCSNAEGSYEE EVLESTELPTAPFASSIGSHGVTLRWNPANISGVKYIIQWKYAQLPGSWTFTETVSKLSYTVEPLHPFTEYIFRVVWIFT AQLHLYSPPSPSYRTHPYGVPETAPLILNMESWSPDTVEVSWAPPHFPGGPILGYNLRLISKNQKLDSGTQRTSFQFYST LPNTTYRFSIAAVNEVGEGPEAESTVTTPSPSVQEEEQWLFLSRKTSLRKRSLKYLVDEAHCLWSDAIHHNITGISVYAQ QQVVYFSEGTVIWMKGAANMSDVSDLRIFYQGSGLVSSISIDWLYQRMYFIMDKLVYVCELKNCSNLEEITPFSLIAPQK VVVDSYNGYLFYLLRDGIYRVNLPLPSGRDTKAVRIVESGTLKDFAVKPQSKRIIYFNDTMQLFMSTFLDGSAFHRVLPW VPLVTVKSFACENNDFLITDGKAIFQQDSLSFNEFIVGCDLSHIEEFGFGNLVIFGSSVQSYPLPGHPQEVSVLFGSREA LIQWTPPALAIGASPSAWQNWTYEVKVYSQDILEITQVFSNISGTMLNVPELQSSTKYTVSVRASSPKGPGPWSAPSVGT TLVPATEPPFIMAVKEDGLWSKPLCSFGPGEFLSSDVGNVSDMDWYNNSLYYSDTKGNVYVRPLNGMDISENYHIPSIVG AGALAFEWLGHFLYWAGKTYVIQRQSVLTGHTDIVTHVKLLVNDMAVDSVGGYLYWTTLYSVESTRLNGESSLVLQAQPW LSGKKVIALTLDLSDGLLYWLVQDNQCIHLYTAVLRGWSGGDATITEFAAWSTSEISQNALMYYSGRLFWINGFRIITAQ EIGQRTSVSVSEPAKFNQFTIIQTSLKPLPGNFSSTPKVIPDPVQESSFRIEGHTSSFQILWNEPPAVDWGIVFYSVEFS THSKFLIIEQQSLPIFTVEGLEPYTLFNLSVTPYTYWGKGQKTSLSFRAPE"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "name": {
+                        "valueOf_": "Protein kinase C-binding protein NELL2"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 10090,
+                            "valueOf_": "Mus musculus"
+                        }
+                    },
+                    "sequence": {
+                        "string": "LGVDPSLQIDVLTELELGESTTGVRQVPGLHNGTKAFLFQDTPRSIKASTATAEQFFQKLRNKHEFTILVTLKQTHLNSG VILSIHHLDHRYLELESSGHRNEVRLHYRSGSHRPHTEVFPYILADDKWHKLSLAISASHLILHIDCNKIYERVVEKPST DLPLGTTFWLGQRNNAHGYFKGIMQDVQLLVMPQGFIAQCPDLNRTCPTCNDFHGLVQKIMELQDILAKTSAKLSRAEQR MNRLDQCYCERTCTMKGTTYREFESWIDGCKNCTCLNGTIQCETLICPNPDCPLKSALAYVDGKCCKECKSICQFQGRTY FEGERNTVYSSSGVCVLYECKDQTMKLVESSGCPALDCPESHQITLSHSCCKVCKGYDFCSERHNCMENSICRNLNDRAV CSCRDGFRALREDNAYCEDIDECAEGRHYCRENTMCVNTPGSFMCICKTGYIRIDDYSCTEHDECITNQHNCDENALCFN TVGGHNCVCKPGYTGNGTTCKAFCKDGCRNGGACIAANVCACPQGFTGPSCETDIDECSDGFVQCDSRANCINLPGWYHC ECRDGYHDNGMFSPSGESCEDIDECGTGRHSCANDTICFNLDGGYDCRCPHGKNCTGDCIHDGKVKHNGQIWVLENDRCS VCSCQNGFVMCRRMVCDCENPTVDLFCCPECDPRLSSQCLHQNGETLYNSGDTWVQNCQQCRCLQGEVDCWPLPCPDVEC EFSILPENECCPRCVTDPCQADTIRNDITKTCLDEMNVVRFTGSSWIKHGTECTLCQCKNGHICCSVDPQCLQELGGGGS IEGRSLDHHHHHHHHHH"
+                    }
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Receptor tyrosine kinase ROS1 in complex with NELL2"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Receptor tyrosine kinase ROS1 in complex with NELL2"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 10090,
+                                "valueOf_": "Mus musculus"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 136864,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.21"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOQUANTUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

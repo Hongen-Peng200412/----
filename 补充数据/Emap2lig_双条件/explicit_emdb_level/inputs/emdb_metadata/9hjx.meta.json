@@ -1,0 +1,819 @@
+{
+    "_id": "67569a77c7dd9684977354df",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Trasnea PI"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Sazanov L"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-06-17T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "101020697",
+                    "country": "European Union",
+                    "funding_body": "European Research Council (ERC)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2024-12-02T00:00:00",
+            "header_release": "2026-06-17T00:00:00",
+            "map_release": "2026-06-17T00:00:00",
+            "update": "2026-06-17T00:00:00"
+        },
+        "keywords": "Transhydrogenase, complex, MEMBRANE PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-06-17T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Structure of the Thermus termophillus transhydrogenase"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0009-0002-2562-2124",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Trasnea PI"
+                        },
+                        {
+                            "ORCID": "0000-0002-0977-7989",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Sazanov L"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Structure of the Thermus termophillus transhydrogenase"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-52228",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Structure of the Thermus termophillus transhydrogenase",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9hjx",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-52228",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "295.68"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "295.68"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "295.68"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 352,
+                        "row": 352,
+                        "sec": 352
+                    },
+                    "file": "emd_52228_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-52228::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        }
+                    },
+                    "size_kbytes": 174457,
+                    "spacing": {
+                        "x": 352,
+                        "y": 352,
+                        "z": 352
+                    },
+                    "statistics": {
+                        "average": 1.410333e-05,
+                        "maximum": 0.047408354,
+                        "minimum": -0.020253383,
+                        "std": 0.0018931632
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "295.68"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "295.68"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "295.68"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 352,
+                        "row": 352,
+                        "sec": 352
+                    },
+                    "file": "emd_52228_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-52228::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        }
+                    },
+                    "size_kbytes": 174457,
+                    "spacing": {
+                        "x": 352,
+                        "y": 352,
+                        "z": 352
+                    },
+                    "statistics": {
+                        "average": 8.000486e-06,
+                        "maximum": 0.048321784,
+                        "minimum": -0.017616685,
+                        "std": 0.0018887259
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "initial_model": [
+                        {
+                            "access_code": "4O9U",
+                            "chain": {
+                                "initial_model_type": "other",
+                                "source_name": "Other"
+                            },
+                            "details": "4O9U",
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "Full cryo-EM map of the nicotinamide transhydrogenase from Thermus termophilus. The map was obtained after using the phenix-sharpened tool on the post-processing the global refinement.",
+        "axis_order": {
+            "fast": "Z",
+            "medium": "Y",
+            "slow": "X"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "134.4"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "125.159996"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "124.32"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 2.2,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 148,
+            "row": 149,
+            "sec": 160
+        },
+        "file": "emd_52228.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-52228::::",
+        "origin": {
+            "col": 107,
+            "row": 110,
+            "sec": 80
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.84"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.84"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.84"
+            }
+        },
+        "size_kbytes": 14114,
+        "spacing": {
+            "x": 160,
+            "y": 149,
+            "z": 148
+        },
+        "statistics": {
+            "average": -1.5253e-11,
+            "maximum": 11.093514,
+            "minimum": -4.5909185,
+            "std": 1.0
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "ec_number": [
+                        "7.1.1.1"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.009909745999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "proton-translocating NAD(P)(+) transhydrogenase"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 274,
+                            "valueOf_": "Thermus thermophilus"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 274,
+                            "valueOf_": "Thermus thermophilus"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A510HPH9"
+                            }
+                        ],
+                        "string": "MEFGFWSALYIFVLTAFLGYELITRVPVILHTPLMSGSNFIHGVVVVGAMVVLGHAETGLEKLIGFLGVILGAANAAGGY AVTVRMLEMFER"
+                    }
+                },
+                {
+                    "details": "The region from 264PHE to 273VAL was deleted from the model because of no density present in the map",
+                    "ec_number": [
+                        "7.1.1.1"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.047371906"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "NAD(P) transhydrogenase subunit beta"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 274,
+                            "valueOf_": "Thermus thermophilus"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 274,
+                            "valueOf_": "Thermus thermophilus"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A7R7TBV0"
+                            }
+                        ],
+                        "string": "MDLIQAAYFVVAILFIVGLKRMAHPTTAKSGIVWAGWGMVLAVLATFFWPGMGNFALILLALLLGSVVAWWAAVRVAMTD MPQMVAIYNGMGGGAAATIAAVELLKGAFENTGLMALAILGGLIGSVAFTGSLIAFAKLQGIMKSRPILFPGQKAVNALV LALTVVIGLSLLWNDATASIVLFFLLALLFGVLMTLPIGGGDMPVAISFYNAFTGMAVGFEGFAVGNPALMVAGTLVGAA GTLLTVLMARAMNRSVWSVLVGGFGVEQEAGEVKGSLKPIDVEDAAVMLAYAGKVVFVPGYGMALSQAQHKLKELADLLE ARGVEVKFAIHPVAGRMPGHMNVLLAEAGVDYDKLKDLEEINPEFPTVDVAVVIGANDVVNPAARRPGSPLYGMPILDVD KAKNVIVIKRGQGKGFAGVENELFYAENTRMLYGDAQKVLTELIQALKRL"
+                    }
+                },
+                {
+                    "details": "The region from SER219 to LEU230 and ALA 256 to ARG262 was deleted from the model because of no density present in the map",
+                    "ec_number": [
+                        "7.1.1.1"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.039894332"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "proton-translocating NAD(P)(+) transhydrogenase"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 274,
+                            "valueOf_": "Thermus thermophilus"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 274,
+                            "valueOf_": "Thermus thermophilus"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A7R7TBU1"
+                            }
+                        ],
+                        "string": "MVTVAVPKERAPGERRVALVPEVVARLVKGGARVRVERGAGEGAYHPDEAYQEAGAEVVERGELLKGAHLLFTVQPPPED LIQALEPGAIVVGFVQPHKNLELVRALQAKKATVIAMELIPRITRAQSMDALSSQATVAGYLAAIHAARLSPRFFPMLTT AAGTIRPAKVMVMGVGVAGLMAIATAKRLGAQVFAYDVRKAALEQALSLGAKPIELPISAEGEGGYARELTEEEKRIQHE ALRDHVAGMDVLITTAQVPGRRAPILLTEDMVERLKPGTVVVDLAAESGGNCVLTKPGEVVEVRGVRVYGPLNLPSELSV HASEMYAKNLYNLSSLLIEKGAFAPKWEDEIVRAALLMKEGEVLHGPTKALLG"
+                    }
+                },
+                {
+                    "formula": "NAP",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0007434049999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "NADP NICOTINAMIDE-ADENINE-DINUCLEOTIDE PHOSPHATE"
+                    },
+                    "number_of_copies": "1"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "The entitre structure of transhydrogenase from Thermus termophillus, with the NADP ligand in the DIII subunit"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.21"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "The entitre structure of transhydrogenase from Thermus termophillus, with the NADP ligand in the DIII subunit"
+                    },
+                    "natural_source": [
+                        {
+                            "cellular_location": "Membrane",
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 274,
+                                "valueOf_": "Thermus thermophilus"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "ANGULAR RECONSTITUTION"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 114749,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.39"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF"
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "ANGULAR RECONSTITUTION"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "pdb_model": {
+                                    "pdb_id": "4O9U"
+                                },
+                                "type_of_model": "PDB ENTRY"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "89.6"
+                                        },
+                                        "average_exposure_time": {
+                                            "units": "s",
+                                            "valueOf_": "2.4"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_grids_imaged": 1,
+                                        "number_real_images": 4772
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.5"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.0"
+                            },
+                            "nominal_magnification": 105000.0
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "150.0"
+                                        },
+                                        "formula": "NaCl",
+                                        "instance_type": "component",
+                                        "name": "sodium chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "formula": "HEPES",
+                                        "instance_type": "component",
+                                        "name": "HEPES"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "%",
+                                            "valueOf_": "0.02"
+                                        },
+                                        "formula": "DDM",
+                                        "instance_type": "component",
+                                        "name": "N-Dodecyl-beta-D-maltoside"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "%",
+                                            "valueOf_": "0.1"
+                                        },
+                                        "formula": "CHAPS",
+                                        "instance_type": "component",
+                                        "name": "CHAPS"
+                                    }
+                                ],
+                                "details": "150mM NaCl, 50mM HEPES, 0.02% DDM and CHAPS was added right before vitrification",
+                                "ph": 7.2
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "0.2"
+                            },
+                            "grid": {
+                                "material": "COPPER",
+                                "mesh": 300,
+                                "model": "Quantifoil R0.6/1",
+                                "pretreatment": {
+                                    "atmosphere": "OTHER",
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "10"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "CARBON",
+                                        "film_thickness": {
+                                            "valueOf_": "0.09200000000000001"
+                                        },
+                                        "film_topology": "CONTINUOUS",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "details": "Vitrification carried out. ",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

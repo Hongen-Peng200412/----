@@ -1,0 +1,58 @@
+{
+  "source_repository": "C:\\Users\\15919\\Desktop\\Emap2lig",
+  "source_document_endpoint": "e14dd7ca31226bf0ac371eb0a6adf468b4ef2fbc",
+  "executed_source_commit": "37b0d9e7ad2a1b18fa096d91f154619085cee907",
+  "metadata_files": 1428,
+  "metadata_bytes": 21380471,
+  "source_code_files": 66,
+  "additional_copies": [
+    {
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\显式level实验\\证据\\metadata_inventory.json",
+      "destination": "explicit_emdb_level/provenance/metadata_inventory.json",
+      "size": 260365,
+      "sha256": "1e8db703944529b433a893415ce9b9c4491fc7d8d0bbab1fc1fb8c387866e674"
+    },
+    {
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\显式level实验\\证据\\preflight.json",
+      "destination": "explicit_emdb_level/provenance/preflight.json",
+      "size": 1914,
+      "sha256": "6c5d99f3f81bed41bcdca2aa1d4bf40b588a9e5aa505d66021e7c500f1bc95c9"
+    },
+    {
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\显式level实验\\证据\\deployment_files.json",
+      "destination": "explicit_emdb_level/provenance/deployment_files.json",
+      "size": 7984,
+      "sha256": "f163304dac10c5191034e594d7e342d2174c6f9685c8f30f5a25b958bda4652f"
+    },
+    {
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\显式level实验\\证据\\git_endpoints.json",
+      "destination": "explicit_emdb_level/provenance/git_endpoints.json",
+      "size": 2610,
+      "sha256": "ad518dd90ea16ab96b03b665a2ecd3aa83f02a9f05744a6d55bd0a7af28072ad"
+    },
+    {
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\显式level实验\\README.md",
+      "destination": "explicit_emdb_level/provenance/source_records/README.md",
+      "size": 22596,
+      "sha256": "ebf0cf8f8b8979df5d59d5c8ef83e2f680cad038dd7f7ce7b1bd8e92f47024e5"
+    },
+    {
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\显式level实验\\日志\\总日志.md",
+      "destination": "explicit_emdb_level/provenance/source_records/日志/总日志.md",
+      "size": 7710,
+      "sha256": "5d9696730d5edbeb4c8ac5d55217d68462de859b7655036da0d59b9350aa9a7d"
+    },
+    {
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\显式level实验\\日志\\Find.md",
+      "destination": "explicit_emdb_level/provenance/source_records/日志/Find.md",
+      "size": 6468,
+      "sha256": "9f2e18ecdd0e4b15affbf03638ba4791c3c7e1931988a2a365810445ecc7bb0f"
+    },
+    {
+      "source": "C:\\Users\\15919\\Desktop\\Emap2lig\\显式level实验\\日志\\Build.md",
+      "destination": "explicit_emdb_level/provenance/source_records/日志/Build.md",
+      "size": 6598,
+      "sha256": "3f4f940754d1d305dacc654ee68740311142af1b6263426646cb88186384b5c7"
+    }
+  ]
+}

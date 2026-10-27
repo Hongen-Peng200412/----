@@ -1,0 +1,1640 @@
+{
+    "_id": "678d85c5c7dd968497ff10ac",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Yuan X"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Qian P"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Sobotka R"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Naschberger A"
+                }
+            ]
+        },
+        "composite_map": true,
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-03-18T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "Synergy Award 854126",
+                    "country": "European Union",
+                    "funding_body": "European Research Council (ERC)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-01-10T00:00:00",
+            "header_release": "2026-01-28T00:00:00",
+            "map_release": "2026-01-28T00:00:00",
+            "update": "2026-03-18T00:00:00"
+        },
+        "keywords": "Photosynthesis, Photosystem I, PSI-FCP complex, Chrome velia, Cryo-EM.",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-01-28T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-03-18T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Cryo-EM structure of the Chromera velia PSI supercomplex at 1.84 Angstrom resolution"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Yuan X"
+                        },
+                        {
+                            "ORCID": "0000-0003-3493-9780",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Lukes M"
+                        },
+                        {
+                            "ORCID": "0000-0002-5888-8546",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Qian P"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Charras Q"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Smrcka T"
+                        },
+                        {
+                            "ORCID": "0000-0002-1485-2197",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Man P"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Kovarova L"
+                        },
+                        {
+                            "ORCID": "0000-0001-8652-5323",
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Konik P"
+                        },
+                        {
+                            "ORCID": "0000-0001-8148-9490",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Heilmann E"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "Al-Amoudi A"
+                        },
+                        {
+                            "ORCID": "0000-0001-5909-3879",
+                            "instance_type": "author",
+                            "order": 11,
+                            "valueOf_": "Sobotka R"
+                        },
+                        {
+                            "ORCID": "0000-0002-7275-5459",
+                            "instance_type": "author",
+                            "order": 12,
+                            "valueOf_": "Naschberger A"
+                        }
+                    ],
+                    "country": "UK",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41423677"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1038/s41467-025-67637-0"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2041-1723"
+                        }
+                    ],
+                    "first_page": "913",
+                    "journal": "Nat Commun",
+                    "journal_abbreviation": "Nat Commun",
+                    "last_page": "913",
+                    "published": true,
+                    "title": "The cryo-EM structure of Photosystem I from Chromera velia with a bound superoxide dismutase heterodimer.",
+                    "volume": "17",
+                    "year": "2025"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "details": "FCPa_region focused",
+                    "emdb_id": "EMD-52514",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "details": "FCPe_region focused",
+                    "emdb_id": "EMD-52517",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "details": "SOD_region focused",
+                    "emdb_id": "EMD-52501",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "details": "Psa35_regoin focused",
+                    "emdb_id": "EMD-52507",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "details": "Consensus map",
+                    "emdb_id": "EMD-52508",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "consensus EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-52514",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "FCPa_region focused",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-52517",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "FCPe_region focused",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-52501",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "SOD_region focused",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-52507",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "Psa35_regoin focused",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-52508",
+                    "content_type": "consensus EM volume",
+                    "db_name": "EMDB",
+                    "details": "Consensus map",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-52518",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of PSI super complex from C. velia",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9hyu",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-52518",
+    "interpretation": {
+        "modelling_list": {
+            "modelling": [
+                {
+                    "initial_model": [
+                        {
+                            "chain": {
+                                "initial_model_type": "in silico model",
+                                "source_name": "SwissModel"
+                            },
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling",
+                    "overall_bvalue": 21.6,
+                    "refinement_protocol": "RIGID BODY FIT",
+                    "refinement_space": "REAL",
+                    "target_criteria": "CCC in ChimeraX"
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "364.5"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "364.5"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "364.5"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 8.0,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 500,
+            "row": 500,
+            "sec": 500
+        },
+        "file": "emd_52518.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-52518::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.729"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.729"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.729"
+            }
+        },
+        "size_kbytes": 500001,
+        "spacing": {
+            "x": 500,
+            "y": 500,
+            "z": 500
+        },
+        "statistics": {
+            "average": 0.015173205,
+            "maximum": 153.8028,
+            "minimum": -48.502728,
+            "std": 1.246312
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "ec_number": [
+                        "1.15.1.1"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.041899281000000003"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Superoxide dismutase [Fe]"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4HJZ8"
+                            }
+                        ],
+                        "string": "MRVHPVVAVSGLGVSAVSAFVFRGTPSAGIPRASPAATELSNYPERVAKEPGWAKVEYEIGGIGWSNPAIDEANENITKK MQANGETIFNLWAPWDQAQVRTQDAPSYRELMDVVDFTWQIPGTERWWYDLNIDDAVRMQPFPLERIRFDPRNLQPHRFP EQVFDHLAEYHAPYVRKLKALVEGTPLEKESLEELASRKTRNETIDNAVGMCYNTGLYWESLSSKSDWGGDQWAHGPLKE KIEKKYGSLKGFKDAVVTAGMALFGSGHLWIVSDKTGEVDIVTTSDASNPMREGKGYPLLVCDLWEHAFYEDFRNDKKKA LTSWLNLMNWQKGNKRLETYMEKMKLKDLAPTPAQEMKPKEPEPTPGPAA"
+                    }
+                },
+                {
+                    "ec_number": [
+                        "1.15.1.1"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.029931839999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Superoxide dismutase [Fe]"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4FB02"
+                            }
+                        ],
+                        "string": "MRFATLSLLGFFGASEAIRSRDLQAFVVSAPGASSPSRRSPATALDAVAVGSNVYEKMGVSTLVSGEEGPFKLKELPWFP TVLAPMMSYETISYHYGKHHALYVRNLNALAKEDSSLASKSLEDIFKGAEKGKKLFNQAAQVWNHDFFWNSMSPEGGDES FSETSKVKSAIISQWEDLGKFKEEWVKLALKHFGSGWIWLVQQKDGKLAIVDTHNAMNPISENLGTPLMTMDIWEHAYYV DHKSNKGLYTASFFEVCNWDFAEKNME"
+                    }
+                },
+                {
+                    "ec_number": [
+                        "1.97.1.12"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.044801406"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "photosystem I"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "D9IXI2"
+                            }
+                        ],
+                        "string": "MPLNGLLAVQLWFFGTVSILVAHVMFAFPPYPFLAQNYATQISLFTHHMWIGGFLLVGSGAHASLYLIREQGDLTRTNSL VALCLNYRDAIISHLNWLCIFLGLHSFGIYIHNDTLAALGRFDDQITNLPPLGAEWFQHAVTANFPINNGFKNHFNTQIL MNDKIVFSNLSFNTADFLVHHIHAFTIHVTVLILVKGILFSRDSNLISDKYALGFRFPCDGPGRGGTCQVSGWDHIFLAL FWMYNSISVVIFHFFWKVQSDVWGYQSLDNGITHITNGNFTKSALTINGWLRDFLWAEAAQVVQSYSTPFFVYGLVFLGA HFIWAFSLMFLFSGRGYWQELIDYYTYAVYKWSQLPYLAFQALSIVQGRAVGLAHYLLGGIGTTWAFFLARALTL"
+                    }
+                },
+                {
+                    "ec_number": [
+                        "1.97.1.12"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.008961316"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Photosystem I iron-sulfur center"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "D9IXG0"
+                            }
+                        ],
+                        "string": "MHNVGIYTTCIGCTQCVRACPTEVLDMMTWDHCRAQQIACSDTLQDCIGCKRCETACPTDFLSIRVELGTENYYSMGLAY"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.030636371"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Photosystem I reaction center subunit II"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4H942"
+                            }
+                        ],
+                        "string": "MKFLAVAALICVGGARAFVAPSAPSNRQLATELRAGVPANPKPGSQFDLSVPDKDTLIRRRGGRGWLGKANNYGRFLISW THNKAEPFPCPTGGSSLMKPGANRLLLAKKEQGIALGRWLKRTLKIDNWKIFEIKPDGTVIFRSPKDGIYPEKKDPERVK RLTLLGSSYDNQERMARYSARKQFRSYEKYLKEQGEMATWQYILQRFRAESIQAFDADFGDMDVQEAQREGYAKMRAEKQ KEMGEGVISPAMIQMYMQILKDPYKGRRD"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.014430821"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Photosystem I reaction center subunit IV"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4H6U3"
+                            }
+                        ],
+                        "string": "MKLASALLLLCLSATCAFARRLSGFLSGLPSRQRDGARQATVLEAIQKGSKVLILKPESYFYGFTGDVVVVDKNPFYPYG VTVKFPSMQYKGLNTFNFKLDELQEVAPPAPKKKKKKAAVNPAAEPAEPAASS"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 7,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.035865297"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Photosystem I reaction center subunit III"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4GX86"
+                            }
+                        ],
+                        "string": "MRVSLCMAIGAASVASEASAFVAPPSRMGRGLLSSQLRAERPSKTEASEARSKEFDESIFDQAMLEDDDSAFDPMMDFAR LATPAAIAMAAATVAPQVAHAADATLVPCAESKRFQTIMKAEIKANEKRVKENPKGSFFRDQFIAELKRSKIRKWRFEHS SLMCSKEDGKPRVDVTNPNQIFGGFFAFVYVLGAIGWSAKTYNRGIKAAYGPDGGWKEVILDWPFVLQVFYHSLGWPGRT WKELLDPEKEKDHLLVPTGKFDGLPTAIQAIGIGGVGLTIWLIITSFMMIGALYFFPDVLALDLLKYPVVNLSVPGVDIP GLNDIP"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 8,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.022553562"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Photosystem I protein (PsaI)"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4HFQ7"
+                            }
+                        ],
+                        "string": "MQVVSVFAAVALAASSASAFVPSTSRSSGLLSKQRKTELNALEDAFFAPVEELMNAAPASVDFSDAISSSSEVLASIAAD SKLAVDVQGELVPAMIAAAEKLAANPGAKAGEILDPNSKLVQLRQVGGLVTGRHGVTNFDNKVPFLLLGAAPALFHTFLF FGLATVFVFKQENETPFRRQYGGTGYPRLDPYTMHRGDKPRERDWNDPITM"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 9,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.029700710999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Photosystem I reaction center  subunit V"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4GX71"
+                            }
+                        ],
+                        "string": "MKVALGFLASFVCGSAARDTGFLSPAQRLASSGSRRKASSPVDPVSSLFDASTSEPGKVSKFAGWSPTLSEMPSAWEGYS VLRDSDASRTLLTKIPVYRRGLPPSWAGLEVGMAHGYLFFGPFAFLGPLRDSEEFWALAGLAASSGFDMILTIGLTVYGA YQDKWKLCNPCDKWITRNYSGGFDVKPSPDLTPIGNALVSGPGNNGFFLSDPRSPNSMYEDFQKFTTMFLIGALGGSLFA YYLCATTHAFDPVGGIRTFLGVPAITGYEPPPQAIIP"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 10,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.022135116999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Photosystem I protein (PsaM)"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "MKFLSASLLGCFVTSSAFVLQAPRSLRPASPVRRLENPRPVETVTNAFDFSQIDTGVLNVSADPDLYQSIRLFTLIAVFA ITLGSVARRFSPSINDYQVDQDYIELKRKNYFPSEDEFLDNRKDFESQTKKTTEMFEACKTWGAYAALRNSGAGKKKAQE FLGIKSDAELKAIENKAELMKWYGSYKSNERKVAW"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 11,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.022594372999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Photosystem I protein (PsaR)"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4FDJ8"
+                            }
+                        ],
+                        "string": "MPSIRLVATAVAVGMGVTSAFQQTPIRALKQRSEASTTLNDVKEMDLDSTWTYVKNRNIKPITEAKKLDILRTQILPVGT EQHAEAVHEILRNADLPMGVAQTNAVKRAPANVVLAGAVILFLIGFLGHWMNVINVPRGLPLLFGWPRVSWLAISSLMLP AYFLHLEGYNTIQRDAMYEELAKYGIKREDPFLEPPRELIKP"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 12,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.032446844"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Plastid light harvesting protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4ID45"
+                            }
+                        ],
+                        "string": "MVSLTRAGLAVGCVAVATVSAGRPAFLSSAPLQAMRARENHTARDGKIQLTPEDAGVVRKHGITVAPGFPLIGDSEPFGF FDPLGLSAGKNPEQVAKLREAELKHCRIAMLAVLGWFSVVNNFYFFYGGELGTDPIEAWQKVNLAGKAQILLFIGLLEWF TIAIKEYQKTTPGRLCIPGDYFGAYGWLVDETQTRYGENLDSFNKYDWEVEEFGRGNALQFLTVDEWVDYQTQELNNGRL AMVAIAGLFIQDVLFKQPGDLIFKPYFDTTVQFFNDLISDTHTAEGMINAGLL"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 13,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.026235361"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Plastid light harvesting protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4FL36"
+                            }
+                        ],
+                        "string": "MKRLAFLAFASGVTAFQPLKPSSAPTSARDAVTSLRQEVVQEVRMSQALPFLPQPQDLNGEMAGDVGFDPLGFSSYYRDP QNPSWFKLEYFREAEVKHGRIAMLAALGALHVELLGPVPIDPFIKITEKSAYDAFCHLLVTNPVYFWATLIALHAIEVTS LGATAFMMTNPDAQREPGDYNLRFFGYDKLSPEKKKDLQTKEIKNGRLAMIAMIGMLHMNRVTGLGAIELLGKALNG"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 14,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.024313141"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Plastid light harvesting protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4HNB1"
+                            }
+                        ],
+                        "string": "MKSILCVAALAVTGTLPVSEAFTPLLATKAPSRAEATSRKAVADMVGVDTDSGNTVWDPLDIASKCEFNRKKGRDNVIFS TWPHLNWMREAELKHGRICMLAVLGVLFTKLGIKIGGFISNSSTDWWENLGRVWAEHPEVIAFIIMAGGFIDMATYDTRM WSGNNKREAGNLGFDPLNLMAKDDNFALKELKHGRLAMVAMAAFAAERGIDTSVPLLHLAGF"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 15,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.024079018"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Plastid light harvesting protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4HMN0"
+                            }
+                        ],
+                        "string": "MKRVAAVTGVIALAGCANAFVPPTSPVVSTRTASEGRTVARMEKSESLPFLRRPEGEIFKEKWAGDKGFDPLFLSEYYDL PTMKIFREAELKHGRVAMMAFLGLLLQNILRLPGAPSEANPVYALFKTNPQWVALLFITVGILENIGYKGEMDSIIWFKG KLKDRKPGDMGAEKLDFLNLAQKENAEAQEVEHCRAAMVGTIGLLLQYIASGREQPF"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 16,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.031759348"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Chlorophyll a-b binding protein, chloroplastic"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4I0G6"
+                            }
+                        ],
+                        "string": "MRVLAGLLCASASAVAVNAYIDYGGGVDYRPDERKALQRRTLIDRDLYKERKQVVIGKIYDLNDLPGASNENQFFIGSEA NKPWDPLGLTRKAREREGGVFNYWLEPIQRDLKTAYKTDNDVGFGLEYVDYVFDPLWWFRESELVHCRVCMLAFAGWMAT ELGFRLPYEAFQGVSALEAHDALVKSGHMQLMLHFIVFLEFLRHRRFLAMRKGDLGTASNIEPGDYGFDPLGFKQKPEYR KYQTNELKNGRLAMIAMSAILTQAALDPTSKFPNYLF"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 17,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.045973148"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Photosystem I protein (PsaV)"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A0G4HRT4"
+                            }
+                        ],
+                        "string": "MVRGGLSTVVSAALVGCAVAFTGTPLKPPSSDTSLSAVKKSSKKFGDLSQFTGDVKGDAEAYRQILYATTGDPKYKKAKK SVGLIKWMKQMDPNEFKLKFIVVPGLLTVAAAGAFVALSNLDLPTLPSTPSPEDAGKFFLTIPAVGTIRAKPLLGDSGAF LPGSEPAPKITSKAEQVAIQKKIKAKITPAAKEAAKKLSLPKPGAKMSGGFVQRFIDASPERKDPGLDLIKDSVSDASKF SAPTQTLNVAGSIDSLLAKANLPSVDLTFSPAVEPAYALWEGGGKSTDPAYPGRAGFDEFKKEQMKIAAKTPTMTYFGES IKGDPRPGLKTYGMPQEYIDRMRKNTQWMKDRGVVFYPGYKEGSINREWTKLIKRSPTVEEQKKFISQHPEYLYNVQIPG MDDAKAIQKIQPKMEPKVWRRVGP"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 18,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.029865294999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Photosystem I P700 chlorophyll a apoprotein A1"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "QPLRLSNTAKMPMSTTWIWNLHSDSNESVGSILKDSQVRFEFVQIAQLIVIALWLVNNIRQIATFSNVVAWSINPLDTRP TLGNTQGFVGEAILNRTSDAFQGGGIQMTSGVVELLRGEGYLAPPDAASAALGLLMGLLIIITISGRKLNLTLNWSQGLI LTGGALVAWAGHLALVAIPAQSIWATLELDRSGVLLGWGQPQLISLVCFQNGITVLNGGAVALDTQVIHHLALALVILAP LALAPLIVRGSDGNDILLVENTDAHLPGLEESSDNKDIDY"
+                    }
+                },
+                {
+                    "ec_number": [
+                        "1.97.1.12"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 19,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.128908375"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Photosystem I protein (PsaB)"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 505693,
+                            "valueOf_": "Chromera velia"
+                        },
+                        "strain": "RM12"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "D9IXI4"
+                            }
+                        ],
+                        "string": "MWSLEQMRDEVYEFSKKGFRKTFNLVVSEPSHTAIMPKENSILTFRFTDGEEVPPSDGRLGEVSPHNGEEAKISRDHVQA NLRIEQTRVGSRYVLSVSPLSNPTGDKDSHHHQFWLPEELVKKITFFRDKEDSVGITIAAIPPKDYLESRLYSKTESEVP SPDGQEGEVPPQAEAKFRIIKTTEGPYSVLKAYPPNQVNPGTFRLPSFLLGNRDFQVGLNEKNEPFLDMFLYTPILVIWG SLGGKLPPQEWEVGGWSWDYVPQVLWPNSRTRFVLTNEGPNQLTILVGSQQGPKSEPTTKDPKSDPDKKKDGPWFRKSKG KDITVTSELSTTQRLWNRLSQVNDFPSTMPEGNVIVQIFRSHLVQLALILFWAAGILTLSTYQGNFTQWELLPTKIRPVA HQIWDPHFGDALSRIYSDFWSNKTVGEGASSTWSSLNYLTCGLFNWWFTIGFRSTEDLLNAALGCFLGGIFLLVLQILGP VSPEWPTPVSQWTSKSVLSLGFSRELWGEIPGFDVKEDANDSDMEANLSPNWSLSVQGLIWTNQLFLGSFKLFNLSSAYL SFALIAPLFKYFINLYFLKDLLYFAGCGSLSWSGHLIHIAIPESRGIHVRGDNLLTTLPHPNGIVPLLTGDLQAYAQAPD SSTHVFGTPVGSGTAMLTFSGNIYQNTSQIFPLTDVAHHHLAIGVLFLIIDGTLRILNLGNLGLLFSSANRYSAFQMWNS NTGEFIQSIIYMFSSSLHFRLAVNLSVFSTLSSLTAQHIYALPVYAYLNQDFLSQAALYVHHQYIAGLLIMGGFVHGTLF LIYDYQQNSIWDRIFFSAVFKFLDNKLNIILWLSWITFFLGFHTLGLYVHNDVVTAFGHSERQILLQPVFAQLIQTASGK NIYYPDFVKLFYPLNQRDPRFLNGWLETINNLKVSPFLNVGPGDFLVHHAIALGLHTTVLILIKGAIDSRGSRFMPDKQA FGYTFPCDGPGRGGTCDISAWDSFYLAMFWMLNTIGWVTFYWHWKHLALWGGTNRLFDESSVCLMGWLRDYLWLNSSKLI YGYTSETVSINSVWAWAFLLGHLVWATGFMFLISWRGYWQELIETLVWAHERTPIANLFQWADTPVALSILQARFVGLVH FTVGYILTYAAFLLASTPV"
+                    }
+                },
+                {
+                    "formula": "FE",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 22,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "5.5845e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "FE (III) ION"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "CLA",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 23,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000893489"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "CHLOROPHYLL A"
+                    },
+                    "number_of_copies": "114"
+                },
+                {
+                    "formula": "CL0",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 24,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000893489"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "CHLOROPHYLL A ISOMER"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "SF4",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 25,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.00035163999999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "IRON/SULFUR CLUSTER"
+                    },
+                    "number_of_copies": "3"
+                },
+                {
+                    "formula": "PQN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 26,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000450696"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "PHYLLOQUINONE"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "XAT",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 27,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.00060087"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "(3S,5R,6S,3'S,5'R,6'S)-5,6,5',6'-DIEPOXY-5,6,5',6'- TETRAHYDRO-BETA,BETA-CAROTENE-3,3'-DIOL"
+                    },
+                    "number_of_copies": "22"
+                },
+                {
+                    "formula": "LMG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 28,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0007871579999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "1,2-DISTEAROYL-MONOGALACTOSYL-DIGLYCERIDE"
+                    },
+                    "number_of_copies": "11"
+                },
+                {
+                    "formula": "DGD",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 29,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0009492989999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "DIGALACTOSYL DIACYL GLYCEROL (DGDG)"
+                    },
+                    "number_of_copies": "6"
+                },
+                {
+                    "formula": "LMT",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 30,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000510615"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "DODECYL-BETA-D-MALTOSIDE"
+                    },
+                    "number_of_copies": "71"
+                },
+                {
+                    "formula": "BCR",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 31,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000536873"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "BETA-CAROTENE"
+                    },
+                    "number_of_copies": "8"
+                },
+                {
+                    "formula": "AV0",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 32,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.001005188"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Lauryl Maltose Neopentyl Glycol"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "A1L6D",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 33,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0006589059999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "[(1~{R},5~{S})-3,3,5-trimethyl-5-oxidanyl-4-[(3~{E},5~{E},7~{E},9~{E},11~{E},13~{E},15~{E},17~{Z})-3,7,12,16-tetramethyl-17-oxidanyl-19-oxidanylidene-19-[(1~{R},4~{S})-1,2,2-trimethyl-4-oxidanyl-cyclopentyl]nonadeca-1,3,5,7,9,11,13,15,17-nonaenylidene]cyclohexyl] ethanoate"
+                    },
+                    "number_of_copies": "4"
+                },
+                {
+                    "formula": "SQD",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 34,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0007951159999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "1,2-DI-O-ACYL-3-O-[6-DEOXY-6-SULFO-ALPHA-D-GLUCOPYRANOSYL]-SN-GLYCEROL"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "A1I05",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 35,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.001025567"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "[(2~{R})-3-[(2~{S},3~{R},4~{R},5~{R},6~{R})-6-(hexadecanoyloxymethyl)-3,4,5-tris(oxidanyl)oxan-2-yl]oxy-2-octadecanoyloxy-propyl] octadecanoate"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 36,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "1558"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "PSI super complex from Chrome velia"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "details": "A complex containing PSI as a core with other components for example PsaA-, PsaB, Psa",
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 8
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 4
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 5
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 6
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 7
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 9
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 10
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 11
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 12
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 13
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 15
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 16
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 17
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 18
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 19
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.6544"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "PSI super complex from Chrome velia"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 505693,
+                                "valueOf_": "Chromera velia"
+                            },
+                            "strain": "RM12"
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "details": "CTF estimation were performed on the raw data in cryoSPARC's Live session",
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "details": "Motion correction and CTF estimation were performed on the raw data in cryoSPARC's Live session",
+                        "final_angle_assignment": {
+                            "type_": "ANGULAR RECONSTITUTION"
+                        },
+                        "final_reconstruction": {
+                            "algorithm": "BACK PROJECTION",
+                            "applied_symmetry": {
+                                "point_group": "C1"
+                            },
+                            "details": "The particles from both datasets were converted into star files using csparc2star from the PyEM suite for further processing in RELION v5.0.0b.",
+                            "number_images_used": 532822,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "1.84"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION"
+                                    }
+                                ]
+                            }
+                        },
+                        "final_three_d_classification": {
+                            "details": "For Dataset 1, two rounds of heterogeneous refinement were performed using five classes.\nDataset 2 underwent eight rounds of heterogeneous refinement using five classes.",
+                            "number_classes": 5
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "ANGULAR RECONSTITUTION"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "particle_selection": [
+                            {
+                                "details": "Blob picking was selected initially.",
+                                "instance_type": "particle_selection",
+                                "number_selected": 5807142
+                            }
+                        ],
+                        "startup_model": [
+                            {
+                                "details": "Data for Ab initio reconstruction were obtained from the dataset after two rounds  2d classification.",
+                                "insilico_model": "Ab initio reconstruction was used to create initial models for both datasets.",
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "alignment_procedure": {
+                                "coma_free": {}
+                            },
+                            "c2_aperture_diameter": {
+                                "units": "\u00b5m",
+                                "valueOf_": "50.0"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "40.0"
+                                        },
+                                        "average_exposure_time": {
+                                            "units": "s",
+                                            "valueOf_": "3.16"
+                                        },
+                                        "details": "Two dataset were collected and merged together during data processing.",
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_grids_imaged": 2,
+                                        "number_real_images": 32897
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.1"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            },
+                            "nominal_magnification": 165000.0,
+                            "specialist_optics": {
+                                "energy_filter": {
+                                    "name": "TFS Selectris X",
+                                    "slit_width": {
+                                        "units": "eV",
+                                        "valueOf_": "10"
+                                    }
+                                }
+                            },
+                            "specimen_holder_model": "FEI TITAN KRIOS AUTOGRID HOLDER",
+                            "temperature": {
+                                "temperature_max": {
+                                    "units": "K",
+                                    "valueOf_": "81.0"
+                                },
+                                "temperature_min": {
+                                    "units": "K",
+                                    "valueOf_": "79.0"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "20.0"
+                                        },
+                                        "formula": "C6H13NO4S",
+                                        "instance_type": "component",
+                                        "name": "MES"
+                                    }
+                                ],
+                                "details": "20 mM MES pH 6.5, 0.15M NaCl and 0.01% Lauryl maltose neopentyl glycol",
+                                "ph": 6.5
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "0.8"
+                            },
+                            "details": "Protein sample in buffer solution  of 20 mM MES pH 6.5, 0.15M NaCl and 0.01% Lauryl maltose neopentyl glycol",
+                            "grid": {
+                                "details": "GloQube Plus instrument (Quorum Technologies, UK) was used for glow discharge with the currency of 35  mA\n \nFor the sample from Gel, glow discharge time is 30, waiting time is 5 sec and blowing time is 3 seconds",
+                                "material": "COPPER",
+                                "mesh": 300,
+                                "model": "Quantifoil",
+                                "pretreatment": {
+                                    "atmosphere": "OTHER",
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "45"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                }
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "277"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "details": "Blotting time 2.5 sec.. "
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

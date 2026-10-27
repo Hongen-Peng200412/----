@@ -1,0 +1,691 @@
+{
+    "_id": "695ae9a9d785ce0905f081b0",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Ji S"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-01-14T00:00:00",
+            "processing_site": "PDBc"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "funding_body": "Not funded",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-12-31T00:00:00",
+            "header_release": "2026-01-14T00:00:00",
+            "map_release": "2026-01-14T00:00:00",
+            "update": "2026-01-14T00:00:00"
+        },
+        "keywords": "Cas12, Complex, CRISPR-Cas, nuclease, IMMUNE SYSTEM/RNA, IMMUNE SYSTEM-RNA complex",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-01-14T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBj",
+            "last_processing": "PDBc"
+        },
+        "title": "BaCas12a3 ternary complex"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Ji S"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "BaCas12a3 represents a new subtype of type V CRISPR effector"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-68050",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "BaCas12a3 ternary complex",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "21wj",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-68050",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "HalfB",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "261.66"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "261.66"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "261.66"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 588,
+                        "row": 588,
+                        "sec": 588
+                    },
+                    "file": "emd_68050_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-68050::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.445"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.445"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.445"
+                        }
+                    },
+                    "size_kbytes": 813190,
+                    "spacing": {
+                        "x": 588,
+                        "y": 588,
+                        "z": 588
+                    },
+                    "statistics": {
+                        "average": 8.425507e-05,
+                        "maximum": 0.22161682,
+                        "minimum": -0.15388495,
+                        "std": 0.014397545
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "HalfA",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "261.66"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "261.66"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "261.66"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 588,
+                        "row": 588,
+                        "sec": 588
+                    },
+                    "file": "emd_68050_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-68050::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.445"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.445"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.445"
+                        }
+                    },
+                    "size_kbytes": 813190,
+                    "spacing": {
+                        "x": 588,
+                        "y": 588,
+                        "z": 588
+                    },
+                    "statistics": {
+                        "average": 8.448638e-05,
+                        "maximum": 0.21878825,
+                        "minimum": -0.14185646,
+                        "std": 0.01441259
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "Ternary",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "261.66"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "261.66"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "261.66"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.02,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 588,
+            "row": 588,
+            "sec": 588
+        },
+        "file": "emd_68050.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-68050::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.445"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.445"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.445"
+            }
+        },
+        "size_kbytes": 813190,
+        "spacing": {
+            "x": 588,
+            "y": 588,
+            "z": 588
+        },
+        "statistics": {
+            "average": -3.139668e-05,
+            "maximum": 0.16111742,
+            "minimum": -0.055399287,
+            "std": 0.0037157936
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.138106094"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Nuclease"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 171549,
+                            "valueOf_": "Bacteroidales"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "string": "MDFIKTTKAVRFRLESNNENTLIQESINNLNSRKEFDLNTFVDDLDAFINDCNAFLFCSKNKGRREIFYVNPSLIVKNEW LKKYAKQDLAELKQNHTAQRVQYKIGDIDGLCYRIQDLIDDLDDIYVKLCDDASAELHERAKRAQTALLLKRLFANNALP CLVSLIDNTVDKNEKDNLSLKLKSLGKKLLAQLELGIQEYLPEQSSGVNIAKASFNYYTINKKPIDYDRKIEELSDKLVT TLDFWKRDGSCNFNKSLWKLIEVKSEGKTLYLGDSPLSDTDEYASLRQILKNILAEQKAEFSEKMQEKISYEDLTKSDLF LFNNISKEEYNGYLELTNQIEELATDINQEDNEYKLKKLRSDLMKLKKNRGSLINAADRRTKEKFKTYKSFADFYRKVSQ RHGKILAQLKGIEKERSESQLLQYWALMLEVNNQHKLVLIPKDKAQECKSRLESSNEQAQGTKLYWFESFTFRSLQKLCF GNLENGSNSFYPGIRKELQYKYSTEDRNGYPQFISGEFEFKGDEQKKIQFYKDVLNTKYAQSALSFPKEEVKRNIIEKDF ESLDDFVIALEQICYQRYVCVNSHMINALGSYFNAQILDITSLDLRNPLNSQEKETVYAHADKKHTEIWKKFWTADNEKD NFDIRLNPEITITYRKPKESRIAKYGVESDKYDANKKNRYLHDQLTLVTTISEHSNSPAKNLAFTTDAELKDMIERFNAE IKKEKIKFALGIDNGEVELSTLGVYLPGFKKDTKEEVFAELKKVDEYGFKVLEIRNLRYSENDYNGKERRIIQNPSYFMN KELYCRTFNKTAAEYDAMFAEVFEEKQLLTLDLTTAKVINGHIVTNGDVISLFNLWMRHAQRSIYEMNDHAIKETANDIV LKRSETLNDAEKRKFIDYLNGKNKKYEDLSEREKSEYVKWVYRIWGGDYSEYGKNKAFAEISKGQRVGDYLNNVLVAVTF TGKELTNVVDIFDIRNVFKFKEDFYSLKSETEIMEEVNKYNVKNTKSISNEELDLKLNQLKSSLVANVVGVIDFLYKQYK ERFGGDGIIVKEGFDSAKVESDREKFSGNIYRLLERKLYQKFQNYGLVPPVKNLMLMRDVDLNDTNEFMQLGNICFVGYE GTSQNCPVCEKGRLGHTEKCSDNCGFESKGIMHSNDGIAGYNIAKRGFNNFMRKAALEHHHHHH"
+                    }
+                },
+                {
+                    "details": "crRNA",
+                    "instance_type": "rna",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.013539866"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "RNA (43-MER)"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2030927,
+                            "valueOf_": "Bacteroidales bacterium"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "AAUUUCUACUAUUGUAGAUAAGUUUGUUCAAUUUCUUCUCUGU"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.013337133999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "RNA (27-MER)"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2030927,
+                            "valueOf_": "Bacteroidales bacterium"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "CAGGCAGCAACAGAGAAGAAAUUGAACAAACUUGAAAGUAA"
+                    }
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "ZN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "6.5409e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ZINC ION"
+                    },
+                    "number_of_copies": "1"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Ternay complex of crRNA and target RNA"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Ternay complex of crRNA and target RNA"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 171549,
+                                "valueOf_": "Bacteroidales"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "algorithm": "FOURIER SPACE",
+                            "number_images_used": 530902,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.87"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "Coot"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "200"
+                            },
+                            "c2_aperture_diameter": {
+                                "units": "\u00b5m",
+                                "valueOf_": "50.0"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "OTHER",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "40.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS GLACIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.6"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.6"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 8.0
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "0.4"
+                            },
+                            "grid": {
+                                "material": "COPPER",
+                                "model": "Quantifoil",
+                                "pretreatment": {
+                                    "type_": "GLOW DISCHARGE"
+                                }
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "cryogen_name": "NITROGEN"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

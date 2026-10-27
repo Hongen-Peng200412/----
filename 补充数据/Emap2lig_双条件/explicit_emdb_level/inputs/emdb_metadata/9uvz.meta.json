@@ -1,0 +1,859 @@
+{
+    "_id": "682a62fe6e5018e151c17cbc",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Kojima A"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Kawakami K"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Kobayashi K"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Matsui TE"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Uemoto K"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Fukuda M"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Kato HE"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-05-06T00:00:00",
+            "processing_site": "PDBj"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "JPMJAX222F",
+                    "country": "Japan",
+                    "funding_body": "Japan Science and Technology",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "JPMJPR24OF",
+                    "country": "Japan",
+                    "funding_body": "Japan Science and Technology",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "25K09525",
+                    "country": "Japan",
+                    "funding_body": "Japan Society for the Promotion of Science (JSPS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "24H02262",
+                    "country": "Japan",
+                    "funding_body": "Japan Society for the Promotion of Science (JSPS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "25H01338",
+                    "country": "Japan",
+                    "funding_body": "Japan Society for the Promotion of Science (JSPS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "JP24KJ0981",
+                    "country": "Japan",
+                    "funding_body": "Japan Society for the Promotion of Science (JSPS)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-05-11T00:00:00",
+            "header_release": "2026-05-06T00:00:00",
+            "map_release": "2026-05-06T00:00:00",
+            "update": "2026-05-06T00:00:00"
+        },
+        "keywords": "GPCR, LPA2, Lysophosphatidic acid receptor 2, Ki16425, ARK1, MEMBRANE PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-05-06T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBj",
+            "last_processing": "PDBj"
+        },
+        "title": "Cryo-EM structure of Lysophosphatidic acid receptor 2 (LPA2)-ARK1 with Ki16425"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Kojima A"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Kawakami K"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Kobayashi N"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Kobayashi K"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Matsui TE"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Uemoto K"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Gu Y"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Fukuda M"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Kato HE"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.64898/2026.04.02.716066"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2692-8205"
+                        }
+                    ],
+                    "journal": "bioRxiv",
+                    "journal_abbreviation": "bioRxiv",
+                    "published": true,
+                    "title": "A Rapid and Universal Pipeline for High-Resolution GPCR Structure Determination through <em>In Silico</em> Construct Optimization and de novo Protein Design",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-64542",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of Lysophosphatidic acid receptor 2 (LPA2)-ARK1 with Ki16425",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9uvz",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-64542",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "290.5"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "290.5"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "290.5"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 350,
+                        "row": 350,
+                        "sec": 350
+                    },
+                    "file": "emd_64542_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-64542::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        }
+                    },
+                    "size_kbytes": 171501,
+                    "spacing": {
+                        "x": 350,
+                        "y": 350,
+                        "z": 350
+                    },
+                    "statistics": {
+                        "average": 0.00010221169,
+                        "maximum": 1.7929125,
+                        "minimum": -1.1739001,
+                        "std": 0.032789845
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "290.5"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "290.5"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "290.5"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 350,
+                        "row": 350,
+                        "sec": 350
+                    },
+                    "file": "emd_64542_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-64542::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        }
+                    },
+                    "size_kbytes": 171501,
+                    "spacing": {
+                        "x": 350,
+                        "y": 350,
+                        "z": 350
+                    },
+                    "statistics": {
+                        "average": 0.0003656775,
+                        "maximum": 0.80887645,
+                        "minimum": -0.762183,
+                        "std": 0.083853394
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "290.5"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "290.5"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "290.5"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 350,
+                        "row": 350,
+                        "sec": 350
+                    },
+                    "file": "emd_64542_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-64542::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        }
+                    },
+                    "size_kbytes": 171501,
+                    "spacing": {
+                        "x": 350,
+                        "y": 350,
+                        "z": 350
+                    },
+                    "statistics": {
+                        "average": 0.00036984755,
+                        "maximum": 0.9354741,
+                        "minimum": -0.6831839,
+                        "std": 0.084144615
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_64542_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "290.5"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "290.5"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "290.5"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.11,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 350,
+            "row": 350,
+            "sec": 350
+        },
+        "file": "emd_64542.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-64542::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            }
+        },
+        "size_kbytes": 171501,
+        "spacing": {
+            "x": 350,
+            "y": 350,
+            "z": 350
+        },
+        "statistics": {
+            "average": 0.000102211685,
+            "maximum": 0.66848874,
+            "minimum": -0.34410805,
+            "std": 0.013146839
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "details": "Lysophosphatidic acid receptor 2 (LPA2)-ARK1",
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.08615840599999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Lysophosphatidic acid receptor 2,ARK1"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q9HBW0"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q9HBW0"
+                            }
+                        ],
+                        "string": "MKTIIALSYIFCLVFADYKDDDDAENLYFQGMGQCYYNETIGFFYNNSGKELSSHWRPKDVVVVALGLTVSVLVLLTNLL VIAAIASNRRFHQPIYYLLGNLAAADLFAGVAYLFLMFHTGPRTARLSLEGWFLRQGLLDTSLTASVATLLAIAVERHRS VMAVQLHSRLPRGRVVMLIVGVWVAALGLGLLPAHSWHCLCALDRCSRMAPLLSRSYLAVWALSSLLVFLLMVAVYTRIF FYVRRRVQRMLELRRLLREQGEKLLKLAEESEKKIKEAIEKGEDVVKVATEETHKLIKAIWESSFEVARLLGVPEEVLEK FRKELEKLLEESKKRIEEAIKKGEDVLKVVEEEAKKLREHSEKFLETARSLGVDPRPLERLARIVRVVEESLVRIVKAIK EGEDVEKVLLSESTLIKSSIILSSGLDPREAYEELLATYEETRDSELVKEFVELVRELLRLRGEPEELVRQLDKLIEAID RMEKAVAEGEDTLPLFLELAREILKALSDVARILAEREGLDVELIDEIVDTASRLLEEVIKKAKEGEDLDEEEEKVKKEL EELKKRTEERARALGQDVELVRTIVDSLSTLLSEIVEGIKRVKEGEDPLEVLARVVLTATLQILELVRTAERRRRERTLS LVKTVVIILGAFVVCWTPGQVVLLLDGLGCESCNVLAVEKYFLLLAEANSLVNAAVYSCRDAEMRRTFRRLLCCACLRQS TRESVHYTSSAQGGASTRIMLPENGHPLMDSTLLEVLFQ"
+                    }
+                },
+                {
+                    "formula": "A1L9P",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.00047495699999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "3-[[4-[4-[[(1~{R})-1-(2-chlorophenyl)ethoxy]carbonylamino]-3-methyl-1,2-oxazol-5-yl]phenyl]methylsulfanyl]propanoic acid"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "NA",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.299e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "SODIUM ION"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "4"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Cryo-EM structure of Lysophosphatidic acid receptor 2 (LPA2)-ARK1 with Ki16425"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Cryo-EM structure of Lysophosphatidic acid receptor 2 (LPA2)-ARK1 with Ki16425"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 9606,
+                                "valueOf_": "Homo sapiens"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "NONE"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "NOT APPLICABLE"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 151855,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.99"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF"
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "NOT APPLICABLE"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "insilico_model": "AlphaFold",
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "OTHER",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "45.7"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOQUANTUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.6"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "grid": {
+                                "material": "GOLD",
+                                "mesh": 300,
+                                "model": "Quantifoil R1.2/1.3",
+                                "pretreatment": {
+                                    "type_": "GLOW DISCHARGE"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "GOLD",
+                                        "film_topology": "HOLEY",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

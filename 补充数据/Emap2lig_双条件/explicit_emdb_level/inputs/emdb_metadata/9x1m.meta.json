@@ -1,0 +1,1153 @@
+{
+    "_id": "68e2f07f6e5018e151b3c5bb",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Uda K"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Numata T"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-29T00:00:00",
+            "processing_site": "PDBj"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "JP1922289",
+                    "country": "Japan",
+                    "funding_body": "Japan Society for the Promotion of Science (JSPS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "JP21K05394",
+                    "country": "Japan",
+                    "funding_body": "Japan Society for the Promotion of Science (JSPS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "20H02916",
+                    "country": "Japan",
+                    "funding_body": "Japan Society for the Promotion of Science (JSPS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "20K21281",
+                    "country": "Japan",
+                    "funding_body": "Japan Society for the Promotion of Science (JSPS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "24H00505",
+                    "country": "Japan",
+                    "funding_body": "Japan Society for the Promotion of Science (JSPS)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-10-02T00:00:00",
+            "header_release": "2026-02-04T00:00:00",
+            "map_release": "2026-02-04T00:00:00",
+            "update": "2026-04-29T00:00:00"
+        },
+        "keywords": "HerA, Helicase, NurA, Nuclease, DNA BINDING PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-04T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-29T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBj",
+            "last_processing": "PDBj"
+        },
+        "title": "The cryo-EM structure of HerA-NurA complex with AMPPNP and dsDNA from Thermococcus kodakarensis"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0009-0001-0719-3381",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Uda K"
+                        },
+                        {
+                            "ORCID": "0000-0003-0269-8062",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Yamagami T"
+                        },
+                        {
+                            "ORCID": "0000-0002-1833-1735",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Ishino S"
+                        },
+                        {
+                            "ORCID": "0000-0002-7265-2804",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Gerle C"
+                        },
+                        {
+                            "ORCID": "0000-0002-9014-9380",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Gopalasingam CC"
+                        },
+                        {
+                            "ORCID": "0000-0003-3951-8651",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Shigematsu H"
+                        },
+                        {
+                            "ORCID": "0000-0002-4244-8829",
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Numata T"
+                        },
+                        {
+                            "ORCID": "0000-0001-9419-0826",
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Ishino Y"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41641993"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1128/mbio.03523-25"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2150-7511"
+                        }
+                    ],
+                    "first_page": "e0352325",
+                    "journal": "Mbio",
+                    "journal_abbreviation": "Mbio",
+                    "last_page": "e0352325",
+                    "published": true,
+                    "title": "Substrate specificity and action mechanism of the HerA-NurA nuclease from the hyperthermophilic archaeon Thermococcus kodakarensis.",
+                    "volume": "17",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-66463",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "The cryo-EM structure of HerA-NurA complex with AMPPNP and dsDNA from Thermococcus kodakarensis",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9x1m",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-66463",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "annotation_details": "Sharpened map",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "391.03998"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "391.03998"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "391.03998"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 520,
+                        "row": 520,
+                        "sec": 520
+                    },
+                    "file": "emd_66463_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-66463::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.752"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.752"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.752"
+                        }
+                    },
+                    "size_kbytes": 562433,
+                    "spacing": {
+                        "x": 520,
+                        "y": 520,
+                        "z": 520
+                    },
+                    "statistics": {
+                        "average": -0.00012246509,
+                        "maximum": 1.0301813,
+                        "minimum": -0.5176705,
+                        "std": 0.01785963
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "Half map A",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "391.03998"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "391.03998"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "391.03998"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 520,
+                        "row": 520,
+                        "sec": 520
+                    },
+                    "file": "emd_66463_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-66463::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.752"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.752"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.752"
+                        }
+                    },
+                    "size_kbytes": 562433,
+                    "spacing": {
+                        "x": 520,
+                        "y": 520,
+                        "z": 520
+                    },
+                    "statistics": {
+                        "average": 4.4086068e-05,
+                        "maximum": 0.44180575,
+                        "minimum": -0.17568405,
+                        "std": 0.019261982
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "Half map B",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "391.03998"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "391.03998"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "391.03998"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 520,
+                        "row": 520,
+                        "sec": 520
+                    },
+                    "file": "emd_66463_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-66463::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.752"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.752"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.752"
+                        }
+                    },
+                    "size_kbytes": 562433,
+                    "spacing": {
+                        "x": 520,
+                        "y": 520,
+                        "z": 520
+                    },
+                    "statistics": {
+                        "average": 4.4247307e-05,
+                        "maximum": 0.4213555,
+                        "minimum": -0.15700948,
+                        "std": 0.019157805
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "initial_model": [
+                        {
+                            "access_code": "9x1l",
+                            "chain": {
+                                "initial_model_type": "experimental model",
+                                "source_name": "PDB"
+                            },
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling"
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_66463_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "Primary map",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "391.03998"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "391.03998"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "391.03998"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.05,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 520,
+            "row": 520,
+            "sec": 520
+        },
+        "file": "emd_66463.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-66463::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.752"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.752"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.752"
+            }
+        },
+        "size_kbytes": 562433,
+        "spacing": {
+            "x": 520,
+            "y": 520,
+            "z": 520
+        },
+        "statistics": {
+            "average": -0.00012246508,
+            "maximum": 0.32878426,
+            "minimum": -0.105808206,
+            "std": 0.0058828816
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "ec_number": [
+                        "3.6.4.12"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.06611811699999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "DNA helicase"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 311400,
+                            "valueOf_": "Thermococcus kodakarensis"
+                        }
+                    },
+                    "number_of_copies": "6",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q5JHP7"
+                            }
+                        ],
+                        "string": "MRIAEDINKPVGIVTGEATVSSFQFYAHPDTDLKFGDFVVARLCKEAKDQNCRWGENEEGVEWVIGTIRGLKNINWLLSE GKSTYTSLELDIREYGESIGENEALIVTVHVLGKVQLNGEKAEVVPTRVPVPNGNRVYLASSDLLRAIYYGGNGYIELGR LIIREDVPVYLNVNELVSRHFAILAVTGAGKSNTVSVMLWKLVEELGGTVIVLDPHGDYTKLSLPGTGREYVNLIEAKIR PEAMDGEELADLMEIQSNASIQRSYLLRAWDTVLHENQGIGGREAVKLVHDLLQRWASEGGGTYWDPHAGQYRDLGEIKS AEKETIMRLTMKVSRFLRNYGHLLSSEDIVALIEPGKVNVIDLGPLDEGQMKLVVAKFLEKVFETRMDYEKARKRLDYLR TAYSSNISAVSDEINELEEFLRGVEKNYPALAEPVMVIVEEAHIFAPHGEKGGAVRILGRIAREGRKFGVGLGLVSQRPS RLSEDVLSQTNTKIIMRIVNPNDQQYVVRASEQVSGELMSDIAGLGKGEAVIVGQAISLPALVKIYNFKALGGNYGGEDI GAVERWLERKRRELEEKEKEEMYEEEGIEVDF"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.051035672"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "5'-3' nuclease, encoded next to Rad50 and Mre11 homologs"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 311400,
+                            "valueOf_": "Thermococcus kodakarensis"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q5JHL5"
+                            }
+                        ],
+                        "string": "MYRLIDRRSVDRIKALLERGYREAESKLAEIEWKPLPKERKQTRVYAVDGSQGKQRLSGTIFYAVSSYAFGNGPAYRLVY TNAMLYNQGISDQIIRLQMETLENKLGYLSAKLGDVDYVMMDGTLTGSLTRPPVYPESVKGLTTIENALGKGKLKELVKK FVSLLDEHYKELEDGLREKGKINGNVILADEKLEEFEEFYKAMKGYKVRDFAGTTPRGIKISRATIDEYLKGRKSAEEIF QELLNEYGEERELSLDDARNAVHVVLGYLEYLYSLEKLLRLNLVYVAKSFYNRKLTQKLGIDIVDVPYLDAYLRKRFGEE IPGYFIITQGGKAISHKMPKVLRETFPLVEHYIEHGVPMAYVRTMKGGVIYLLQSNREVDDDLLSEILWHESNGYFRPLQ RAHEGVKIEKKAFEAELKALLNIIKAESPELRVFLKYGRSPLE"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.00621918"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "DNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2853804,
+                            "valueOf_": "DNA molecule"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)(DA)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.006038899"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "DNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2853804,
+                            "valueOf_": "DNA molecule"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)"
+                    }
+                },
+                {
+                    "formula": "ANP",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000506196"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "PHOSPHOAMINOPHOSPHONIC ACID-ADENYLATE ESTER"
+                    },
+                    "number_of_copies": "6"
+                },
+                {
+                    "formula": "MN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "5.4938e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MANGANESE (II) ION"
+                    },
+                    "number_of_copies": "8"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Thermococcus kodakarensis HerA-NurA complex"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 4
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.5"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Thermococcus kodakarensis HerA-NurA complex"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 311400,
+                                "valueOf_": "Thermococcus kodakarensis"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "applied_symmetry": {
+                                "point_group": "C1"
+                            },
+                            "number_images_used": 256392,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.3"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "final_three_d_classification": {
+                            "number_classes": 5,
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "OTHER"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "c2_aperture_diameter": {
+                                "units": "\u00b5m",
+                                "valueOf_": "70.0"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "average_exposure_time": {
+                                            "units": "s",
+                                            "valueOf_": "2.5"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_grids_imaged": 1,
+                                        "number_real_images": 5600
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "JEOL CRYO ARM 300",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.6"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.4000000000000001"
+                            },
+                            "nominal_magnification": 60000.0,
+                            "specialist_optics": {
+                                "energy_filter": {
+                                    "name": "In-column Omega Filter"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "100.0"
+                                        },
+                                        "instance_type": "component",
+                                        "name": "sodium chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "2.5"
+                                        },
+                                        "instance_type": "component",
+                                        "name": "manganese chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "1.0"
+                                        },
+                                        "instance_type": "component",
+                                        "name": "AMPPNP"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "%",
+                                            "valueOf_": "0.001"
+                                        },
+                                        "instance_type": "component",
+                                        "name": "LMNG"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "instance_type": "component",
+                                        "name": "Tris-HCl"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "uM",
+                                            "valueOf_": "12.0"
+                                        },
+                                        "instance_type": "component",
+                                        "name": "dsDNA"
+                                    }
+                                ],
+                                "ph": 7.0
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "4"
+                            },
+                            "grid": {
+                                "material": "COPPER",
+                                "mesh": 300,
+                                "model": "Quantifoil R1.2/1.3",
+                                "pretreatment": {
+                                    "atmosphere": "AIR",
+                                    "pressure": {
+                                        "units": "kPa",
+                                        "valueOf_": "0.015"
+                                    },
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "2"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "CARBON",
+                                        "film_topology": "HOLEY ARRAY",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "281"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

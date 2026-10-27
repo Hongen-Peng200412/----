@@ -1,0 +1,994 @@
+{
+    "_id": "687d6a626e5018e151adb492",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Koziej L"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Azuma Y"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-05-27T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "2020/37/B/NZ1/01187",
+                    "country": "Poland",
+                    "funding_body": "Polish National Science Centre",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "2018/31/D/NZ1/01102",
+                    "country": "Poland",
+                    "funding_body": "Polish National Science Centre",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "2019/35/B/NZ1/02044",
+                    "country": "Poland",
+                    "funding_body": "Polish National Science Centre",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "EMBO Installation Grant (YA)",
+                    "country": "European Union",
+                    "funding_body": "European Molecular Biology Organization (EMBO)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-07-15T00:00:00",
+            "header_release": "2026-05-27T00:00:00",
+            "map_release": "2026-05-27T00:00:00",
+            "update": "2026-05-27T00:00:00"
+        },
+        "keywords": "protein cage, protein engineering, self-assembly, geometry, pentamer, encapsulation, BIOSYNTHETIC PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-05-27T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Aquifex aeolicus lumazine synthase 12-pentamer cage"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0003-3885-3845",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Koziej L"
+                        },
+                        {
+                            "ORCID": "0000-0003-3968-1790",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Pankowski J"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Stefanska M"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Jankowski D"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Gawin A"
+                        },
+                        {
+                            "ORCID": "0000-0003-3943-3789",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Malolan VV"
+                        },
+                        {
+                            "ORCID": "0000-0002-0348-7323",
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Huiskonen JT"
+                        },
+                        {
+                            "ORCID": "0000-0002-6289-5319",
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Kosugi T"
+                        },
+                        {
+                            "ORCID": "0000-0003-3543-3159",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Azuma Y"
+                        }
+                    ],
+                    "country": "UK",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "42143052"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1038/s41467-026-73260-4"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2041-1723"
+                        }
+                    ],
+                    "journal": "Nat Commun",
+                    "journal_abbreviation": "Nat Commun",
+                    "published": true,
+                    "title": "A molecular basis for stoichiometric enzyme encapsulation in the vitamin B2 biosynthesis compartment.",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-54386",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Aquifex aeolicus lumazine synthase 12-pentamer cage",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9ryn",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-54386",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "annotation_details": "Combined half maps symmetrized and post-processed using sharpening B factor 52.3",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "314.5632"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "314.5632"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "314.5632"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 372,
+                        "row": 372,
+                        "sec": 372
+                    },
+                    "file": "emd_54386_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-54386::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8456"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8456"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8456"
+                        }
+                    },
+                    "size_kbytes": 205916,
+                    "spacing": {
+                        "x": 372,
+                        "y": 372,
+                        "z": 372
+                    },
+                    "statistics": {
+                        "average": -0.0011203409,
+                        "maximum": 1.8738179,
+                        "minimum": -0.8633124,
+                        "std": 0.054450843
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "314.5632"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "314.5632"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "314.5632"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 372,
+                        "row": 372,
+                        "sec": 372
+                    },
+                    "file": "emd_54386_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-54386::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8456"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8456"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8456"
+                        }
+                    },
+                    "size_kbytes": 205916,
+                    "spacing": {
+                        "x": 372,
+                        "y": 372,
+                        "z": 372
+                    },
+                    "statistics": {
+                        "average": 0.0024598888,
+                        "maximum": 0.28852722,
+                        "minimum": -0.05203563,
+                        "std": 0.016418824
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "314.5632"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "314.5632"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "314.5632"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 372,
+                        "row": 372,
+                        "sec": 372
+                    },
+                    "file": "emd_54386_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-54386::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8456"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8456"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.8456"
+                        }
+                    },
+                    "size_kbytes": 205916,
+                    "spacing": {
+                        "x": 372,
+                        "y": 372,
+                        "z": 372
+                    },
+                    "statistics": {
+                        "average": 0.002475935,
+                        "maximum": 0.28867733,
+                        "minimum": -0.049098745,
+                        "std": 0.016426565
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "details": "Initial fitting was done using ChimeraX.\nFlexible fitting was done using Isolde.",
+                    "initial_model": [
+                        {
+                            "access_code": "1HQK",
+                            "chain": {
+                                "initial_model_type": "experimental model",
+                                "source_name": "PDB"
+                            },
+                            "details": "lumazine synthase",
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling",
+                    "refinement_protocol": "RIGID BODY FIT",
+                    "refinement_space": "REAL"
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_54386_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "Map combined from 2 independent halves and not post-processed",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "314.5632"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "314.5632"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "314.5632"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.1,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 372,
+            "row": 372,
+            "sec": 372
+        },
+        "file": "emd_54386.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-54386::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.8456"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.8456"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.8456"
+            }
+        },
+        "size_kbytes": 205916,
+        "spacing": {
+            "x": 372,
+            "y": 372,
+            "z": 372
+        },
+        "statistics": {
+            "average": -0.0011203408,
+            "maximum": 0.28409085,
+            "minimum": -0.05404237,
+            "std": 0.016081342
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "ec_number": [
+                        "2.5.1.78"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.018126708999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "6,7-dimethyl-8-ribityllumazine synthase"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 224324,
+                            "valueOf_": "Aquifex aeolicus VF5"
+                        }
+                    },
+                    "number_of_copies": "60",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O66529"
+                            }
+                        ],
+                        "string": "MEIYEGKLTAEGLRFGIVASRFNHALVDRLVEGAIDCIVRHGGREEDITLVRVPGSWEIPVAAGELARKEDIDAVIAIGV LIRGATPHFDYIASEVSKGLANLSLELRKPITFGVITADTLEQAIERAGTKHGNKGWEAALSAIEMANLFKSLRLEGGWS HPQFEK"
+                    }
+                },
+                {
+                    "formula": "PO4",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "9.4971e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "PHOSPHATE ION"
+                    },
+                    "number_of_copies": "60"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "2190"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Aquifex aeolicus lumazine synthase 12-pentamer cage"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.09"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Aquifex aeolicus lumazine synthase 12-pentamer cage"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 224324,
+                                "valueOf_": "Aquifex aeolicus VF5"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.5.3"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "details": "Homogeneous Refinement",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.5.3"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "algorithm": "FOURIER SPACE",
+                            "applied_symmetry": {
+                                "point_group": "I"
+                            },
+                            "number_classes_used": 7,
+                            "number_images_used": 1459191,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "1.71"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.5.3"
+                                    }
+                                ]
+                            }
+                        },
+                        "final_three_d_classification": {
+                            "average_number_members_per_class": 181000.0,
+                            "details": "3D class with 8 A filter resolution and PCA",
+                            "number_classes": 10,
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.5.3"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "details": "Ab initio",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.5.3"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "particle_selection": [
+                            {
+                                "details": "3D template picking",
+                                "instance_type": "particle_selection",
+                                "number_selected": 1812894
+                            }
+                        ],
+                        "startup_model": [
+                            {
+                                "insilico_model": "Ab initio",
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "alignment_procedure": {
+                                "coma_free": {}
+                            },
+                            "c2_aperture_diameter": {
+                                "units": "\u00b5m",
+                                "valueOf_": "50.0"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "40.0"
+                                        },
+                                        "digitization_details": {
+                                            "dimensions": {
+                                                "height": {
+                                                    "units": "pixel",
+                                                    "valueOf_": "4092"
+                                                },
+                                                "width": {
+                                                    "units": "pixel",
+                                                    "valueOf_": "5760"
+                                                }
+                                            }
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOCONTINUUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_grids_imaged": 1,
+                                        "number_real_images": 4998
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.1"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.6"
+                            },
+                            "specialist_optics": {
+                                "energy_filter": {
+                                    "name": "GIF Bioquantum",
+                                    "slit_width": {
+                                        "units": "eV",
+                                        "valueOf_": "20"
+                                    }
+                                }
+                            },
+                            "specimen_holder_model": "FEI TITAN KRIOS AUTOGRID HOLDER"
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "formula": "NaPi",
+                                        "instance_type": "component",
+                                        "name": "sodium phosphate"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "200.0"
+                                        },
+                                        "formula": "NaCl",
+                                        "instance_type": "component",
+                                        "name": "sodium chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "5.0"
+                                        },
+                                        "formula": "EDTA",
+                                        "instance_type": "component",
+                                        "name": "ethylenediaminetetraacetic acid"
+                                    }
+                                ],
+                                "ph": 8.0
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "1"
+                            },
+                            "grid": {
+                                "material": "COPPER",
+                                "mesh": 200,
+                                "model": "Quantifoil R2/1",
+                                "pretreatment": {
+                                    "atmosphere": "AIR",
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "5"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "CARBON",
+                                        "film_topology": "HOLEY",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "277"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

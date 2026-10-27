@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "base": "16c31729798698feb7671ebeee9a262b82a4f191",
+  "implementation_branch": "codex/emap2lig-explicit-level",
+  "implementation_endpoint": "e14dd7ca31226bf0ac371eb0a6adf468b4ef2fbc",
+  "learning_branch": "Learn/emap2lig-explicit-level",
+  "learning_endpoint": "0e487e4230d8d75cdb5c2348a68f80ad805ee3ee",
+  "identical_tree": "5a3cc704298afe1c3e043ebe6ba168f3c7ad4cff",
+  "path_differences": [],
+  "python_ast_files_checked": 12,
+  "tested_source_commit": "37b0d9e7ad2a1b18fa096d91f154619085cee907",
+  "executed_source_files_unchanged": 66,
+  "frozen_metadata_blobs_verified": 1428,
+  "cumulative_preserved": "7a08a1246b6a19cf9be2ed7c882ab1da879c82eb",
+  "commits": [
+    {
+      "commit": "8afa30364888e568ce27f38b4dcd3f2fc51a56fd",
+      "message": "说明独立level条件、产物契约与已完成实验",
+      "changed_files": 8
+    },
+    {
+      "commit": "a3763e01157d5bd0e4889ded6e691f9345516ca9",
+      "message": "冻结输入与路径并保留元数据原始字节",
+      "changed_files": 6
+    },
+    {
+      "commit": "75e6ffffe4f2b4eb44f710d3b80b6aebecb91795",
+      "message": "继承原模型行为并显式运行level Find",
+      "changed_files": 4
+    },
+    {
+      "commit": "39b18cc7ae247fbb7e80240066ab0665dfd6d5b2",
+      "message": "按原坐标和匹配规则评价Find并选择Build输入",
+      "changed_files": 2
+    },
+    {
+      "commit": "f75b43c9df5991cc9e5f32be66ac7d20da17922c",
+      "message": "保持原联合采样、评分与未对齐RMSD",
+      "changed_files": 2
+    },
+    {
+      "commit": "c158dda801402c237dc37f7366641619d0ef1bd9",
+      "message": "接入原Slurm冻结发布与正式运行入口",
+      "changed_files": 7
+    },
+    {
+      "commit": "0dd22b321debb541ed93a5544da1a919f4dc5a05",
+      "message": "保存完整实验元数据与验收来源",
+      "changed_files": 1432
+    },
+    {
+      "commit": "0e487e4230d8d75cdb5c2348a68f80ad805ee3ee",
+      "message": "集中加入CPU等价与教程GPU门控",
+      "changed_files": 5
+    }
+  ],
+  "validation_basis": "Two endpoints are byte-identical, including all code, configuration and tests. The executed source files match the gate-passed and full-run source commit; no duplicate inference was required.",
+  "pushed": false,
+  "independent_layout_review": {
+    "passed": true,
+    "scope": "最终窄口径核对学习线建立、线性提交顺序、完整树与AST等价、冻结元数据原始字节、旧累计分支保留及干净工作区",
+    "finding_resolved": "学习线尚未建立、不能宣称等价",
+    "additional_inference_required": false
+  }
+}

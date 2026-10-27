@@ -1,0 +1,43 @@
+{
+  "protected_files": {
+    "/storage/penghongen/AdaLigand_stage1_inference/Emap2lig/official_find_li/held_out_test_0/evaluation/official_find_li.metrics.json": {
+      "sha256": "19a0bca8380ea2ea708cc0eb1b1867b8d7b4c2c94e6c810bdeed6446a361d100",
+      "size": 4449,
+      "mtime_ns": 1789552167000000000
+    },
+    "/storage/penghongen/Emap2lig/stage3_find_hit_build/find_hit_subset.jsonl": {
+      "sha256": "2e0b904eb4328af661e5287447e86ba835141c98cb4f6341220b9868200284f1",
+      "size": 127197,
+      "mtime_ns": 1790618758000000000
+    },
+    "/storage/penghongen/Emap2lig/stage3_find_hit_build/build_summary.json": {
+      "sha256": "467e9036c86affdfb503bd9582da6fdc4de108471c7668f66e41e8491d1f6bb7",
+      "size": 215,
+      "mtime_ns": 1790624721000000000
+    },
+    "/storage/penghongen/Emap2lig/stage3_find_hit_build/find_hit_summary.json": {
+      "sha256": "95d48cb43336f3036d0873c200c67ffb2dd8e1b8a99d6ed36fc57bbbd417f62f",
+      "size": 341,
+      "mtime_ns": 1790618758000000000
+    }
+  },
+  "weights": {
+    "/home/penghongen/.emap2lig/models/emap2lig-build-v0.0.1.safetensors": {
+      "size": 115242996,
+      "sha256": "e9af59c83fe5d5d5b63c4c6edb6cf2002d8e576b9c96490ab08d2fa14dcf968b"
+    },
+    "/home/penghongen/.emap2lig/models/emap2lig-find-v0.0.1.safetensors": {
+      "size": 19910376,
+      "sha256": "bf456ae2035a97376ae90a92eeb8923d70ac3b8024e8ec6560bfd8a501acecb8"
+    }
+  },
+  "evaluator_cli": [
+    "504:            str(test0_root / \"raw_find_outputs\"),",
+    "560:    parser.add_argument(\"--test0-json\", required=True)",
+    "561:    parser.add_argument(\"--test1-json\", required=True)",
+    "562:    parser.add_argument(\"--data-root\", required=True)",
+    "563:    parser.add_argument(\"--output-root\", required=True)",
+    "564:    parser.add_argument(\"--workers\", type=int, default=4)",
+    "565:    parser.add_argument(\"--chunk-depth\", type=int, default=8)"
+  ]
+}

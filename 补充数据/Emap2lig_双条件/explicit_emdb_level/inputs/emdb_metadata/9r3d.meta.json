@@ -1,0 +1,1207 @@
+{
+    "_id": "68214ac76e5018e151a80de2",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Zhang Z"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Kumar V"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Zhong J"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Dybkov O"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Kastner B"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Urlaub H"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Luhrmann R"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-05-13T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "country": "Germany",
+                    "funding_body": "German Research Foundation (DFG)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-05-04T00:00:00",
+            "header_release": "2026-05-13T00:00:00",
+            "map_release": "2026-05-13T00:00:00",
+            "update": "2026-05-13T00:00:00"
+        },
+        "keywords": "spliceosome, SPLICING",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-05-13T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Cryo-EM structure of the human pre-Bact-OTS complex (whole map)"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Zhang Z"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Kumar V"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Dybkov O"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Zhong J"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Kastner B"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Henning U"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Luehrmann R"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "cryo-EM structure of the human pre-Bact-OTS complex"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-53554",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of the human pre-Bact-OTS complex (whole map)",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9r3d",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-53554",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "540.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "540.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "540.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 400,
+                        "row": 400,
+                        "sec": 400
+                    },
+                    "file": "emd_53554_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-53554::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.35"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.35"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.35"
+                        }
+                    },
+                    "size_kbytes": 256001,
+                    "spacing": {
+                        "x": 400,
+                        "y": 400,
+                        "z": 400
+                    },
+                    "statistics": {
+                        "average": 0.00032425395,
+                        "maximum": 0.1664711,
+                        "minimum": -0.06867032,
+                        "std": 0.0061147367
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "540.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "540.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "540.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 400,
+                        "row": 400,
+                        "sec": 400
+                    },
+                    "file": "emd_53554_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-53554::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.35"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.35"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.35"
+                        }
+                    },
+                    "size_kbytes": 256001,
+                    "spacing": {
+                        "x": 400,
+                        "y": 400,
+                        "z": 400
+                    },
+                    "statistics": {
+                        "average": 0.00032336416,
+                        "maximum": 0.16690865,
+                        "minimum": -0.062340304,
+                        "std": 0.0061241616
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "540.0"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "540.0"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "540.0"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.055,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 400,
+            "row": 400,
+            "sec": 400
+        },
+        "file": "emd_53554.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-53554::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "1.35"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "1.35"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "1.35"
+            }
+        },
+        "size_kbytes": 256001,
+        "spacing": {
+            "x": 400,
+            "y": 400,
+            "z": 400
+        },
+        "statistics": {
+            "average": 0.00032380907,
+            "maximum": 0.35897565,
+            "minimum": -0.16490501,
+            "std": 0.012297201
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.024496414"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "U5 snRNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "ACUCUGGUUUCUCUUCAGAUCGCAUAAAUCUUUCGCCUUUUACUAAAGAUUUCCGUGGAGAGGAACAACUCUGAGUC"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.027447449"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "U6 snRNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "GUGCUCGCUUCGGCAGCACAUAUACUAAAAUUGGAACGAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACG CAAAA"
+                    }
+                },
+                {
+                    "ec_number": [
+                        "3.6.4.13"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.24482342199999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "U5 small nuclear ribonucleoprotein 200 kDa helicase"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O75643"
+                            }
+                        ],
+                        "string": "MADVTARSLQYEYKANSNLVLQADRSLIDRTRRDEPTGEVLSLVGKLEGTRMGDKAQRTKPQMQEERRAKRRKRDEDRHD INKMKGYTLLSEGIDEMVGIIYKPKTKETRETYEVLLSFIQAALGDQPRDILCGAADEVLAVLKNEKLRDKERRKEIDLL LGQTDDTRYHVLVNLGKKITDYGGDKEIQNMDDNIDETYGVNVQFESDEEEGDEDVYGEVREEASDDDMEGDEAVVRCTL SANLVASGELMSSKKKDLHPRDIDAFWLQRQLSRFYDDAIVSQKKADEVLEILKTASDDRECENQLVLLLGFNTFDFIKV LRQHRMMILYCTLLASAQSEAEKERIMGKMEADPELSKFLYQLHETEKEDLIREERSRRERVRQSRMDTDLETMDLDQGG EALAPRQVLDLEDLVFTQGSHFMANKRCQLPDGSFRRQRKGYEEVHVPALKPKPFGSEEQLLPVEKLPKYAQAGFEGFKT LNRIQSKLYRAALETDENLLLCAPTGAGKTNVALMCMLREIGKHINMDGTINVDDFKIIYIAPMRSLVQEMVGSFGKRLA TYGITVAELTGDHQLCKEEISATQIIVCTPEKWDIITRKGGERTYTQLVRLIILDEIHLLHDDRGPVLEALVARAIRNIE MTQEDVRLIGLSATLPNYEDVATFLRVDPAKGLFYFDNSFRPVPLEQTYVGITEKKAIKRFQIMNEIVYEKIMEHAGKNQ VLVFVHSRKETGKTARAIRDMCLEKDTLGLFLREGSASTEVLRTEAEQCKNLELKDLLPYGFAIHHAGMTRVDRTLVEDL FADKHIQVLVSTATLAWGVNLPAHTVIIKGTQVYSPEKGRWTELGALDILQMLGRAGRPQYDTKGEGILITSHGELQYYL SLLNQQLPIESQMVSKLPDMLNAEIVLGNVQNAKDAVNWLGYAYLYIRMLRSPTLYGISHDDLKGDPLLDQRRLDLVHTA ALMLDKNNLVKYDKKTGNFQVTELGRIASHYYITNDTVQTYNQLLKPTLSEIELFRVFSLSSEFKNITVREEEKLELQKL LERVPIPVKESIEEPSAKINVLLQAFISQLKLEGFALMADMVYVTQSAGRLMRAIFEIVLNRGWAQLTDKTLNLCKMIDK RMWQSMCPLRQFRKLPEEVVKKIEKKNFPFERLYDLNHNEIGELIRMPKMGKTIHKYVHLFPKLELSVHLQPITRSTLKV ELTITPDFQWDEKVHGSSEAFWILVEDVDSEVILHHEYFLLKAKYAQDEHLITFFVPVFEPLPPQYFIRVVSDRWLSCET QLPVSFRHLILPEKYPPPTELLDLQPLPVSALRNSAFESLYQDKFPFFNPIQTQVFNTVYNSDDNVFVGAPTGSGKTICA EFAILRMLLQSSEGRCVYITPMEALAEQVYMDWYEKFQDRLNKKVVLLTGETSTDLKLLGKGNIIISTPEKWDILSRRWK QRKNVQNINLFVVDEVHLIGGENGPVLEVICSRMRYISSQIERPIRIVALSSSLSNAKDVAHWLGCSATSTFNFHPNVRP VPLELHIQGFNISHTQTRLLSMAKPVYHAITKHSPKKPVIVFVPSRKQTRLTAIDILTTCAADIQRQRFLHCTEKDLIPY LEKLSDSTLKETLLNGVGYLHEGLSPMERRLVEQLFSSGAIQVVVASRSLCWGMNVAAHLVIIMDTQYYNGKIHAYVDYP IYDVLQMVGHANRPLQDDEGRCVIMCQGSKKDFFKKFLYEPLPVESHLDHCMHDHFNAEIVTKTIENKQDAVDYLTWTFL YRRMTQNPNYYNLQGISHRHLSDHLSELVEQTLSDLEQSKCISIEDEMDVAPLNLGMIAAYYYINYTTIELFSMSLNAKT KVRGLIEIISNAAEYENIPIRHHEDNLLRQLAQKVPHKLNNPKFNDPHVKTNLLLQAHLSRMQLSAELQSDTEEILSKAI RLIQACVDVLSSNGWLSPALAAMELAQMVTQAMWSKDSYLKQLPHFTSEHIKRCTDKGVESVFDIMEMEDEERNALLQLT DSQIADVARFCNRYPNIELSYEVVDKDSIRSGGPVVVLVQLEREEEVTGPVIAPLFPQKREEGWWVVIGDAKSNSLISIK RLTLQQKAKVKLDFVAPATGAHNYTLYFMSDAYMGCDQEYKFSVDVKEAETDSDSD"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.109560625"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "116 kDa U5 small nuclear ribonucleoprotein component"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q15029"
+                            }
+                        ],
+                        "string": "MDTDLYDEFGNYIGPELDSDEDDDELGRETKDLDEMDDDDDDDDVGDHDDDHPGMEVVLHEDKKYYPTAEEVYGPEVETI VQEEDTQPLTEPIIKPVKTKKFTLMEQTLPVTVYEMDFLADLMDNSELIRNVTLCGHLHHGKTCFVDCLIEQTHPEIRKR YDQDLCYTDILFTEQERGVGIKSTPVTVVLPDTKGKSYLFNIMDTPGHVNFSDEVTAGLRISDGVVLFIDAAEGVMLNTE RLIKHAVQERLAVTVCINKIDRLILELKLPPTDAYYKLRHIVDEVNGLISMYSTDENLILSPLLGNVCFSSSQYSICFTL GSFAKIYADTFGDINYQEFAKRLWGDIYFNPKTRKFTKKAPTSSSQRSFVEFILEPLYKILAQVVGDVDTSLPRTLDELG IHLTKEELKLNIRPLLRLVCKKFFGEFTGFVDMCVQHIPSPKVGAKPKIEHTYTGGVDSDLGEAMSDCDPDGPLMCHTTK MYSTDDGVQFHAFGRVLSGTIHAGQPVKVLGENYTLEDEEDSQICTVGRLWISVARYHIEVNRVPAGNWVLIEGVDQPIV KTATITEPRGNEEAQIFRPLKFNTTSVIKIAVEPVNPSELPKMLDGLRKVNKSYPSLTTKVEESGEHVILGTGELYLDCV MHDLRKMYSEIDIKVADPVVTFCETVVETSSLKCFAETPNKKNKITMIAEPLEKGLAEDIENEVVQITWNRKKLGEFFQT KYDWDLLAARSIWAFGPDATGPNILVDDTLPSEVDKALLGSVKDSIVQGFQWGTREGPLCDELIRNVKFKILDAVVAQEP LHRGGGQIIPTARRVVYSAFLMATPRLMEPYYFVEVQAPADCVSAVYTVLARRRGHVTQDAPIPGSPLYTIKAFIPAIDS FGFETDLRTHTQGQAFSLSVFHHWQIVPGDPLDKSIVIRPLEPQPAPHLAREFMIKTRRRKGLSEDVSISKFFDDPMLLE LAKQDVVLNYPM"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.037563862999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Pre-mRNA-splicing factor 38A"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q8NAV1"
+                            }
+                        ],
+                        "string": "MANRTVKDAHSIHGTNPQYLVEKIIRTRIYESKYWKEECFGLTAELVVDKAMELRFVGGVYGGNIKPTPFLCLTLKMLQI QPEKDIIVEFIKNEDFKYVRMLGALYMRLTGTAIDCYKYLEPLYNDYRKIKSQNRNGEFELMHVDEFIDELLHSERVCDI ILPRLQKRYVLEEAEQLEPRVSALEEDMDDVESSEEEEEEDEKLERVPSPDHRRRSYRDLDKPRRSPTLRYRRSRSRSPR RRSRSPKRRSPSPRRERHRSKSPRRHRSRSRDRRHRSRSKSPGHHRSHRHRSHSKSPERSKKSHKKSRRGNE"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.052050527"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Microfibrillar-associated protein 1"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P55081"
+                            }
+                        ],
+                        "string": "MSVPSALMKQPPIQSTAGAVPVRNEKGEISMEKVKVKRYVSGKRPDYAPMESSDEEDEEFQFIKKAKEQEAEPEEQEEDS SSDPRLRRLQNRISEDVEERLARHRKIVEPEVVGESDSEVEGDAWRMEREDSSEEEEEEIDDEEIERRRGMMRQRAQERK NEEMEVMEVEDEGRSGEESESESEYEEYTDSEDEMEPRLKPVFIRKKDRVTVQEREAEALKQKELEQEAKRMAEERRKYT LKIVEEETKKELEENKRSLAALDALNTDDENDEEEYEAWKVRELKRIKRDREDREALEKEKAEIERMRNLTEEERRAELR ANGKVITNKAVKGKYKFLQKYYHRGAFFMDEDEEVYKRDFSAPTLEDHFNKTILPKVMQVKNFGRSGRTKYTHLVDQDTT SFDSAWGQESAQNTKFFKQKAAGVRDVFERPSAKKRKTT"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 7,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.01703285"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Protein BUD31 homolog"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P41223"
+                            }
+                        ],
+                        "string": "MPKVKRSRKAPPDGWELIEPTLDELDQKMREAETEPHEGKRKVESLWPIFRIHHQKTRYIFDLFYKRKAISRELYEYCIK EGYADKNLIAKWKKQGYENLCCLRCIQTRDTNFGTNCICRVPKSKLEVGRIIECTHCGCRGCSG"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 8,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.124083"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Transcription elongation regulator 1"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O14776"
+                            }
+                        ],
+                        "string": "MAERGGDGGESERFNPGELRMAQQQALRFRGPAPPPNAVMRGPPPLMRPPPPFGMMRGPPPPPRPPFGRPPFDPNMPPMP PPGGIPPPMGPPHLQRPPFMPPPMSSMPPPPGMMFPPGMPPVTAPGTPALPPTEEIWVENKTPDGKVYYYNARTRESAWT KPDGVKVIQQSELTPMLAAQAQVQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQAQ AQVQAQVQAQVQAQAVGASTPTTSSPAPAVSTSTSSSTPSSTTSTTTTATSVAQTVSTPTTQDQTPSSAVSVATPTVSVS TPAPTATPVQTVPQPHPQTLPPAVPHSVPQPTTAIPAFPPVMVPPFRVPLPGMPIPLPGVAMMQIVSCPYVKTVATTKTG VLPGMAPPIVPMIHPQVAIAASPATLAGATAVSEWTEYKTADGKTYYYNNRTLESTWEKPQELKEKEKLEEKIKEPIKEP SEEPLPMETEEEDPKEEPIKEIKEEPKEEEMTEEEKAAQKAKPVATAPIPGTPWCVVWTGDERVFFYNPTTRLSMWDRPD DLIGRADVDKIIQEPPHKKGMEELKKLRHPTPTMLSIQKWQFSMSAIKEEQELMEEINEDEPVKAKKRKRDDNKDIDSEK EAAMEAEIKAARERAIVPLEARMKQFKDMLLERGVSAFSTWEKELHKIVFDPRYLLLNPKERKQVFDQYVKTRAEEERRE KKNKIMQAKEDFKKMMEEAKFNPRATFSEFAAKHAKDSRFKAIEKMKDREALFNEFVAAARKKEKEDSKTRGEKIKSDFF ELLSNHHLDSQSRWSKVKDKVESDPRYKAVDSSSMREDLFKQYIEKIAKNLDSEKEKELERQARIEASLREREREVQKAR SEQTKEIDREREQHKREEAIQNFKALLSDMVRSSDVSWSDTRRTLRKDHRWESGSLLEREEKEKLFNEHIEALTKKKREH FRQLLDETSAITLTSTWKEVKKIIKEDPRCIKFSSSDRKKQREFEEYIRDKYITAKADFRTLLKETKFITYRSKKLIQES DQHLKDVEKILQNDKRYLVLDCVPEERRKLIVAYVDDLDRRGPPPPPTASEPTRRSTK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 9,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.070098641"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "WW domain-binding protein 11"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q9Y2W2"
+                            }
+                        ],
+                        "string": "MGRRSTSSTKSGKFMNPTDQARKEARKRELKKNKKQRMMVRAAVLKMKDPKQIIRDMEKLDEMEFNPVQQPQLNEKVLKD KRKKLRETFERILRLYEKENPDIYKELRKLEVEYEQKRAQLSQYFDAVKNAQHVEVESIPLPDMPHAPSNILIQDIPLPG AQPPSILKKTSAYGPPTRAVSILPLLGHGVPRLPPGRKPPGPPPGPPPPQVVQMYGRKVGFALDLPPRRRDEDMLYSPEL AQRGHDDDVSSTSEDDGYPEDMDQDKHDDSTDDSDTDKSDGESDGDEFVHRDNGERDNNEEKKSGLSVRFADMPGKSRKK KKNMKELTPLQAMMLRMAGQEIPEEGREVEEFSEDDDEDDSDDSEAEKQSQKQHKEESHSDGTSTASSQQQAPPQSVPPS QIQAPPMPGPPPLGPPPAPPLRPPGPPTGLPPGPPPGAPPFLRPPGMPGLRGPLPRLLPPGPPPGRPPGPPPGPPPGLPP GPPPRGPPPRLPPPAPPGIPPPRPGMMRPPLVPPLGPAPPGLFPPAPLPNPGVLSAPPNLIQRPKADDTSAATIEKKATA TISAKPQITNPKAEITRFVPTALRVRRENKGATAAPQRKSEDDSAVPLAKAAPKSGPSVPVSVQTKDDVYEAFMKEMEGL L"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 10,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.009307603999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "pre-mRNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "GCCGCCAAGGUAUGUAUCAAGCUUACAAG"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 11,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.008560944999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Ubiquitin-like protein 5"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q9BZL1"
+                            }
+                        ],
+                        "string": "MIEVVCNDRLGKKVRVKCNTDDTIGDLKKLIAAQTGTRWNKIVLKKWYTIFKDHVSLGDYEIHDGMNLELYYQ"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 12,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.023664046999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Zinc finger matrin-type protein 2"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q96NC0"
+                            }
+                        ],
+                        "string": "MASGSGTKNLDFRRKWDKDEYEKLAEKRLTEEREKKDGKPVQPVKRELLRHRDYKVDLESKLGKTIVITKTTPQSEMGGY YCNVCDCVVKDSINFLDHINGKKHQRNLGMSMRVERSTLDQVKKRFEVNKKKMEEKQKDYDFEERMKELREEEEKAKAYK KEKQKEKKRRAEEDLTFEEDDEMAAVMGFSGFGSTKKSY"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 13,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.06561217999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Pre-mRNA-processing factor 17"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O60508"
+                            }
+                        ],
+                        "string": "MSAAIAALAASYGSGSGSESDSDSESSRCPLPAADSLMHLTKSPSSKPSLAVAVDSAPEVAVKEDLETGVHLDPAVKEVQ YNPTYETMFAPEFGPENPFRTQQMAAPRNMLSGYAEPAHINDFMFEQQRRTFATYGYALDPSLDNHQVSAKYIGSVEEAE KNQGLTVFETGQKKTEKRKKFKENDASNIDGFLGPWAKYVDEKDVAKPSEEEQKELDEITAKRQKKGKQEEEKPGEEKTI LHVKEMYDYQGRSYLHIPQDVGVNLRSTMPPEKCYLPKKQIHVWSGHTKGVSAVRLFPLSGHLLLSCSMDCKIKLWEVYG ERRCLRTFIGHSKAVRDICFNTAGTQFLSAAYDRYLKLWDTETGQCISRFTNRKVPYCVKFNPDEDKQNLFVAGMSDKKI VQWDIRSGEIVQEYDRHLGAVNTIVFVDENRRFVSTSDDKSLRVWEWDIPVDFKYIAEPSMHSMPAVTLSPNGKWLACQS MDNQILIFGAQNRFRLNKKKIFKGHMVAGYACQVDFSPDMSYVISGDGNGKLNIWDWKTTKLYSRFKAHDKVCIGAVWHP HETSKVITCGWDGLIKLWD"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 14,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.27397425"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Pre-mRNA-processing-splicing factor 8"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q6P2Q9"
+                            }
+                        ],
+                        "string": "MAGVFPYRGPGNPVPGPLAPLPDYMSEEKLQEKARKWQQLQAKRYAEKRKFGFVDAQKEDMPPEHVRKIIRDHGDMTNRK FRHDKRVYLGALKYMPHAVLKLLENMPMPWEQIRDVPVLYHITGAISFVNEIPWVIEPVYISQWGSMWIMMRREKRDRRH FKRMRFPPFDDEEPPLDYADNILDVEPLEAIQLELDPEEDAPVLDWFYDHQPLRDSRKYVNGSTYQRWQFTLPMMSTLYR LANQLLTDLVDDNYFYLFDLKAFFTSKALNMAIPGGPKFEPLVRDINLQDEDWNEFNDINKIIIRQPIRTEYKIAFPYLY NNLPHHVHLTWYHTPNVVFIKTEDPDLPAFYFDPLINPISHRHSVKSQEPLPDDDEEFELPEFVEPFLKDTPLYTDNTAN GIALLWAPRPFNLRSGRTRRALDIPLVKNWYREHCPAGQPVKVRVSYQKLLKYYVLNALKHRPPKAQKKRYLFRSFKATK FFQSTKLDWVEVGLQVCRQGYNMLNLLIHRKNLNYLHLDYNFNLKPVKTLTTKERKKSRFGNAFHLCREVLRLTKLVVDS HVQYRLGNVDAFQLADGLQYIFAHVGQLTGMYRYKYKLMRQIRMCKDLKHLIYYRFNTGPVGKGPGCGFWAAGWRVWLFF MRGITPLLERWLGNLLARQFEGRHSKGVAKTVTKQRVESHFDLELRAAVMHDILDMMPEGIKQNKARTILQHLSEAWRCW KANIPWKVPGLPTPIENMILRYVKAKADWWTNTAHYNRERIRRGATVDKTVCKKNLGRLTRLYLKAEQERQHNYLKDGPY ITAEEAVAVYTTTVHWLESRRFSPIPFPPLSYKHDTKLLILALERLKEAYSVKSRLNQSQREELGLIEQAYDNPHEALSR IKRHLLTQRAFKEVGIEFMDLYSHLVPVYDVEPLEKITDAYLDQYLWYEADKRRLFPPWIKPADTEPPPLLVYKWCQGIN NLQDVWETSEGECNVMLESRFEKMYEKIDLTLLNRLLRLIVDHNIADYMTAKNNVVINYKDMNHTNSYGIIRGLQFASFI VQYYGLVMDLLVLGLHRASEMAGPPQMPNDFLSFQDIATEAAHPIRLFCRYIDRIHIFFRFTADEARDLIQRYLTEHPDP NNENIVGYNNKKCWPRDARMRLMKHDVNLGRAVFWDIKNRLPRSVTTVQWENSFVSVYSKDNPNLLFNMCGFECRILPKC RTSYEEFTHKDGVWNLQNEVTKERTAQCFLRVDDESMQRFHNRVRQILMASGSTTFTKIVNKWNTALIGLMTYFREAVVN TQELLDLLVKCENKIQTRIKIGLNSKMPSRFPPVVFYTPKELGGLGMLSMGHVLIPQSDLRWSKQTDVGITHFRSGMSHE EDQLIPNLYRYIQPWESEFIDSQRVWAEYALKRQEAIAQNRRLTLEDLEDSWDRGIPRINTLFQKDRHTLAYDKGWRVRT DFKQYQVLKQNPFWWTHQRHDGKLWNLNNYRTDMIQALGGVEGILEHTLFKGTYFPTWEGLFWEKASGFEESMKWKKLTN AQRSGLNQIPNRRFTLWWSPTINRANVYVGFQVQLDLTGIFMHGKIPTLKISLIQIFRAHLWQKIHESIVMDLCQVFDQE LDALEIETVQKETIHPRKSYKMNSSCADILLFASYKWNVSRPSLLADSKDVMDSTTTQKYWIDIQLRWGDYDSHDIERYA RAKFLDYTTDNMSIYPSPTGVLIAIDLAYNLHSAYGNWFPGSKPLIQQAMAKIMKANPALYVLRERIRKGLQLYSSEPTE PYLSSQNYGELFSNQIIWFVDDTNVYRVTIHKTFEGNLTTKPINGAIFIFNPRTGQLFLKIIHTSVWAGQKRLGQLAKWK TAEEVAALIRSLPVEEQPKQIIVTRKGMLDPLEVHLLDFPNIVIKGSELQLPFQACLKVEKFGDLILKATEPQMVLFNLY DDWLKTISSYTAFSRLILILRALHVNNDRAKVILKPDKTTITEPHHIWPTLTDEEWIKVEVQLKDLILADYGKKNNVNVA SLTQSEIRDIILGMEISAPSQQRQQIAEIEKQTKEQSQLTATQTRTVNKHGDEIITSTTSNYETQTFSSKTEWRVRAISA ANLHLRTNHIYVSSDDIKETGYTYILPKNVLKKFICISDLRAQIAGYLYGVSPPDNPQVKEIRCIVMVPQWGTHQTVHLP GQLPQHEYLKEMEPLGWIHTQPNESPQLSPQDVTTHAKIMADNPSWDGEKTIIITCSFTPGSCTLTAYKLTPSGYEWGRQ NTDKGNNPKGYLPSHYERVQMLLSDRFLGFFMVPAQSSWNYNFMGVRHDPNMKYELQLANPKEFYHEVHRPSHFLNFALL QEGEVYSADREDLYA"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 15,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.046959555"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Pre-mRNA-splicing factor RBM22"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q9NW64"
+                            }
+                        ],
+                        "string": "MATSLGSNTYNRQNWEDADFPILCQTCLGENPYIRMTKEKYGKECKICARPFTVFRWCPGVRMRFKKTEVCQTCSKLKNV CQTCLLDLEYGLPIQVRDAGLSFKDDMPKSDVNKEYYTQNMEREISNSDGTRPVGMLGKATSTSDMLLKLARTTPYYKRN RPHICSFWVKGECKRGEECPYRHEKPTDPDDPLADQNIKDRYYGINDPVADKLLKRASTMPRLDPPEDKTITTLYVGGLG DTITETDLRNHFYQFGEIRTITVVQRQQCAFIQFATRQAAEVAAEKSFNKLIVNGRRLNVKWGRSQAARGKEKEKDGTTD SGIKLEPVPGLPGALPPPPAAEEEASANYFNLPPSGPPAVVNIALPPPPGIAPPPPPGFGPHMFHPMGPPPPFMRAPGPI HYPSQDPQRMGAHAGKHSSP"
+                    }
+                },
+                {
+                    "ec_number": [
+                        "2.3.2.27"
+                    ],
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 16,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.058910379"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "RING-type E3 ubiquitin-protein ligase PPIL2"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q13356"
+                            }
+                        ],
+                        "string": "MGKRQHQKDKMYITCAEYTHFYGGKKPDLPQTNFRRLPFDHCSLSLQPFVYPVCTPDGIVFDLLNIVPWLKKYGTNPSNG EKLDGRSLIKLNFSKNSEGKYHCPVLFTVFTNNTHIVAVRTTGNVYAYEAVEQLNIKAKNFRDLLTDEPFSRQDIITLQD PTNLDKFNVSNFYHVKNNMKIIDPDEEKAKQDPSYYLKNTNAETRETLQELYKEFKGDEILAATMKAPEKKKVDKLNAAH YSTGKVSASFTSTAMVPETTHEAAAIDEDVLRYQFVKKKGYVRLHTNKGDLNLELHCDLTPKTCENFIRLCKKHYYDGTI FHRSIRNFVIQGGDPTGTGTGGESYWGKPFKDEFRPNLSHTGRGILSMANSGPNSNRSQFFITFRSCAYLDKKHTIFGRV VGGFDVLTAMENVESDPKTDRPKEEIRIDATTVFVDPYEEADAQIAQERKTQLKVAPETKVKSSQPQAGSQGPQTFRQGV GKYINPAATKRAAEEEPSTSATVPMSKKKPSRGFGDFSSW"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 17,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.060326214999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "SNW domain-containing protein 1"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q13573"
+                            }
+                        ],
+                        "string": "MALTSFLPAPTQLSQDQLEAEEKARSQRSRQTSLVSSRREPPPYGYRKGWIPRLLEDFGDGGAFPEIHVAQYPLDMGRKK KMSNALAIQVDSEGKIKYDAIARQGQSKDKVIYSKYTDLVPKEVMNADDPDLQRPDEEAIKEITEKTRVALEKSVSQKVA AAMPVRAADKLAPAQYIRYTPSQQGVAFNSGAKQRVIRMVEMQKDPMEPPRFKINKKIPRGPPSPPAPVMHSPSRKMTVK EQQEWKIPPCISNWKNAKGYTIPLDKRLAADGRGLQTVHINENFAKLAEALYIADRKAREAVEMRAQVERKMAQKEKEKH EEKLREMAQKARERRAGIKTHVEKEDGEARERDEIRHDRRKERQHDRNLSRAAPDKRSKLQRNENRDISEVIALGVPNPR TSNEVQYDQRLFNQSKGMDSGFAGGEDEIYNVYDQAWRGGKDMAQSIYRPSKNLDKDMYGDDLEARIKTNRFVPDKEFSG SDRRQRGREGPVQFEEDPFGLDKFLEEAKQHGGSKRPSDSSRPKEH"
+                    }
+                },
+                {
+                    "formula": "IHP",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 18,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0006600349999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "INOSITOL HEXAKISPHOSPHATE"
+                    },
+                    "number_of_copies": "1"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "pre-Bact-OTS-complex"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 4
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 5
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 6
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 7
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 8
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 9
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 10
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 11
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 12
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 13
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 14
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 15
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 16
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 17
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "pre-Bact-OTS-complex"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 9606,
+                                "valueOf_": "Homo sapiens"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 35015,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.12"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION",
+                                        "version": "3.1"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "details": "ab initio",
+                                "instance_type": "startup_model",
+                                "type_of_model": "OTHER"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "39.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON III (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "4.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.5"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.9
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

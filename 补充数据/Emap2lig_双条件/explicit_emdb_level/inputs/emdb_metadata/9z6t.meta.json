@@ -1,0 +1,705 @@
+{
+    "_id": "69238678d785ce09055213f0",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Chinn A"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Chanda B"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-05-20T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "NS116850",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute of Neurological Disorders and Stroke (NIH/NINDS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "DP2GM140920",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute of General Medical Sciences (NIH/NIGMS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "CHE-1856518",
+                    "country": "United States",
+                    "funding_body": "National Science Foundation (NSF, United States)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-11-14T00:00:00",
+            "header_release": "2026-05-20T00:00:00",
+            "map_release": "2026-05-20T00:00:00",
+            "update": "2026-05-20T00:00:00"
+        },
+        "keywords": "ion channel, pacemaker channel, hyperpolarization-activated, MEMBRANE PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-05-20T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "Human HCN1 in complex with cAMP in nanodisc"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Idikuda V"
+                        },
+                        {
+                            "ORCID": "0000-0001-7068-6464",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Roy Chowdhury S"
+                        },
+                        {
+                            "ORCID": "0009-0008-5774-6547",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Chinn A"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Chang Y"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Rahman S"
+                        },
+                        {
+                            "ORCID": "0009-0008-8514-4973",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Ren Q"
+                        },
+                        {
+                            "ORCID": "0000-0002-4301-4627",
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Bao H"
+                        },
+                        {
+                            "ORCID": "0000-0001-5036-1945",
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Fu Z"
+                        },
+                        {
+                            "ORCID": "0000-0001-9083-8592",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Goldsmith RH"
+                        },
+                        {
+                            "ORCID": "0000-0003-4954-7034",
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "Chanda B"
+                        }
+                    ],
+                    "country": "UK",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "42069694"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1038/s41467-026-72591-6"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2041-1723"
+                        }
+                    ],
+                    "journal": "Nat Commun",
+                    "journal_abbreviation": "Nat Commun",
+                    "published": true,
+                    "title": "Lipid bilayers determine allostery but not intrinsic affinity of cAMP to pacemaker channels.",
+                    "year": "2026"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "emdb_id": "EMD-71975",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "consensus EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "9PXN",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "details": "Model fit to the consensus map",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-73857",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Human HCN1 in complex with cAMP in nanodisc",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-71975",
+                    "content_type": "consensus EM volume",
+                    "db_name": "EMDB",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9z6t",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-73857",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "303.2"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "303.2"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "303.2"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 320,
+                        "row": 320,
+                        "sec": 320
+                    },
+                    "file": "emd_73857_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-73857::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.94750005"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.94750005"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.94750005"
+                        }
+                    },
+                    "size_kbytes": 131073,
+                    "spacing": {
+                        "x": 320,
+                        "y": 320,
+                        "z": 320
+                    },
+                    "statistics": {
+                        "average": 0.0013648852,
+                        "maximum": 0.62746763,
+                        "minimum": -0.25030133,
+                        "std": 0.02895447
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "303.2"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "303.2"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "303.2"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 320,
+                        "row": 320,
+                        "sec": 320
+                    },
+                    "file": "emd_73857_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-73857::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.94750005"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.94750005"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.94750005"
+                        }
+                    },
+                    "size_kbytes": 131073,
+                    "spacing": {
+                        "x": 320,
+                        "y": 320,
+                        "z": 320
+                    },
+                    "statistics": {
+                        "average": 0.0013545614,
+                        "maximum": 0.64994687,
+                        "minimum": -0.23782393,
+                        "std": 0.028969029
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "303.2"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "303.2"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "303.2"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.21,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 320,
+            "row": 320,
+            "sec": 320
+        },
+        "file": "emd_73857.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-73857::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.94750005"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.94750005"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.94750005"
+            }
+        },
+        "size_kbytes": 131073,
+        "spacing": {
+            "x": 320,
+            "y": 320,
+            "z": 320
+        },
+        "statistics": {
+            "average": 0.0016402022,
+            "maximum": 2.0645,
+            "minimum": -1.1148158,
+            "std": 0.048653662
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.103035594"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 1,Thermostable Green Protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "number_of_copies": "4",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 4922,
+                            "valueOf_": "Komagataella pastoris"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O60741"
+                            }
+                        ],
+                        "string": "MDYKDDDDKGSEGGGKPNSSSNSRDDGNSVFPAKASATGAGPAAAEKRLGTPPGGGGAGAKEHGNSVCFKVDGGGGGGGG GGGGEEPAGGFEDAEGPRRQYGFMQRQFTSMLQPGVNKFSLRMFGSQKAVEKEQERVKTAGFWIIHPYSDFRFYWDLIML IMMVGNLVIIPVGITFFTEQTTTPWIIFNVASDTVFLLDLIMNFRTGTVNEDSSEIILDPKVIKMNYLKSWFVVDFISSI PVDYIFLIVEKGMDSEVYKTARALRIVRFTKILSLLRLLRLSRLIRYIHQWEEIFHMTYDLASAVVRIFNLIGMMLLLCH WDGCLQFLVPLLQDFPPDCWVSLNEMVNDSWGKQYSYALFKAMSHMLCIGYGAQAPVSMSDLWITMLSMIVGATCYAMFV GHATALIQSLDSSRRQYQEKYKQVEQYMSFHKLPADMRQKIHDYYEHRYQGKIFDEENILNELNDPLREEIVNFNCRKLV ATMPLFANADPNFVTAMLSKLRFEVFQPGDYIIREGAVGKKMYFIQHGVAGVITKSSKEMKLTDGSYFGEICLLTKGRRT ASVRADTYCRLYSLSVDNFNEVLEEYPMMRRAFETVAIDRLDRIGKKNSILLQKFQKDLNTGVFNNQENEILKQIVKHDR EMVQAASNSGLNDIFEAQKIEWHELEVLFQGPTAAMSVIKPEMKIKLRMEGAVNGHKFVIEGEGIGKPYEGTQTLDLTVE EGAPLPFSYDILTPAFQYGNRAFTKYPEDIPDYFKQAFPEGYSWERSMTYEDQGICIATSDITMEGDCFFYEIRFDGTNF PPNGPVMQKKTLKWEPSTEKMYVEDGVLKGDVEMALLLEGGGHYRCDFKTTYKAKKDVRLPDAHEVDHRIEILSHDKDYN KVRLYEHAEARYSGGGHHHHHHHHHH"
+                    }
+                },
+                {
+                    "formula": "CMP",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000329206"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ADENOSINE-3',5'-CYCLIC-MONOPHOSPHATE"
+                    },
+                    "number_of_copies": "4"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Homotetrameric HCN1 complex (fusion with Thermostable Green Protein)"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Homotetrameric HCN1 complex (fusion with Thermostable Green Protein)"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 9606,
+                                "valueOf_": "Homo sapiens"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "ANGULAR RECONSTITUTION"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 113803,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.6"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "ANGULAR RECONSTITUTION"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "OTHER"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "40.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.5"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 8.0
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

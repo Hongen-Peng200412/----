@@ -1,0 +1,898 @@
+{
+    "_id": "6817ee616e5018e1518fca41",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Cao W"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Wang J"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Wang Z"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-01T00:00:00",
+            "processing_site": "PDBc"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "2021YFA0910500",
+                    "country": "China",
+                    "funding_body": "National Science Foundation (NSF, China)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-04-27T00:00:00",
+            "header_release": "2026-04-01T00:00:00",
+            "map_release": "2026-04-01T00:00:00",
+            "update": "2026-04-01T00:00:00"
+        },
+        "keywords": "Nonribosomal peptide synthetase, LIGASE, BIOSYNTHETIC PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-01T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBj",
+            "last_processing": "PDBc"
+        },
+        "title": "PvdL-E2-C3-A3-PCP3 in complex with MLP (NRPS cross-module)"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Cao W"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Wang J"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Chen SL"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Li D"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Wang X"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Deng Z"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Liang J"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Wang Z"
+                        }
+                    ],
+                    "country": "UK",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1038/s44160-026-01014-7"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2731-0582"
+                        }
+                    ],
+                    "journal_abbreviation": "Nat Synth",
+                    "published": true,
+                    "title": "Analysis of heterocycle formation and stereochemical control by a non-ribosomal peptide synthetase condensation domain",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-64387",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "PvdL-E2-C3-A3-PCP3 in complex with MLP (NRPS cross-module)",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9up2",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-64387",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 300,
+                        "row": 300,
+                        "sec": 300
+                    },
+                    "file": "emd_64387_additional_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-64387::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        }
+                    },
+                    "size_kbytes": 108001,
+                    "spacing": {
+                        "x": 300,
+                        "y": 300,
+                        "z": 300
+                    },
+                    "statistics": {
+                        "average": 7.4719675e-05,
+                        "maximum": 0.11369866,
+                        "minimum": -0.061075352,
+                        "std": 0.0017150199
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 300,
+                        "row": 300,
+                        "sec": 300
+                    },
+                    "file": "emd_64387_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-64387::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        }
+                    },
+                    "size_kbytes": 108001,
+                    "spacing": {
+                        "x": 300,
+                        "y": 300,
+                        "z": 300
+                    },
+                    "statistics": {
+                        "average": -6.7414214e-07,
+                        "maximum": 0.11369866,
+                        "minimum": -0.061075352,
+                        "std": 0.0022130208
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 300,
+                        "row": 300,
+                        "sec": 300
+                    },
+                    "file": "emd_64387_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-64387::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        }
+                    },
+                    "size_kbytes": 108001,
+                    "spacing": {
+                        "x": 300,
+                        "y": 300,
+                        "z": 300
+                    },
+                    "statistics": {
+                        "average": 1.0232472e-07,
+                        "maximum": 0.048707277,
+                        "minimum": -0.015089586,
+                        "std": 0.0013313208
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "330.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 300,
+                        "row": 300,
+                        "sec": 300
+                    },
+                    "file": "emd_64387_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-64387::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.1"
+                        }
+                    },
+                    "size_kbytes": 108001,
+                    "spacing": {
+                        "x": 300,
+                        "y": 300,
+                        "z": 300
+                    },
+                    "statistics": {
+                        "average": -1.4506085e-06,
+                        "maximum": 0.049268387,
+                        "minimum": -0.018506216,
+                        "std": 0.0013267531
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "330.0"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "330.0"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "330.0"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.004,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 300,
+            "row": 300,
+            "sec": 300
+        },
+        "file": "emd_64387.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-64387::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "1.1"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "1.1"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "1.1"
+            }
+        },
+        "size_kbytes": 108001,
+        "spacing": {
+            "x": 300,
+            "y": 300,
+            "z": 300
+        },
+        "statistics": {
+            "average": -8.870823e-06,
+            "maximum": 0.041571394,
+            "minimum": -0.012049202,
+            "std": 0.0010317212
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.172528516"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "PvdL"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 208964,
+                            "valueOf_": "Pseudomonas aeruginosa PAO1"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q9I157"
+                            }
+                        ],
+                        "string": "DSALTPIQHWFFDLPLARREHWNQALLLQPRQAIDLGLLRKSLQRLVEQHDALRLAFRQVDGEWLAQHRPLREQELLWHV PVQSFDECAELFAKAQRSLDLEQGPLLRAVLVDGPAGEQRLLLAIHHLVVDGVSWRVLLEDLQQVYRQFAEGAEPALPAK TSAFRDWAGRLQAYAGSESLREELGWWQARLGGQPVEWPCDRPQGDNREALAESVSLRLDPQRTRQLLQQAPAAYRTQVN DLLLTALARVLCRWSGQPSTLVQLEGHGREALFDDIDLTRSVGWFTSAYPLRLTPAQSPGESIKAIKEQLRAVPHKGLGY GVLRYLADPAVRQAMAALPTAPITFNYLGQFDQSFADALFQPLDQPTGPIHDEQAPLPNELSVDGQVYGGELVLRWTYSR ERYDARTVNELAQAYLAELQALIEHCLEDGAGGLTPSDFPLAQLSQAQLDALAVPAGEIEDVYPLTPMQEGLLLHTLLEP GTGIYYMQDRYRIDSPLDPERFAAAWQAVVARHEALRASFVWNAGETMLQVIHKPGRTRIEFLDWSELPEDGHEERLQAL HKREREAGFDLLEQPPFHLRLIRLGEARYWFMMSNHHILIDAWCRGLLMNDFFEIYSALGESRPANLPTPPRYRDYIAWL QRQDLEQSRRWWSESLRGFERPTLVPSDRPFLREHAGESGGMIVGDRYTRLDAADGARLRELAQRYQLTVNTFAQAAWAL TLRRFSGERDVLFGVTVAGRPVGMPEMQRTVGLFINSIPLRVQMPAAGQRCTVREWLNRLFERNLELREHEHLPLVAIQE SSELPKGQPLFDSLFVFENAPVEVSVLDRAQSLNASSDSGRTHTNFPLTVVCYPGDDLGLHLSYDQRYFEAPTVERLLGE FKRLLLALADGFHGELEALPLLGEDERDFLLDGCNRSARDYPLEQGYVRLFEAQVAAHPQRIAASCLEQRWSYAELNRRA NRLGHALRAAGVGIDQPVALLAERGLDLLGMIVGSFKAGAGYLPLDPGHPTQRLTRIVELSRTLVLVCTQACREQALALF DELGCVDRPRLLVWDEIQQGEGAEHDPQVYSGPQNLAYVIYTSGSTGLPKGVMVEQAGMLNNQLSKVPYLELDENDVIAQ TASQSFDISVWQFLAAPLFGARVAIVPNAVAHDPQGLLAHVGEQGITVLESVPSLIQGMLAEERQALDGLRWMLPTGEAM PPELARQWLKRYPRIGLVNAYGPAECSDDVAFFRVDLASTESTYLPIGSPTDNNRLYLLGAGADDAFELVPLGAVGELCV AGTGVGRGYVGDPLRTAQAFVPHPFGAPGERLYRTGDLARRRADGVLEYVGRIDHQVKIRGFRIELGEIEARLHERADVR EAAVAVQEGANGKYLVGYLVPGETPRSSADSPAGLMVEQGAWFERIKQQLRADLPDYMVPLHWLVLDRMPLNANGKLDRK ALPALDIGQMQNQAYQAPRNELEETLARIWAEVLKVERVGVFDNFFELGGH(4HH)LLATQIASRVQKALQRNVPLRAMF ECTTVEELASYIESLAPSEI"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.007288189999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MbtH-like domain-containing protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 208964,
+                            "valueOf_": "Pseudomonas aeruginosa PAO1"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q9I169"
+                            }
+                        ],
+                        "string": "DDIQFQVVVNHEEQYSIWPEYKEIPQGWRAAGKSGLKKDCLAYIEEVWTDMRPLSLRQHMD"
+                    }
+                },
+                {
+                    "formula": "DAB",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.00011813399999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "2,4-DIAMINOBUTYRIC ACID"
+                    },
+                    "number_of_copies": "2"
+                },
+                {
+                    "formula": "ATP",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000507181"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ADENOSINE-5'-TRIPHOSPHATE"
+                    },
+                    "number_of_copies": "1"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "PvdL-E2-C3-A3-PCP3 in complex with MLP (NRPS cross-module)"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "kDa/nm",
+                            "valueOf_": "186"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "PvdL-E2-C3-A3-PCP3 in complex with MLP (NRPS cross-module)"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 208964,
+                                "valueOf_": "Pseudomonas aeruginosa PAO1"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING ONLY"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "OTHER"
+                        },
+                        "final_reconstruction": {
+                            "applied_symmetry": {
+                                "point_group": "C1"
+                            },
+                            "number_images_used": 165245,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.33"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF"
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "OTHER"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "OTHER",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "OTHER",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.0"
+                            },
+                            "nominal_magnification": 64000.0
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 8.0
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "OTHER"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

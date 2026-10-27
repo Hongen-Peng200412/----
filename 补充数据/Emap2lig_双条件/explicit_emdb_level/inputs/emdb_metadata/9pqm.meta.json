@@ -1,0 +1,1084 @@
+{
+    "_id": "6886a3b16e5018e151c4127e",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Montermoso S"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Gupta K"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Pumroy RA"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Moiseenkova-Bell V"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Bushman FD"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Van Duyne GD"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-03-18T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "P30AI045008",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute Of Allergy and Infectious Diseases (NIH/NIAID)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "GM108751",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute of General Medical Sciences (NIH/NIGMS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "T32AI007632",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute Of Allergy and Infectious Diseases (NIH/NIAID)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "S10OD018483",
+                    "country": "United States",
+                    "funding_body": "Department of Health & Human Services (HHS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "DMR2342336",
+                    "country": "United States",
+                    "funding_body": "National Science Foundation (NSF, United States)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "1P30GM124166",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute of General Medical Sciences (NIH/NIGMS)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-07-22T00:00:00",
+            "header_release": "2026-02-25T00:00:00",
+            "map_release": "2026-02-25T00:00:00",
+            "update": "2026-03-18T00:00:00"
+        },
+        "keywords": "SF3 helicase, DNA binding protein, Replication, Viral protein",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-25T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-03-18T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "Cryo-EM structure of ATPgammaS-bound Vientovirus FB Rep hexamer with endonuclease domain density"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0002-8494-9162",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Montermoso S"
+                        },
+                        {
+                            "ORCID": "0000-0002-7006-2667",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Gupta K"
+                        },
+                        {
+                            "ORCID": "0000-0002-6200-6083",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Pumroy RA"
+                        },
+                        {
+                            "ORCID": "0000-0002-0589-4053",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Moiseenkova-Bell V"
+                        },
+                        {
+                            "ORCID": "0000-0003-4740-4056",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Bushman FD"
+                        },
+                        {
+                            "ORCID": "0000-0003-0247-1626",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Van Duyne GD"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41779823"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1371/journal.ppat.1013997"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "1553-7374"
+                        }
+                    ],
+                    "first_page": "e1013997",
+                    "journal": "PLoS Pathog",
+                    "journal_abbreviation": "PLoS Pathog",
+                    "last_page": "e1013997",
+                    "published": true,
+                    "title": "Structures of nucleotide-bound Redondovirus Rep protein link conformation and function.",
+                    "volume": "22",
+                    "year": "2026"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "emdb_id": "EMD-71784",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-71784",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-71786",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of ATPgammaS-bound Vientovirus FB Rep hexamer with endonuclease domain density",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "9PQJ",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "9PQF",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9pqm",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-71786",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "annotation_details": "3D auto-refined map from Relion",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "241.92"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "241.92"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "241.92"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 288,
+                        "row": 288,
+                        "sec": 288
+                    },
+                    "file": "emd_71786_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-71786::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        }
+                    },
+                    "size_kbytes": 95552,
+                    "spacing": {
+                        "x": 288,
+                        "y": 288,
+                        "z": 288
+                    },
+                    "statistics": {
+                        "average": 3.3443397e-05,
+                        "maximum": 0.024263246,
+                        "minimum": -0.0084025655,
+                        "std": 0.00083453336
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "half map 2 from 3D auto-refinement in Relion",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "241.92"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "241.92"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "241.92"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 288,
+                        "row": 288,
+                        "sec": 288
+                    },
+                    "file": "emd_71786_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-71786::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        }
+                    },
+                    "size_kbytes": 95552,
+                    "spacing": {
+                        "x": 288,
+                        "y": 288,
+                        "z": 288
+                    },
+                    "statistics": {
+                        "average": 3.0986495e-05,
+                        "maximum": 0.030349059,
+                        "minimum": -0.01433917,
+                        "std": 0.0012089104
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "half map 1 from 3D auto-refinement in Relion",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "241.92"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "241.92"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "241.92"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 288,
+                        "row": 288,
+                        "sec": 288
+                    },
+                    "file": "emd_71786_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-71786::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.84"
+                        }
+                    },
+                    "size_kbytes": 95552,
+                    "spacing": {
+                        "x": 288,
+                        "y": 288,
+                        "z": 288
+                    },
+                    "statistics": {
+                        "average": 3.8601473e-05,
+                        "maximum": 0.03605892,
+                        "minimum": -0.020577079,
+                        "std": 0.0020346725
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "details": "Initial rigid body fitting was done in ChimeraX followed by flexible fitting in coot",
+                    "initial_model": [
+                        {
+                            "access_code": "9PQJ",
+                            "chain": {
+                                "initial_model_type": "experimental model",
+                                "residue_range": "121-327",
+                                "source_name": "PDB"
+                            },
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling",
+                    "overall_bvalue": 80.79,
+                    "refinement_protocol": "RIGID BODY FIT",
+                    "refinement_space": "REAL"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "sharpened map of 3D auto-refined map from Relion (primary map)",
+        "axis_order": {
+            "fast": "Z",
+            "medium": "Y",
+            "slow": "X"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "241.92"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "241.92"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "241.92"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 4.4,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 288,
+            "row": 288,
+            "sec": 288
+        },
+        "file": "emd_71786.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-71786::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.84"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.84"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.84"
+            }
+        },
+        "size_kbytes": 95552,
+        "spacing": {
+            "x": 288,
+            "y": 288,
+            "z": 288
+        },
+        "statistics": {
+            "average": -7.73e-13,
+            "maximum": 33.18411,
+            "minimum": -17.450169,
+            "std": 1.0
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.024360986"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Replication-associated protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2571082,
+                            "valueOf_": "Human lung-associated vientovirus FB"
+                        }
+                    },
+                    "number_of_copies": "6",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A4D6K5Y8"
+                            }
+                        ],
+                        "string": "EKREKAELMINGNLRELFMEGVLGAIDIIRAEKLRNIFQVQAPADKYQKKLILWFKGETGEGKTKTAVDIAERFFNGEYW MSNETLKWFDGYRGQPVAIIDDFRKSMLTEWSFLLRLLDGYNLIVQVKGGFVKWQPKVIIVTSPASPSEAFQWVNKEGEI IEWDKQVQLTRRLTYEDEEQIYNFPLWNQDQLKLENTIRKYLGLAPM"
+                    }
+                },
+                {
+                    "formula": "AGS",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0005232469999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "PHOSPHOTHIOPHOSPHORIC ACID-ADENYLATE ESTER"
+                    },
+                    "number_of_copies": "6"
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "6"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "ATPgammaS-bound Vientovirus FB Rep with endonuclease domain density"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.243"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ATPgammaS-bound Vientovirus FB Rep with endonuclease domain density"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 2571082,
+                                "valueOf_": "Vientovirus FB"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "processing_details": "Patch CTF estimation",
+                                        "version": "4.5.3"
+                                    },
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION",
+                                        "processing_details": "CTFFind-4.1.14",
+                                        "version": "5.0-beta"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION",
+                                        "processing_details": "3D auto-refinement",
+                                        "version": "5.0-beta"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "applied_symmetry": {
+                                "point_group": "C1"
+                            },
+                            "number_images_used": 75338,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.18"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION",
+                                        "version": "5.0-beta"
+                                    }
+                                ]
+                            }
+                        },
+                        "final_three_d_classification": {
+                            "number_classes": 6,
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION",
+                                        "version": "5.0-beta"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "processing_details": "nonuniform refinement",
+                                        "version": "4.5.3"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "particle_selection": [
+                            {
+                                "instance_type": "particle_selection",
+                                "number_selected": 5286720
+                            }
+                        ],
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "c2_aperture_diameter": {
+                                "units": "\u00b5m",
+                                "valueOf_": "100.0"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "41.3"
+                                        },
+                                        "average_exposure_time": {
+                                            "units": "s",
+                                            "valueOf_": "1.42"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_grids_imaged": 1,
+                                        "number_real_images": 5605
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "3.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.0"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "20.0"
+                                        },
+                                        "formula": "HEPES",
+                                        "instance_type": "component",
+                                        "name": "4-(2-Hydroxyethyl)piperazine-1-ethanesulfonic acid"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "300.0"
+                                        },
+                                        "formula": "NaCl",
+                                        "instance_type": "component",
+                                        "name": "sodium chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "0.1"
+                                        },
+                                        "formula": "TCEP",
+                                        "instance_type": "component",
+                                        "name": "tris(2-carboxyethyl)phosphine"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "%",
+                                            "valueOf_": "2.5"
+                                        },
+                                        "formula": "C3H8O3",
+                                        "instance_type": "component",
+                                        "name": "glycerol"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "5.0"
+                                        },
+                                        "formula": "MgCl2",
+                                        "instance_type": "component",
+                                        "name": "magnesium chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "5.0"
+                                        },
+                                        "formula": "C10H16N5O12P3S",
+                                        "instance_type": "component",
+                                        "name": "Adenosine 5'-O-(3-thiotriphosphate"
+                                    }
+                                ],
+                                "details": "20 mM HEPES-NaOH pH 7.5, 300 mM NaCl, 0.1 mM TCEP, 2.5% glycerol added with 5 mM MgCl2 and 5mM ATPgammaS",
+                                "ph": 7.5
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "0.2"
+                            },
+                            "grid": {
+                                "material": "COPPER",
+                                "mesh": 300,
+                                "model": "Quantifoil R1.2/1.3",
+                                "pretreatment": {
+                                    "atmosphere": "AIR",
+                                    "pressure": {
+                                        "units": "kPa",
+                                        "valueOf_": "0.03"
+                                    },
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "30"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                }
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "277.15"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

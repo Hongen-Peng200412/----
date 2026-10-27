@@ -1,0 +1,996 @@
+{
+    "_id": "685885b36e5018e1513fbc7d",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Springstein BL"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Javoor MG"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Megrian D"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Hajdu R"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Hanke DM"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Schur FKM"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Loose M"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-29T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "ActinID 101076260",
+                    "country": "European Union",
+                    "funding_body": "European Research Council (ERC)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-06-18T00:00:00",
+            "header_release": "2026-04-08T00:00:00",
+            "map_release": "2026-04-08T00:00:00",
+            "update": "2026-04-29T00:00:00"
+        },
+        "keywords": "Cell shape, cytoskeleton, STRUCTURAL PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-08T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-29T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Cryo-EM structure of the CorM filament in the presence of CorR from cyanobacterium Anabaena sp. PCC 7120"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0002-3461-5391",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Springstein BL"
+                        },
+                        {
+                            "ORCID": "0000-0003-2311-2112",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Javoor MG"
+                        },
+                        {
+                            "ORCID": "0000-0002-6272-6814",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Megrian D"
+                        },
+                        {
+                            "ORCID": "0009-0005-8000-9033",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Hajdu R"
+                        },
+                        {
+                            "ORCID": "0000-0003-1947-4428",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Hanke DM"
+                        },
+                        {
+                            "ORCID": "0000-0002-9561-1239",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Zens B"
+                        },
+                        {
+                            "ORCID": "0000-0002-2132-670X",
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Weiss GL"
+                        },
+                        {
+                            "ORCID": "0000-0003-4790-8078",
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Schur FKM"
+                        },
+                        {
+                            "ORCID": "0000-0001-7309-9724",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Loose M"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41990175"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1126/science.aea6343"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "1095-9203"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0038"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ASTM",
+                            "valueOf_": "SCIEAS"
+                        }
+                    ],
+                    "first_page": "eaea6343",
+                    "journal": "Science",
+                    "journal_abbreviation": "Science",
+                    "last_page": "eaea6343",
+                    "published": true,
+                    "title": "Repurposing of a DNA segregation machinery into a cytoskeletal system controlling cell shape.",
+                    "volume": "392",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-54060",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of the CorM filament in the presence of CorR from cyanobacterium Anabaena sp. PCC 7120",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9rmi",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-54060",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "annotation_details": "Non-sharpened full map of CorM filament in the presence of CorR",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "476.928"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "476.928"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "476.928"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 512,
+                        "row": 512,
+                        "sec": 512
+                    },
+                    "file": "emd_54060_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-54060::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9315"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9315"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9315"
+                        }
+                    },
+                    "size_kbytes": 536871,
+                    "spacing": {
+                        "x": 512,
+                        "y": 512,
+                        "z": 512
+                    },
+                    "statistics": {
+                        "average": 7.009734e-05,
+                        "maximum": 0.31237736,
+                        "minimum": -0.09991836,
+                        "std": 0.010596068
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "Half map of CorM filament in the presence of CorR",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "476.928"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "476.928"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "476.928"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 512,
+                        "row": 512,
+                        "sec": 512
+                    },
+                    "file": "emd_54060_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-54060::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9315"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9315"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9315"
+                        }
+                    },
+                    "size_kbytes": 536871,
+                    "spacing": {
+                        "x": 512,
+                        "y": 512,
+                        "z": 512
+                    },
+                    "statistics": {
+                        "average": 8.5704996e-05,
+                        "maximum": 0.84091836,
+                        "minimum": -0.7561543,
+                        "std": 0.09153161
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "Half map of CorM filament in the presence of CorR",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "476.928"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "476.928"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "476.928"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 512,
+                        "row": 512,
+                        "sec": 512
+                    },
+                    "file": "emd_54060_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-54060::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9315"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9315"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.9315"
+                        }
+                    },
+                    "size_kbytes": 536871,
+                    "spacing": {
+                        "x": 512,
+                        "y": 512,
+                        "z": 512
+                    },
+                    "statistics": {
+                        "average": 8.84947e-05,
+                        "maximum": 0.7103688,
+                        "minimum": -0.7676281,
+                        "std": 0.09147095
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "initial_model": [
+                        {
+                            "chain": {
+                                "initial_model_type": "in silico model",
+                                "source_name": "AlphaFold"
+                            },
+                            "details": "CorM was predicted using the AF3 server. An ADP molecule was added to the Apo-CorM molecule during fitting",
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling",
+                    "refinement_protocol": "FLEXIBLE FIT",
+                    "refinement_space": "REAL"
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_54060_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "Sharpened map of CorM filament in the presence of CorR",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "476.928"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "476.928"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "476.928"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.128,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 512,
+            "row": 512,
+            "sec": 512
+        },
+        "file": "emd_54060.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-54060::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.9315"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.9315"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.9315"
+            }
+        },
+        "size_kbytes": 536871,
+        "spacing": {
+            "x": 512,
+            "y": 512,
+            "z": 512
+        },
+        "statistics": {
+            "average": 7.009733e-05,
+            "maximum": 0.5144387,
+            "minimum": -0.23908794,
+            "std": 0.0154965315
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.04137973799999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "CorM"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 103690,
+                            "valueOf_": "Nostoc sp. PCC 7120 = FACHB-418"
+                        }
+                    },
+                    "number_of_copies": "6",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "string": "MTDQPSAATPMNAAAIPLNRVSASTPINAAPANNKPNNGSSKSILSVDLGRTSTKTCVGREPNNVVFVPANVKQMSIEQV RGGVFEARATDPLMDLWLEYQGKGYAVGQLAADFGANLGVGQSKVEDALIKVLASAGYFKLKDEISVVLGLPFLSLEQFE REKAQLTSQVTGPHVLNFRGESVSLNITKVWVMPEGYGSLLWSEAQPKKGGASPDFTKISTAIVDIGHQTIDLLMVDNFR FARGASKSEDFGMNKFYELVAAEIDGADSQSLALISAVNKPKGERFYRPKGASKPTNLDDSLPNLIEQFSREICSRVLAW LPERVTDVIITGGGGEFFWEDVQRLLKDAQISAHLAAPSRQANALGQYIYGEAQLSSNRAARA"
+                    }
+                },
+                {
+                    "formula": "ADP",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000427201"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ADENOSINE-5'-DIPHOSPHATE"
+                    },
+                    "number_of_copies": "6"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "CorM filament in the presence of CorR from cyanobacterium Anabaena sp. PCC 7120"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "CorM filament in the presence of CorR from cyanobacterium Anabaena sp. PCC 7120"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 103690,
+                                "valueOf_": "Nostoc sp. PCC 7120 = FACHB-418"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "filament",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.4"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "details": "4096x4096 px movies in EER format",
+                        "final_angle_assignment": {
+                            "details": "Refinement in cryoSPARC",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.4"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "algorithm": "FOURIER SPACE",
+                            "applied_symmetry": {
+                                "point_group": "C2"
+                            },
+                            "number_classes_used": 22,
+                            "number_images_used": 124109,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.92"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.4"
+                                    }
+                                ]
+                            }
+                        },
+                        "final_three_d_classification": {
+                            "average_number_members_per_class": 4240.0,
+                            "details": "22 good classes were used out of 100 classes",
+                            "number_classes": 100,
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.4"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "details": "Ab-initio model generation in cryoSPARC",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.4"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "particle_selection": [
+                            {
+                                "details": "Filament tracer in cryoSPARC was used for particle picking",
+                                "instance_type": "particle_selection",
+                                "number_selected": 424676
+                            }
+                        ],
+                        "startup_model": [
+                            {
+                                "details": "No initial model was used. Ab-initio model was generated in cryoSPARC",
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "200"
+                            },
+                            "alignment_procedure": {
+                                "coma_free": {}
+                            },
+                            "c2_aperture_diameter": {
+                                "units": "\u00b5m",
+                                "valueOf_": "50.0"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "40.0"
+                                        },
+                                        "details": "The movies were collected in EER mode",
+                                        "digitization_details": {
+                                            "dimensions": {
+                                                "height": {
+                                                    "units": "pixel",
+                                                    "valueOf_": "4096"
+                                                },
+                                                "width": {
+                                                    "units": "pixel",
+                                                    "valueOf_": "4096"
+                                                }
+                                            }
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_grids_imaged": 1,
+                                        "number_real_images": 2236
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS GLACIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "3.5"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.9"
+                            },
+                            "nominal_magnification": 150000.0,
+                            "specimen_holder_model": "FEI TITAN KRIOS AUTOGRID HOLDER"
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "details": "25mM HEPES, 150mM KCl, 1mM MgCl2, 2mM ATP",
+                                "ph": 7.4
+                            },
+                            "grid": {
+                                "details": "The grids were glow discharged for 60s with 25mA",
+                                "material": "GOLD",
+                                "mesh": 200,
+                                "model": "Quantifoil R2/2",
+                                "pretreatment": {
+                                    "atmosphere": "AIR",
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "60"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "CARBON",
+                                        "film_topology": "HOLEY",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "80"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "298.15"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "details": "Vitrification was carried out after 3-3.5s of blotting. ",
+                                "instrument": "LEICA EM GP"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

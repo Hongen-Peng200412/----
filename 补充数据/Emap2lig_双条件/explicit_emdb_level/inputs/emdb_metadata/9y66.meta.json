@@ -1,0 +1,1441 @@
+{
+    "_id": "68c73d2b6e5018e151660967",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "ORCID": "0000-0001-9656-6639",
+                    "instance_type": "author",
+                    "valueOf_": "Shin H"
+                },
+                {
+                    "ORCID": "0000-0001-9389-2981",
+                    "instance_type": "author",
+                    "valueOf_": "Pigli Y"
+                },
+                {
+                    "ORCID": "0000-0002-3467-341X",
+                    "instance_type": "author",
+                    "valueOf_": "Pena Reyes T"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Fuller JR"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Olorunniji FJ"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Rice PA"
+                }
+            ]
+        },
+        "composite_map": true,
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-02-11T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "2223480",
+                    "country": "United States",
+                    "funding_body": "National Science Foundation (NSF, United States)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "2223480",
+                    "country": "United Kingdom",
+                    "funding_body": "UK Research and Innovation (UKRI)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "2223480",
+                    "country": "United Kingdom",
+                    "funding_body": "Biotechnology and Biological Sciences Research Council (BBSRC)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-09-08T00:00:00",
+            "header_release": "2026-02-04T00:00:00",
+            "map_release": "2026-02-04T00:00:00",
+            "update": "2026-02-11T00:00:00"
+        },
+        "keywords": "Site-specific DNA Recombinase, Large serine integrase, DNA binding domains, Recombinase, Resolvase, Zinc ribbon recombinase, RECOMBINATION",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 3,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 4,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 5,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-04T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "em_admin",
+                                        "pdbx_database_related"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "em_admin",
+                                        "pdbx_database_related"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-02-11T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "attLsym bound serine integrase complex in the dimeric state"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0001-9656-6639",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Shin H"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Pigli Y"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Pena Reyes T"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Fuller JR"
+                        },
+                        {
+                            "ORCID": "0000-0001-9389-2981",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Olorunniji FJ"
+                        },
+                        {
+                            "ORCID": "0000-0002-3467-341X",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Rice PA"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "39803483"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1101/2025.01.03.631226"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2692-8205"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "bioRxiv",
+                    "journal_abbreviation": "bioRxiv",
+                    "published": true,
+                    "title": "Structural basis of directionality control in large serine integrases",
+                    "year": "2025"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "details": "consensus map of 9DXJ",
+                    "emdb_id": "EMD-47220",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                },
+                {
+                    "details": "focused map (half complex) of 9DXJ and 9DXH (full complexes)",
+                    "emdb_id": "EMD-47206",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                },
+                {
+                    "details": "consensus map of 9DXH",
+                    "emdb_id": "EMD-47205",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                },
+                {
+                    "details": "consensus map of 9DXF",
+                    "emdb_id": "EMD-47181",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                },
+                {
+                    "details": "focused map (half complex) of 9DXF and 9DXD",
+                    "emdb_id": "EMD-47178",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                },
+                {
+                    "details": "consensus map of 9DXD",
+                    "emdb_id": "EMD-47175",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "9DXG",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "details": "attPmm bound large serine integraes and RDF complex in the dimeric state",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "9DXF",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "details": "attLmm bound large serine integrase and RDF complex in the post-rotation state",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "9DXD",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "details": "attLmm bound large serine integrase and RDF complex in the pre-rotation state",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "9DXK",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "details": "attPmm bound large serine integrase complex in the tetrameric state",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "9DXJ",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "details": "attPmm and attBmm bound large serine integrase complex in the post-rotation state",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "9DXH",
+                    "content_type": "unspecified",
+                    "db_name": "PDB",
+                    "details": "attPmm and attBmm bound large serine integrase complex in the pre-rotation state",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-47220",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "consensus map of 9DXJ",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-47206",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "focused map (half complex) of 9DXJ and 9DXH (full complexes)",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-47205",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "consensus map of 9DXH",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-47181",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "consensus map of 9DXF",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-47178",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "focused map (half complex) of 9DXF and 9DXD",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-47175",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "consensus map of 9DXD",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-72552",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "attLmm bound serine integrase complex in the dimeric state",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9y66",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-72552",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "annotation_details": "focused map (attB side)",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 352,
+                        "row": 352,
+                        "sec": 352
+                    },
+                    "file": "emd_72552_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-72552::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        }
+                    },
+                    "size_kbytes": 174457,
+                    "spacing": {
+                        "x": 352,
+                        "y": 352,
+                        "z": 352
+                    },
+                    "statistics": {
+                        "average": 0.00017912145,
+                        "maximum": 0.9613886,
+                        "minimum": -0.4392583,
+                        "std": 0.01353633
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "consensus map",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "255.6"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "255.6"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "255.6"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 240,
+                        "row": 240,
+                        "sec": 240
+                    },
+                    "file": "emd_72552_additional_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-72552::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        }
+                    },
+                    "size_kbytes": 55297,
+                    "spacing": {
+                        "x": 240,
+                        "y": 240,
+                        "z": 240
+                    },
+                    "statistics": {
+                        "average": 0.00073888205,
+                        "maximum": 0.21676782,
+                        "minimum": -0.07478847,
+                        "std": 0.006785531
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "focused map (Cat domains)",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 352,
+                        "row": 352,
+                        "sec": 352
+                    },
+                    "file": "emd_72552_additional_3.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-72552::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        }
+                    },
+                    "size_kbytes": 174457,
+                    "spacing": {
+                        "x": 352,
+                        "y": 352,
+                        "z": 352
+                    },
+                    "statistics": {
+                        "average": 0.00011038715,
+                        "maximum": 1.1111891,
+                        "minimum": -0.53433454,
+                        "std": 0.013460482
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "focused map (attP side)",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 352,
+                        "row": 352,
+                        "sec": 352
+                    },
+                    "file": "emd_72552_additional_4.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-72552::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        }
+                    },
+                    "size_kbytes": 174457,
+                    "spacing": {
+                        "x": 352,
+                        "y": 352,
+                        "z": 352
+                    },
+                    "statistics": {
+                        "average": 0.00017925072,
+                        "maximum": 0.95493585,
+                        "minimum": -0.408106,
+                        "std": 0.012839431
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "focused map (Coiled coils)",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "374.88"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 352,
+                        "row": 352,
+                        "sec": 352
+                    },
+                    "file": "emd_72552_additional_5.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-72552::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        }
+                    },
+                    "size_kbytes": 174457,
+                    "spacing": {
+                        "x": 352,
+                        "y": 352,
+                        "z": 352
+                    },
+                    "statistics": {
+                        "average": 0.000109343026,
+                        "maximum": 0.9429699,
+                        "minimum": -0.38900742,
+                        "std": 0.012193736
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "half map A",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "255.6"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "255.6"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "255.6"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 240,
+                        "row": 240,
+                        "sec": 240
+                    },
+                    "file": "emd_72552_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-72552::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        }
+                    },
+                    "size_kbytes": 55297,
+                    "spacing": {
+                        "x": 240,
+                        "y": 240,
+                        "z": 240
+                    },
+                    "statistics": {
+                        "average": 0.000516262,
+                        "maximum": 0.24763604,
+                        "minimum": -0.10350576,
+                        "std": 0.013292328
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "half map B",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "255.6"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "255.6"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "255.6"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 240,
+                        "row": 240,
+                        "sec": 240
+                    },
+                    "file": "emd_72552_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-72552::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.065"
+                        }
+                    },
+                    "size_kbytes": 55297,
+                    "spacing": {
+                        "x": 240,
+                        "y": 240,
+                        "z": 240
+                    },
+                    "statistics": {
+                        "average": 0.0005189289,
+                        "maximum": 0.2464683,
+                        "minimum": -0.08977763,
+                        "std": 0.01328758
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "composite map",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "374.88"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "374.88"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "374.88"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.006,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 352,
+            "row": 352,
+            "sec": 352
+        },
+        "file": "emd_72552.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-72552::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "1.065"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "1.065"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "1.065"
+            }
+        },
+        "size_kbytes": 174457,
+        "spacing": {
+            "x": 352,
+            "y": 352,
+            "z": 352
+        },
+        "statistics": {
+            "average": 0.00055990345,
+            "maximum": 2.2580824,
+            "minimum": -0.02089846,
+            "std": 0.016361032
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.06323206599999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Site-specific recombinase"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 66797,
+                            "valueOf_": "Spbetavirus SPbeta"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 866768,
+                            "valueOf_": "Escherichia coli 'BL21-Gold(DE3)pLysS AG'"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O64015"
+                            }
+                        ],
+                        "string": "MELKNIVNSYNITNILGYLRRSRQDMEREKRTGEDTLTEQKELMNKILTAIEIPYELKMEIGSGESIDGRPVFKECLKDL EEGKYQAIAVKEITRLSRGSYSDAGQIVNLLQSKRLIIITPYKVYDPRNPVDMRQIRFELFMAREEFEMTRERMTGAKYT YAAQGKWISGLAPYGYQLNKKTSKLDPVEDEAKVVQLIFNIFLNGLNGKDYSYTAIASHLTNLQIPTPSGKKRWNQYTIK AILQNEVYIGTVKYKVREKTKDGKRTIRPEKEQIVVQDAHAPIIDKEQFQQSQVKIANKVPLLPNKDEFELSELAGVCTC SKCGEPLSKYESKRIRKNKDGTESVYHVKSLTCKKNKCTYVRYNDVENAILDYLSSLNDLNDSTLTKHINSMLSKYEDDN SNMKTKKQMSEHLSQKEKELKNKENFIFDKYESGIYSDELFLKRKAALDEEFKELQNAKNELNGLQDTQSEIDSNTVRNN INKIIDQYHIESSSEKKNELLRMVLKDVIVNMTQKRKGPIPAQFEITPILRFNFIFDLTATNSFH"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.01943659"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attLsym"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 66797,
+                            "valueOf_": "Spbetavirus SPbeta"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "(DG)(DC)(DA)(DG)(DC)(DA)(DT)(DG)(DT)(DC)(DA)(DT)(DT)(DA)(DA)(DT)(DA)(DT)(DC)(DA) (DG)(DT)(DA)(DC)(DA)(DG)(DA)(DT)(DA)(DT)(DA)(DG)(DC)(DT)(DG)(DT)(DA)(DT)(DA)(DT) (DT)(DA)(DA)(DG)(DA)(DT)(DA)(DC)(DT)(DT)(DA)(DC)(DT)(DA)(DC)(DA)(DA)(DA)(DA)(DA) (DA)(DA)(DA)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.019386469"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "attLsym"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 66797,
+                            "valueOf_": "Spbetavirus SPbeta"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DT)(DG)(DT)(DA)(DG)(DT)(DA)(DA)(DG)(DT)(DA)(DT)(DC) (DT)(DT)(DA)(DA)(DT)(DA)(DT)(DA)(DC)(DA)(DG)(DC)(DT)(DA)(DT)(DA)(DT)(DC)(DT)(DG) (DT)(DA)(DC)(DT)(DG)(DA)(DT)(DA)(DT)(DT)(DA)(DA)(DT)(DG)(DA)(DC)(DA)(DT)(DG)(DC) (DT)(DG)(DC)"
+                    }
+                },
+                {
+                    "formula": "ZN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "6.5409e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ZINC ION"
+                    },
+                    "number_of_copies": "2"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Dimeric complex of attLsym bound large serine integrases"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "details": "DNAs synthesized from Integrated DNA Technologies (IDT)",
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Dimeric complex of attLsym bound large serine integrases"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 66797,
+                                "valueOf_": "Spbetavirus SPbeta"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING ONLY"
+                        },
+                        "final_angle_assignment": {
+                            "projection_matching_processing": {},
+                            "type_": "PROJECTION MATCHING"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 263209,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.31"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.6.0"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.6.0"
+                                    }
+                                ]
+                            },
+                            "type_": "RANDOM ASSIGNMENT"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "65.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOQUANTUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.9000000000000001"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.9"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "100.0"
+                                        },
+                                        "formula": "NaCl",
+                                        "instance_type": "component",
+                                        "name": "sodium chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "20.0"
+                                        },
+                                        "formula": "C4H11NO3",
+                                        "instance_type": "component",
+                                        "name": "Tris"
+                                    }
+                                ],
+                                "details": "20mM Tris-HCL pH 8, 100mM NaCl",
+                                "ph": 8.0
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "8"
+                            },
+                            "grid": {
+                                "material": "COPPER",
+                                "mesh": 400,
+                                "model": "Quantifoil R1.2/1.3",
+                                "support_film": [
+                                    {
+                                        "film_material": "CARBON",
+                                        "film_topology": "HOLEY",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "291.15"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "instrument": "FEI VITROBOT MARK II"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

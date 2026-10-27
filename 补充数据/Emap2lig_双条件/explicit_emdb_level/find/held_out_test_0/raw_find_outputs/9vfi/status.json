@@ -1,0 +1,17 @@
+{
+  "pdb_id": "9vfi",
+  "emdb_id": "EMD-65025",
+  "level": 0.38,
+  "effective_threshold": 0.19,
+  "source": "AUTHOR",
+  "metadata_path": "/storage/penghongen/AdaLigand/Ori_Data/reports/meta/9vfi.meta.json",
+  "metadata_sha256": "642e2b71af8a7724bd81ce8cb7a6249407209d953a03171db0fa4a9c2b9bb96a",
+  "contour_ratio": 0.5,
+  "input_map": "/storage/penghongen/AdaLigand/Ori_Data/raw/emdb_maps/emd_65025.map.gz",
+  "normalization_mode": "explicit_emdb_level",
+  "output_dir": "/storage/penghongen/Emap2lig/contour_level_20261026/find/held_out_test_0/raw_find_outputs/9vfi",
+  "blobs_dir": "/storage/penghongen/Emap2lig/contour_level_20261026/find/held_out_test_0/raw_find_outputs/9vfi/find_blobs",
+  "blob_count": 23,
+  "status_code": 0,
+  "status": "ok"
+}

@@ -1,0 +1,36 @@
+{
+  "mapped_blob_count": 1,
+  "official_blob_count": 1,
+  "official_probability": "/storage/penghongen/Emap2lig/contour_level_20261026/find/held_out_test_0/raw_find_outputs/9swa/find_maps/ligand.mrc",
+  "pdb_id": "9swa",
+  "source_origin_xyz": [
+    86.0,
+    86.0,
+    85.0
+  ],
+  "source_shape_zyx": [
+    251,
+    249,
+    249
+  ],
+  "source_voxel_size_xyz": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "target_origin_xyz": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "target_shape_zyx": [
+    420,
+    420,
+    420
+  ],
+  "target_voxel_size_xyz": [
+    0.9999999403953552,
+    0.9999999403953552,
+    0.9999999403953552
+  ]
+}

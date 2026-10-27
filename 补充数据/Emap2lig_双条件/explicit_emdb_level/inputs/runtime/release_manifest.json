@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "release_id": "Emap2lig_3c489443d595",
+  "project_name": "Emap2lig",
+  "source_root": "/home/penghongen/My_Project/Map_Ligand/Emap2lig",
+  "created_at": "2026-10-26T20:16:48+0800",
+  "content_sha256": "3c489443d5950c50e2c548c1660f27b66d3e97e70e5ca6a681aa597844b42e21",
+  "excluded": [".git/", "__pycache__/", ".pytest_cache/", "*.pyc"],
+  "git_commit": "",
+  "git_branch": "",
+  "git_dirty": ""
+}

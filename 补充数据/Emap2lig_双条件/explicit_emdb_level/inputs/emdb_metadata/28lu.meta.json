@@ -1,0 +1,2428 @@
+{
+    "_id": "69890b8dd785ce0905730cdc",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "ORCID": "0000-0002-2251-3363",
+                    "instance_type": "author",
+                    "valueOf_": "Waltz F"
+                },
+                {
+                    "ORCID": "0000-0002-0941-4387",
+                    "instance_type": "author",
+                    "valueOf_": "Kater L"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Engel BD"
+                }
+            ]
+        },
+        "composite_map": true,
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-01T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "216094",
+                    "country": "Switzerland",
+                    "funding_body": "Swiss National Science Foundation",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "M822.00045",
+                    "country": "Switzerland",
+                    "funding_body": "Swiss State Secretariat for Education, Research and Innovation",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2026-02-05T00:00:00",
+            "header_release": "2026-04-01T00:00:00",
+            "map_release": "2026-04-01T00:00:00",
+            "update": "2026-04-01T00:00:00"
+        },
+        "keywords": "chloroplast, ribosome, translation, chlororibosome",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-01T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Structure of the Chlamydomonas reinhardtii chlororibosome with factor pY"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0002-2251-3363",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Waltz F"
+                        },
+                        {
+                            "ORCID": "0000-0001-6710-2579",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Lehner PA"
+                        },
+                        {
+                            "ORCID": "0009-0006-8746-1222",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Van der Stappen P"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Kater L"
+                        },
+                        {
+                            "ORCID": "0000-0001-5843-2795",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Pfeffer S"
+                        },
+                        {
+                            "ORCID": "0000-0002-0941-4387",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Engel BD"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41727112"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.64898/2026.02.07.704542"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "2692-8205"
+                        }
+                    ],
+                    "journal": "bioRxiv",
+                    "journal_abbreviation": "bioRxiv",
+                    "published": true,
+                    "title": "Chloroplast-encoded small subunit extensions reshape the Chlamydomonas chlororibosome.",
+                    "year": "2026"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "details": "consensus map",
+                    "emdb_id": "EMD-56560",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "consensus EM volume"
+                    }
+                },
+                {
+                    "details": "SSU focus",
+                    "emdb_id": "EMD-56564",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "details": "LSU focus",
+                    "emdb_id": "EMD-56563",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-56560",
+                    "content_type": "consensus EM volume",
+                    "db_name": "EMDB",
+                    "details": "consensus map",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-56564",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "SSU focus",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-56563",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "LSU focus",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-56602",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Structure of the Chlamydomonas reinhardtii chlororibosome with factor pY",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "28lu",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-56602",
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "544.3072"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "544.3072"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "544.3072"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.107,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 512,
+            "row": 512,
+            "sec": 512
+        },
+        "file": "emd_56602.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-56602::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "1.0631"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "1.0631"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "1.0631"
+            }
+        },
+        "size_kbytes": 536871,
+        "spacing": {
+            "x": 512,
+            "y": 512,
+            "z": 512
+        },
+        "statistics": {
+            "average": 0.002138761,
+            "maximum": 1.5380076,
+            "minimum": -0.28945732,
+            "std": 0.023718912
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.048345176"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Ribosomal protein S1 homologue"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q70DX8"
+                            }
+                        ],
+                        "string": "MRLSARTLAQRASLPARSTGVVSRRSLVAPAPARKANLATRVAAIEEQQTSFQGDEQPVEAALDPASILDVDPAAVEEMD LHELDQAQEDLLKWMMLDEATQEEDLDEMVDYDDFGDEEYADMYEEVEEMLEAVDYEFKVGDKVSGTVIEVDDDGAYVEI GAKAIAFCPVTECSFARLKTPLEALRPGMKRDFMVVEDEEEYGQVIVSLAAMEATTFWQRIRQLQEEDITVTVSVESVNK GGMLVKFGIYDGFIPVSQFGPSITPDNMESLVGFELQVKFLEVDEEAERLVFSHKRASSTVSNDIQGFKVGDVVAGVVQS VKPYGAFIDLGGVTGLLHVSQISHDRVLVLDKILQEGDKIKVMILSQDRERGRVTLSTKKLEPTPGDMLRDPQLVYEKAE EMAEQFRKRVEQAAQSAAEPQPDTLGAAPEGQPFVY"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.030082120999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS4c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P48270"
+                            }
+                        ],
+                        "string": "MSRYLGPRLRVIRRIGKLRGFTRKKPFRRVFKGFGGFKGKVIPPGQHGLTKLLKTRPYDSSESDYLIRLKVKQRLRFNYG ITERQLVNYVRKAKKIKESTGQVLLQFLEMRLDNIVFRLNMAPTIPAARQLISHGHIRVNNKKVNIPSYMCKPKDVISVA MKQRSLQLVNKNLQEYYRRMRFYKKRLEKTLPFILLKIKPLGLTSVTAAVELITKGNVRVNNKSVKTPNYICRPRDTVSL RTKQGIKKVFLKNYLKG"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.019096979"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "bS6c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8J5Y7"
+                            }
+                        ],
+                        "string": "MATMQKSSVAVRSSSSANLVAARPIAQRLCFQPVVRQSAQQQRSSVGRAMPKVVAAAVAADAAAETVKLPAGYHWYETMI ILKPTLSDEERDRELAKFEAYLNKEECFNINALVRGRSKLAYPIKKEWEGIYVLYSYLARRQTARAVQQLLSNPEAGAED TVLRHITLCKQ"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.019163799"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS7c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P48267"
+                            }
+                        ],
+                        "string": "MPRRPINKKRTLLPDPVYNSVSVHMLVNRVLKSGKKSVAYRIVYNALKEIGDVTQKNPVEVFEKALDNVTPRVEVKPRRR AGAIQMVPRVLRLGDRARANSLRWIMEACDKRSGQPMVTKLKSEILDAYKKTGFAIRKKEELHKIAIANAMYAKKPQVII NAINLLVD"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.015916647"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS8c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P59775"
+                            }
+                        ],
+                        "string": "MKSHGLINDSIGDMLTRIRNACLAKKSSVSIPFTRLNQNIAQILEQEGFIQTYQVSLDSQDLTIRLKYRSKKIYRGKKKE SCITNLKRISKPGLRIYSNHKDILRILGGTGIVIVSTPEGLMTDREARLRGIGGELLCSVW"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.018736728999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS10 domain-containing protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8IWQ1"
+                            }
+                        ],
+                        "string": "MAALTCRVRAFTTSRPQAARPQVGARPAVRRPVSIVRAVAESAVDVESYVDELDVPMAESTPLAAAGEKVRLRIRMRSYE KQLLEDCVAQIQAVAEATGAVFKGPVMLPTKRRIYCVLRSPHVNSNSREHFEIRSHHRLVDLKNLSAETVSMMMQWVPPS GVEVECSIA"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 7,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.014260867"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS11c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q7YKX3"
+                            }
+                        ],
+                        "string": "MAKQTRKLTTNKTKKKIFRGVVHIQAGHHNTIVTITNIRGEVLCWSSAGACGFRGKRKSTSFAAKKAAETVARKSRDFTM KAAKILVTGPGQGRESAIREIFKAGIKVSVIREKTGIPHNGCRPPKKRSV"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 8,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.014637428999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS12c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P14149"
+                            }
+                        ],
+                        "string": "MPTIQQLIRSARKKITKKTKSPALKSCPQRRGICLRVYTVTPKKPNSALRKVARVRLTTGFEVTAYIPGVGHNLQEHAVV LVRGGRVKDLPGVRYHIVRGSLDTAGVKNRVQSRSKYGVKMGSKTAAKTAGKK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 9,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.018561682"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "uS13c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8JDP6"
+                            }
+                        ],
+                        "string": "MQTLSACRCVAGARPFTAVRPLPAARPMQAAAPRRAPLHIMNLRVNNVEIPNSKRIEVSLQYIFGIGETTAQTILRDTGV ENKKTYELNEEEINKLRSEVEKYTTEADLRRVVAQNIKRLKDIGCYRGRRHIMGLPVRGQRTKTNARTRKGKAKTVANKK KATK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 10,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.011776143"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS14c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q9GGE2"
+                            }
+                        ],
+                        "string": "MAKKSMIQRELKRQKLVMKYATKRAALKEQIKQTTFLKEKLSLHRKLQQLPRNSSAVRLHNRCMITGRPKGYFRDFGLSR HVLREMAHQGLLPGVCKSSW"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 11,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.015817261"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "30S ribosomal protein S15"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8HWZ8"
+                            }
+                        ],
+                        "string": "MQALQCKSGVFGKAAVARPVRVAAPSRARLAVCASYKNQENINLEKVPAFKRHDADVGSSEVQVARLSARIMQISAHLAQ NKKDFAARRGLEAILSQRKSLLQYMYKTDRDMYDRMVSEYKIRSVIVGDTRGAARKSEERS"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 12,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.014474052"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "30S ribosomal protein S16, chloroplastic"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8JDN8"
+                            }
+                        ],
+                        "string": "MQALSAKRSLGSIQPFTSSRVAVARPARVATVIENRVALRFQRFGRKKLPFYRLVAIDSKKRRDGEPLEYLGWYDPLKKE TNLNAPAIKEWLAKGALPSETVENLLRKAYVMEPKVAKVVVPKDAVKV"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 13,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.011767698"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS17c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8JGS2"
+                            }
+                        ],
+                        "string": "MQSATMRTSAFRPAAVSRRSAVTVRAVQEVKGVVVSTKMNKTVVVEAERLATDVTYQKRKKVTKRYMAHDESGALRVGDF VRLDGTRPLSKTKRFSVTEVLRKAD"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 14,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.016315781999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein bS18c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O20032"
+                            }
+                        ],
+                        "string": "MRGLKSNKPKPRIQKVSVRKFRRKVLSLSQILSRLRQKRNQKIEQQKRNKPIKPLIPPKTLVIVLKEKPEKTLYNRRYID YKHSGLLQRYIGLGGKILPRRQTRLTAKQQRFVAKTIKTARVMGLLPFVSKERSFFK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 15,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.010463467"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS19c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P59776"
+                            }
+                        ],
+                        "string": "MSRSLKKGPFVADHLLKKIEKLNAKGKKVVIKTWSRSSMIVPPMIGHTIGVYNGREHIPVFVSDQMVGHRLGEFSPTRTY RGHAKKDKKAKR"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 16,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.018285581999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "bS20c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8JDN4"
+                            }
+                        ],
+                        "string": "MQSTMLRAASAVRAFQPAKPTFAPVSRPAVERGALVVMAAEGKDAQKKKMPSPVKRALLSEERRVYNKSHKSACATRVKK VVKLAETLVAAPSKTEEEVKNLEKLISEAYTEIDKAVVKGILHENTAARKKARCARWKKTVLMAAGLYKPAADSPDFARY QKLVKA"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 17,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.020793336"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "bS21c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8HPN4"
+                            }
+                        ],
+                        "string": "MLSTVTRQALAAKPFGTVQPRVAPRLAKCQMARKDSYMVEVEVAEDEPEDVAVRRYMKLVMQSRVVEKLRARRTKETKIE EYKRRFRERVEMRKAGIVDPTYDELYSAELDPKPFEDFFQLRRDEDPEGAYDGAGAGSDDIFGSFAGGTYTDTTRWGSGY PGGGYMNTSNSFGAQGGYMGGYMQ"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 18,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.033397237999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "30S ribosomal protein 3, chloroplastic"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8I8A3"
+                            }
+                        ],
+                        "string": "MMLVRQVPCLAQRASARSAVRSRPAPFTPARRVFARAQADAALLEDDEVAYEVTNEDFELDENDPDLLLGLEAVELMGSD VDAMTAAAVAAEMESAEDKEEAARAVEDVMASKLAAGELSEAELSKVAAAVGDLEGAELDDFVPALASDRYAEAAVSSDD KALMEPLKLSKGELRNLLPQDWDQINVDFFSNKKDENIPLPEYRLNVLWTDKNLAVAIDQVYSRGQVSPLTEYYFWPRQD AWEELRINLESRPWISERDRIILLNRLTQLINFWQDEEVKHTVEEARAEFPDCAFAIA"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 19,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.012985022"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "cS26/PSRP8"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8I8A6"
+                            }
+                        ],
+                        "string": "MLATPRASARPFTSARPAAKAPICPRRVTVRAAEEAVEAAPEAFEESMESGPRGRRSSVEKGMELKHFLPLPKPAHLVFI KPTVAVVAGTASRSSVGVKMSAGDQQLERYVVEYFARSVK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 20,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.06013686299999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Plastid-specific ribosomal protein-7"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q5QEB1"
+                            }
+                        ],
+                        "string": "MLRELGRTATVKAHGRSVLRPVRGPAGRRQVAFTGVRPSVRVFAEAPAAEQAAKAIKLEDVKEGSEYEGTVTTVEEFGAF VNFGANTNGLVHISKLASGFTKNAKDVVQPGQKVTVKVLSVDAEKKRVSLELKSAVAAEASAEESDDIITEPDREGADAT DDDEDVEVELEDGQVEVRADLPGFEDIPFVMEEADMDAEMSEAAIAALEADLDGAEIRYELEAPAYMEEVTGKVARIEDY GVFLEFEWNGKTLTGLLAKDEMKVPSSALSAEAQAALRAEWADTGFEMPAFVELPDDELDVKKYYQPGESVPAFVLESSL VDGRGISLTHFTDKEVSAEAVAAYEELEDDEDEELDKMMADAAGLEDEVLAFDPEALMEEDEGEEAGAAADAGDDAEYEG VSADGLEGANGNYALGATRSGLIKGKNGYQVAPMGLPSRPLNDAVTSSGLAILGTSEVDFDGDEVQLVDYWTSEAFDNIP KDVLKKLGLKMSYTEAGEAEFEERADFEATDVPFYLYGGDVESRAKEFVADLLSDDVDEAELPARAGRAPIVLAAAVQSQ"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 21,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.47637256199999994"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "16S rRNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "NC_005353.1"
+                            }
+                        ],
+                        "string": "CCAUGGAGAGUUUGAUCCUGGCUCAGGACGAACGCUGGCGGCAUGCUUAACACAUGCAAGUCGAACGAGCAAAGAUUUGU GUAGUGGCGAACGGGUGCGUAACGCGUAAGAACCUACCUAUCGGAGGGGGAUAACAUUGGGAAACUGUUGCUAAUACCCC AUACAGCUGAGGAGUGAAAGGUGAAAAACCGCCGAUAGAGGGGCUUGCGUCUGAUUAGCUAGUUGGUGGGGGUAACGGCC UCCCAAGGCCACGAGCAGUAGCUGGUCUGAGAGGAUGAUCAGCCACACUGGGACUGAGACACGGCCCAGACUCCUACGGG AGGCAGCAGUGAGGAAUUUUUCGCAAUGGGCGCAAGCGACGGAGCAAAGUGCCGCGUGCAGGAAGAAGGCCUGUGGGUCG UAAACUGCUUUUCUCAGAGAAGAAGUUCUGACGGUAUCUGAGGAAUAAGCACCGGCUAACUCUGUGCCAGCAGCC(G7M) CGGUAAUACAGAGGGUGCAAGCGUUGUCCGCAAUGAUUGGGCGUAAAGCGUCUGUAGGUGGCUCGUAAAGUCUAAUGUCA AAUACCAGGGCUCAACCUUGGACCGGCAUUGGAGUACUCACGAGCUUGAGUACGGUAGGGGCAGAGGGAAUUCCAUGUGG AGCGGUGAAAUGCGUAGAGAUAUGGAGGAACACCAGUGGCGAAGGCGCUCUGCUGGGCCGAAACUGACACUGAGAGACGA AAGCUGGGGGAGCGAAUAGGAUUAGAUACCCUAGUAGUCCCAGCCGUAAACUAUGGAGACUAAGUGCUGCCGCAAGCAGU GCUGUAGCUAACGCGUUAAGUCUCCCGCCUGGGGAGUAUGCUCGCAAGAGUGAAACUCAAAGGAAUUGACGGGGGACCGC ACAAGCGGUGGAUUAUGUGGAUUAAUUCGAU(2MG)(5MC)AACGCGAAGAACCUUACCAGGGUUUGACAUGUCAAGAAC CUCUCAGAAAUGGGAGGGUGCCCUAACGGACACUUGAACACAGGUGGUGCAUGGCUGUCGUCAGCUCGUGCUGUGAAGUG UAUAGUUAAGUCUCAUAACGAGCGCAACCCUCGUCUUUAGUUGCCAUUUGGUUCUCUAAAGAGACUGCCAGUGUAAGCUG GAGGAAGGUGAGGAUGACGUCAAGUCAGCAUGCCCCUUACAUCCUGGGCUUCACACGUAAUACAAUGGUUGGGACAAUCA GAAGCGACCUCGUGAGAGCUAGCGGAUCUGUUAAACCCAACCUCAGUUCGGAUUGUAGGCUGCAACUCGCCUACAUGAAG CCGGAAUCGCUAGUAAUCGCCAGUCAGCUAUAUGGCGGUGAAUACGUUCCCGGGUCUUGUACACACCG(4OC)CCGUCAC ACCAUGGAAGCUGGUUCUGCUCCAAGUCGUUACCCUAACCUUCGGGAGGGGGGCGCCUAAAGCAGGGCUAGUGACUAGGG UGAAGUCG(UR3)AACAAGGUAGGGCUACU(2MG)G(MA6)(MA6)GGUGGCCCUGGCUCAC"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 22,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.102698477"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS2c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A218N8X3"
+                            }
+                        ],
+                        "string": "MLNKKPPYLILSLIMIKTQKSKQTAVRKLIPGNVISLKITAMGANNVGINEFTFGIPVLVPNAKLGETVQAKVLKILASK KIAIAKLIKVVTKTNATETNNLAALTPGATLDVTITKLGPNSTGIADLGNNYNNVNKLIVKKSAITIGEKVTVLVTRVKN GYAFGVATVSTQRLNQVSTSLTQNSFKGTKFTVVLPKNAKRYLKHLVFKVTTATAQNLSVNGFEQTLFKKGAVGLDTRIN NQNGSAGNLTTVPTNTILFVKPNLGAKLGDKVQIQIIKFASIENGTLTYNVAIAKIIKLNPLSTPQKKAFVRSSLRQMLK SGMHYGEKAIKCNARMKNYVWTRKKGTDTKVEARPLIKKGRNLINLLKTRRCLTKALAQLTKYAAKGKTFLFVGTKKAAS GLVARAALFSKKAFFVNTRWLGGMLTNWKTILKSISKIRPILKEKQMIIKDILEKRQTIKARLIQKALLLRKKSKLMLKK GRLLIQMLKQNNSNSTSGKQAVRFLFTEKTNLLNTKRKEFVSKGILLLEKRQQLVVKRQELITQSQTLKSKAIQLTNTYR NLLNNLICSRKKLRELKALLLVSHELYLFKQQAKQDNQNLYMVSYNKFKTLNSDYILSNPPKEILNKMVSIIKGQGLVIK NNNLNLKTANNAKTLILSQLLSKFSLFVPTIKTSINNLQNYISTQKTALNKVLALLNVVKTKMNVYVTLKTKLVAELRQI KQTLQTERNIIRVLRRKLKQIAAQKRFIKFLPKLRYLPTPVTKIEQTARFLVKKFVDPKMKYPMDSIYDKKLSRQSKKVA ASRKKKWQRLEKYLGGISNMTKIKEKQIANNVAIIIGQQEEMNAVRECQKLGIKMFHIVDTNCNPGLADHFIPANDDARN SIKFILGKFLTRIRLAHKIKVKFKKTSLKK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 23,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.082015938"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS3c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q08365"
+                            }
+                        ],
+                        "string": "MGQKVHPLGFRVGITKKHQSQWFARFQKYAYSQSVFEDHMLRTTLVNLFSNLEKESALATKQSKNRGATQPKAPKITQIK IERGLIPYEIGIQIHSNDCLSITKAIDNIKVSKDLVTNLQKTRKYLFKAGTQLKNASMQVSDNLNVAEGENSTMLKTKTS ASGTSVLKKRTFKIQTQKPTKGKFVFKGKRKQKKKLSKAVFMRLKNIKRRFKKRQTIKKRYLNIISKGLLIRKKGNLIIR NVKIKRKNKTARLTSRKSQPTLRSGSNLRDNLAPVKSKMQRFNNRMSKKFANLFLTKLNKQFLVRLKAIMKFWHNQNVTK APLGYNKKWSLAKSYALINNLKAKYLAKDILSLGSLRVQKLRKLISILEKKSLVKMETLRKDFITFGTLSKTRAFGYYQM ITFLKQLKELVTKIKKQTIANVTTKQELCCYNKLALNKTKIQNLIRAKSKQTKSITQKVVNNFVKLVDDNQAMANESRKI KWISYLKDLVNKHRTENIFYYLATIATARKDLNALKRYTKQHANFLFGVNVENAKENPNALLQRVTKTLTQYSKNPLVNN DFENAEGLTKLQTAFLTQIESQRKMYKANLALTPKISIKFFSVKTTNLLEKASTVADSIVDALEKRKAFRGVIKKAKEDL MLRSRVTRVKGVKIQVAGRLNGAEIARSEWVRAGRVPLQTLRANIDYAYRTANTIYGIIGVKVWIFKGYSKI"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 24,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.072090727"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "uS5c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8J8M5"
+                            }
+                        ],
+                        "string": "MATIQSGVARAASRPQPKVAAGSISSLRVKPFTRATRSVLGAAPRQNVVPRAAEPEAVATEADDFTFSLSDAKKGNEYTA GDVEAALRFYSGEASAVGATNDEFVENVFGIEDADFFGDLDNNEAYDDEFIAAGIPEAAPKQRQGGKRGGEGEGAEDSDD IAAAKEAEAMKQIEEQMVLEAELQETGLDQEEEGTYKAVGPAVWDWMSDIAAEDDDEEISAVAAGGARSMAADVMAALPS DEEVFADLRNANLQDVDVETRDTIEFLLEDFDIENEVKAIPDNVEEVFSVPEFAGLGDADVARIDALLGEDISLPELDLS GLDFADIEDDGLEMSEEAVQKYVASLKSATGAELSEEQIKEIFADEPVQLVDVAAEAAVTMDGVDLTEPAIEALAESELV FNSVEDKLEDVDDVEEFRTELLALRAMPEANLEAPPEEEVEVLDQYLSASEQFIAAEEARKAQLAEKVIKGELSADVLEE EDGEYVDLEKELLMPDDMDDLVDADDFDDGENWQERIIELSRVTKVVKGGKLMGFRCTAIIGNGNGLVGVGCQAGREVAT AVKRALVDAKKSVVRVPLVGAGTIPHRVEAKFNAARCVMVPAADGTGVLAGSSIRSVLELAGVQNVLAKRIGCRSLLNNA RCAVAALEQLRTLQEVSKARGVPMDRLLLPSSK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 25,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.021062168"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Small ribosomal subunit protein uS9c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O20029"
+                            }
+                        ],
+                        "string": "MAILAKAVGRRKEAVAQVQIKEGNGLFIINNKSAQEYLHNDFYSLLAVKAPFDVLSTSKKADMVSPDLSLTNLESTFTNL MQFSGGENAVKFDTIVKVKGGGLMGQTEAIRLGISRALCLLSTNTNPSANQNNLPNIYIPEGEGEALAIPNASDIRKQLK DKGYLTQDSRVKERRKYGLKKARKASQYHKR"
+                    }
+                },
+                {
+                    "details": "The proper sequence is A8J8B2, but in Uniparc",
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 26,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.031825562"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Sigma 54 modulation/S30EA ribosomal protein C-terminal domain-containing protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A2K3DSW0"
+                            }
+                        ],
+                        "string": "MALTLHQQRMAQIACRQQASGRVSVRPVLQLASTRVPVPYGPNMAVVATRPARSGLVVRAQSAKAAAGTVRIIIQGRKLP VTDAIKLYVEEKVAKAVANFSHTLKEVDVTLSARGGDTGTHGKKEQKVEVTIYTLRNGVVRVEDAENNLYAAIDLVCDKI RAKLQKIKEKAISRGAWPGRAGPKEDVDEEDFQEYLKEVKMDTQLFDKEEQLQRQFAELNRIYPANVMRSKTVVLADPIT VEEAIDALEAVGHSFYVFREMTTDTVQIVYKRESGGYGVIVPQMRD"
+                    }
+                },
+                {
+                    "details": "Proper ID is A8IMN3 but sent to Uniparc",
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 27,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.00721533"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "cL38/PSRP6"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A835SZL0"
+                            }
+                        ],
+                        "string": "MFALSAVSSRNVACQASQPRHKGAKHHARSRPIKYNRADKNHGPAKYEPLPTPPPALIVVSKAESK"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 28,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.038858949"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "5S rRNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "X03271.1"
+                            }
+                        ],
+                        "string": "CCUUGGUGCUCUUUGCUCAGUUGGACCCACACCAAUCCAUCCCGAACUUGGUUGUGAAAAAGCUGAGGGGACUGAAGAAC UUUACGGGUCGCCGUCUGGAAUCUCAGUUCUAGUGCUAGGG"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 29,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.015149069"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "3S rRNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "UACGAAGCAGCUGAAUCCUGCACCAUAGAUGGUGAAAGUCCAGUAGU"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 30,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.01143135"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "bL33c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8I1D3"
+                            }
+                        ],
+                        "string": "MQSVLRSSASALTNPMMGNKMSYRVSAAPVPTTTAFREVTTMAKKKGVRLIVTIECTESKGEGATPSRYCTQKNRKNTPE RLELMKYNPNLRRYTLHKEVK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 31,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.012987529"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "bL34c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8HQG3"
+                            }
+                        ],
+                        "string": "MASMLMSRVAAAPVKAVACMRSAMTTRAIAPITARPATSSFMGGSFAGSSMTRVAPARGGLVVMANAKKSIACTKEGTNR KRRRTSGFKARMATKNGRKVIKARRAKGRHSLCPASEGKSGGKK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 32,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.012106230999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "50S ribosomal protein L35"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8JEP1"
+                            }
+                        ],
+                        "string": "MASLCMRSSLAPKVASRSSAFLASPVAPVRSVAPVKAAPTTVVVEAKLKTRKSAAKRFKVTGSGKVTARHAGKQHFNEKM TRDHIRDSSKMFVLSPANIYNATKCLPNSGVGGK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 33,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.004273327"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein bL36c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P59774"
+                            }
+                        ],
+                        "string": "MKVRASVKKMCDNCRVIKRKGKVMVICSNAKHKQRQG"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 34,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.03095577"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein uL2c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q8HTL2"
+                            }
+                        ],
+                        "string": "MGIRFLQAYTPGTRNRSVSDFSELTDKNSTPEKALTVSLHRAKGRNNRGIITCRHRGGGHKRLYRQIDFRRDKIGVTAKV VRIEYDPNRNARIALLRYEDGEKRYIIHPRGLNIGDIIQSDLNAPILIGNSLPLRNIPLGAEVHNVEFQPGSGGQLARSA GAMVEILAKEGNFVTIRLPSKEIRLVSKNCWATVGQVGNIEAYNLTIGKAGRTRWLGKRPTVRGSVMNPVDHPHGGGEGR APIGRSRPVTPWGRPALGQLTRKPKKYSNTLIVKKRKK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 35,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.027878425999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein uL3c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8JE35"
+                            }
+                        ],
+                        "string": "MALQQTRAFSGRMSLKSAAAPVRVSRASRARTVLVEARQFRKAMGVLGTKAGMMSYFTEDGLCVPATVIALEEGNVVTQV KTQDTDGYNAVQIGYKATAEKRVTKPELGHLKKAGVPPMRHLVEFKLKDRAAVEAYQPGQALDVAALLKEGEPVDIAGIT VGKGFQGTIKRWHHKRGAMSHGSKSHREHGSIGSATTPSRVFPGLKMAGQMGNVRMTVKNQSLLKVDTERHALVVKGSVP GKVGNVVEITPAKLVGVNW"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 36,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.025659525"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein uL4c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q84U22"
+                            }
+                        ],
+                        "string": "MQTMRVAFRPAATSRSTVVTRASAVAAPASIPYKAADGSSKGTQQLALKVAEDSAKGLVHRYLVMVQQNARQGTASTLTR SEVRGGGKKPYAQKGTGNARRGSSVSPLFPGGGVTFGPKPKDWSISMNKKERRLALATALQSATADMIVVESLAGKLQDT KTKSMVALLEKLGANAMERKVLLITKEERPDVTLAGRNIAKLTMNTASAISVFDVLNADHIIIEDEALAHVQSFYGAAAP ASA"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 37,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.020267668"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein uL5c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q8HTL1"
+                            }
+                        ],
+                        "string": "MTQRLKNLYTKTIVPKLTTNFNYSNMHEVPKIEKIVINRGIGDASQNQKIVESSLKELAMIAGQKGVVTRSKKAIAGFKL RQQMPVGVTVTLRGDRMYGFLDRLIHLALPRVRDFQGISSKSFDKKGNYSLGLEEQLMFPEIEYDKIDQVRGMDISIVTT AKTQEEGLALLKEFGLPFK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 38,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.022275267999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Plastid ribosomal protein L6"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8J503"
+                            }
+                        ],
+                        "string": "MLTTRVKPFRAAAVSRSSRLCVVAKDSRIGRAPITVPKGVTVTLEGQLVRVKGPNGTLEQTLSPLVKIEQADGKLKLFKL ADDRVAMSQHGLNRSLVNNLVVGVSTGFEKRMEMVGTGYRAAVAGKDLTLNVGYSKPRVLAIPEGLKVVVEKNTTLVISG ADKVKVGDFCATIRRQRPPEPYKGKGIRYAGEVIKLKEGKGAGGKKK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 39,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.022043705"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein bL9c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A2K3D5T7"
+                            }
+                        ],
+                        "string": "MRGAPVSRAAFKAAPVRAASSRTALVVEANKKVAKKTKIILISDIPNVGKEGEIKTVPVGYWRNFLLPNGMAKIASEGIL NQIRAKKEDEIRKKLEEKAQAQAFANALTTIGKFLLKKKTGEKDQIYGSVQVQEIADAIYQQTGRNVSDCEITVPEIKSV GTYECTIRLHPEVVGTFSVVIQKEKNQIKVTTTEPKKAKK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 40,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.025941159999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "uL10c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8HVP7"
+                            }
+                        ],
+                        "string": "MQSSTMTLRGQRSQFGAKAFTSARVQRASLQVTNAITRQKKEQVVEVLKGKLEKSTVVFGLRFKGLDVPTVQKFRKILPA NTSVYVTKNSLMKVAVSQTKGWEALADKGCTGENAWVFVNEEEIAETVKAYFKFEEDLFVEAKKQAAKNVEVKRPTEVSC AVMSGQYLSPAELKRCENLPTKDQLYATIARLAKQPAQKLAVGIKAVPNKLAIAIKKVSELDDDKTKTVASVAKA"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 41,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.018562955000000003"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein uL11c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8ICE4"
+                            }
+                        ],
+                        "string": "MAAVMPRSGVCLPTRSARLAFAPARVATANRKVTTMAAKVTGKIKLALPAGKANPAPPVGPALGSKGVNIMAFCKEYNAQ TSKMIGDIIPVEITVYEDRSFTFVLKTSPASILLKKAAGIDRGASKPNKENVGQVTRKQVAEIAAKKLVDTNATKVESVV RMIEGTAKNMGIKIVD"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 42,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.024590453"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "uL13c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8HWZ6"
+                            }
+                        ],
+                        "string": "MALTASKLSGRTAFTTERRVAVRAAFQSTRVAARVAPVSRVQSVVCKASATEFKGDLLNKSYYPTSADASNVNKRWYVID AEGQTLGRLASLAALYIRGKHLPTYTPSMDMGAYVIVINADKVTVSGKKPAAKTYFRHVTGRPGSWTIESFNELQARLPE RIIERAVKGMLPKGALGRDIKLHLKVYKGTKHDHEAQQPQDITKEISIKPKNGPGAAVLKAAKAQ"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 43,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.013466754999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein uL14c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P11094"
+                            }
+                        ],
+                        "string": "MIKPLSYLNVADNSGARELMCIRALGGSYRESANIGDVIIAVVKDALPNMPVKRSDIVRAVIVRTRKGIRRENGMAIRFD DNAAVIINKEGNPRGTRVFGPIARELRDKNFTKIVSLAPEVL"
+                    }
+                },
+                {
+                    "details": "Proper UNIPROT ID is A8JAL6 that has been sent to UniParc.",
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 44,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.025570533"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "uL15c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "MQVASRASVRPFTAARQPRSLVVVNASSDARLRLHNLSPEPGSRRDEKRKGRGYAAGQGGTCGFGNRGQKARSGPSVRPG FEGGQTPLYRRLPKLRGIAGGMSAGLPDFVVVNLDDLEKHFNAGEDVTLAAVKEKVKSISGRDASLPLKVLGTGSLSKSL NVHATAFSESAKAAIEAAGGKAEVLAAKTKWTKKVADMAAKGMDYEKEKLKKRIDNLKAKGMFEERVPKAKPAAAAAGKK K"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 45,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.015500424999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein uL16c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P05726"
+                            }
+                        ],
+                        "string": "MLSPKRTKFRKPHRGHLRGKATRGNKIVFGDFALQAQEPCWITSRQIEAGRRVLTRYVRRGGKLWIRIFPDKAVTMRPAG TRMGSGKGAPDYWVAVVHPGKILYEMQGVSETIARQAMRIAAYKMPVKTKFLTKTV"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 46,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.019188451"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein bL17c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8I3M4"
+                            }
+                        ],
+                        "string": "MATLQMARSGVFTSRASAPRAVVRAVVPVAPRSAQTSSFLGEATLVAPSSGMKWTMMRHGNRVKHLGRPADQRKALIRSL VTEVIRHGAIRTTKVKAMVIRKYVDHMITLAKDGSLHARRQAMAFLYDKDLVGNLFENAPERYAERPGGYTRVKTEPVLR RGDATEMAVIELV"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 47,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.015818282"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein uL18c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8HNJ8"
+                            }
+                        ],
+                        "string": "MQSTMFKATLAPTRPVSRAFTPVVCKAANKKASTQARHARLRKKLSGTTERPRMAVYKSNEHIYVQVIDDSKGHTLVSAS TVMKDLKESLESGANINAATAVGKKVAELCKAHNIEKVCFDRGGFQYHGRIQAVAEAAREGGLVF"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 48,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.016626418"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "bL19c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8IW44"
+                            }
+                        ],
+                        "string": "MLASRSAVRPFVAGRRPTVACSAKLSLHTLRQDMARSQLKTNLPAVVVGDNVKVGLAVQEGNGKTRTQTLDGVIIAAHGA DSSRTLTFRRVFQGVGVELVMPVHSPAVQQIEFVRRGRVRRAKLFYLRERVGKSARLKEVVGVRAADVAAGKQ"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 49,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.013578073"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein bL20c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P26565"
+                            }
+                        ],
+                        "string": "MTRVKRGNVSRKRHKKILNMSKGFRGAASTLFRTANQQNMKALRYSYRNRRQKKRDFRRMWITRVNSAVRRYGLNYSEFM NYLKTHKIQLNRKVIAQLSICDPEAFMQLLLF"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 50,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.019516861"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "bL21c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8IP00"
+                            }
+                        ],
+                        "string": "MALANMLSRKAGFATSRTSAPFVASRVSPVAAKARVSSAAPSFSRQQQSIVCQAAATAEVAEKKVHPSPLTIAAPATYAI VEIGGTQMFVEPGKWYTCNRLKVDVGSKIKFGRVLALKHEGKLTVGKPYLENVAVEAEVIEELRGPKVIVYKMRPKKHYR KKQGHRQDLSKFMVTSISA"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 51,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.018959348"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein uL22c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q84U21"
+                            }
+                        ],
+                        "string": "MALRACSSSLVARSAARSVQPFRPAAVRPARIAPVARKTATVVCSAATDAPAAPVAEAVVGEVKSGVAHLKFQRGSADKI RRVLDVIRGRSYEEALVLCEYMPYRACEKIIKCLMSAAANAKHNKGALKTKLVVSECFADEGPVLKRARPRAQGRANLIM KPTFHMTIRVEERAQ"
+                    }
+                },
+                {
+                    "details": "N-ter extension present in the structure but not in the Uniprot sequence,N-ter extension present in the structure but not in the Uniprot sequence",
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 52,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.012565778"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "uL23c,Large ribosomal subunit protein uL23c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q8HTL3"
+                            }
+                        ],
+                        "string": "(UNK)(UNK)(UNK)(UNK)(UNK)(UNK)(UNK)(UNK)(UNK)(UNK)(UNK)(UNK)(UNK)(UNK)(UNK)(UNK) MLDLVKYPVITQKTYIALFKDRQYTFDVDLRLTKPQIKKVFETLFNVDVISVNTHIPPRQKIRVGLAQGYRPRYKRAIIT LKEGQSINYSLKNDN"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 53,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.018307616999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "KOW domain-containing protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8J9D9"
+                            }
+                        ],
+                        "string": "MATMLSARTSAFSGATLGRSVAPRAPISSRTTVCAPVAAYGDLPKIGGGRKWEHLELGPGGKALRVPMHVKKGDTVQIIA GKDKGKVGTIIKVLAKKGKVVVEGVNQGQKHLKPKMENETGQIKTLEFPIHHSNVMLYSKEKGVRSRVGHKVLETGKKVR YLVKTGEIID"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 54,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.017208759999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "bL27c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8INR7"
+                            }
+                        ],
+                        "string": "MLASTIQSSVLRSSVRAAPAPKRALVIQNAHKKGSGSTKNGRDSNAKRRGVKVYGGQPVKAGGIIVRQCGSTWNAGDNCM LGRDFTVFSTVEGVVVFDKKRVKPEIHVYPADHPKAVAALAKTHTKQPAEGQQSRAERRKATYTSRKATLSVAQVAAPTT P"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 55,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.021945557"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Large ribosomal subunit protein bL28c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8HWS8"
+                            }
+                        ],
+                        "string": "MSLSMRSSIVGQSLAFKPATAQVRVARVLTVDAKKVCDLTGKKRNKANSVCFSNKKSRKWQEPNLQNKKVFWEEGQRWVK LRICTKAIKTLENKGIATMAAEAGIDLWKLPFEDARPQRKAYLAENAGKVPVGSNPRAMKNAEKLASSKKQPKYPVYEEG GRIVFIRPGMEDLIFGKKEQQAAPEDQELKITLSE"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 56,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.014965353999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "uL29c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8HXM1"
+                            }
+                        ],
+                        "string": "MQVARAFTAVRPARSVAAPAQQRVSVVAMAKPTKLADFTGLSNEELVNKSNLLKRELAQTKWLQRTRGVGELKPGENQPQ PDPEKVPKGHLNKHIRRQIAQCLTLLRQRQAAEGVDRKEARRIEKRAALANGTM"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 57,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.010639327999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "bL32c"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8IUC3"
+                            }
+                        ],
+                        "string": "MLALSSSRSAAFSATVRVQPARQVALAPSRSSLIVEAAVPKKKTSKSKTAIRKAAWKKEVLPYVEQALFKAKLALKEGSR DSADKDMVVSTQTEEKSE"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 58,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.014777945999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "50S ribosomal protein L31"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A8J3Z3"
+                            }
+                        ],
+                        "string": "MATLTSSRVTAFSGSRLGNVRIGQARRGVTAARMAKEGIHPQWFEEAKVICNGVEVMTVGGTKATYNVDIYSGNHPFYQG NRTTMVLDDGQLNKFKKRFAELEELAVVPILQAGKAEDPSAKEKPAAAANKKGKKK"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 59,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.769308625"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "23S rRNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "CCCCGAGUAGCAUGGGGCACGUGAAAUCCCGUGUGAAUCAGCGAGGACCACCUCGUAAGGCUAAAUACUCCUGAGUGACC GAUAGCGAAAUAGUACCACGAGGGAAAGGUGAAAAGAACCCCUGUUGGGGAGUGAAAUAGAACAUGAAACCGUAUGCUGA CAAGCAGUGGGAGCAAGAGCUUGUGACCGCGUGCCUGUUGAAGAAUGAGCCGGCGACUUAUAGGGAGUGGCUGGGUUAAG GAGUAAAAUCCGGAGCCCAAGCGAAAGCGAGUCUGAAUAGGGCGCAAGUCACUUCUUAUGGACCCGAACCCGGGUGAUCU AUUCAUGGCCAGGAUGAAGCUUGGGUAACACCAAGUGGAGGUCCGAACCGACCGAUGU(5MU)GAAAAAUCGGCGGAUGA GCUGUGAAUAGGGGAGAAAUUCCAAUCGAACUCGGAGCUAGCUGGAUCUCCCCGAAAUGCGUUGAGGCGCAGCGGUAACG AGAACUGUCUUGGGGUAAAGCUACUGUUUCGAUGAGGGGGUCAUCCCGACUUACCAACUCGUGGCAAACUCAGAAUACAA GACAUGUCCGUAAACCAGUGAGACAGUGGGGGAUAAGCUUCAUUGUCAAGAGGGAAACAGCCCAGAUCACCAGCUAAGGC CCCUAAAUGGUCACUAAGUGGAAAAGGAUGUGAGAAUGCUGAAACAACCAGGAGGUUUGCUUAGAAGCAGCCACCCUUCA AAGAGUGCGUAAUAGCUCACUGGUAAAGCGUUCUUGCGCCGAUAAUGGCCGGGACUAAGUGACCUGCCGAAGCUGUGAUA UAAUUUAUAGGUAGGGGAGCGUUCCGCUCUCGGGUGAAGUUUUCACGUAAGUGGGGAUGGACGAAGCGGAAGUGAGAAUG UCGGCUUGAGUAACGAAAACAUUGGUGAGAAUCCAAUGCCCCGAAAACCUAAGGGUUCCUCCACUAGGUUCGUCCAUGGG GGGUUAGUCAGGACCUAAGACUAGGCCAAACGGCGUCGUCGAUGGAAAACAGGUUAAUAUUCCUGUACGAGUUAAAUUAU GAUCUGAGGGACGAAGGAGGCUAAGCUAGAACUGUUUUUGGAUUGCAGUGGAAGCGUUUAGACGUUGAGAGAUAGAAAAA AAGCUAUCUUGAGUGGAGACGUGAUCCCUAUUUGAUCGAGUAGCUAGUGAUGUCAUACUUCCAAGAAAAGCUCAUACAUC UUAUAAUUUAAUGACCUGUACCUGAAACCGACACAGGUAGGUUGGUAGAGAAUACCAAGGGGCGCGAGAGAACUCUCUCU AAGGAACUCGGCAAACUGGCCCCGUAACUUCGGAAGAAGGGGCACCCAUCCGUAACAAGGUGGGUCGCAGUGACCAGGCC CAGGCGACUGUUUACCAAAAACACAGGUCUCCGCAAAGUCGUAAGACAAUAUAUGGGGGCUGACGCCU(2MG)CCCAGUG CCGGAAGGUUAAGGAAGUUGGUUAUUUCGAAAAAAGCUGACGACCGAAGCCCCGGUGAACGGCGGUCGUAACUAUAACGA UCCUAAGGUAGCGAAA(5MU)UCAUUGUCGAGUAAGUUUCGAC(5MC)UGCACGAAAGGCGUAACGAUCUGGGCGCUGUC UCGGAGAGAGGCUCGGUGAAAUAGACUUGUCCCGUG(6MZ)AGAUGCGGACUACCUACACCUGGACAGAAAGACCCUAUG AAGCUUGACUGUAUCUUGGAAUUGGGUUUGGAAUCCUAAUGGGGAUCCUUGAAUCAGGACCCUUGACAGUUUCAGGUGGG CAGUUUAUUUG(OMG)GGCGAAUGCCUCCUAAAAGGUAACGGAGGCGUGCAAAGGUUCCCUCAGUCUGGACGGAAAUCAG ACAUUGAGUGUAAAGGCAAAAGGGAGCUUGACUGCAAGACCUACAAGUCGAGCAGGGGCGAAAGCCGGCCUUAGUGAUCC GACGGUGCCGCGUGGAAGGGCCGUCGCUCAACGGAUAAAAGUUACUCUA(2MG)GGA(H2U)AACAGGCUGAUCUUCCCC AAGAGUUCACAUCGACGGGAAGGUUUGGCA(OMC)CUCG(2MA)UGUCGGCUCAUCACAUCCUCGGUCUGUAGUAGGUCC GAAGGGUUGGGC(OMU)GUUCGCCCAUUAAAGUGGUACGUGAGCUGGGUUCAAAACGUCGUGAGACAGUUUGGUCCAUAU CCGGUGUAGGCGUUAGAGCAUUGAGAGUAGCCUUUCAUAGUACGAGAGGACCUGAAAGGACAUGCCAAUUGUGUACCAGU UCUCAUUCCAAUGGGAAACGCUGGGUAGCUACGCAUGGAUAGAUAACUGCUGAAAGCAUCUAAGUAGGAAGCUAAACUCA AGAUGAGUGCUCUCUAAGGCCGCGGCUAGACAAGCCGUUAUAUAGGUAUCAGGUGUACAGUCAGCAAUGGCUUUAGCCGA GAUAUACUAAAGGCCGUUU"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 60,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.088325664"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "7S rRNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 3055,
+                            "valueOf_": "Chlamydomonas reinhardtii"
+                        }
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "AAGGCGUACGGUGGAGACCUAGGCACUCAGAGACGAAGAAGGGCGCAGAUACCGGCGAUACGCUUCGGGGAGCUGGCAAC AAGCUUUGAUCCGAAGAUUCCCGAAUAGGGCAACCUCAUAGAACUACCUAUAUAAUUCAUAGUUAGGUAAGAGGCAACCC AGUGAACUGAAACAUCUAAGUAGCUGGAGGAAAAGAAAGCAAACGCGAUUCCCGUAGUAGCGGCGAGCGAACCGGGAACA GCCUAAACCUAUGUAUGUAGGGGUCGUGGGAA"
+                    }
+                },
+                {
+                    "formula": "K",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 61,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "3.9098e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "POTASSIUM ION"
+                    },
+                    "number_of_copies": "138"
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 62,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "322"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Chloroplast ribosome"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "name": {
+                        "valueOf_": "Chloroplast ribosome"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 3055,
+                                "valueOf_": "Chlamydomonas reinhardtii"
+                            },
+                            "strain": "mat3-4"
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "algorithm": "BACK PROJECTION",
+                            "number_images_used": 175058,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.6"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "40.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "TFS FALCON 4i (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            },
+                            "nominal_magnification": 75000.0
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "2.5"
+                            },
+                            "grid": {
+                                "material": "COPPER",
+                                "model": "Quantifoil R2/1",
+                                "pretreatment": {
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "20"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "CARBON",
+                                        "film_topology": "HOLEY",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

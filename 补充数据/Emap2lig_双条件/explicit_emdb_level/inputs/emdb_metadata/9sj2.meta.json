@@ -1,0 +1,756 @@
+{
+    "_id": "68be03eb6e5018e1514d78ab",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Sleutel M"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Sogues A"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Remaut H"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Conticello V"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Socorro A"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-06-10T00:00:00",
+            "processing_site": "PDBe"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "country": "Belgium",
+                    "funding_body": "Research Foundation - Flanders (FWO)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-08-29T00:00:00",
+            "header_release": "2026-06-10T00:00:00",
+            "map_release": "2026-06-10T00:00:00",
+            "update": "2026-06-10T00:00:00"
+        },
+        "keywords": "Fiber; Helical; Filament; Hyperthermophile; Calcium binding; Donor strand complementation; Pyrodictium abyssi; Extracellular matrix; Biomatrix; Sinusoidal filament, STRUCTURAL PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-06-10T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBe",
+            "last_processing": "PDBe"
+        },
+        "title": "Calcium coordinated ABPX fibers from Pyrodictium abyssi"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0003-3247-2187",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Sleutel M"
+                        },
+                        {
+                            "ORCID": "0000-0002-5752-6009",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Sogues A"
+                        },
+                        {
+                            "ORCID": "0000-0002-9775-4102",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Remaut H"
+                        },
+                        {
+                            "ORCID": "0000-0001-6940-6947",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Conticello V"
+                        },
+                        {
+                            "ORCID": "0009-0003-3121-2209",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Socorro A"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Calcium coordinated ABPX fibers from Pyrodictium abyssi"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-54935",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Calcium coordinated ABPX fibers from Pyrodictium abyssi",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9sj2",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-54935",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "annotation_details": "Post-processed with EMReady",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "277.5"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "277.5"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "277.5"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 555,
+                        "row": 555,
+                        "sec": 555
+                    },
+                    "file": "emd_54935_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-54935::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.5"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.5"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.5"
+                        }
+                    },
+                    "size_kbytes": 683816,
+                    "spacing": {
+                        "x": 555,
+                        "y": 555,
+                        "z": 555
+                    },
+                    "statistics": {
+                        "average": 0.008001908,
+                        "maximum": 16.019697,
+                        "minimum": -0.12371502,
+                        "std": 0.36325565
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "278.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "278.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "278.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 400,
+                        "row": 400,
+                        "sec": 400
+                    },
+                    "file": "emd_54935_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-54935::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.695"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.695"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.695"
+                        }
+                    },
+                    "size_kbytes": 256001,
+                    "spacing": {
+                        "x": 400,
+                        "y": 400,
+                        "z": 400
+                    },
+                    "statistics": {
+                        "average": 2.4335837e-05,
+                        "maximum": 0.10803449,
+                        "minimum": -0.07148203,
+                        "std": 0.00898104
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "278.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "278.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "278.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 400,
+                        "row": 400,
+                        "sec": 400
+                    },
+                    "file": "emd_54935_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-54935::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.695"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.695"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.695"
+                        }
+                    },
+                    "size_kbytes": 256001,
+                    "spacing": {
+                        "x": 400,
+                        "y": 400,
+                        "z": 400
+                    },
+                    "statistics": {
+                        "average": 2.3451616e-05,
+                        "maximum": 0.108163364,
+                        "minimum": -0.075466745,
+                        "std": 0.008972695
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_54935_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "Sharpened with B-factor -50",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "278.0"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "278.0"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "278.0"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.032,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 400,
+            "row": 400,
+            "sec": 400
+        },
+        "file": "emd_54935.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-54935::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.695"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.695"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.695"
+            }
+        },
+        "size_kbytes": 256001,
+        "spacing": {
+            "x": 400,
+            "y": 400,
+            "z": 400
+        },
+        "statistics": {
+            "average": 5.8518603e-05,
+            "maximum": 0.13656518,
+            "minimum": -0.067162484,
+            "std": 0.002491889
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.017492217"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "AbpX"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 391605,
+                            "valueOf_": "Pyrodictium abyssi DSM 6158"
+                        }
+                    },
+                    "number_of_copies": "5",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "string": "QWSETLSLSATISTGSLDVDIKANEATDVTTSSQYIDVSLSLTSTDSDQGNEQLSITIEKAYPGAEVNVTFTLENVGTIP ALATIKLNTDTIPSDVAACVNVKLYNAQGNPINTPYTIQLAPGEFEKFKLGIEIPSSCDLEENKKDAIQLNNIVEVDVEQ NVS"
+                    }
+                },
+                {
+                    "formula": "CA",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "4.0078e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "CALCIUM ION"
+                    },
+                    "number_of_copies": "15"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Helical assembly of AbpX protomers"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Helical assembly of AbpX protomers"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 391605,
+                                "valueOf_": "Pyrodictium abyssi DSM 6158"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "filament",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "NOT APPLICABLE"
+                        },
+                        "final_reconstruction": {
+                            "applied_symmetry": {
+                                "helical_parameters": {
+                                    "axial_symmetry": "C1",
+                                    "delta_phi": {
+                                        "units": "deg",
+                                        "valueOf_": "-53.971"
+                                    },
+                                    "delta_z": {
+                                        "units": "\u212b",
+                                        "valueOf_": "44.013"
+                                    }
+                                }
+                            },
+                            "number_images_used": 1572118,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.57"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "instance_type": "helical_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "helical",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "60.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "helical_microscopy",
+                            "microscope": "JEOL CRYO ARM 300",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.5"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.2"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "instance_type": "helical_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

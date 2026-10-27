@@ -1,0 +1,829 @@
+{
+    "_id": "68ec272a6e5018e151ca9c21",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Liu Y"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Weickert P"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Strecker J"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-29T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "funding_body": "Not funded",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-10-09T00:00:00",
+            "header_release": "2026-04-29T00:00:00",
+            "map_release": "2026-04-29T00:00:00",
+            "update": "2026-04-29T00:00:00"
+        },
+        "keywords": "tRNA endonuclease, cA4 activation, CRISPR associated Schlafen, Csx15, RNA BINDING PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "fsc",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "mask",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-29T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "cryoEM structure of CbCash filament with cA4 and tRNA Ile CAU"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0002-0000-1797",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Liu Y"
+                        },
+                        {
+                            "ORCID": "0009-0001-0653-0630",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Weickert P"
+                        },
+                        {
+                            "ORCID": "0000-0001-8953-5615",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Strecker J"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Prokaryotic Schlafen proteins cleave tRNAs during type III CRISPR immunity"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-73093",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "cryoEM structure of CbCash filament with cA4 and tRNA Ile CAU",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9ylu",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-73093",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "Half Map A Map with tRNA",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "352.68802"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "352.68802"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "352.68802"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 376,
+                        "row": 376,
+                        "sec": 376
+                    },
+                    "file": "emd_73093_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-73093::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.938"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.938"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.938"
+                        }
+                    },
+                    "size_kbytes": 212630,
+                    "spacing": {
+                        "x": 376,
+                        "y": 376,
+                        "z": 376
+                    },
+                    "statistics": {
+                        "average": 0.00015934923,
+                        "maximum": 0.3516738,
+                        "minimum": -0.18808168,
+                        "std": 0.022157434
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "Half Map B Map with tRNA",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "352.68802"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "352.68802"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "352.68802"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 376,
+                        "row": 376,
+                        "sec": 376
+                    },
+                    "file": "emd_73093_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-73093::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.938"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.938"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.938"
+                        }
+                    },
+                    "size_kbytes": 212630,
+                    "spacing": {
+                        "x": 376,
+                        "y": 376,
+                        "z": 376
+                    },
+                    "statistics": {
+                        "average": 0.00015390632,
+                        "maximum": 0.33537033,
+                        "minimum": -0.18661468,
+                        "std": 0.022143235
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "initial_model": [
+                        {
+                            "chain": {
+                                "initial_model_type": "experimental model",
+                                "source_name": "Other"
+                            },
+                            "details": "cryoSPARC ab initio",
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling",
+                    "refinement_protocol": "AB INITIO MODEL",
+                    "refinement_space": "REAL"
+                }
+            ]
+        },
+        "segmentation_list": {
+            "segmentation": [
+                {
+                    "file": "emd_73093_msk_1.map",
+                    "instance_type": "segmentation"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "Main Map with tRNA",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "352.68802"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "352.68802"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "352.68802"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.0351,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 376,
+            "row": 376,
+            "sec": 376
+        },
+        "file": "emd_73093.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-73093::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.938"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.938"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.938"
+            }
+        },
+        "size_kbytes": 212630,
+        "spacing": {
+            "x": 376,
+            "y": 376,
+            "z": 376
+        },
+        "statistics": {
+            "average": 0.00023898616,
+            "maximum": 0.65461814,
+            "minimum": -0.34463012,
+            "std": 0.013795707
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.033530633"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "CbCash"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 1805056,
+                            "valueOf_": "Chloroflexi bacterium 13_1_20CM_2_59_7"
+                        }
+                    },
+                    "number_of_copies": "8",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "sequence": {
+                        "string": "MDKLWRLLGNYVDSGRETRKVDLKREIEMKAGAGKFAKDVAAIANTIGGTGYLIIGVIDLKERKSNSPDDYVTGWNVTDL DGFSRWVNQSLSNYCNPIPRIEIEEMTHPVCGKKIGVIIIPRSLDCPHEIIRDGDGITKGMYVRRGADTFTASREELRAM MGGTDVRIVLNFLQPLTQLNREQIGQYLNARVYEVLEPRSLPIRLDENLSFVEQAKILLNETGLTPEEWRTLPLIVNLPG FSPLSSILLAEMQGRMSRLPHIIRMRPTPADRTIFEVAEVIALQDIRDKALEWSSGI"
+                    }
+                },
+                {
+                    "details": "tRNA Ile CAU",
+                    "instance_type": "rna",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.024445513999999998"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "tRNA Ile CAU"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 469008,
+                            "valueOf_": "Escherichia coli BL21(DE3)"
+                        }
+                    },
+                    "number_of_copies": "2",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "CP053602.1"
+                            }
+                        ],
+                        "string": "GGCCCCUUAGCUCAGUGGUUAGAGCAGGCGACUCAUAAUCGCUUGGUCGCUGGUUCAAGUCCAGCAGGGGCCACCA"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.001271866"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "cyclic-tetra-adenylate"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 32630,
+                            "valueOf_": "synthetic construct"
+                        }
+                    },
+                    "number_of_copies": "4",
+                    "sequence": {
+                        "string": "AAAA"
+                    }
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "2"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Octnary complex of CbCash filament with tRNA leucine fragments"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            }
+                        ]
+                    },
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "kDa/nm",
+                            "valueOf_": "280.87"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Octnary complex of CbCash filament with tRNA leucine fragments"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 32061,
+                                "valueOf_": "Chloroflexia"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "filament",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.6.1"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "applied_symmetry": {
+                                "point_group": "C1"
+                            },
+                            "number_images_used": 305770,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.65"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.6.1"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "ANGULAR RECONSTITUTION"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "c2_aperture_diameter": {
+                                "units": "\u00b5m",
+                                "valueOf_": "100.0"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "47.736"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "TFS FALCON 4i (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.5"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.5"
+                            },
+                            "nominal_magnification": 105000.0,
+                            "specialist_optics": {
+                                "energy_filter": {
+                                    "name": "GIF Bioquantum",
+                                    "slit_width": {
+                                        "units": "eV",
+                                        "valueOf_": "20"
+                                    }
+                                }
+                            },
+                            "specimen_holder_model": "FEI TITAN KRIOS AUTOGRID HOLDER"
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "25.0"
+                                        },
+                                        "formula": "HEPES",
+                                        "instance_type": "component",
+                                        "name": "(4-(2-hydroxyethyl)-1-piperazineethanesulfonic acid)"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "200.0"
+                                        },
+                                        "formula": "NaCl",
+                                        "instance_type": "component",
+                                        "name": "sodium chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "5.0"
+                                        },
+                                        "formula": "MgCl2",
+                                        "instance_type": "component",
+                                        "name": "magnicium chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "1.0"
+                                        },
+                                        "formula": "TCEP",
+                                        "instance_type": "component",
+                                        "name": "tris(2-carboxyethyl)phosphine"
+                                    }
+                                ],
+                                "details": "25mM HEPES pH 7.5, 200mM NaCl, 5mM MgCl2, 1mM TCEP",
+                                "ph": 7.5
+                            },
+                            "concentration": {
+                                "units": "mg/mL",
+                                "valueOf_": "0.4"
+                            },
+                            "details": "CbCash proteins incubated with tRNA Leu at 2:1 ratio, and add cA4 at 100uM before pluging.",
+                            "grid": {
+                                "material": "GOLD",
+                                "mesh": 300,
+                                "model": "Quantifoil R1.2/1.3",
+                                "pretreatment": {
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "90"
+                                    },
+                                    "type_": "GLOW DISCHARGE"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "CARBON",
+                                        "film_thickness": {
+                                            "valueOf_": "12.0"
+                                        },
+                                        "film_topology": "HOLEY",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "277.15"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "details": "Blot Force 15\nWait Time 0s\nBlot Time 3.5s. ",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

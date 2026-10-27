@@ -1,0 +1,402 @@
+{
+  "source_commit": "37b0d9e7ad2a1b18fa096d91f154619085cee907",
+  "purpose": "实际运行源码的只读证据快照；外部评价 release、环境和模型权重仍按原运行记录定位",
+  "files": {
+    "src/emap2lig/__init__.py": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/__init__.py": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/ccd.py": {
+      "size": 13075,
+      "sha256": "1ff539885a64dbd223bc27395b253a52cbc88fdb5139fe2db0f4668aad88ef1c",
+      "git_blob_sha256": "1ff539885a64dbd223bc27395b253a52cbc88fdb5139fe2db0f4668aad88ef1c",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/const.py": {
+      "size": 659,
+      "sha256": "d446c9a5f56247106aa3c8dd81a882fb607f7de09604794ebbd0da19b327026b",
+      "git_blob_sha256": "d446c9a5f56247106aa3c8dd81a882fb607f7de09604794ebbd0da19b327026b",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/dataset.py": {
+      "size": 22733,
+      "sha256": "bff218b9a4b2c131012d57c9cb4131c252bff81ab56eacb359dd1c1ac2d1b25c",
+      "git_blob_sha256": "bff218b9a4b2c131012d57c9cb4131c252bff81ab56eacb359dd1c1ac2d1b25c",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/download.py": {
+      "size": 943,
+      "sha256": "5566f2e4e7dcda0b3234fdfc398a6f756fc4edc290480abfe28a78042dcb1088",
+      "git_blob_sha256": "5566f2e4e7dcda0b3234fdfc398a6f756fc4edc290480abfe28a78042dcb1088",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/io/__init__.py": {
+      "size": 175,
+      "sha256": "6c7f33ce7ccc0963047cc5b89df1d61f70d8f6c0400069a81c49cb3efbefebda",
+      "git_blob_sha256": "6c7f33ce7ccc0963047cc5b89df1d61f70d8f6c0400069a81c49cb3efbefebda",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/io/map.py": {
+      "size": 5914,
+      "sha256": "d33c596a38a51c7bb06f254119a83040daaebf380b473d1cca24ed2100f46b63",
+      "git_blob_sha256": "d33c596a38a51c7bb06f254119a83040daaebf380b473d1cca24ed2100f46b63",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/io/mmcif.py": {
+      "size": 8798,
+      "sha256": "7c3536a13e2c2e7ba752c09f612822746be935bc6ceffab2bbaa21b9edb7a5a0",
+      "git_blob_sha256": "7c3536a13e2c2e7ba752c09f612822746be935bc6ceffab2bbaa21b9edb7a5a0",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/io/writer.py": {
+      "size": 13594,
+      "sha256": "be4128f1c33df446cebc960a3302e7a61b765206ac05b6e91752117328d95a27",
+      "git_blob_sha256": "be4128f1c33df446cebc960a3302e7a61b765206ac05b6e91752117328d95a27",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/map.py": {
+      "size": 17047,
+      "sha256": "3b3c63af8f99f4dc4ee264488172658ae27bf06421401f04327ed2327a9bf7c9",
+      "git_blob_sha256": "3b3c63af8f99f4dc4ee264488172658ae27bf06421401f04327ed2327a9bf7c9",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/simulate.py": {
+      "size": 5219,
+      "sha256": "9d779e99366ea279a5da98b71c56596c869ab150fa8390c0ef97fe541aa1ff16",
+      "git_blob_sha256": "9d779e99366ea279a5da98b71c56596c869ab150fa8390c0ef97fe541aa1ff16",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/transforms.py": {
+      "size": 3347,
+      "sha256": "2461e745362a0de65dd7c7fed3acac9c9d4433e8c5490c6c1c454fd388824339",
+      "git_blob_sha256": "2461e745362a0de65dd7c7fed3acac9c9d4433e8c5490c6c1c454fd388824339",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/data/types.py": {
+      "size": 8804,
+      "sha256": "61559c36f3d7b0c45f34779c25bd2898f4aeb0d2aa1965218e0deda86b75934e",
+      "git_blob_sha256": "61559c36f3d7b0c45f34779c25bd2898f4aeb0d2aa1965218e0deda86b75934e",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/emap2lig.yaml": {
+      "size": 3362,
+      "sha256": "688fb0e77b67948db4259e7cfb16d93b5a897fa0fa8758ba755bdb9a19539252",
+      "git_blob_sha256": "dedafb3014b9941d7bec0a0af303346efe6b8c35884daee4ac1d664080574348",
+      "export_source": "frozen_runtime_config_CRLF"
+    },
+    "src/emap2lig/frag.py": {
+      "size": 5416,
+      "sha256": "d0d64369cc22d3a5ac388af823df7532d92e55da6119c1758ba317f2e8497d10",
+      "git_blob_sha256": "d0d64369cc22d3a5ac388af823df7532d92e55da6119c1758ba317f2e8497d10",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/main.py": {
+      "size": 52595,
+      "sha256": "bcec0eadc5a5a503ca030577d2d66830f6917b207d25d874f82e5cf0505b21d4",
+      "git_blob_sha256": "bcec0eadc5a5a503ca030577d2d66830f6917b207d25d874f82e5cf0505b21d4",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/__init__.py": {
+      "size": 344,
+      "sha256": "a61a7cf2272342f620a95cff0cffd47904e4cb67e626cf504c72f096602b996f",
+      "git_blob_sha256": "a61a7cf2272342f620a95cff0cffd47904e4cb67e626cf504c72f096602b996f",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/__init__.py": {
+      "size": 1332,
+      "sha256": "0fa0c769f56d6527c8916395535896673145e8d47c4badc062954d739ef84204",
+      "git_blob_sha256": "0fa0c769f56d6527c8916395535896673145e8d47c4badc062954d739ef84204",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/attention.py": {
+      "size": 6567,
+      "sha256": "184b18ae5609b9fa1d5046d535c5bacd8e81cef3bed12cb3228f9d4980958db9",
+      "git_blob_sha256": "184b18ae5609b9fa1d5046d535c5bacd8e81cef3bed12cb3228f9d4980958db9",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/decoder.py": {
+      "size": 1298,
+      "sha256": "5eab7fcfd98093631c66f95a2420fee82253ff36695c1998e97b32581cf8be5a",
+      "git_blob_sha256": "5eab7fcfd98093631c66f95a2420fee82253ff36695c1998e97b32581cf8be5a",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/dropout.py": {
+      "size": 1505,
+      "sha256": "02aededbe36997dfbb70481aea0e1ec9466341b12453759774f6511b45ea9af6",
+      "git_blob_sha256": "02aededbe36997dfbb70481aea0e1ec9466341b12453759774f6511b45ea9af6",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/fourier.py": {
+      "size": 1612,
+      "sha256": "a13cf19346a3f561fb0f071c4d981ef5fc1f58ef22233062d345d9b0f766d301",
+      "git_blob_sha256": "a13cf19346a3f561fb0f071c4d981ef5fc1f58ef22233062d345d9b0f766d301",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/instance.py": {
+      "size": 11053,
+      "sha256": "66afb425b5514e7ff796e3d9474f62fa2ead8fda0657b241f0fd3841aee7adb2",
+      "git_blob_sha256": "66afb425b5514e7ff796e3d9474f62fa2ead8fda0657b241f0fd3841aee7adb2",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/outer_product_mean.py": {
+      "size": 3085,
+      "sha256": "d72cac0fe09ed4520166fdff3d6150b0d42317fca396864222266c01dc20484f",
+      "git_blob_sha256": "d72cac0fe09ed4520166fdff3d6150b0d42317fca396864222266c01dc20484f",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/positional_encoding.py": {
+      "size": 5582,
+      "sha256": "1babc5125ec1b37e072e0ffebcdc38c2e2d33f37d959f7e4574bc18659df3e78",
+      "git_blob_sha256": "1babc5125ec1b37e072e0ffebcdc38c2e2d33f37d959f7e4574bc18659df3e78",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/primitives.py": {
+      "size": 3637,
+      "sha256": "61ecbf4fcba389cf65baaf2050171c7badbaeec7a747c6c0f49f95309d59b66b",
+      "git_blob_sha256": "61ecbf4fcba389cf65baaf2050171c7badbaeec7a747c6c0f49f95309d59b66b",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/selected_attention.py": {
+      "size": 5088,
+      "sha256": "e06125ccbfb35e7c83eaac26bcad93e14bded2d44a548733532872ce35e53d02",
+      "git_blob_sha256": "e06125ccbfb35e7c83eaac26bcad93e14bded2d44a548733532872ce35e53d02",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/transition.py": {
+      "size": 2349,
+      "sha256": "15919a2ec5788d4dfb47b431b7de537b3d8f2d9e5e5c89d8a0c69bd1f0b5f0f5",
+      "git_blob_sha256": "15919a2ec5788d4dfb47b431b7de537b3d8f2d9e5e5c89d8a0c69bd1f0b5f0f5",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/triangle_mult.py": {
+      "size": 8718,
+      "sha256": "77ac5a820ae75719f381e45fbc4e5c66bc0f18492a955e2648ed7d6a03e478c8",
+      "git_blob_sha256": "77ac5a820ae75719f381e45fbc4e5c66bc0f18492a955e2648ed7d6a03e478c8",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/layers/triangular_attention.py": {
+      "size": 14177,
+      "sha256": "6d8e492a473decffd526c97d27b2ec9dc95c555f871a19c994b4af3ced43a849",
+      "git_blob_sha256": "6d8e492a473decffd526c97d27b2ec9dc95c555f871a19c994b4af3ced43a849",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/model.py": {
+      "size": 16451,
+      "sha256": "ec9deab8f73d452a5ead3a83c0b4256c330b626ef94c3b4379851d5655ae3217",
+      "git_blob_sha256": "ec9deab8f73d452a5ead3a83c0b4256c330b626ef94c3b4379851d5655ae3217",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/modules/__init__.py": {
+      "size": 540,
+      "sha256": "74d3b64d5781c1d312c38eca06ea59860233742234eba995e321a748f465b38c",
+      "git_blob_sha256": "74d3b64d5781c1d312c38eca06ea59860233742234eba995e321a748f465b38c",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/modules/conditioning.py": {
+      "size": 12848,
+      "sha256": "5053a619ba40f2536f0cace0f4d7a25da3b0ca4717c2f0d555d81fb1f660c846",
+      "git_blob_sha256": "5053a619ba40f2536f0cace0f4d7a25da3b0ca4717c2f0d555d81fb1f660c846",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/modules/conf_embedder.py": {
+      "size": 3408,
+      "sha256": "16e662c17704f54a5f90ead8e3463ef75ed90d327667e4468592d3aa81f306f4",
+      "git_blob_sha256": "16e662c17704f54a5f90ead8e3463ef75ed90d327667e4468592d3aa81f306f4",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/modules/diffusion.py": {
+      "size": 18897,
+      "sha256": "a1b80e8f0723a4dd4a09e99b8ec1b1f12c0931b586c17f9239eb248328187359",
+      "git_blob_sha256": "a1b80e8f0723a4dd4a09e99b8ec1b1f12c0931b586c17f9239eb248328187359",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/modules/instance_seg.py": {
+      "size": 13727,
+      "sha256": "0347d88b18dd8f9c96219b2bc36ff62a8765ea0f6816cf786fd4327f90baf77f",
+      "git_blob_sha256": "0347d88b18dd8f9c96219b2bc36ff62a8765ea0f6816cf786fd4327f90baf77f",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/modules/pairformer.py": {
+      "size": 14623,
+      "sha256": "41eea2359b175000cd1d07da01a71a50903a30b0192830ecf04dbc8779580a76",
+      "git_blob_sha256": "41eea2359b175000cd1d07da01a71a50903a30b0192830ecf04dbc8779580a76",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/seg/__init__.py": {
+      "size": 112,
+      "sha256": "83c45bf0de8f0109edb943b9f0f79ca51b31ad65cad7b4cace98fe8ba11769e2",
+      "git_blob_sha256": "83c45bf0de8f0109edb943b9f0f79ca51b31ad65cad7b4cace98fe8ba11769e2",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/seg/model.py": {
+      "size": 19039,
+      "sha256": "bd6f57630673368f97ff0226302d63623a69a427f2dd8d37aa090ac56bd8c69b",
+      "git_blob_sha256": "bd6f57630673368f97ff0226302d63623a69a427f2dd8d37aa090ac56bd8c69b",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/seg/munet/__init__.py": {
+      "size": 269,
+      "sha256": "65299307cc59161836ee27072465e648f0b9e8bd182df055903bb10eef264428",
+      "git_blob_sha256": "65299307cc59161836ee27072465e648f0b9e8bd182df055903bb10eef264428",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/seg/munet/backbone.py": {
+      "size": 5988,
+      "sha256": "208b2d78abd28ec0fbd9e7ff2fd94307bfae11219c6f8988398e822cb3e0ef72",
+      "git_blob_sha256": "208b2d78abd28ec0fbd9e7ff2fd94307bfae11219c6f8988398e822cb3e0ef72",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/seg/munet/conv.py": {
+      "size": 3418,
+      "sha256": "949a96f7f6f8d0b66ef6fd3542c17597a317435f36ef50320353c7150c5bcdc1",
+      "git_blob_sha256": "949a96f7f6f8d0b66ef6fd3542c17597a317435f36ef50320353c7150c5bcdc1",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/seg/munet/transformer.py": {
+      "size": 9008,
+      "sha256": "b259e88a3abedff943352790cf975d6dd501ec7488ee8196e5f56caabcacf848",
+      "git_blob_sha256": "b259e88a3abedff943352790cf975d6dd501ec7488ee8196e5f56caabcacf848",
+      "export_source": "git_blob"
+    },
+    "src/emap2lig/model/seg/threshold.py": {
+      "size": 1998,
+      "sha256": "85ef863aa5cf2d0358b03c4c6c22c01833c86226a5c102cf30b70d0af01f28bf",
+      "git_blob_sha256": "85ef863aa5cf2d0358b03c4c6c22c01833c86226a5c102cf30b70d0af01f28bf",
+      "export_source": "git_blob"
+    },
+    "显式level实验/build.py": {
+      "size": 10072,
+      "sha256": "cae26c17dbee59effcffc3c85120761e68917392c0713d30b58226d07ddeffb6",
+      "git_blob_sha256": "cae26c17dbee59effcffc3c85120761e68917392c0713d30b58226d07ddeffb6",
+      "export_source": "git_blob"
+    },
+    "显式level实验/evaluate.py": {
+      "size": 13418,
+      "sha256": "2cd694ce38b56a407aef8f9d273a5976dfa65ddb95496f7bd9e8e7d650fbab7a",
+      "git_blob_sha256": "2cd694ce38b56a407aef8f9d273a5976dfa65ddb95496f7bd9e8e7d650fbab7a",
+      "export_source": "git_blob"
+    },
+    "显式level实验/evaluate_find.py": {
+      "size": 7245,
+      "sha256": "1eb5751080adea46c8d1f993ec0a3d5f8d9a163192c2f0b1e73d3beb78013ba1",
+      "git_blob_sha256": "1eb5751080adea46c8d1f993ec0a3d5f8d9a163192c2f0b1e73d3beb78013ba1",
+      "export_source": "git_blob"
+    },
+    "显式level实验/find.py": {
+      "size": 5562,
+      "sha256": "2ebda59e47be663c0790a394c7d1554839e54e550097a6a935fc2f2f5f96d3a5",
+      "git_blob_sha256": "2ebda59e47be663c0790a394c7d1554839e54e550097a6a935fc2f2f5f96d3a5",
+      "export_source": "git_blob"
+    },
+    "显式level实验/inputs/maps.json": {
+      "size": 77466,
+      "sha256": "26a156a7c0677ce53f6338183dd179b56a2708fd613bd29250e0e62c090841a9",
+      "git_blob_sha256": "26a156a7c0677ce53f6338183dd179b56a2708fd613bd29250e0e62c090841a9",
+      "export_source": "git_blob"
+    },
+    "显式level实验/inputs/test_0.json": {
+      "size": 2348,
+      "sha256": "12473392629c55338460b1111d4449e7a6a692612d7eed780b1db48011acc887",
+      "git_blob_sha256": "12473392629c55338460b1111d4449e7a6a692612d7eed780b1db48011acc887",
+      "export_source": "git_blob"
+    },
+    "显式level实验/inputs/test_1.json": {
+      "size": 2004,
+      "sha256": "ee0697aa22aa1d1618ed42b9504e429e166c0c4fe1423db56eebf21428650df0",
+      "git_blob_sha256": "ee0697aa22aa1d1618ed42b9504e429e166c0c4fe1423db56eebf21428650df0",
+      "export_source": "git_blob"
+    },
+    "显式level实验/paths.py": {
+      "size": 1768,
+      "sha256": "43f87de61d85a4f78ba222050907fe7055f9702315f14404e40ab50c94d5fd92",
+      "git_blob_sha256": "43f87de61d85a4f78ba222050907fe7055f9702315f14404e40ab50c94d5fd92",
+      "export_source": "git_blob"
+    },
+    "显式level实验/prepare_build.py": {
+      "size": 7545,
+      "sha256": "bc77c278dce35a8b30d96b4956fe32f8f5448dfba58ee9d255b923f3f91105c1",
+      "git_blob_sha256": "bc77c278dce35a8b30d96b4956fe32f8f5448dfba58ee9d255b923f3f91105c1",
+      "export_source": "git_blob"
+    },
+    "显式level实验/tests/cpu_gate.py": {
+      "size": 2276,
+      "sha256": "6757eb5e1242a3ffc0d807a35cd04709a5861d4f788fa9db62aff98ed89628b2",
+      "git_blob_sha256": "6757eb5e1242a3ffc0d807a35cd04709a5861d4f788fa9db62aff98ed89628b2",
+      "export_source": "git_blob"
+    },
+    "显式level实验/tests/empty_find_gate.py": {
+      "size": 2735,
+      "sha256": "d053ff62af1c84912833d5571c723051484580db9ada23df35ce4657d64f1092",
+      "git_blob_sha256": "d053ff62af1c84912833d5571c723051484580db9ada23df35ce4657d64f1092",
+      "export_source": "git_blob"
+    },
+    "显式level实验/tests/gpu_gate.py": {
+      "size": 4573,
+      "sha256": "82cb48f3448c027a1a7fd197250c28010b0cda0ae6110e6e33f000465b74f726",
+      "git_blob_sha256": "82cb48f3448c027a1a7fd197250c28010b0cda0ae6110e6e33f000465b74f726",
+      "export_source": "git_blob"
+    },
+    "训练与运行/runtime/allocation_runner.sh": {
+      "size": 13655,
+      "sha256": "46a8e2ae510f37d9fa2f7dbed756da686f13e5c7ffec3220ec102b982e42a0ef",
+      "git_blob_sha256": "46a8e2ae510f37d9fa2f7dbed756da686f13e5c7ffec3220ec102b982e42a0ef",
+      "export_source": "git_blob"
+    },
+    "训练与运行/runtime/create_launch.sh": {
+      "size": 2216,
+      "sha256": "3b4fe8fa12e70b937fc7a1d5b6c79b908b34c0224679d8c3177d5e8e0855d2f9",
+      "git_blob_sha256": "3b4fe8fa12e70b937fc7a1d5b6c79b908b34c0224679d8c3177d5e8e0855d2f9",
+      "export_source": "git_blob"
+    },
+    "训练与运行/runtime/create_release.sh": {
+      "size": 4487,
+      "sha256": "1c3d30761fe592088b27c7a4da985916387a895419c2875036f9374fed74bab7",
+      "git_blob_sha256": "1c3d30761fe592088b27c7a4da985916387a895419c2875036f9374fed74bab7",
+      "export_source": "git_blob"
+    },
+    "训练与运行/runtime/launch_training_python.sh": {
+      "size": 924,
+      "sha256": "a5b766cfd92a9371413a845e09d38a993a2c0c73366725840d77903b75c56118",
+      "git_blob_sha256": "a5b766cfd92a9371413a845e09d38a993a2c0c73366725840d77903b75c56118",
+      "export_source": "git_blob"
+    },
+    "训练与运行/sbatch/task.sbatch": {
+      "size": 3229,
+      "sha256": "badab7d448a96249dd52be8959da6bf330041c47dcf798b57193ed25056c5d78",
+      "git_blob_sha256": "badab7d448a96249dd52be8959da6bf330041c47dcf798b57193ed25056c5d78",
+      "export_source": "git_blob"
+    },
+    "训练与运行/sh/build_gate.sh": {
+      "size": 249,
+      "sha256": "2c67d3c6cf4abf5ccba619937698ef790b37392f28d53c9e71c7fbfbecfa201f",
+      "git_blob_sha256": "2c67d3c6cf4abf5ccba619937698ef790b37392f28d53c9e71c7fbfbecfa201f",
+      "export_source": "git_blob"
+    },
+    "训练与运行/sh/with_level.sh": {
+      "size": 2628,
+      "sha256": "42448c911b89d92d6564adcf033e597bc7401a8d928cd420b78c55ebc083790b",
+      "git_blob_sha256": "42448c911b89d92d6564adcf033e597bc7401a8d928cd420b78c55ebc083790b",
+      "export_source": "git_blob"
+    },
+    "训练与运行/sh/with_level_gate.sh": {
+      "size": 1442,
+      "sha256": "5721364034c8430c6b6c10053a454de4eb128b1fe03a5044bc7e9eda1079f8a4",
+      "git_blob_sha256": "5721364034c8430c6b6c10053a454de4eb128b1fe03a5044bc7e9eda1079f8a4",
+      "export_source": "git_blob"
+    },
+    "训练与运行/submit_task.sh": {
+      "size": 12932,
+      "sha256": "f4e8694bfef3a1a61175d651aafdc55f89044acbc0da2cee4462b1b77d7836a7",
+      "git_blob_sha256": "f4e8694bfef3a1a61175d651aafdc55f89044acbc0da2cee4462b1b77d7836a7",
+      "export_source": "git_blob"
+    }
+  }
+}

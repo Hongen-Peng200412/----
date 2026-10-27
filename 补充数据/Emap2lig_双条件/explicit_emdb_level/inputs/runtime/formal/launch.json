@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "launch_id": "build_gate_job423330_20261026T202139_a2",
+  "slurm_job_id": "423330",
+  "created_at": "2026-10-26T20:21:39+0800",
+  "release_project_root": "/home/penghongen/Feedback/Emap2lig/releases/Emap2lig_3c489443d595/Emap2lig",
+  "task_script": "训练与运行/sh/build_gate.sh",
+  "task_run_stamp": "build_gate_job423330_20261026T202139_a2",
+  "resource_type": "a800",
+  "nodes": 1,
+  "gpus_per_node": 1,
+  "cpus_per_task": 24,
+  "multi_node_ddp": false,
+  "distributed_launcher": "lightning",
+  "slurm_nodelist": "gnode10",
+  "master_addr": "",
+  "master_port": null,
+  "array_spec": ""
+}

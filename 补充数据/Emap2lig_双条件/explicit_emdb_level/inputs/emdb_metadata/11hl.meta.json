@@ -1,0 +1,923 @@
+{
+    "_id": "69a4b9ead785ce0905c2e7ae",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "McCallum M"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Seattle Structural Genomics Center for Infectious Disease (SSGCID)"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Veesler D"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-05-27T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "country": "United States",
+                    "funding_body": "Howard Hughes Medical Institute (HHMI)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2026-02-24T00:00:00",
+            "header_release": "2026-05-13T00:00:00",
+            "map_release": "2026-05-13T00:00:00",
+            "update": "2026-05-27T00:00:00"
+        },
+        "keywords": "S2prime, coronavirus, SARS-CoV-2, spike, fusion, entry, antiviral, Structural Genomics, Seattle Structural Genomics Center for Infectious Disease, SSGCID, VIRAL PROTEIN-HYDROLASE complex, VN01H1, VIRAL PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "additional_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-05-13T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-05-27T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "SARS-CoV-2 spike S2 trimer stabilized in the early fusion intermediate conformation (E-FICs-v3) bound to the VN01H1 Fab (S2 local refinement)"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0001-8398-8330",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "McCallum M"
+                        },
+                        {
+                            "ORCID": "0000-0001-7331-5511",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Case JB"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Brown JT"
+                        },
+                        {
+                            "ORCID": "0000-0003-2901-6949",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Park YJ"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Lee J"
+                        },
+                        {
+                            "ORCID": "0000-0001-5150-4346",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Sutherland E"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Aggarwal A"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Gibson C"
+                        },
+                        {
+                            "ORCID": "0000-0001-6103-8078",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Lempp FA"
+                        },
+                        {
+                            "ORCID": "0000-0002-2786-6256",
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "Stewart C"
+                        },
+                        {
+                            "ORCID": "0000-0002-2260-2577",
+                            "instance_type": "author",
+                            "order": 11,
+                            "valueOf_": "Tortorici MA"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 12,
+                            "valueOf_": "Sanapala S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 13,
+                            "valueOf_": "Low JS"
+                        },
+                        {
+                            "ORCID": "0000-0001-7870-5308",
+                            "instance_type": "author",
+                            "order": 14,
+                            "valueOf_": "Asarnow D"
+                        },
+                        {
+                            "ORCID": "0000-0002-9239-3053",
+                            "instance_type": "author",
+                            "order": 15,
+                            "valueOf_": "Bohan D"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 16,
+                            "valueOf_": "Dellota Jr E"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 17,
+                            "valueOf_": "Merz B"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 18,
+                            "valueOf_": "Chawla B"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 19,
+                            "valueOf_": "Kar S"
+                        },
+                        {
+                            "ORCID": "0000-0002-3041-7240",
+                            "instance_type": "author",
+                            "order": 20,
+                            "valueOf_": "Lanzavecchia A"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 21,
+                            "valueOf_": "Sallusto F"
+                        },
+                        {
+                            "ORCID": "0000-0002-1536-2966",
+                            "instance_type": "author",
+                            "order": 22,
+                            "valueOf_": "Riley NM"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 23,
+                            "valueOf_": "Turville S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 24,
+                            "valueOf_": "Purcell L"
+                        },
+                        {
+                            "ORCID": "0000-0002-8791-3165",
+                            "instance_type": "author",
+                            "order": 25,
+                            "valueOf_": "Diamond MS"
+                        },
+                        {
+                            "ORCID": "0000-0002-6019-8675",
+                            "instance_type": "author",
+                            "order": 26,
+                            "valueOf_": "Veesler D"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "42050172"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1038/s41594-026-01801-y"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "1545-9985"
+                        }
+                    ],
+                    "first_page": "810",
+                    "journal": "Nat Struct Mol Biol",
+                    "journal_abbreviation": "Nat Struct Mol Biol",
+                    "last_page": "823",
+                    "published": true,
+                    "title": "TMPRSS2-mediated coronavirus spike activation and inhibition.",
+                    "volume": "33",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-75695",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "SARS-CoV-2 spike S2 trimer stabilized in the early fusion intermediate conformation bound to the VN01H1 Fab (S2 local refinement)",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "11hl",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-75695",
+    "interpretation": {
+        "additional_map_list": {
+            "additional_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "530.56"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "530.56"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "530.56"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 640,
+                        "row": 640,
+                        "sec": 640
+                    },
+                    "file": "emd_75695_additional_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "additional_map",
+                    "label": "::::EMDATABANK.org::::EMD-75695::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.829"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.829"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.829"
+                        }
+                    },
+                    "size_kbytes": 1048577,
+                    "spacing": {
+                        "x": 640,
+                        "y": 640,
+                        "z": 640
+                    },
+                    "statistics": {
+                        "average": -0.0003414715,
+                        "maximum": 1.9229752,
+                        "minimum": -0.62752175,
+                        "std": 0.019336777
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "530.56"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "530.56"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "530.56"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 640,
+                        "row": 640,
+                        "sec": 640
+                    },
+                    "file": "emd_75695_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-75695::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.829"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.829"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.829"
+                        }
+                    },
+                    "size_kbytes": 1048577,
+                    "spacing": {
+                        "x": 640,
+                        "y": 640,
+                        "z": 640
+                    },
+                    "statistics": {
+                        "average": 0.00021325474,
+                        "maximum": 2.273178,
+                        "minimum": -1.02145,
+                        "std": 0.11469911
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "530.56"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "530.56"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "530.56"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 640,
+                        "row": 640,
+                        "sec": 640
+                    },
+                    "file": "emd_75695_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-75695::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.829"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.829"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.829"
+                        }
+                    },
+                    "size_kbytes": 1048577,
+                    "spacing": {
+                        "x": 640,
+                        "y": 640,
+                        "z": 640
+                    },
+                    "statistics": {
+                        "average": 0.00021177327,
+                        "maximum": 2.3626277,
+                        "minimum": -1.1673567,
+                        "std": 0.11398884
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "530.56"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "530.56"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "530.56"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 1.0,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 640,
+            "row": 640,
+            "sec": 640
+        },
+        "file": "emd_75695.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-75695::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.829"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.829"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.829"
+            }
+        },
+        "size_kbytes": 1048577,
+        "spacing": {
+            "x": 640,
+            "y": 640,
+            "z": 640
+        },
+        "statistics": {
+            "average": -0.00034147152,
+            "maximum": 5.191436,
+            "minimum": -3.028502,
+            "std": 0.06481859
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "details": "E-FICS-v3 encodes an azurocidin signal peptide, a serine residue, a SUMO tag (Uniprot: Q12306\n1-94), an enterokinase cleavage site, a TGTGS linker, redesigned equine infectious anemia virus gp45 HR1 (QSNAESVQNHTFEVLNNTIRALELILRKLEILYEMILQLHE), a designed EVEAIQKAI linker, SARS-CoV-2 S residues 914-1131 (corresponding roughly to the HR1-CH-beta-H-CD region and with the D985A substitution), a threonine residue, SARS-CoV-2 S residues 703-833 (corresponding roughly to the beta-UH-SCR region), a designed linker (TIDKEK), redesigned equine infectious anemia virus gp45 HR2 (WKEWRKEMENLTKEIKETLEEARKTLKQAEETFKTPSSG), a GT linker, a second enterokinase cleavage site, a modified AVI tag (TGSLNDIFEAQKIEWHE), a QGS linker, and a C-terminal octahistidine tag",
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.06778717999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "E-FICs-v3"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 2697049,
+                            "valueOf_": "Severe acute respiratory syndrome coronavirus 2"
+                        }
+                    },
+                    "number_of_copies": "3",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q12306"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P0DTC2"
+                            },
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "P0DTC2"
+                            }
+                        ],
+                        "string": "MTRLTVLALLAGLLASSRASMSDSEVNQEAKPEVKPEVKPETHINLKVSDGSSEIFFKIKKTTPLRRLMEAFAKRQGKEM DSLRFLYDGIRIQADQTPEDLDMEDNDIIEAHRENDDDDKTGTGSQSNAESVQNHTFEVLNNTIRALELILRKLEILYEM ILQLHEEVEAIQKAINVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLN DILSRLAKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQSAPH GVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGTNSVAYS NNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQI YKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFTIDKEKWKEWRKEMENLTKEIKETLEEARKTLKQA EETFKTPSSGGTDDDDKTGSLNDIFEAQKIEWHEQGSHHHHHHHH"
+                    }
+                },
+                {
+                    "formula": "NAG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000221208"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "2-acetamido-2-deoxy-beta-D-glucopyranose"
+                    },
+                    "number_of_copies": "12"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "30"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "SARS-CoV-2 S2 trimer stabilized in the early fusion intermediate conformation by circular permutation and clamping by gp45m (E-FICs-v3) bound to the VN01H1 Fab"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "SARS-CoV-2 S2 trimer stabilized in the early fusion intermediate conformation by circular permutation and clamping by gp45m (E-FICs-v3) bound to the VN01H1 Fab"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 9606,
+                                "valueOf_": "Homo sapiens"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 121952,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.8"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "INSILICO MODEL"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.2"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

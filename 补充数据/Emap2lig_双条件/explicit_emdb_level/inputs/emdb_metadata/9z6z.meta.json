@@ -1,0 +1,845 @@
+{
+    "_id": "6923861fd785ce090551eea0",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Deng P"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Gao A"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-29T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "MF-2303-04116",
+                    "country": "United States",
+                    "funding_body": "The G. Harold and Leila Y. Mathers Foundation",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-11-14T00:00:00",
+            "header_release": "2026-04-29T00:00:00",
+            "map_release": "2026-04-29T00:00:00",
+            "update": "2026-04-29T00:00:00"
+        },
+        "keywords": "DRT3-ncRNA complex, reverse transcriptase, Anti-phage complex, IMMUNE SYSTEM",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-29T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "Cryo-EM hexamer map of the resting EcDRT3 complex"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0002-3197-3126",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Deng P"
+                        },
+                        {
+                            "ORCID": "0009-0006-1911-435X",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Lee H"
+                        },
+                        {
+                            "ORCID": "0009-0007-9234-7413",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Armijo C"
+                        },
+                        {
+                            "ORCID": "0000-0003-0277-3018",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Wang H"
+                        },
+                        {
+                            "ORCID": "0000-0002-3579-0327",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Gao A"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41990131"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1126/science.aed1656"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "1095-9203"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0038"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ASTM",
+                            "valueOf_": "SCIEAS"
+                        }
+                    ],
+                    "first_page": "eaed1656",
+                    "journal": "Science",
+                    "journal_abbreviation": "Science",
+                    "last_page": "eaed1656",
+                    "published": true,
+                    "title": "Protein-templated synthesis of dinucleotide repeat DNA by an antiphage reverse transcriptase.",
+                    "year": "2026"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "details": "Cryo-EM protomer map of the resting EcDRT3 complex",
+                    "emdb_id": "EMD-75828",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "details": "Cryo-EM map of Drt3a and ncRNA in the resting EcDRT3 complex",
+                    "emdb_id": "EMD-75830",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "details": "Composite cryo-EM map of the resting EcDRT3 complex",
+                    "emdb_id": "EMD-76002",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "other EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-73865",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Structure of the DRT3 reverse transcriptase in complex with its non-coding RNA",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-75828",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM protomer map of the resting EcDRT3 complex",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-75830",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM map of Drt3a and ncRNA in the resting EcDRT3 complex",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-76002",
+                    "content_type": "other EM volume",
+                    "db_name": "EMDB",
+                    "details": "Composite cryo-EM map of the resting EcDRT3 complex",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9z6z",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-73865",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "322.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "322.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "322.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 350,
+                        "row": 350,
+                        "sec": 350
+                    },
+                    "file": "emd_73865_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-73865::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.92"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.92"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.92"
+                        }
+                    },
+                    "size_kbytes": 171501,
+                    "spacing": {
+                        "x": 350,
+                        "y": 350,
+                        "z": 350
+                    },
+                    "statistics": {
+                        "average": 0.0015597908,
+                        "maximum": 0.6392286,
+                        "minimum": -0.28808945,
+                        "std": 0.040561814
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "322.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "322.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "322.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 350,
+                        "row": 350,
+                        "sec": 350
+                    },
+                    "file": "emd_73865_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-73865::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.92"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.92"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.92"
+                        }
+                    },
+                    "size_kbytes": 171501,
+                    "spacing": {
+                        "x": 350,
+                        "y": 350,
+                        "z": 350
+                    },
+                    "statistics": {
+                        "average": 0.001552097,
+                        "maximum": 0.6886782,
+                        "minimum": -0.29123288,
+                        "std": 0.040525816
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        },
+        "modelling_list": {
+            "modelling": [
+                {
+                    "initial_model": [
+                        {
+                            "chain": {
+                                "initial_model_type": "in silico model",
+                                "source_name": "Other"
+                            },
+                            "details": "ModelAngelo",
+                            "instance_type": "initial_model"
+                        }
+                    ],
+                    "instance_type": "modelling",
+                    "refinement_protocol": "AB INITIO MODEL",
+                    "refinement_space": "REAL"
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "325.99"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "325.99"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "325.99"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.11,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 350,
+            "row": 350,
+            "sec": 350
+        },
+        "file": "emd_73865.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-73865::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.9314"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.9314"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.9314"
+            }
+        },
+        "size_kbytes": 171501,
+        "spacing": {
+            "x": 350,
+            "y": 350,
+            "z": 350
+        },
+        "statistics": {
+            "average": 0.003496721,
+            "maximum": 1.9941722,
+            "minimum": -1.3011948,
+            "std": 0.05704339
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.050345749999999995"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Drt3a reverse transcriptase protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "number_of_copies": "6",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "string": "MYDQSFNPRTLSRCFKPEDFQKNRALSLDSVREKTIRAAIERFNNGFLGYNLRSSVLRGKKVYWADELADTLVLRKVQSN LSNLYQLKLPSRTMIVDTLNVFLSECSQYKLYRLDIHSFYESFNKDYIFKKIDELERLEMKTKQLLKEFLYSFYLTGGEG IPRGLSISAYLAELLMHDFDNHLKDDKSVFYYARYVDDIVIVTSGFEDSNAFIENVKSILPPGLSFNEGEKYYISDLIPK SANKKNTHHHHHHESPTKLLTFEYLGYDFSVGDKIEECNIRGFYRLIEVDLAHAKANKIKSRIIYSIIDYNKTKDFELLC ERLKFLSTNFSILDSGRVLKRLSGIHYNYPLVDARTSRRLAELDLFLRKAVLSSNGKVFFDFHANLNQYKKYRLLKISFV RGHEKRHFFHYSASKMMRIQRCWKYV"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.076426602"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Drt3b reverse transcriptase protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "number_of_copies": "6",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "sequence": {
+                        "string": "MSKKKEVRVNKKDFNRVLVTETIPYETPIIVSNDGFYNNVVKHQTANDIAKLLTQRVILGERKKGRYTIPYVFKINKNET EFRRLAFPHPISQIEMRDFYLHFNQVMINFCSKSDFSIRRPVKVASTYYYKNLLEDKNLYKRGPVDTDKNELLTRHASSY FGYHGYDRLYKFFMSNDFIDLERKYNTLYTLDVSKCFDSIYTHSISWATKTKTFTKGMLANKSLNFGDAFDKLMQRCNFN ETHGVIIGPEISRIFAEIIFQKIDLNVQFKLRNIDTPLNKGVDYDIRRYVDDVFIFSKNEVNAEIIYKVYADKLNEYNMH VNLGKVTKNSRPFITAKTQIIHHVNQKMNVFIDSFLSYDDEMKLIAKPIYNNRKLANKFIDEVKIICSERKSGYGEVSSY IVSAIFERIKRLTSSVNQAEDKDIYNVMYVLLHISLFFFRVAPSVSSSYKLASILIVTLRYFKAQVPSYSDLIASYIYFE IEDFLKAAKNGKKTIDNLVSLEAYNIMYVIGELDQDRYLSKQLVEDVFSEVDSYFDIVSCLYIVKDKKVYDSLKNNIIDV INSKLMSSDNILDYSEKAMLFLDVMSCPYIDLKWKKIWLKSILKELQEATPNNNEIDSFISYSVANPWFVDWSNVDLLNF LEKKQLKKA(PTR)"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.044236226999999996"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "non-coding RNA"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "number_of_copies": "6",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "GENBANK",
+                                "valueOf_": "CP053259.1"
+                            }
+                        ],
+                        "string": "AAUGCAACCAAUAUGCCCUACACGAUUUUUCGAUAUACUAGGGCUGAUUACGGUAGGUAAGUUACACGUAACCUUAGCUA CCUUAUGACGCUCAAGAGCAGCAAUGCACACACUAAGGGAUGAGGUUGCUUCAAUUUC"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.003730421"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "DNA (5'-D(P*TP*GP*TP*GP*T)-3')"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "number_of_copies": "6",
+                    "sequence": {
+                        "string": "(DT)(DG)(DT)(DG)(DT)(DG)(DT)(DT)(DG)(DT)(DG)(DT)"
+                    }
+                },
+                {
+                    "classification": "DNA",
+                    "instance_type": "dna",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.005087358"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "DNA (5'-D(P*AP*CP*AP*CP*AP*CP*AP*CP*AP*CP*AP*CP*AP*CP*AP*CP*A)-3')"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 562,
+                            "valueOf_": "Escherichia coli"
+                        }
+                    },
+                    "number_of_copies": "6",
+                    "sequence": {
+                        "string": "(DA)(DC)(DA)(DC)(DA)(DC)(DA)(DC)(DA)(DC)(DA)(DC)(DA)(DC)(DA)(DC)(DA)"
+                    }
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "6"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 7,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "6"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "Hexameric complex of DRT3-ncRNA"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 4
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 5
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "Hexameric complex of DRT3-ncRNA"
+                    },
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 63349,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.6"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC",
+                                        "version": "4.6.0"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.5
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

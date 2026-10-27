@@ -1,0 +1,1406 @@
+{
+    "_id": "66d4ec8338e8b5db76b43256",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Liu YT"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Jih J"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Zhou ZH"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Aphasizhev R"
+                }
+            ]
+        },
+        "composite_map": true,
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-01-21T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "R01GM071940",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute of General Medical Sciences (NIH/NIGMS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "R01AI101057",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute Of Allergy and Infectious Diseases (NIH/NIAID)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "RO1AI152408",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute Of Allergy and Infectious Diseases (NIH/NIAID)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "R01AI177658",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute Of Allergy and Infectious Diseases (NIH/NIAID)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "R01AI113157",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute Of Allergy and Infectious Diseases (NIH/NIAID)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "R35GM145249",
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute of General Medical Sciences (NIH/NIGMS)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "32570759",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2024-08-29T00:00:00",
+            "header_release": "2026-01-21T00:00:00",
+            "map_release": "2026-01-21T00:00:00",
+            "update": "2026-01-21T00:00:00"
+        },
+        "keywords": "RNA editing, tRNA, OB-fold, mitochondria, RNA BINDING PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-01-21T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "Trypanosoma brucei mitochondrial RNA-editing catalytic complex 1, U-deletion (RECC1), composite map"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0000-0003-2577-1859",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Liu YT"
+                        },
+                        {
+                            "ORCID": "0000-0002-8784-8295",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Vacas AF"
+                        },
+                        {
+                            "ORCID": "0000-0001-5169-0919",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Jih J"
+                        },
+                        {
+                            "ORCID": "0009-0002-9837-7828",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Zhao X"
+                        },
+                        {
+                            "ORCID": "0000-0002-2931-5474",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Yu C"
+                        },
+                        {
+                            "ORCID": "0000-0001-7735-7647",
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Lee JKJ"
+                        },
+                        {
+                            "ORCID": "0000-0003-1430-6580",
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Suematsu T"
+                        },
+                        {
+                            "ORCID": "0000-0003-4316-5211",
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Solayman M"
+                        },
+                        {
+                            "ORCID": "0000-0002-5767-2882",
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Wang H"
+                        },
+                        {
+                            "ORCID": "0009-0007-6700-1277",
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "Wang X"
+                        },
+                        {
+                            "ORCID": "0000-0002-3140-4687",
+                            "instance_type": "author",
+                            "order": 11,
+                            "valueOf_": "Huang L"
+                        },
+                        {
+                            "ORCID": "0000-0003-2104-6828",
+                            "instance_type": "author",
+                            "order": 12,
+                            "valueOf_": "Zhang L"
+                        },
+                        {
+                            "ORCID": "0000-0003-2695-2950",
+                            "instance_type": "author",
+                            "order": 13,
+                            "valueOf_": "Aphasizheva I"
+                        },
+                        {
+                            "ORCID": "0000-0002-8373-4717",
+                            "instance_type": "author",
+                            "order": 14,
+                            "valueOf_": "Zhou ZH"
+                        },
+                        {
+                            "ORCID": "0000-0002-4595-6618",
+                            "instance_type": "author",
+                            "order": 15,
+                            "valueOf_": "Aphasizhev R"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Structural basis of the mitochondrial RNA editing cascade in trypanosomes"
+                }
+            }
+        },
+        "emdb_list": {
+            "emdb_reference": [
+                {
+                    "details": "T. brucei RECC1 consensus map",
+                    "emdb_id": "EMD-46785",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "consensus EM volume"
+                    }
+                },
+                {
+                    "details": "T. brucei RECC1 left wing focused refinement map",
+                    "emdb_id": "EMD-46786",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "details": "T. brucei RECC1 right wing focused refinement map",
+                    "emdb_id": "EMD-46787",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                },
+                {
+                    "details": "T. brucei RECC1 tail focused refinement map",
+                    "emdb_id": "EMD-46789",
+                    "instance_type": "emdb_reference",
+                    "relationship": {
+                        "other": "focused EM volume"
+                    }
+                }
+            ]
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-46791",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Trypanosoma brucei mitochondrial RNA editing catalytic complex, U-deletion (RECC1)",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-46785",
+                    "content_type": "consensus EM volume",
+                    "db_name": "EMDB",
+                    "details": "T. brucei RECC1 consensus map",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-46786",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "T. brucei RECC1 left wing focused refinement map",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-46787",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "T. brucei RECC1 right wing focused refinement map",
+                    "instance_type": "db_reference"
+                },
+                {
+                    "accession_id": "EMD-46789",
+                    "content_type": "focused EM volume",
+                    "db_name": "EMDB",
+                    "details": "T. brucei RECC1 tail focused refinement map",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9dei",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-46791",
+    "interpretation": {
+        "modelling_list": {
+            "modelling": [
+                {
+                    "details": "Consensus map and focused refinement maps were combined to generate a composite map for final model refinement.",
+                    "instance_type": "modelling",
+                    "refinement_protocol": "AB INITIO MODEL",
+                    "refinement_space": "REAL"
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "RNA-editing catalytic complex 1 (RECC1), composite map",
+        "axis_order": {
+            "fast": "Z",
+            "medium": "Y",
+            "slow": "X"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "422.40002"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "422.40002"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "422.40002"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 3.5,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 384,
+            "row": 384,
+            "sec": 384
+        },
+        "file": "emd_46791.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-46791::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "1.1"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "1.1"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "1.1"
+            }
+        },
+        "size_kbytes": 226493,
+        "spacing": {
+            "x": 384,
+            "y": 384,
+            "z": 384
+        },
+        "statistics": {
+            "average": 0.006750229,
+            "maximum": 71.53701,
+            "minimum": -39.67525,
+            "std": 1.0837945
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.043818895"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "KREPB5; RNA-editing catalytic complex core protein, B5"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 5691,
+                            "valueOf_": "Trypanosoma brucei"
+                        },
+                        "strain": "Lister 427"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "MRRAVVLHTAAPMCALTGKCVEDWESHRKSFDMRIFELLKGRVTSPTEPLPIKQIYATIANPCRLVEEFTCAKTTRRLGR LHTALSFLRRHNVLLHSLLFHVKETQTWNTTPDFDRLALYGESSLRHEVRARTLRLFPGIDSETYAALTSSVLSEEALHG LFDRLLMKALVGEKPVGKMRDWSLTPNQCGQMLCAIVGEMSWFAARTKATDRTHNNALFPPSDALILHVLCCHVLESLPA ELLYNVLEPKVQRIKENWVNEPMSIPEQLHLKPRTIGSLSLSLVAKPLTEEEGRRKEVAVSAEKCQLSLTPERVIGSVRS TMLPRWNYKRFEERRYHILESDKRQVLPLAMSPVGRGDVSLASEQMPDERRRELVALALGGRYR"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.041881055"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "KREPB8; RNA editing catalytic complex core protein, B8"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 5691,
+                            "valueOf_": "Trypanosoma brucei"
+                        },
+                        "strain": "Lister 427"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "C9ZW42"
+                            }
+                        ],
+                        "string": "MHRGPPALLHNVGVATRSKSFAASTKLPGRLTPLPSTSSTLQPTNTLLSSSAGIASLRQLVSASTLTSTSTSGKKRVGSL DAHCRLLSRGTSADSYMPMTSRSFDVFEGNNKQAWLDLKTGWCHLCQEPLGATMGVHIGDRDHTNLQYFLFLYAAHGRRW SSEEVLRSCLATAPTVHNYATRHTTWDHLHVMDDALRRAELEALLFHLTHPPQQALSHVLQGRSPLGFWYSGERMWKLRI SRLVTQVFPPISAGMMTNFTQKCWGRSNGERMYDALRLQRIKAYYGWQPYESKEKKAFFVRQLLWELLSVEVRDEVDELT KHMADLALRRMAFEMIFLQSMEYMHKVQYVYDLMGRPTVDELAAMNLL"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.090093039"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MP90"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 5691,
+                            "valueOf_": "Trypanosoma brucei"
+                        },
+                        "strain": "Lister 427"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "C9ZIA9"
+                            }
+                        ],
+                        "string": "MGLHWPLARSSNWCHMRALSNEHLRRRVGAAVRSIASTAPCFALERVEVAHSHAYSRRGVTVGFTSSSSSPSGKTGSGGL SPASQSLHSSSSFDASNGDVLANYVNFVADDATGPAATKENGAQPMRSLRSASAVENLLFTDAAKNYCRLCMEEVQVTPK AHISTPYRGSHTNHTCREVVLDSLALLAIRGYPIDDVYFVWADTLYQSSVFQRIPELVSPRWTVDKRSEVLAKILFMLKD MGVIDISLAAQAPDLFDNTAQQVHHRRRVAFERLEYIGDNSWGNHLSNRMMLLFPDRQWTYSQNAYTFNCFRDACEMNVT LEFMFDTLRVGELLPPGVREKLGTGKIKADVVEAVIGELHVTLWGLEPQLYDSVCFVEINGVGEARLAALVQHCLTEIYD LIVLSYVQELSGSAVPLAKQIAADRIWNSVYPPVRKAKDRAPGGRKSRSTVVNVVGVGEVRQLPSLPSLFPAASKRPTRA PHPLRRLRKLGEIPEETVCAGTNKDVFVHLIESYERLDMLDDSLLPTLNMRRLQDVQFSKLKRQLVPSLSPAALEELHNC KELDAESVTPHKVGDKEVATDERVLDLEEVYFRDKYFDLFPTPLPNEVVTKEGDCDKRQSGASTSRAVIISLPRGFDGSR PCNRAQLHMARNTIYPSLTERPAHSPTAGITKGDRVCLFSLSVYVPPDTKRPSAGVVTDKNLHFGEFAFHGVRIKGIECA SEPECISRRSNAPGSDVGTSLNRSSWKEGGDNSCGTLTVEDGTGENSVVGEDGDTGVNGGEGKAEDATGKHLLRAKWCRE NPFFPRASLPLLGISVGA"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.046525059"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "RNA editing complex protein MP46"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 5691,
+                            "valueOf_": "Trypanosoma brucei"
+                        },
+                        "strain": "Lister 427"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q86MV9"
+                            }
+                        ],
+                        "string": "MLRVENLRRSMTRLARHSLIRAVPFSPLSVGSSTDQTFGAPTRTPFRSHTCLLCDVSYESWGDHAESTTHIARHAICRTF VSPERHNAVMQQLWKHIRLDFGYVDEVTHKKEDRRRMRLASTMRHLQEKGVLHHSLPRVTVDAQSEVSLTVESDSFVNYM FLGESFARQETLDRVARLMPRAEALELSSIISFVLSKRRLAHFFDIFDMRKMVLNGDSSDDKASADGDVPPTIPRLQQDG KAVILFSCLGELQMFSRRDRSHSVATRSAAEQLVLNVLGTHVMENIIGELVHEALQTVVEEGTAVWREHCGELKHKLFEG TKAASPPIATTPNPVSNSGGPEVTADVNDQMWVDLCRLYVLDKNGSVPQLQPTVKRHSWHDVARALTLELTVPNPVNKSA VFAAAAPRLATKKK"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 5,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.018097566"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MP18 RNA editing complex protein, putative"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 5691,
+                            "valueOf_": "Trypanosoma brucei"
+                        },
+                        "strain": "Lister 427"
+                    },
+                    "number_of_copies": "5",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "D0A2P0"
+                            }
+                        ],
+                        "string": "MLALTSRRLLLQQTFMRCCKSVNSVTLVGVVHDIQSGFVYEDAVTQFTLTTTSIDTTHPTQEVVVEKDHHTIRCFGELFS AEVKQKVKEGNVVCVNGRLRLSPQLEPSCNKHFYFPYIQVQPPHGQVAVIHGDRRTVPAAVNPAVEDIKSEKEGAGGDQS GVPS"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 6,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.042318461"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "RNA-editing complex protein MP42"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 5691,
+                            "valueOf_": "Trypanosoma brucei"
+                        },
+                        "strain": "Lister 427"
+                    },
+                    "number_of_copies": "2",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q95W13"
+                            }
+                        ],
+                        "string": "MKRVTSHISRFLPLVLSQRGLSTYASPHVSSMRYYGATKCLLASTPDTPSFQCGECGKAFRLINALNHHIMTKHAGKAKA MMNKGGKLEEVNPEEIKNKPQGAMSQPTSPPPSSSTSGTEAASTSPTHSSFPGIPFSPVGGIGLVGTPVGAASHVVNTTT TAANSASGNALSDENADKKTFVCTICQKTFRLEAALQHHYQAKHNMEMPTSSSSSGGASAQPVLQGGATTAGVGSVGFSH TEEETGRSAMGTQYVHSQETILPQAPQYHLDVAPNAPEEGEVAAHWRCVNHCVMLGVVQNIQEGFVFEDKVLQFTLITDF EGPSPGDPDKDFHTVRVFDSDYSSRVKEQLRDGEWFLVTGRLRMVPQYDGSMRKYYHYPVIQVHPGCGSVLKV"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 7,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.062983031"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "KREPA2"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 5691,
+                            "valueOf_": "Trypanosoma brucei"
+                        },
+                        "strain": "Lister 427"
+                    },
+                    "number_of_copies": "2",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A3L6L0V2"
+                            }
+                        ],
+                        "string": "MYRRFFRSAAVKHLGTTSAQCLMRATKYPCGAMCRNASSCHPQTLGYQQRFQSTTDKKFHCSVCKKPFRLEMAAKLHLQQ AHGGDGSVEAGPGPGVEASSVNVVSTPVPSPISPVERTFVDEEERRPRRMRPTPKPLHQPDRDIPAAAMEEMLGVWDKIG LNRLEGNFVHSTMVMKVFAAPPDVSEIPLYEHVAPEGENPFDSLDHMTTGTVDATYVGHDAFAEVDLVDPFVAAPDQTLN PFRAGKVRNPFTRISPTQREVVKPLQPPQPKEEPLKAPVTPFGQLPMFGQTREPSASFAAAAVSVQAAANPNEVSSPFAA AVSSSPFVGQVASPFAPAQDVAGSPFEASPCAASSPFVTAGGQETSPFAAPSTPASFGQGSLFPPMGTGAPGFTAITETE QRQQELEHGCPTCGKKFSTFEGAAMHSKSKHGIVLESKKVKDRLNRKGVPDLPAYVPSPVDLSSTSPFGTRSAIGASWAE TELIPHAQCVSNITIVGRVLDVSQASENVSHVTVFVEGERSGEEETLTLCCFGEVSQKIRGTLKRNATIFASGTLRLHPV YEASNNKYYVSPVVHVSMPTGTLAVIT"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 8,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.023769062"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "RNA editing complex protein"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 5691,
+                            "valueOf_": "Trypanosoma brucei"
+                        },
+                        "strain": "Lister 427"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "D0A2N9"
+                            }
+                        ],
+                        "string": "MWVRSLLLCIRRDPLQRAVDVAYASGMLLGSGSSRGTTHFSETTAFTSSNFAADLRGGRVGLAGDGGTKCEDRNGELVRG RIQFASRCAEGPFVGASPTVTSCAHIEGVVRQVECGYVGGDRVLQFIIEVEEVPASGGTPMRLPLAVRWRPGSEVAQNRM DEWQKEMERLVGRRVLASGRLQVEECFDSGSRRLYKTPSLVLPATSTVEMISLQELEC"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 9,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.019081923999999997"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "KREPA5"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 5691,
+                            "valueOf_": "Trypanosoma brucei"
+                        },
+                        "strain": "Lister 427"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "A0A3L6L2P3"
+                            }
+                        ],
+                        "string": "MFSSTFRRLAIRPLNRVTMVGAMHDIQVGFLDRCSVFQFTLTCTVLDFQKVAEPQPKSPGSLPSSTRTAPNANGEEVEKH INKEQYTVRCLGSEAYTEALKNYLDDGCIVRVIGRLKTTEVVDAGKKQPFPCIIVEQGRWSTVSLVHSLRKQRRDWQLQN ILTSVATLE"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 10,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.08130718799999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "RNA-editing complex protein MP81"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 5691,
+                            "valueOf_": "Trypanosoma brucei"
+                        },
+                        "strain": "Lister 427"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "Q95W15"
+                            }
+                        ],
+                        "string": "MRRLTRRSDRLCGKGNGGSCLQMSPTHVGAVVTWSLNRLMPLHTRTIPLRCSLPTPESGTTEPRELCFYETFELTGEDVH YLLLHEAHVKHGVLLNVPPQLAPNGTPPEVPEVIMPAAQLERMGGMKLAYEPTHLPPPLHTTGARQLVLDESFYTTPTKE KKATTTAVSHVSESTAASGGRGGASATAAGTALPPRLPPDPTMKFHCSACGKAFRLKFSADHHVKLNHGSDPKAAVVDGP GEGGLLGGAVTITTAKVAKHSSSAASGTASRAGDSATLDVKQQPDPQKELSASGISAVKIPYSKAVLSLPDDELVDELLI DVWDAVAAQRDDVPKSNSANIFLPFASVVTGTADRRKEMEAVARPTARATPEGAAPGIKRPGAMAGGAVAVGKGRSGGQI LPIRELIKKYPNPFGDSPNAAVQDLENEPLNPFLPEEELAAQLQVACEEDTVVTPSACTTDVSTGSVIGKKGSLEKLKEK LRGTRPSMAASAAKRRFTCPICVEKQQTLQQQQSENVGSGFCTDIPSFRLLDALLDHVESVHGEELTEDQLRELYAKQRQ STLYPQKSSTGDGAGSRETPDDSEKKEGSVGNTSMDELKSLPEEVRRVVPPAPVEQDALAVHIRAGSNALMIGRIADVQH GFLGAMTVTQYVLEVDGDERINSKGVTTPASACTPDPASTKAVEAKGEEGEVVEPEKEFIVIRCMGDNFPASLLKDQVKL GSRVLVQGTLRMNRHVDDVSKRLHAYPFIQVVPPLGYVKVVG"
+                    }
+                },
+                {
+                    "instance_type": "rna",
+                    "macromolecule_id": 11,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.024480467"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "tRNA-valine (anticodon AAC)"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 5691,
+                            "valueOf_": "Trypanosoma brucei"
+                        },
+                        "strain": "Lister 427"
+                    },
+                    "number_of_copies": "1",
+                    "sequence": {
+                        "string": "CGCUGAUGGUCUAGGUGGUUAUGACGUCGCUUUAACACGGCGAAGGUCUCGGGUUCGAGUCCCGAUCGGCGUACCA"
+                    }
+                },
+                {
+                    "formula": "ZN",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 12,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "6.5409e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "ZINC ION"
+                    },
+                    "number_of_copies": "5"
+                },
+                {
+                    "formula": "MG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 13,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "2.4305e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "MAGNESIUM ION"
+                    },
+                    "number_of_copies": "3"
+                },
+                {
+                    "formula": "5GP",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 14,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000363221"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "GUANOSINE-5'-MONOPHOSPHATE"
+                    },
+                    "number_of_copies": "1"
+                },
+                {
+                    "formula": "HOH",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 15,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "1.8015e-05"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "water"
+                    },
+                    "number_of_copies": "367"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "RECC1"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "details": "From T. brucei mitochondrial T2 isolate",
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 4
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 5
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 6
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 7
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 8
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 9
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 10
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 11
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "RECC1"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organelle": "Mitochondria",
+                            "organism": {
+                                "ncbi": 5691,
+                                "valueOf_": "Trypanosoma brucei"
+                            },
+                            "strain": "Lister 427"
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                },
+                {
+                    "details": "Endonuclease-containing heterotetrameric core",
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 3
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 4
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "RECC1 core"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organelle": "Mitochondria",
+                            "organism": {
+                                "ncbi": 5691,
+                                "valueOf_": "Trypanosoma brucei"
+                            },
+                            "strain": "Lister 427"
+                        }
+                    ],
+                    "parent": 1,
+                    "supramolecule_id": 2
+                },
+                {
+                    "details": "Peripheral tetramer of OB-fold-containing A-proteins (A2, A3, and two copies of A6)",
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 5
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 6
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 7
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "RECC1 left wing"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organelle": "Mitochondria",
+                            "organism": {
+                                "ncbi": 5691,
+                                "valueOf_": "Trypanosoma brucei"
+                            },
+                            "strain": "Lister 427"
+                        }
+                    ],
+                    "parent": 1,
+                    "supramolecule_id": 3
+                },
+                {
+                    "details": "Peripheral tetramer of OB-fold-containing A-proteins (A2, A4, A5, and A6)",
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 5
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 7
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 8
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 9
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "RECC1 right wing"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organelle": "Mitochondria",
+                            "organism": {
+                                "ncbi": 5691,
+                                "valueOf_": "Trypanosoma brucei"
+                            },
+                            "strain": "Lister 427"
+                        }
+                    ],
+                    "parent": 1,
+                    "supramolecule_id": 4
+                },
+                {
+                    "details": "Peripheral tetramer of OB-fold-containing A-proteins (A1, A3, and two copies of A6)",
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 5
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 6
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 10
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "RECC1 tail"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organelle": "Mitochondria",
+                            "organism": {
+                                "ncbi": 5691,
+                                "valueOf_": "Trypanosoma brucei"
+                            },
+                            "strain": "Lister 427"
+                        }
+                    ],
+                    "parent": 1,
+                    "supramolecule_id": 5
+                },
+                {
+                    "details": "Bridges RECC1 core and left wing",
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 11
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "tRNA"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organelle": "Mitochondria",
+                            "organism": {
+                                "ncbi": 5691,
+                                "valueOf_": "Trypanosoma brucei"
+                            },
+                            "strain": "Lister 427"
+                        }
+                    ],
+                    "parent": 1,
+                    "supramolecule_id": 6
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "PHASE FLIPPING AND AMPLITUDE CORRECTION"
+                        },
+                        "details": "Falcon 4i and K3 Bioquantum images were combined for processing.",
+                        "final_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "algorithm": "FOURIER SPACE",
+                            "applied_symmetry": {
+                                "point_group": "C1"
+                            },
+                            "number_images_used": 452724,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.99"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "final_three_d_classification": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 2,
+                        "initial_angle_assignment": {
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            },
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "alignment_procedure": {
+                                "coma_free": {}
+                            },
+                            "c2_aperture_diameter": {
+                                "units": "\u00b5m",
+                                "valueOf_": "50.0"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "45.0"
+                                        },
+                                        "average_exposure_time": {
+                                            "units": "s",
+                                            "valueOf_": "2.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOQUANTUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording",
+                                        "number_real_images": 23092
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "3.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.0"
+                            },
+                            "nominal_magnification": 81000.0,
+                            "specialist_optics": {
+                                "energy_filter": {
+                                    "name": "GIF Bioquantum",
+                                    "slit_width": {
+                                        "units": "eV",
+                                        "valueOf_": "20"
+                                    }
+                                }
+                            },
+                            "specimen_holder_model": "FEI TITAN KRIOS AUTOGRID HOLDER"
+                        },
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "alignment_procedure": {
+                                "coma_free": {}
+                            },
+                            "c2_aperture_diameter": {
+                                "units": "\u00b5m",
+                                "valueOf_": "50.0"
+                            },
+                            "cooling_holder_cryogen": "NITROGEN",
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "45.0"
+                                        },
+                                        "average_exposure_time": {
+                                            "units": "s",
+                                            "valueOf_": "3.5"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "FEI FALCON IV (4k x 4k)"
+                                        },
+                                        "image_recording_id": 2,
+                                        "instance_type": "image_recording",
+                                        "number_real_images": 40988
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_cs": {
+                                "units": "mm",
+                                "valueOf_": "2.7"
+                            },
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.8000000000000003"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.6"
+                            },
+                            "nominal_magnification": 130000.0,
+                            "specialist_optics": {
+                                "energy_filter": {
+                                    "name": "TFS Selectris X",
+                                    "slit_width": {
+                                        "units": "eV",
+                                        "valueOf_": "10"
+                                    }
+                                }
+                            },
+                            "specimen_holder_model": "FEI TITAN KRIOS AUTOGRID HOLDER"
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "component": [
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "60.0"
+                                        },
+                                        "formula": "KCl",
+                                        "instance_type": "component",
+                                        "name": "Potassium chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "25.0"
+                                        },
+                                        "formula": "Tris-HCl",
+                                        "instance_type": "component",
+                                        "name": "Tris hydrochloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "10.0"
+                                        },
+                                        "formula": "MgCl2",
+                                        "instance_type": "component",
+                                        "name": "Magnesium chloride"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "5.0"
+                                        },
+                                        "formula": "OG",
+                                        "instance_type": "component",
+                                        "name": "n-Octylglucoside"
+                                    },
+                                    {
+                                        "concentration": {
+                                            "units": "mM",
+                                            "valueOf_": "1.0"
+                                        },
+                                        "formula": "CaCl2",
+                                        "instance_type": "component",
+                                        "name": "Calcium chloride"
+                                    }
+                                ],
+                                "ph": 7.6
+                            },
+                            "details": "From T. brucei mitochondrial T2 isolate",
+                            "grid": {
+                                "material": "GOLD",
+                                "mesh": 300,
+                                "model": "Quantifoil R1.2/1.3",
+                                "pretreatment": {
+                                    "time": {
+                                        "units": "s",
+                                        "valueOf_": "60"
+                                    },
+                                    "type_": "PLASMA CLEANING"
+                                },
+                                "support_film": [
+                                    {
+                                        "film_material": "GRAPHENE",
+                                        "film_topology": "CONTINUOUS",
+                                        "film_type_id": 1,
+                                        "instance_type": "support_film"
+                                    }
+                                ]
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "chamber_temperature": {
+                                    "units": "K",
+                                    "valueOf_": "277"
+                                },
+                                "cryogen_name": "ETHANE",
+                                "instrument": "FEI VITROBOT MARK IV"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

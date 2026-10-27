@@ -1,0 +1,6 @@
+{
+  "nonempty_fields_equal": true,
+  "empty_pred_count": 0,
+  "retained_gt_count": 4,
+  "real_probability_prauc_preserved": true
+}

@@ -1,0 +1,36 @@
+{
+  "mapped_blob_count": 5,
+  "official_blob_count": 5,
+  "official_probability": "/storage/penghongen/Emap2lig/contour_level_20261026/find/held_out_test_0/raw_find_outputs/21fy/find_maps/ligand.mrc",
+  "pdb_id": "21fy",
+  "source_origin_xyz": [
+    23.0,
+    28.0,
+    51.0
+  ],
+  "source_shape_zyx": [
+    98,
+    133,
+    143
+  ],
+  "source_voxel_size_xyz": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "target_origin_xyz": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "target_shape_zyx": [
+    188,
+    188,
+    188
+  ],
+  "target_voxel_size_xyz": [
+    1.000851035118103,
+    1.000851035118103,
+    1.000851035118103
+  ]
+}

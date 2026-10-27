@@ -1,0 +1,78 @@
+{
+  "checked_at_master": "2026-10-27T00:19:34.662999",
+  "passed": true,
+  "formal_launch": "build_gate_job423330_20261026T202139_a2",
+  "release": "/home/penghongen/Feedback/Emap2lig/releases/Emap2lig_3c489443d595/Emap2lig",
+  "implementation_commit": "37b0d9e7ad2a1b18fa096d91f154619085cee907",
+  "source_files_verified": 71,
+  "find_pdbs": 179,
+  "find_gt_instances": 2502,
+  "find_blobs": 2474,
+  "empty_pdbs": [
+    "9ter",
+    "9nas",
+    "9j5o",
+    "9hjq",
+    "9v7o",
+    "9v7q",
+    "9nak",
+    "11hu",
+    "9iub",
+    "9k30",
+    "9k2z",
+    "9k9j",
+    "9k32",
+    "9k31",
+    "9ndw"
+  ],
+  "find_hit_instances": 260,
+  "build_generated_instances": 251,
+  "cif_poses": 12550,
+  "finite_scores": 12550,
+  "rmsd_statuses": {
+    "build_filter_failed": 9,
+    "complete": 251
+  },
+  "full_test_statuses": {
+    "complete": 251,
+    "find_miss": 186,
+    "build_filter_failed": 9
+  },
+  "identity_fallback_poses": 0,
+  "build_summary": {
+    "denominator": 260,
+    "statuses": {
+      "build_filter_failed": 9,
+      "complete": 251
+    },
+    "top1_lt2A": 156,
+    "top1_lt3A": 202,
+    "top5_lt2A": 184,
+    "top5_lt3A": 219,
+    "best_lt2A": 207,
+    "best_lt3A": 230,
+    "full_test_denominator": 446
+  },
+  "protected_old_files_unchanged": {
+    "/storage/penghongen/AdaLigand_stage1_inference/Emap2lig/official_find_li/held_out_test_0/evaluation/official_find_li.metrics.json": {
+      "sha256": "19a0bca8380ea2ea708cc0eb1b1867b8d7b4c2c94e6c810bdeed6446a361d100",
+      "size": 4449,
+      "mtime_ns": 1789552167000000000
+    },
+    "/storage/penghongen/Emap2lig/stage3_find_hit_build/find_hit_subset.jsonl": {
+      "sha256": "2e0b904eb4328af661e5287447e86ba835141c98cb4f6341220b9868200284f1",
+      "size": 127197,
+      "mtime_ns": 1790618758000000000
+    },
+    "/storage/penghongen/Emap2lig/stage3_find_hit_build/build_summary.json": {
+      "sha256": "467e9036c86affdfb503bd9582da6fdc4de108471c7668f66e41e8491d1f6bb7",
+      "size": 215,
+      "mtime_ns": 1790624721000000000
+    },
+    "/storage/penghongen/Emap2lig/stage3_find_hit_build/find_hit_summary.json": {
+      "sha256": "95d48cb43336f3036d0873c200c67ffb2dd8e1b8a99d6ed36fc57bbbd417f62f",
+      "size": 341,
+      "mtime_ns": 1790618758000000000
+    }
+  }
+}

@@ -1,0 +1,696 @@
+{
+    "_id": "68991c3c6e5018e151f52996",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Liu S"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Li X"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Xiao B"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Li X"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Xiao B"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-05-06T00:00:00",
+            "processing_site": "PDBc"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "code": "2016YFA0500402",
+                    "country": "China",
+                    "funding_body": "Other government",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "31825014",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "32130049",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "32021002",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                },
+                {
+                    "code": "31630090",
+                    "country": "China",
+                    "funding_body": "National Natural Science Foundation of China (NSFC)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-08-07T00:00:00",
+            "header_release": "2026-05-06T00:00:00",
+            "map_release": "2026-05-06T00:00:00",
+            "update": "2026-05-06T00:00:00"
+        },
+        "keywords": "dPIEZO channel, MEMBRANE PROTEIN",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-05-06T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "PDBj",
+            "last_processing": "PDBc"
+        },
+        "title": "Cryo-EM structure of dPIEZO channel"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "ORCID": "0009-0008-4506-8427",
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Liu S"
+                        },
+                        {
+                            "ORCID": "0000-0001-6654-0294",
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Yang X"
+                        },
+                        {
+                            "ORCID": "0000-0003-1734-9084",
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Chen X"
+                        },
+                        {
+                            "ORCID": "0000-0002-8451-9947",
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Li X"
+                        },
+                        {
+                            "ORCID": "0000-0002-2386-3322",
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Xiao B"
+                        }
+                    ],
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "0353"
+                        }
+                    ],
+                    "journal": "To Be Published",
+                    "journal_abbreviation": "To Be Published",
+                    "published": false,
+                    "title": "Cryo-EM structure of dPIEZO channel"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-65735",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "dPIEZO channel",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9w7x",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-65735",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "annotation_details": "dPIEZO halfA map",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "399.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "399.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "399.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 300,
+                        "row": 300,
+                        "sec": 300
+                    },
+                    "file": "emd_65735_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-65735::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.33"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.33"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.33"
+                        }
+                    },
+                    "size_kbytes": 108001,
+                    "spacing": {
+                        "x": 300,
+                        "y": 300,
+                        "z": 300
+                    },
+                    "statistics": {
+                        "average": 0.005687232,
+                        "maximum": 1.6737455,
+                        "minimum": -0.52542764,
+                        "std": 0.06966816
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "annotation_details": "dPIEZO halfB map",
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "399.0"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "399.0"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "399.0"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 300,
+                        "row": 300,
+                        "sec": 300
+                    },
+                    "file": "emd_65735_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-65735::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "1.33"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "1.33"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "1.33"
+                        }
+                    },
+                    "size_kbytes": 108001,
+                    "spacing": {
+                        "x": 300,
+                        "y": 300,
+                        "z": 300
+                    },
+                    "statistics": {
+                        "average": 0.0057160016,
+                        "maximum": 1.6782185,
+                        "minimum": -0.6381176,
+                        "std": 0.06968342
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "annotation_details": "dPiezo combined map",
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "399.0"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "399.0"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "399.0"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.35,
+                    "primary": true,
+                    "source": "EMDB"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 300,
+            "row": 300,
+            "sec": 300
+        },
+        "file": "emd_65735.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-65735::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "1.33"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "1.33"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "1.33"
+            }
+        },
+        "size_kbytes": 108001,
+        "spacing": {
+            "x": 300,
+            "y": 300,
+            "z": 300
+        },
+        "statistics": {
+            "average": 0.021894475,
+            "maximum": 4.0176706,
+            "minimum": -1.4617674,
+            "std": 0.08366904
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "details": "Sequence reference for Drosophila is not available at the time of biocuration. Current sequence reference is from UniProt id M9MSG8.Residue 2323 is HIS in our construct, consistent with the experimentally determined sequence. The UniProt entry M9MSG8 appears to have a TYR at this position, likely representing a different isoform or annotation error",
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.28974625"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "Piezo-type mechanosensitive ion channel component"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 7215,
+                            "valueOf_": "Drosophila"
+                        }
+                    },
+                    "number_of_copies": "3",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "M9MSG8"
+                            }
+                        ],
+                        "string": "MVFSYACMVLQRIVVPAVLVLAALMRPVGISFVYLLMFFVSPFVPLATRRNFKGSVTAFFIILLTLSTLVLLGHITLQIL AVSLTLPIYNCSFSERLLRHIGFVSFIDLQPFAIIEWLVPEVLVFATSLGSYLTVKRVASQPVGAEQLENGEVVDGQAEN AQTSSQPSAADANGGDVQQATVTTPLQQQQQQLRKRVSMISQHIHFEGLVKISPLFCLATLFFAAVLRPSVPGGFYFLIF LLSGTYWATCQTLQRGFALLLRCVMVVLVLHSLSIVSYQTPWMQSHLNHTTLTARLIGLEPLIESYCSPDIRVFLYNNKL SLDSYLNPFALFFAYFALALTTKHLIKPRLVRQSTRKARTPQPLESGSSVAPSVTQRGNDMQLESMEQRSEQENTTTSIL DQISYGFVSVGGFIYQNSYIFTNILMMAWSIVYHSWLTFVLLLSANVLWMIPNQRKAMMRSSPFIVLYAEALLIAQYIYG MDLNNEELPTSVPTAGINLQQIGFERPIENQMRPCVPLIVKTAFVLMFWVTSRQFFKEKRDRRRDSTLADFIAPLQITVG SAGSSYLINDGKKTSKFLKKAGDVIKNLLVRLWIWLLVLVIFLCAITGENMTGFRICYMALFLFFLLVFQSSSKAWVKIM YGFWLFLIFYAMSILILIYTYQFDKFDTYWSDYLNVSATLQKDIGLKRYQTKDLFLHLVSPTIIVILTVIQVHYFHKRFI ASLQQQPLAGGSAQQKPTETTALEPAPSKRRGSAGSLRKSQGPSAEAAPGATTDFETSVRDLVRISFRKIKNKSEYIFKN FKDVFWRFLELHIMKAVYIAAFVCSVSEVCVLHIIFVGFCVLGATSRKAVQVVISRLISFIVTVIVLSKMIYQIEYLSHS QHNVVCSDNRTANNAEWIGLTKADKVTGGLMSLLRTYIIYMVIVTMHAVISLRQLQMRVKIGALNAPPTKLLFPNIIRAD AEKDLVGLVKYLLNFGFYKFGIEISLIALVSTITYRQDIVAVVYALWLVVLLLLRRSQCAKIWGVFQAFFAISILTQYIV LVGLPPSSCLVFPWDEGPFGEGIQRWAMLPGALHFNHVPKLIFDFIVLVILNRQKSIFCIEQRYASNDDYPGGSNRSVIA DIAQLGRVPFDNPTHDFCSYIRNYSDILKNGVLCGFYWFTLAVVFLAGTNIADLLALGYLIGAFIFLWQGSDFYLRPIHT IIFRWKWLLAFNVANILIKTSFQMAGCLFMTQLTKDCCWLVHMLGITCTSNVLTEQIMLPEEAELALKPGECPKITHQVV LLWDTICFAFIIFQLRIFKSHYFCHIITDTKANNILASRGADIIESLRHKQIAHRHDHEKQVLHKIKRKMERIRATQQKM LRPLDKQTHFDEHGYPLPAPTVRRRKEIKLHPHATRAGDYYMFEEMDDKFELDLIHDEIDFLEEENITESEMKMQRRKTL YDKSKDAPTGEFPSTSKGISKERDAATASSSASPAPTRDVGDLPVIPPPSTGLGREQTSKETSDSKSKMEVDSGEVTAKD SDEDFDTNPIIRLLEGFLVTLTIRLNRFSRNYRFVNRILAGEKKTLKESSSLNRLGLSSAAAMFHFLKSNLESDESEPPA SSSTPRRVVIAPPNATEHSDPTSTTLNTNTTTTPLSPPEPLQPLQPLQPNTTSTPQQQHQHIRAAEEIIELPVDTVDGVA HRKQSINSSPPAKGAGEFNLEEENFAQRDHHIIVEVLISSWYALLANTDLICYIVVFINQVVNASLISLPLPIMVFLWGT LSLPRPTKTFWVTLIAYTQAIVLIKCIFQFKLIWSNYHQLPNQPLTPAKIFGVENKAHYAIYDLILLLVLFLHRYLLKSQ GLWKSGYKDTDNQFTKPTASIDERDDSDNLSQPDSRQLNDDAAQKLSLQVSQASLPGSPEFSKTGINQLERTKYTSSLYK FFFSLVHKSRLATDVYALMFLCDFVNFFVLLFGFTAFGTQQTESDEGVQTYLAENKVPIPFLIMLLVQFLLIVIDRALYL RKALVNKIIFHFFSVIGIHIWMFFVVPAVTERTFNSLAPPIIFYVIKCFYMLLSSYQIKSGYPKRILGNFFTKGFSMVNM IAFKVYMQIPFLYELRTILDWVCIDSTMTIFDWLKMEDIFSNIYLIRCTRQSETDFPAMRAQKKASLSKLIMGGTIVLLI VICIWGPLCLFALGNAVGTSNVPFHVSLSIRIGPYDPIYTTNNYDSIFEINPEMYSQMTNAYIKEKQALTFIAGYDATDV AAVRLAGNSPSLWNIAPPDRQRLLNDLRNNHTLKARFSYSLTRKAPAKGLKENVGDEHAISLDESFEGRAALIHMLSETH DVEPIYSNGTTNGTTPEVEEVVVIPGMIPKFIKVLNSGDAAVVSVLSPKHYDYRPLVIKMHRDNETNGLWWEIRDYCNDT FYNETLSKFAYSNCTSGIVMYTFNDKKFPSTFSFLTAGGIIGLYTTFVLLASRFMKSFIGGQNRKIMFEDLPYVDRVLQL CLDIYLVREALEFALEEDLFAKLLFLYRSPETLIKWTRPKEEYVDDDGDTDSIPSRMSVRRPEQLQPQQPQ"
+                    }
+                },
+                {
+                    "formula": "PLX",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.0007671319999999999"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "(9R,11S)-9-({[(1S)-1-HYDROXYHEXADECYL]OXY}METHYL)-2,2-DIMETHYL-5,7,10-TRIOXA-2LAMBDA~5~-AZA-6LAMBDA~5~-PHOSPHAOCTACOSANE-6,6,11-TRIOL"
+                    },
+                    "number_of_copies": "12"
+                },
+                {
+                    "formula": "PEE",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 3,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000744034"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "1,2-dioleoyl-sn-glycero-3-phosphoethanolamine"
+                    },
+                    "number_of_copies": "3"
+                },
+                {
+                    "formula": "P5S",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 4,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000792075"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "O-[(R)-{[(2R)-2,3-bis(octadecanoyloxy)propyl]oxy}(hydroxy)phosphoryl]-L-serine"
+                    },
+                    "number_of_copies": "3"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "dPIEZO Structure"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "dPIEZO Structure"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 7215,
+                                "valueOf_": "Drosophila"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "NONE"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 678118,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "3.95"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "RELION",
+                                        "version": "3.1"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "MAXIMUM LIKELIHOOD"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "type_of_model": "NONE"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "FLOOD BEAM",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "50.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOQUANTUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.3000000000000003"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "1.5"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "ph": 7.3
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

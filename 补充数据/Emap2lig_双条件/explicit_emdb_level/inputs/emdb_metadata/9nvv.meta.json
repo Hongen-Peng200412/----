@@ -1,0 +1,1003 @@
+{
+    "_id": "67e9c5296e5018e15120e359",
+    "admin": {
+        "authors_list": {
+            "author": [
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Roark RS"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Shapiro LS"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Kwong PD"
+                },
+                {
+                    "instance_type": "author",
+                    "valueOf_": "Kwong PD"
+                }
+            ]
+        },
+        "current_status": {
+            "code": {
+                "valueOf_": "REL"
+            },
+            "date": "2026-04-29T00:00:00",
+            "processing_site": "RCSB"
+        },
+        "grant_support": {
+            "grant_reference": [
+                {
+                    "country": "United States",
+                    "funding_body": "National Institutes of Health/National Institute Of Allergy and Infectious Diseases (NIH/NIAID)",
+                    "instance_type": "grant_reference"
+                }
+            ]
+        },
+        "key_dates": {
+            "deposition": "2025-03-21T00:00:00",
+            "header_release": "2026-04-01T00:00:00",
+            "map_release": "2026-04-01T00:00:00",
+            "update": "2026-04-29T00:00:00"
+        },
+        "keywords": "HIV, VIRAL PROTEIN, GERMLINE-TARGETING, IMMUNOGEN, VIRAL PROTEIN-IMMUNE SYSTEM complex",
+        "revision_history": {
+            "revision": [
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "instance_type": "model",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "metadata",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 1,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "half_map",
+                                "part": 2,
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "image",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            },
+                            {
+                                "instance_type": "primary_map",
+                                "provider": "REPOSITORY",
+                                "revision_type": "INITIAL_RELEASE"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-01T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.0"
+                },
+                {
+                    "change_list": {
+                        "revision_change_sub_group": [
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "model",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_ASTM",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "DATABASE_REFERENCES"
+                            },
+                            {
+                                "categories": {
+                                    "category": [
+                                        "citation",
+                                        "citation_author",
+                                        "em_admin"
+                                    ]
+                                },
+                                "instance_type": "metadata",
+                                "items": {
+                                    "item": [
+                                        "_citation.country",
+                                        "_citation.journal_abbrev",
+                                        "_citation.journal_id_ASTM",
+                                        "_citation.journal_id_CSD",
+                                        "_citation.journal_id_ISSN",
+                                        "_citation.journal_volume",
+                                        "_citation.page_first",
+                                        "_citation.page_last",
+                                        "_citation.pdbx_database_id_DOI",
+                                        "_citation.pdbx_database_id_PubMed",
+                                        "_citation.title",
+                                        "_citation.year",
+                                        "_em_admin.last_update"
+                                    ]
+                                },
+                                "revision_group": "EXPERIMENTAL_SUMMARY"
+                            }
+                        ]
+                    },
+                    "date": "2026-04-29T00:00:00",
+                    "instance_type": "revision",
+                    "version": "1.1"
+                }
+            ]
+        },
+        "sites": {
+            "deposition": "RCSB",
+            "last_processing": "RCSB"
+        },
+        "title": "Cryo-EM structure of V2 apex germline-targeting HIV Env trimer Q23-APEX-GT2"
+    },
+    "crossreferences": {
+        "citation_list": {
+            "primary_citation": {
+                "citation_type": {
+                    "author": [
+                        {
+                            "instance_type": "author",
+                            "order": 1,
+                            "valueOf_": "Mishra N"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 2,
+                            "valueOf_": "Liang B"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 3,
+                            "valueOf_": "Roark RS"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 4,
+                            "valueOf_": "Ghosh AR"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 5,
+                            "valueOf_": "Callaghan S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 6,
+                            "valueOf_": "Lee WH"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 7,
+                            "valueOf_": "Li X"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 8,
+                            "valueOf_": "Vo AL"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 9,
+                            "valueOf_": "Avillion G"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 10,
+                            "valueOf_": "Chowdhury RR"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 11,
+                            "valueOf_": "Habib R"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 12,
+                            "valueOf_": "Bibollet-Ruche F"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 13,
+                            "valueOf_": "Giese G"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 14,
+                            "valueOf_": "Oberoi P"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 15,
+                            "valueOf_": "Amereh K"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 16,
+                            "valueOf_": "Somanathan A"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 17,
+                            "valueOf_": "Zhu Y"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 18,
+                            "valueOf_": "Zhang Y"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 19,
+                            "valueOf_": "Kassab M"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 20,
+                            "valueOf_": "Tjio L"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 21,
+                            "valueOf_": "Andrabi S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 22,
+                            "valueOf_": "Reyes RA"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 23,
+                            "valueOf_": "Allen JD"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 24,
+                            "valueOf_": "James NE"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 25,
+                            "valueOf_": "Randall Jr KN"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 26,
+                            "valueOf_": "van der Maas L"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 27,
+                            "valueOf_": "Ben-Akiva E"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 28,
+                            "valueOf_": "Kacmarek-Michaels K"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 29,
+                            "valueOf_": "Plante S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 30,
+                            "valueOf_": "Martella CL"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 31,
+                            "valueOf_": "Skelly AN"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 32,
+                            "valueOf_": "Singh A"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 33,
+                            "valueOf_": "Hurtado J"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 34,
+                            "valueOf_": "Dueker K"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 35,
+                            "valueOf_": "Capozzola T"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 36,
+                            "valueOf_": "Nedellec R"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 37,
+                            "valueOf_": "Ozorowski G"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 38,
+                            "valueOf_": "Lewis MG"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 39,
+                            "valueOf_": "Falcone S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 40,
+                            "valueOf_": "Carfi A"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 41,
+                            "valueOf_": "Himansu S"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 42,
+                            "valueOf_": "Shapiro L"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 43,
+                            "valueOf_": "Crispin M"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 44,
+                            "valueOf_": "Hahn BH"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 45,
+                            "valueOf_": "Briney B"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 46,
+                            "valueOf_": "Irvine DJ"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 47,
+                            "valueOf_": "Burton DR"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 48,
+                            "valueOf_": "Ward AB"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 49,
+                            "valueOf_": "Batista FD"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 50,
+                            "valueOf_": "Kwong PD"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 51,
+                            "valueOf_": "Shaw GM"
+                        },
+                        {
+                            "instance_type": "author",
+                            "order": 52,
+                            "valueOf_": "Andrabi R"
+                        }
+                    ],
+                    "country": "US",
+                    "external_references": [
+                        {
+                            "instance_type": "external_references",
+                            "type_": "PUBMED",
+                            "valueOf_": "41985438"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "DOI",
+                            "valueOf_": "doi:10.1016/j.immuni.2026.03.012"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ISSN",
+                            "valueOf_": "1074-7613"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "CSD",
+                            "valueOf_": "2048"
+                        },
+                        {
+                            "instance_type": "external_references",
+                            "type_": "ASTM",
+                            "valueOf_": "IUNIEH"
+                        }
+                    ],
+                    "first_page": "1140",
+                    "journal": "Immunity",
+                    "journal_abbreviation": "Immunity",
+                    "last_page": "1160.e11",
+                    "published": true,
+                    "title": "Germline-targeting HIV immunogen induces cross-neutralizing antibodies in outbred macaques.",
+                    "volume": "59",
+                    "year": "2026"
+                }
+            }
+        },
+        "other_db_list": {
+            "db_reference": [
+                {
+                    "accession_id": "EMD-49865",
+                    "content_type": "associated EM volume",
+                    "db_name": "EMDB",
+                    "details": "Cryo-EM structure of V2-apex germline-targeting HIV Env trimer Q23-APEX-GT2",
+                    "instance_type": "db_reference"
+                }
+            ]
+        },
+        "pdb_list": {
+            "pdb_reference": [
+                {
+                    "instance_type": "pdb_reference",
+                    "pdb_id": "9nvv",
+                    "relationship": {
+                        "in_frame": "FULLOVERLAP"
+                    }
+                }
+            ]
+        }
+    },
+    "emdb_id": "EMD-49865",
+    "interpretation": {
+        "half_map_list": {
+            "half_map": [
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "318.72"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "318.72"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "318.72"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 384,
+                        "row": 384,
+                        "sec": 384
+                    },
+                    "file": "emd_49865_half_map_2.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-49865::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        }
+                    },
+                    "size_kbytes": 226493,
+                    "spacing": {
+                        "x": 384,
+                        "y": 384,
+                        "z": 384
+                    },
+                    "statistics": {
+                        "average": 0.001095243,
+                        "maximum": 0.64012194,
+                        "minimum": -0.27984723,
+                        "std": 0.026755897
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                },
+                {
+                    "axis_order": {
+                        "fast": "X",
+                        "medium": "Y",
+                        "slow": "Z"
+                    },
+                    "cell": {
+                        "a": {
+                            "units": "\u212b",
+                            "valueOf_": "318.72"
+                        },
+                        "alpha": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "b": {
+                            "units": "\u212b",
+                            "valueOf_": "318.72"
+                        },
+                        "beta": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        },
+                        "c": {
+                            "units": "\u212b",
+                            "valueOf_": "318.72"
+                        },
+                        "gamma": {
+                            "units": "deg",
+                            "valueOf_": "90.0"
+                        }
+                    },
+                    "contour_list": {
+                        "contour": [
+                            {
+                                "instance_type": "contour",
+                                "primary": true,
+                                "source": "AUTHOR"
+                            }
+                        ]
+                    },
+                    "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+                    "dimensions": {
+                        "col": 384,
+                        "row": 384,
+                        "sec": 384
+                    },
+                    "file": "emd_49865_half_map_1.map.gz",
+                    "format": "CCP4",
+                    "instance_type": "half_map",
+                    "label": "::::EMDATABANK.org::::EMD-49865::::",
+                    "origin": {
+                        "col": 0,
+                        "row": 0,
+                        "sec": 0
+                    },
+                    "pixel_spacing": {
+                        "x": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "y": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        },
+                        "z": {
+                            "units": "\u212b",
+                            "valueOf_": "0.83"
+                        }
+                    },
+                    "size_kbytes": 226493,
+                    "spacing": {
+                        "x": 384,
+                        "y": 384,
+                        "z": 384
+                    },
+                    "statistics": {
+                        "average": 0.0011088151,
+                        "maximum": 0.6176312,
+                        "minimum": -0.3026396,
+                        "std": 0.026749989
+                    },
+                    "symmetry": {
+                        "space_group": 1
+                    }
+                }
+            ]
+        }
+    },
+    "map": {
+        "axis_order": {
+            "fast": "X",
+            "medium": "Y",
+            "slow": "Z"
+        },
+        "cell": {
+            "a": {
+                "units": "\u212b",
+                "valueOf_": "318.72"
+            },
+            "alpha": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "b": {
+                "units": "\u212b",
+                "valueOf_": "318.72"
+            },
+            "beta": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            },
+            "c": {
+                "units": "\u212b",
+                "valueOf_": "318.72"
+            },
+            "gamma": {
+                "units": "deg",
+                "valueOf_": "90.0"
+            }
+        },
+        "contour_list": {
+            "contour": [
+                {
+                    "instance_type": "contour",
+                    "level": 0.12,
+                    "primary": true,
+                    "source": "AUTHOR"
+                }
+            ]
+        },
+        "data_type": "IMAGE STORED AS FLOATING POINT NUMBER (4 BYTES)",
+        "dimensions": {
+            "col": 384,
+            "row": 384,
+            "sec": 384
+        },
+        "file": "emd_49865.map.gz",
+        "format": "CCP4",
+        "label": "::::EMDATABANK.org::::EMD-49865::::",
+        "origin": {
+            "col": 0,
+            "row": 0,
+            "sec": 0
+        },
+        "pixel_spacing": {
+            "x": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            },
+            "y": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            },
+            "z": {
+                "units": "\u212b",
+                "valueOf_": "0.83"
+            }
+        },
+        "size_kbytes": 226493,
+        "spacing": {
+            "x": 384,
+            "y": 384,
+            "z": 384
+        },
+        "statistics": {
+            "average": 0.0011837216,
+            "maximum": 0.54575694,
+            "minimum": -0.1996134,
+            "std": 0.0144888265
+        },
+        "symmetry": {
+            "space_group": 1
+        }
+    },
+    "sample": {
+        "macromolecule_list": {
+            "macromolecule": [
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 1,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.085350055"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "HIV envelope gp120"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 11676,
+                            "valueOf_": "Human immunodeficiency virus 1"
+                        }
+                    },
+                    "number_of_copies": "3",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O55774"
+                            }
+                        ],
+                        "string": "AENLWVTVYYGVPVWRDAETTLFCASDAKAYETEKHNVWATHACVPTDPNPQEIHLDNVTEKFNMWKNNMVEQMHTDIIS LWDQSLKPCVKLTPLCVTLHCRNVTSVNTTGDREELKNCTFNMTTELRDKRQKVYSLFYRLDIVPINENQGSEYRLINCN TSACTQACPKVSFEPIPIHYCAPAGFAILKCKDEGFNGTGLCKNVSTVQCTHGIKPVVSTQLLLNGSLAEKNITIRSENI TNNAKIIIVQLVQPVTIKCIRPNNYTRKSIRIGPGQAFYAMGDIIGDIRQAHCNVSRSRWNKTLQEVAEKLRTYFGNKTI IFANSSGGDLEITTHSFNCGGEFFYCNTSGLFNSTWYVNSTWNDTDSTQESNDTITLPCRIKQIINMWQRAGQCMYAPPI PGVIKCESNITGLLLTRDGGKDNNVNETFRPGGGDMRDNWRSELYKYKVVEIEPLGVAPTRCKRRVVEGGGGSGGGGSFE PIPIHYCAPAGFAILKCKDEGFNGTGLCKNVSTVQCTHGIKPVVSTQLLLNGSLAEKNITIRSENITNNAKIIIVQLVQP VTIKCIRPNNYTRKSIRIGPGQAFYAMGDIIGDIRQAHCNVSRSRWNKTLQEVAEKLRTYFGNKTIIFANSSGGDLEITT HSFNCGGEFFYCNTSGLFNSTWYVNSTWNSNDTITLPCRIKQIINMWQRAGQCMYAPPIPGVIKCESNITGLLLTRDGGK DNNVNETFRPGGGDMRDNWRSELYKYKVVEIEPLGVAPTRCKR"
+                    }
+                },
+                {
+                    "enantiomer": "LEVO",
+                    "instance_type": "protein_or_peptide",
+                    "macromolecule_id": 2,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.017205666"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "HIV envelope gp41 ectodomain"
+                    },
+                    "natural_source": {
+                        "database": "NCBI",
+                        "organism": {
+                            "ncbi": 11676,
+                            "valueOf_": "Human immunodeficiency virus 1"
+                        }
+                    },
+                    "number_of_copies": "3",
+                    "recombinant_expression": {
+                        "database": "NCBI",
+                        "recombinant_organism": {
+                            "ncbi": 9606,
+                            "valueOf_": "Homo sapiens"
+                        }
+                    },
+                    "sequence": {
+                        "external_references": [
+                            {
+                                "instance_type": "external_references",
+                                "type_": "UNIPROTKB",
+                                "valueOf_": "O55774"
+                            }
+                        ],
+                        "string": "AVGIGAVRRGFLGAAGSTMGAASITLTVQARQLLSGIVQPQNNLLRAPEAQQHLLKLGVWGIKQLQARVLAVERYLRDQQ LLGIWGCSGKLICCTNVPWNSSWSNKSLDEIWNNMTWLQWDKEIGNYTQLIYRLIEESQNQQEKNEKELLALD"
+                    }
+                },
+                {
+                    "formula": "NAG",
+                    "instance_type": "ligand",
+                    "macromolecule_id": 7,
+                    "molecular_weight": {
+                        "theoretical": {
+                            "units": "MDa",
+                            "valueOf_": "0.000221208"
+                        }
+                    },
+                    "name": {
+                        "valueOf_": "2-acetamido-2-deoxy-beta-D-glucopyranose"
+                    },
+                    "number_of_copies": "32"
+                }
+            ]
+        },
+        "name": {
+            "valueOf_": "HIV Env trimer Q23-APEX-GT2"
+        },
+        "supramolecule_list": {
+            "supramolecule": [
+                {
+                    "instance_type": "complex_supramolecule",
+                    "macromolecule_list": {
+                        "macromolecule": [
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 1
+                            },
+                            {
+                                "instance_type": "macromolecule",
+                                "macromolecule_id": 2
+                            }
+                        ]
+                    },
+                    "name": {
+                        "valueOf_": "HIV Env trimer Q23-APEX-GT2"
+                    },
+                    "natural_source": [
+                        {
+                            "database": "NCBI",
+                            "instance_type": "natural_source",
+                            "organism": {
+                                "ncbi": 11676,
+                                "valueOf_": "Human immunodeficiency virus type 1"
+                            }
+                        }
+                    ],
+                    "parent": 0,
+                    "supramolecule_id": 1
+                }
+            ]
+        }
+    },
+    "structure_determination_list": {
+        "structure_determination": [
+            {
+                "aggregation_state": "particle",
+                "image_processing": [
+                    {
+                        "ctf_correction": {
+                            "type_": "NONE"
+                        },
+                        "final_angle_assignment": {
+                            "type_": "NOT APPLICABLE"
+                        },
+                        "final_reconstruction": {
+                            "number_images_used": 101320,
+                            "resolution": {
+                                "res_type": "BY AUTHOR",
+                                "units": "\u212b",
+                                "valueOf_": "2.9"
+                            },
+                            "resolution_method": "FSC 0.143 CUT-OFF",
+                            "software_list": {
+                                "software": [
+                                    {
+                                        "instance_type": "software",
+                                        "name": "cryoSPARC"
+                                    }
+                                ]
+                            }
+                        },
+                        "image_processing_id": 1,
+                        "image_recording_id": 1,
+                        "initial_angle_assignment": {
+                            "type_": "NOT APPLICABLE"
+                        },
+                        "instance_type": "singleparticle_processing",
+                        "startup_model": [
+                            {
+                                "instance_type": "startup_model",
+                                "pdb_model": {
+                                    "pdb_id": "7LLK"
+                                },
+                                "type_of_model": "PDB ENTRY"
+                            }
+                        ]
+                    }
+                ],
+                "instance_type": "structure_determination",
+                "method": "singleParticle",
+                "microscopy_list": {
+                    "microscopy": [
+                        {
+                            "acceleration_voltage": {
+                                "units": "kV",
+                                "valueOf_": "300"
+                            },
+                            "electron_source": "FIELD EMISSION GUN",
+                            "illumination_mode": "OTHER",
+                            "image_recording_list": {
+                                "image_recording": [
+                                    {
+                                        "average_electron_dose_per_image": {
+                                            "units": "e/\u212b^2",
+                                            "valueOf_": "58.0"
+                                        },
+                                        "film_or_detector_model": {
+                                            "valueOf_": "GATAN K3 BIOQUANTUM (6k x 4k)"
+                                        },
+                                        "image_recording_id": 1,
+                                        "instance_type": "image_recording"
+                                    }
+                                ]
+                            },
+                            "imaging_mode": "BRIGHT FIELD",
+                            "instance_type": "single_particle_microscopy",
+                            "microscope": "TFS KRIOS",
+                            "microscopy_id": 1,
+                            "nominal_defocus_max": {
+                                "units": "\u00b5m",
+                                "valueOf_": "2.0"
+                            },
+                            "nominal_defocus_min": {
+                                "units": "\u00b5m",
+                                "valueOf_": "0.8"
+                            }
+                        }
+                    ]
+                },
+                "specimen_preparation_list": {
+                    "specimen_preparation": [
+                        {
+                            "buffer": {
+                                "details": "PBS",
+                                "ph": 7.5
+                            },
+                            "instance_type": "single_particle_preparation",
+                            "preparation_id": 1,
+                            "vitrification": {
+                                "chamber_humidity": {
+                                    "units": "percentage",
+                                    "valueOf_": "100"
+                                },
+                                "cryogen_name": "ETHANE"
+                            }
+                        }
+                    ]
+                },
+                "structure_determination_id": 1
+            }
+        ]
+    },
+    "version": "3.0.11.0"
+}

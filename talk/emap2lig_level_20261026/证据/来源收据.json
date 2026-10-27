@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-26",
+  "timezone": "Asia/Shanghai",
+  "scope": "Read-only factual audit and proposed rerun; no model inference or experimental code change.",
+  "official": {
+    "repository": "https://github.com/kiharalab/Emap2lig",
+    "commit": "e92f19b4f951bed68fd0fc002465db51818ee8bd",
+    "version": "0.4.4",
+    "commit_time_shanghai": "2026-08-15T00:40:37+08:00",
+    "sources": [
+      {
+        "path": "src/emap2lig/main.py",
+        "sha256": "d2546593cb6095df33dfbcfadef1df8c68a2bc429641584fa2331a15c8a469dc",
+        "bytes": 52550,
+        "url": "https://github.com/kiharalab/Emap2lig/blob/e92f19b4f951bed68fd0fc002465db51818ee8bd/src/emap2lig/main.py"
+      },
+      {
+        "path": "src/emap2lig/data/map.py",
+        "sha256": "85c51b44e07f51d4aab418b6b021f69df5bb12130695085e6ef4ce06f1467e80",
+        "bytes": 18062,
+        "url": "https://github.com/kiharalab/Emap2lig/blob/e92f19b4f951bed68fd0fc002465db51818ee8bd/src/emap2lig/data/map.py"
+      },
+      {
+        "path": "src/emap2lig/data/io/map.py",
+        "sha256": "8573927e3ce7ab0476e1ade7a6495c84aee3def9448895b3c414aaaf4a1e40b9",
+        "bytes": 6087,
+        "url": "https://github.com/kiharalab/Emap2lig/blob/e92f19b4f951bed68fd0fc002465db51818ee8bd/src/emap2lig/data/io/map.py"
+      },
+      {
+        "path": "src/emap2lig/data/download.py",
+        "sha256": "52629ef074a026159494bad56a7ff4fbe73ad348adbcdcc622c52848c7a7239a",
+        "bytes": 972,
+        "url": "https://github.com/kiharalab/Emap2lig/blob/e92f19b4f951bed68fd0fc002465db51818ee8bd/src/emap2lig/data/download.py"
+      },
+      {
+        "path": "src/emap2lig/emap2lig.yaml",
+        "sha256": "688fb0e77b67948db4259e7cfb16d93b5a897fa0fa8758ba755bdb9a19539252",
+        "bytes": 3362,
+        "url": "https://github.com/kiharalab/Emap2lig/blob/e92f19b4f951bed68fd0fc002465db51818ee8bd/src/emap2lig/emap2lig.yaml"
+      },
+      {
+        "path": "docs/input-format.md",
+        "sha256": "3bd9ff358b94ac6c5a5d4c77ea02d35a103defb6deecaa168e11e729d64053a7",
+        "bytes": 2386,
+        "url": "https://github.com/kiharalab/Emap2lig/blob/e92f19b4f951bed68fd0fc002465db51818ee8bd/docs/input-format.md"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "ce9fb568d547523a4ef6411a6bb0fae23cb84587f3fb41d48e3baba91ec38ffd",
+        "bytes": 2567,
+        "url": "https://github.com/kiharalab/Emap2lig/blob/e92f19b4f951bed68fd0fc002465db51818ee8bd/pyproject.toml"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "file": "remote_audit.json",
+      "bytes": 149806,
+      "sha256": "f457f5e0f376c90b37f7f45182b0d3a8e2ee8f5cfbe48cf03d449d34df4a7479"
+    },
+    {
+      "file": "level_metadata_audit.json",
+      "bytes": 107496,
+      "sha256": "5e477c7acc71c9e9da2e90246eb6ef7f289b1f0d91f70bbe155c30dbf1e9a7c3"
+    },
+    {
+      "file": "call_chain_probe.json",
+      "bytes": 7783,
+      "sha256": "a6516652924a95da2178e812e0fc7bffc39c5dd01446263ece3e2e9b1a1ae95e"
+    },
+    {
+      "file": "official_source_excerpt.json",
+      "bytes": 6050,
+      "sha256": "02a141381952807b6051ee6d72fbb700c686e6aa71a9abf0162f17407d7a8910"
+    }
+  ],
+  "protected_files": [
+    {
+      "path": "C:\\Users\\15919\\Desktop\\论文草稿\\论文草稿.md",
+      "unchanged": true,
+      "sha256": "91bf4d4fe511355cdd80ccd12dd1843982c3170eabc250d0f5880f0be1be8737"
+    },
+    {
+      "path": "C:\\Users\\15919\\Desktop\\论文草稿\\draft.md",
+      "unchanged": true,
+      "sha256": "00a0c4f57534cf9f9a355b29f62df3de025b8ea2cd0ce6e0afa065fa946c22f6"
+    },
+    {
+      "path": "C:\\Users\\15919\\Desktop\\论文草稿\\补充材料.md",
+      "unchanged": true,
+      "sha256": "69a7f95f611e10134d0919fa96ec3dccf31a4534e58c8786532dbf43391895b6"
+    },
+    {
+      "path": "C:\\Users\\15919\\Desktop\\论文草稿\\supplementary.md",
+      "unchanged": true,
+      "sha256": "b00cfd0d7c8a1818e641d018f6bdb4e074701895fbdb5afee0e89c1486a873ad"
+    },
+    {
+      "path": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\stage1结果.pptx",
+      "unchanged": true,
+      "sha256": "49267347feb445dd21c06fb175e858976932e0c313d37f502ad2db3f6753353f"
+    },
+    {
+      "path": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\stage3结果.pptx",
+      "unchanged": true,
+      "sha256": "260c577f73734780a23d1aa3467a29fe1a4d235b916e24757b1a1bba3a7fdf0b"
+    },
+    {
+      "path": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\stage3可视化.pptx",
+      "unchanged": true,
+      "sha256": "bb7d406ccd39c3cb0e12ab74b4315b72c99bd5aa8a1341bfe4db78f1a6e4c9a9"
+    },
+    {
+      "path": "C:\\Users\\15919\\Desktop\\论文草稿\\画图\\E2E结果.pptx",
+      "unchanged": true,
+      "sha256": "470f14fc3d004dac4bb6b9c79e17216ca3f1d2f64879661c6726c4309e1e5e8d"
+    }
+  ]
+}

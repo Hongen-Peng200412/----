@@ -1,0 +1,341 @@
+{
+  "scope": "Isolated source-derived call-chain probe. Synthetic level 0.025; no model, map data or scientific metrics were executed.",
+  "checks_passed": 15,
+  "results": [
+    {
+      "source": "local",
+      "case": "actual_emdb_only",
+      "lookup_calls": 0,
+      "effective_threshold": 0.0,
+      "trace": [
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "local",
+      "case": "explicit_level",
+      "lookup_calls": 0,
+      "effective_threshold": 0.0125,
+      "trace": [
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0125
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "local",
+      "case": "forwarded_emdb",
+      "lookup_calls": 1,
+      "effective_threshold": 0.0125,
+      "trace": [
+        {
+          "operation": "lookup",
+          "emdb_id": "30556"
+        },
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0125
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "official_e92f19b",
+      "case": "actual_emdb_only",
+      "lookup_calls": 0,
+      "effective_threshold": 0.0,
+      "trace": [
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "official_e92f19b",
+      "case": "explicit_level",
+      "lookup_calls": 0,
+      "effective_threshold": 0.0125,
+      "trace": [
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0125
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "official_e92f19b",
+      "case": "forwarded_emdb",
+      "lookup_calls": 1,
+      "effective_threshold": 0.0125,
+      "trace": [
+        {
+          "operation": "lookup",
+          "emdb_id": "30556"
+        },
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0125
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "Emap2lig_60e34f30b989",
+      "case": "actual_emdb_only",
+      "lookup_calls": 0,
+      "effective_threshold": 0.0,
+      "trace": [
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "Emap2lig_60e34f30b989",
+      "case": "explicit_level",
+      "lookup_calls": 0,
+      "effective_threshold": 0.0125,
+      "trace": [
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0125
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "Emap2lig_60e34f30b989",
+      "case": "forwarded_emdb",
+      "lookup_calls": 1,
+      "effective_threshold": 0.0125,
+      "trace": [
+        {
+          "operation": "lookup",
+          "emdb_id": "30556"
+        },
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0125
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "Emap2lig_eb7a32a0ee70",
+      "case": "actual_emdb_only",
+      "lookup_calls": 0,
+      "effective_threshold": 0.0,
+      "trace": [
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "Emap2lig_eb7a32a0ee70",
+      "case": "explicit_level",
+      "lookup_calls": 0,
+      "effective_threshold": 0.0125,
+      "trace": [
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0125
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "Emap2lig_eb7a32a0ee70",
+      "case": "forwarded_emdb",
+      "lookup_calls": 1,
+      "effective_threshold": 0.0125,
+      "trace": [
+        {
+          "operation": "lookup",
+          "emdb_id": "30556"
+        },
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0125
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "Emap2lig_d1e46744d92e",
+      "case": "actual_emdb_only",
+      "lookup_calls": 0,
+      "effective_threshold": 0.0,
+      "trace": [
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "Emap2lig_d1e46744d92e",
+      "case": "explicit_level",
+      "lookup_calls": 0,
+      "effective_threshold": 0.0125,
+      "trace": [
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0125
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    },
+    {
+      "source": "Emap2lig_d1e46744d92e",
+      "case": "forwarded_emdb",
+      "lookup_calls": 1,
+      "effective_threshold": 0.0125,
+      "trace": [
+        {
+          "operation": "lookup",
+          "emdb_id": "30556"
+        },
+        {
+          "operation": "resample",
+          "apix": 1.0
+        },
+        {
+          "operation": "normalize",
+          "effective_threshold": 0.0125
+        },
+        {
+          "operation": "crop",
+          "min_spatial_size": 64,
+          "extended_val": 16
+        }
+      ]
+    }
+  ]
+}

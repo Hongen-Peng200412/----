@@ -61,7 +61,7 @@ def draw_panel(ax, kind, cohort, data, summary):
                 ax.vlines(x, stats["lower"], stats["upper"], color=colour, linewidth=1.15, zorder=4)
                 ax.hlines([stats["lower"], stats["upper"]], x - 0.045, x + 0.045, color=colour, linewidth=1.15, zorder=4)
                 ax.hlines(stats["mean"], x - 0.085, x + 0.085, color=colour, linewidth=1.8, zorder=5)
-        labels = ["Semantic Dice", "Instance-level\n" + r"$\mathrm{PRAUC}_{0.3}$"] if kind == "overall" else [r"Instance-level $\mathrm{PRAUC}_{0.5}$"]
+        labels = ["Semantic Dice", "Instance-level\nPRAUC"] if kind == "overall" else [r"Instance-level $\mathrm{PRAUC}_{0.5}$"]
         ax.set(xlim=(-0.5, len(metrics) - 0.5), xticks=range(len(metrics)), xticklabels=labels, ylabel="Score", ylim=(0, 1.06), yticks=[0, 0.5, 1])
         ax.tick_params(axis="x", length=0, pad=6)
     elif kind == "paired":
@@ -255,7 +255,7 @@ def main():
             ax.annotate(letter, xy=(0, 1), xycoords="axes fraction", xytext=(-27, 8), textcoords="offset points", fontsize=10, fontweight="bold", va="bottom", annotation_clip=False)
             title = "All ligands" if cohort == "full" else "Small molecules"
             if kind == "paired":
-                title += " · Dice" if six_panel else r" · instance-level $\mathbf{PRAUC}_{0.3}$"
+                title += " · Dice" if six_panel else r" · instance-level $\mathbf{PRAUC}$"
             ax.set_title(title, loc="left", pad=10, fontweight="bold")
         export_figure(fig, figure_id, captions[figure_id], build, manifest)
 

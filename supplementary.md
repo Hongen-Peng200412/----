@@ -97,7 +97,7 @@ We assessed voxel-wise overlap using semantic Dice, and evaluated ligand-instanc
 
 
 
-With CA2 receptors, mean Dice increased from 0.050 for Emap2lig-Find to 0.477, and instance-level $\mathrm{PRAUC}_{0.3}$ increased from 0.255 to 0.541 ({{figref:stage1-overall-performance-NO_LEVEL|a}}). With GT receptors, LigandSeek-Find achieved a mean Dice of 0.584 and an instance-level $\mathrm{PRAUC}_{0.3}$ of 0.663. The advantage persisted for small molecules, with corresponding PRAUC scores of 0.573 for CA2 and 0.701 for GT, compared with 0.462 for Emap2lig-Find ({{figref:stage1-overall-performance-NO_LEVEL|b}}).
+With CA2 receptors, mean Dice increased from 0.050 for Emap2lig-Find to 0.477, and instance-level $\mathrm{PRAUC}$ increased from 0.255 to 0.541 ({{figref:stage1-overall-performance-NO_LEVEL|a}}). With GT receptors, LigandSeek-Find achieved a mean Dice of 0.584 and an instance-level $\mathrm{PRAUC}$ of 0.663. The advantage persisted for small molecules, with corresponding PRAUC scores of 0.573 for CA2 and 0.701 for GT, compared with 0.462 for Emap2lig-Find ({{figref:stage1-overall-performance-NO_LEVEL|b}}).
 
 {{pptfig:"画图/stage1结果.pptx"|stage1-overall-performance-NO_LEVEL}}
 

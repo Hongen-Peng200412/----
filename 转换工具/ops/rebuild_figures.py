@@ -109,6 +109,13 @@ def commands_for(figure: str, build: Path) -> list[list]:
     node = [NODE]
     p=lambda relative,*args:python+[CODE/relative,*args]
     n=lambda relative,*args:node+[CODE/relative,*args]
+    if figure.startswith('fig-method-ab-a'):
+        prefix='e2e/visualization/method-ab-variants/'
+        return [n(prefix+'build_variants.mjs'),['powershell.exe','-NoProfile','-File',CODE/(prefix+'render_native.ps1'),'-BuildRoot',build],p(prefix+'audit.py'),n(prefix+'finalize.mjs')]
+    if figure.startswith('fig-overview-v4-'):
+        prefix='e2e/visualization/overview-redesign-20261028/'
+        native_script=CODE/(prefix+'render_chimerax.py')
+        return [p(prefix+'prepare_scene.py'),[PYMOL,'-B',CODE/(prefix+'render_native.py')],['powershell.exe','-NoProfile','-File',SUPPORT/'run_chimerax.ps1','-CxcPath',native_script,'-LogPrefix',build/'chimerax'],['powershell.exe','-NoProfile','-File',SUPPORT/'run_chimerax.ps1','-CxcPath',CODE/(prefix+'render_transparent.py'),'-LogPrefix',build/'transparent'],p(prefix+'assemble.py'),p(prefix+'package_delivery.py')]
     if figure.startswith('fig-overview_v3') or figure.startswith('fig-method-v9'):
         prefix='e2e/visualization/fig12-revision/'
         return [p(prefix+'prepare_geometry.py'),[PYMOL,'-B',CODE/(prefix+'render_structures.py')],n(prefix+'build_components.mjs'),p(prefix+'assemble.py')]

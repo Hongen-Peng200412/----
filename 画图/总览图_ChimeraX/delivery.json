@@ -1,0 +1,17 @@
+{
+  "sessions": [
+    "A_完整受体.cxs",
+    "B_局部剖切.cxs",
+    "C_密度网格.cxs",
+    "D35_完整受体半透明.cxs",
+    "D55_完整受体半透明.cxs",
+    "D70_完整受体半透明.cxs"
+  ],
+  "map_storage": "embedded in CXS",
+  "density_kind": "schematic Gaussian density from atomic coordinates",
+  "identity_pose_rmsd_A": {
+    "BTN": 2.1984708690162797,
+    "DTB": 2.2303815654957053,
+    "IMI": 2.4617510581770397
+  }
+}

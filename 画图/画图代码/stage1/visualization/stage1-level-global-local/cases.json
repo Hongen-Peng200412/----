@@ -1,0 +1,207 @@
+[
+  {
+    "pdb": "9nvs",
+    "role": "primary",
+    "occurrence_id": 1,
+    "local_blobs": {
+      "cryo": 1,
+      "emap": 2
+    },
+    "receptor_fp_blob": 3,
+    "remote_fp_blob": null,
+    "global_turns": [
+      [
+        "x",
+        -20
+      ],
+      [
+        "y",
+        30
+      ]
+    ],
+    "local_turns": [
+      [
+        "y",
+        35
+      ],
+      [
+        "x",
+        -25
+      ]
+    ],
+    "fp_turns": [
+      [
+        "y",
+        35
+      ],
+      [
+        "x",
+        -25
+      ]
+    ]
+  },
+  {
+    "pdb": "9nal",
+    "role": "candidate",
+    "occurrence_id": 1,
+    "local_blobs": {
+      "cryo": 1,
+      "emap": 12
+    },
+    "receptor_fp_blob": 6,
+    "remote_fp_blob": null,
+    "global_turns": [
+      [
+        "x",
+        -20
+      ],
+      [
+        "y",
+        30
+      ]
+    ],
+    "local_turns": [
+      [
+        "y",
+        35
+      ],
+      [
+        "x",
+        -25
+      ]
+    ],
+    "fp_turns": [
+      [
+        "y",
+        35
+      ],
+      [
+        "x",
+        -25
+      ]
+    ]
+  },
+  {
+    "pdb": "9ujf",
+    "role": "candidate",
+    "occurrence_id": 9,
+    "local_blobs": {
+      "cryo": 2,
+      "emap": 14
+    },
+    "receptor_fp_blob": 11,
+    "remote_fp_blob": null,
+    "global_turns": [
+      [
+        "x",
+        -20
+      ],
+      [
+        "y",
+        30
+      ]
+    ],
+    "local_turns": [
+      [
+        "y",
+        35
+      ],
+      [
+        "x",
+        -25
+      ]
+    ],
+    "fp_turns": [
+      [
+        "y",
+        35
+      ],
+      [
+        "x",
+        -25
+      ]
+    ]
+  },
+  {
+    "pdb": "9wfu",
+    "role": "candidate",
+    "occurrence_id": 0,
+    "local_blobs": {
+      "cryo": 1,
+      "emap": 1
+    },
+    "receptor_fp_blob": 5,
+    "remote_fp_blob": null,
+    "global_turns": [
+      [
+        "x",
+        -20
+      ],
+      [
+        "y",
+        30
+      ]
+    ],
+    "local_turns": [
+      [
+        "y",
+        35
+      ],
+      [
+        "x",
+        -25
+      ]
+    ],
+    "fp_turns": [
+      [
+        "y",
+        35
+      ],
+      [
+        "x",
+        -25
+      ]
+    ]
+  },
+  {
+    "pdb": "9x0x",
+    "role": "candidate",
+    "occurrence_id": 7,
+    "local_blobs": {
+      "cryo": 9,
+      "emap": 16
+    },
+    "receptor_fp_blob": 39,
+    "remote_fp_blob": null,
+    "global_turns": [
+      [
+        "x",
+        -20
+      ],
+      [
+        "y",
+        30
+      ]
+    ],
+    "local_turns": [
+      [
+        "y",
+        35
+      ],
+      [
+        "x",
+        -25
+      ]
+    ],
+    "fp_turns": [
+      [
+        "y",
+        35
+      ],
+      [
+        "x",
+        -25
+      ]
+    ]
+  }
+]

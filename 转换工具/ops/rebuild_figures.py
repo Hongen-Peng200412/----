@@ -115,6 +115,9 @@ def commands_for(figure: str, build: Path) -> list[list]:
     if figure in ("stage1-overall-performance", "stage1-candidate-quality", "stage1-strict-threshold", "stage1-completion-curves"):
         prefix="stage1/calculate/stage1-results-revision/"
         return [p(prefix+"plot.py"),n(prefix+"build_deck.mjs")]
+    if figure.startswith("stage1-level-global-local-"):
+        # 同一完整链重建五个原生案例及候选PPT; 科学输入来自独立 level 冻结目录. 
+        return [["powershell.exe","-NoProfile","-File",CODE/"stage1/visualization/stage1-level-global-local/rebuild.ps1","-OutputDirectory",build/"native-cases"]]
     if figure.startswith("supp-e2e-completion-"):
         return [p(f"e2e/calculate/{figure}/plot.py"),p("e2e/calculate/e2e-instance-completion/svg_shapes.py"),n("e2e/calculate/e2e-instance-completion/assemble.mjs")]
     if figure in ("find-only-instance-completion","stage3-predicted-region-head-to-head","supp-find-correct-match-build"):

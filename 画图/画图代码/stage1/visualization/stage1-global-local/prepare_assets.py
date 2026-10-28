@@ -49,11 +49,16 @@ def write_atom_subset(path, cif, indices):
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--screening", type=Path, required=True)
 parser.add_argument("--output", type=Path, required=True)
+parser.add_argument("--sources", type=Path)
+parser.add_argument("--cases", type=Path)
 args = parser.parse_args()
 root = Path(__file__).resolve().parent
 project = root.parents[4]
-sources = json.loads((root / "sources.json").read_text(encoding="utf-8"))
-cases = json.loads((root / "cases.json").read_text(encoding="utf-8"))
+# 配置未传入时保留旧 no_level 用法; 新条件使用独立来源、病例清单和输出目录. 
+source_file = args.sources if args.sources is not None else root / "sources.json"
+case_file = args.cases if args.cases is not None else root / "cases.json"
+sources = json.loads(source_file.read_text(encoding="utf-8"))
+cases = json.loads(case_file.read_text(encoding="utf-8"))
 screening = {c["pdb"]: c for c in json.loads((args.screening / "screening.json").read_text(encoding="utf-8"))}
 local_pairs = json.loads((args.screening / "local_pairs.json").read_text(encoding="utf-8"))
 residues = "ALA ARG ASN ASP CYS GLN GLU GLY HIS ILE LEU LYS MET PHE PRO SER THR TRP TYR VAL A C G U DA DC DG DT UNK".split()
@@ -79,7 +84,7 @@ for case in cases:
     write_sparse(assets / "truth_all.mrc", truth_all, center_origin, spacing, shape)
     write_sparse(assets / "truth_local.mrc", truth_local, center_origin, spacing, shape)
 
-    for mode in ("cryo", "emap", "real"):
+    for mode in case["local_blobs"]:
         with np.load(src / mode / "blobs.npz") as blobs, np.load(src / mode / "evaluation.npz") as ev:
             ids = blobs["source_blob_index" if mode == "emap" else "blob_index"]
             offsets, coords = blobs["voxel_offsets"], blobs["voxel_index_global_zyx"]
@@ -141,19 +146,25 @@ for case in cases:
     reference_dict, reference_xyz = token_structures["reference"]
     pocket_indices = np.flatnonzero(cKDTree(target_xyz).query(reference_xyz)[0] <= 6).tolist()
     write_atom_subset(assets / "receptor_pocket.cif", reference_dict, pocket_indices)
+    # CA2 局部图使用实际输入受体, 不重对齐坐标; ca2_xyz 为 (N_CA2, 3) 的 XYZ Å 原子坐标. 
+    ca2_dict, ca2_xyz = token_structures["ca2"]
+    # (K,), 索引 CA2 原子表; 保留到任一沉积配体重原子的最近距离不超过 6 Å 的原子. 
+    ca2_pocket = np.flatnonzero(cKDTree(target_xyz).query(ca2_xyz)[0] <= 6).tolist()
+    write_atom_subset(assets / "ca2_pocket.cif", ca2_dict, ca2_pocket)
     fp_xyz = center_origin + receptor_fp[:, ::-1] * spacing
     fp_neighbours = np.flatnonzero(cKDTree(fp_xyz).query(reference_xyz)[0] <= 5).tolist()
     write_atom_subset(assets / "receptor_fp_neighbours.cif", reference_dict, fp_neighbours)
     emap_xyz = center_origin + local_emap[:, ::-1] * spacing
     core = local_emap[cKDTree(reference_xyz).query(emap_xyz)[0] <= 1.5]
-    write_sparse(assets / "emap_local_near_receptor.mrc", core, center_origin, spacing, shape)
+    if len(core):
+        write_sparse(assets / "emap_local_near_receptor.mrc", core, center_origin, spacing, shape)
     local = next(x for x in local_pairs if x["pdb"] == pdb and x["occurrence"]["candidate_id"] == oid)
     case_evidence = {"pdb":pdb, "role":case["role"], "source":sources[pdb], "contour":evidence["contour"],
                      "shape_zyx":shape.tolist(), "origin_center_xyz_A":center_origin.tolist(), "spacing_xyz_A":spacing.tolist(),
                      "occurrence":occurrence, "local_evidence":local,
                      "global_counts":{m:{k:v for k,v in s.items() if k != "blobs"} for m,s in evidence["methods"].items()},
                      "receptor_fp":next(r for r in evidence["methods"]["emap"]["blobs"] if r["blob_id"] == case["receptor_fp_blob"]),
-                     "remote_fp":next(r for r in evidence["methods"]["emap"]["blobs"] if r["blob_id"] == case["remote_fp_blob"]),
+                     "remote_fp":next((r for r in evidence["methods"]["emap"]["blobs"] if r["blob_id"] == case["remote_fp_blob"]), None),
                      "ligand_atom_max_error_A":atom_error, "selection":case}
     (dest / "evidence.json").write_text(json.dumps(case_evidence, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"{pdb}: full map, all selected masks, atomic coordinates and local identities verified", flush=True)

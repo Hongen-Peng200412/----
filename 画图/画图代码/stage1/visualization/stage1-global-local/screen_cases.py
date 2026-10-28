@@ -31,13 +31,19 @@ def spatial_features(voxels, corner_xyz, spacing_xyz, receptor_tree):
 # ================================================================================================
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--output", type=Path, required=True)
+parser.add_argument("--sources", type=Path)
+parser.add_argument("--cohort", type=Path)
 args = parser.parse_args()
 root = Path(__file__).resolve().parent
 project = root.parents[4]
-sources = json.loads((root / "sources.json").read_text(encoding="utf-8"))
+# 未传入配置时保留原 no_level 入口; 新 level 任务显式指定来源与对应统计, 禁止只换标签. 
+source_file = args.sources if args.sources is not None else root / "sources.json"
+sources = json.loads(source_file.read_text(encoding="utf-8"))
 args.output.mkdir(parents=True, exist_ok=True)
 cases, flat_rows, local_pairs = [], [], []
-current = json.loads((project / "画图/画图代码/stage1/output/stage1-main-sixpanel/v5/data/plot_data.json").read_text(encoding="utf-8"))["cohorts"]["full"]
+# cohort_file 指向当前条件的逐 PDB 论文统计, 用于核对全部保留候选的 P/R/Dice. 
+cohort_file = args.cohort if args.cohort is not None else project / "画图/画图代码/stage1/output/stage1-main-sixpanel/v5/data/plot_data.json"
+current = json.loads(cohort_file.read_text(encoding="utf-8"))["cohorts"]["full"]
 cohort_checks = []
 
 for pdb, relative_source in sources.items():
@@ -46,7 +52,8 @@ for pdb, relative_source in sources.items():
         corner = meta["origin"].astype(float)
         spacing = meta["voxel_size"].astype(float)
         contour = float(meta["contour_canonical"])
-    shape = np.load(source / "data/exp.npy", mmap_mode="r").squeeze().shape
+        # 新来源先用原密度元数据的真值网格筛查, 确定病例后再下载完整连续密度. 
+        shape = tuple(int(n) for n in meta["canonical_shape_zyx"]) if args.sources is not None else np.load(source / "data/exp.npy", mmap_mode="r").squeeze().shape
     with np.load(source / "data/receptor_tokens.npz") as tokens:
         tree = cKDTree(tokens["coords"][tokens["element"] != 1])
     occurrences = [json.loads(line) for line in (source / "data/occurrences.jsonl").read_text(encoding="utf-8").splitlines()]
@@ -63,6 +70,9 @@ for pdb, relative_source in sources.items():
             selected_rows = np.flatnonzero(ev["candidate_selected"])
             match_start, match_end = ev["one_to_one_match_offsets"][threshold_row:threshold_row + 2]
             matched_rows = set(ev["one_to_one_match_pred_index"][match_start:match_end].tolist())
+            gt_ids = ev["occurrence_id"].astype(int)
+            # dict[int, int], 键是预测评价行号, 值是该行实际匹配的 occurrence_id; 未匹配行不在字典中. 
+            matched_occurrence = {int(p): int(gt_ids[g]) for p, g in zip(ev["one_to_one_match_pred_index"][match_start:match_end], ev["one_to_one_match_gt_index"][match_start:match_end])}
             stats = []
             for evaluation_row in selected_rows:
                 blob_id = int(ev["source_blob_index"][evaluation_row])
@@ -70,7 +80,6 @@ for pdb, relative_source in sources.items():
                 start, end = offsets[blob_row:blob_row + 2]
                 voxels = coordinates[start:end]
                 intersections = ev["intersections"][evaluation_row]
-                gt_ids = ev["occurrence_id"].astype(int)
                 # 对全部选中候选核对体素与冻结交集，不重算评价或候选选择。
                 flat = np.ravel_multi_index(voxels.T, shape)
                 observed = np.array([len(np.intersect1d(flat, gt_flat[int(i)])) for i in gt_ids])
@@ -82,6 +91,7 @@ for pdb, relative_source in sources.items():
                     "voxels": int(len(voxels)),
                     "compatible_tau0p3": bool(ev["coverage_pred_hit_mask"][threshold_row, evaluation_row]),
                     "instance_matched_tau0p3": int(evaluation_row) in matched_rows,
+                    "matched_occurrence_id": matched_occurrence.get(int(evaluation_row)),
                     "truth_intersection_voxels_max": int(intersections.max()),
                     "intersections_by_occurrence": {str(i): int(n) for i, n in zip(gt_ids, intersections)},
                     **spatial_features(voxels, corner, spacing, tree),
@@ -117,6 +127,8 @@ for pdb, relative_source in sources.items():
                     overlaps.append({**blob, "intersection": intersection,
                                      "precision": intersection / blob["voxels"],
                                      "recall": intersection / truth_size,
+                                     "iou": intersection / (blob["voxels"] + truth_size - intersection),
+                                     "matched_to_target": blob["matched_occurrence_id"] == oid,
                                      "dice": 2 * intersection / (blob["voxels"] + truth_size)})
             candidates[mode] = sorted(overlaps, key=lambda r: r["dice"], reverse=True)[:3]
         local_pairs.append({"pdb": pdb, "occurrence": occurrence, "truth_voxels": truth_size,

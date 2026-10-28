@@ -56,6 +56,10 @@ Across the 179 complexes, each contained an average of 14.0 ground-truth ligand 
 
 Emap2lig-Find remained below LigandSeek-Find in semantic Dice, instance-level PRAUC and detection completion. Its highest-ranked candidates retained substantial ligand-detection signal despite the larger final candidate pool. LigandSeek-Find recovered more true instances at both candidate limits, providing a more compact input for downstream identity assignment. Complete detection curves and per-PDB distributions are shown in Supplementary Fig. 2.
 
+In 9NVS, Emap2lig-Find produced false-positive ligand regions over the receptor, whereas LigandSeek-Find with CA2 receptors avoided these errors ({{figref:stage1-level-global-local-9nvs|a–d}}). For the A1B32 instance detected by both methods, the LigandSeek-Find prediction followed the ground-truth region more closely, with a Dice of 0.792 compared with 0.469 for Emap2lig-Find ({{figref:stage1-level-global-local-9nvs|e,f}}). Together with the internal ablation results (Supplementary Table 4), these observations indicated that receptor context helped distinguish ligand regions from receptor background and delineate their boundaries.
+
+{{pptfig:"画图/stage1可视化.pptx"|stage1-level-global-local-9nvs|width=6.2in}}
+
 ## Stage 2
 
 ### Stage 2: Evaluation protocol

@@ -1,4 +1,4 @@
-﻿param([Parameter(Mandatory=$true)][string]$BuildRoot)
+﻿param([Parameter(Mandatory=$true)][string]$BuildRoot,[string]$AuthorSource)
 $ErrorActionPreference = 'Stop'
 $taskBuild = [System.IO.Path]::GetFullPath($BuildRoot)
 $taskRoot = $PSScriptRoot
@@ -8,6 +8,7 @@ while (-not (Test-Path -LiteralPath (Join-Path $taskRoot '论文草稿.md'))) {
     $taskRoot = $taskParent
 }
 $taskSource = Join-Path $taskRoot '画图\画图代码\e2e\output\method-ab-variants\source\author-20261028-deb03f10.pptx'
+if ($AuthorSource) { $taskSource = [System.IO.Path]::GetFullPath($AuthorSource) }
 $taskCandidate = Join-Path $taskBuild 'candidate.pptx'
 $taskRender = Join-Path $taskBuild 'render'
 New-Item -ItemType Directory -Path $taskRender -Force | Out-Null

@@ -109,6 +109,13 @@ def commands_for(figure: str, build: Path) -> list[list]:
     node = [NODE]
     p=lambda relative,*args:python+[CODE/relative,*args]
     n=lambda relative,*args:node+[CODE/relative,*args]
+    if figure.startswith('fig-method-build-'):
+        prefix='e2e/visualization/method-build-variants/'
+        return [[PYMOL,'-B',CODE/(prefix+'render_native.py')],n(prefix+'build_deck.mjs'),['powershell.exe','-NoProfile','-File',CODE/(prefix+'render_slides.ps1'),'-BuildRoot',build],p(prefix+'audit.py'),n(prefix+'finalize.mjs')]
+    if figure in ('fig-method-ab-a1','fig-method-ab-a4','fig-method-ab-a5'):
+        prefix='e2e/visualization/method-ab-variants/'
+        selected=json.loads((CODE/'e2e/output/method-ab-variants/source/selected-layout.json').read_text(encoding='utf-8-sig'))
+        return [n(prefix+'sync_selected.mjs'),['powershell.exe','-NoProfile','-File',CODE/(prefix+'render_native.ps1'),'-BuildRoot',build,'-AuthorSource',ROOT/selected['pptx']],p(prefix+'audit_selected.py'),n(prefix+'finalize.mjs','selected')]
     if figure.startswith('fig-method-ab-a'):
         prefix='e2e/visualization/method-ab-variants/'
         return [n(prefix+'build_variants.mjs'),['powershell.exe','-NoProfile','-File',CODE/(prefix+'render_native.ps1'),'-BuildRoot',build],p(prefix+'audit.py'),n(prefix+'finalize.mjs')]

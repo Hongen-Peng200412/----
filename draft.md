@@ -38,9 +38,7 @@ In the second stage, LigandSeek-Match (hereafter Match) assigns chemical identit
 In the third stage, LigandSeek-Build (hereafter Build) receives the binding site located by Find and the SMILES identity assigned by Match ({{figref:fig-method-color4|c}}). It combines these inputs with the surrounding receptor pocket and local density to reconstruct an all-atom ligand pose. Its default engine for organic small molecules, density-guided PocketXMol (DG-PocketXMol), adapts the generative model PocketXMol[@pocketxmol] through density-conditioned fine-tuning. DG-PocketXMol incorporates experimental density into pose generation, guiding ligand reconstruction to satisfy both density contours and pocket chemical constraints. Build also provides a modular interface that supports other downstream docking tools, including Vina[@trott2010vina], DiffDock[@corso2023diffdock] and EMERALD[@muenks2023emerald].
 
 {{pptfig:"画图/Method总图.pptx"|fig-method-color1}}
-{{pptfig:"画图/Method总图.pptx"|fig-method-color2}}
 {{pptfig:"画图/Method总图.pptx"|fig-method-color3}}
-{{pptfig:"画图/Method总图.pptx"|fig-method-color4}}
 
 # Results
 

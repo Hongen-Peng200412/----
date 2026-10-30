@@ -70,13 +70,18 @@ if __name__ == "__main__":
     for figure_id, condition, kinds in (("stage1-additional-analysis", "explicit_emdb_level", ("strict", "precision_recall05", "completion")), ("stage1-no-level-comparison-NO_LEVEL", "no_level", ("three_metrics", "precision_recall_both"))):
         data = conditions[condition]
         fig = plt.figure(figsize=(180 / 25.4, 148 / 25.4))
-        grid = fig.add_gridspec(2, len(kinds), left=0.095, right=0.985, bottom=0.16, top=0.86, wspace=0.65 if len(kinds) == 3 else 0.35, hspace=0.70)
+        # 沿作者正文 v1 收紧轴框间隔; 保留画布、字体、全部数据图元及 2×2 的宽面板.
+        grid = fig.add_gridspec(2, len(kinds), left=0.095, right=0.985, bottom=0.16, top=0.86, wspace=0.45 if len(kinds) == 3 else 0.25, hspace=0.55)
         handles = [Patch(facecolor=COLOURS[model], edgecolor="none", label="Emap2lig-Find (no level)" if model == "Emap" and condition == "no_level" else LABELS[model]) for model in MODELS]
         fig.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.54, 0.98), ncol=3, frameon=False, fontsize=7.6, handlelength=1.2, columnspacing=1.2)
         for row, cohort in enumerate(("full", "small")):
             for column, kind in enumerate(kinds):
                 ax = fig.add_subplot(grid[row, column])
                 draw_panel(ax, kind, cohort, data, summary)
+                if len(kinds) == 3 and column == 1:
+                    # 第一列的数据标记较集中, 中列左移画布宽度的1.8%以平衡视觉空白; 轴框宽高和内容不变.
+                    position = ax.get_position()
+                    ax.set_position([position.x0 - 0.018, position.y0, position.width, position.height])
                 if kind == "completion":
                     # 窄面板中同一预算的三个标签共用最高误差条上方的基线, 避免标注穿过相邻误差条.
                     for index, label in enumerate(ax.texts):

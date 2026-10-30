@@ -6,6 +6,8 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
+from types import SimpleNamespace
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'转换工具/ops'))
@@ -57,6 +59,24 @@ else:raise AssertionError('parent traversal reached old temp')
         source.write_text('from pathlib import Path\nimport sys\nSHARED=Path(__file__).resolve().parents[1]/"shared"\nsys.path.insert(0,str(SHARED))\nimport draw_core\n',encoding='utf-8')
         paths,temporary=code_dependencies(self.root,[{'path':source.relative_to(self.root).as_posix()}])
         self.assertIn(shared,paths);self.assertFalse(temporary)
+
+    def test_author_native_version_resolves_frozen_base_page(self):
+        import rebuild_figures as builder
+        source=self.root/'author.pptx';source.write_bytes(b'author native fixture')
+        metadata={'kind':'figure','figure':'scheme','pptx':'formal.pptx','inputs':['author.pptx'],'rebuild':{'mode':'author_native','author_source':'author.pptx'}}
+        base=SimpleNamespace(metadata=metadata)
+        version=SimpleNamespace(metadata={**metadata,'figure':'scheme(v1)'})
+        deck=SimpleNamespace(figures={'scheme':SimpleNamespace(page=2)})
+        destination=self.root/'temp/version'
+        with patch.object(builder,'ROOT',self.root),patch.object(builder,'load_records',return_value=[base,version]),patch.object(builder,'Deck',return_value=deck),patch.object(builder,'run_step') as step,patch.object(builder,'finish_candidate',return_value={'candidate':'rebuilt.pptx'}) as finish,patch.object(sys,'argv',['rebuild','--figure','scheme(v1)','--build-root',str(destination)]):
+            self.assertEqual(builder.main(),0)
+        manifest=json.loads((destination/'scheme(v1)/author-render.json').read_text(encoding='utf-8'))
+        self.assertEqual(manifest[0]['slides'][0]['page'],2)
+        self.assertTrue(manifest[0]['slides'][0]['output'].endswith('scheme.png'))
+        self.assertEqual(finish.call_args.args[0],'scheme')
+        receipt=json.loads((destination/'scheme(v1)/receipt.json').read_text(encoding='utf-8'))
+        self.assertEqual(receipt['figure'],'scheme(v1)')
+        self.assertEqual(receipt['scientific_figure'],'scheme')
 
 
 if __name__=='__main__':unittest.main()

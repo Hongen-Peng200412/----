@@ -11,7 +11,8 @@ const runtime = process.env.RUNTIME_NODE_MODULES ?? 'C:/Users/15919/.cache/codex
 const {Presentation, PresentationFile} = await import(pathToFileURL(path.join(runtime, '@oai/artifact-tool/dist/artifact_tool.mjs')).href);
 const pages = JSON.parse(await fs.readFile(path.join(build, 'scenes.json'), 'utf8'));
 const deck = Presentation.create({slideSize: {width: 1000, height: 924}});
-deck.comments.setSelf({displayName: 'Figure Editor', initials: 'FE', userId: 'figure-editor', providerId: 'None'});
+// 复用作者在正式 PPT 中已有的批注身份; 不再创建 Figure Editor 占位作者.
+deck.comments.setSelf({displayName: 'Hongen Peng', initials: 'HP', userId: '965de47efeb7ffa5', providerId: 'Windows Live'});
 let sequence = 0;
 const alphaColour = (value, alpha) => value === 'none' ? 'none' : alpha < 1 ? `${value}/${Math.round(alpha * 100)}` : value;
 for (const page of pages) {

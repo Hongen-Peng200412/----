@@ -10,7 +10,7 @@ JSON 必填字段为 id、kind、entries、inputs、status; figure 还需 pptx �
 entries 为 [{"path": "仓库相对路径", "symbol": "可选 Python 限定名"}], inputs 为路径字符串列表.
 kind 为 figure、table 或 claim; table 用整数 table 对应正文表号. 额外字段原样容忍.
 本工具只追加或更新以 PROVENANCE v1 开头的自有批注. 新批注复用现有作者,
-不创建或修改账户身份; 传统批注追加时只额外推进该作者的 lastIdx 序号.
+不创建新账户; 只按作者授权归并 Figure Editor 占位署名, 传统批注追加时推进 lastIdx.
 目标图必须已有独立 @@图名批注及 comments 关系; 本工具不猜测无图名页面的身份.
 """
 
@@ -84,6 +84,11 @@ class Slide:
     page: int
     comments: list[str]
     names: list[str]
+
+
+def base_figure(name: str) -> str:
+    """去掉末尾作者版本号, 如 foo-NO_LEVEL(v2) -> foo-NO_LEVEL; 保留科学条件和其他名称."""
+    return re.sub(r"\(v[0-9]+\)$", "", name)
 
 
 def xml_bytes(node) -> bytes:
@@ -204,6 +209,41 @@ class Deck:
                         found.setdefault(match.group(1), []).append((slide, part, comment))
         return found
 
+    def use_author(self, name: str, initials: str) -> None:
+        """将旧 Figure Editor 批注归于作者已有身份, 不增加作者ID或修改批注文字.
+
+        name/initials 是作者确认的显示姓名与缩写; 若图集中仅有旧编辑占位身份, 原位更名并沿用其ID.
+        传统批注的 idx 在归并后重新分配, 避免不同作者原先相同的序号发生冲突.
+        """
+        for part in self.author_parts:
+            authors = self.tree(part)
+            aliases = [node for node in authors if node.get('name') == 'Figure Editor']
+            if not aliases:
+                continue
+            owner = next((node for node in authors if node.get('name') == name), aliases[0])
+            owner.set('name', name)
+            owner.set('initials', initials)
+            previous = {node.get('id') for node in aliases if node is not owner}
+            last_index = int(owner.get('lastIdx', '0'))
+            for comment_part in self.data:
+                if comment_part.startswith('ppt/comments/') and comment_part.endswith('.xml'):
+                    last_index = max([last_index] + [int(node.get('idx', '0')) for node in self.comments(comment_part) if node.get('authorId') == owner.get('id')])
+            for comment_part in self.data:
+                if not comment_part.startswith('ppt/comments/') or not comment_part.endswith('.xml'):
+                    continue
+                for node in self.tree(comment_part).iter():
+                    if node.get('authorId') in previous:
+                        node.set('authorId', owner.get('id'))
+                        if XML.QName(node).namespace == P and node.get('idx') is not None:
+                            last_index += 1
+                            node.set('idx', str(last_index))
+                            owner.set('lastIdx', str(last_index))
+                        self.changed.add(comment_part)
+            for node in aliases:
+                if node is not owner:
+                    authors.remove(node)
+            self.changed.add(part)
+
     def append(self, slide: Slide, text: str) -> None:
         """基于该页图名批注创建同制式来源批注, 只复用作者注册表中的现有身份."""
         templates = [(part, comment) for part in slide.comments for comment in self.comments(part) if FIGURE.fullmatch(comment_text(comment).strip())]
@@ -266,6 +306,12 @@ class Deck:
 
 
 def load_records(root: Path, errors: list[str]) -> list[Record]:
+    """只读八份文档和当前 PPT, 返回显式记录与自动继承的作者版本.
+
+    root 指论文仓库, errors 原位追加格式问题; 不写文件或修改 PPT.
+    末尾 (v数字) 页面继承基础记录, 派生 id/figure 为实际页名, author_origin 为基础图名,
+    rebuild.figure 保留基础科学入口, body 添加继承说明; 已显式登记的版本保留其原文.
+    """
     records = []
     seen = set()
     for stage in STAGES:
@@ -314,6 +360,30 @@ def load_records(root: Path, errors: list[str]) -> list[Record]:
                     records.append(Record(identifier, document, metadata, body))
                 except (KeyError, TypeError, ValueError) as error:
                     errors.append(f"记录格式错误: {label}: {error}")
+    # 八份文档登记科学基础; 当前 PPT 的 (v数字) 页面自动继承, 不要求复制同一份来源正文.
+    registered = {(item.metadata.get('pptx'), item.metadata.get('figure')): item for item in records if item.metadata['kind'] == 'figure'}
+    for pptx in dict.fromkeys(key[0] for key in registered):
+        try:
+            deck = Deck(relative_path(root, pptx))
+        except (OSError, KeyError, ValueError, BadZipFile, XML.XMLSyntaxError):
+            # 正式 run 会报告损坏或缺失 PPT; 此处只展开能实际定位的作者版本.
+            continue
+        for name in deck.figures:
+            original = base_figure(name)
+            source = registered.get((pptx, original))
+            if original == name or source is None:
+                continue
+            existing = registered.get((pptx, name))
+            if existing is not None:
+                existing.metadata['author_origin'] = original
+                continue
+            metadata = copy.deepcopy(source.metadata)
+            metadata.update(id=name, figure=name, author_origin=original)
+            metadata['rebuild']['figure'] = original
+            body = f'## {name}｜作者编辑版\n\n本页继承 @@{original} 的科学来源、输入和统计定义。当前可编辑 PPT 保存作者排版；科学重建使用原版入口，不覆盖作者版本。\n\n' + source.body
+            derived = Record(name, source.document, metadata, body)
+            records.append(derived)
+            registered[(pptx, name)] = derived
     return records
 
 
@@ -326,7 +396,8 @@ def check_sources(root: Path, records: list[Record], errors: list[str]) -> None:
             if not isinstance(sharing,list):
                 errors.append(f'{record.identifier}: 缺少sharing共享关系登记，独立图也需显式空列表')
                 sharing=[]
-            if not isinstance(rebuild,dict) or rebuild.get('figure')!=record.metadata['figure'] or rebuild.get('script')!='转换工具/ops/rebuild_figures.py' or not (root/'转换工具/ops/rebuild_figures.py').is_file():
+            expected = {record.metadata['figure'], base_figure(record.metadata['figure'])}
+            if not isinstance(rebuild,dict) or rebuild.get('figure') not in expected or rebuild.get('script')!='转换工具/ops/rebuild_figures.py' or not (root/'转换工具/ops/rebuild_figures.py').is_file():
                 errors.append(f'{record.identifier}: 缺少有效完整重建入口')
             owners=[]
             for entry in record.metadata['entries']:
@@ -338,6 +409,8 @@ def check_sources(root: Path, records: list[Record], errors: list[str]) -> None:
                     owner=relative_path(root,shared['path'])
                     if not owner.is_dir() or not isinstance(shared['figures'],list) or not shared['purpose'].strip():raise ValueError('共享目录、关联图名或用途不完整')
                     known={item.metadata.get('figure') for item in records if item.metadata['kind']=='figure'}
+                    # 当前作者版仍可注明已退役的直接来源名, 历史记录不必为改名重写冻结 PPT.
+                    known.update(item.metadata['author_origin'] for item in records if item.metadata.get('author_origin'))
                     if any(name not in known for name in shared['figures']):raise ValueError('关联图名没有登记')
                     if '共享' not in record.body or any('@@'+name not in record.body for name in shared['figures']):raise ValueError('共享关系必须在可冷读正文和PPT副本中明确说明')
                     declared.add(owner)
@@ -437,7 +510,7 @@ def check_coverage(root: Path, records: list[Record], errors: list[str]) -> dict
 def run(root: Path, sync: bool = False) -> dict:
     """预检全部结构与路径后同步, 再重新读取核对; 返回可序列化报告.
 
-    报告字段: mode 为 check/sync, records 为登记总数, figures 为图记录数,
+    报告字段: mode 为 check/sync, records 为登记总数, figures 为图记录数, 均包含自动继承记录,
     updated 为本轮改写的 PPT 仓库相对路径, errors 为失败说明列表,
     limitations 明确自然语言穷举与科学数值重算不属于此工具的验证边界.
     """
@@ -456,10 +529,14 @@ def run(root: Path, sync: bool = False) -> dict:
         except (OSError, KeyError, ValueError, BadZipFile, XML.XMLSyntaxError) as error:
             errors.append(f"PPT 读取失败: {pptx}: {error}")
     for pptx, deck in decks.items():
+        if sync and Path(pptx).parent == Path('画图'):
+            deck.use_author('Hongen Peng', 'HP')
         expected_ids = {record.identifier for key, record in figures.items() if key[0] == pptx}
-        for identifier in deck.managed():
-            if identifier not in expected_ids:
-                errors.append(f"PPT 中有未登记的来源批注: {pptx}: {identifier}")
+        for identifier, owned in deck.managed().items():
+            for slide, _, _ in owned:
+                target = next((figures[(pptx, name)] for name in slide.names if (pptx, name) in figures), None)
+                if identifier not in expected_ids and (target is None or identifier != target.metadata.get('author_origin')):
+                    errors.append(f"PPT 中有未登记的来源批注: {pptx}: {identifier}")
     actions = []
     for (pptx, figure), record in figures.items():
         if pptx not in decks:
@@ -469,8 +546,21 @@ def run(root: Path, sync: bool = False) -> dict:
             errors.append(f"@@ 图名不存在: {pptx}|{figure}; 无 comments 关系的页不能凭页码猜测")
             continue
         slide = deck.figures[figure]
-        owned = deck.managed().get(record.identifier, [])
-        if len(owned) > 1 or (owned and owned[0][0].part != slide.part):
+        all_owned = deck.managed().get(record.identifier, [])
+        owned = [item for item in all_owned if item[0].part == slide.part]
+        unexpected = []
+        for item in all_owned:
+            if item[0].part == slide.part:
+                continue
+            children = [figures[(pptx, name)] for name in item[0].names if (pptx, name) in figures]
+            if not any(child.metadata.get('author_origin') == record.metadata['figure'] for child in children):
+                unexpected.append(item)
+        if not owned and record.metadata.get('author_origin'):
+            # 作者复制页面或改名时保留的旧来源批注, 在原位置更名, 不再追加第二份.
+            parent = figures.get((pptx, record.metadata['author_origin']))
+            origin_id = parent.identifier if parent else record.metadata['author_origin']
+            owned = [item for item in deck.managed().get(origin_id, []) if item[0].part == slide.part]
+        if len(owned) > 1 or unexpected:
             errors.append(f"来源批注重复或附着到错误页面: {pptx}|{figure}: {record.identifier}")
         elif not owned or comment_text(owned[0][2]) != record.comment:
             if sync:

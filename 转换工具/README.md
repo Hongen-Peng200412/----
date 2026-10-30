@@ -125,6 +125,21 @@ Find–Match–Build workflow. The remaining English caption.
 
 Word 回转会恢复 `figref` 图名引用；再次转换时依据新的插图顺序重新编号。直接在 Word 中改图后生成的 `pptfig-edited` 来源注释也保留图名和编号资格；保留该注释即可继续引用该图。普通 Markdown 图片沿用现有行为，不纳入 PPT 图集的自动编号。
 
+引用另一份 Markdown 中的图时，在 `figref` 前加上目标稿件路径：
+
+```markdown
+正文对照见 {{draft.md|figref:stage1-overall-performance(v1)|a,d}}。
+其他补图见 {{../补充材料.md|figref:stage1-additional-analysis}}。
+```
+
+路径指向定义插图的 Markdown，不是 PPT；相对路径以当前 Markdown 所在目录为基准，与 Word 输出位置无关。推荐使用 `/` 分隔目录，中文和空格路径均可。图名、面板和同一目标稿件内的组合引用沿用本稿语法，例如 `{{draft.md|figref:fig-a,fig-b}}`。仍显示 `Fig. N`／`Figs. N–M`，不添加新的正文或补充前缀，不改图注。
+
+跨文件引用只读取目标稿件的 `pptfig`／`pptfig-edited` 定义，并按目标稿件插图顺序查号；不导出或插入目标图，也不递归编译目标全文。本次编译的预检和正式生成共用同一份目标图号快照；目标稿件换序后，重新编译即可更新引用。本稿图号保持独立，没有路径的旧 `figref` 仍只查本稿，不自动到其他文件寻找缺失图名。路径不存在、目标图未定义或重复插图均报错。
+
+Word 使用原有 `MDFIGREF_` 字符样式保存引用。本稿标记保持原字面量；跨文件标记保存 `literal`（完整引用，如 `{{draft.md|figref:stage1-overall-performance(v1)|a,d}}`）和 `source`（被引用 Markdown 的解析后绝对路径）。Word 回转时按输出 Markdown 的目录重算相对路径；跨盘无法表示相对路径时保留绝对路径，与现有 PPT 回转行为一致。无需稿件角色、外部配置或人工图号表。
+
+阅读实现时先看 `manuscript_conversion.py::_encode_references` 的外稿图号读取与样式保存，再看 `_remove_generated_styles` 的路径回转；两者分别由 `markdown_to_word` 和 `word_to_markdown` 调用。独立测试入口为 `python -X utf8 -B 转换工具/test_cross_file_figrefs.py`，覆盖独立编号、路径、换序、错误及两种 Word 版式往返；测试只在 `temp/` 合成夹具，不打开 Office 或改论文 PPT。
+
 英文图号和首句标题加粗采用 Nature 论文常见的展示格式，格式依据见 [Nature 初次投稿说明](https://www.nature.com/nature/for-authors/initial-submission)。转换器只处理语言选择、编号、引用和格式，不翻译或润色正文与图注；文字规范见[翻译与同步规则](../RULES/翻译与同步规则.md)。
 
 转换器按图名找到幻灯片，以清晰 PNG 导出并裁掉页面大块留白。一次编译通常只启动一次导图进程，并按 PPT 批量导出所需页面。转换前会把每份已保存的 PPT 复制到 `temp/`，图名、备注和成品图都从该次副本读取；转换器不会在 PowerPoint 中打开或关闭原 PPT，也不会退出你正在使用的 PowerPoint。若你正在修改原 PPT 但尚未保存，本次编译使用上次保存的版本；保存后重新编译即可取得更新。临时副本在转换结束后自动清理。

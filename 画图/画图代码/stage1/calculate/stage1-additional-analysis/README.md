@@ -2,6 +2,8 @@
 
 本目录管理 `stage1-additional-analysis`（显式 level，2×3）与 `stage1-no-level-comparison-NO_LEVEL`（无 level，2×2）。两图共享同一评价补算和原生图元运输，科学输入按条件分别保存，不覆盖旧结果。正式页追加在 `画图/stage1结果.pptx`，PPT 备注是双语图注的维护源。
 
+当前两图按作者正文 v1 的风格压缩行列空白, 保留全部图元、字体与图例。2×3 的中列另左移画布宽度的 0.018 以平衡视觉空白, 上下行同步, 面板宽高不变；其 b/e 横向等间距检查具有明确作者布局豁免, 其他对齐与碰撞仍验收。2×2 保留容纳四组 P/R 的宽面板。原生批注署名沿用作者 `Hongen Peng`（HP）。
+
 先读 `prepare_data.py` 的逐 PDB 装配，再读 `plot.py` 的预算统计及面板顺序；实例匹配唯一实现为 `stage1-main-sixpanel/science/compute_small_pr.py::evaluate_selected`。条形图、小提琴和 SVG 导出共享 `stage1-results-revision/plot.py::draw_panel/export_figure`，原生装配共享该目录 `build_deck.mjs`。新目录不复制匹配或图元定义。
 
 ## 冻结输入与范围

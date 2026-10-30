@@ -19,7 +19,7 @@ from zipfile import ZipFile
 
 from lxml import etree as XML
 
-from figure_provenance import Deck, comment_text, load_records, relationship_target, set_comment_text, xml_bytes
+from figure_provenance import Deck, base_figure, comment_text, load_records, relationship_target, set_comment_text, xml_bytes
 
 ROOT = Path(__file__).resolve().parents[2]
 CODE = ROOT / "画图/画图代码"
@@ -224,12 +224,17 @@ def finish_candidate(figure: str, build: Path, records: list, generated_captions
                 import copy
                 target_body[0].getparent().replace(target_body[0],copy.deepcopy(source_body[0]));deck.changed.add(target_note)
                 if name==figure:caption_preserved=True
-        owned=deck.managed().get(page_record.identifier,[])
+        owned=[item for item in deck.managed().get(page_record.identifier,[]) if item[0].part==slide.part]
+        if not owned and page_record.metadata.get('author_origin'):
+            parent=next((item for item in records if item.metadata.get('figure')==page_record.metadata['author_origin']),None)
+            origin_id=parent.identifier if parent else page_record.metadata['author_origin']
+            owned=[item for item in deck.managed().get(origin_id,[]) if item[0].part==slide.part]
         if owned:
             _,part,comment=owned[0];set_comment_text(comment,page_record.comment);deck.changed.add(part)
         else:deck.append(slide,page_record.comment)
         annotated.append(name)
     target=build/'rebuilt.pptx'
+    deck.use_author('Hongen Peng', 'HP')
     with ZipFile(path) as source,ZipFile(target,'w') as output:
         for info in source.infolist():output.writestr(info,xml_bytes(deck.trees[info.filename]) if info.filename in deck.changed else source.read(info.filename))
     reread=Deck(target)
@@ -259,7 +264,8 @@ def main() -> int:
         if build.exists() and any(build.iterdir()):raise FileExistsError(f'不复用已有构建: {build}')
         build.mkdir(parents=True,exist_ok=True);(build/'render').mkdir()
         environment=dict(os.environ)
-        environment.update(FIGURE_ID=figure,FIGURE_VERIFY_ROOT=str(ROOT),FIGURE_BUILD_ROOT=str(build),FIGURE_RENDER_ROOT=str(build/'render'),FIGURE_ASSET_ROOT=str(build/'display'),FIGURE_NATIVE_ROOT=str(build/'native'),PYTHONDONTWRITEBYTECODE='1',PYTHONIOENCODING='utf-8')
+        scientific_figure = base_figure(figure)
+        environment.update(FIGURE_ID=scientific_figure,FIGURE_VERIFY_ROOT=str(ROOT),FIGURE_BUILD_ROOT=str(build),FIGURE_RENDER_ROOT=str(build/'render'),FIGURE_ASSET_ROOT=str(build/'display'),FIGURE_NATIVE_ROOT=str(build/'native'),PYTHONDONTWRITEBYTECODE='1',PYTHONIOENCODING='utf-8')
         environment['PYTHONPATH']=os.pathsep.join(str(p) for p in (SUPPORT,ROOT/'.manuscript_deps/figure_runtime',ROOT))
         environment['NODE_OPTIONS']='--require='+str(SUPPORT/'node_guard.cjs')
         environment['MPLCONFIGDIR']=str(build/'matplotlib')
@@ -281,8 +287,26 @@ def main() -> int:
         steps=[];receipt={'figure':figure,'build':str(build),'old_temp_blocked':True,'steps':steps,'passed':False}
         print(f'重建 {figure}',flush=True)
         try:
-            for command in commands_for(figure,build):run_step(command,build,environment,steps)
-            receipt.update(finish_candidate(figure,build,records,args.generated_captions));receipt['passed']=True
+            if record.metadata['rebuild'].get('mode') == 'author_native':
+                # 示意图的当前作者对象树本身就是原件; 从冻结副本复制并原生渲染, 不伪装成实验重算.
+                source = ROOT / record.metadata['rebuild']['author_source']
+                candidate = build / 'candidate.pptx'
+                shutil.copy2(source, candidate)
+                author = Deck(candidate)
+                manifest = [{'path': str(candidate), 'slides': [{'page': author.figures[scientific_figure].page, 'output': str(build / (scientific_figure + '.png'))}]}]
+                manifest_path = build / 'author-render.json'
+                manifest_path.write_text(json.dumps(manifest, ensure_ascii=False), encoding='utf-8')
+                run_step(['powershell.exe', '-NoProfile', '-File', ROOT/'转换工具/export_slide.ps1', '-ManifestPath', manifest_path, '-WidthPx', '1800'], build, environment, steps)
+                receipt['author_native_source'] = str(source.relative_to(ROOT))
+            else:
+                for command in commands_for(scientific_figure,build):run_step(command,build,environment,steps)
+            receipt.update(finish_candidate(scientific_figure,build,records,args.generated_captions))
+            receipt['figure'] = figure
+            if scientific_figure != figure:
+                # (v数字) 只继承科学来源; 候选保留基础图名, 不冒充已复现作者手工排版.
+                receipt['scientific_figure'] = scientific_figure
+                receipt['author_layout'] = {'pptx': record.metadata['pptx'], 'figure': figure, 'preserved_in_formal_ppt': True}
+            receipt['passed']=True
         except Exception as error:
             receipt['error']=str(error);raise
         finally:

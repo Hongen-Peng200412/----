@@ -54,3 +54,21 @@ python -X utf8 -B 转换工具/ops/figure_provenance.py --check
 默认保留正式 PPT 中已有的作者图注，新增加的备选页沿用本次生成图注。本轮明确同时修订图注时，可加 `--generated-captions` 保留本次新图注，避免旧图注覆盖新版面板编号或结构实例；该选项只影响候选，不回写正式 PPT。
 
 检查器只读验证登记、代码文件、Python符号、静态可识别的传递导入、共享关系和批注一致；无法穷举任意动态代码或自然语言实验断言。完整验收须实际执行重建命令。测试入口为`转换工具/test_figure_provenance.py`与`转换工具/test_figure_rebuild.py`，覆盖批注保全、并发保存、共享导入、旧temp读取和冻结写保护。
+
+## 作者版本与示意图原件
+
+`figure_provenance.py::base_figure` 只识别末尾 `(v数字)`。`load_records` 从当前 PPT 展开没有独立记录的作者版, 继承基础记录并标记 `author_origin`, 如 `foo-NO_LEVEL(v2)` 的来源仍为 `foo-NO_LEVEL`。已存在的作者版专用记录保留其补充说明。检查和同步按实际页区分来源批注, 合法复制页上的旧批注原位更名, 不新增第二份。源码阅读顺序为名称归一、文档读取与继承、科学来源检查、逐页批注同步。
+
+请求作者版本重建时, 执行基础科学入口, `rebuilt.pptx` 中仍使用基础图名。`receipt.figure` 保存请求名, `scientific_figure` 保存基础名, `author_layout` 指向保留手工排版的正式 PPT。科学重建不回写作者排版。
+
+当前六张颜色示意图的 `rebuild.mode="author_native"`, `author_source` 是作者对象原件的仓库相对路径, 例如 `画图/画图代码/e2e/output/overview-redesign-20261028/source/author-colors-20261030.pptx`。它也列入本条 `inputs`, 供独立读取和恢复。对应方法图原件位于 `e2e/output/method-ab-variants/source/author-colors-20261030.pptx`。两个文件保存作者当前整套可编辑页面、媒体与备注, 不仅是截图。重建器复制到当前构建目录, 原生渲染指定页, 保存 `author-render.json`（PPT路径及页码/PNG输出列表）和 `author_native_source` 回执字段, 然后同步当前图注与来源。旧素材生成入口继续由记录的 `entries` 保存；不为示意图重跑模型或编造指标。
+
+同步只归并 `Figure Editor` 占位作者至 `Hongen Peng`（HP）, 复用已有作者ID；若只存在占位身份则原位更名。其他作者身份和批注正文保持不变。
+
+本轮 `author-render.json` 的实际结构如下。`path` 是当前可清空构建目录内的 PPT 绝对路径, `slides` 是待导出的页列表, `page` 为从1开始的实际页码, `output` 为 PNG 绝对路径：
+
+```json
+[{"path":"C:/Users/15919/Desktop/论文草稿/temp/stage1_layout_provenance_20261030/author_schematics/fig-overview-color1/candidate.pptx","slides":[{"page":11,"output":"C:/Users/15919/Desktop/论文草稿/temp/stage1_layout_provenance_20261030/author_schematics/fig-overview-color1/fig-overview-color1.png"}]}]
+```
+
+版本请求的 `author_layout` 字段构造示例为 `{"pptx":"画图/stage1结果.pptx","figure":"stage1-overall-performance(v1)","preserved_in_formal_ppt":true}`。`pptx` 是正式作者图集的仓库相对路径, `figure` 是作者版实际名称, 布尔值表示重建器没有回写该正式页面；不表示已经逐像素重建作者排版。

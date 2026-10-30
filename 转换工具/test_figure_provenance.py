@@ -218,6 +218,54 @@ class ProvenanceTests(unittest.TestCase):
         errors=[];provenance.check_sources(self.root,provenance.load_records(self.root,[]),errors)
         self.assertTrue(any('旧temp搜索路径' in error for error in errors))
 
+    def test_author_version_inherits_source_and_copied_comment_is_renamed(self):
+        self.assertEqual(provenance.run(self.root, True)['errors'], [])
+        path=self.root/'画图/modern.pptx'
+        with ZipFile(path) as package:
+            files={name:package.read(name) for name in package.namelist()}
+        files['ppt/slides/_rels/slide2.xml.rels']=files['ppt/slides/_rels/slide7.xml.rels'].replace(b'comment7.xml',b'comment2.xml')
+        files['ppt/comments/comment2.xml']=files['ppt/comments/comment7.xml'].replace(b'@@test-modern',b'@@test-modern(v1)')
+        with ZipFile(path,'w') as package:
+            for name,payload in files.items():package.writestr(name,payload)
+        manuscript=self.root/'论文草稿.md'
+        manuscript.write_text(manuscript.read_text(encoding='utf-8')+'\n{{pptfig:"画图/modern.pptx"|test-modern(v1)}}',encoding='utf-8')
+        self.assertEqual(provenance.run(self.root,True)['errors'],[])
+        deck=provenance.Deck(path)
+        self.assertEqual(len(deck.managed()['modern']),1)
+        self.assertEqual(deck.managed()['test-modern(v1)'][0][0].page,1)
+        records=provenance.load_records(self.root,[])
+        derived=next(r for r in records if r.identifier=='test-modern(v1)')
+        self.assertEqual(derived.metadata['inputs'],next(r for r in records if r.identifier=='modern').metadata['inputs'])
+        self.assertEqual(derived.metadata['rebuild']['figure'],'test-modern')
+        self.assertEqual(provenance.run(self.root)['errors'],[])
+        self.assertEqual(provenance.base_figure('x-NO_LEVEL(v12)'),'x-NO_LEVEL')
+        self.assertEqual(provenance.base_figure('x-color1'),'x-color1')
+
+    def test_figure_editor_uses_existing_author_without_adding_an_account(self):
+        path=self.root/'画图/modern.pptx';deck=provenance.Deck(path)
+        authors=deck.tree('ppt/authors.xml');existing=authors[0]
+        alias=XML.fromstring(XML.tostring(existing))
+        alias.set('id','placeholder');alias.set('name','Figure Editor');alias.set('initials','FE');authors.append(alias)
+        existing.set('name','Hongen Peng');existing.set('initials','HP')
+        comments=deck.comments('ppt/comments/comment7.xml');comments[0].set('authorId','placeholder')
+        texts=[provenance.comment_text(c) for c in comments]
+        deck.use_author('Hongen Peng','HP')
+        self.assertEqual(len(authors),1)
+        self.assertEqual(comments[0].get('authorId'),existing.get('id'))
+        self.assertEqual(texts,[provenance.comment_text(c) for c in comments])
+
+    def test_legacy_author_merge_keeps_comment_indices_unique(self):
+        deck=provenance.Deck(self.root/'画图/legacy.pptx')
+        authors=deck.tree('ppt/commentAuthors.xml');authors[0].set('name','Hongen Peng')
+        alias=XML.fromstring(XML.tostring(authors[0]));alias.set('id','1');alias.set('name','Figure Editor');authors.append(alias)
+        comments=deck.tree('ppt/comments/comment7.xml')
+        copied=XML.fromstring(XML.tostring(comments[0]));copied.set('authorId','1');comments.append(copied)
+        deck.use_author('Hongen Peng','HP')
+        keys=[(c.get('authorId'),c.get('idx')) for c in comments]
+        self.assertEqual(len(keys),len(set(keys)))
+        self.assertEqual(len(authors),1)
+        self.assertGreater(int(authors[0].get('lastIdx')),2)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

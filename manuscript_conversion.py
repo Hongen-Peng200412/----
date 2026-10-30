@@ -44,7 +44,7 @@ PPT_TITLE_PREFIX = "MDPPTFIG_"
 PPT_EDITED_TITLE_PREFIX = "MDPPTEDIT_"
 PPT_EDITED_COMMENT = re.compile(r"<!--\s*pptfig-edited\s+(\{.*\})\s*-->", re.S)
 PPT_EDITED_SOURCE = re.compile(r"<!--\s*pptfig-edited\s+(\{.*?\})\s*-->", re.S)
-FIGURE_REFERENCE = re.compile(r"\{\{figref:([^\s|{}]+)(?:\|([a-z](?:[,–-][a-z])*))?\}\}")
+FIGURE_REFERENCE = re.compile(r"\{\{(?:([^|{}\r\n]+)\|)?figref:([^\s|{}]+)(?:\|([a-z](?:[,–-][a-z])*))?\}\}")
 MANUAL_FIGURE_NUMBER = re.compile(r"^(?:图\s*\d+|Fig(?:ure)?\.?\s*\d+)\s*[｜|:：]\s*", re.I)
 
 
@@ -421,34 +421,80 @@ def _citation_keys(document: dict) -> list[str]:
     return keys
 
 
-def _encode_references(document: dict, keys: list[str], figure_numbers: dict[str, int]) -> None:
-    """将文献与按图名引用的编号写入 Word 字符样式, 回转时恢复原始引用语法."""
+def _encode_references(document: dict, keys: list[str], figure_numbers: dict[str, int], source_directory: Path,
+                       reference_numbers: dict[Path, dict[str, int]]) -> None:
+    """将文献与图引用写入 Word 字符样式, 本稿及外稿都沿各自插图顺序编号.
+
+    source_directory 是当前 Markdown 所在目录, 用于解析外稿相对路径, 与 Word 输出目录无关.
+    reference_numbers 缓存本次编译已读取的 Markdown 绝对路径 -> 图名/整数编号, 供预检及正式生成共用.
+    本稿样式保留原引用字面量; 外稿样式保存 literal 和 source 绝对路径, 供回转到其他目录时重算路径.
+    外稿只读取 pptfig/pptfig-edited 定义, 不递归编译正文或导出其图片.
+    """
     order = {key: index + 1 for index, key in enumerate(keys)}
 
+    # Pandoc 会把带空格的路径拆成 Str/Space; 只拼回完整跨文件引用, 不改代码块或普通文字的格式节点.
+    pending = [document['blocks']]
+    while pending:
+        value = pending.pop()
+        if isinstance(value, dict):
+            if 'c' in value:
+                pending.append(value['c'])
+        elif isinstance(value, list):
+            index = 0
+            while index < len(value):
+                node = value[index]
+                if isinstance(node, dict) and node.get('t') == 'Str' and '{{' in node['c']:
+                    end = index + 1
+                    text = node['c']
+                    while text.rfind('{{') > text.rfind('}}') and end < len(value) and isinstance(value[end], dict) and value[end].get('t') in ('Str', 'Space'):
+                        text += value[end]['c'] if value[end]['t'] == 'Str' else ' '
+                        end += 1
+                    if end > index + 1 and any(match.group(1) is not None for match in FIGURE_REFERENCE.finditer(text)):
+                        value[index:end] = [{'t': 'Str', 'c': text}]
+                pending.append(value[index])
+                index += 1
+
     def convert(node: dict):
-        if node.get("t") == "Str" and "{{figref:" in node["c"]:
+        if node.get("t") == "Str" and ("{{figref:" in node["c"] or "|figref:" in node["c"]):
             text = node["c"]
             inlines = []
             cursor = 0
             for match in FIGURE_REFERENCE.finditer(text):
-                name, panels = match.groups()
+                reference_path, name, panels = match.groups()
+                numbers = figure_numbers
+                reference_source = None
+                if reference_path is not None:
+                    reference_source = (source_directory / reference_path).resolve()
+                    if reference_source not in reference_numbers:
+                        referenced_text = reference_source.read_text(encoding='utf-8')
+                        definitions = [(item.start(), item.group(2).strip()) for item in PPT_FIGURE.finditer(referenced_text)]
+                        definitions.extend((item.start(), json.loads(item.group(1))['name']) for item in PPT_EDITED_SOURCE.finditer(referenced_text))
+                        numbers = {}
+                        for _, figure_name in sorted(definitions):
+                            if figure_name in numbers:
+                                raise ValueError(f'目标稿件重复插图: {reference_source}: {figure_name}')
+                            numbers[figure_name] = len(numbers) + 1
+                        reference_numbers[reference_source] = numbers
+                    numbers = reference_numbers[reference_source]
                 names = name.split(",")
                 for figure_name in names:
-                    if figure_name not in figure_numbers:
-                        raise ValueError(f"正文引用的图名没有插图定义：{figure_name}")
+                    if figure_name not in numbers:
+                        location = f' ({reference_source})' if reference_source is not None else ''
+                        raise ValueError(f"正文引用的图名没有插图定义：{figure_name}{location}")
                 if len(names) > 1 and panels:
                     raise ValueError("多个图片的组合引用不能附加面板；请分别引用各图的面板")
                 if match.start() > cursor:
                     inlines.append({"t": "Str", "c": text[cursor:match.start()]})
                 literal = match.group(0)
-                marker = base64.urlsafe_b64encode(zlib.compress(literal.encode("utf-8"))).decode("ascii").rstrip("=")
+                stored = json.dumps({'literal': literal, 'source': reference_source.as_posix()}, ensure_ascii=False) if reference_source is not None else literal
+                marker = base64.urlsafe_b64encode(zlib.compress(stored.encode("utf-8"))).decode("ascii").rstrip("=")
                 if len(names) == 1:
-                    visible = f"Fig. {figure_numbers[name]}"
+                    visible = f"Fig. {numbers[name]}"
                 else:
                     ranges = []
-                    start = end = figure_numbers[names[0]]
+                    start = end = numbers[names[0]]
                     for figure_name in names[1:]:
-                        number = figure_numbers[figure_name]
+                        number = numbers[figure_name]
                         if number == end + 1:
                             end = number
                         else:
@@ -464,8 +510,8 @@ def _encode_references(document: dict, keys: list[str], figure_numbers: dict[str
                 ]})
                 cursor = match.end()
             inlines.append({"t": "Str", "c": text[cursor:]})
-            if any("{{figref:" in item.get("c", "") for item in inlines if item["t"] == "Str"):
-                raise ValueError("图片正文引用格式无效；使用 {{figref:图名}} 或 {{figref:图名|a,b}}")
+            if any("{{figref:" in item.get("c", "") or "|figref:" in item.get("c", "") for item in inlines if item["t"] == "Str"):
+                raise ValueError("图片正文引用格式无效；使用 {{figref:图名|a,b}} 或 {{相对路径|figref:图名|a,b}}")
             return {"t": "Span", "c": [["", [], []], inlines]}
         if node.get("t") != "Cite":
             return node
@@ -988,7 +1034,8 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                 raise ValueError(f"同一图名不能重复插图：{name}；再次提及时使用 {{{{figref:{name}}}}}")
             figure_numbers[name] = len(figure_numbers) + 1
         preflight = _as_json(pandoc, source_text, PANDOC_INPUT)
-        _encode_references(preflight, _citation_keys(preflight), figure_numbers)
+        reference_numbers = {source: figure_numbers}
+        _encode_references(preflight, _citation_keys(preflight), figure_numbers, source.parent, reference_numbers)
         pieces = []
         cursor = 0
         for match in PPT_FIGURE.finditer(source_text):
@@ -1165,7 +1212,7 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
                     pending.append(node["c"])
         original = copy.deepcopy(document)
         keys = _citation_keys(document)
-        _encode_references(document, keys, figure_numbers)
+        _encode_references(document, keys, figure_numbers, source.parent, reference_numbers)
         bib = bibliography.resolve() if bibliography else source.parent / "references.bib"
         _append_bibliography(document, original, pandoc, bib, keys)
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -1405,8 +1452,8 @@ def markdown_to_word(source: Path, target: Path, bibliography: Path | None = Non
             ) from error
 
 
-def _remove_generated_styles(document: dict, citation_markers: dict[str, str]) -> None:
-    """去掉 Word 样式噪音, 保留本工具编码的文献与图名引用."""
+def _remove_generated_styles(document: dict, citation_markers: dict[str, str], target_directory: Path) -> None:
+    """恢复文献与图引用; target_directory 是回转 Markdown 目录, 外稿路径相对该目录重算."""
     counter = [0]
 
     def clean(value):
@@ -1440,6 +1487,16 @@ def _remove_generated_styles(document: dict, citation_markers: dict[str, str]) -
                 encoded = style[len(prefix):]
                 padding = "=" * (-len(encoded) % 4)
                 literal = zlib.decompress(base64.urlsafe_b64decode(encoded + padding)).decode("utf-8")
+                if prefix == FIGURE_REFERENCE_STYLE_PREFIX and literal.startswith('{"'):
+                    origin = json.loads(literal)
+                    try:
+                        relative = os.path.relpath(origin['source'], target_directory).replace(os.sep, '/')
+                    except ValueError:
+                        # 跨盘无法表示相对路径, 沿用已有 PPT 回转规则保留绝对路径.
+                        relative = origin['source']
+                    reference = FIGURE_REFERENCE.fullmatch(origin['literal'])
+                    panels = '|' + reference.group(3) if reference.group(3) else ''
+                    literal = '{{' + relative + '|figref:' + reference.group(2) + panels + '}}'
                 counter[0] += 1
                 token = f"MDCITATIONTOKEN{counter[0]:06d}"
                 citation_markers[token] = literal
@@ -1644,7 +1701,7 @@ def word_to_markdown(source: Path, target: Path) -> None:
                     pending.append(node["c"])
         source_caption_ids = {id(block) for block in source_caption_blocks}
         citations = {}
-        _remove_generated_styles(document, citations)
+        _remove_generated_styles(document, citations, target.parent)
         _normalize_equation_spacing(document)
         _normalize_group_char_underbraces(document)
         # 三线表按 Word 中的实际文字和合并关系回转, 排版选项从表格说明中恢复.

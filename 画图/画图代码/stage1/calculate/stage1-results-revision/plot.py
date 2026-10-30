@@ -162,7 +162,9 @@ def export_figure(fig, figure_id, notes, build, manifest):
     双语 notes 和 SVG 的 shapes；这些形状由 build_deck.mjs 直接装配。
     """
     fig.canvas.draw()
-    require_matplotlib_panel_alignment(fig, json_out=build / f"{figure_id}.alignment.json", overlay_svg=build / f"{figure_id}.alignment.svg", tolerance_pt=1.5, gutter_tolerance_pt=1.5, strict=True)
+    # 作者要求补充三列图按视觉空白调距, b/e 左移而非机械等距; 其余边缘、宽高和标签仍严格检查.
+    exemptions = [{"panels": ["b", "e"], "checks": ["horizontal-gutter"], "reason": "作者指定中列左移以平衡数据标记与预算标签形成的视觉空白; 上下行同步, 轴框大小不变."}] if figure_id == "stage1-additional-analysis" else []
+    require_matplotlib_panel_alignment(fig, json_out=build / f"{figure_id}.alignment.json", overlay_svg=build / f"{figure_id}.alignment.svg", tolerance_pt=1.5, gutter_tolerance_pt=1.5, strict=True, exemptions=exemptions)
     fig.savefig(build / f"{figure_id}.svg", facecolor="white")
     fig.savefig(build / f"{figure_id}.pdf", facecolor="white")
     fig.savefig(build / f"{figure_id}.png", dpi=600, facecolor="white")

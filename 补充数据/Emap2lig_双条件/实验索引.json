@@ -41,7 +41,8 @@
         "build_requests": "补充数据/Find-Match-Build_20261018/metadata/emap_original/find_hit_subset.jsonl",
         "build_poses": "补充数据/Find-Match-Build_20261018/metadata/emap_original/build_occurrences.jsonl",
         "shared_figure_data": "补充数据/Find-Match-Build_20261018/metadata/figure_data/data.json",
-        "docking_cases": "画图/画图代码/stage3/output/stage3-cases-main/assets"
+        "docking_cases": "画图/画图代码/stage3/output/stage3-cases-main/assets",
+        "stage1_supplementary_data": "画图/画图代码/stage1/output/stage1-additional-analysis/data/conditions.json"
       },
       "server_paths": {
         "find": "/storage/penghongen/AdaLigand_stage1_inference/Emap2lig/official_find_li/held_out_test_0",
@@ -79,7 +80,8 @@
         "stage1_plot_data": "画图/画图代码/stage1/output/stage1-results-revision/explicit_emdb_level/data/plot_data.json",
         "shared_figure_data": "画图/画图代码/e2e/output/find-build-shared/explicit_emdb_level/data.json",
         "docking_cases": "画图/画图代码/stage3/output/stage3-cases-main/explicit_emdb_level/assets",
-        "case_selection": "画图/画图代码/stage3/output/stage3-cases-main/explicit_emdb_level/case_selection.json"
+        "case_selection": "画图/画图代码/stage3/output/stage3-cases-main/explicit_emdb_level/case_selection.json",
+        "stage1_supplementary_data": "画图/画图代码/stage1/output/stage1-additional-analysis/data/conditions.json"
       },
       "server_paths": {
         "scientific_root": "/storage/penghongen/Emap2lig/contour_level_20261026",

@@ -14,17 +14,22 @@ from scipy.sparse import csr_matrix
 from scipy.sparse.csgraph import maximum_bipartite_matching
 
 
-def evaluate_selected(intersections, pred_sizes, gt_sizes, occurrence_ids, gt_types, selected):
-    """返回忽略数、入选数、最大匹配数及 P/R; 输入轴为预测 blob × 全类别 GT.
+def evaluate_selected(intersections, pred_sizes, gt_sizes, occurrence_ids, gt_types, selected, threshold):
+    """计算固定类别归属和最终候选选择下的小分子最大一对一匹配及 P/R.
 
-    intersections: int (N_pred,N_gt), 交集体素数; sizes 对应两轴体素数.
-    occurrence_ids/gt_types: (N_gt,), 原编号与类型. selected: bool (N_pred,),
-    冻结最终选择. 非小分子归属先按双向覆盖 >=0.30 确定, 不依赖 selected.
-    完全并列取较小 occurrence 编号; 无归属预测保留, 空预测的 P 记为 0.
+    intersections: int (N_pred, N_gt), 原候选与全部类别真实实例的交集体素数.
+    pred_sizes/gt_sizes: (N_pred,)/(N_gt,), 两轴完整区域体素数.
+    occurrence_ids/gt_types: (N_gt,), 原真实实例编号与类别, 如 1/'small_molecule'.
+    selected: bool (N_pred,), 冻结最终选择, True 的候选参与 P/R.
+    threshold: float, 当前匹配的双向覆盖下限, 如 0.5; 非小分子归属始终使用 0.3 及覆盖率几何均值, 并列取较小实例编号.
+    返回 dict 的 ignored_candidate_count: int, 固定归属其他类别的候选数; 未归属候选保留.
+    selected_count: int, 最终 selected 且未被忽略的候选数; small_gt_count: int, 真实小分子数.
+    matched_count_<suffix>: int, 最大匹配数; suffix 如 0p5, 由 threshold 确定.
+    one_to_one_precision_<suffix>/one_to_one_recall_<suffix>: float, 匹配数除以上述候选数/真实小分子数, 空分母记 0.
     """
     pred_cover = np.divide(intersections, pred_sizes[:, None], out=np.zeros(intersections.shape, float), where=pred_sizes[:, None] > 0)
     gt_cover = np.divide(intersections, gt_sizes[None, :], out=np.zeros(intersections.shape, float), where=gt_sizes[None, :] > 0)
-    valid = (pred_cover >= .30) & (gt_cover >= .30)
+    valid = (pred_cover >= .30) & (gt_cover >= .30)  # bool (N_pred, N_gt), 仅用于固定类别归属的 0.3 匹配边.
     ignored = np.zeros(len(pred_sizes), dtype=bool)
     for i in range(len(pred_sizes)):
         candidates = np.flatnonzero(valid[i])
@@ -34,13 +39,14 @@ def evaluate_selected(intersections, pred_sizes, gt_sizes, occurrence_ids, gt_ty
     # (N_selected,N_small), 只保留最终已选且未被忽略的预测, 真实侧只保留小分子.
     small_axis = np.array([t == 'small_molecule' for t in gt_types], dtype=bool)
     kept_selected = np.asarray(selected, bool) & ~ignored
-    edges = valid[np.ix_(kept_selected, small_axis)]
+    edges = ((pred_cover >= threshold) & (gt_cover >= threshold))[np.ix_(kept_selected, small_axis)]
     n_pred, n_gt = edges.shape
     matched = int((maximum_bipartite_matching(csr_matrix(edges), perm_type='column') >= 0).sum()) if n_pred and n_gt else 0
+    suffix = str(threshold).replace('.', 'p')
     return {'ignored_candidate_count': int(ignored.sum()), 'selected_count': n_pred,
-            'matched_count_0p3': matched, 'small_gt_count': n_gt,
-            'one_to_one_precision_0p3': matched / n_pred if n_pred else 0.0,
-            'one_to_one_recall_0p3': matched / n_gt if n_gt else 0.0}
+            f'matched_count_{suffix}': matched, 'small_gt_count': n_gt,
+            f'one_to_one_precision_{suffix}': matched / n_pred if n_pred else 0.0,
+            f'one_to_one_recall_{suffix}': matched / n_gt if n_gt else 0.0}
 
 
 if __name__ == '__main__':
@@ -72,7 +78,7 @@ if __name__ == '__main__':
             with np.load(facts, allow_pickle=False) as archive:
                 ids = archive['occurrence_id']
                 computed = evaluate_selected(archive['intersections'], archive['pred_sizes'], archive['gt_sizes'],
-                                             ids, [types[int(i)] for i in ids], archive['candidate_selected'])
+                                             ids, [types[int(i)] for i in ids], archive['candidate_selected'], 0.3)
                 assert len(archive['pred_sizes']) == row['candidate_count']
             # 对照既有小分子报告, 确保补算没有改变 cohort 或非小分子忽略规则.
             assert computed['ignored_candidate_count'] == row['ignored_candidate_count']

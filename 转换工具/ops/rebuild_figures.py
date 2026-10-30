@@ -126,6 +126,9 @@ def commands_for(figure: str, build: Path) -> list[list]:
     if figure.startswith('fig-overview_v3') or figure.startswith('fig-method-v9'):
         prefix='e2e/visualization/fig12-revision/'
         return [p(prefix+'prepare_geometry.py'),[PYMOL,'-B',CODE/(prefix+'render_structures.py')],n(prefix+'build_components.mjs'),p(prefix+'assemble.py')]
+    if figure in ('stage1-additional-analysis', 'stage1-no-level-comparison'):
+        # 两页共享独立补充目录的统计与布局, 图元及原生装配仍复用原 Stage1 实现.
+        return [p('stage1/calculate/stage1-additional-analysis/prepare_data.py'), p('stage1/calculate/stage1-additional-analysis/plot.py'), n('stage1/calculate/stage1-results-revision/build_deck.mjs')]
     if figure in ("stage1-overall-performance", "stage1-candidate-quality", "stage1-strict-threshold", "stage1-completion-curves"):
         prefix="stage1/calculate/stage1-results-revision/"
         return [p(prefix+"plot.py"),n(prefix+"build_deck.mjs")]
@@ -179,7 +182,7 @@ def finish_candidate(figure: str, build: Path, records: list, generated_captions
         if path.name=='rebuilt.pptx' or any(word in path.parts for word in ("backups","rendered")):continue
         try:
             deck=Deck(path)
-            if figure.endswith('-NO_LEVEL'):
+            if figure.endswith('-NO_LEVEL') and figure not in deck.figures:
                 # 为本次旧条件候选的全部页面补后缀, 避免未登记辅助页误接新条件备注; 不改图形.
                 for original_name in list(deck.figures):
                     if original_name.endswith('-NO_LEVEL'):

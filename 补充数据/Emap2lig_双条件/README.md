@@ -1,6 +1,6 @@
 # Emap2lig：无 level 与显式推荐 level 的结果资产
 
-这里把两次合法的 Emap2lig 测试分开索引。当前正文及相关图使用 `explicit_emdb_level`，即显式提供 EMDB 推荐密度 level 的实验；10 月 27 日之前使用的 `no_level` 原结果已独立收入补充材料。两条件的原始结果分别保留，旧 PPT 页的独立图名加 `-NO_LEVEL` 后缀，新页追加在原图集中。
+这里把两次合法的 Emap2lig 测试分开索引。当前正文及相关图使用 `explicit_emdb_level`，即显式提供 EMDB 推荐密度 level 的实验；`no_level` 的 Stage1 结果现以独立短节收入补充材料，旧 Stage3／端到端归档段落已由作者撤下，其科学原件和历史 PPT 页继续保留。两条件的原始结果分别保留，旧 PPT 页的独立图名加 `-NO_LEVEL` 后缀，新页追加在原图集中。
 
 先读 [实验索引](实验索引.json) 确定条件和位置，再读对应科学文件。资产复制与验收见 [接入记录](接入记录.md)，本轮图文切换见 [执行记录](../../talk/emap2lig_switch_20261027/执行记录.md)；[后续安排](后续安排.md) 保留接入时确认的工作顺序。这些是资产索引，不替代八份 `图表追溯.md` 对实际展示的逐图登记。
 
@@ -211,3 +211,5 @@ P 是一个 PDB 的预测 blob 数，G 是该 PDB 的全部真实实例数。数
 Stage1 当前统计由新逐 PDB NPZ／JSONL 与原类别轴派生；Stage3 配对按 `(条件,pdb_id,occurrence_id)` 重新连接；十个病例使用对应条件的原排序 Top-1 CIF，重新计算原地图密度覆盖与受体碰撞；端到端图沿完整 446 实例保留未命中与筛选失败。旧 `metadata/figure_data/data.json` 与未带条件的历史缓存仍为 `no_level`；当前新图读取索引中独立的 `explicit_emdb_level` 派生产物，不能只改标签来切换条件。
 
 实际图表登记仍在 [Stage1 计算](../../画图/画图代码/stage1/calculate/图表追溯.md)、[Stage3 计算](../../画图/画图代码/stage3/calculate/图表追溯.md)、[Stage3 可视化](../../画图/画图代码/stage3/visualization/图表追溯.md)、[端到端计算](../../画图/画图代码/e2e/calculate/图表追溯.md) 和 [端到端可视化](../../画图/画图代码/e2e/visualization/图表追溯.md)。后续新增缓存、图名或补充材料副本应显式带条件；共用统计代码可以，两个条件的科学输入和产物目录必须可区分。
+
+当前 Stage1 补充两图的统计留档由实验索引的 `stage1_supplementary_data` 定位。该 JSON 顶层按 `explicit_emdb_level`／`no_level` 分开，完整来源和重建见 [Stage1 补充图说明](../../画图/画图代码/stage1/calculate/stage1-additional-analysis/README.md)。

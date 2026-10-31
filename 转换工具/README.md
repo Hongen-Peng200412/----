@@ -264,3 +264,12 @@ python 转换工具/test_english_captions.py
 英文图注测试固定导出图片以隔离 Office 桌面状态，使用正式 Word 转换流程覆盖两种版式、标记边界、旧备注兼容、原生公式图注、图号及首句格式、图名引用和英文回转。真实 Office 导图另由往返集成测试及文稿编译验证。
 
 测试、媒体提取与版面检查产生的临时文件统一放在 `temp/` 中；稳定输出和 Word 回转所引用的图片仍放在文稿所在目录。
+
+
+### 图页后的明确留白
+
+图与完整图注同页后还需保留页尾空白时，可在该`pptfig`定义后加入Pandoc支持的Word原生分页控制，让后文从新页开始，而不缩小图形或图注。以下控制段只有1磅高度，不增加可见文字；它仅针对Word输出，不改变数据、图名或图注。
+
+```{=openxml}
+<w:p><w:pPr><w:pageBreakBefore/><w:spacing w:before="0" w:after="0" w:line="20" w:lineRule="exact"/></w:pPr></w:p>
+```

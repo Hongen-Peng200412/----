@@ -88,3 +88,6 @@ python -X utf8 -B 画图/画图代码/e2e/calculate/stage2-stage3-results/finish
 ```
 
 候选构建不会自行发布到作者正式PPT。完整重建登记、来源批注、正式PPT和验证状态由[计算追溯](../图表追溯.md)及[可视化追溯](../../visualization/图表追溯.md)维护。本README说明当前输入输出契约，不把生成文件存在视为已完成PDF碰撞检查、可编辑性核查或Word图注分页验收。
+
+
+作者(v1)局部优化使用`refine_author_v1.py --output <本次temp候选.pptx>`。输入为独立冻结的作者5页PPT及原始统计`data.json`；它按冻结准确率重建b/c的0起始纵轴并完善第2/4页双语图注，其它作者对象与旧页面不改。程序输出候选和逐点数值/部件变更回执，不读取旧temp。

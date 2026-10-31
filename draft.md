@@ -63,48 +63,22 @@ The advantages of our approach are clearly demonstrated in the 9NVS case ({{figr
 
 ## LigandSeek-Match and LigandSeek-Build identify and reconstruct ligands
 
-### Stage 2: Evaluation protocol
+To mirror the real-scenerio task, we test LigandSeek-Match and LigandSeek-Build on the predicted ligand region yielded by LigandSeek-Find, answering whether Match can futhermore to align the blob to ligand identities correctly, besides Build can futhermore to generate qualified poses. LigandSeek-Find produced 【】 blobs that used to test Match, containing 【】 small molecules, and 【】 of them are single-residue and no missing atoms that used to test Build.  
 
-Let $B_i$ denote the $i$-th candidate blob predicted by Find, and let $G_j$ denote the ground-truth ligand region of instance $j$ in the same PDB entry. Their bidirectional coverage is defined as:
 
-$$
-c_{ij}^{B}=\frac{|B_i\cap G_j|}{|B_i|},\qquad
-c_{ij}^{G}=\frac{|B_i\cap G_j|}{|G_j|},
-$$
 
-where $c_{ij}^{B}$ is the fraction of the blob covered by the ground-truth ligand region, and $c_{ij}^{G}$ is the fraction of the ground-truth ligand region covered by the blob. For each candidate blob $B_i$, the indices of ground-truth instances meeting a bidirectional coverage threshold of 0.30 are collected into the set:
+Match achieved an overall ligand-identity matching accuracy of 87.8% with deposited receptors and 86.6% with CryoAtom2-reconstructed receptors ({{figref:stage2-stage3-results(v1)|a}}). With deposited receptors, matching accuracy reached 92.5% for small molecules and 93.1% for metal ions, exceeding the 70.8% achieved for sugars. The corresponding accuracies with CryoAtom2 receptors were 91.7%, 92.9% and 67.9%. The metrics reflecting the classification ability to determine a Find-yielded blob whether false positive or not, foreground classification F1, was 86.0% and 82.9% under the two receptor conditions, respectively.
 
-$$
-\mathcal J_i=\left\{j:c_{ij}^{B}\geq 0.30\ \land\ c_{ij}^{G}\geq 0.30\right\}.
-$$
+The accuracy of different ligand classes is unevenly distributed. Metal ions retained higher matching accuracy across all groups and were easier to distinguish from other ligand identities, after which was small molecules. The model received no prior information about each blob's ligand category, suggesting that this performance reflected greater chemical separability from the other ligands.
 
-A candidate blob $B_i$ is labeled as foreground if $\mathcal J_i$ is non-empty (i.e. sharing at least 30% bidirectional coverage with a ground-truth ligand); otherwise, it is labeled as background. For each foreground blob, we assign a unique ground-truth ligand instance by maximising the geometric mean of the two coverage fractions:
+We also observed that identity discrimination became more difficult as the number of competing SMILES identities increased ({{figref:stage2-stage3-results(v1)|b,c}}). For example, with deposited receptors, small-molecule matching accuracy fell from 94.8% in entries with two identities to 65.9% in entries with four. But when at most three identities competed, overall accuracy remained at least 88.5% with deposited receptors and 84.6% with CryoAtom2 receptors. Category-specific accuracies generally exceeded 80% in these groups. They accounted for 80.0% and 81.6% of evaluated foreground blobs in GT or CA2 receptor conditions, respectively, making rapid identity assignment practical for most candidate regions in end-to-end modelling.
 
-$$
-j_i^*=\underset{j\in\mathcal J_i}{\arg\max}\;\sqrt{c_{ij}^{B}c_{ij}^{G}}.
-$$
 
-The SMILES string of this instance defines the ground-truth ligand identity for $B_i$.
-
-After training LigandSeek-Find, we used it to run inference with deposited receptors on 1,650 training and 200 validation PDB entries. The resulting candidate blobs and associated auxiliary features formed the training and validation sets for Match.
-
-We also ran inference with LigandSeek-Find on the 179 test PDB entries using both deposited and CryoAtom2-reconstructed receptors. These conditions yielded 1,238 and 1,160 blobs defined as foreground blobs with corresponding parsable ligands, alongside 413 and 489 false-positive blobs, respectively. The Match test set incorporated all these candidate blobs without manual pre-filtering, ensuring that the benchmark accurately reflected real-world pipeline performance.
-
-We refer to the main model, which integrates the full voxel features, pocket context and auxiliary information, as strongest. The full voxel features comprise the 56-channel multi-view density bank and 50-dimensional receptor-atom features scattered onto the voxel grid. For comparison, we trained three ablation models under identical protocols: voxel-only (using only the full voxel features), density-only (using only the experimental density), and pocket-only (using only the pocket information).
-
-### Identity matching and pose reconstruction
-
-Match achieved an overall ligand-identity matching accuracy of 87.8% with deposited receptors and 86.6% with CryoAtom2-reconstructed receptors ({{figref:stage2-stage3-results(v1)|a}}). With deposited receptors, matching accuracy reached 92.5% for small molecules and 93.1% for metal ions, exceeding the 70.8% achieved for sugars. The corresponding accuracies with CryoAtom2 receptors were 91.7%, 92.9% and 67.9%. Foreground classification F1 was 86.0% and 82.9% under the two receptor conditions, respectively.
-
-Identity discrimination became more difficult as the number of competing SMILES identities increased ({{figref:stage2-stage3-results(v1)|b,c}}). For example, with deposited receptors, small-molecule matching accuracy fell from 94.8% in entries with two identities to 65.9% in entries with four. When at most three identities competed, overall accuracy remained at least 88.5% with deposited receptors and 84.6% with CryoAtom2 receptors. Category-specific accuracies generally exceeded 80% in these groups. They accounted for 80.0% and 81.6% of evaluated foreground blobs, respectively, making rapid identity assignment practical for most candidate regions in end-to-end modelling.
-
-Metal ions retained high matching accuracy across all groups and were easier to distinguish from other ligand identities. The model received no prior information about each blob's ligand category, suggesting that this performance reflected greater chemical separability from the other ligands.
-
-We next compared DG-PocketXMol with Emap2lig-Build using each pipeline's predicted ligand regions. The comparison used 235 small-molecule instances jointly detected and evaluable by Emap2lig and LigandSeek under both receptor conditions ({{figref:stage2-stage3-results(v1)|d–f}}). Median top-1 RMSD was 0.87 Å with deposited receptors and 1.03 Å with CryoAtom2 receptors, compared with 1.80 Å for Emap2lig-Build. Median best-of-50 RMSD was 0.64 Å, 0.72 Å and 1.33 Å, respectively.
+We next compared DG-PocketXMol with Emap2lig-Build using each pipeline's predicted ligand regions. The comparison used 235 small-molecule instances jointly detected and evaluable by Emap2lig and LigandSeek under both receptor conditions ({{figref:stage2-stage3-results(v1)|d–f}}). Median top-1 RMSD was 0.87 Å with deposited receptors and 1.03 Å with CryoAtom2 receptors, compared with 1.80 Å for Emap2lig-Build. Median top-5 RMSD was 0.75 Å, 0.82 Å and 1.47 Å, respectively. DG-PocketXMol achieved lower median RMSDs than Emap2lig-Build for both top-1 and top-5 poses under both receptor conditions.
 
 DG-PocketXMol achieved top-1 success rates of 86.8% and 80.0% at RMSD < 2 Å with deposited and CryoAtom2 receptors, respectively, versus 64.7% for Emap2lig-Build. Allowing the five highest-ranked poses increased these rates to 92.8%, 91.1% and 76.2%, respectively ({{figref:stage2-stage3-results(v1)|d,e}}). In paired top-1 comparisons, DG-PocketXMol produced lower RMSD than Emap2lig-Build for 88.9% of instances with deposited receptors and 84.7% with CryoAtom2 receptors ({{figref:stage2-stage3-results(v1)|f}}).
 
-The FAD instance in 9WUP (A:1103) illustrated how receptor and density information impose complementary constraints ({{figref:stage2-stage3-results(v1)|g–i}}). PocketXMol-official avoided receptor clashes, but its top-1 RMSD was 3.83 Å and only 66% of heavy atoms reached the recommended density threshold. Emap2lig-Build achieved 1.79 Å RMSD and 74% density coverage, yet produced 14 clashing atom pairs with the receptor. DG-PocketXMol combined both constraints, achieving 0.52 Å RMSD and 87% density coverage without receptor clashes. Thus, receptor constraints alone did not ensure agreement with experimental density, whereas density fitting alone permitted receptor collisions.
+The FAD instance in 9WUP (A:1103) illustrated how receptor and density information impose complementary constraints ({{figref:stage2-stage3-results(v1)|g–i}}). PocketXMol-official avoided receptor clashes, but its top-1 RMSD was 3.83 Å and only 66% of heavy atoms reached the recommended density threshold. Emap2lig-Build achieved 1.79 Å RMSD and 74% density coverage, yet produced 14 clashing atom pairs with the receptor. DG-PocketXMol combined both constraints, achieving 0.52 Å RMSD and 87% density coverage without receptor clashes. Thus, receptor constraints alone did not ensure agreement with experimental density, whereas density fitting alone permitted receptor collisions. DG-PocketXMol improves docking performance by combining both the constrants.
 
 {{pptfig:"画图/stage2-stage3结果.pptx"|stage2-stage3-results(v1)}}
 
@@ -114,11 +88,13 @@ The FAD instance in 9WUP (A:1103) illustrated how receptor and density informati
 
 ## Ablation of Match features and density-guided Build
 
+For Match, we refer to the main model, which integrates the full voxel features, pocket context and auxiliary information, as strongest. The full voxel features comprise the 56-channel multi-view density bank and 50-dimensional receptor-atom features scattered onto the voxel grid. For comparison, we trained three ablation models under identical protocols: density-only (using only the experimental density), voxel-only (using only the full voxel features), and pocket-only (using only the pocket information). 
+
 The Match ablations identified complementary contributions from voxel features and pocket context ({{figref:stage2-stage3-ablation-centre(v1)|a,b}}). With deposited receptors, voxel-only achieved 83.7% overall matching accuracy, exceeding density-only (78.6%) and pocket-only (79.4%). Adding pocket context and auxiliary information in strongest increased overall accuracy to 87.8%. With CryoAtom2 receptors, the corresponding accuracies were 85.6%, 80.3%, 80.9% and 86.6%. The full voxel representation therefore supported identity discrimination under both receptor conditions, with further gains from the combined model.
 
-For Build, we compared PocketXMol-official, fine-tuning without density and DG-PocketXMol on the full 446-instance small-molecule test set. These standard evaluations used Centre pockets centred on the deposited ligand centres ({{figref:stage2-stage3-ablation-centre(v1)|c,d}}). Without density, fine-tuning increased top-1 success at RMSD < 2 Å from 44.6% to 60.8% with deposited receptors. Density conditioning increased it further to 73.8%, while reducing median top-1 RMSD from the official model's 2.31 Å to 1.29 Å. With CryoAtom2 receptors, success rates increased from 39.9% to 49.6% and 67.5%, respectively. DG-PocketXMol also reduced median top-1 RMSD from 3.01 Å to 1.44 Å under this receptor condition.
+For Build, we compared PocketXMol-official, fine-tuning with a new linear projection encoding nucleic receptors but without density injection(PocketXMol-simple fine-tune), and DG-PocketXMol on the full 446-instance small-molecule test set({{figref:stage2-stage3-ablation-centre(v1)|c,d}}). Without density, fine-tuning increased top-1 success at RMSD < 2 Å from 44.6% to 60.8% with deposited receptors. Density conditioning increased it further to 73.8%, while reducing median top-1 RMSD from the official model's 2.31 Å to 1.29 Å. With CryoAtom2 receptors, success rates increased from 39.9% to 49.6% and 67.5%, respectively. DG-PocketXMol also reduced median top-1 RMSD from 3.01 Å to 1.44 Å under this receptor condition. So, fine-tuning without density improved pose reconstruction, but did not account for the full accuracy gain of DG-PocketXMol. The density-conditioned model further restricted the translational and rotational freedom. 
 
-Fine-tuning without density thus improved pose reconstruction, but did not account for the full accuracy gain of DG-PocketXMol. The density-conditioned model further restricted the translational and rotational freedom available within the 15 Å Centre pocket. The same comparison with Envelope pockets is reported in the Supplementary Information, alongside additional structural cases and the separate EMERALD-ID identity-matching evaluation.
+In fact, PocketXMol provides two pocket definitions for docking: the Envelope pocket and the Centre pocket. The Envelope pocket includes all atoms of a receptor residue if at least one of its atoms lies within a ligand atom's 10 Å envelope, which using more prior information. The Centre pocket includes all receptor atoms within a 15 Å sphere centred on the binding site. Consistent with our main purpose of modelling ligand automatically in the complete density maps, we use and report the outcomes under the Centre pocket definition in the main body. More outcomes and analyses are on Supplementary information.
 
 {{pptfig:"画图/stage2-stage3结果.pptx"|stage2-stage3-ablation-centre(v1)}}
 
@@ -189,6 +165,8 @@ In 30GA ({{figref:e2e-flow-30ga}}), Find's Rank 1 candidate was a background fal
 We next evaluated the computational efficiency of each stage in the LigandSeek workflow. On an NVIDIA H100 GPU, Find inference with a batch size of 18 averaged 213.30 s per density map (median, 142.59 s). Vectorised Match inference on the same GPU (batch size of 32) required a mean of only 0.09 s per candidate site, representing a negligible fraction of the overall runtime. During the Build stage, DG-PocketXMol sampled 50 poses per site over 100 steps (batch size of 50), averaging 26.09 s per site (median, 24.69 s) on an H100 GPU and 39.80 s (median, 38.32 s) on an A800 GPU across 446 sites per evaluation.
 
 Both the localisation and pose-sampling stages exhibit predictable linear scaling. For a density map of grid dimensions $n_x$, $n_y$ and $n_z$, given a fixed network architecture, window size and stride, the primary full-map Find cost scales as $O(n_x n_y n_z)$, growing linearly with each grid dimension. Similarly, for fixed molecular and pocket sizes, the Build sampling cost scales linearly with the number of generated poses and sampling steps. 
+
+
 # Discussion
 
 Experimental cryo-EM density and macromolecular receptors provide complementary constraints for ligand modelling. Density maps delineate the ligand's spatial position and shape, whereas receptors provide the pocket's geometric and chemical environment. By jointly encoding both sources across region localisation, identity matching and pose reconstruction, LigandSeek generates ligand poses consistent with experimental density and the receptor environment. This advantage persists with CryoAtom2-reconstructed receptors, showing that automatically reconstructed receptor structures provide effective structural information for ligand modelling.
@@ -249,7 +227,7 @@ We used sequence comparisons performed by MMseqs2[@steinegger2017mmseqs2] to def
 
 We then removed redundant samples from the candidate test set at the PDB-entry level, namely, by selecting a maximal independent set in the PDB-graph defined by the redundancy relationships. Each sample in the final test set was non-redundant with every sample in the training, validation, and calibration sets. All pairs of samples within the test set were also non-redundant.
 
-Of the 2,497 EMDB–PDB pairs whose corresponding density maps were first released after 1 January 2026, 179 remained after quality filtering and redundancy removal. These pairs formed the original test set used for subsequent evaluations. Samples released before 1 January 2026 were divided into three mutually disjoint subsets containing 13,714, 200, and 100 EMDB–PDB pairs, respectively. These subsets served as the original training, validation, and calibration sets.
+Of the 2,497 EMDB–PDB pairs whose corresponding density maps were first released after 1 January 2026, 179 remained after quality filtering and redundancy removal. These pairs formed the original test set used for subsequent evaluations. Samples released before 1 January 2026 were divided into three mutually disjoint subsets containing 13,714, 200, and 100 EMDB–PDB pairs, respectively. These subsets served as the original training, validation, and calibration sets. The original test set includes 2,502 instances, which includes 821 small-molecule instances distributed in 94 PDB entries, futhermore includes 446 eligible small molecules distributed in 77 PDB entries. Eligibel small molecules is the small molecules which satisfies the single-residue, no-missing-atom criteria.
 
 
 For Find, the training set supplied training metadata, including local $80^3$ density crops. The validation set was used to select the best checkpoint during training. The calibration set determined probability or score thresholds after training was complete. Find operated at the PDB-entry level for training and testing, using all 13,714, 200, 100 and 179 EMDB–PDB pairs from the original sets.
@@ -416,61 +394,6 @@ Candidate $B_j$ is predicted as positive if and only if $s_j$ exceeds the fixed 
 
 The first score term measures the candidate's own density confidence. The second rewards nearby receptor atoms predicted to be close to a ligand, whereas the third penalises nearby receptor atoms predicted to be distant from ligands.
 
-### Stage 1:Evaluation metrics
-
-For each PDB entry, let $\{B_i\}_{i=1}^{N_{\mathrm{pred}}}$ denote the final predicted candidate regions and $\{G_j\}_{j=1}^{N_{\mathrm{gt}}}$ the ground-truth ligand regions. Semantic Dice measures overlap between the unions of predicted and ground-truth regions:
-
-$$
-\mathrm{Dice}=\frac{2\left|\left(\bigcup_i B_i\right)\cap\left(\bigcup_j G_j\right)\right|}{\left|\bigcup_i B_i\right|+\left|\bigcup_j G_j\right|},
-$$
-
-where $|\cdot|$ denotes voxel count; Dice does not use the instance-matching threshold.
-
-For instance-level metrics, a candidate and a ground-truth instance are compatible when each covers at least a fraction $\tau$ of the other. We evaluated $\tau\in\{0.3,0.5\}$ and used the Hungarian algorithm[@kuhn1955hungarian] to obtain a maximum one-to-one matching. If $N_{\tau}^{\mathrm{match}}$ pairs are matched, instance-level precision and recall are:
-
-$$
-P_{\tau}^{\mathrm{instance}}=\frac{N_{\tau}^{\mathrm{match}}}{N_{\mathrm{pred}}},\qquad R_{\tau}^{\mathrm{instance}}=\frac{N_{\tau}^{\mathrm{match}}}{N_{\mathrm{gt}}}.
-$$
-
-Precision is zero for an empty prediction set; a ground-truth instance cannot contribute more than one successful pair. Ranking candidates by confidence and varying the retained candidate set yields the instance-level precision–recall curve and its area, $\mathrm{PRAUC}_{\tau}^{\mathrm{instance}}$.
-
-Detection completion measures the fraction of distinct ground-truth instances recovered within a relative candidate count. Candidates retain the original ordering, with selected candidates first and remaining candidates afterwards. Within each group, candidates are ordered by descending mean voxel probability, with ties resolved by original blob index. Each candidate is assigned to the ground-truth instance with maximal geometric-mean coverage among pairs meeting the bidirectional threshold of 0.3. Repeated hits occupy candidate positions but increase completion only at the first detection of an instance. For $N$ target instances and relative candidate count $\rho$, at most $\lfloor\rho N\rfloor$ candidates are examined.
-
-All-ligand evaluation includes 179 PDB entries and 2,502 instances; small-molecule evaluation includes 94 PDB entries and 821 instances. In the small-molecule evaluation, candidates are first assigned across all ligand classes, and those assigned to non-small-molecule instances are omitted. Unassigned background candidates remain, as do repeated hits in completion analysis. P/R matching uses the retained final candidates; completion follows cumulative first detections along the candidate order. Metrics are averaged equally across PDB entries, retaining zero-detection entries. Confidence intervals for means use 10,000 PDB bootstrap resamples with seed 20260922 and percentile limits of 2.5% and 97.5%. Methods and candidate limits within the same cohort share resampling indices.
-
-
-
-### Stage 1: Evaluation metrics
-
-For a given PDB structure, let the model predict $N_{pred}$ three-dimensional candidate blobs, $\{B_i\}_{i=1}^{N_{pred}}$. The structure contains $N_{gt}$ ground-truth ligand instances, $\{G_j\}_{j=1}^{N_{gt}}$, where $G_j$ denotes the ligand region of instance $j$. We set the bidirectional coverage threshold to $\tau \in \{0.3, 0.5\}$.
-
-We evaluated Find at both the semantic and instance levels. At the semantic level, the Dice score measured the overlap between the unions of predicted and ground-truth ligand regions:
-
-$$
-\mathrm{Dice}=\frac{2\left|\left(\bigcup_i B_i\right)\cap\left(\bigcup_j G_j\right)\right|}{\left|\bigcup_i B_i\right|+\left|\bigcup_j G_j\right|},
-$$
-
-where $\vert{}\cdot\vert{}$ denotes the number of voxels in a region.
-
-At the instance level, predicted instances $\{B_i\}_{i=1}^{N_{pred}}$ and ground-truth instances $\{G_j\}_{j=1}^{N_{gt}}$ form the two vertex sets of a bipartite graph. An edge connects $B_i$ and $G_j$ if each covers at least a fraction $\tau$ of the other. We then used the Hungarian algorithm[@kuhn1955hungarian] to obtain a maximum matching between the two sets. Let $N^{\mathrm{1to1}}_{\tau}$ be the number of successfully matched instance pairs. We define one-to-one precision and recall as:
-
-$$
-\operatorname{1to1P}_{\tau}
-=
-\frac{N^{\mathrm{1to1}}_{\tau}}{N_{\mathrm{pred}}},
-\qquad
-\operatorname{1to1R}_{\tau}
-=
-\frac{N^{\mathrm{1to1}}_{\tau}}{N_{\mathrm{gt}}},
-$$
-
-These quantities yield the one-to-one F1 score at threshold $\tau$, $\operatorname{1to1F1}_{\tau}$. Ranking predicted instances by their mean voxel probability yields the corresponding one-to-one precision–recall area under the curve (PRAUC), $\operatorname{1to1PRAUC}_{\tau}$. We use "1to1" and "one-to-one" interchangeably depending on the context.
-
-One-to-one metrics exclude both one-to-many and many-to-one matches between predicted and ground-truth instances. For example, if one predicted blob covers several ground-truth ligands, at most one pair can count as a successful match. These metrics require accurate instance localisation and separation, penalising incorrect splitting or merging as well as localisation errors. They therefore provide a precise assessment of the model's performance.
-
-We also evaluated the fraction of detected instances as a function of relative candidate count, which normalises the number of examined candidates by the ground-truth instance count per PDB. A ground-truth instance was considered detected if it was matched to a predicted blob at the $\tau=0.3$ bidirectional coverage threshold.
-
-All metrics were evaluated across all ligands and for small molecules only. In the small-molecule evaluation, non-small-molecule ground-truth ligands, such as sugars and metal ions, and the candidate blobs matched to them were excluded from numerators, denominators and candidate counts.
 
 ## Stage 2: Match
 
@@ -550,7 +473,7 @@ Through spatial localisation by Find and identity assignment by Match, downstrea
 
 However, existing deep learning docking tools typically consider either the receptor environment alone or the experimental density alone, leaving a critical gap in joint modelling. To address this limitation and provide an effective out-of-the-box solution for organic small molecules, we developed DG-PocketXMol as our default Build engine. Specifically, we extended PocketXMol[@pocketxmol], a unified generative model for small molecules, to incorporate local cryo-EM density as an explicit conditioning signal, initialising it with official weights and fine-tuning it on eligible small molecules.
 
-### PocketXMol fine-tuning experiments
+### DG-PocketXMol fine-tuning experiments
 
 PocketXMol fine-tuning used the same training, validation and test partitions described above. From each PDB entry in these partitions, we included all eligible small molecules. The training, validation and test sets contained 65,290, 781 and 446 ligand instances, respectively. No probability or score threshold required calibration at this stage, so a calibration set was unnecessary.
 
@@ -559,17 +482,89 @@ We introduced modifications to the PocketXMol network to incorporate cryo-EM den
 Because the original PocketXMol does not support nucleic acid atoms, we added a linear layer to encode them into the receptor representation. All other architectural components remain unchanged, including the backbone network, the original feature representations, and the diffusion noise-addition and denoising schedules. During fine-tuning, the newly introduced modules were randomly initialized, while all remaining parameters were initialized from the official pretrained PocketXMol checkpoint.
 
 
-### Docking evaluation
 
-The docking test set comprised 446 eligible small-molecule instances from 77 PDB entries. PocketXMol provides two pocket definitions. The Envelope pocket includes all atoms of a receptor residue if at least one atom lies within 10 Å of a deposited ligand atom. The Centre pocket includes all receptor atoms within a 15 Å sphere centred on the specified binding site. We trained separate fine-tuned models for the two definitions and evaluated each under its corresponding condition. Standard ablations used the deposited ligand centre for Centre pockets and the deposited ligand envelope for Envelope pockets.
 
-The no-density fine-tuning control retained the added 15-to-128-dimensional nucleic-acid linear projection but omitted density conditioning. We initialised the remaining parameters from the official checkpoint and jointly fine-tuned the whole network. Its Centre and Envelope checkpoints were selected separately by validation loss, without using test RMSD.
+## Evaluation metrics
+
+### Evaluation metrics of Find
+
+When evaluating Match, for each PDB entry, let $\{B_i\}_{i=1}^{N_{\mathrm{pred}}}$ denote the final predicted candidate regions and $\{G_j\}_{j=1}^{N_{\mathrm{gt}}}$ the ground-truth ligand regions. Semantic Dice measures overlap between the unions of predicted and ground-truth regions:
+
+$$
+\mathrm{Dice}=\frac{2\left|\left(\bigcup_i B_i\right)\cap\left(\bigcup_j G_j\right)\right|}{\left|\bigcup_i B_i\right|+\left|\bigcup_j G_j\right|},
+$$
+
+where $|\cdot|$ denotes voxel count; Dice does not use the instance-matching threshold.
+
+For instance-level metrics, a candidate and a ground-truth instance are compatible when each covers at least a fraction $\tau$ of the other. We evaluated $\tau\in\{0.3,0.5\}$ and used the Hungarian algorithm[@kuhn1955hungarian] to obtain a maximum one-to-one matching. If $N_{\tau}^{\mathrm{match}}$ pairs are matched, instance-level precision and recall are:
+
+$$
+P_{\tau}^{\mathrm{instance}}=\frac{N_{\tau}^{\mathrm{match}}}{N_{\mathrm{pred}}},\qquad R_{\tau}^{\mathrm{instance}}=\frac{N_{\tau}^{\mathrm{match}}}{N_{\mathrm{gt}}}.
+$$
+
+Precision is zero for an empty prediction set; a ground-truth instance cannot contribute more than one successful pair. Ranking candidates by confidence and varying the retained candidate set yields the instance-level precision–recall curve and its area, $\mathrm{PRAUC}_{\tau}^{\mathrm{instance}}$.
+
+The instance-level evaluation enforces a strict one-to-one matching constraint, disallowing one-to-many and many-to-one associations. For example, if one predicted blob covers several ground-truth ligands, at most one pair can count as a successful match. These metrics require accurate instance localisation and separation, penalising incorrect splitting or merging as well as localisation errors. They therefore provide a precise assessment of the model's performance.
+
+All metrics were evaluated across all ligands and for small molecules only. In the small-molecule evaluation, non-small-molecule ground-truth ligands, such as sugars and metal ions, and the candidate blobs matched to them were excluded from numerators, denominators and candidate counts.
+
+
+
+
+
+
+### Evaluation protocol of Match
+
+When evaluating Match, let $B_i$ denote the $i$-th candidate blob predicted by Find, and let $G_j$ denote the ground-truth ligand region of instance $j$ in the same PDB entry. Their bidirectional coverage is defined as:
+
+$$
+c_{ij}^{B}=\frac{|B_i\cap G_j|}{|B_i|},\qquad
+c_{ij}^{G}=\frac{|B_i\cap G_j|}{|G_j|},
+$$
+
+where $c_{ij}^{B}$ is the fraction of the blob covered by the ground-truth ligand region, and $c_{ij}^{G}$ is the fraction of the ground-truth ligand region covered by the blob. For each candidate blob $B_i$, the indices of ground-truth instances meeting a bidirectional coverage threshold of 0.30 are collected into the set:
+
+$$
+\mathcal J_i=\left\{j:c_{ij}^{B}\geq 0.30\ \land\ c_{ij}^{G}\geq 0.30\right\}.
+$$
+
+A candidate blob $B_i$ is labeled as foreground if $\mathcal J_i$ is non-empty (i.e. sharing at least 30% bidirectional coverage with a ground-truth ligand); otherwise, it is labeled as background. For each foreground blob, we assign a unique ground-truth ligand instance by maximising the geometric mean of the two coverage fractions:
+
+$$
+j_i^*=\underset{j\in\mathcal J_i}{\arg\max}\;\sqrt{c_{ij}^{B}c_{ij}^{G}}.
+$$
+
+The SMILES string of this instance defines the ground-truth ligand identity for $B_i$.
+
+After training LigandSeek-Find, we used it to run inference with deposited receptors on 1,650 training and 200 validation PDB entries. The resulting candidate blobs and associated auxiliary features formed the training and validation sets for Match.
+
+We also ran inference with LigandSeek-Find on the 179 test PDB entries using both deposited and CryoAtom2-reconstructed receptors. These conditions yielded 1,238 and 1,160 blobs defined as foreground blobs with corresponding parsable ligands, alongside 413 and 489 false-positive blobs, respectively. The Match test set incorporated all these candidate blobs without manual pre-filtering, ensuring that the benchmark accurately reflected real-world pipeline performance.
+
+
+
+
+
+
+
+### Evaluation protocol of Build
+
+
+When evaluating Build, we performed a real-life scenario tests between LigandSeek's small-molecule docking engine (DG-PocketXmol) and Emap2lig-Build, the latter predicting ligand poses directly from cryo-EM density without receptor information. In its official workflow, Emap2lig-Build accepts a candidate blob predicted by Emap2lig-Find as its guiding region rather than the ground-truth binding site. To mirror this realistic setting fairly, we evaluated DG-PocketXmol using pockets defined around the centroids of candidate blobs predicted by LigandSeek-Find, not the ground-truth binding sites.
+
+
+Of the 446 test small-molecule instances, Emap2lig-Find returned qualifying blobs with at least 30% bidirectional coverage for 251 instances. Under the same criterion, LigandSeek-Find successfully detected 304 instances with deposited receptors and 293 instances with CryoAtom2-reconstructed receptors. When restricted to instances jointly detected and evaluable by Emap2lig-Find and LigandSeek-Find in both receptor conditions, the original small-molecule test set yielded 235 eligiable pairs. These subsets served as the benchmarks for directly comparing DG-PocketXmol against Emap2lig-Build.
 
 For the predicted-region comparison with Emap2lig-Build, each pipeline retained its own selected blob and corresponding binding-site definition. DG-PocketXMol used the centroid of the LigandSeek-Find blob as its Centre pocket input; Emap2lig-Build used the Emap2lig-Find blob. Emap2lig-Find returned qualifying blobs with at least 30% bidirectional coverage for 251 instances. Emap2lig Build input eligibility also required 5–25 foreground voxels per ligand heavy atom. Under the coverage criterion, LigandSeek-Find detected 304 instances with deposited receptors and 293 with CryoAtom2 receptors. The intersection jointly detected and evaluable under all three conditions contained 235 instances, which formed the fixed cohort for every predicted-region comparison.
 
-Each model generated 50 candidate poses per instance. Top-1 RMSD is the heavy-atom error of the pose ranked first by the model's own score. Top-5 RMSD is the minimum error among the five highest-ranked poses; best-of-50 RMSD is the minimum among all 50 candidates. Best-of-50 therefore measures the upper limit of pose sampling rather than blind pose selection. RMSD was symmetry-corrected in the experimental map coordinate frame without rigid-body superposition, and success required RMSD strictly below the stated threshold. Standard ablation success rates retained all 446 instances in the denominator, including failures. Distributions and medians used all finite RMSD values; display limits did not change membership, paired win rates or success-rate denominators.
+Each model generated 50 candidate poses per instance., and we use the ordinary metrics of docking: Top-1 RMSD, Top-5 RMSD and best RMSD(best-of-50 RMSD). Top-1 RMSD is the heavy-atom error of the pose ranked first by the model's own score. Top-5 RMSD is the minimum error among the five highest-ranked poses; best-of-50 RMSD is the minimum among all 50 candidates. Best-of-50 therefore measures the upper limit of pose sampling rather than blind pose selection. 
 
-## End-to-end evaluation process
+
+
+
+
+
+
+### Evaluation protocol of end-to-end process
 
 {{pptfig:"画图/E2E评价计费规则.pptx"|e2e-accounting-rules-draft}}
 

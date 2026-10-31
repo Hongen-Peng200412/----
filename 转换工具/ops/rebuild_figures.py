@@ -109,6 +109,9 @@ def commands_for(figure: str, build: Path) -> list[list]:
     node = [NODE]
     p=lambda relative,*args:python+[CODE/relative,*args]
     n=lambda relative,*args:node+[CODE/relative,*args]
+    if figure in ('stage2-stage3-results','stage2-stage3-ablation-centre','stage3-ablation-envelope'):
+        prefix='e2e/calculate/stage2-stage3-results/'
+        return [p(prefix+'prepare_data.py','--repo-root',ROOT,'--output-dir',build/'data'),p(prefix+'plot.py'),n(prefix+'assemble.mjs'),p(prefix+'finish.py')]
     if figure.startswith('fig-method-build-'):
         prefix='e2e/visualization/method-build-variants/'
         return [[PYMOL,'-B',CODE/(prefix+'render_native.py')],n(prefix+'build_deck.mjs'),['powershell.exe','-NoProfile','-File',CODE/(prefix+'render_slides.ps1'),'-BuildRoot',build],p(prefix+'audit.py'),n(prefix+'finalize.mjs')]

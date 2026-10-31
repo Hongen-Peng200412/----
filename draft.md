@@ -61,7 +61,7 @@ The advantages of our approach are clearly demonstrated in the 9NVS case ({{figr
 
 {{pptfig:"画图/stage1可视化.pptx"|stage1-level-global-local-9nvs(v1)}}
 
-## Stage 2
+## LigandSeek-Match and LigandSeek-Build identify and reconstruct ligands
 
 ### Stage 2: Evaluation protocol
 
@@ -92,72 +92,31 @@ We also ran inference with LigandSeek-Find on the 179 test PDB entries using bot
 
 We refer to the main model, which integrates the full voxel features, pocket context and auxiliary information, as strongest. The full voxel features comprise the 56-channel multi-view density bank and 50-dimensional receptor-atom features scattered onto the voxel grid. For comparison, we trained three ablation models under identical protocols: voxel-only (using only the full voxel features), density-only (using only the experimental density), and pocket-only (using only the pocket information).
 
-### Stage 2: Results
+### Identity matching and pose reconstruction
 
-{{pptfig:"画图/stage2结果_忽视2+2例子.pptx"|stage2-radar-pair}}
+Match achieved an overall ligand-identity matching accuracy of 87.8% with deposited receptors and 86.6% with CryoAtom2-reconstructed receptors ({{figref:stage2-stage3-results|a}}). With deposited receptors, matching accuracy reached 92.5% for small molecules and 93.1% for metal ions, exceeding the 70.8% achieved for sugars. The corresponding accuracies with CryoAtom2 receptors were 91.7%, 92.9% and 67.9%. Foreground classification F1 was 86.0% and 82.9% under the two receptor conditions, respectively.
 
-{{figref:stage2-radar-pair|a}} shows false-positive detection and ligand identity matching for four model variants with deposited receptors. {{figref:stage2-radar-pair|b}} shows the corresponding false-positive detection and identity matching results with CryoAtom2-reconstructed receptors. We treated each candidate blob as one sample and computed foreground F1 and ligand identity matching accuracy across blobs. We also calculated matching accuracy separately for small molecules, metal ions, sugars and peptides.
+Identity discrimination became more difficult as the number of competing SMILES identities increased ({{figref:stage2-stage3-results|b,c}}). For example, with deposited receptors, small-molecule matching accuracy fell from 94.8% in entries with two identities to 65.9% in entries with four. When at most three identities competed, overall accuracy remained at least 88.5% with deposited receptors and 84.6% with CryoAtom2 receptors. Category-specific accuracies generally exceeded 80% in these groups. They accounted for 80.0% and 81.6% of evaluated foreground blobs, respectively, making rapid identity assignment practical for most candidate regions in end-to-end modelling.
 
-With deposited receptors, strongest achieved an overall matching accuracy of 87.8% and a foreground F1 of 86.0%. Matching accuracy was 92.5% for small molecules and 93.1% for metal ions, both exceeding the 70.8% (201/284) achieved for sugars. The voxel-only model achieved a foreground F1 of 84.1% and an overall matching accuracy of 83.7%. Its matching accuracy was slightly lower than that of strongest (87.8%) but substantially higher than those of density-only (78.6%) and pocket-only (79.4%). These comparisons indicated that the full voxel feature set contributed substantially to ligand discrimination.
+Metal ions retained high matching accuracy across all groups and were easier to distinguish from other ligand identities. The model received no prior information about each blob's ligand category, suggesting that this performance reflected greater chemical separability from the other ligands.
 
-With CryoAtom2-reconstructed receptors, strongest still achieved 86.6% overall matching accuracy and a foreground F1 of 82.9%, which showed no marked decline for any of the four models. By contrast, Find showed a little reduction in ligand localisation performance ({{figref:stage1-overall-performance(v1)|a,b}}). Match was therefore more robust to the change in receptor source.
+We next compared DG-PocketXMol with Emap2lig-Build using each pipeline's predicted ligand regions. The comparison used 235 small-molecule instances jointly detected and evaluable by Emap2lig and LigandSeek under both receptor conditions ({{figref:stage2-stage3-results|d–f}}). Median top-1 RMSD was 0.87 Å with deposited receptors and 1.03 Å with CryoAtom2 receptors, compared with 1.80 Å for Emap2lig-Build. Median best-of-50 RMSD was 0.64 Å, 0.72 Å and 1.33 Å, respectively.
 
-{{pptfig:"画图/stage2结果_忽视2+2例子.pptx"|stage2-strongest-pair}}
+DG-PocketXMol achieved top-1 success rates of 86.8% and 80.0% at RMSD < 2 Å with deposited and CryoAtom2 receptors, respectively, versus 64.7% for Emap2lig-Build. Allowing the five highest-ranked poses increased these rates to 92.8%, 91.1% and 76.2%, respectively ({{figref:stage2-stage3-results|d,e}}). In paired top-1 comparisons, DG-PocketXMol produced lower RMSD than Emap2lig-Build for 88.9% of instances with deposited receptors and 84.7% with CryoAtom2 receptors ({{figref:stage2-stage3-results|f}}).
 
-{{figref:stage2-strongest-pair|a,b}} stratifies strongest's results by the number of unique SMILES identities in each PDB entry, corresponding to the ligand identities competing for assignment to each candidate region. Identity discrimination became more difficult as the number of competing identities increased. For example, with deposited receptors, small-molecule matching accuracy fell from 94.8% in entries with two identities to 65.9% in entries with four. Nevertheless, when fewer than four identities competed, matching accuracy generally exceeded 80% across ligand categories. These cases accounted for approximately 80% of practical tasks, making Match useful for the majority of cases.
+The FAD instance in 9WUP (A:1103) illustrated how receptor and density information impose complementary constraints ({{figref:stage2-stage3-results|g–i}}). PocketXMol-official avoided receptor clashes, but its top-1 RMSD was 3.83 Å and only 66% of heavy atoms reached the recommended density threshold. Emap2lig-Build achieved 1.79 Å RMSD and 74% density coverage, yet produced 14 clashing atom pairs with the receptor. DG-PocketXMol combined both constraints, achieving 0.52 Å RMSD and 87% density coverage without receptor clashes. Thus, receptor constraints alone did not ensure agreement with experimental density, whereas density fitting alone permitted receptor collisions.
 
-Metal ions retained high matching accuracy across all groups and were easier to distinguish from other ligand identities. During identity matching, the model received no prior information about the ligand category of each candidate blob, so this likely reflects their greater chemical separability from the other ligands. 
+{{pptfig:"画图/stage2-stage3结果.pptx"|stage2-stage3-results}}
 
-We also evaluated EMERALD-ID, whose supported ligand scope is limited to small molecules. EMERALD-ID individually docks each candidate small-molecule identity at each site and then uses the resulting docking scores to infer the most likely ligand identity. Its computational complexity per PDB entry is $O(N_g \times K)$, where $N_g$ counts small-molecule ligand instances and $K$ counts small-molecule identities. Furthermore, EMERALD-ID lacks GPU acceleration. Docking a single small-molecule identity at one site on a single CPU core requires over an hour on average. Its runtime was almost prohibitive for PDB entries in the high-cost tail, which required docking more small molecules. In contrast, LigandSeek avoids the exhaustive docking process and reduces the docking workload from $O(NK)$ to $O(N)$.
+## Ablation of Match features and density-guided Build
 
-We therefore defined a separate evaluation set for EMERALD-ID within the original test set. Among entries containing small molecules, we excluded the 10% with the highest $N_g \times K$, retaining 357 small-molecule sites from 84 PDB entries. We supplied all small-molecule identities from the same PDB entry for matching. Chemical preparation failed at many sites, preventing EMERALD-ID from returning results. We therefore calculated its matching accuracy only for sites that returned valid results. {{figref:stage2-radar-pair|a}} and {{figref:stage2-radar-pair|b}} show its performance with deposited and CryoAtom2-reconstructed receptors, respectively.
+The Match ablations identified complementary contributions from voxel features and pocket context ({{figref:stage2-stage3-ablation-centre|a,b}}). With deposited receptors, voxel-only achieved 83.7% overall matching accuracy, exceeding density-only (78.6%) and pocket-only (79.4%). Adding pocket context and auxiliary information in strongest increased overall accuracy to 87.8%. With CryoAtom2 receptors, the corresponding accuracies were 85.6%, 80.3%, 80.9% and 86.6%. The full voxel representation therefore supported identity discrimination under both receptor conditions, with further gains from the combined model.
 
-## Stage 3
+For Build, we compared PocketXMol-official, fine-tuning without density and DG-PocketXMol on the full 446-instance small-molecule test set. These standard evaluations used Centre pockets centred on the deposited ligand centres ({{figref:stage2-stage3-ablation-centre|c,d}}). Without density, fine-tuning increased top-1 success at RMSD < 2 Å from 44.6% to 60.8% with deposited receptors. Density conditioning increased it further to 73.8%, while reducing median top-1 RMSD from the official model's 2.31 Å to 1.29 Å. With CryoAtom2 receptors, success rates increased from 39.9% to 49.6% and 67.5%, respectively. DG-PocketXMol also reduced median top-1 RMSD from 3.01 Å to 1.44 Å under this receptor condition.
 
-### Stage 3: Comparison of PocketXMol-official and DG-PocketXmol
+Fine-tuning without density thus improved pose reconstruction, but did not account for the full accuracy gain of DG-PocketXMol. The density-conditioned model further restricted the translational and rotational freedom available within the 15 Å Centre pocket. The same comparison with Envelope pockets is reported in the Supplementary Information, alongside additional structural cases and the separate EMERALD-ID identity-matching evaluation.
 
-We compared the official PocketXMol model with our fine-tuned version. The official model accepts a ligand SMILES string and its binding pocket or binding site, generating 50 candidate poses by default.
-
-PocketXMol provides two pocket definitions for docking: the Envelope pocket and the Centre pocket. The Envelope pocket includes all atoms of a receptor residue if at least one of its atoms lies within a ligand atom's 10 Å envelope. The Centre pocket includes all receptor atoms within a 15 Å sphere centred on the binding site.
-
-We treated these pocket definitions as separate training and testing conditions. We trained one fine-tuned model for each definition and evaluated each model under its corresponding condition.
-
-To assess fine-tuning, we used all single-residue organic small molecules with no atoms missing relative to their templates (hereafter eligible small molecules). This test set comprised 446 ligand instances from the 179 PDB entries.
-
-We used two complementary docking metrics based on heavy-atom root-mean-square deviation (RMSD). Top-1 RMSD measures the error of the top-1 pose, ranked first by the model's own score, and reflects accuracy in blind evaluation. Best RMSD measures the lowest error among the 50 generated candidates, defining the best-of-50 pose. This metric measures the upper limit of the model's pose sampling capacity.
-
-Across the 446 test instances, density-guided DG-PocketXmol achieved substantially greater pose accuracy than PocketXMol-official under every test condition ({{figref:stage3-official-tuned}}). The improvement was particularly pronounced with the Centre pocket and deposited receptors. Without density guidance, the official model had considerable translational and rotational freedom within the spacious 15 Å pocket, allowing poses to settle in geometrically plausible cavities outside the active binding site. The official model achieved a median top-1 RMSD of 2.31 Å, with only 44.7% of predictions achieving RMSD < 2 Å. Adding local three-dimensional constraints from the cryo-EM density reduced the median top-1 RMSD to 1.29 Å, while the corresponding success rates increased to 73.8% at RMSD < 2 Å and 83.4% at RMSD < 3 Å. For best-of-50 poses, fine-tuning substantially reduced the median minimum RMSD from 1.43 Å to 0.77 Å. The fraction achieving RMSD < 2 Å increased sharply from 61.6% to 93.0%.
-
-Fine-tuning also improved docking accuracy when both models were evaluated on the more tightly defined Envelope pocket. With deposited receptors, median top-1 RMSD fell from 1.55 Å to 1.14 Å. The corresponding success rate at RMSD < 2 Å increased from 62.9% to 78.0%. Median best RMSD fell from 0.94 Å to 0.69 Å, with 97.1% of best-of-50 poses achieving RMSD < 2 Å. These results showed that cryo-EM density provided effective docking guidance.
-
-The fine-tuned model was also effective with CryoAtom2-reconstructed receptors. Replacing deposited receptors with CryoAtom2-reconstructed receptors increased the official model's median top-1 RMSD from 2.31 Å to 3.01 Å with Centre pockets. Its success rate at RMSD < 2 Å fell to 39.9%. By comparison, DG-PocketXmol retained a median top-1 RMSD of 1.44 Å and a success rate of 67.5% at RMSD < 2 Å. Its performance substantially exceeded that of the official model even with deposited receptors.
-
-{{pptfig:"画图/stage3结果.pptx"|stage3-official-tuned}}
-
-### Stage 3: Fair comparison with Emap2lig-Build
-
-We performed a fair comparison between LigandSeek's small-molecule docking engine (DG-PocketXmol) and Emap2lig-Build, which predicts ligand poses directly from cryo-EM density without receptor information. In its official workflow, Emap2lig-Build accepts a candidate blob predicted by Emap2lig-Find as its guiding region rather than the ground-truth binding site. To mirror this realistic setting fairly, we evaluated DG-PocketXmol using Centre pockets defined around the centroids of candidate blobs predicted by LigandSeek-Find.
-
-Of the 446 test small-molecule instances, Emap2lig-Find returned qualifying blobs with at least 30% bidirectional coverage for 251 instances. Under the same criterion, LigandSeek-Find successfully detected 304 instances with deposited receptors and 293 instances with CryoAtom2-reconstructed receptors. When restricted to instances jointly detected and evaluable by both pipelines, the original small-molecule test set yielded 241 pairs under the deposited-receptor condition and 237 pairs under the CryoAtom2 condition. These subsets served as the benchmarks for directly comparing DG-PocketXmol against Emap2lig-Build.
-
-{{pptfig:"画图/stage3结果.pptx"|stage3-predicted-region-head-to-head}}
-
-{{figref:stage3-predicted-region-head-to-head}} compares the LigandSeek and Emap2lig docking modules. Our model maintained higher accuracy across all tested conditions. Among the shared GT instances, median top-1 RMSD was 0.87 Å for DG-PocketXmol and 1.80 Å for Emap2lig-Build. Median best RMSD was 0.64 Å and 1.34 Å, respectively. This advantage was maintained with CryoAtom2-reconstructed receptors ({{figref:stage3-predicted-region-head-to-head}}).
-
-### Stage 3: Representative cases
-
-We analysed six representative instances to examine how receptor pockets and experimental density provide complementary constraints on pose generation ({{figref:stage3-cases-main}}).
-
-The first group illustrated typical errors in receptor-only docking without experimental density guidance ({{figref:stage3-cases-main|a–c}}). In 9Q16, 9UB7 and 9R3D, PocketXMol-official avoided receptor clashes, with zero clashing atom pairs in each case. However, its poses shifted within the pocket cavity or adopted flipped conformations, with only 46%–77% of heavy atoms reaching the recommended density threshold. Under density guidance, DG-PocketXmol placed ligand atoms accurately within the experimental density, increasing this fraction to 80%–100% and reducing top-1 RMSD sharply to 0.76–1.05 Å, while all three poses remained free of receptor clashes.
-
-The second group illustrated the shortcomings of density-only fitting that ignores receptor steric constraints ({{figref:stage3-cases-main|d–f}}). In 9PXT, 9WUP and 9WQ3, Emap2lig-Build's top-1 poses produced 39, 14 and 12 clashing pairs with surrounding receptor atoms, respectively. Its pose in 9PXT also deviated markedly from the deposited position, with an RMSD of 10.89 Å. By combining receptor geometry with density information, DG-PocketXmol eliminated all receptor clashes and consistently achieved RMSD values of 0.52–1.41 Å.
-
-These cases showed that the receptor structure imposes steric constraints, whereas cryo-EM density constrains ligand position and conformation. DG-PocketXmol combines these complementary sources of information to reconstruct ligand poses with high accuracy.
-
-{{pptfig:"画图/stage3可视化.pptx"|stage3-cases-main}}
-
-
-
+{{pptfig:"画图/stage2-stage3结果.pptx"|stage2-stage3-ablation-centre}}
 
 ## End-to-end
 
@@ -581,7 +540,7 @@ We set the foreground and identity loss weights to $\lambda_{\mathrm{fg}}=0.3$ a
 
 Through spatial localisation by Find and identity assignment by Match, downstream docking tools receive both the target binding site and the ligand identity (SMILES). This allows Build to function as a modular, plug-and-play interface that can theoretically accommodate diverse downstream docking tools (such as Vina[@trott2010vina], DiffDock, or Emap2lig-Build) tailored to specific ligand classes.
 
-However, existing deep learning docking tools typically consider either the receptor environment alone or the experimental density alone, leaving a critical gap in joint modelling. To address this limitation and provide an effective out-of-the-box solution for organic small molecules, we developed DG-PocketXmol as our default Build engine. Specifically, we extended PocketXMol[@pocketxmol], a unified generative model for small molecules, to incorporate local cryo-EM density as an explicit conditioning signal, initialising it with official weights and fine-tuning it on eligible small molecules.
+However, existing deep learning docking tools typically consider either the receptor environment alone or the experimental density alone, leaving a critical gap in joint modelling. To address this limitation and provide an effective out-of-the-box solution for organic small molecules, we developed DG-PocketXMol as our default Build engine. Specifically, we extended PocketXMol[@pocketxmol], a unified generative model for small molecules, to incorporate local cryo-EM density as an explicit conditioning signal, initialising it with official weights and fine-tuning it on eligible small molecules.
 
 ### PocketXMol fine-tuning experiments
 
@@ -591,6 +550,16 @@ We introduced modifications to the PocketXMol network to incorporate cryo-EM den
 
 Because the original PocketXMol does not support nucleic acid atoms, we added a linear layer to encode them into the receptor representation. All other architectural components remain unchanged, including the backbone network, the original feature representations, and the diffusion noise-addition and denoising schedules. During fine-tuning, the newly introduced modules were randomly initialized, while all remaining parameters were initialized from the official pretrained PocketXMol checkpoint.
 
+
+### Docking evaluation
+
+The docking test set comprised 446 eligible small-molecule instances from 77 PDB entries. PocketXMol provides two pocket definitions. The Envelope pocket includes all atoms of a receptor residue if at least one atom lies within 10 Å of a deposited ligand atom. The Centre pocket includes all receptor atoms within a 15 Å sphere centred on the specified binding site. We trained separate fine-tuned models for the two definitions and evaluated each under its corresponding condition. Standard ablations used the deposited ligand centre for Centre pockets and the deposited ligand envelope for Envelope pockets.
+
+The no-density fine-tuning control retained the added 15-to-128-dimensional nucleic-acid linear projection but omitted density conditioning. We initialised the remaining parameters from the official checkpoint and jointly fine-tuned the whole network. Its Centre and Envelope checkpoints were selected separately by validation loss, without using test RMSD.
+
+For the predicted-region comparison with Emap2lig-Build, each pipeline retained its own selected blob and corresponding binding-site definition. DG-PocketXMol used the centroid of the LigandSeek-Find blob as its Centre pocket input; Emap2lig-Build used the Emap2lig-Find blob. Emap2lig-Find returned qualifying blobs with at least 30% bidirectional coverage for 251 instances. Emap2lig Build input eligibility also required 5–25 foreground voxels per ligand heavy atom. Under the coverage criterion, LigandSeek-Find detected 304 instances with deposited receptors and 293 with CryoAtom2 receptors. The intersection jointly detected and evaluable under all three conditions contained 235 instances, which formed the fixed cohort for every predicted-region comparison.
+
+Each model generated 50 candidate poses per instance. Top-1 RMSD is the heavy-atom error of the pose ranked first by the model's own score. Top-5 RMSD is the minimum error among the five highest-ranked poses; best-of-50 RMSD is the minimum among all 50 candidates. Best-of-50 therefore measures the upper limit of pose sampling rather than blind pose selection. RMSD was symmetry-corrected in the experimental map coordinate frame without rigid-body superposition, and success required RMSD strictly below the stated threshold. Standard ablation success rates retained all 446 instances in the denominator, including failures. Distributions and medians used all finite RMSD values; display limits did not change membership, paired win rates or success-rate denominators.
 
 ## End-to-end evaluation process
 

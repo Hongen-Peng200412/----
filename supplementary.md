@@ -53,17 +53,17 @@ Chemical preparation failures prevented EMERALD-ID from returning valid scores a
 
 ## Density-guided Build with Envelope pockets
 
-We compared PocketXMol-official, no-density fine-tuning and DG-PocketXMol using the Envelope pocket definition on all 446 test instances. Each receptor residue was included if at least one atom lay within 10 Å of a deposited ligand atom. This tighter pocket definition provided a complementary test of density guidance ({{figref:stage3-ablation-envelope}}).
+We compared PocketXMol, FT-PocketXMol and DG-PocketXMol using the Envelope pocket definition on all 446 test instances. Each receptor residue was included if at least one atom lay within 10 Å of a deposited ligand atom. This tighter pocket definition provided a complementary test of density guidance ({{figref:stage3-ablation-envelope}}).
 
-With deposited receptors, top-1 success at RMSD < 2 Å was 62.8% for PocketXMol-official, 63.0% after no-density fine-tuning and 78.0% for DG-PocketXMol. With CryoAtom2 receptors, the corresponding success rates were 54.9%, 60.8% and 74.7%. DG-PocketXMol reduced median top-1 RMSD from 1.55 Å to 1.14 Å with deposited receptors and from 1.81 Å to 1.21 Å with CryoAtom2 receptors. Its best-of-50 success rates reached 97.1% and 94.2%, respectively. Density guidance therefore improved reconstruction even when the input pocket was defined more tightly around the ligand.
+With deposited receptors, top-1 success at RMSD < 2 Å was 62.8% for PocketXMol, 63.0% after no-density fine-tuning and 78.0% for DG-PocketXMol. With CryoAtom2 receptors, the corresponding success rates were 54.9%, 60.8% and 74.7%. DG-PocketXMol reduced median top-1 RMSD from 1.55 Å to 1.14 Å with deposited receptors and from 1.81 Å to 1.21 Å with CryoAtom2 receptors. Its best-of-50 success rates reached 97.1% and 94.2%, respectively. Density guidance therefore improved reconstruction even when the input pocket was defined more tightly around the ligand.
 
 {{pptfig:"画图/stage2-stage3结果.pptx"|stage3-ablation-envelope}}
 
 ## Structural examples of complementary receptor and density constraints
 
-We examined six instances to assess how receptor pockets and experimental density constrain ligand poses ({{figref:stage3-cases-main}}). These visualisations used deposited receptors and retained the original comparison conditions. PocketXMol-official and DG-PocketXMol used the standard Centre pocket defined from the deposited ligand centre; Emap2lig-Build used its predicted guiding blob.
+We examined six instances to assess how receptor pockets and experimental density constrain ligand poses ({{figref:stage3-cases-main}}). These visualisations used deposited receptors and retained the original comparison conditions. PocketXMol and DG-PocketXMol used the standard Centre pocket defined from the deposited ligand centre; Emap2lig-Build used its predicted guiding blob.
 
-In 9Q16, 9UB7 and 9R3D, receptor-only PocketXMol-official avoided receptor clashes, but its poses shifted within the pocket cavity or adopted flipped conformations ({{figref:stage3-cases-main|a–c}}). Only 46%–77% of heavy atoms reached the recommended density threshold. DG-PocketXMol increased this fraction to 80%–100% and achieved top-1 RMSD of 0.76–1.05 Å, while retaining clash-free poses.
+In 9Q16, 9UB7 and 9R3D, receptor-only PocketXMol avoided receptor clashes, but its poses shifted within the pocket cavity or adopted flipped conformations ({{figref:stage3-cases-main|a–c}}). Only 46%–77% of heavy atoms reached the recommended density threshold. DG-PocketXMol increased this fraction to 80%–100% and achieved top-1 RMSD of 0.76–1.05 Å, while retaining clash-free poses.
 
 In 9PXT, 9WUP and 9WQ3, Emap2lig-Build produced 39, 14 and 12 clashing atom pairs with surrounding receptor atoms, respectively ({{figref:stage3-cases-main|d–f}}). Its 9PXT pose also deviated from the deposited ligand position, with an RMSD of 10.89 Å. DG-PocketXMol eliminated receptor clashes in these cases and achieved RMSD of 0.52–1.41 Å. These examples show how receptor geometry provides steric constraints while experimental density restricts ligand position and conformation.
 

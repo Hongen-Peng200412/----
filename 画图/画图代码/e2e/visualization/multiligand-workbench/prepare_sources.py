@@ -18,6 +18,7 @@ OUTPUT = ROOT / "画图/画图代码/e2e/output/multiligand-workbench"
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--data-root", type=Path, default=Path("D:/AdaLigand_Visualization"))
 parser.add_argument("--download", action="store_true")
+parser.add_argument("--display-results", type=Path, nargs="+", help="仅供实际输出显示的逐请求JSONL；不替换任何冻结评价")
 parser.add_argument("--output-root", type=Path, default=OUTPUT, help="清单留档目录; 完整重建传入本次temp目录")
 parser.add_argument(
     "--pdb", nargs="+", default=["9bjj", "11jb", "9lov", "9okp", "30ga", "9ujf", "9wup", "9lw1", "9llg"]
@@ -43,6 +44,7 @@ catalog = {
     "data_root": args.data_root.as_posix(),
     "cases": [],
     "evaluation_sources": [str(full_path), str(identity_path)],
+    "download_manifest": (OUTPUT / "download_requests.json").resolve().as_posix(),
 }
 catalog["experiment"] = {
     k: full[k] for k in ["checkpoint_path", "model_code_source", "status", "candidate_order"]
@@ -51,6 +53,14 @@ catalog["evaluation_sources"] += [
     str(plots / "e2e/output/find-build-shared/data.json"),
     str(plots / "e2e/output/e2e-instance-completion/completion.json"),
 ]
+# (受体条件, PDB, 原blob编号) -> 实际构建记录; 这些文件仅增加显示材料, 不参与完成数与计费.
+display_results = {}
+for path in args.display_results or []:
+    for line in path.read_text(encoding="utf-8-sig").splitlines():
+        if line.strip():
+            record = json.loads(line)
+            display_results[(record["domain"], record["pdb_id"], int(record["source_blob_index"]))] = record
+catalog["display_results_sources"] = [str(path) for path in args.display_results or []]
 requests = []
 for pdb in args.pdb:
     occurrences_path = plots / f"stage1/output/find-only-instance-completion/sources/occurrences/{pdb}.jsonl"
@@ -126,6 +136,8 @@ for pdb in args.pdb:
             for s in actual_file.read_text(encoding="utf-8").splitlines()
             if (r := json.loads(s))["pdb_id"] == pdb
         }
+        if args.display_results:
+            actual = {bid: record for (d, p, bid), record in display_results.items() if d == domain and p == pdb}
         evaluation_path = plots / f"e2e/output/e2e-accounting/{domain}/evaluation.json"
         catalog["evaluation_sources"] += [str(bank_file), str(actual_file), str(evaluation_path)]
         trace = {
@@ -167,15 +179,25 @@ for pdb in args.pdb:
             if r["attempts"]["pipeline"] != trace[bid]["attempt_index"]:
                 raise ValueError(f"{pdb}/{domain}/{bid}: 原计费号不一致")
             r["runs"] = []
+            if args.display_results:
+                predicted_small = any(i["smiles"] == r["predicted_smiles"] and i["type_tag"] == "small_molecule" for i in case["identities"])
+                if predicted_small and bid not in actual:
+                    raise ValueError(f"{pdb}/{domain}/{bid}: 缺少实际预测小分子的构建状态")
+                r["actual_build"] = actual.get(bid)
             for role, record in [("find_build", bank.get(bid)), ("pipeline", actual.get(bid))]:
                 if record is None:
                     continue
-                # 共享姿态库也含给定真实身份的构象; 完整流水线只有 Match 正确才允许使用它.
-                if role == "pipeline" and not (r["identity_correct"] and r["is_eligible"]):
+                # 未接实际索引时, 共享姿态库只允许 Match 正确且参考合格的构象用于完整流水线显示.
+                if role == "pipeline" and not args.display_results and not (r["identity_correct"] and r["is_eligible"]):
                     continue
-                same = next((x for x in r["runs"] if x["output_dir"] == record["output_dir"]), None)
+                if role == "pipeline" and args.display_results and record["prepared_smiles"] != r["predicted_smiles"]:
+                    raise ValueError(f"{pdb}/{domain}/{bid}: 显示构象身份不是Match实际预测身份")
+                # 已有正确身份构象继续使用原模型编号和原资产; 新目录中的相同副本只补来源连接.
+                same = next((x for x in r["runs"] if x["output_dir"] in [record["output_dir"], record.get("reused_from")]), None)
                 if same is not None:
                     same["views"].append(role)
+                    if role == "pipeline" and args.display_results:
+                        same["actual_output_dir"] = record["output_dir"]
                     continue
                 run = {
                     **record,
@@ -190,6 +212,8 @@ for pdb in args.pdb:
                     "scientific_input.json",
                     "result.json",
                 ]:
+                    if role == "pipeline" and args.display_results and name not in record["files"]:
+                        continue
                     requests.append(
                         {"remote": record["output_dir"] + "/" + name, "local": run["local"] + "/" + name}
                     )

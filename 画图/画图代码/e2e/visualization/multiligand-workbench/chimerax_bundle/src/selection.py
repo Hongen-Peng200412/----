@@ -10,7 +10,7 @@ VIEW_NAMES = {
     "find_small": "Find · 小分子",
     "find_match": "Find+Match · 全配体",
     "find_build": "Find+Build · 合格小分子（给定正确配体）",
-    "pipeline": "Find+Match+Build · 合格小分子",
+    "pipeline": "Find+Match+Build · 小分子实际输出",
 }
 FILTER_NAMES = {"all": "无过滤", "foreground": "排除假阳性", "small": "仅小分子", "eligible": "仅合格小分子"}
 DEFAULT = {
@@ -56,7 +56,7 @@ def selected_keys(scene, config):
         elif (
             m["kind"] == "pose"
             and view in m["views"]
-            and (config["pose"] == "both" or m["pose"] == config["pose"])
+            and ((config["pose"] == "both" and m["pose"] in ["top1", "best"]) or config["pose"] in m.get("pose_modes", [m["pose"]]))
         ):
             shown.add(m["key"])
         elif (

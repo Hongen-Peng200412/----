@@ -68,6 +68,7 @@ class LigandWorkbench(ToolInstance):
                     "显示构象",
                     [
                         ("top1", "top-1 · 模型首选"),
+                        ("top5", "top-5 · 原评分前五中RMSD最小"),
                         ("best", "best-of-50 · 原评价最优"),
                         ("both", "同时显示两者"),
                     ],
@@ -235,10 +236,13 @@ class LigandWorkbench(ToolInstance):
             "condition": {"CA2", "GT"},
             "budget": {"50", "100", "200", "300", "all"},
             "filter": set(FILTER_NAMES),
-            "pose": {"top1", "best", "both"},
+            "pose": {"top1", "top5", "best", "both"},
         }
         if value not in allowed[key]:
             raise UserError(f"{key} 可选: " + ", ".join(sorted(allowed[key])))
+        if key == "pose" and value == "top5" and "top5" not in self.scene.get("pose_modes", []):
+            self.refresh()
+            raise UserError("此保存会话尚未加入Top-5材料，请先执行 ligwork upgrade")
         self.config[key] = value
         if key in ["view", "condition", "budget"]:
             self.overrides.clear()
@@ -253,6 +257,13 @@ class LigandWorkbench(ToolInstance):
         actual = {k for k, v in self.actual().items() if v}
         missing = sorted(expected - actual)
         extra = sorted(actual - expected)
+        visible_blobs = {m["blob"] for m in self.scene["models"] if m["kind"] == "blob" and m["key"] in actual and m["domain"] == self.config["condition"]}
+        build_states = [
+            {"blob": r["source_blob_index"], "predicted_smiles": r["predicted_smiles"], "status": r["actual_build"]["status"], "failure_reason": r["actual_build"]["failure_reason"]}
+            for r in self.scene["domains"][self.config["condition"]]["candidates"]
+            if self.config["view"] == "pipeline" and r["source_blob_index"] in visible_blobs and r.get("actual_build") is not None
+        ]
+        fallback = [m["key"] for m in self.scene["models"] if m["kind"] == "pose" and m["key"] in actual and m.get("note")]
         return {
             "pdb_id": self.scene["pdb_id"],
             "config": dict(self.config),
@@ -261,6 +272,8 @@ class LigandWorkbench(ToolInstance):
             "hidden": missing,
             "visible": sorted(actual),
             "manual_overrides": dict(self.overrides),
+            "build_states": build_states,
+            "rmsd_unavailable_top1": fallback,
         }
 
     def refresh(self):
@@ -284,6 +297,9 @@ class LigandWorkbench(ToolInstance):
             npose = sum(m["kind"] == "pose" and m["key"] in visible for m in self.scene["models"])
             self.status_label.setText(
                 f"显示状态：{data['status']}\n当前显示 {nblob} 个 blob、{npose} 个构象\n额外显示 {len(data['extra'])} 项；手动或父组隐藏 {len(data['hidden'])} 项"
+                + (f"\n评价预算目标仍为 {self.scene['counts']['eligible']} 个合格小分子；画面包含实际输出" if self.config["view"] == "pipeline" else "")
+                + (f"\n无可用参考 RMSD；{len(data['rmsd_unavailable_top1'])} 个构象显示 Top-1" if data["rmsd_unavailable_top1"] else "")
+                + "".join(f"\nblob {r['blob']}：Build {r['status']}；{r['failure_reason']}" for r in data["build_states"] if r["failure_reason"])
             )
             self.status_label.setStyleSheet(
                 "color: " + ("#20764d" if data["status"] == "与预设一致" else "#a45827")
@@ -386,19 +402,42 @@ def workbench_command(session, action, argument="", value=""):
             log=True,
         )
     elif action == "upgrade":
-        # 旧个人会话显式升级: 只从同例 scene.json 补充显示名称, 不替换预算记录或实际编辑状态.
+        # 旧个人会话显式升级: 从同例scene.json增加显示材料; 原冻结预算字段保持, 既有编辑状态单独恢复.
         metadata = json.loads(
             (Path(tool.scene["folder"]) / "scene.json").read_text(encoding="utf-8")
         )
         names = {m["key"]: m["display_name"] for m in metadata["models"] if "display_name" in m}
+        previous_keys = {m["key"] for m in tool.scene["models"]}
+        added = [m for m in metadata["models"] if m["key"] not in previous_keys]
+        saved_display = [(m.id_string, m.display) for m in session.models.list() if m.id[0] in [20, 21]]
+        # 只打开新材料; 已存在对象的颜色, 表示, 显隐和模型编号不变, 相机使用官方命名视角恢复.
+        if added:
+            tool.busy = True
+            run(session, "view name ligwork_upgrade_camera", log=True)
+            try:
+                for m in added:
+                    command = f'open "{(Path(metadata["folder"])/m["file"]).as_posix()}" id #{m["id"]}; rename #{m["id"]} "{m.get("display_name", m["key"])}"'
+                    if m["kind"] == "pose":
+                        command += f'; style #{m["id"]} stick; size #{m["id"]} stickRadius 0.25; color #{m["id"]} #009e73'
+                    run(session, command + f'; hide #{m["id"]} models', log=True)
+                # 仅新增构象会影响20/21祖先组; 先恢复子对象, 再关闭原本隐藏的父组, 不碰其他材料.
+                for visible in [True, False]:
+                    model_ids = ["#!" + model_id for model_id, value in saved_display if value == visible]
+                    if model_ids:
+                        run(session, ("show " if visible else "hide ") + "|".join(model_ids) + " models", log=True)
+                run(session, "view ligwork_upgrade_camera", log=True)
+            finally:
+                tool.busy = False
         by_id = {m.id_string: m for m in session.models.list()}
         for m in tool.scene["models"]:
             if m["key"] in names:
                 m["display_name"] = names[m["key"]]
-                run(session, f'rename #{m["id"]} "{m["display_name"]}"', log=True)
+                model = by_id.get(m["id"])
+                if model is not None and model.name in [m["key"], m.get("display_name")]:
+                    run(session, f'rename #{m["id"]} "{m["display_name"]}"', log=True)
         # 只准备原本关闭的 area. 保留父组与体积的开关, 以及已可见区域的手动样式与颜色.
         areas = [m for m in tool.scene["models"] if m["kind"] == "area"]
-        hidden = [m for m in areas if not by_id[m["id"]].display]
+        hidden = [m for m in areas if m["id"] in by_id and not by_id[m["id"]].display]
         off = [
             m.id_string
             for m in session.models.list()
@@ -408,9 +447,16 @@ def workbench_command(session, action, argument="", value=""):
             run(session, "show " + "|".join("#" + m["id"] for m in hidden) + " models", log=True)
             if off:
                 run(session, "hide " + "|".join("#!" + i for i in off) + " models", log=True)
+        by_id = {m.id_string: m for m in session.models.list()}
+        for m in added:
+            if m["kind"] in MANAGED:
+                tool.models[m["key"]] = by_id[m["id"]]
+        tool.scene = metadata
+        tool.last = tool.actual()
+        tool.refresh()
         run(session, "lighting depthCue false; clip off", log=True)
         session.logger.info(
-            "已更新参考名称并解除深度淡化和裁剪; 原配色、视角与显隐保留. 请另存个人会话."
+            "已加入实际构建结果和Top-5材料，原配色、视角与既有显隐保留。请另存个人会话；切换模式或构象后显示新增材料。"
         )
     elif action == "unzone":
         run(session, "volume unzone #2.1; volume #2.1 region all; show #2.1 models", log=True)

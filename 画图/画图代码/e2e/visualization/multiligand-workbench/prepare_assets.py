@@ -132,6 +132,8 @@ def reference_sdf(path, occurrence, arrays, template):
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--data-root", type=Path, default=Path("D:/AdaLigand_Visualization"))
 parser.add_argument("--pdb", nargs="+")
+parser.add_argument("--eager-simulated-maps", action="store_true", help="11JB也立即载入两张模拟密度；默认保留完整文件并按需打开")
+parser.add_argument("--reuse-static-maps", action="store_true", help="仅用于同一冻结输入上的显示更新：复用已有完整MRC，不重写地图")
 args = parser.parse_args()
 catalog = json.loads((args.data_root / "catalog.json").read_text(encoding="utf-8"))
 for case in catalog["cases"]:
@@ -160,6 +162,8 @@ for case in catalog["cases"]:
         "graphics silhouettes true width 1",
         "windowsize 1000 760",
     ]
+    deferred_commands = []
+    defer_simulated = pdb == "11jb" and not args.eager_simulated_maps
     for domain, child in [("GT", 1), ("CA2", 2)]:
         t = np.load(source / f"{domain}_receptor.npz")
         f = assets / f"receptor_{domain}.cif"
@@ -185,7 +189,11 @@ for case in catalog["cases"]:
     for name, child in [("exp", 1), ("GT_sim", 2), ("CA2_sim", 3)]:
         array = np.load(source / f"{name}.npy", mmap_mode="r").squeeze()
         f = assets / "maps" / f"{name}.mrc"
-        write_mrc(f, array, origin, spacing)
+        if args.reuse_static_maps:
+            if not f.is_file():
+                raise FileNotFoundError(f"已有完整地图缺失，不能复用：{f}")
+        else:
+            write_mrc(f, array, origin, spacing)
         if name == "exp":
             level = contour
         else:
@@ -319,13 +327,21 @@ for case in catalog["cases"]:
                 rf = args.data_root / run["local"]
                 ranking = json.loads((rf / "ranking.json").read_text(encoding="utf-8"))
                 metrics = json.loads((rf / "evaluation_metrics.json").read_text(encoding="utf-8"))
+                if run["top1_sample_index"] is None:
+                    # 输入或采样失败没有构象; 其blob, 身份与actual_build失败记录仍进入场景.
+                    continue
                 top = next(m for m in metrics if m["sample_index"] == ranking["top1_sample_index"])
                 good = [
                     m for m in metrics if m["rmsd_A"] is not None and m["sdf_index"] is not None
                 ]
                 best = min(good, key=lambda m: (m["rmsd_A"], m["sample_index"])) if good else None
+                ranked = sorted((m for m in metrics if m["self_ranking"] is not None), key=lambda m: (-m["self_ranking"], m["sample_index"]))
+                five = [m for m in ranked[:5] if m["rmsd_A"] is not None and m["sdf_index"] is not None]
+                top5 = min(five, key=lambda m: (m["rmsd_A"], m["sample_index"])) if five else None
                 blocks = (rf / "poses.sdf").read_text(encoding="utf-8").split("$$$$")
-                for pose, metric, child in [("top1", top, 1), ("best", best, 2)]:
+                # 原child1/2编号保持; Top-5使用child3. 无合法RMSD时三个档位共用一个Top-1对象.
+                choices = [("top1", top, 1), ("best", best, 2), ("top5", top5, 3)] if good else [("top1", top, 1)]
+                for pose, metric, child in choices:
                     if metric is None or metric["sdf_index"] is None:
                         continue
                     f = assets / "poses" / f"{domain}_blob_{bid}_run{run_index}_{pose}.sdf"
@@ -346,7 +362,10 @@ for case in catalog["cases"]:
                         "sdf_index": metric["sdf_index"],
                         "rmsd_A": metric["rmsd_A"],
                         "output_dir": run["output_dir"],
+                        "pose_modes": [pose] if good else ["top1", "top5", "best"],
+                        "note": "" if good else "无可用参考 RMSD；显示 Top-1",
                     }
+                    entry["display_name"] = f'{domain}_blob_{bid}_{r["predicted_name"] if "pipeline" in run["views"] else "known"}_{pose}' + ("_Top1_no_reference_RMSD" if not good else "")
                     models.append(entry)
                     pose_rows.append(entry)
                 assert top["sample_index"] == run["top1_sample_index"]
@@ -354,11 +373,14 @@ for case in catalog["cases"]:
                     assert abs(top["rmsd_A"] - run["pose_min_rmsd_A"]["1"]) < 1e-8
                 if best is not None and run["pose_min_rmsd_A"]["50"] is not None:
                     assert abs(best["rmsd_A"] - run["pose_min_rmsd_A"]["50"]) < 1e-8
+                if top5 is not None and run["pose_min_rmsd_A"]["5"] is not None:
+                    assert abs(top5["rmsd_A"] - run["pose_min_rmsd_A"]["5"]) < 1e-8
     for m in models:
-        commands.append(f'open "{(folder/m["file"]).as_posix()}" id #{m["id"]}')
-        commands.append(f'rename #{m["id"]} "{m.get("display_name", m["key"])}"')
+        target_commands = deferred_commands if defer_simulated and m["kind"] == "density" and m["key"] in ["GT_sim", "CA2_sim"] else commands
+        target_commands.append(f'open "{(folder/m["file"]).as_posix()}" id #{m["id"]}')
+        target_commands.append(f'rename #{m["id"]} "{m.get("display_name", m["key"])}"')
         if m["kind"] in ["density", "area", "blob"]:
-            commands.append(
+            target_commands.append(
                 f'volume #{m["id"]} step {2 if pdb=="11jb" and m["kind"]=="density" else 1} level {m.get("level",0.5):.10g} style {"mesh" if m["kind"] in ["area","density"] else "surface"}'
             )
         elif m["kind"] in ["identity", "correctness"]:
@@ -428,10 +450,14 @@ for case in catalog["cases"]:
             f"name recGT #1.1",
             f"name recCA2 #1.2",
             f"name exp #2.1",
-            f"name simGT #2.2",
-            f"name simCA2 #2.3",
         ]
     )
+    simulated_names = ["name simGT #2.2", "name simCA2 #2.3"]
+    if defer_simulated:
+        deferred_commands.extend(["color #2.2,2.3 #a5a9ad", "hide #2.2,2.3 models", *simulated_names])
+        (folder / "load_simulated_density.cxc").write_text("\n".join(deferred_commands) + "\n", encoding="utf-8")
+    else:
+        commands.extend(simulated_names)
     commands.extend(
         [f'name ref{o["candidate_id"]} #3.{o["candidate_id"]+1}' for o in case["occurrences"]]
     )
@@ -443,7 +469,8 @@ for case in catalog["cases"]:
             f'ligwork open "{(folder/"scene.json").as_posix()}"',
         ]
     )
-    scene = {**case, "models": models, "contour": contour, "folder": folder.as_posix(), "schema": 1}
+    scene = {**case, "models": models, "contour": contour, "folder": folder.as_posix(), "schema": 1, "pose_modes": ["top1", "top5", "best", "both"]}
+    scene["deferred_models"] = ["GT_sim", "CA2_sim"] if defer_simulated else []
     (folder / "scene.json").write_text(
         json.dumps(scene, ensure_ascii=False, indent=2), encoding="utf-8"
     )
@@ -451,5 +478,5 @@ for case in catalog["cases"]:
     with (folder / "poses.csv").open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(pose_rows[0]))
         writer.writeheader()
-        writer.writerows({**r, "views": "|".join(r["views"])} for r in pose_rows)
+        writer.writerows({**r, "views": "|".join(r["views"]), "pose_modes": "|".join(r["pose_modes"])} for r in pose_rows)
     print(pdb, "models", len(models), "poses", len(pose_rows), "prepared", flush=True)

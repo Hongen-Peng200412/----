@@ -129,7 +129,7 @@ for pdb in pdbs:
     )
     if args.initial_only:
         receipt.append(
-            {"pdb": pdb, "session": str(folder / "initial.cxs"), "materials": len(scene["models"])}
+            {"pdb": pdb, "session": str(folder / "initial.cxs"), "materials": len(scene["models"]), "loaded_materials": len(scene["models"])-len(scene.get("deferred_models", [])), "deferred_models": scene.get("deferred_models", [])}
         )
         print(pdb, "initial session saved", flush=True)
     (

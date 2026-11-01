@@ -29,6 +29,8 @@ cases = (
     else [args.figure.removeprefix("multiligand-workbench-")]
 )
 python = [sys.executable, "-X", "utf8", "-B"]
+source_catalog = json.loads((args.source_root / "catalog.json").read_text(encoding="utf-8"))
+display_arguments = ["--display-results", *source_catalog["display_results_sources"]] if source_catalog.get("display_results_sources") else []
 subprocess.run(
     python
     + [
@@ -39,7 +41,7 @@ subprocess.run(
         str(build / "metadata"),
         "--pdb",
         *cases,
-    ],
+    ] + display_arguments,
     check=True,
 )
 requests = json.loads((build / "metadata/download_requests.json").read_text(encoding="utf-8"))

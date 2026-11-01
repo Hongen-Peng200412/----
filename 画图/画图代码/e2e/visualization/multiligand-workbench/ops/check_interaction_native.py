@@ -72,7 +72,9 @@ run(session, "show #10 models")
 assert tool.report()["status"] == "与预设一致"
 checks.append("parent_group_visibility")
 run(session, "ligwork view pipeline; ligwork condition GT; ligwork budget 100")
-assert sum("_pose_" in k for k in tool.report()["visible"]) == 10
+budget_blobs = {r["source_blob_index"] for r in tool.scene["domains"]["GT"]["candidates"] if r["before"]["pipeline"] < tool.scene["counts"]["eligible"]}
+expected_actual = sum(m["kind"] == "pose" and m["domain"] == "GT" and m["blob"] in budget_blobs and "pipeline" in m["views"] and m["pose"] == "top1" for m in tool.scene["models"])
+assert sum("_pose_" in k for k in tool.report()["visible"]) == expected_actual
 run(session, "ligwork view find_build")
 assert sum("_pose_" in k for k in tool.report()["visible"]) == 11
 checks.append("given_identity_and_actual_pipeline_are_distinct")
@@ -80,6 +82,10 @@ run(session, "ligwork pose both")
 assert sum("_pose_" in k for k in tool.report()["visible"]) == 22
 run(session, "ligwork pose best")
 assert sum("_pose_" in k for k in tool.report()["visible"]) == 11
+run(session, "ligwork pose top5")
+assert sum("_pose_" in k for k in tool.report()["visible"]) == 11
+assert all(m["pose"] == "top5" for m in tool.scene["models"] if m["kind"] == "pose" and m["key"] in tool.report()["visible"])
+run(session, "ligwork pose best")
 checks.append("pose_selection")
 run(session, "hide #11.1 models; show #21.1.1.1 models; ligwork pose best")
 assert not any(k.endswith("_top1") for k in tool.report()["visible"])

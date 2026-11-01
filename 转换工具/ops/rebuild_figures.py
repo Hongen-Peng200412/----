@@ -174,6 +174,11 @@ def commands_for(figure: str, build: Path) -> list[list]:
         return [[PYMOL,"-B",CODE/(prefix+"ops/"+name)] for name in ("render_receptor.py","render_density.py","render_build_pose.py")]+[p(prefix+"assemble.py")]
     if figure == 'multiligand-workbench' or figure.startswith('multiligand-workbench-'):
         return [p('e2e/visualization/multiligand-workbench/ops/rebuild.py','--figure',figure,'--build-root',build)]
+    if figure == 'full-pipeline-small-molecule-cases':
+        prefix = 'e2e/visualization/actual-small-molecule-cases/'
+        data_root = Path('D:/AdaLigand_Visualization')
+        frozen = CODE / 'e2e/output/actual-small-molecule-cases'
+        return [p(prefix+'build.py','prepare','--data-root',data_root,'--frozen-root',frozen,'--build-root',build),['powershell.exe','-NoProfile','-File',SUPPORT/'run_chimerax.ps1','-CxcPath',build/'render_all.py','-LogPrefix',build/'chimerax'],p(prefix+'build.py','assemble','--data-root',data_root,'--build-root',build),n(prefix+'assemble.mjs',build),p(prefix+'finish.py','--build-root',build)]
     raise ValueError(f"图名未登记重建步骤: {figure}")
 
 

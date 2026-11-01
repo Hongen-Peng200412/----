@@ -7,11 +7,17 @@
 import argparse
 import csv
 import json
+import re
 from pathlib import Path
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--data-root", type=Path, default=Path("D:/AdaLigand_Visualization"))
 args = parser.parse_args()
+catalog = json.loads((args.data_root / "catalog.json").read_text(encoding="utf-8"))
+project = next(p for p in Path(__file__).resolve().parents if (p / "论文草稿.md").exists())
+# 1.0.8 catalog登记本次清单; 更早catalog使用当时固定output清单, 两条来源均不由日期猜测.
+source_manifest = Path(catalog["download_manifest"]) if "download_manifest" in catalog else project / "画图/画图代码/e2e/output/multiligand-workbench/download_requests.json"
+material_requests = json.loads(source_manifest.read_text(encoding="utf-8"))
 index = []
 for file in sorted(args.data_root.glob("*/scene.json")):
     scene = json.loads(file.read_text(encoding="utf-8"))
@@ -30,6 +36,8 @@ for file in sorted(args.data_root.glob("*/scene.json")):
         "reference_name",
         "reference_site",
         "pose",
+        "pose_modes",
+        "note",
         "sample_index",
         "sdf_index",
         "rmsd_A",
@@ -56,6 +64,8 @@ for file in sorted(args.data_root.glob("*/scene.json")):
                     "reference_name": occurrence["display_name"] if occurrence else "",
                     "reference_site": occurrence["site"] if occurrence else "",
                     "pose": m.get("pose", ""),
+                    "pose_modes": "|".join(m.get("pose_modes", [])),
+                    "note": m.get("note", ""),
                     "sample_index": m.get("sample_index", ""),
                     "sdf_index": m.get("sdf_index", ""),
                     "rmsd_A": m.get("rmsd_A", ""),
@@ -84,6 +94,9 @@ for file in sorted(args.data_root.glob("*/scene.json")):
         "pipeline_attempt",
         "top1_model",
         "best_model",
+        "top5_model",
+        "actual_build_status",
+        "actual_build_failure",
     ]
     with (folder / "候选索引.csv").open("w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
@@ -120,7 +133,10 @@ for file in sorted(args.data_root.glob("*/scene.json")):
                         "find_build_attempt": r["attempts"]["find_build"],
                         "pipeline_attempt": r["attempts"]["pipeline"],
                         "top1_model": "|".join("#" + m["id"] for m in poses if m["pose"] == "top1"),
-                        "best_model": "|".join("#" + m["id"] for m in poses if m["pose"] == "best"),
+                        "best_model": "|".join("#" + m["id"] for m in poses if "best" in m.get("pose_modes", [m["pose"]])),
+                        "top5_model": "|".join("#" + m["id"] for m in poses if "top5" in m.get("pose_modes", [m["pose"]])),
+                        "actual_build_status": r["actual_build"]["status"] if r.get("actual_build") is not None else "",
+                        "actual_build_failure": r["actual_build"]["failure_reason"] if r.get("actual_build") is not None else "",
                     }
                 )
     local = []
@@ -190,6 +206,31 @@ for file in sorted(args.data_root.glob("*/scene.json")):
         parameter.append(
             f"| {d} | {e['find_match']['100']['success_count']}/{scene['counts']['all']} | {e['pipeline']['100']['success_count']}/{scene['counts']['eligible']} |"
         )
+    templates = {"templates/" + re.sub(r"[^A-Za-z0-9_.-]+", "_", o["object_key"]) + ".npz" for o in scene["occurrences"]}
+    materials = [r for r in material_requests if r["local"].startswith(pdb + "/") or r["local"] in templates]
+    by_local = {r["local"]: r["remote"] for r in materials}
+    with (folder / "本例材料来源.csv").open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["local_file", "relative_file", "original_server_file"])
+        writer.writeheader()
+        writer.writerows({"local_file": (args.data_root/r["local"]).as_posix(), "relative_file": r["local"], "original_server_file": r["remote"]} for r in materials)
+    parameter += [
+        "", "## 初始会话的材料与原始来源", "",
+        "从本目录 initial.cxs 开始；load.cxc 从原材料重建本例。初始为CA2、Find+Match、100%、无过滤，参考结构与预测材料分组独立。", "",
+        "[本例材料来源.csv](本例材料来源.csv)逐文件列出本地原件、相对路径和原始服务器文件，包括每个run的SDF、排名、指标、输入及状态；[对象索引.csv](对象索引.csv)连接实际模型编号，[候选索引.csv](候选索引.csv)连接blob、参考实例及预算，[poses.csv](poses.csv)连接每个显示构象的原sample_index和sdf_index。", "",
+        "| 材料 | 本地原件 | 原始服务器文件 |", "|---|---|---|",
+    ]
+    for title, name in [("实验密度", "exp.npy"), ("实验网格与阈值", "exp.npz"), ("GT模拟密度", "GT_sim.npy"), ("CA2模拟密度", "CA2_sim.npy"), ("GT受体", "GT_receptor.npz"), ("CA2受体", "CA2_receptor.npz"), ("真实区域", "ligand_area.npz"), ("沉积坐标与present掩码", "ligand_coords.npz"), ("评价用SMILES顺序坐标", "smile_coords.npz"), ("GT完整blob", "GT_blobs.npz"), ("CA2完整blob", "CA2_blobs.npz")]:
+        relative = pdb + "/source/" + name
+        parameter.append(f"| {title} | `{(folder/'source'/name).as_posix()}` | `{by_local[relative]}` |")
+    parameter += [
+        "", "完整地图由上述NPY写为assets/maps/*.mrc，保留原体素值。GT为沉积受体，CA2为CryoAtom2重建受体，分别为#1.1/#1.2；实验/GT模拟/CA2模拟密度为#2.1/#2.2/#2.3。参考配体SDF由ligand_coords的实际present原子与模板生成，模板原件及服务器来源逐项见本例材料来源CSV；模板不等于预测构象。", "",
+        "参考实例oid对应#3.(oid+1)，真实区域为#4.(oid+1)；CA2/GT原blob bid分别为#10.(bid+1)/#11.(bid+1)。CA2/GT构象根为#20/#21，其后依次为blob+1、run+1、姿态child；Top-1为child1，best为child2，Top-5为child3。sample_index是原50次采样编号，sdf_index是该SDF中的记录位置，两者不可互换。所有原子为世界XYZ、Å，不做额外叠合。", "",
+        "ligand_coords.npz的coords_<oid>为(N,3)世界XYZ坐标，present_<oid>为对应模板原子的存在掩码；参考SDF只写出存在的原子。ligand_area.npz的mask_<oid>为(V,3)全图ZYX体素索引。GT/CA2_blobs.npz按blob_index查找bid，再由voxel_offsets切出voxel_index_global_zyx；blob编号不等于数组位置。模板以occurrences.object_key连接templates目录，例如CCD:ATP对应CCD_ATP.npz，完整模板文件名及原server文件在本例材料来源CSV中。", "",
+        "给定正确身份和实际预测身份的run分开；错误身份不借用正确身份构象。原构象池及逐姿态RMSD只读复用；新增实际输出没有合法参考RMSD时，三个姿态档共用原模型Top-1并明确标注。失败请求保留blob/身份/状态而没有替代SDF。既有expected、计费与论文数值不因显示增加而改变。",
+        "", "Find/Match的冻结预测与五模式评价来源见根目录[catalog.json](../catalog.json)的experiment、evaluation_sources和display_results_sources。统一服务器的Match原件为/storage/penghongen/Adaligand_E2E/test/test_0/match/all_ligand/{GT,CA2}/evaluation.json，GT/CA2分别读取real_receptor/cryoatom2_receptor条件；其PDB与source_blob_index连接本例blob。独立实际构建索引来自/storage/penghongen/Adaligand_E2E/actual_display_20261101/{GT,CA2}/display_results.jsonl，逐项保存输入SMILES、结果目录、原排名或失败原因。",
+    ]
+    if scene.get("deferred_models"):
+        parameter += ["", "### 11JB模拟密度按需加载", "", "initial.cxs已载实验密度；两个完整模拟密度MRC原件仍在assets/maps/，仅延迟打开。scene.models保留其原编号与来源，scene.deferred_models明确登记两项。需要它们时执行下列官方命令；它不重新计算密度：", "", "```text", f"open {folder.as_posix()}/load_simulated_density.cxc", "```", "", "若内存允许一次载入全部地图，可从论文仓库运行prepare_assets.py --pdb 11jb --eager-simulated-maps，再按load.cxc重建；不覆盖个人另存会话。"]
     (folder / "本例参数.md").write_text("\n".join(parameter) + "\n", encoding="utf-8")
     for domain in ["CA2", "GT"]:
         receptor = "#1.2" if domain == "CA2" else "#1.1"

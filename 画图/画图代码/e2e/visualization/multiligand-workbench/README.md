@@ -4,7 +4,23 @@
 
 九例原件、MRC/CIF/SDF、初始会话、56组示范视图和材料索引已生成；五种模式的科学计数、GUI保存恢复及旧temp屏蔽的九例完整重建均已通过。第一版为[十页可编辑候选图](../../../../多配体交互候选图_20261023.pptx)，完成证据见[执行记录](执行记录.md)。
 
-当前面板和九例initial为1.0.7，增加参考身份/位置名称，区域默认橙色网格，聚焦不添加裁剪，初始关闭深度淡化。D盘原有 `views/*.cxs`、`exports/*.png` 和作者PPT图像保留10月23日版本；`views/*.cxc` 已更新为当前命令。新一轮56视图只用于独立重建验收；既有个人edit会话不覆盖。
+此前交付的1.0.7增加参考身份/位置名称、橙色网格区域及无裁剪聚焦，初始关闭深度淡化。本轮面板已安装1.0.8，实际输出与Top-5契约见下节，九例initial的本轮原生验收记录见[执行记录](执行记录.md)。D盘原有 `views/*.cxs`、`exports/*.png` 和作者PPT图像保留历史版本；`views/*.cxc` 随当前材料更新。既有个人edit会话不覆盖。
+
+## 实际构建输出与 Top-5（1.0.8）
+
+`prepare_sources.py --display-results <GT.jsonl> <CA2.jsonl>` 将补齐的实际构建记录接入 `pipeline` 视图。两份 JSONL 来自服务器 `actual_display_20261101/{GT,CA2}/display_results.jsonl`，逐项保存 `domain/pdb_id/source_blob_index/prepared_smiles/output_dir/status/top1_sample_index/pose_min_rmsd_A/files/failure_reason/reused_from/reference_rmsd_available`。`prepared_smiles` 必须等于该 blob 的 Match 实际预测身份。`files` 是本请求实际存在的文件名列表；失败请求没有 SDF，仍保留状态和原失败文本。
+
+Find+Build 继续使用给定正确身份的原构象。Find+Match+Build 增加背景、错身份和参考实例集之外的实际输出；输入或采样失败显示 blob、预测身份及面板中的 Build 原因。已有效的正确身份构象沿 `reused_from` 连接回原资产和原模型编号，新增实际输出目录单独留证。`candidates[].actual_build` 保存实际请求状态；`expected`、`trace`、`attempts`、`before`、顺序和参考对应继续来自既有冻结评价，不重新计算指标。
+
+姿态选项中，Top-1 取原 self-ranking 首位；Top-5 取原 self-ranking 前五个候选中参考 RMSD 最小者；best-of-50 取五十个候选中的参考 RMSD 最小者。Top-1 和 best 原对象编号保持，Top-5 使用同一 run 的 child 3。无可用参考 RMSD 的实际构象仅生成一个 Top-1 显示对象，其 `pose_modes=["top1","top5","best"]`，三档均显示该对象，`note="无可用参考 RMSD；显示 Top-1"`；这不是将其称为参考最优构象。`both` 保持同时显示 Top-1 与 best，回退对象只出现一次。
+
+`ligwork status` 额外返回 `build_states`（当前可见 blob 的实际 Build 状态和失败原因）及 `rmsd_unavailable_top1`（无参考而显示 Top-1 的对象 key）。对象索引增加 `pose_modes/note`，候选索引增加 `top5_model/actual_build_status/actual_build_failure`。现有五模式的预算和过滤含义保持：关闭过滤不等于改变原排序，免费跳过仍可在额度耗尽前出现，100% 预算之外的新增构象须在更大预算或全部候选档查看。
+
+升级已有个人会话时，先完成材料准备并安装 1.0.8，再执行 `ligwork upgrade`。它只打开新增模型，并恢复既有模型的显隐与相机；新增材料先隐藏，主动切换模式或构象档后显示。颜色、表示方式和个人另存文件保留。原九份 initial 的本轮备份在 `D:/AdaLigand_Visualization/_previous/actual_display_20261101/`；已有 `edit_*.cxs` 不覆盖。
+
+11JB 的两张完整模拟密度 MRC 保留原值及 `scene.models` 中的原编号，但默认不驻留在初始会话；`scene.deferred_models=["GT_sim","CA2_sim"]` 明确记录此状态。需要时在 ChimeraX 执行 `open D:/AdaLigand_Visualization/11jb/load_simulated_density.cxc` 载入。实验密度、受体、参考、区域及全部构象照常载入。`prepare_assets.py --eager-simulated-maps` 可恢复原先一次载入三张地图的准备方式。`initial_receipt.json` 分别登记完整材料数 `materials`、实际载入数 `loaded_materials` 和延迟项目，不把延迟地图说成已经载入；其他八例没有延迟项目。
+
+在确认密度输入仍为同一冻结版本的既有工程内，可用 `prepare_assets.py --reuse-static-maps` 复用已生成的完整MRC，减少本轮纯显示更新的写盘和内存开销；文件缺失即停止。该选项不用于来源改变或新工程，完整重建默认仍从原数组生成所有地图。
 
 ## 文件实际位置
 
@@ -23,7 +39,7 @@ D:/AdaLigand_Visualization/
    ├─ assets/areas/occ_16.mrc    # 真实实例16的裁剪0/1掩码; 其余实例同名规则
    ├─ assets/blobs/CA2_blob_0.mrc # CA2候选0的裁剪0/1掩码; GT以GT开头
    ├─ assets/receptor_*.cif      # GT/CA2受体世界坐标, token链名用于显示
-   ├─ assets/poses/*.sdf         # 原top-1与原评价best-of-50的原SDF记录
+   ├─ assets/poses/*.sdf         # 原Top-1/Top-5/best-of-50与新增实际Top-1的原SDF记录
    ├─ scene.json                # 本例科学记录与所有显示资产编号
    └─ poses.csv                 # 逐显示构象的样本、SDF记录、RMSD及服务器连接
 
@@ -107,7 +123,7 @@ D:/AdaLigand_Visualization/
  "success":{"2.0":{"1":true,"5":true,"50":true},"3.0":{"1":true,"5":true,"50":true}}}
 ```
 
-没有对应的 CA2 blob 10 则含 `foreground_target=false, matched_occurrence_id=null, target_smiles=null, target_category=null, is_small=false, is_eligible=false, identity_correct=false, runs=[]`；它仍有一个预测身份 ATP，但不能当作真实ATP实例。`runs=[]` 也可能表示某候选没有既有建模输出，不能将其RMSD写成0。`sample_index/sdf_index` 的0是有效编号；只有null表示缺少编号。`expected` 的一条完整记录如 `expected.find_match["100"]={"pdb_id":"9bjj","success_count":10,"target_count":19,"attempt_budget":19,"completion":0.5263157894736842}`；计数及预算为整数，completion为success_count/target_count的浮点数。
+在接入实际输出前的1.0.7材料中，没有真实对应的 CA2 blob 10 含 `foreground_target=false, matched_occurrence_id=null, target_smiles=null, target_category=null, is_small=false, is_eligible=false, identity_correct=false, runs=[]`。1.0.8按实际索引补入它的Build状态和构象run；它的预测身份仍为ATP，真实对应仍为空，不能当作真实ATP实例。一般情况下，`runs=[]` 表示没有既有建模输出，不能将其RMSD写成0。`sample_index/sdf_index` 的0是有效编号；只有null表示缺少编号。`expected` 的一条完整记录如 `expected.find_match["100"]={"pdb_id":"9bjj","success_count":10,"target_count":19,"attempt_budget":19,"completion":0.5263157894736842}`；计数及预算为整数，completion为success_count/target_count的浮点数。
 
 `trace` 只保留source_blob_index、raw_rank、attempt_index、action、target_scope、identity_correct、matched_occurrence_id，供核对原完整流水线计费；原完整记录仍由evaluation_sources定位。原流程中的 `continue` 表示本次考察后跳到下一候选；是否免费以 `attempt_index=null` 为准，不能只看英文动作名。画面仍纳入预算耗尽前遇到的免费跳过候选；假阳性消耗尝试额度。`expected[模式][50/100/200/300]` 是原冻结的pdb_id、success_count、target_count、attempt_budget、completion；例如9BJJ GT Find+Match 100%为10/19，完成度10/19。
 
@@ -115,15 +131,15 @@ D:/AdaLigand_Visualization/
 
 `models` 每项描述一个可独立显隐的材料：`key` 如CA2_blob_0，`id` 如10.1（命令中写#10.1），`file` 为案例目录相对文件名，`kind` 为receptor/density/reference/area/blob/pose/identity/correctness。`domain` 仅在材料属于CA2或GT时出现，`blob`与`occurrence_id`分别表示候选与真实实例编号。reference和area另有字符串 `display_name`，如 `ref_0_ATP_A901`、`area_0_ATP_A901`，作为Models中显示名；原 `key=ref_0/area_0` 与编号不变。名字中的A901取原 `components[].auth_asym_id/auth_seq_id/icode`，不取导出SDF的临时残基编号。多残基短名仅列首组分及位置，以 `plus2` 表示另有两个残基；完整组成仍在 `components`。
 
-密度项含浮点 `level`、三整数列表 `shape_zyx`、三浮点列表 `origin_xyz_A/spacing_xyz_A`。这里 `origin_xyz_A` 是 MRC 的首个采样中心，已包含下文的半体素修正。受体项含整数 `atoms`。姿态项另含字符串列表 `views`、`pose`（top1或best）、整数 `sample_index`（原零基采样号）、整数 `sdf_index`（原零基SDF记录号）、`rmsd_A`（Å单位浮点数或null）、字符串 `output_dir`。标签项含字符串 `text`；其CTR标记是注字位置，不是预测原子。
+密度项含浮点 `level`、三整数列表 `shape_zyx`、三浮点列表 `origin_xyz_A/spacing_xyz_A`。这里 `origin_xyz_A` 是 MRC 的首个采样中心，已包含下文的半体素修正。受体项含整数 `atoms`。姿态项另含字符串列表 `views/pose_modes`、`pose`（top1、top5或best）、整数 `sample_index`（原零基采样号）、整数 `sdf_index`（原零基SDF记录号）、`rmsd_A`（Å单位浮点数或null）、字符串 `output_dir/note`。标签项含字符串 `text`；其CTR标记是注字位置，不是预测原子。
 
-`poses.csv` 每个显示构象一项，列为key、id、file、kind、domain、blob、views、pose、sample_index、sdf_index、rmsd_A、output_dir，与上述定义一致；`views` 用竖线分隔，例如 `find_build|pipeline`。CSV缺失RMSD为空；0是有效样本/记录号。best从原有效评价中取最小RMSD，不能从缺少RMSD的ranking.json自行猜测。
+`poses.csv` 每个显示构象一项，列为key、id、file、kind、domain、blob、views、pose、sample_index、sdf_index、rmsd_A、output_dir、pose_modes、note、display_name，与上述定义一致；`views/pose_modes` 用竖线分隔，例如 `find_build|pipeline`。CSV缺失RMSD为空；0是有效样本/记录号。best从原有效评价中取最小RMSD，不能从缺少RMSD的ranking.json自行猜测。
 
 ### 两份索引CSV
 
 `对象索引.csv` 列model_id/key/name/kind/condition对应models的id/key/显示名/kind/domain。name优先取display_name，没有时取key；例如 `#3.1,ref_0,ref_0_ATP_A901` 连接同一个实例。reference_name/reference_site在真实配体及其区域中填原身份与沉积位置，如 `ATP,A:901`；其他材料留空。其余blob_id、occurrence_id、pose、sample_index、sdf_index、rmsd_A、file保持同义；views用竖线分隔。与该材料无关的列为空。
 
-`候选索引.csv` 每项对应一个条件的一份blob，**condition 与 blob_id 共同标识候选**；同号CA2/GT不是同一个对象。blob_id、blob_model、rank、probability_mean、selected连接原候选；reference_instance/name/site连接真实实例；foreground/small/eligible及identity_correct是布尔值，predicted_identity是显示名称。full_attempt/small_find_attempt/find_build_attempt/pipeline_attempt分别是该模式计费号，空值为免费跳过。top1_model/best_model用竖线列出关联模型号，空值表示该候选没有相应已存构象。完整表头及实际首行为：
+`候选索引.csv` 每项对应一个条件的一份blob，**condition 与 blob_id 共同标识候选**；同号CA2/GT不是同一个对象。blob_id、blob_model、rank、probability_mean、selected连接原候选；reference_instance/name/site连接真实实例；foreground/small/eligible及identity_correct是布尔值，predicted_identity是显示名称。full_attempt/small_find_attempt/find_build_attempt/pipeline_attempt分别是该模式计费号，空值为免费跳过。top1_model/best_model用竖线列出关联模型号，空值表示该候选没有相应已存构象。以下保存1.0.7表头及首行的字段示例；1.0.8在其后追加top5_model、actual_build_status和actual_build_failure三列：
 
 ```csv
 condition,blob_id,blob_model,rank,probability_mean,selected,reference_instance,reference_name,reference_site,foreground,small,eligible,predicted_identity,identity_correct,full_attempt,small_find_attempt,find_build_attempt,pipeline_attempt,top1_model,best_model

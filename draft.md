@@ -146,6 +146,12 @@ Emap2lig is not a fully automated end-to-end modelling tool, but an interactive,
 
 Full completion curves and per-PDB distributions are shown in Supplementary Fig. 5.
 
+### Small-molecule modelling in large complexes
+
+We visualised small-molecule modelling across 11JB and 9BJJ using CryoAtom2-reconstructed receptors ({{figref:full-pipeline-small-molecule-cases}}). The 78 AR6 instances in 11JB illustrate modelling across repeated binding sites, whereas 9BJJ shows the reconstruction of ATP and A1AP0 within the same complex. The overviews retain the actual predictions within the 100% attempt budget, including false-positive candidates. Corresponding local views show the generated poses against experimental density and deposited ligands.
+
+{{pptfig:"画图/全流程小分子案例.pptx"|full-pipeline-small-molecule-cases|width=6.2in}}
+
 ### Representative cases
 
 We selected two representative cases to illustrate the end-to-end pipeline for all-atom small-molecule pose reconstruction, using CryoAtom2-reconstructed rather than deposited receptor structures as input ({{figref:e2e-flow-9llg,e2e-flow-30ga}}).
@@ -577,3 +583,6 @@ If a candidate corresponds to a small molecule with at least 30% bidirectional c
 According to the aforementioned rules, when a ligand outside the eligible small-molecule subset is correctly detected and matched, we still skip docking without consuming an attempt. This ensures that all evaluated docking tasks use the same downstream tool, DG-PocketXMol. However, a region corresponding to a true non-small-molecule ligand consumes one attempt if it is misidentified as a small molecule. In this case, it is actually an unmatched distractor and counts as a failed attempt.
 
 These end-to-end evaluation rules are stricter than the requirements of practical use. A Find candidate that fails to meet the 30% bidirectional coverage requirement is classified as a false positive. This applies even if it still provides sufficient shape and position information for Match and Build to complete the subsequent steps correctly. Match can also classify a false-positive Find candidate as background, rejecting it at the second stage, but the candidate still counts as one failed attempt.
+
+
+For the visualisations, Build additionally processed candidates assigned small-molecule identities by Match, including candidates outside the benchmark subset. Their returned poses or input failures were displayed using the same candidate order and attempt accounting; the evaluation subset and success criteria remained unchanged.

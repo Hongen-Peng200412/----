@@ -146,11 +146,13 @@ Emap2lig is not a fully automated end-to-end modelling tool, but an interactive,
 
 Full completion curves and per-PDB distributions are shown in Supplementary Fig. 5.
 
-### Small-molecule modelling in large complexes
+### Application of LigandSeek to large complexes
 
-We visualised small-molecule modelling across 11JB and 9BJJ using CryoAtom2-reconstructed receptors ({{figref:full-pipeline-small-molecule-cases}}). The 78 AR6 instances in 11JB illustrate modelling across repeated binding sites, whereas 9BJJ shows the reconstruction of ATP and A1AP0 within the same complex. The overviews retain the actual predictions within the 100% attempt budget, including false-positive candidates. Corresponding local views show the generated poses against experimental density and deposited ligands.
+To illustrate the automated modelling workflow in a realistic setting, we applied LigandSeek to the 9BJJ complex ({{figref:full-pipeline-small-molecule-author-9bjj}}). Starting from the experimental cryo-EM density map (EMD-44634) and polymer sequences, we first used CryoAtom2 to reconstruct the receptor structure de novo. We then supplied the experimental map, the CryoAtom2-reconstructed receptor and the candidate ligand SMILES from the PDB entry to LigandSeek. Because the complex contains 11 eligible small-molecule instances (nine ATP and two A1AP0 molecules), we set the attempt budget to 11, corresponding to the 100% attempt budget.
 
-{{pptfig:"画图/全流程小分子案例.pptx"|full-pipeline-small-molecule-cases|width=6.2in}}
+Within this budget, the complete Find–Match–Build workflow correctly identified and reconstructed nine ATP molecules and one A1AP0 molecule across spatially separated binding sites. The model-ranked top-1 poses achieved heavy-atom RMSDs of 0.50–1.12 Å, with eight of the ten recovered instances reaching sub-ångström accuracy. The pipeline returned 11 poses in total, including one additional ATP prediction in a background region, while one A1AP0 instance remained unrecovered. These results demonstrate automated modelling of repeated and chemically distinct ligands across multiple binding sites within a large complex.
+
+{{pptfig:"画图/全流程小分子案例_作者9BJJ.pptx"|full-pipeline-small-molecule-author-9bjj|width=6.2in}}
 
 ### Representative cases
 
@@ -517,7 +519,7 @@ All metrics were evaluated across all ligands and for small molecules only. In t
 
 
 
-### Evaluation protocol of Match
+### Evaluation metrics of Match
 
 When evaluating Match, let $B_i$ denote the $i$-th candidate blob predicted by Find, and let $G_j$ denote the ground-truth ligand region of instance $j$ in the same PDB entry. Their bidirectional coverage is defined as:
 
@@ -550,7 +552,7 @@ We also ran inference with LigandSeek-Find on the 179 test PDB entries using bot
 
 
 
-### Evaluation protocol of Build
+### Evaluation metrics of Build
 
 
 For standard Build ablations, all 446 eligible small-molecule instances were evaluated using deposited ligand centres to define receptor pockets. Comparisons between DG-PocketXMol and Emap2lig-Build instead used binding sites inferred from each pipeline's predicted ligand regions. In its official workflow, Emap2lig-Build accepts a candidate blob predicted by Emap2lig-Find as its guiding region rather than the ground-truth binding site. To mirror this realistic setting fairly, we evaluated DG-PocketXMol using Centre pockets defined around the centroids of candidate blobs predicted by LigandSeek-Find rather than the ground-truth binding sites.
@@ -566,7 +568,7 @@ Each model generated 50 candidate poses per instance, evaluated using standard d
 
 
 
-### Evaluation protocol of end-to-end process
+### Evaluation metrics of end-to-end process
 
 {{pptfig:"画图/E2E评价计费规则.pptx"|e2e-accounting-rules-draft}}
 

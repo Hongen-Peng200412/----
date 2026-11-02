@@ -174,6 +174,8 @@ def commands_for(figure: str, build: Path) -> list[list]:
         return [[PYMOL,"-B",CODE/(prefix+"ops/"+name)] for name in ("render_receptor.py","render_density.py","render_build_pose.py")]+[p(prefix+"assemble.py")]
     if figure == 'multiligand-workbench' or figure.startswith('multiligand-workbench-'):
         return [p('e2e/visualization/multiligand-workbench/ops/rebuild.py','--figure',figure,'--build-root',build)]
+    if figure == 'full-pipeline-small-molecule-author-9bjj':
+        return [p('e2e/visualization/actual-small-molecule-cases/author_9bjj.py',build)]
     if figure == 'full-pipeline-small-molecule-cases':
         prefix = 'e2e/visualization/actual-small-molecule-cases/'
         data_root = Path('D:/AdaLigand_Visualization')

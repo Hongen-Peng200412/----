@@ -89,6 +89,24 @@ The FAD instance in 9WUP (A:1103) illustrated how receptor and density informati
 
 
 
+## End-to-end ligand identification and three-dimensional pose modelling
+
+To evaluate how individual stages compound into practical structure determination, we benchmarked three end-to-end capabilities: general-ligand detection and chemical identification (Find + Match), small-molecule detection and pose reconstruction given ground-truth chemical identities (Find + Build), and fully automated small-molecule modelling without prior site or identity assignment (Find + Match + Build) (Fig. X).
+
+
+For each PDB entry, we examines the ranked candidates(predicted ligand area) in order within a specified relative attempt budget. Unsupported ligand types are skipped, whereas model prediction errors, including false positives, remain counted. For a PDB entry containing $N$ eligible ligands, a relative attempt budget $\rho$ allows $\lfloor\rho N\rfloor$ attempts. We report the fraction of qualified ground-truth ligand instances successfully processed within this budget, termed the completion ratio, which is a function of $\rho$. The detailed evaluation protocol is described in Methods ({{figref:e2e-accounting-rules-draft}}).
+
+
+Across the full all-ligand benchmark (179 PDB entries; 2,502 instances), LigandSeek Find + Match completion rose sharply with candidate budget and approached saturation near the 100% budget mark (Fig. Xa). With deposited receptors (GT), per-PDB mean completion reached 62.1% (95% CI [57.2, 67.1]) at 100% budget and 67.5% [62.4, 72.4] at 300% budget, closely tracking the corresponding Find-only curves (66.4% and 71.7%) and retaining over 93% of detected regions after chemical identity assignment. Using CryoAtom2-reconstructed receptors (CA2), Find + Match achieved 51.1% [46.2, 56.2] at 100% budget and 58.8% [53.4, 64.1] at 300% budget (retaining >92% of Find-only hits), substantially outperforming the density-only baseline Emap2lig-Find (which lacks general-ligand identity matching and detected 28.5% and 31.4% of instances at 100% and 300% budgets, respectively).
+
+
+On the small-molecule benchmark subset (77 PDB entries; 446 dockable instances), we first supplied ground-truth SMILES strings to each detected blob (Find + Build) to enable a direct, head-to-head comparison with Emap2lig (Fig. Xb). At 100% budget under the strict $\text{RMSD} < 2\text{ \AA}$ criterion, LigandSeek (CA2) achieved 42.8% [33.2, 52.8] completion for the top-scored pose (Top-1) and 51.8% [41.9, 61.6] across the 50-pose candidate pool (Best-of-50) (rising to 46.8% and 58.7% at 300% budget), surpassing Emap2lig provided with explicit EMDB contour levels (28.8% Top-1 and 38.7% Best-of-50 at 100% budget; 29.9% and 43.5% at 300% budget), while LigandSeek (GT) reached 58.2% (Top-1) and 68.0% (Best-of-50). Under the relaxed $\text{RMSD} < 3\text{ \AA}$ threshold, all three pipelines maintained the same clear hierarchy (100% budget Best-of-50: 45.3% for Emap2lig, 58.0% for CA2, and 70.5% for GT).
+
+
+Crucially, replacing oracle SMILES with automated identity assignment in the full Find + Match + Build pipeline incurred minimal attrition (Fig. Xc, d). At 100% budget, LigandSeek (CA2) resolved 41.1% [31.4, 51.3] ($\text{RMSD} < 2\text{ \AA}$) and 47.7% [37.7, 58.0] ($\text{RMSD} < 3\text{ \AA}$) of small-molecule instances at Top-1, and 49.1% [38.9, 59.3] and 54.7% [44.9, 64.2] at Best-of-50 (reaching 55.9% and 62.8% at 300% budget). With deposited receptors (GT), full end-to-end Best-of-50 completion reached 63.5% ($< 2\text{ \AA}$) and 66.0% ($< 3\text{ \AA}$) at 100% budget. Across all budgets and RMSD cutoffs, full end-to-end completion remained within 1.8–4.5 percentage points of the Find + Build ceiling, demonstrating that LigandSeek reliably bridges raw cryo-EM density maps to atomic-level ligand conformations without manual intervention.Fig. X | End-to-end ligand detection, chemical identification, and small-molecule pose reconstruction.
+
+
+Pipeline colours are unified across panels: density-only baseline Emap2lig (brown), LigandSeek with CryoAtom2-reconstructed receptors (CA2, blue), and LigandSeek with deposited experimental receptors (GT, teal). a, Per-PDB mean completion across the all-ligand benchmark (179 PDB entries; 2,502 instances) for location detection alone (Find only, dashed lines and open markers) and joint detection and chemical identification (Find + Match, solid lines and filled markers) across relative candidate attempt budgets (0–300%). b, Small-molecule Find + Build completion (77 PDB entries; 446 instances; given ground-truth SMILES) under strict ($\text{RMSD} < 2\text{ \AA}$, upper zone) and relaxed ($\text{RMSD} < 3\text{ \AA}$, lower zone) criteria at 100% and 300% attempt budgets, showing the progression from the top-scored pose (Top-1) to the 50-pose candidate pool (Best-of-50). c, d, Full end-to-end small-molecule modelling (Find + Match + Build) completion for LigandSeek (CA2) (c) and LigandSeek (GT) (d) at 50%, 100%, 200%, and 300% attempt budgets under $\text{RMSD} < 2\text{ \AA}$ (left) and $\text{RMSD} < 3\text{ \AA}$ (right), decomposed into Top-1 success (dark base) and additional Best-of-50 gain (light cap).
 
 
 
@@ -104,14 +122,6 @@ The FAD instance in 9WUP (A:1103) illustrated how receptor and density informati
 
 
 
-## End-to-end
-
-### Evaluation protocol
-In practical cryo-EM structure determination, researchers work with unannotated three-dimensional density maps and unknown binding sites. To assess automated modelling in this setting, we connected Find, Match and Build into a single end-to-end pipeline. We evaluated region detection and identity matching across all ligand categories, and full pose reconstruction for eligible small molecules.
-
-LigandSeek-Find ranks candidate ligand regions by descending mean probability, yielding Rank 1, Rank 2 and subsequent candidates. End-to-end region detection and identity matching across all ligand categories require both Find and Match to succeed. Full pose reconstruction for eligible small molecules requires Find, Match and Build to succeed.
-
-For each PDB entry, the pipeline examines these candidates in order within a specified relative attempt budget. Unsupported ligand types are skipped, whereas model prediction errors, including false positives, remain counted. For a PDB entry containing $N$ eligible ligands, a relative attempt budget $\rho$ allows $\lfloor\rho N\rfloor$ attempts. We report the fraction of qualified ground-truth ligand instances successfully processed within this budget, termed the completion ratio, which is a function of $\rho$. The detailed evaluation protocol is described in Methods ({{figref:e2e-accounting-rules-draft}}).
 
 
 
@@ -119,36 +129,6 @@ For each PDB entry, the pipeline examines these candidates in order within a spe
 
 
 
-
-
-
-
-### Detection and identity matching across all ligand classes
-
-For detection and identity matching across all ligand classes, increasing the relative attempt budget from 100% to 300% raised mean instance completion. Completion increased from 51.1% to 58.8% for CA2 and from 62.1% to 67.5% for GT ({{figref:supp-e2e-completion-all}}). The corresponding medians increased from 50.0% and 66.7% to 60.2% and 71.4%, respectively. A relative attempt budget of 100% has particular practical significance. This corresponds to a scenario in which ligand identities and numbers are known to the user and can constrain the end-to-end pipeline. Under these conditions, our pipeline recovered most of the ligand instances ({{figref:supp-e2e-completion-all}}).
-
-{{pptfig:"画图/E2E实例完成度.pptx"|supp-e2e-completion-all}}
-
-### End-to-end modelling of small molecules
-
-Successful processing of a small-molecule instance requires successful detection by Find, correct identity assignment by Match and a DG-PocketXMol pose with a heavy-atom RMSD below the specified threshold. We report results under eight combinations of the following test conditions. These combine GT or CA2 receptors, top-1 or best-of-50 poses, and heavy-atom RMSD thresholds of <2 Å or <3 Å.
-
-For top-1 poses with RMSD <3 Å, mean completion for CA2 was 47.7% and 53.0% at 100% and 300% budgets, respectively. The corresponding GT values were 60.1% and 61.1% ({{figref:supp-e2e-completion-small}}). For best-of-50 poses, mean completion was 54.7% and 62.8% for CA2, and 66.0% and 66.9% for GT, respectively. The gap between best pose and top-1 pose shows that many correct poses had already been generated but were not ranked first.
-
-{{pptfig:"画图/E2E实例完成度.pptx"|supp-e2e-completion-small}}
-
-
-### Fair comparison with Emap2lig
-
-{{pptfig:"画图/E2E结果.pptx"|e2e-find-build-direct-comparison}}
-
-Emap2lig can localise and build ligands, but it cannot match chemical identities to detected blobs. Consequently, it cannot be compared directly with our full end-to-end pipeline. To compare their combined detection and modelling capabilities directly, we supplied both LigandSeek and Emap2lig with the ground-truth ligand SMILES ({{figref:e2e-find-build-direct-comparison}}), assuming an ideal, always-successful Match stage for both methods. We then evaluated both pipelines on the same 77 PDBs containing 446 eligible small-molecule instances. LigandSeek used DG-PocketXMol centre docking guided by predicted blob centroids, whereas Emap2lig used its native blob-guided Build model. Background candidates consumed one attempt, and out-of-scope foreground candidates were skipped without consuming an attempt. Undetected instances remained in the full denominator throughout the completion analysis.
-
-For top-1 poses with RMSD <3 Å, mean completion at a 100% budget was 63.2% for GT, 49.6% for CA2 and 39.9% for Emap2lig. Increasing the budget to 300% raised these values to 64.2%, 55.0% and 43.7%, respectively. Using best-of-50 poses at the same threshold, completion at a 100% budget reached 70.5%, 58.0% and 45.3%, respectively. At a 300% budget, the corresponding completion values were 71.5%, 66.3% and 51.2%, respectively. With correct identities supplied to both pipelines, LigandSeek completed more instances, demonstrating its combined advantage in localisation and pose reconstruction.
-
-Emap2lig is not a fully automated end-to-end modelling tool, but an interactive, semi-automated tool that relies on users to assign the correct SMILES to each detected blob. Even under the favourable assumption of perfect identity matching for Emap2lig, comparison of {{figref:e2e-find-build-direct-comparison}} and {{figref:supp-e2e-completion-small}} shows that the full LigandSeek pipeline still outperforms it.
-
-Full completion curves and per-PDB distributions are shown in Supplementary Fig. 5.
 
 ### Application of LigandSeek to large complexes
 

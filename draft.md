@@ -84,21 +84,25 @@ The FAD instance in 9WUP (A:1103) illustrated how receptor and density informati
 <w:p><w:pPr><w:pageBreakBefore/><w:spacing w:before="0" w:after="0" w:line="20" w:lineRule="exact"/></w:pPr></w:p>
 ```
 
-## Ablation of Match features and density-guided Build
 
-For Match, we refer to the main model, which integrates the full voxel features, pocket context and auxiliary information, as strongest. The full voxel features comprise the 56-channel multi-view density bank and 50-dimensional receptor-atom features scattered onto the voxel grid. For comparison, we trained three ablation models under identical protocols: density-only (using only the experimental density), voxel-only (using only the full voxel features), and pocket-only (using only the pocket information). 
 
-The Match ablations identified complementary contributions from voxel features and pocket context ({{figref:stage2-stage3-ablation-centre(v1)|a,b}}). With deposited receptors, voxel-only achieved 83.7% overall matching accuracy, exceeding density-only (78.6%) and pocket-only (79.4%). Adding pocket context and auxiliary information in strongest increased overall accuracy to 87.8%. With CryoAtom2 receptors, the corresponding accuracies were 85.6%, 80.3%, 80.9% and 86.6%. Thus, combining voxel features with pocket context and auxiliary information further improved identity matching under both receptor conditions.
 
-For Build, we compared three models on the full test set of 446 eligible small-molecule instances ({{figref:stage2-stage3-ablation-centre(v1)|c,d}}). These were PocketXMol, a no-density fine-tuned variant (FT-PocketXMol) and DG-PocketXMol. Pockets were defined around the deposited ligand centres for all three models. The no-density variant included a linear projection for encoding nucleic acid receptors, with the whole network jointly fine-tuned. Without density, fine-tuning increased top-1 success at RMSD < 2 Å from 44.6% to 60.8% with deposited receptors. Density conditioning increased it further to 73.8%, while reducing median top-1 RMSD from the official model's 2.31 Å to 1.29 Å. With CryoAtom2 receptors, success rates increased from 39.9% to 49.6% and 67.5%, respectively. DG-PocketXMol also reduced median top-1 RMSD from 3.01 Å to 1.44 Å under this receptor condition. Thus, fine-tuning without density improved pose reconstruction, but did not account for the full accuracy gain of DG-PocketXMol. Thus, density conditioning improved pose reconstruction beyond the gains from fine-tuning alone.
 
-PocketXMol provides two pocket definitions for docking: the Envelope pocket and the Centre pocket. The Envelope pocket includes all atoms of a receptor residue if at least one of its atoms lies within 10 Å of any ligand atom, which incorporates more prior spatial information. The Centre pocket includes all receptor atoms within a 15 Å sphere centred on the binding site. Consistent with our goal of automated ligand modelling in complete density maps, all main-text results for PocketXMol and its variants use Centre pockets. Results and analyses for the Envelope pocket are provided in the Supplementary Information.
 
-{{pptfig:"画图/stage2-stage3结果.pptx"|stage2-stage3-ablation-centre(v1)}}
 
-```{=openxml}
-<w:p><w:pPr><w:pageBreakBefore/><w:spacing w:before="0" w:after="0" w:line="20" w:lineRule="exact"/></w:pPr></w:p>
-```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## End-to-end
 
@@ -154,23 +158,34 @@ Within this budget, the complete Find–Match–Build workflow correctly identif
 
 {{pptfig:"画图/全流程小分子案例_作者9BJJ.pptx"|full-pipeline-small-molecule-author-9bjj|width=6.2in}}
 
-### Representative cases
 
-We selected two representative cases to illustrate the end-to-end pipeline for all-atom small-molecule pose reconstruction, using CryoAtom2-reconstructed rather than deposited receptor structures as input ({{figref:e2e-flow-9llg,e2e-flow-30ga}}).
 
-In 9LLG ({{figref:e2e-flow-9llg}}), Find's Rank 1 candidate hit the ground-truth ligand region of A1EKL (R:602). Match correctly identified A1EKL among the three candidate identities PLM, A1EKL and CLR. DG-PocketXMol then generated a top-1 pose with a heavy-atom RMSD of 0.88 Å.
 
-{{pptfig:"画图/E2E案例可视化-端到端流程版_v3.pptx"|e2e-flow-9llg}}
-
-In 30GA ({{figref:e2e-flow-30ga}}), Find's Rank 1 candidate was a background false positive and consumed one search attempt. The Rank 2 candidate then hit ATP (N:401), and Match correctly identified ATP. DG-PocketXMol subsequently generated a pose with a heavy-atom RMSD of 1.04 Å.
-
-{{pptfig:"画图/E2E案例可视化-端到端流程版_v3.pptx"|e2e-flow-30ga}}
 
 ## Running time analysis
 
 We next evaluated the computational efficiency of each stage in the LigandSeek workflow. On an NVIDIA H100 GPU, Find inference with a batch size of 18 averaged 213.30 s per density map (median, 142.59 s). Vectorised Match inference on the same GPU (batch size of 32) required a mean of only 0.09 s per candidate site, representing a negligible fraction of the overall runtime. During the Build stage, DG-PocketXMol sampled 50 poses per site over 100 steps (batch size of 50), averaging 26.09 s per site (median, 24.69 s) on an H100 GPU and 39.80 s (median, 38.32 s) on an A800 GPU across 446 sites per evaluation.
 
 Both the localisation and pose-sampling stages exhibit predictable linear scaling. For a density map of grid dimensions $n_x$, $n_y$ and $n_z$, given a fixed network architecture, window size and stride, the primary full-map Find cost scales as $O(n_x n_y n_z)$, growing linearly with each grid dimension. Similarly, for fixed molecular and pocket sizes, the Build sampling cost scales linearly with the number of generated poses and sampling steps. 
+
+
+
+## Ablation studies
+
+For Match, we refer to the main model, which integrates the full voxel features, pocket context and auxiliary information, as strongest. The full voxel features comprise the 56-channel multi-view density bank and 50-dimensional receptor-atom features scattered onto the voxel grid. For comparison, we trained three ablation models under identical protocols: density-only (using only the experimental density), voxel-only (using only the full voxel features), and pocket-only (using only the pocket information). 
+
+The Match ablations identified complementary contributions from voxel features and pocket context ({{figref:stage2-stage3-ablation-centre(v1)|a,b}}). With deposited receptors, voxel-only achieved 83.7% overall matching accuracy, exceeding density-only (78.6%) and pocket-only (79.4%). Adding pocket context and auxiliary information in strongest increased overall accuracy to 87.8%. With CryoAtom2 receptors, the corresponding accuracies were 85.6%, 80.3%, 80.9% and 86.6%. Thus, combining voxel features with pocket context and auxiliary information further improved identity matching under both receptor conditions.
+
+For Build, we compared three models on the full test set of 446 eligible small-molecule instances ({{figref:stage2-stage3-ablation-centre(v1)|c,d}}). These were PocketXMol, a no-density fine-tuned variant (FT-PocketXMol) and DG-PocketXMol. Pockets were defined around the deposited ligand centres for all three models. The no-density variant included a linear projection for encoding nucleic acid receptors, with the whole network jointly fine-tuned. Without density, fine-tuning increased top-1 success at RMSD < 2 Å from 44.6% to 60.8% with deposited receptors. Density conditioning increased it further to 73.8%, while reducing median top-1 RMSD from the official model's 2.31 Å to 1.29 Å. With CryoAtom2 receptors, success rates increased from 39.9% to 49.6% and 67.5%, respectively. DG-PocketXMol also reduced median top-1 RMSD from 3.01 Å to 1.44 Å under this receptor condition. Thus, fine-tuning without density improved pose reconstruction, but did not account for the full accuracy gain of DG-PocketXMol. Thus, density conditioning improved pose reconstruction beyond the gains from fine-tuning alone.
+
+PocketXMol provides two pocket definitions for docking: the Envelope pocket and the Centre pocket. The Envelope pocket includes all atoms of a receptor residue if at least one of its atoms lies within 10 Å of any ligand atom, which incorporates more prior spatial information. The Centre pocket includes all receptor atoms within a 15 Å sphere centred on the binding site. Consistent with our goal of automated ligand modelling in complete density maps, all main-text results for PocketXMol and its variants use Centre pockets. Results and analyses for the Envelope pocket are provided in the Supplementary Information.
+
+{{pptfig:"画图/stage2-stage3结果.pptx"|stage2-stage3-ablation-centre(v1)}}
+
+```{=openxml}
+<w:p><w:pPr><w:pageBreakBefore/><w:spacing w:before="0" w:after="0" w:line="20" w:lineRule="exact"/></w:pPr></w:p>
+```
+
 
 
 # Discussion

@@ -641,11 +641,19 @@ def _layout_images(document, alignment: str, sizing: str) -> None:
                 has_cjk = any(ord(char) >= 0x2E80 for char in caption.text)
                 line_box_factor = 1.7 if has_cjk or any(run.font.name == "华文仿宋" for run in caption.runs) else 1.15
                 line_height = spacing.pt if hasattr(spacing, "pt") else caption_size * spacing * line_box_factor
+                caption_page_height = page_height
+                grid = section._sectPr.find(qn("w:docGrid"))
+                if has_cjk and grid is not None and grid.get(qn("w:type")) in ("lines", "linesAndChars"):
+                    # 中文模板按文档网格排图注；字号估计不能小于实际网格行高。
+                    grid_pitch = int(grid.get(qn("w:linePitch"), "0")) / 20
+                    if grid_pitch > 0:
+                        line_height = max(line_height, grid_pitch)
+                        caption_page_height = int(page_height / Pt(grid_pitch)) * Pt(grid_pitch)
                 caption_before = caption.paragraph_format.space_before or caption.style.paragraph_format.space_before or Pt(0)
                 caption_after = caption.paragraph_format.space_after or caption.style.paragraph_format.space_after or Pt(6)
                 caption_height = Pt(caption_lines * line_height) + caption_before + caption_after
                 # 额外 12 pt 覆盖行内图片的基线留白; 图片与图注保持相邻, 不改变图片像素或宽高比.
-                image_max_height = min(max_height, max(int(Pt(1)), page_height - caption_height - Pt(12)))
+                image_max_height = min(max_height, max(int(Pt(1)), caption_page_height - caption_height - Pt(12)))
                 paragraph.paragraph_format.keep_with_next = True
             width, height = shape.width, shape.height
             if max_width * height <= image_max_height * width:

@@ -67,7 +67,7 @@ In 9Q16, 9UB7 and 9R3D, receptor-only PocketXMol avoided receptor clashes, but i
 
 In 9PXT, 9WUP and 9WQ3, Emap2lig-Build produced 39, 14 and 12 clashing atom pairs with surrounding receptor atoms, respectively ({{figref:stage3-cases-main|d–f}}). Its 9PXT pose also deviated from the deposited ligand position, with an RMSD of 10.89 Å. DG-PocketXMol eliminated receptor clashes in these cases and achieved RMSD of 0.52–1.41 Å. These examples show how receptor geometry provides steric constraints while experimental density restricts ligand position and conformation.
 
-{{pptfig:"画图/stage3可视化.pptx"|stage3-cases-main|width=5.1in}}
+{{pptfig:"画图/stage3可视化.pptx"|stage3-cases-main}}
 
 ## Stage 3: End-to-end top-k success
 
@@ -99,6 +99,10 @@ For best-of-50 poses within $K \le 10$, success at RMSD < 2 Å reached 67.5% and
 
 ## Find–Build comparison with correct ligand identities
 
-Full completion curves and per-PDB distributions for the Find–Build comparison with correct ligand identities are shown in {{figref:supp-find-correct-match-build}}.
+Full completion curves and per-PDB distributions for the Find–Build comparison with correct ligand identities are shown in {{figref:supp-find-correct-match-build-emap2lig,supp-find-correct-match-build-ca2,supp-find-correct-match-build-gt}}.
 
-{{pptfig:"画图/E2E结果.pptx"|supp-find-correct-match-build|width=5.5in}}
+{{pptfig:"画图/E2E结果.pptx"|supp-find-correct-match-build-emap2lig}}
+
+{{pptfig:"画图/E2E结果.pptx"|supp-find-correct-match-build-ca2}}
+
+{{pptfig:"画图/E2E结果.pptx"|supp-find-correct-match-build-gt}}

@@ -72,7 +72,7 @@ Matching accuracy varied across ligand classes. Metal ions generally achieved hi
 
 We next compared DG-PocketXMol with Emap2lig-Build using each pipeline's predicted ligand regions. Emap2lig-Build predicts ligand poses directly from cryo-EM density without receptor information. In its official workflow, Emap2lig-Build accepts a candidate blob predicted by Emap2lig-Find as its guiding region rather than the ground-truth ligand region. To reflect this setting, we evaluated DG-PocketXMol using pockets defined around the centroids of LigandSeek-Find candidate blobs, rather than ground-truth binding sites.
 
-Of the 446 eligible small-molecule instances from the full test set, Emap2lig-Find returned qualifying blobs with at least 30% bidirectional coverage for 251 instances. Under the same criterion, LigandSeek-Find successfully detected 304 instances with deposited receptors and 293 instances with CryoAtom2-reconstructed receptors. When restricted to instances jointly detected and evaluable by the three pipelines, the original small-molecule test set yielded 235 eligible small molecules. This shared set served as the benchmark for directly comparing DG-PocketXMol with Emap2lig-Build ({{figref:stage2-stage3-results(v1)|d–f}}).
+The full test set contained 446 eligible small-molecule instances, defined as single-residue organic small molecules with no missing atoms relative to their templates. Emap2lig-Find returned qualifying blobs with at least 30% bidirectional coverage for 251 of these instances. Under the same criterion, LigandSeek-Find successfully detected 304 instances with deposited receptors and 293 instances with CryoAtom2-reconstructed receptors. When restricted to instances jointly detected and evaluable by the three pipelines, the original small-molecule test set yielded 235 eligible small molecules. This shared set served as the benchmark for directly comparing DG-PocketXMol with Emap2lig-Build ({{figref:stage2-stage3-results(v1)|d–f}}).
 
 DG-PocketXMol achieved median top-1 RMSDs of 0.87 Å with deposited receptors and 1.03 Å with CryoAtom2 receptors, compared with 1.80 Å for Emap2lig-Build. Median top-5 RMSD was 0.75 Å, 0.82 Å and 1.47 Å, respectively. DG-PocketXMol achieved top-1 success rates of 86.8% and 80.0% at RMSD < 2 Å with deposited and CryoAtom2 receptors, respectively, versus 64.7% for Emap2lig-Build. Allowing the five highest-ranked poses increased these rates to 92.8%, 91.1% and 76.2%, respectively ({{figref:stage2-stage3-results(v1)|d,e}}). In paired top-1 comparisons, DG-PocketXMol produced lower RMSD than Emap2lig-Build for 88.9% of instances with deposited receptors and 84.7% with CryoAtom2 receptors ({{figref:stage2-stage3-results(v1)|f}}).
 
@@ -91,52 +91,35 @@ The FAD instance in 9WUP (A:1103) illustrated how receptor and density informati
 
 ## End-to-end ligand identification and three-dimensional pose modelling
 
-To evaluate how individual stages compound into practical structure determination, we benchmarked three end-to-end capabilities: general-ligand detection and chemical identification (Find + Match), small-molecule detection and pose reconstruction given ground-truth chemical identities (Find + Build), and fully automated small-molecule modelling without prior site or identity assignment (Find + Match + Build) (Fig. X).
+In practical cryo-EM structure determination, researchers work with unannotated three-dimensional density maps and unknown binding sites. To reflect this real-world scenario, we benchmarked three end-to-end capabilities: general-ligand detection and chemical identification (Find + Match), small-molecule detection and pose reconstruction given ground-truth chemical identities (Find + Build), and fully automated small-molecule modelling without prior site or identity assignment (Find + Match + Build) ({{figref:e2e-main-top5(v1)}}).
 
 
-For each PDB entry, we examines the ranked candidates(predicted ligand area) in order within a specified relative attempt budget. Unsupported ligand types are skipped, whereas model prediction errors, including false positives, remain counted. For a PDB entry containing $N$ eligible ligands, a relative attempt budget $\rho$ allows $\lfloor\rho N\rfloor$ attempts. We report the fraction of qualified ground-truth ligand instances successfully processed within this budget, termed the completion ratio, which is a function of $\rho$. The detailed evaluation protocol is described in Methods ({{figref:e2e-accounting-rules-draft}}).
+Across all three tasks, for each PDB entry, we examined the ranked candidates (predicted ligand regions) in order within a specified relative attempt budget. Unsupported ligand types were skipped, whereas model prediction errors, including false positives, were counted. For a PDB entry containing $N$ eligible ligands, a relative attempt budget $\rho$ allows $\lfloor\rho N\rfloor$ attempts. We report the fraction of eligible ligand instances successfully processed within this budget, termed the completion ratio, as a function of $\rho$. The detailed evaluation protocol is described in Methods ({{figref:e2e-accounting-rules-draft}}).
 
 
-Across the full all-ligand benchmark (179 PDB entries; 2,502 instances), LigandSeek Find + Match completion rose sharply with candidate budget and approached saturation near the 100% budget mark (Fig. Xa). With deposited receptors (GT), per-PDB mean completion reached 62.1% (95% CI [57.2, 67.1]) at 100% budget and 67.5% [62.4, 72.4] at 300% budget, closely tracking the corresponding Find-only curves (66.4% and 71.7%) and retaining over 93% of detected regions after chemical identity assignment. Using CryoAtom2-reconstructed receptors (CA2), Find + Match achieved 51.1% [46.2, 56.2] at 100% budget and 58.8% [53.4, 64.1] at 300% budget (retaining >92% of Find-only hits), substantially outperforming the density-only baseline Emap2lig-Find (which lacks general-ligand identity matching and detected 28.5% and 31.4% of instances at 100% and 300% budgets, respectively).
+Across the all-ligand benchmark (179 PDB entries; 2,502 instances), Find + Match completion rose sharply and approached saturation near 100% budget ({{figref:e2e-main-top5(v1)|a}}). With deposited receptors (GT), per-PDB mean completion reached 62.1% at 100% budget and 67.5% at 300% budget. The corresponding Find-only values were 66.4% and 71.7%, indicating that identity assignment retained over 93% of Find-only mean completion. With CryoAtom2-reconstructed receptors (CA2), Find + Match reached 51.1% and 58.8% completion at these budgets, retaining over 92% of Find-only mean completion. Emap2lig-Find, which detects regions without assigning chemical identities, reached 28.5% and 31.4% completion at 100% and 300% budgets, respectively.
 
 
-On the small-molecule benchmark subset (77 PDB entries; 446 dockable instances), we first supplied ground-truth SMILES strings to each detected blob (Find + Build) to enable a direct, head-to-head comparison with Emap2lig (Fig. Xb). At 100% budget under the strict $\text{RMSD} < 2\text{ \AA}$ criterion, LigandSeek (CA2) achieved 42.8% [33.2, 52.8] completion for the top-scored pose (Top-1) and 51.8% [41.9, 61.6] across the 50-pose candidate pool (Best-of-50) (rising to 46.8% and 58.7% at 300% budget), surpassing Emap2lig provided with explicit EMDB contour levels (28.8% Top-1 and 38.7% Best-of-50 at 100% budget; 29.9% and 43.5% at 300% budget), while LigandSeek (GT) reached 58.2% (Top-1) and 68.0% (Best-of-50). Under the relaxed $\text{RMSD} < 3\text{ \AA}$ threshold, all three pipelines maintained the same clear hierarchy (100% budget Best-of-50: 45.3% for Emap2lig, 58.0% for CA2, and 70.5% for GT).
+On the small-molecule benchmark (77 PDB entries; 446 eligible instances), we supplied ground-truth SMILES for the Find + Build comparison ({{figref:e2e-main-top5(v1)|b}}). At 100% budget and $\text{RMSD} < 2\text{ \AA}$, LigandSeek (CA2) achieved 42.8% completion with the top-scored pose (Top-1) and 49.2% among the five highest-ranked poses (Top-5). These values increased to 46.8% and 55.5%, respectively, at 300% budget. With explicit EMDB contour levels, Emap2lig achieved 28.8% Top-1 and 33.7% Top-5 completion at 100% budget, and 29.9% and 36.1% at 300%. LigandSeek (GT) reached 58.2% Top-1 and 63.3% Top-5 completion at 100% budget under the same RMSD criterion. At $\text{RMSD} < 3\text{ \AA}$, the same ordering persisted: Top-5 completion at 100% budget was 43.4% for Emap2lig, 55.4% for CA2 and 68.5% for GT.
 
 
-Crucially, replacing oracle SMILES with automated identity assignment in the full Find + Match + Build pipeline incurred minimal attrition (Fig. Xc, d). At 100% budget, LigandSeek (CA2) resolved 41.1% [31.4, 51.3] ($\text{RMSD} < 2\text{ \AA}$) and 47.7% [37.7, 58.0] ($\text{RMSD} < 3\text{ \AA}$) of small-molecule instances at Top-1, and 49.1% [38.9, 59.3] and 54.7% [44.9, 64.2] at Best-of-50 (reaching 55.9% and 62.8% at 300% budget). With deposited receptors (GT), full end-to-end Best-of-50 completion reached 63.5% ($< 2\text{ \AA}$) and 66.0% ($< 3\text{ \AA}$) at 100% budget. Across all budgets and RMSD cutoffs, full end-to-end completion remained within 1.8–4.5 percentage points of the Find + Build ceiling, demonstrating that LigandSeek reliably bridges raw cryo-EM density maps to atomic-level ligand conformations without manual intervention.Fig. X | End-to-end ligand detection, chemical identification, and small-molecule pose reconstruction.
+Replacing correct SMILES with automated identity assignment preserved most completion in the full Find + Match + Build pipeline ({{figref:e2e-main-top5(v1)|c,d}}). At 100% budget, LigandSeek (CA2) achieved Top-1 completion of 41.1% at $\text{RMSD} < 2\text{ \AA}$ and 47.7% at $\text{RMSD} < 3\text{ \AA}$. Top-5 completion was 46.5% and 52.4%, respectively, increasing to 52.7% and 59.2% at 300% budget. With deposited receptors, Top-5 completion at 100% budget reached 59.4% at $\text{RMSD} < 2\text{ \AA}$ and 64.6% at $\text{RMSD} < 3\text{ \AA}$. Across both RMSD cutoffs and the 100% and 300% budgets, full end-to-end completion remained within 1.7–3.9 percentage points of the Find + Build ceiling. These results demonstrate automated ligand identification and three-dimensional pose reconstruction without manual site or identity assignment.
 
+Find–Build curves and per-PDB distributions appear in Supplementary {{supplementary.md|figref:supp-find-correct-match-build-emap2lig,supp-find-correct-match-build-ca2,supp-find-correct-match-build-gt}}.
 
-Pipeline colours are unified across panels: density-only baseline Emap2lig (brown), LigandSeek with CryoAtom2-reconstructed receptors (CA2, blue), and LigandSeek with deposited experimental receptors (GT, teal). a, Per-PDB mean completion across the all-ligand benchmark (179 PDB entries; 2,502 instances) for location detection alone (Find only, dashed lines and open markers) and joint detection and chemical identification (Find + Match, solid lines and filled markers) across relative candidate attempt budgets (0–300%). b, Small-molecule Find + Build completion (77 PDB entries; 446 instances; given ground-truth SMILES) under strict ($\text{RMSD} < 2\text{ \AA}$, upper zone) and relaxed ($\text{RMSD} < 3\text{ \AA}$, lower zone) criteria at 100% and 300% attempt budgets, showing the progression from the top-scored pose (Top-1) to the 50-pose candidate pool (Best-of-50). c, d, Full end-to-end small-molecule modelling (Find + Match + Build) completion for LigandSeek (CA2) (c) and LigandSeek (GT) (d) at 50%, 100%, 200%, and 300% attempt budgets under $\text{RMSD} < 2\text{ \AA}$ (left) and $\text{RMSD} < 3\text{ \AA}$ (right), decomposed into Top-1 success (dark base) and additional Best-of-50 gain (light cap).
+{{pptfig:"画图/E2E结果.pptx"|e2e-main-top5(v1)}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```{=openxml}
+<w:p><w:pPr><w:pageBreakBefore/><w:spacing w:before="0" w:after="0" w:line="20" w:lineRule="exact"/></w:pPr></w:p>
+```
 
 ### Application of LigandSeek to large complexes
 
-To illustrate the automated modelling workflow in a realistic setting, we applied LigandSeek to the 9BJJ complex ({{figref:full-pipeline-small-molecule-author-9bjj}}). Starting from the experimental cryo-EM density map (EMD-44634) and polymer sequences, we first used CryoAtom2 to reconstruct the receptor structure de novo. We then supplied the experimental map, the CryoAtom2-reconstructed receptor and the candidate ligand SMILES from the PDB entry to LigandSeek. Because the complex contains 11 eligible small-molecule instances (nine ATP and two A1AP0 molecules), we set the attempt budget to 11, corresponding to the 100% attempt budget.
+To illustrate the automated modelling workflow in a realistic setting, we applied LigandSeek to the 9BJJ complex ({{figref:full-pipeline-small-molecule-author-9bjj}}). Starting from the experimental cryo-EM density map (EMD-44634) and polymer sequences, we first used CryoAtom2 to reconstruct the receptor structure de novo. We then supplied LigandSeek with the experimental map, the CryoAtom2-reconstructed receptor and SMILES representations of the ligand identities annotated in the PDB entry. The complex contains 11 small-molecule instances, comprising nine ATP molecules and two A1AP0 molecules. Under the benchmark definition, a 100% attempt budget therefore corresponds to 11 counted attempts.
 
-Within this budget, the complete Find–Match–Build workflow correctly identified and reconstructed nine ATP molecules and one A1AP0 molecule across spatially separated binding sites. The model-ranked top-1 poses achieved heavy-atom RMSDs of 0.50–1.12 Å, with eight of the ten recovered instances reaching sub-ångström accuracy. The pipeline returned 11 poses in total, including one additional ATP prediction in a background region, while one A1AP0 instance remained unrecovered. These results demonstrate automated modelling of repeated and chemically distinct ligands across multiple binding sites within a large complex.
+Within this budget, the complete Find–Match–Build workflow correctly identified and reconstructed ten of the eleven small-molecule instances, comprising nine ATP molecules and one A1AP0 molecule. The model-ranked top-1 poses achieved heavy-atom RMSDs of 0.50–1.12 Å, with eight of the ten recovered instances reaching sub-ångström accuracy. Within this budget, the pipeline produced 11 top-1 ligand poses, including one additional ATP prediction in a background region. These included one additional ATP prediction in a background region, while one A1AP0 instance remained unrecovered. These results demonstrate LigandSeek’s ability to automatically model small molecules within a large complex.
 
-{{pptfig:"画图/全流程小分子案例_作者9BJJ.pptx"|full-pipeline-small-molecule-author-9bjj|width=6.2in}}
+{{pptfig:"画图/全流程小分子案例_作者9BJJ.pptx"|full-pipeline-small-molecule-author-9bjj}}
 
 
 

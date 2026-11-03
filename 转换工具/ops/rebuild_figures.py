@@ -109,6 +109,12 @@ def commands_for(figure: str, build: Path) -> list[list]:
     node = [NODE]
     p=lambda relative,*args:python+[CODE/relative,*args]
     n=lambda relative,*args:node+[CODE/relative,*args]
+    if figure == 'e2e-main-top5(v1)':
+        prefix='e2e/calculate/e2e-top5-revision/'
+        return [p(prefix+'prepare_data.py'), p(prefix+'plot_main.py','--author-v1'), p(prefix+'ops/widen_author_v1.py')]
+    if figure in ('e2e-main-top5', 'supp-find-correct-match-build-emap2lig', 'supp-find-correct-match-build-ca2', 'supp-find-correct-match-build-gt'):
+        prefix='e2e/calculate/e2e-top5-revision/'
+        return [p(prefix+'prepare_data.py'), p(prefix+'plot_main.py'), p(prefix+'plot_supplement.py'), p(prefix+'build_pptx.py')]
     if figure in ('stage2-stage3-results','stage2-stage3-ablation-centre','stage3-ablation-envelope'):
         prefix='e2e/calculate/stage2-stage3-results/'
         return [p(prefix+'prepare_data.py','--repo-root',ROOT,'--output-dir',build/'data'),p(prefix+'plot.py'),n(prefix+'assemble.mjs'),p(prefix+'finish.py')]
@@ -309,13 +315,16 @@ def main() -> int:
                 run_step(['powershell.exe', '-NoProfile', '-File', ROOT/'转换工具/export_slide.ps1', '-ManifestPath', manifest_path, '-WidthPx', '1800'], build, environment, steps)
                 receipt['author_native_source'] = str(source.relative_to(ROOT))
             else:
-                for command in commands_for(scientific_figure,build):run_step(command,build,environment,steps)
-            receipt.update(finish_candidate(scientific_figure,build,records,args.generated_captions))
+                # 本作者版有冻结布局和局部运输入口；其他(v数字)仍沿用原科学重建规则。
+                routed_figure = figure if figure == 'e2e-main-top5(v1)' else scientific_figure
+                for command in commands_for(routed_figure,build):run_step(command,build,environment,steps)
+            candidate_figure = figure if figure == 'e2e-main-top5(v1)' else scientific_figure
+            receipt.update(finish_candidate(candidate_figure,build,records,args.generated_captions))
             receipt['figure'] = figure
             if scientific_figure != figure:
-                # (v数字) 只继承科学来源; 候选保留基础图名, 不冒充已复现作者手工排版.
+                # 常规作者版只继承科学来源；本v1另有冻结排版及严格的局部运输核验。
                 receipt['scientific_figure'] = scientific_figure
-                receipt['author_layout'] = {'pptx': record.metadata['pptx'], 'figure': figure, 'preserved_in_formal_ppt': True}
+                receipt['author_layout'] = {'pptx': record.metadata['pptx'], 'figure': figure, 'preserved_in_formal_ppt': True, 'frozen_layout_rebuilt': figure == 'e2e-main-top5(v1)'}
             receipt['passed']=True
         except Exception as error:
             receipt['error']=str(error);raise

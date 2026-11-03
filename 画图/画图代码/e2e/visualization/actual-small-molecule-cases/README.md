@@ -1,5 +1,7 @@
 # 两个大复合物的实际小分子构象图
 
+2026-11-03正文新增9UJF作者全景，见[9UJF教程与来源](author_9ujf教程.md)、[最终会话](../../output/actual-small-molecule-cases/author_9ujf/author_final.cxs)及[十构象来源表](../../output/actual-small-molecule-cases/author_9ujf/pose_sources.csv)。新页为`画图/全流程小分子案例_作者9UJF.pptx`，独立入口`author_9ujf.py`只处理此例；9BJJ与原五面板入口保持。
+
 当前正文已按作者指定改用9BJJ的author04全景，原五面板保留。当前[原生命令教程](author_9bjj教程.md)、[最终会话](../../output/actual-small-molecule-cases/author_9bjj/author_final.cxs)及[来源记录](../../output/actual-small-molecule-cases/author_9bjj/source_receipt.json)可直接查看。新页位于`画图/全流程小分子案例_作者9BJJ.pptx`，稳定图名为`full-pipeline-small-molecule-author-9bjj`。下文描述原五面板基础设施。
 
 本图展示11JB与9BJJ的LigandSeek实际小分子建模输出，固定为CA2受体、100%原尝试预算和模型Top-1。它只补充实际显示，不重新采样已有有效构象、不计算RMSD或完成度、不修改原论文指标。正式图名为`full-pipeline-small-molecule-cases`，PPT为`画图/全流程小分子案例.pptx`。

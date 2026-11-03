@@ -24,23 +24,30 @@ LigandSeek follows a three-stage Find–Match–Build workflow:
 
 We evaluated the framework on 179 complexes comprising 2,502 ligand instances. Under blind evaluation conditions, only receptors modelled de novo by CryoAtom2 were used, with no deposited receptor structures provided as input. All three LigandSeek components outperformed their respective baselines. Find achieved a $\mathrm{PRAUC}^{\mathrm{instance}}$ of 0.541, compared with 0.269 for Emap2lig-Find. Match achieved 86.6% overall matching accuracy, with a mean matching time of 0.09 s per candidate region, substantially faster than conventional reverse docking. Build reduced the median root-mean-square deviation (RMSD) of top-1 poses from 1.55 Å with the official model to 1.14 Å. In end-to-end blind evaluation across 77 complexes containing organic small molecules, LigandSeek achieved an all-atom modelling mean completion rate of 62.8%. LigandSeek connects ligand localisation, identity matching and pose reconstruction to generate accurate all-atom ligand poses from cryo-EM density maps. It provides a new tool for drug discovery and high-throughput cryo-EM screening.
 
-# Overview of LigandSeek
+
+
+
+
+# Results
+
+
+## Overview of LigandSeek
 
 {{pptfig:"画图/总览图.pptx"|fig-overview-topology}}
 
-LigandSeek is an automated three-stage framework that reconstructs all-atom ligand poses from experimental cryo-EM density maps ({{figref:fig-overview-topology,fig-method-color3}}). Inputs comprise an experimental cryo-EM density map, a receptor structure, and candidate ligand identities represented by SMILES strings[@weininger1988smiles]. The receptor can be a deposited structure or a model reconstructed automatically from the density map by CryoAtom2[@cryoatom2_2025]. The latter enables automated ligand modelling without manually built receptors. Density information is encoded as a 56-channel multi-view density bank using spatial transformations, while receptor atoms are represented by 50-dimensional features. These atom features encode element types, residue identities, physicochemical properties and local packing environments.
+LigandSeek is an automated three-stage framework that reconstructs all-atom ligand poses from experimental cryo-EM density maps ({{figref:fig-overview-topology,fig-method-color3}}). Inputs comprise an experimental cryo-EM density map, a receptor structure and candidate ligand identities represented by SMILES strings[@weininger1988smiles]. The receptor can be either a deposited structure or a model reconstructed automatically from the density map by CryoAtom2[@cryoatom2_2025], enabling automated ligand modelling without manually built receptors. Across all stages, density information is encoded as a 56-channel multi-view density bank using spatial transformations, while receptor atoms are represented by 50-dimensional features. These atom features capture element types, residue identities, physicochemical properties and local packing environments.
 
-In the first stage, LigandSeek-Find (hereafter Find) uses a hybrid point–voxel network to locate candidate ligand regions (blobs) and extract auxiliary features ({{figref:fig-method-color3|a}}). A receptor embedding head encodes atom representations, projects them onto the voxel grid and supplies processed atom tokens to the point-cloud branch. In the voxel branch, a 3D U-Net[@cicek20163dunet] combines the density bank with projected receptor-atom features to predict voxelwise ligand-region probabilities. In the point-cloud branch, Point Transformer V3[@wu2024ptv3] encodes receptor-atom representations and integrates multiscale voxel features through learnable neighbourhood sampling. An AlphaFold3-style[@abramson2024alphafold3] recycling mechanism iteratively refines representations across both branches. Find operates on $80^3$ voxel crops, combining overlapping predictions through sliding-window inference to obtain a whole-map probability map. The inference process, comprising thresholding, connected-component analysis, and filtering, subsequently yields candidate blobs for Match.
+In the first stage, LigandSeek-Find (hereafter Find) uses a hybrid point–voxel network to locate candidate ligand regions (blobs) and extract auxiliary features ({{figref:fig-method-color3|a}}). By coupling a voxel-based 3D U-Net[@cicek20163dunet] with a point-cloud network[@wu2024ptv3] over receptor atoms through iterative feature refinement[@abramson2024alphafold3], Find jointly models the density bank and the surrounding receptor environment. Find operates on $80^3$ voxel crops and combines overlapping predictions through sliding-window inference to obtain a whole-map probability map. Subsequent thresholding, connected-component analysis and filtering yield candidate blobs for Match.
 
-In the second stage, LigandSeek-Match (hereafter Match) assigns chemical identities to candidate blobs and classifies them as foreground or background to exclude residual false positives ({{figref:fig-method-color3|b}}). It supports organic small molecules, metal ions, sugars and other ligand classes. Match pairs a candidate encoder with an identity encoder in a cross-modal architecture. For each candidate blob, the candidate encoder applies a 3D U-Net to a local $48^3$ voxel crop to obtain a base voxel summary. Mean and maximum pooling, cross-attention and feature-wise linear modulation (FiLM)[@perez2018film] integrate surrounding pocket atoms, blob features and auxiliary features from Find into the final candidate representation. In parallel, the identity encoder processes user-provided SMILES strings within the same PDB entry. Using SMI-TED[@soares2025smited] language representations as queries, it applies graph attention over RDKit-derived molecular graphs encoded by a graph neural network (GNN). In parallel, context attention incorporates information from co-occurring ligand identities. A foreground head predicts the foreground probability of each candidate, while cosine scoring over learned linear projections generates the candidate-to-identity matching score matrix.
+In the second stage, LigandSeek-Match (hereafter Match) assigns chemical identities to candidate blobs across organic small molecules, metal ions, sugars and other ligand classes ({{figref:fig-method-color3|b}}). Match pairs a candidate encoder with an identity encoder in a cross-modal architecture. For each candidate blob, the candidate encoder applies a 3D U-Net to a local $48^3$ voxel crop to obtain a base voxel summary. It then integrates surrounding pocket atoms, blob features and auxiliary features from Find using cross-attention and feature-wise linear modulation (FiLM)[@perez2018film]. In parallel, the identity encoder represents the candidate SMILES strings within the same PDB entry by combining RDKit-derived molecular graphs, pretrained chemical language representations[@soares2025smited] and co-occurring ligand context. Cosine scoring over learned linear projections generates the candidate-to-identity matching score matrix, alongside a predicted foreground probability for each candidate.
 
 In the third stage, LigandSeek-Build (hereafter Build) receives the binding site located by Find and the SMILES identity assigned by Match ({{figref:fig-method-color3|c}}). It combines these inputs with the surrounding receptor pocket and local density to reconstruct an all-atom ligand pose. Its default engine for organic small molecules, density-guided PocketXMol (DG-PocketXMol), adapts the generative model PocketXMol[@pocketxmol] through density-conditioned fine-tuning. DG-PocketXMol incorporates experimental density into pose generation, guiding ligand reconstruction to satisfy both density contours and pocket chemical constraints. Build also provides a modular interface that supports other downstream docking tools, including Vina[@trott2010vina], DiffDock[@corso2023diffdock] and EMERALD[@muenks2023emerald].
 
 {{pptfig:"画图/Method总图.pptx"|fig-method-color3}}
 
-# Results
 
-## LigandSeek-Find improves ligand-region detection
+
+## LigandSeek segments ligand densities correctly
 
 We evaluated Find on 179 cryo-EM density maps with resolutions below 4.0 Å, containing ligands, released after 1 January 2026, and non-redundant with the training, validation, and internal datasets. These complexes contained 2,502 deposited ligand instances spanning multiple classes, including organic small molecules, metal ions and sugars. The small-molecule subset comprised 821 instances distributed across 94 complexes. We compared LigandSeek-Find with deposited receptors (GT) or CryoAtom2-reconstructed receptors (CA2) against the density-only baseline Emap2lig-Find[@umap2lig], which was additionally supplied with the EMDB-recommended contour level.
 
@@ -59,8 +66,7 @@ The advantages of our approach are clearly demonstrated in the 9NVS case ({{figr
 
 {{pptfig:"画图/stage1可视化.pptx"|stage1-level-global-local-9nvs(v1)}}
 
-## LigandSeek-Match and LigandSeek-Build identify and reconstruct ligands
-
+## LigandSeek accurately matches and docks ligands into ligand densities 
 To mirror realistic applications, we evaluated LigandSeek-Match and LigandSeek-Build on candidate ligand regions predicted by LigandSeek-Find, testing whether Match could assign the correct chemical identities and whether Build could reconstruct accurate poses. With deposited and CryoAtom2-reconstructed receptors, LigandSeek-Find produced 1,651 and 1,649 candidate blobs (including 1,238 and 1,160 foreground blobs) for evaluating Match. 
 
 
@@ -116,9 +122,15 @@ Find–Build curves and per-PDB distributions appear in Supplementary {{suppleme
 
 To illustrate the automated modelling workflow in a realistic setting, we applied LigandSeek to the 9BJJ complex ({{figref:full-pipeline-small-molecule-author-9bjj}}). Starting from the experimental cryo-EM density map (EMD-44634) and polymer sequences, we first used CryoAtom2 to reconstruct the receptor structure de novo. We then supplied LigandSeek with the experimental map, the CryoAtom2-reconstructed receptor and SMILES representations of the ligand identities annotated in the PDB entry. The complex contains 11 small-molecule instances, comprising nine ATP molecules and two A1AP0 molecules. Under the benchmark definition, a 100% attempt budget therefore corresponds to 11 counted attempts.
 
-Within this budget, the complete Find–Match–Build workflow correctly identified and reconstructed ten of the eleven small-molecule instances, comprising nine ATP molecules and one A1AP0 molecule. The model-ranked top-1 poses achieved heavy-atom RMSDs of 0.50–1.12 Å, with eight of the ten recovered instances reaching sub-ångström accuracy. Within this budget, the pipeline produced 11 top-1 ligand poses, including one additional ATP prediction in a background region. These included one additional ATP prediction in a background region, while one A1AP0 instance remained unrecovered. These results demonstrate LigandSeek’s ability to automatically model small molecules within a large complex.
+Within this budget, the complete Find–Match–Build workflow correctly identified and reconstructed ten of the eleven small-molecule instances, comprising nine ATP molecules and one A1AP0 molecule. The model-ranked top-1 poses achieved heavy-atom RMSDs of 0.50–1.12 Å, with eight of the ten recovered instances reaching sub-ångström accuracy. In total, the pipeline returned 11 top-1 ligand poses, including one additional ATP prediction in a background region; one A1AP0 instance remained unrecovered.
 
 {{pptfig:"画图/全流程小分子案例_作者9BJJ.pptx"|full-pipeline-small-molecule-author-9bjj}}
+
+We also applied the same workflow to 9UJF, which contains ten eligible GTP instances ({{figref:full-pipeline-small-molecule-author-9ujf}}). With a 100% attempt budget of ten counted attempts, LigandSeek correctly identified and reconstructed all ten instances. All ten model-ranked top-1 poses achieved sub-ångström accuracy, with heavy-atom RMSDs of 0.54–0.80 Å.
+
+{{pptfig:"画图/全流程小分子案例_作者9UJF.pptx"|full-pipeline-small-molecule-author-9ujf}}
+
+Together, these examples demonstrate automated identification and accurate reconstruction of multiple small-molecule instances in large complexes using CryoAtom2-reconstructed receptors.
 
 
 
@@ -133,6 +145,8 @@ Both the localisation and pose-sampling stages exhibit predictable linear scalin
 
 
 ## Ablation studies
+
+For Find, component ablations on the full test set are provided in Supplementary Table 1. Constructing the 56-channel multi-view density bank from experimental and receptor-derived densities substantially improved ligand localisation over using experimental density alone, while incorporating explicit receptor-atom features and positional encoding in the embedding head yielded further gains.
 
 For Match, we refer to the main model, which integrates the full voxel features, pocket context and auxiliary information, as strongest. The full voxel features comprise the 56-channel multi-view density bank and 50-dimensional receptor-atom features scattered onto the voxel grid. For comparison, we trained three ablation models under identical protocols: density-only (using only the experimental density), voxel-only (using only the full voxel features), and pocket-only (using only the pocket information). 
 
@@ -163,7 +177,7 @@ In conclusion, given the candidate ligand identities present in a complex, Ligan
 
 # Methods
 
-## Framework formulation
+## The overall information flow in a neural network
 
 LigandSeek takes protein and nucleic acid receptor structures, either deposited or automatically modelled by CryoAtom2, together with three-dimensional cryo-EM density maps.
 
@@ -202,7 +216,7 @@ Build takes a specified initial binding site $p \in R^3$, a small-molecule ident
 
 {{figref:fig-method-color3}} shows the network architecture and information flow of the Find–Match–Build framework. The three stages share density and receptor-atom input representations. They sequentially localise ligand regions ({{figref:fig-method-color3|a}}), match candidate regions to ligand identities ({{figref:fig-method-color3|b}}) and reconstruct all-atom ligand poses ({{figref:fig-method-color3|c}}).
 
-## Data sources and sample partitioning
+## Construction of training and benchmark datasets
 
 We downloaded cryo-EM density maps from EMDB[@wwpdb2024emdb] and their corresponding PDB structures from the RCSB database[@berman2000pdb]. We selected samples containing at least one ligand, with a resolution of <4 Å and CC >0.65. We then partitioned the dataset into mutually disjoint training, validation, calibration, and test sets. The test set contained non-redundant samples first released after 1 January 2026, whereas the other three sets contained samples released before that date.
 
@@ -219,7 +233,7 @@ Match used candidate blobs inferred by Find as its basic sample unit. Its traini
 
 Build used individual ligand instances as its basic training and testing unit. For PocketXMol fine-tuning, each training, validation and test split comprised all eligible small molecules from its corresponding original partition. End-to-end testing was restricted to the original 179 PDB entries, as were Find, Match and Build testing. This shared test scope prevented data leakage between training and testing.
 
-## Unified input representation
+## Preprocessing of density map and atomic structures
 
 Find, Match and Build all extract information from density maps and receptor atoms, motivating a shared density–atom input representation. We organise density information into a multi-view density bank and encode each receptor atom as a 50-dimensional feature vector. These representations provide common inputs for training and inference across all three stages.
 
@@ -294,7 +308,7 @@ The final feature $b_i$ indicates whether the atom belongs to the backbone. It e
 
 Find and Match use the same receptor-atom feature construction rules, whereas we follow the PocketXMol official process when fine-tuning it. Under the shared encoding scheme, each atom has a consistent initial representation across tasks and local regions.
 
-## Stage 1: Find
+## Algorithm of LigandSeek-Find
 
 ### Task definition
 
@@ -378,7 +392,7 @@ Candidate $B_j$ is predicted as positive if and only if $s_j$ exceeds the fixed 
 The first score term measures the candidate's own density confidence. The second rewards nearby receptor atoms predicted to be close to a ligand, whereas the third penalises nearby receptor atoms predicted to be distant from ligands.
 
 
-## Stage 2: Match
+## Algorithm of LigandSeek-Match
 
 ### Overview
 
@@ -448,7 +462,7 @@ $$
 
 We set the foreground and identity loss weights to $\lambda_{\mathrm{fg}}=0.3$ and $\lambda_{\mathrm{id}}=1.0$, respectively.
 
-## Stage 3: Build
+## Algorithm of LigandSeek-Build
 
 ### Overview
 
@@ -565,3 +579,8 @@ These end-to-end evaluation rules are stricter than the requirements of practica
 
 
 For the visualisations, Build additionally processed candidates assigned small-molecule identities by Match, including candidates outside the benchmark subset. Their returned poses or input failures were displayed using the same candidate order and attempt accounting; the evaluation subset and success criteria remained unchanged.
+
+
+
+## Acknowledgements
+This work is supported by the National Natural Science Foundation of China (NSFC 32430063, T2225007, T25B2009) and the Fundamental Research Funds for the Central Universities.

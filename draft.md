@@ -62,9 +62,9 @@ At the default 0.3 coverage threshold, instance-level $\mathrm{PRAUC}$ increased
 Without structural context from the receptor, density-only approaches must search across the entire map, making them inherently vulnerable to false positives from the receptor background while overlooking true ligand regions. Even when supplied with the manually determined EMDB-recommended contour level, Emap2lig-Find achieved a mean instance-level precision of only 0.238 and a mean recall of 0.316 across the 179 complexes ({{figref:stage1-overall-performance(v1)|c}}); without this manual prior, it produced numerous false positives (averaging 353.9 candidate regions per complex) and its performance degraded markedly (Supplementary Fig. 2). In contrast, incorporating receptor information enabled LigandSeek-Find to suppress background macromolecular density and focus detection on plausible binding regions, raising mean instance-level precision with CA2 receptors to 0.631 and mean recall to 0.594 ({{figref:stage1-overall-performance(v1)|c}}). LigandSeek-Find thus substantially reduced false positives while recovering more true ligand instances, with a consistent advantage observed for small molecules ({{figref:stage1-overall-performance(v1)|f}}).
 
 
-The advantages of our approach are clearly demonstrated in the 9NVS case ({{figref:stage1-level-global-local-9nvs(v1)}}). Globally, Emap2lig-Find produced false-positive ligand regions overlapping the receptor, whereas LigandSeek-Find with CA2 receptor context effectively avoided these artifacts (global semantic Dice, 0.757 versus 0.160 for Emap2lig-Find) ({{figref:stage1-level-global-local-9nvs(v1)|a–d}}). Locally, for the A1B32 instance identified by both methods, LigandSeek-Find aligned much more closely with the ground truth, achieving an IoU of 0.656 compared to 0.306 for Emap2lig-Find ({{figref:stage1-level-global-local-9nvs(v1)|e,f}}). Together with the internal ablation results (Supplementary Table 1), these observations demonstrate that incorporating receptor context not only helps distinguish true ligand regions from the receptor background, but also refines their spatial boundaries.
+The advantages of our approach are clearly demonstrated in the 9NVS case ({{figref:stage1-author-global-local-9nvs(v1)}}). Globally, Emap2lig-Find produced false-positive ligand regions overlapping the receptor, whereas LigandSeek-Find with CA2 receptor context effectively avoided these artifacts (global semantic Dice, 0.757 versus 0.160 for Emap2lig-Find) ({{figref:stage1-author-global-local-9nvs(v1)|a,b}}). Locally, for the A1B32 instance identified by both methods, LigandSeek-Find aligned much more closely with the ground truth, achieving an IoU of 0.656 compared to 0.306 for Emap2lig-Find ({{figref:stage1-author-global-local-9nvs(v1)}}). Together with the internal ablation results (Supplementary Table 1), these observations demonstrate that incorporating receptor context not only helps distinguish true ligand regions from the receptor background, but also refines their spatial boundaries.
 
-{{pptfig:"画图/stage1可视化.pptx"|stage1-level-global-local-9nvs(v1)}}
+{{pptfig:"画图/stage1可视化.pptx"|stage1-author-global-local-9nvs(v1)}}
 
 ## LigandSeek accurately matches and docks ligands into ligand densities 
 To mirror realistic applications, we evaluated LigandSeek-Match and LigandSeek-Build on candidate ligand regions predicted by LigandSeek-Find, testing whether Match could assign the correct chemical identities and whether Build could reconstruct accurate poses. With deposited and CryoAtom2-reconstructed receptors, LigandSeek-Find produced 1,651 and 1,649 candidate blobs (including 1,238 and 1,160 foreground blobs) for evaluating Match. 
@@ -126,9 +126,9 @@ Within this budget, the complete Find–Match–Build workflow correctly identif
 
 {{pptfig:"画图/全流程小分子案例_作者9BJJ.pptx"|full-pipeline-small-molecule-author-9bjj}}
 
-We also applied the same workflow to 9UJF, which contains ten eligible GTP instances ({{figref:full-pipeline-small-molecule-author-9ujf}}). With a 100% attempt budget of ten counted attempts, LigandSeek correctly identified and reconstructed all ten instances. All ten model-ranked top-1 poses achieved sub-ångström accuracy, with heavy-atom RMSDs of 0.54–0.80 Å.
+We also applied the same workflow to 9UJF, which contains ten eligible GTP instances ({{figref:full-pipeline-small-molecule-author-9ujf-v2}}). With a 100% attempt budget of ten counted attempts, LigandSeek correctly identified and reconstructed all ten instances. All ten model-ranked top-1 poses achieved sub-ångström accuracy, with heavy-atom RMSDs of 0.54–0.80 Å.
 
-{{pptfig:"画图/全流程小分子案例_作者9UJF.pptx"|full-pipeline-small-molecule-author-9ujf}}
+{{pptfig:"画图/全流程小分子案例_作者9UJF.pptx"|full-pipeline-small-molecule-author-9ujf-v2}}
 
 Together, these examples demonstrate automated identification and accurate reconstruction of multiple small-molecule instances in large complexes using CryoAtom2-reconstructed receptors.
 
@@ -177,7 +177,7 @@ In conclusion, given the candidate ligand identities present in a complex, Ligan
 
 # Methods
 
-## The overall information flow in a neural network
+## The overall information flow in LigandSeek
 
 LigandSeek takes protein and nucleic acid receptor structures, either deposited or automatically modelled by CryoAtom2, together with three-dimensional cryo-EM density maps.
 

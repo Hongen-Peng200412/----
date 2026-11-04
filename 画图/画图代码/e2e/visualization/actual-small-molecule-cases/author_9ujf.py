@@ -1,12 +1,14 @@
 """从冻结作者会话生成9UJF单页PPT、原生会话及原RMSD摘要.
 
-首个命令参数指定构建目录. source/author01.cxs保留作者相机与显隐,
+首个命令参数指定构建目录. FIGURE_ID的-v2版读取source/author02, 原版读取author01;
+两版CXS均保留各自作者相机与显隐,
 caption.json为双语图注, performance_source.json为十个原Top-1记录.
 输出candidate.pptx、author_native.png、author_final.cxs及performance_summary.json.
 摘要只摘录原RMSD的范围和实例数, 不读取参考坐标或重新评价.
 """
 
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -18,15 +20,18 @@ root = Path(__file__).resolve().parents[5]
 build = Path(sys.argv[1]).resolve()
 build.mkdir(parents=True, exist_ok=True)
 frozen = root / '画图/画图代码/e2e/output/actual-small-molecule-cases/author_9ujf'
+figure = os.environ.get('FIGURE_ID', 'full-pipeline-small-molecule-author-9ujf')
+# 仅选择作者视角原件; 两版共用原Top-1记录与科学定义.
+source_stem = 'author02' if figure.endswith('-v2') else 'author01'
 caption = json.loads((frozen / 'caption.json').read_text(encoding='utf-8'))
 source = json.loads((frozen / 'performance_source.json').read_text(encoding='utf-8'))
 # 十个实例的原模型Top-1 RMSD, 单位Å; 不从原子坐标重算或按RMSD选择姿态.
 distances = [pose['rmsd_A'] for pose in source['poses']]
 summary = {**source['expected'], 'returned_pose_count': len(distances), 'min_top1_rmsd_A': min(distances), 'max_top1_rmsd_A': max(distances), 'sub_angstrom_count': sum(value < 1.0 for value in distances)}
 (build / 'performance_summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
-width, height = Image.open(frozen / 'source/author01.png').size
+width, height = Image.open(frozen / f'source/{source_stem}.png').size
 # 载入后只执行ChimeraX原生命令导出, 不改变相机、颜色、模型显隐或坐标.
-commands = ['open "' + (frozen / 'source/author01.cxs').as_posix() + '"',
+commands = ['open "' + (frozen / f'source/{source_stem}.cxs').as_posix() + '"',
             'ligwork status "' + (build / 'status.json').as_posix() + '"',
             'save "' + (build / 'author_native.png').as_posix() + f'" width {width} height {height} supersample 1',
             'save "' + (build / 'author_final.cxs').as_posix() + '" includeMaps false',
@@ -43,7 +48,7 @@ try:
     deck.PageSetup.SlideHeight = page_height
     slide = deck.Slides.Add(1, 12)
     slide.Shapes.AddPicture(str(build / 'author_native.png'), False, True, 0, 0, page_width, page_height)
-    slide.Comments.Add(0, 0, 'Hongen Peng', 'HP', '@@full-pipeline-small-molecule-author-9ujf')
+    slide.Comments.Add(0, 0, 'Hongen Peng', 'HP', '@@' + figure)
     slide.NotesPage.Shapes.Placeholders(2).TextFrame.TextRange.Text = caption['zh'] + '\nENGLISH:\n' + caption['en']
     deck.SaveAs(str(build / 'candidate.pptx'))
     slide.Export(str(build / 'preview.png'), 'PNG', 1800, int(1800 * height / width))

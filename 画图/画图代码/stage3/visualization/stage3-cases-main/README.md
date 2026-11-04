@@ -2,6 +2,16 @@
 
 # Stage3 构象案例图
 
+## 作者交互绘图入口
+
+9WUP／2／FAD A:1103的手动绘图从`画图/古法Chimera/stage3/初始材料_9WUP.cxs`及同目录`教程.md`开始。该会话与当前PPT的二维可编辑投影共用原科学结果，尚未替换正式图。
+
+`prepare_author_session.py`独立准备此初始材料：先读显式level的`assets/9wup_2/{arrays.npz,metadata.json}`和`selected_case_metrics.json`，再连接同源完整GT受体及实验密度；`--output`指定会话目录，`--work`指定本次temp日志目录。它不被原病例统计或绘图入口调用，也不改变原程序默认行为。阅读顺序为本段→作者目录`来源.md`→该脚本主流程。
+
+转换留档在`stage3/output/stage3-cases-main/explicit_emdb_level/author-session/`：`source/`保存原数组、元数据、原指标及完整受体／密度；`materials/`保存完整GT CIF、MRC和四个单构象SDF；`materials.json`是模型索引，`models`连接6个材料模型与源字段，`pairs`的14项连接原配体索引、原421原子局部受体索引和完整受体索引，`saved_metrics`逐字保留原指标字段。第7个模型为这些原碰撞对的伪键。命名集合pocket是共同5 Å显示邻域，clashRec／clashLig是碰撞原子；显示邻域不参与评价。CIF/SDF仅转换世界XYZ坐标，MRC原点写首体素中心，加载后只用原生命令。`load.cxc`每次由入口重新生成，保存目标及日志路径使用本次参数；初始CXS嵌入地图，手动打开不依赖temp。`qa/`仅保留独立验收，不作为构建输入。
+
+正式运行、技术修正及验证结果集中在`talk/author_visualization_20261103/执行记录.md`；不在本README逐次追加运行历史。
+
 显式 EMDB level 条件的病例资产位于 `stage3/output/stage3-cases-main/explicit_emdb_level/`。设置 `FIGURE_SOURCE_ROOT` 为该绝对路径后，以下同一套测量、几何与绘图程序读取新条件；不设置时仍读取原无 level 资产。新条件的 `case_selection.json` 定义两组各五个候选与各三个正文主选，所有新输出写该条件的 `regenerated/`，正式 PPT 由作者批准的追加页流程更新。
 
 新条件 `assets/<pdb>_<occurrence>/` 每例保存 `arrays.npz`、`metadata.json` 和从新运行原评分第一名取得的 `build_top1.cif`。NPZ 字段、世界坐标、原地图推荐阈值、密度覆盖比例 D 与受体碰撞定义沿用下文；元数据新增 `condition="explicit_emdb_level"` 和 `source_files`，后者按服务器原路径保存 `size` 字节数及 `sha256`，如原 CIF、`LIG.npz`、两种 PocketXMol 的 SDF 和受体／地图元数据。`source_map_sha256` 是原完整地图的已冻结身份，不重新散列整个地图。Build CIF 按该次 `LIG.npz.atom_names` 对齐重原子；两种 PocketXMol 仍为 GT 受体、C0 口袋、原评分 Top-1。C0 使用沉积配体中心定义口袋，不是 Find 预测 blob 的中心。

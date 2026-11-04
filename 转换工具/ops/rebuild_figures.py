@@ -141,6 +141,8 @@ def commands_for(figure: str, build: Path) -> list[list]:
     if figure in ("stage1-overall-performance", "stage1-candidate-quality", "stage1-strict-threshold", "stage1-completion-curves"):
         prefix="stage1/calculate/stage1-results-revision/"
         return [p(prefix+"plot.py"),n(prefix+"build_deck.mjs")]
+    if figure == 'stage1-author-global-local-9nvs':
+        return [p('stage1/visualization/stage1-author-global-local-9nvs/build.py', build)]
     if figure.startswith("stage1-level-global-local-"):
         # 同一完整链重建五个原生案例及候选PPT; 科学输入来自独立 level 冻结目录. 
         return [["powershell.exe","-NoProfile","-File",CODE/"stage1/visualization/stage1-level-global-local/rebuild.ps1","-OutputDirectory",build/"native-cases"]]
@@ -182,7 +184,7 @@ def commands_for(figure: str, build: Path) -> list[list]:
         return [p('e2e/visualization/multiligand-workbench/ops/rebuild.py','--figure',figure,'--build-root',build)]
     if figure == 'full-pipeline-small-molecule-author-9bjj':
         return [p('e2e/visualization/actual-small-molecule-cases/author_9bjj.py',build)]
-    if figure == 'full-pipeline-small-molecule-author-9ujf':
+    if figure in ('full-pipeline-small-molecule-author-9ujf', 'full-pipeline-small-molecule-author-9ujf-v2'):
         return [p('e2e/visualization/actual-small-molecule-cases/author_9ujf.py',build)]
     if figure == 'full-pipeline-small-molecule-cases':
         prefix = 'e2e/visualization/actual-small-molecule-cases/'

@@ -1,6 +1,6 @@
 # 作者9UJF全景的原生命令教程
 
-论文图采用作者author01.cxs与author01.png的视角。源文件来自`画图/古法Chimera/E2E/9ujf/`，采用时的完整副本保存在`e2e/output/actual-small-molecule-cases/author_9ujf/source/`。
+原版页采用作者author01.cxs与author01.png；当前英文正文改用author02第二视角，见文末。源文件来自`画图/古法Chimera/E2E/9ujf/`，采用时的完整副本保存在`e2e/output/actual-small-molecule-cases/author_9ujf/source/`。
 
 先打开[D盘初始材料会话](D:/AdaLigand_Visualization/9ujf/initial.cxs)。本例参数及[逐文件来源表](D:/AdaLigand_Visualization/9ujf/本例材料来源.csv)记录完整实验密度、GT／CA2模拟密度、受体、沉积配体、模板及构象的服务器来源。初始会话已载入这些材料，下面仅调整显示。
 
@@ -55,3 +55,45 @@ ligwork status "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/outp
 原完成度为10/10，预算为10次计数尝试。十个原RMSD的范围为0.5364181402709665–0.8048328745384161Å，全部低于1Å；正文报告0.54–0.80Å。数值由performance_source.json只读摘录，不重新计算原子RMSD或选择best-of-50。
 
 正式PPT为`画图/全流程小分子案例_作者9UJF.pptx`，图名为`full-pipeline-small-molecule-author-9ujf`。长期脚本`author_9ujf.py`依次读取冻结材料、摘录原值、调用原生命令重绘和装配PPT；图注取caption.json，不依赖旧temp。完整重建入口为`python -B -X utf8 转换工具/ops/rebuild_figures.py --figure full-pipeline-small-molecule-author-9ujf`。
+
+## author02：当前英文正文第二视角
+
+作者原件为`画图/古法Chimera/E2E/9ujf/author02.cxs`及同名PNG，冻结副本在`author_9ujf/source/`。最终会话直接打开[source/author02.cxs](../../output/actual-small-molecule-cases/author_9ujf/source/author02.cxs)。材料与十个Top-1构象来源完全沿用上文，只改变相机方向；完整复制以下命令，可从已载入材料的初始会话调节到第二视角。
+
+```chimerax
+open "D:/AdaLigand_Visualization/9ujf/initial.cxs"
+ligwork view pipeline
+ligwork condition CA2
+ligwork budget 100
+ligwork filter all
+ligwork pose top1
+ligwork labels identity off
+ligwork labels correctness off
+ligwork reset
+2dlabels delete all
+show #1.1|#1.2 models
+hide #1 atoms
+cartoon #1.1|#1.2
+color #1.1 #ff0000
+color #1.2 #00aa00
+transparency #1.1|#1.2 90.1960784314 target c
+hide #2 models
+hide #10|#11 models
+show #3 models
+show #3 atoms
+color #3 #ff0000
+color #20 #00aa00
+camera ortho
+lighting depthCue false
+set bgColor white
+windowsize 1126 814
+wait 1
+view matrix camera 0.57138,-0.58727,-0.57326,50.24,0.40432,0.8093,-0.42609,78.237,0.71418,0.011681,0.69987,252.64
+zoom pixelSize 0.1416696269982238
+wait 1
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/actual-small-molecule-cases/author_9ujf/author02/tutorial_view.cxs" includeMaps false
+save "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/actual-small-molecule-cases/author_9ujf/author02/tutorial.png" width 1800 height 1295
+ligwork status "C:/Users/15919/Desktop/论文草稿/画图/画图代码/e2e/output/actual-small-molecule-cases/author_9ujf/author02/tutorial_status.json"
+```
+
+命令含义与上文逐项对应；唯一视角变化是`view matrix camera`恢复author02的朝向和位置，`zoom pixelSize`保留159.52Å视野宽度。结构本身不旋转或平移。新页稳定图名为`full-pipeline-small-molecule-author-9ujf-v2`；重建时以此图名调用原完整入口，保留正式PPT作者排版。

@@ -60,6 +60,12 @@ With deposited receptors, top-1 success at RMSD < 2 Å was 62.8% for PocketXMol,
 {{pptfig:"画图/stage2-stage3结果.pptx"|stage3-ablation-envelope}}
 
 
+## Attempt-accounting rules for end-to-end evaluation
+
+End-to-end evaluation examines candidate ligand regions in the order ranked by LigandSeek-Find. The attempt-accounting rules cover detection and identity matching across all ligand categories, and full pose reconstruction for eligible small molecules ({{figref:e2e-accounting-rules-draft}}). The same rules apply to instance completion and top-k success.
+
+{{pptfig:"画图/E2E评价计费规则.pptx"|e2e-accounting-rules-draft}}
+
 ## Stage 3: End-to-end top-k success
 
 ### Evaluation protocol (top-k success)
@@ -68,7 +74,7 @@ Top-k success measures whether an end-to-end pipeline successfully processes at 
 
 Find ranks candidate ligand regions by descending mean probability, yielding Rank 1, Rank 2 and subsequent candidates. For each PDB entry, the pipeline examines these candidates in order for up to $K$ attempts. A PDB entry is classified as successful if any attempt within this budget succeeds.
 
-Top-k success evaluates two basic end-to-end capabilities of our pipeline. These comprise detection and identity matching across all ligand categories, and detection, identity matching and modelling of eligible small molecules. These are single-residue organic small molecules with no atoms missing relative to their templates. Attempt-accounting rules are the same as those in the main text. The all-ligand test set contains 179 PDBs and 2,502 ligand instances; the small-molecule subset contains 77 PDBs and 446 instances. Each task was also evaluated with deposited receptors (GT) and CryoAtom2-reconstructed receptors (CA2).
+Top-k success evaluates two basic end-to-end capabilities of our pipeline. These comprise detection and identity matching across all ligand categories, and detection, identity matching and modelling of eligible small molecules. These are single-residue organic small molecules with no atoms missing relative to their templates. Attempt-accounting rules follow {{figref:e2e-accounting-rules-draft}}. The all-ligand test set contains 179 PDBs and 2,502 ligand instances; the small-molecule subset contains 77 PDBs and 446 instances. Each task was also evaluated with deposited receptors (GT) and CryoAtom2-reconstructed receptors (CA2).
 
 ### End-to-end region detection and identity matching across ligand categories
 
@@ -90,10 +96,22 @@ For best-of-50 poses within $K \le 10$, success at RMSD < 2 Å reached 67.5% and
 
 ## Find–Build comparison with correct ligand identities
 
-Full completion curves and per-PDB distributions for the Find–Build comparison with correct ligand identities are shown in {{figref:supp-find-correct-match-build-emap2lig,supp-find-correct-match-build-ca2,supp-find-correct-match-build-gt}}.
+We supplied the correct ligand identities to both pipelines to compare their combined localisation and pose-reconstruction capabilities. The benchmark comprised 77 PDB entries containing 446 eligible small-molecule instances, with Emap2lig additionally supplied with the EMDB-recommended contour level. Each pipeline used its own predicted ligand regions to guide pose reconstruction. Completion was the fraction of distinct target instances successfully modelled within a relative attempt budget, averaged equally across PDB entries. Undetected and failed instances remained in the full target denominator throughout evaluation. The full curves and per-PDB distributions cover Top-1, Top-5 and best-of-50 poses at heavy-atom RMSD <2 Å and <3 Å ({{figref:supp-find-correct-match-build-emap2lig,supp-find-correct-match-build-ca2,supp-find-correct-match-build-gt}}).
+
+At RMSD <2 Å, increasing the budget from 100% to 300% raised Top-5 mean completion from 49.2% to 55.5% with CA2 receptors. With deposited receptors, the corresponding values were 63.3% and 63.9%, compared with 33.7% and 36.1% for Emap2lig. LigandSeek retained higher completion across both RMSD thresholds and all three pose ranges, demonstrating its combined advantage in localisation and pose reconstruction.
 
 {{pptfig:"画图/E2E结果.pptx"|supp-find-correct-match-build-emap2lig}}
 
 {{pptfig:"画图/E2E结果.pptx"|supp-find-correct-match-build-ca2}}
 
 {{pptfig:"画图/E2E结果.pptx"|supp-find-correct-match-build-gt}}
+
+## Find–Match–Build completion with automated identity assignment
+
+We next evaluated small-molecule completion with automated identity assignment across the same 77 PDB entries and 446 eligible instances. Find predicted candidate regions, Match assigned their chemical identities, and DG-PocketXMol reconstructed their poses. An instance was successfully modelled when localisation and identity assignment were correct and its pose satisfied the specified RMSD threshold. Completion retained the full target denominator and was averaged equally across PDB entries. The curves and per-PDB distributions show all three pose ranges under both receptor conditions ({{figref:supp-find-match-build-ca2,supp-find-match-build-gt}}).
+
+At RMSD <2 Å, Top-5 mean completion increased from 46.5% to 52.7% with CA2 receptors as the budget rose from 100% to 300%. With deposited receptors, the corresponding values were 59.4% and 60.0%. At RMSD <3 Å and a 300% budget, best-of-50 completion reached 62.8% with CA2 receptors and 66.9% with deposited receptors. Larger budgets yielded greater completion gains with CA2 receptors, while results with deposited receptors largely plateaued near the 100% budget. Automated identity assignment therefore preserved most of the completion achieved with correct identities supplied to Find–Build.
+
+{{pptfig:"画图/E2E结果.pptx"|supp-find-match-build-ca2}}
+
+{{pptfig:"画图/E2E结果.pptx"|supp-find-match-build-gt}}

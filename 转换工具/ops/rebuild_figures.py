@@ -109,6 +109,8 @@ def commands_for(figure: str, build: Path) -> list[list]:
     node = [NODE]
     p=lambda relative,*args:python+[CODE/relative,*args]
     n=lambda relative,*args:node+[CODE/relative,*args]
+    if figure == 'e2e-topk-success':
+        return [p('e2e/calculate/e2e-topk-success/plot.py'), p('e2e/calculate/e2e-top5-revision/build_pptx.py')]
     if figure in ('supp-find-match-build-ca2', 'supp-find-match-build-gt'):
         return [p('e2e/calculate/e2e-top5-revision/prepare_data.py'), p('e2e/calculate/supp-find-match-build/plot.py'), p('e2e/calculate/e2e-top5-revision/build_pptx.py')]
     if figure == 'e2e-main-top5(v1)':

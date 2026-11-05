@@ -68,6 +68,36 @@ Markdown → Word 会先在 `temp/` 完成排版、写入图集标记并检查 D
 
 ## Markdown 写法
 
+### 论文标题、作者、单位与通讯信息
+
+在 Abstract 前使用以下四种自定义段落样式, 文字直接维护在 Markdown 中。两个编译入口均读取这些段落, 不额外读取老板的 Word 文件, 也不根据文件名自动添加开头。未写这些段落的正文或补充材料保持原有行为。
+
+```markdown
+::: {custom-style="Manuscript Title"}
+**Automated ligand model building in Cryo-EM maps using LigandSeek**
+:::
+
+::: {custom-style="Manuscript Authors"}
+Hongen Peng, xxx, Jianyi Yang\*
+:::
+
+::: {custom-style="Manuscript Affiliation"}
+MOE Frontiers Science Center for Nonlinear Expectations, Research Center for Mathematics and Interdisciplinary Sciences, Shandong University, Qingdao, China.
+:::
+
+::: {custom-style="Manuscript Correspondence"}
+\*Corresponding author: yangjy@sdu.edu.cn
+:::
+
+# Abstract
+```
+
+四种段落在 Nature 与 Operation 中共用 Times New Roman 字体和零首行缩进。标题为 14 磅粗体、双倍行距; 其余三段为 12 磅、1.5 倍行距。作者居中, 标题、单位和通讯信息两端对齐; 段前为零、段后为 6 磅。每段内部不拆页, 前三段与下段保持同页, 通讯信息不强制与 Abstract 同页; 不额外插入标题页或分页符。四种样式不占章节标题层级。
+
+`\*` 表示普通星号, 不会变成列表标记、斜体或上标。`xxx` 是作者保留的署名占位符。Word 回转保留四种 `custom-style` 和 Word 中实际保存的文字, 再次编译恢复相同格式; Word 中修改署名后回转, 不从旧 Markdown 或老板文档恢复原署名。
+
+阅读实现时先看 `manuscript_conversion.py::_format_content_paragraphs` 的开头排版, 再看 `_remove_generated_styles` 的回转保留。验证入口为 `python -X utf8 -B 转换工具/test_front_matter.py`, 覆盖两种版式、两次连续回转、Word 手工修改署名及无开头稿件。
+
 ### 图片与 PPT 图集
 
 普通图片可用 Markdown 图片语法，也可用 `&&"绝对路径"` 标记图片文件：

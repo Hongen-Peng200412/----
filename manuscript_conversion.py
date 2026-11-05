@@ -30,6 +30,7 @@ OPERATION_REFERENCE = Path(r"D:\OneDrive\Operation.docx")
 CITATION_STYLE_PREFIX = "MDCITE_"
 FIGURE_REFERENCE_STYLE_PREFIX = "MDFIGREF_"
 BIBLIOGRAPHY_STYLE = "MDConverterBibliography"
+FRONT_MATTER_STYLES = ("Manuscript Title", "Manuscript Authors", "Manuscript Affiliation", "Manuscript Correspondence")
 PANDOC_INPUT = "markdown+pipe_tables+raw_html+tex_math_dollars+citations"
 PANDOC_OUTPUT = "markdown+pipe_tables+raw_html-simple_tables-grid_tables-multiline_tables"
 XLSX_DIRECTIVE = re.compile(r"<!--\s*xlsx-table\s+(\{.*?\})\s*-->", re.I | re.S)
@@ -565,14 +566,32 @@ def _append_bibliography(document: dict, original: dict, pandoc: str,
 
 
 def _format_content_paragraphs(document, body_spacing: float, body_size: float) -> None:
-    """统一正文段落节奏，并使块级公式保持独立、居中。"""
+    """设置论文开头和正文段落节奏, 并使块级公式保持独立、居中."""
     from docx.enum.text import WD_ALIGN_PARAGRAPH
     from docx.oxml.ns import qn
     from docx.shared import Pt
 
     for paragraph in document.paragraphs:
         paragraph_format = paragraph.paragraph_format
-        if paragraph._p.find(qn("m:oMathPara")) is not None:
+        if paragraph.style.name in FRONT_MATTER_STYLES:
+            # 四种开头样式在两种版式中共用原稿格式, 不继承正文缩进或章节标题层级.
+            is_title = paragraph.style.name == "Manuscript Title"
+            paragraph.alignment = (WD_ALIGN_PARAGRAPH.CENTER if paragraph.style.name == "Manuscript Authors"
+                                   else WD_ALIGN_PARAGRAPH.JUSTIFY)
+            paragraph_format.first_line_indent = Pt(0)
+            paragraph_format.left_indent = Pt(0)
+            paragraph_format.right_indent = Pt(0)
+            paragraph_format.line_spacing = 2.0 if is_title else 1.5
+            paragraph_format.space_before = Pt(0)
+            paragraph_format.space_after = Pt(6)
+            paragraph_format.keep_together = True
+            paragraph_format.keep_with_next = paragraph.style.name != "Manuscript Correspondence"
+            for run in paragraph.runs:
+                run.font.name = "Times New Roman"
+                run.font.size = Pt(14 if is_title else 12)
+                if is_title:
+                    run.font.bold = True
+        elif paragraph._p.find(qn("m:oMathPara")) is not None:
             paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
             paragraph_format.first_line_indent = Pt(0)
             paragraph_format.line_spacing = 1.0
@@ -1485,6 +1504,9 @@ def _remove_generated_styles(document: dict, citation_markers: dict[str, str], t
                 return None
             if style == TABLE_NOTE_STYLE:
                 return {"t": "Div", "c": [["", ["table-note"], []], clean(blocks)]}
+            if style in FRONT_MATTER_STYLES:
+                # 保留 Word 中的实际文字及语义样式, 使回转稿再次编译时仍能识别四种开头段落.
+                return {"t": "Div", "c": [["", [], [["custom-style", style]]], clean(blocks)]}
             return clean(blocks)
         if kind == "Span":
             attrs, inlines = value["c"]

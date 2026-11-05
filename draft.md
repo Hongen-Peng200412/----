@@ -1,3 +1,19 @@
+::: {custom-style="Manuscript Title"}
+**Automated ligand model building in Cryo-EM maps using LigandSeek**
+:::
+
+::: {custom-style="Manuscript Authors"}
+Hongen Peng, xxx, Jianyi Yang\*
+:::
+
+::: {custom-style="Manuscript Affiliation"}
+MOE Frontiers Science Center for Nonlinear Expectations, Research Center for Mathematics and Interdisciplinary Sciences, Shandong University, Qingdao, China.
+:::
+
+::: {custom-style="Manuscript Correspondence"}
+\*Corresponding author: yangjy@sdu.edu.cn
+:::
+
 # Abstract
 
 Cryo-electron microscopy (cryo-EM) has advanced three-dimensional structure determination of macromolecular complexes. De novo modelling algorithms, including ModelAngelo and CryoAtom2, have automated the construction of protein and nucleic acid backbones. However, fully automated, accurate end-to-end reconstruction of ligands involved in catalysis, allosteric regulation and drug action remains challenging. Existing tools address individual steps, with inefficient connections between region localisation, chemical identity matching and pose reconstruction. Here we introduce LigandSeek, a fully automated end-to-end framework that jointly models density and receptor information through three stages: Find, Match and Build. On a benchmark of 179 complexes, Find achieved a $\mathrm{PRAUC}^{\mathrm{instance}}$ of 0.541, increasing to 0.663 with deposited receptor structures. Both exceeded the score of 0.269 achieved by the density-only method Emap2lig-Find. Match achieved 86.6% overall matching accuracy, with a mean matching time of 0.09 s per candidate region. For Build, we incorporated continuous cryo-EM density-field constraints into a receptor-based generative model and fine-tuned it. This reduced the median root-mean-square deviation (RMSD) of top-1 small-molecule poses from 1.55 Å to 1.14 Å. In end-to-end blind evaluation without deposited receptor structures as input, LigandSeek achieved a mean completion rate of 62.8% across 77 PDB entries. With deposited receptor structures, this rate increased to 66.9%. LigandSeek provides an efficient, fully automated workflow from continuous three-dimensional cryo-EM density maps to all-atom ligand poses.

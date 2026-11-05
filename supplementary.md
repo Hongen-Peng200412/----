@@ -66,33 +66,22 @@ End-to-end evaluation examines candidate ligand regions in the order ranked by L
 
 {{pptfig:"画图/E2E评价计费规则.pptx"|e2e-accounting-rules-draft}}
 
-## Stage 3: End-to-end top-k success
 
-### Evaluation protocol (top-k success)
 
-Top-k success measures whether an end-to-end pipeline successfully processes at least one ligand instance in a complex within a specified attempt budget.
+## End-to-end top-k success across complexes
 
-Find ranks candidate ligand regions by descending mean probability, yielding Rank 1, Rank 2 and subsequent candidates. For each PDB entry, the pipeline examines these candidates in order for up to $K$ attempts. A PDB entry is classified as successful if any attempt within this budget succeeds.
+As in the main text, we evaluated three end-to-end capabilities: general-ligand detection and chemical identification (Find + Match), small-molecule detection and pose reconstruction given ground-truth chemical identities (Find + Build), and fully automated small-molecule modelling without prior site or identity assignment (Find + Match + Build).
 
-Top-k success evaluates two basic end-to-end capabilities of our pipeline. These comprise detection and identity matching across all ligand categories, and detection, identity matching and modelling of eligible small molecules. These are single-residue organic small molecules with no atoms missing relative to their templates. Attempt-accounting rules follow {{figref:e2e-accounting-rules-draft}}. The all-ligand test set contains 179 PDBs and 2,502 ligand instances; the small-molecule subset contains 77 PDBs and 446 instances. Each task was also evaluated with deposited receptors (GT) and CryoAtom2-reconstructed receptors (CA2).
+To complement the instance-level completion reported in the main text, we assessed complex-level top-k success for Find–Match and Find–Match–Build. Top-k success was the fraction of PDB entries containing at least one successful instance within the first $K$ charged attempts ($K=1–10$; {{figref:e2e-topk-success}}). Candidates followed Find's probability ranking, with attempts charged according to the evaluation rules ({{figref:e2e-accounting-rules-draft}}).
 
-### End-to-end region detection and identity matching across ligand categories
 
-{{pptfig:"画图/E2E结果.pptx"|e2e-all-find-match}}
+The all-ligand cohort comprised 179 PDB entries containing 2,502 ligand instances ({{figref:e2e-topk-success|a}}). With CA2 receptors, Find–Match success increased from 67.0% (120/179) at $K=1$ to 83.8% (150/179) at $K=3$. With deposited receptors, single-attempt Find–Match success was 79.3% (142/179) across the same cohort. At $K=10$, Find–Match success reached 87.7% with CA2 receptors and 92.2% with deposited receptors. These rates approached the corresponding Find-only success rates of 88.8% and 93.3%, respectively. Emap2lig-Find increased from 42.5% at $K=1$ to 58.1% at $K=10$, remaining below both LigandSeek receptor conditions.
 
-We first evaluated end-to-end ligand-region detection and identity matching in 179 independent test PDB entries ({{figref:e2e-all-find-match}}). These entries contained coexisting ligand categories, including small molecules, ions and sugars. Under the strictest single-attempt condition ($K=1$), end-to-end region detection and identity matching succeeded in 120 entries (67.0%) with CryoAtom2-reconstructed receptors (CA2), while region detection alone succeeded in 134 entries (74.9%). With deposited receptors (GT), the corresponding counts were 142 (79.3%) for joint success and 148 (82.7%) for region detection alone. As the attempt budget increased to 10, end-to-end success rates rapidly plateaued at 87.7% with CA2 receptors and 92.2% with GT receptors. By comparison, Emap2lig-Find detected ligand regions but could not identify their chemical identities. It detected regions in only 76 entries (42.5%) at $K=1$ and 104 entries (58.1%) within $K \le 10$.
+The small-molecule cohort contained 77 PDB entries with 446 eligible instances ({{figref:e2e-topk-success|b}}). At $K=1$, Find–Match success was 66.2% with CA2 receptors and 79.2% with deposited receptors. Both conditions reached 81.8% at $K=3$, followed by 81.8% and 83.1%, respectively, at $K=10$. Find-only success at $K=10$ was 88.3% and 89.6%, respectively, compared with 76.6% for Emap2lig-Find. Most entries that could be identified within ten attempts therefore required no more than three attempts.
 
-### End-to-end reconstruction of all-atom small-molecule poses
+We then required successful pose reconstruction with DG-PocketXMol, using binding sites predicted by Find ({{figref:e2e-topk-success|c,d}}). At RMSD <2 Å, top-1 success with CA2 receptors increased from 44.2% to 59.7% as $K$ rose from 1 to 10. With deposited receptors, the corresponding top-1 success rates increased from 57.1% to 66.2%. At $K=10$, best-of-50 success at RMSD <3 Å reached 75.3% with CA2 receptors and 76.6% with deposited receptors. Thus, the full pipeline successfully reconstructed at least one small-molecule ligand pose in most PDB entries.
 
-{{pptfig:"画图/E2E结果.pptx"|e2e-small-pipeline}}
-
-We evaluated the full end-to-end reconstruction pipeline (detection, matching, and pose reconstruction) for eligible small molecules across 77 PDB entries which contain at least one of them ({{figref:e2e-small-pipeline|b,c}}). In all evaluations, DG-PocketXMol used the centroid of the ligand region predicted by Find to define the binding site and pocket, without relying on ground-truth ligand coordinates. We tested the pipeline using both deposited receptors ({{figref:e2e-small-pipeline|b}}) and CryoAtom2-reconstructed receptors ({{figref:e2e-small-pipeline|c}}), where in the latter, no deposited structural information was used at any stage of the pipeline.
-
-The strictest evaluation allowed one attempt ($K=1$), selected only the top-1 pose and required RMSD < 2 Å. Under this criterion, 34/77 entries (44.2%) succeeded with CryoAtom2-reconstructed receptors, compared with 44/77 (57.1%) with deposited receptors. At RMSD < 3 Å, the corresponding counts were 41/77 (53.2%) and 50/77 (64.9%). Allowing up to 10 charged attempts ($K \le 10$) increased top-1 success with CryoAtom2-reconstructed receptors to 46/77 entries (59.7%) at RMSD < 2 Å and 52/77 (67.5%) at RMSD < 3 Å. With deposited receptors, 51/77 entries (66.2%) and 55/77 (71.4%) achieved success at RMSD < 2 Å and < 3 Å, respectively.
-
-For best-of-50 poses within $K \le 10$, success at RMSD < 2 Å reached 67.5% and 75.3% with CryoAtom2-reconstructed and deposited receptors, respectively. At RMSD < 3 Å, the corresponding success rates were 75.3% and 76.6%.
-
-{{figref:e2e-small-pipeline|a}} further separates the success rates of individual pipeline stages. Within the first 10 charged attempts ($K \le 10$), Find alone succeeded in 88.3% and 89.6% of entries with CryoAtom2-reconstructed and deposited receptors, respectively. Both exceeded Emap2lig-Find's success rate of 76.6% in this subset. Requiring both Find and Match to succeed yielded rates of 81.8% and 83.1%, respectively.
+{{pptfig:"画图/E2E结果.pptx"|e2e-topk-success}}
 
 ## Find–Build comparison with correct ligand identities
 

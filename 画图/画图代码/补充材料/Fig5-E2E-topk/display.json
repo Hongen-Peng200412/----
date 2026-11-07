@@ -1,0 +1,4910 @@
+{
+  "canvas": [
+    6591300,
+    8640763
+  ],
+  "styles": [
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:ln w=\"10160\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"3712\"><a:solidFill><a:srgbClr val=\"E3E9ED\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"4724\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"13497\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"F8FAFC\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"F8FAFC\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"><a:alpha val=\"95000\"/></a:srgbClr></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"E2E8F0\"><a:alpha val=\"95000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"F8FAFC\"><a:alpha val=\"80000\"/></a:srgbClr></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"CBD5E1\"><a:alpha val=\"80000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:grpSp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvGrpSpPr><p:cNvPr id=\"491\" name=\"e2e-topk-success\"/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr><a:xfrm><a:off x=\"428934\" y=\"2303962\"/><a:ext cx=\"5733432\" cy=\"4032838\"/><a:chOff x=\"0\" y=\"0\"/><a:chExt cx=\"5733432\" cy=\"4032838\"/></a:xfrm></p:grpSpPr></p:grpSp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"5736\"><a:solidFill><a:srgbClr val=\"94A3B8\"/></a:solidFill><a:prstDash val=\"sysDot\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Charged attempts (K)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"r\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm rot=\"-5400000\"><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Successful PDB entries (%)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"3712\"><a:solidFill><a:srgbClr val=\"4860B8\"><a:alpha val=\"65000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"3712\"><a:solidFill><a:srgbClr val=\"0D8A82\"><a:alpha val=\"65000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"600\" b=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>a</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"5A6B78\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Single attempt (K = {value:0})</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"1\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"1\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"563\" b=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>All ligands: detection (Find) and identification (Match)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"14509\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"14509\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10460\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10460\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"11472\"><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Find + Match</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10460\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"8098\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Find only</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"8098\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"8098\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"8098\"><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:ln w=\"8098\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:ln w=\"8098\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"3712\"><a:solidFill><a:srgbClr val=\"9A6324\"><a:alpha val=\"65000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"600\" b=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>b</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"563\" b=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Small molecules: detection (Find) and identification (Match)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"3712\"><a:solidFill><a:srgbClr val=\"7E92E2\"><a:alpha val=\"65000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"600\" b=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>c</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"1\"><a:solidFill><a:srgbClr val=\"7E92E2\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"7E92E2\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"563\" b=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Small molecules: end-to-end pose reconstruction (CA{value:0})</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"14509\"><a:solidFill><a:srgbClr val=\"7E92E2\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"11135\"><a:solidFill><a:srgbClr val=\"7E92E2\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"11135\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"13497\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Top{value:0} (&lt;{value:1} Å)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"13497\"><a:solidFill><a:srgbClr val=\"7E92E2\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"7E92E2\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"7E92E2\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Best-of{value:0} (&lt;{value:1} Å)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10460\"><a:solidFill><a:srgbClr val=\"7E92E2\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"8098\"><a:solidFill><a:srgbClr val=\"7E92E2\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"7E92E2\"/></a:solidFill><a:ln w=\"8098\"><a:solidFill><a:srgbClr val=\"7E92E2\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"3712\"><a:solidFill><a:srgbClr val=\"52B7B0\"><a:alpha val=\"65000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"600\" b=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>d</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"1\"><a:solidFill><a:srgbClr val=\"52B7B0\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"52B7B0\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"563\" b=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Small molecules: end-to-end pose reconstruction (GT)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"14509\"><a:solidFill><a:srgbClr val=\"52B7B0\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"11135\"><a:solidFill><a:srgbClr val=\"52B7B0\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"11135\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"13497\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"13497\"><a:solidFill><a:srgbClr val=\"52B7B0\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"52B7B0\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"52B7B0\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10460\"><a:solidFill><a:srgbClr val=\"52B7B0\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"8098\"><a:solidFill><a:srgbClr val=\"52B7B0\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"52B7B0\"/></a:solidFill><a:ln w=\"8098\"><a:solidFill><a:srgbClr val=\"52B7B0\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Emap{value:0}lig</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>LigandSeek (CA{value:0})</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>LigandSeek (GT)</a:t></a:r></a:p></p:txBody></p:sp>"
+  ],
+  "pages": [
+    {
+      "id": "e2e-topk-success",
+      "nodes": [
+        {
+          "group": 12,
+          "children": [
+            {
+              "name": "data_10",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 0
+            },
+            {
+              "name": "data_11",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 0
+            },
+            {
+              "name": "data_12",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 6
+            },
+            {
+              "name": "data_13",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_14",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_15",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_16",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_17",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_18",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_19",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 13
+            },
+            {
+              "name": "tick_20",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_21",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_22",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_23",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_24",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_25",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_26",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_27",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_28",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_29",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_30",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_31",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_32",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_33",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_34",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_35",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_36",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_37",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_38",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_39",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "text_40",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 15
+            },
+            {
+              "name": "tick_41",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_42",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_43",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_44",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_45",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_46",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_47",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_48",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_49",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_50",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_51",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_52",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_53",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_54",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_55",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_56",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "text_57",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 17
+            },
+            {
+              "name": "data_58",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 18
+            },
+            {
+              "name": "data_59",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 18
+            },
+            {
+              "name": "data_60",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 19
+            },
+            {
+              "name": "data_61",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 19
+            },
+            {
+              "name": "data_62",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 3
+            },
+            {
+              "name": "data_63",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 3
+            },
+            {
+              "name": "text_64",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 20
+            },
+            {
+              "name": "text_65",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 21
+            },
+            {
+              "name": "text_66",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 22
+            },
+            {
+              "name": "text_67",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 23
+            },
+            {
+              "name": "text_68",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 24
+            },
+            {
+              "name": "text_69",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 25
+            },
+            {
+              "name": "text_70",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 26
+            },
+            {
+              "name": "text_71",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 27
+            },
+            {
+              "name": "data_72",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 28
+            },
+            {
+              "name": "data_73",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 29
+            },
+            {
+              "name": "data_74",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 30
+            },
+            {
+              "name": "data_75",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 31
+            },
+            {
+              "name": "data_76",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 32
+            },
+            {
+              "name": "data_77",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 7
+            },
+            {
+              "name": "data_78",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 4
+            },
+            {
+              "name": "marker_79",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 5
+            },
+            {
+              "name": "text_80",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 33
+            },
+            {
+              "name": "data_81",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 34
+            },
+            {
+              "name": "marker_82",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 35
+            },
+            {
+              "name": "text_83",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 36
+            },
+            {
+              "name": "marker_84",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_85",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_86",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_87",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_88",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_89",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_90",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_91",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_92",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_93",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_94",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_95",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_96",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_97",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_98",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_99",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_100",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_101",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_102",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_103",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_104",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_105",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_106",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_107",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_108",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_109",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_110",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_111",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_112",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_113",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_114",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_115",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_116",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_117",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_118",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_119",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_120",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_121",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_122",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_123",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_124",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_125",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_126",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_127",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_128",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_129",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_130",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_131",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_132",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_133",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "data_134",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 0
+            },
+            {
+              "name": "data_135",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 6
+            },
+            {
+              "name": "data_136",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_137",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_138",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_139",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_140",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_141",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_142",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 13
+            },
+            {
+              "name": "tick_143",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_144",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_145",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_146",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_147",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_148",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_149",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_150",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_151",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_152",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_153",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_154",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_155",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_156",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_157",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_158",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_159",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_160",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_161",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_162",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "text_163",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 15
+            },
+            {
+              "name": "tick_164",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_165",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_166",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_167",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_168",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_169",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_170",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_171",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_172",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_173",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_174",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_175",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_176",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_177",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_178",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_179",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "text_180",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 17
+            },
+            {
+              "name": "data_181",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 42
+            },
+            {
+              "name": "data_182",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 18
+            },
+            {
+              "name": "data_183",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 19
+            },
+            {
+              "name": "data_184",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 18
+            },
+            {
+              "name": "data_185",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 19
+            },
+            {
+              "name": "data_186",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 3
+            },
+            {
+              "name": "data_187",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 3
+            },
+            {
+              "name": "text_188",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 43
+            },
+            {
+              "name": "text_189",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 21
+            },
+            {
+              "name": "text_190",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 22
+            },
+            {
+              "name": "text_191",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 23
+            },
+            {
+              "name": "text_192",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 25
+            },
+            {
+              "name": "text_193",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 24
+            },
+            {
+              "name": "text_194",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 26
+            },
+            {
+              "name": "text_195",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 44
+            },
+            {
+              "name": "data_196",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 28
+            },
+            {
+              "name": "data_197",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 29
+            },
+            {
+              "name": "data_198",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 30
+            },
+            {
+              "name": "data_199",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 31
+            },
+            {
+              "name": "data_200",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 32
+            },
+            {
+              "name": "data_201",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 7
+            },
+            {
+              "name": "data_202",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 4
+            },
+            {
+              "name": "marker_203",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 5
+            },
+            {
+              "name": "text_204",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 33
+            },
+            {
+              "name": "data_205",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 34
+            },
+            {
+              "name": "marker_206",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 35
+            },
+            {
+              "name": "text_207",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 36
+            },
+            {
+              "name": "marker_208",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_209",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_210",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_211",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_212",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_213",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_214",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_215",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_216",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_217",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_218",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_219",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_220",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_221",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_222",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_223",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_224",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_225",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_226",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_227",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_228",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_229",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_230",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_231",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_232",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_233",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_234",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_235",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_236",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_237",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 39
+            },
+            {
+              "name": "marker_238",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_239",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_240",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_241",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_242",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_243",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_244",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_245",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_246",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_247",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_248",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_249",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_250",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_251",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_252",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_253",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_254",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_255",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_256",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_257",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "data_258",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 0
+            },
+            {
+              "name": "data_259",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 6
+            },
+            {
+              "name": "data_260",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_261",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_262",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_263",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_264",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_265",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 13
+            },
+            {
+              "name": "tick_266",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_267",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_268",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_269",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_270",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_271",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_272",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_273",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_274",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_275",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_276",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_277",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_278",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_279",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_280",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_281",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_282",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_283",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_284",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_285",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "text_286",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 15
+            },
+            {
+              "name": "tick_287",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_288",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_289",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_290",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_291",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_292",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_293",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_294",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_295",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_296",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_297",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_298",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_299",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_300",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "text_301",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 17
+            },
+            {
+              "name": "data_302",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 18
+            },
+            {
+              "name": "data_303",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 45
+            },
+            {
+              "name": "data_304",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 3
+            },
+            {
+              "name": "data_305",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 3
+            },
+            {
+              "name": "text_306",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 46
+            },
+            {
+              "name": "text_307",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 21
+            },
+            {
+              "name": "text_308",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 23
+            },
+            {
+              "name": "text_309",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 24
+            },
+            {
+              "name": "text_310",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 47
+            },
+            {
+              "name": "text_311",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 48
+            },
+            {
+              "name": "text_312",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 49
+            },
+            {
+              "name": "data_313",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 50
+            },
+            {
+              "name": "data_314",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 29
+            },
+            {
+              "name": "data_315",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 51
+            },
+            {
+              "name": "data_316",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 52
+            },
+            {
+              "name": "data_317",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 7
+            },
+            {
+              "name": "data_318",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 53
+            },
+            {
+              "name": "marker_319",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 54
+            },
+            {
+              "name": "text_320",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 55
+            },
+            {
+              "name": "data_321",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 56
+            },
+            {
+              "name": "marker_322",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 57
+            },
+            {
+              "name": "text_323",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 55
+            },
+            {
+              "name": "data_324",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 31
+            },
+            {
+              "name": "marker_325",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "text_326",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 58
+            },
+            {
+              "name": "data_327",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 59
+            },
+            {
+              "name": "marker_328",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 60
+            },
+            {
+              "name": "text_329",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 58
+            },
+            {
+              "name": "marker_330",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 60
+            },
+            {
+              "name": "marker_331",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 60
+            },
+            {
+              "name": "marker_332",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 60
+            },
+            {
+              "name": "marker_333",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 60
+            },
+            {
+              "name": "marker_334",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 60
+            },
+            {
+              "name": "marker_335",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 60
+            },
+            {
+              "name": "marker_336",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 60
+            },
+            {
+              "name": "marker_337",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 60
+            },
+            {
+              "name": "marker_338",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 60
+            },
+            {
+              "name": "marker_339",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 60
+            },
+            {
+              "name": "marker_340",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_341",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_342",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_343",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_344",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_345",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_346",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_347",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_348",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_349",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 38
+            },
+            {
+              "name": "marker_350",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 61
+            },
+            {
+              "name": "marker_351",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 61
+            },
+            {
+              "name": "marker_352",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 61
+            },
+            {
+              "name": "marker_353",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 61
+            },
+            {
+              "name": "marker_354",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 61
+            },
+            {
+              "name": "marker_355",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 61
+            },
+            {
+              "name": "marker_356",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 61
+            },
+            {
+              "name": "marker_357",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 61
+            },
+            {
+              "name": "marker_358",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 61
+            },
+            {
+              "name": "marker_359",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 61
+            },
+            {
+              "name": "marker_360",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_361",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_362",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_363",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_364",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_365",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_366",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_367",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_368",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "marker_369",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 41
+            },
+            {
+              "name": "data_370",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 0
+            },
+            {
+              "name": "data_371",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 6
+            },
+            {
+              "name": "data_372",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_373",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_374",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_375",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_376",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 2
+            },
+            {
+              "name": "data_377",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 13
+            },
+            {
+              "name": "tick_378",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_379",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_380",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_381",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_382",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_383",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_384",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_385",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_386",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_387",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_388",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_389",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_390",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_391",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_392",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_393",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_394",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_395",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "tick_396",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_397",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 14
+            },
+            {
+              "name": "text_398",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 15
+            },
+            {
+              "name": "tick_399",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_400",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_401",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_402",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_403",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_404",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_405",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_406",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_407",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_408",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_409",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_410",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "tick_411",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 1
+            },
+            {
+              "name": "text_412",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 16
+            },
+            {
+              "name": "text_413",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 17
+            },
+            {
+              "name": "data_414",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 19
+            },
+            {
+              "name": "data_415",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 62
+            },
+            {
+              "name": "data_416",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 19
+            },
+            {
+              "name": "data_417",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 62
+            },
+            {
+              "name": "data_418",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 3
+            },
+            {
+              "name": "data_419",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 3
+            },
+            {
+              "name": "text_420",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 63
+            },
+            {
+              "name": "text_421",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 21
+            },
+            {
+              "name": "text_422",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 25
+            },
+            {
+              "name": "text_423",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 64
+            },
+            {
+              "name": "text_424",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 26
+            },
+            {
+              "name": "text_425",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 65
+            },
+            {
+              "name": "text_426",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 66
+            },
+            {
+              "name": "data_427",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 67
+            },
+            {
+              "name": "data_428",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 28
+            },
+            {
+              "name": "data_429",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 68
+            },
+            {
+              "name": "data_430",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 69
+            },
+            {
+              "name": "data_431",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 7
+            },
+            {
+              "name": "data_432",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 70
+            },
+            {
+              "name": "marker_433",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 71
+            },
+            {
+              "name": "text_434",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 55
+            },
+            {
+              "name": "data_435",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 72
+            },
+            {
+              "name": "marker_436",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 73
+            },
+            {
+              "name": "text_437",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 55
+            },
+            {
+              "name": "data_438",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 30
+            },
+            {
+              "name": "marker_439",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "text_440",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 58
+            },
+            {
+              "name": "data_441",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 74
+            },
+            {
+              "name": "marker_442",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 75
+            },
+            {
+              "name": "text_443",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 58
+            },
+            {
+              "name": "marker_444",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 75
+            },
+            {
+              "name": "marker_445",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 75
+            },
+            {
+              "name": "marker_446",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 75
+            },
+            {
+              "name": "marker_447",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 75
+            },
+            {
+              "name": "marker_448",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 75
+            },
+            {
+              "name": "marker_449",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 75
+            },
+            {
+              "name": "marker_450",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 75
+            },
+            {
+              "name": "marker_451",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 75
+            },
+            {
+              "name": "marker_452",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 75
+            },
+            {
+              "name": "marker_453",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 75
+            },
+            {
+              "name": "marker_454",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_455",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_456",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_457",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_458",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_459",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_460",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_461",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_462",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_463",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 37
+            },
+            {
+              "name": "marker_464",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 76
+            },
+            {
+              "name": "marker_465",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 76
+            },
+            {
+              "name": "marker_466",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 76
+            },
+            {
+              "name": "marker_467",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 76
+            },
+            {
+              "name": "marker_468",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 76
+            },
+            {
+              "name": "marker_469",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 76
+            },
+            {
+              "name": "marker_470",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 76
+            },
+            {
+              "name": "marker_471",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 76
+            },
+            {
+              "name": "marker_472",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 76
+            },
+            {
+              "name": "marker_473",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 76
+            },
+            {
+              "name": "marker_474",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_475",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_476",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_477",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_478",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_479",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_480",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_481",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_482",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "marker_483",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 40
+            },
+            {
+              "name": "data_484",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 8
+            },
+            {
+              "name": "data_485",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 9
+            },
+            {
+              "name": "text_486",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 77
+            },
+            {
+              "name": "data_487",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 10
+            },
+            {
+              "name": "text_488",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 78
+            },
+            {
+              "name": "data_489",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 11
+            },
+            {
+              "name": "text_490",
+              "delta": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "style": 79
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

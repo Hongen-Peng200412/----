@@ -1,0 +1,11 @@
+{
+  "kind": "figure",
+  "figures": [
+    "stage3-ablation-envelope"
+  ],
+  "pptx": "画图/PPT/stage2-stage3结果.pptx",
+  "entry": "run.py",
+  "outputs": [
+    "candidate.pptx"
+  ]
+}

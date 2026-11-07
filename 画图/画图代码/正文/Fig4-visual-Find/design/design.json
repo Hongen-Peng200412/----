@@ -1,0 +1,20 @@
+{
+  "figure": "stage1-author-global-local-9nvs(v1)",
+  "page_part": "ppt/slides/slide7.xml",
+  "source_page": 7,
+  "author_design_origin": "画图/PPT/stage1可视化.pptx @@stage1-author-global-local-9nvs(v1)",
+  "source_pptx_sha256": "934cc96f43cbe2ed42a42dee6875ebcac9f5d07d9ecb948bd326383ef0a2f7b6",
+  "role": "作者已采用显示原件及透明原生布局, 不是科学坐标或评价真值",
+  "package_files": 33,
+  "native_objects": 21,
+  "native_sessions": [
+    "画图/古法Chimera/stage1/Emap2lig/Emap2lig(level)_global.cxs",
+    "画图/古法Chimera/stage1/LigandSeek/LiagndSeek(CA2)_global.cxs",
+    "画图/古法Chimera/stage1/reference/reference_global.cxs",
+    "画图/古法Chimera/stage1/Emap2lig/Emap2lig(level)_local_FT.cxs",
+    "画图/古法Chimera/stage1/Emap2lig/Emap2lig(level)_local_commonINS.cxs",
+    "画图/古法Chimera/stage1/LigandSeek/LigandSeek(CA2)_local_commonINS.cxs",
+    "画图/古法Chimera/stage1/reference/reference_local_commonINS.cxs",
+    "画图/古法Chimera/stage1/reference/reference_local_commonINS-transparent.cxs"
+  ]
+}

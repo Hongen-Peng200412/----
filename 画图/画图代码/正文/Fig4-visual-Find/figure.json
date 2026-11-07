@@ -1,0 +1,11 @@
+{
+  "kind": "figure",
+  "figures": [
+    "stage1-author-global-local-9nvs(v1)"
+  ],
+  "pptx": "画图/PPT/stage1可视化.pptx",
+  "entry": "run.py",
+  "outputs": [
+    "candidate.pptx"
+  ]
+}

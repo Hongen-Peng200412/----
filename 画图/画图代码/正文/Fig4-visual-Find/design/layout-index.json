@@ -1,0 +1,315 @@
+[
+  {
+    "index": 2,
+    "kind": "pic",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"4016318\" y=\"11555665\"/><a:ext cx=\"2489927\" cy=\"1800000\"/></a:xfrm>"
+    ],
+    "pictures": [
+      {
+        "media": "ppt/media/image31.png"
+      }
+    ],
+    "crops": []
+  },
+  {
+    "index": 3,
+    "kind": "pic",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"727634\" y=\"11555665\"/><a:ext cx=\"2489927\" cy=\"1800000\"/></a:xfrm>"
+    ],
+    "pictures": [
+      {
+        "media": "ppt/media/image32.png"
+      }
+    ],
+    "crops": []
+  },
+  {
+    "index": 4,
+    "kind": "pic",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"6598981\" y=\"11555665\"/><a:ext cx=\"2489927\" cy=\"1800000\"/></a:xfrm>"
+    ],
+    "pictures": [
+      {
+        "media": "ppt/media/image33.png"
+      }
+    ],
+    "crops": []
+  },
+  {
+    "index": 5,
+    "kind": "pic",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"9181644\" y=\"11555665\"/><a:ext cx=\"2489927\" cy=\"1800000\"/></a:xfrm>"
+    ],
+    "pictures": [
+      {
+        "media": "ppt/media/image34.png"
+      }
+    ],
+    "crops": []
+  },
+  {
+    "index": 6,
+    "kind": "pic",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"11764307\" y=\"11555665\"/><a:ext cx=\"2489927\" cy=\"1800000\"/></a:xfrm>"
+    ],
+    "pictures": [
+      {
+        "media": "ppt/media/image35.png"
+      }
+    ],
+    "crops": []
+  },
+  {
+    "index": 7,
+    "kind": "grpSp",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"0\" y=\"5473301\"/><a:ext cx=\"4572000\" cy=\"4572000\"/><a:chOff x=\"254000\" y=\"1502833\"/><a:chExt cx=\"4572000\" cy=\"4572000\"/></a:xfrm>",
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"254000\" y=\"1502833\"/><a:ext cx=\"4572000\" cy=\"4572000\"/></a:xfrm>",
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"1035911\" y=\"3447413\"/><a:ext cx=\"1214428\" cy=\"877925\"/></a:xfrm>",
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"1950732\" y=\"3171717\"/><a:ext cx=\"746283\" cy=\"539498\"/></a:xfrm>"
+    ],
+    "pictures": [
+      {
+        "media": "ppt/media/image36.png"
+      }
+    ],
+    "crops": [
+      {
+        "l": "11000",
+        "r": "18000",
+        "b": "1786"
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "kind": "grpSp",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"5091933\" y=\"5473301\"/><a:ext cx=\"4572000\" cy=\"4572000\"/><a:chOff x=\"254000\" y=\"7090833\"/><a:chExt cx=\"4572000\" cy=\"4572000\"/></a:xfrm>",
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"254000\" y=\"7090833\"/><a:ext cx=\"4572000\" cy=\"4572000\"/></a:xfrm>",
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"1950732\" y=\"8759717\"/><a:ext cx=\"746283\" cy=\"539498\"/></a:xfrm>"
+    ],
+    "pictures": [
+      {
+        "media": "ppt/media/image37.png"
+      }
+    ],
+    "crops": [
+      {
+        "l": "11000",
+        "r": "18000",
+        "b": "1786"
+      }
+    ]
+  },
+  {
+    "index": 9,
+    "kind": "grpSp",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"10183866\" y=\"5473301\"/><a:ext cx=\"4572000\" cy=\"4572000\"/><a:chOff x=\"254000\" y=\"12678833\"/><a:chExt cx=\"4572000\" cy=\"4572000\"/></a:xfrm>",
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"254000\" y=\"12678833\"/><a:ext cx=\"4572000\" cy=\"4572000\"/></a:xfrm>",
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"1950732\" y=\"14347717\"/><a:ext cx=\"746283\" cy=\"539498\"/></a:xfrm>"
+    ],
+    "pictures": [
+      {
+        "media": "ppt/media/image38.png"
+      }
+    ],
+    "crops": [
+      {
+        "l": "11000",
+        "r": "18000",
+        "b": "1786"
+      }
+    ]
+  },
+  {
+    "index": 10,
+    "kind": "sp",
+    "texts": [
+      "a",
+      "    Emap2lig-Find"
+    ],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"478367\" y=\"4386362\"/><a:ext cx=\"2600071\" cy=\"384721\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 11,
+    "kind": "sp",
+    "texts": [
+      "b",
+      "    ",
+      "LigandSeek",
+      "-Find(CA2)"
+    ],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"5434066\" y=\"4386362\"/><a:ext cx=\"3810338\" cy=\"384721\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 12,
+    "kind": "sp",
+    "texts": [
+      "c",
+      "    Reference"
+    ],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"10645927\" y=\"4386362\"/><a:ext cx=\"2014975\" cy=\"384721\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 13,
+    "kind": "sp",
+    "texts": [
+      "Semantic Dice: 0.160"
+    ],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"944286\" y=\"5090079\"/><a:ext cx=\"2683427\" cy=\"338554\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 14,
+    "kind": "sp",
+    "texts": [
+      "Semantic Dice: 0.757"
+    ],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"6097585\" y=\"5077763\"/><a:ext cx=\"2683427\" cy=\"338554\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 15,
+    "kind": "sp",
+    "texts": [
+      "PDB ID: 9NVS"
+    ],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"11553749\" y=\"5067466\"/><a:ext cx=\"1832233\" cy=\"338554\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 16,
+    "kind": "sp",
+    "texts": [
+      "IoU",
+      ": 0.306"
+    ],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"4609660\" y=\"13502073\"/><a:ext cx=\"1303242\" cy=\"338554\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 17,
+    "kind": "sp",
+    "texts": [
+      " false positive"
+    ],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"1117394\" y=\"13502073\"/><a:ext cx=\"1710405\" cy=\"338554\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 18,
+    "kind": "sp",
+    "texts": [
+      "IoU",
+      ": 0.656"
+    ],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"7192323\" y=\"13502073\"/><a:ext cx=\"1303242\" cy=\"338554\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 19,
+    "kind": "cxnSp",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"1389125\" y=\"8295806\"/><a:ext cx=\"583473\" cy=\"3259859\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 20,
+    "kind": "cxnSp",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"2069874\" y=\"7681683\"/><a:ext cx=\"3191408\" cy=\"3873982\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 21,
+    "kind": "cxnSp",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"7161807\" y=\"7681683\"/><a:ext cx=\"682138\" cy=\"3873982\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  },
+  {
+    "index": 22,
+    "kind": "cxnSp",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" flipH=\"1\"><a:off x=\"10426608\" y=\"7681683\"/><a:ext cx=\"1827132\" cy=\"3873982\"/></a:xfrm>"
+    ],
+    "pictures": [],
+    "crops": []
+  }
+]

@@ -1,0 +1,91 @@
+{
+  "canvas": {
+    "width": 1000,
+    "height": 924
+  },
+  "viewport": {
+    "width": 950,
+    "height": 890
+  },
+  "layouts": {
+    "stage1-overall-performance(v1)": {
+      "unit": "EMU",
+      "shape_index_ranges": [
+        {
+          "first": 1,
+          "last": 1131,
+          "dx": 211675,
+          "dy": 0
+        },
+        {
+          "first": 1132,
+          "last": 2714,
+          "dx": -42335,
+          "dy": 0
+        },
+        {
+          "first": 2715,
+          "last": 3335,
+          "dx": 211675,
+          "dy": -501184
+        },
+        {
+          "first": 3336,
+          "last": 4323,
+          "dx": -42335,
+          "dy": -501184
+        },
+        {
+          "first": 4324,
+          "last": 4329,
+          "dx": -296905,
+          "dy": 95980
+        }
+      ],
+      "specific_shifts": {
+        "0": [
+          135467,
+          93133
+        ],
+        "1618": [
+          -8467,
+          0
+        ],
+        "3737": [
+          -8467,
+          -501184
+        ],
+        "3720": [
+          -76203,
+          -501184
+        ],
+        "1601": [
+          -76203,
+          16934
+        ]
+      },
+      "omit_shape_indices": [
+        1140,
+        1141,
+        3344,
+        3345
+      ],
+      "blank_text_indices": [
+        11,
+        12,
+        13,
+        2725,
+        2726,
+        2727
+      ],
+      "expected_source_shapes": 4330,
+      "expected_final_shapes": 4326
+    }
+  },
+  "author": {
+    "displayName": "Hongen Peng",
+    "initials": "HP",
+    "userId": "965de47efeb7ffa5",
+    "providerId": "Windows Live"
+  }
+}

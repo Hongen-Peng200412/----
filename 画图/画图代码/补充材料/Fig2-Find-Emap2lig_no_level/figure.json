@@ -1,0 +1,11 @@
+{
+  "kind": "figure",
+  "figures": [
+    "stage1-no-level-comparison-NO_LEVEL"
+  ],
+  "pptx": "画图/PPT/stage1结果.pptx",
+  "entry": "run.py",
+  "outputs": [
+    "candidate.pptx"
+  ]
+}

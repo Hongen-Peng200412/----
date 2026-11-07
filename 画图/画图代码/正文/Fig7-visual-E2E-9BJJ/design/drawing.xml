@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<p:spTree xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+  <p:nvGrpSpPr>
+    <p:cNvPr id="1" name=""/>
+    <p:cNvGrpSpPr/>
+    <p:nvPr/>
+  </p:nvGrpSpPr>
+  <p:grpSpPr>
+    <a:xfrm>
+      <a:off x="0" y="0"/>
+      <a:ext cx="0" cy="0"/>
+      <a:chOff x="0" y="0"/>
+      <a:chExt cx="0" cy="0"/>
+    </a:xfrm>
+  </p:grpSpPr>
+  <p:pic>
+    <p:nvPicPr>
+      <p:cNvPr id="3" name="图片 2">
+        <a:extLst>
+          <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+            <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{DF3B7C52-9AC5-C5EC-41CA-7FB11B6FC25D}"/>
+          </a:ext>
+        </a:extLst>
+      </p:cNvPr>
+      <p:cNvPicPr>
+        <a:picLocks/>
+      </p:cNvPicPr>
+      <p:nvPr/>
+    </p:nvPicPr>
+    <p:blipFill>
+      <a:blip r:embed="rId4">
+        <a:extLst>
+          <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+            <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+          </a:ext>
+        </a:extLst>
+      </a:blip>
+      <a:srcRect l="22116" r="14655" b="5303"/>
+      <a:stretch>
+        <a:fillRect/>
+      </a:stretch>
+    </p:blipFill>
+    <p:spPr>
+      <a:xfrm>
+        <a:off x="1191479" y="258400"/>
+        <a:ext cx="4097216" cy="4308715"/>
+      </a:xfrm>
+      <a:prstGeom prst="rect">
+        <a:avLst/>
+      </a:prstGeom>
+    </p:spPr>
+  </p:pic>
+</p:spTree>

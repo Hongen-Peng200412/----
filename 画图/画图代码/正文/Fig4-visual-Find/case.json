@@ -1,0 +1,13 @@
+{
+  "pdb": "9nvs",
+  "receptor": "CA2",
+  "condition": "Find-explicit-level-CA2",
+  "native_size": [
+    3378,
+    2442
+  ],
+  "native_window_size": [
+    1126,
+    814
+  ]
+}

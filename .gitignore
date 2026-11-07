@@ -8,12 +8,8 @@ __pycache__/
 .pytest_cache/
 .manuscript_deps/
 
-# 固定排除历史归档与各阶段的冻结元数据、生成留档。
-/画图/画图代码/archive/
-/画图/画图代码/*/output/
-/画图/草稿/
-/画图/archive/
-/画图/10-27 Emap2lig-no-level backup/
+# 采用范围内的作者会话保留在工作目录, 由服务器全面Git追溯.
+*.[cC][xX][sS]
 
 # Word、PowerPoint 临时锁文件。
 ~$*

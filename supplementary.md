@@ -8,7 +8,7 @@ To further assess detection under limited candidate counts, we measured the frac
 
 From 100% to 300%, mean completion across all ligands increased from 66.4% to 71.7% with GT receptors and from 55.6% to 63.3% with CA2 receptors. Emap2lig-Find increased from 28.5% to 31.4% over the same candidate-count range. Corresponding small-molecule changes were 70.5% to 73.3% for GT, 59.8% to 68.5% for CA2 and 46.6% to 54.9% for Emap2lig-Find. LigandSeek-Find therefore recovered more true instances under the same candidate-count limits.
 
-{{pptfig:"画图/stage1结果.pptx"|stage1-additional-analysis}}
+{{pptfig:"画图/PPT/stage1结果.pptx"|stage1-additional-analysis}}
 
 ## Ligand-region detection without a supplied contour level
 
@@ -16,7 +16,7 @@ We also evaluated Emap2lig-Find without an explicitly supplied EMDB-recommended 
 
 Without a supplied contour level, Emap2lig-Find returned an average of 353.9 candidate regions per PDB entry, compared with 14.0 ground-truth ligand instances. At a bidirectional coverage threshold of 0.3, its PDB-equal mean instance-level precision and recall were 0.037 and 0.312, respectively ({{figref:stage1-no-level-comparison-NO_LEVEL|b}}). Despite this large candidate pool, recall still remained below that of Emap2lig-Find supplied with the recommended contour level (0.316), as well as LigandSeek-Find with CA2 receptors (0.594) or GT receptors (0.688). LigandSeek-Find requires no contour-level input and thus retains the same results as in {{draft.md|figref:stage1-overall-performance(v1)}} and {{figref:stage1-additional-analysis}}. Under both conditions, particularly without a supplied contour level, Emap2lig-Find thus produced more false-positive candidates while achieving lower recall than LigandSeek-Find.
 
-{{pptfig:"画图/stage1结果.pptx"|stage1-no-level-comparison-NO_LEVEL}}
+{{pptfig:"画图/PPT/stage1结果.pptx"|stage1-no-level-comparison-NO_LEVEL}}
 
 ## Stage 1: Ablation of LigandSeek-Find
 
@@ -57,14 +57,14 @@ In addition to defining a binding pocket as a 15 Å sphere around the binding si
 
 With deposited receptors, top-1 success at RMSD < 2 Å was 62.8% for PocketXMol, 63.0% for FT-PocketXMol and 78.0% for DG-PocketXMol; with CryoAtom2 receptors, the corresponding top-1 success rates were 54.9%, 60.8% and 74.7%, respectively. Under the same RMSD < 2 Å criterion, the best-of-50 success rates of DG-PocketXMol reached 97.1% and 94.2% under the two receptor conditions, respectively. Consistently, DG-PocketXMol reduced median top-1 RMSD from 1.55 Å with PocketXMol to 1.14 Å with deposited receptors, and from 1.81 Å to 1.21 Å with CryoAtom2 receptors. Density guidance therefore improved pose reconstruction even when the input pocket was defined more tightly around the ligand.
 
-{{pptfig:"画图/stage2-stage3结果.pptx"|stage3-ablation-envelope}}
+{{pptfig:"画图/PPT/stage2-stage3结果.pptx"|stage3-ablation-envelope}}
 
 
 ## Attempt-accounting rules for end-to-end evaluation
 
 End-to-end evaluation examines candidate ligand regions in the order ranked by LigandSeek-Find. The attempt-accounting rules cover detection and identity matching across all ligand categories, and full pose reconstruction for eligible small molecules ({{figref:e2e-accounting-rules-draft}}). The same rules apply to instance completion and top-k success.
 
-{{pptfig:"画图/E2E评价计费规则.pptx"|e2e-accounting-rules-draft}}
+{{pptfig:"画图/PPT/E2E评价计费规则.pptx"|e2e-accounting-rules-draft}}
 
 
 
@@ -81,7 +81,7 @@ The small-molecule cohort contained 77 PDB entries with 446 eligible instances (
 
 We then required successful pose reconstruction with DG-PocketXMol, using binding sites predicted by Find ({{figref:e2e-topk-success|c,d}}). At RMSD <2 Å, top-1 success with CA2 receptors increased from 44.2% to 59.7% as $K$ rose from 1 to 10. With deposited receptors, the corresponding top-1 success rates increased from 57.1% to 66.2%. At $K=10$, best-of-50 success at RMSD <3 Å reached 75.3% with CA2 receptors and 76.6% with deposited receptors. Thus, the full pipeline successfully reconstructed at least one small-molecule ligand pose in most PDB entries.
 
-{{pptfig:"画图/E2E结果.pptx"|e2e-topk-success}}
+{{pptfig:"画图/PPT/E2E结果.pptx"|e2e-topk-success}}
 
 ## Find–Build comparison with correct ligand identities
 
@@ -89,11 +89,11 @@ We supplied the correct ligand identities to both pipelines to compare their com
 
 At RMSD <2 Å, increasing the budget from 100% to 300% raised Top-5 mean completion from 49.2% to 55.5% with CA2 receptors. With deposited receptors, the corresponding values were 63.3% and 63.9%, compared with 33.7% and 36.1% for Emap2lig. LigandSeek retained higher completion across both RMSD thresholds and all three pose ranges, demonstrating its combined advantage in localisation and pose reconstruction.
 
-{{pptfig:"画图/E2E结果.pptx"|supp-find-correct-match-build-emap2lig}}
+{{pptfig:"画图/PPT/E2E结果.pptx"|supp-find-correct-match-build-emap2lig}}
 
-{{pptfig:"画图/E2E结果.pptx"|supp-find-correct-match-build-ca2}}
+{{pptfig:"画图/PPT/E2E结果.pptx"|supp-find-correct-match-build-ca2}}
 
-{{pptfig:"画图/E2E结果.pptx"|supp-find-correct-match-build-gt}}
+{{pptfig:"画图/PPT/E2E结果.pptx"|supp-find-correct-match-build-gt}}
 
 ## Find–Match–Build completion with automated identity assignment
 
@@ -101,6 +101,6 @@ We next evaluated small-molecule completion with automated identity assignment a
 
 At RMSD <2 Å, Top-5 mean completion increased from 46.5% to 52.7% with CA2 receptors as the budget rose from 100% to 300%. With deposited receptors, the corresponding values were 59.4% and 60.0%. At RMSD <3 Å and a 300% budget, best-of-50 completion reached 62.8% with CA2 receptors and 66.9% with deposited receptors. Larger budgets yielded greater completion gains with CA2 receptors, while results with deposited receptors largely plateaued near the 100% budget. Automated identity assignment therefore preserved most of the completion achieved with correct identities supplied to Find–Build.
 
-{{pptfig:"画图/E2E结果.pptx"|supp-find-match-build-ca2}}
+{{pptfig:"画图/PPT/E2E结果.pptx"|supp-find-match-build-ca2}}
 
-{{pptfig:"画图/E2E结果.pptx"|supp-find-match-build-gt}}
+{{pptfig:"画图/PPT/E2E结果.pptx"|supp-find-match-build-gt}}

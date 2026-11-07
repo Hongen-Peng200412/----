@@ -49,7 +49,7 @@ We evaluated the framework on 179 complexes comprising 2,502 ligand instances. U
 
 ## Overview of LigandSeek
 
-{{pptfig:"画图/总览图.pptx"|fig-overview-topology}}
+{{pptfig:"画图/PPT/总览图.pptx"|fig-overview-topology}}
 
 LigandSeek is an automated three-stage framework that reconstructs all-atom ligand poses from experimental cryo-EM density maps ({{figref:fig-overview-topology,fig-method-color3}}). Inputs comprise an experimental cryo-EM density map, a receptor structure and candidate ligand identities represented by SMILES strings[@weininger1988smiles]. The receptor can be either a deposited structure or a model reconstructed automatically from the density map by CryoAtom2[@cryoatom2_2025], enabling automated ligand modelling without manually built receptors. Across all stages, density information is encoded as a 56-channel multi-view density bank using spatial transformations, while receptor atoms are represented by 50-dimensional features. These atom features capture element types, residue identities, physicochemical properties and local packing environments.
 
@@ -59,7 +59,7 @@ In the second stage, LigandSeek-Match (hereafter Match) assigns chemical identit
 
 In the third stage, LigandSeek-Build (hereafter Build) receives the binding site located by Find and the SMILES identity assigned by Match ({{figref:fig-method-color3|c}}). It combines these inputs with the surrounding receptor pocket and local density to reconstruct an all-atom ligand pose. Its default engine for organic small molecules, density-guided PocketXMol (DG-PocketXMol), adapts the generative model PocketXMol[@pocketxmol] through density-conditioned fine-tuning. DG-PocketXMol incorporates experimental density into pose generation, guiding ligand reconstruction to satisfy both density contours and pocket chemical constraints. Build also provides a modular interface that supports other downstream docking tools, including Vina[@trott2010vina], DiffDock[@corso2023diffdock] and EMERALD[@muenks2023emerald].
 
-{{pptfig:"画图/Method总图.pptx"|fig-method-color3}}
+{{pptfig:"画图/PPT/Method总图.pptx"|fig-method-color3}}
 
 
 
@@ -71,7 +71,7 @@ We assessed voxel-wise overlap using semantic Dice, and evaluated ligand-instanc
 
 At the voxel level, incorporating receptor information substantially improved semantic Dice ({{figref:stage1-overall-performance(v1)|a,d}}). Across all ligands, mean semantic Dice increased from 0.247 for Emap2lig-Find to 0.477 for LigandSeek-Find with CA2 receptors and 0.584 with GT receptors ({{figref:stage1-overall-performance(v1)|a}}). In the small-molecule subset, it increased from 0.356 to 0.482 for CA2 and 0.576 for GT ({{figref:stage1-overall-performance(v1)|d}}). Head-to-head comparisons of individual complexes confirmed the consistency of this voxel-level advantage across the benchmark ({{figref:stage1-overall-performance(v1)|b,e}}). With CA2 receptors, LigandSeek-Find achieved higher semantic Dice than Emap2lig-Find on 141 complexes, equal scores on 15 and lower scores on 23 across all ligands ({{figref:stage1-overall-performance(v1)|b}}). In the small-molecule subset, it achieved higher scores on 68 complexes, equal scores on 7 and lower scores on 19 ({{figref:stage1-overall-performance(v1)|e}}).
 
-{{pptfig:"画图/stage1结果.pptx"|stage1-overall-performance(v1)}}
+{{pptfig:"画图/PPT/stage1结果.pptx"|stage1-overall-performance(v1)}}
 
 At the default 0.3 coverage threshold, instance-level $\mathrm{PRAUC}$ increased from 0.269 for Emap2lig-Find to 0.541 with CA2 receptors and 0.663 with GT receptors across all ligands ({{figref:stage1-overall-performance(v1)|a}}). The advantage persisted for small molecules, with instance-level $\mathrm{PRAUC}$ reaching 0.573 for CA2 and 0.701 for GT, compared with 0.483 for Emap2lig-Find ({{figref:stage1-overall-performance(v1)|d}}). At the stricter coverage threshold of 0.5, LigandSeek-Find retained substantially higher instance-level $\mathrm{PRAUC}$ with both receptor sources across all ligands and within the small-molecule subset (Supplementary Fig. 1).
 
@@ -80,7 +80,7 @@ Without structural context from the receptor, density-only approaches must searc
 
 The advantages of our approach are clearly demonstrated in the 9NVS case ({{figref:stage1-author-global-local-9nvs(v1)}}). Globally, Emap2lig-Find produced false-positive ligand regions overlapping the receptor, whereas LigandSeek-Find with CA2 receptor context effectively avoided these artifacts (global semantic Dice, 0.757 versus 0.160 for Emap2lig-Find) ({{figref:stage1-author-global-local-9nvs(v1)|a,b}}). Locally, for the A1B32 instance identified by both methods, LigandSeek-Find aligned much more closely with the ground truth, achieving an IoU of 0.656 compared to 0.306 for Emap2lig-Find ({{figref:stage1-author-global-local-9nvs(v1)}}). Together with the internal ablation results (Supplementary Table 1), these observations demonstrate that incorporating receptor context not only helps distinguish true ligand regions from the receptor background, but also refines their spatial boundaries.
 
-{{pptfig:"画图/stage1可视化.pptx"|stage1-author-global-local-9nvs(v1)}}
+{{pptfig:"画图/PPT/stage1可视化.pptx"|stage1-author-global-local-9nvs(v1)}}
 
 ## LigandSeek accurately matches and docks ligands into ligand densities 
 To mirror realistic applications, we evaluated LigandSeek-Match and LigandSeek-Build on candidate ligand regions predicted by LigandSeek-Find, testing whether Match could assign the correct chemical identities and whether Build could reconstruct accurate poses. With deposited and CryoAtom2-reconstructed receptors, LigandSeek-Find produced 1,651 and 1,649 candidate blobs (including 1,238 and 1,160 foreground blobs) for evaluating Match. 
@@ -99,7 +99,7 @@ DG-PocketXMol achieved median top-1 RMSDs of 0.87 Å with deposited receptors an
 
 The FAD instance in 9WUP (A:1103) illustrated how receptor and density information impose complementary constraints ({{figref:stage2-stage3-results(v1)|g–i}}). PocketXMol avoided receptor clashes, but its top-1 RMSD was 3.83 Å and only 66% of heavy atoms reached the recommended density threshold. Emap2lig-Build achieved 1.79 Å RMSD and 74% density coverage, yet produced 14 clashing atom pairs with the receptor. DG-PocketXMol combined both constraints, achieving 0.52 Å RMSD and 87% density coverage without receptor clashes. Thus, receptor constraints alone did not ensure agreement with experimental density, whereas density fitting alone permitted receptor collisions. DG-PocketXMol improved docking performance by combining both constraints.
 
-{{pptfig:"画图/stage2-stage3结果.pptx"|stage2-stage3-results(v1)}}
+{{pptfig:"画图/PPT/stage2-stage3结果.pptx"|stage2-stage3-results(v1)}}
 
 ```{=openxml}
 <w:p><w:pPr><w:pageBreakBefore/><w:spacing w:before="0" w:after="0" w:line="20" w:lineRule="exact"/></w:pPr></w:p>
@@ -128,7 +128,7 @@ Replacing correct SMILES with automated identity assignment preserved most compl
 
 Find–Build curves and per-PDB distributions appear in Supplementary {{supplementary.md|figref:supp-find-correct-match-build-emap2lig,supp-find-correct-match-build-ca2,supp-find-correct-match-build-gt}}.
 
-{{pptfig:"画图/E2E结果.pptx"|e2e-main-top5(v1)}}
+{{pptfig:"画图/PPT/E2E结果.pptx"|e2e-main-top5(v1)}}
 
 ```{=openxml}
 <w:p><w:pPr><w:pageBreakBefore/><w:spacing w:before="0" w:after="0" w:line="20" w:lineRule="exact"/></w:pPr></w:p>
@@ -140,11 +140,11 @@ To illustrate the automated modelling workflow in a realistic setting, we applie
 
 Within this budget, the complete Find–Match–Build workflow correctly identified and reconstructed ten of the eleven small-molecule instances, comprising nine ATP molecules and one A1AP0 molecule. The model-ranked top-1 poses achieved heavy-atom RMSDs of 0.50–1.12 Å, with eight of the ten recovered instances reaching sub-ångström accuracy. In total, the pipeline returned 11 top-1 ligand poses, including one additional ATP prediction in a background region; one A1AP0 instance remained unrecovered.
 
-{{pptfig:"画图/全流程小分子案例_作者9BJJ.pptx"|full-pipeline-small-molecule-author-9bjj}}
+{{pptfig:"画图/PPT/全流程小分子案例_作者9BJJ.pptx"|full-pipeline-small-molecule-author-9bjj}}
 
 We also applied the same workflow to 9UJF, which contains ten eligible GTP instances ({{figref:full-pipeline-small-molecule-author-9ujf-v2}}). With a 100% attempt budget of ten counted attempts, LigandSeek correctly identified and reconstructed all ten instances. All ten model-ranked top-1 poses achieved sub-ångström accuracy, with heavy-atom RMSDs of 0.54–0.80 Å.
 
-{{pptfig:"画图/全流程小分子案例_作者9UJF.pptx"|full-pipeline-small-molecule-author-9ujf-v2}}
+{{pptfig:"画图/PPT/全流程小分子案例_作者9UJF.pptx"|full-pipeline-small-molecule-author-9ujf-v2}}
 
 Together, these examples demonstrate automated identification and accurate reconstruction of multiple small-molecule instances in large complexes using CryoAtom2-reconstructed receptors.
 
@@ -172,7 +172,7 @@ For Build, we compared three models on the full test set of 446 eligible small-m
 
 PocketXMol provides two pocket definitions for docking: the Envelope pocket and the Centre pocket. The Envelope pocket includes all atoms of a receptor residue if at least one of its atoms lies within 10 Å of any ligand atom, which incorporates more prior spatial information. The Centre pocket includes all receptor atoms within a 15 Å sphere centred on the binding site. Consistent with our goal of automated ligand modelling in complete density maps, all main-text results for PocketXMol and its variants use Centre pockets. Results and analyses for the Envelope pocket are provided in the Supplementary Information.
 
-{{pptfig:"画图/stage2-stage3结果.pptx"|stage2-stage3-ablation-centre(v1)}}
+{{pptfig:"画图/PPT/stage2-stage3结果.pptx"|stage2-stage3-ablation-centre(v1)}}
 
 ```{=openxml}
 <w:p><w:pPr><w:pageBreakBefore/><w:spacing w:before="0" w:after="0" w:line="20" w:lineRule="exact"/></w:pPr></w:p>

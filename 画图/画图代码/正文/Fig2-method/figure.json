@@ -1,0 +1,11 @@
+{
+  "kind": "figure",
+  "figures": [
+    "fig-method-color3"
+  ],
+  "pptx": "画图/PPT/Method总图.pptx",
+  "entry": "run.py",
+  "outputs": [
+    "candidate.pptx"
+  ]
+}

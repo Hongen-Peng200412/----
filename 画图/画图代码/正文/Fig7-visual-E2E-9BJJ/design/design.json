@@ -1,0 +1,13 @@
+{
+  "figure": "full-pipeline-small-molecule-author-9bjj",
+  "page_part": "ppt/slides/slide1.xml",
+  "source_page": 1,
+  "author_design_origin": "画图/PPT/全流程小分子案例_作者9BJJ.pptx @@full-pipeline-small-molecule-author-9bjj",
+  "source_pptx_sha256": "fbe6ff797588f2accff828135b42b617a1516d0ac5e988b3d42fbf8f1d95020e",
+  "role": "作者已采用显示原件及透明原生布局, 不是科学坐标或评价真值",
+  "package_files": 45,
+  "native_objects": 1,
+  "native_sessions": [
+    "画图/古法Chimera/E2E/9bjj/author04.cxs"
+  ]
+}

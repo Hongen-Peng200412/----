@@ -1,0 +1,16 @@
+{
+  "pdb": "9bjj",
+  "receptor": "CA2",
+  "condition": "controlled-test0-CA2",
+  "budget_percent": 100,
+  "pose": "model Top-1",
+  "rmsd_cutoff_A": 2,
+  "expected_success_count": 10,
+  "expected_target_count": 11,
+  "native_size": [
+    6000,
+    4213
+  ],
+  "native_window_size": null,
+  "workbench_adapter": "画图/画图代码/正文/Fig7-visual-E2E-9BJJ/workbench/adapter.py"
+}

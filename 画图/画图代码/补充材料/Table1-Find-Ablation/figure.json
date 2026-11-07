@@ -1,0 +1,10 @@
+{
+  "kind": "table",
+  "figures": [],
+  "table": "Table1",
+  "entry": "run.py",
+  "outputs": [
+    "table.csv",
+    "table.md"
+  ]
+}

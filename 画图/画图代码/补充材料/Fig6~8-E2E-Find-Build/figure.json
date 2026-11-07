@@ -1,0 +1,13 @@
+{
+  "kind": "figure",
+  "figures": [
+    "supp-find-correct-match-build-emap2lig",
+    "supp-find-correct-match-build-ca2",
+    "supp-find-correct-match-build-gt"
+  ],
+  "pptx": "画图/PPT/E2E结果.pptx",
+  "entry": "run.py",
+  "outputs": [
+    "candidate.pptx"
+  ]
+}

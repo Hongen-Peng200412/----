@@ -1,0 +1,24 @@
+[
+  {
+    "index": 2,
+    "kind": "pic",
+    "texts": [],
+    "native_xml_source": "drawing.xml",
+    "transforms": [
+      "<a:xfrm xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\"><a:off x=\"1574800\" y=\"195262\"/><a:ext cx=\"3727450\" cy=\"4273550\"/></a:xfrm>"
+    ],
+    "pictures": [
+      {
+        "media": "ppt/media/image2.png"
+      }
+    ],
+    "crops": [
+      {
+        "l": "28747",
+        "t": "2860",
+        "r": "13724",
+        "b": "5513"
+      }
+    ]
+  }
+]

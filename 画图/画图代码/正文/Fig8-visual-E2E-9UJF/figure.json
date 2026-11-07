@@ -1,0 +1,11 @@
+{
+  "kind": "figure",
+  "figures": [
+    "full-pipeline-small-molecule-author-9ujf-v2"
+  ],
+  "pptx": "画图/PPT/全流程小分子案例_作者9UJF.pptx",
+  "entry": "run.py",
+  "outputs": [
+    "candidate.pptx"
+  ]
+}

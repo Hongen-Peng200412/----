@@ -1,0 +1,11 @@
+{
+  "kind": "figure",
+  "figures": [
+    "e2e-accounting-rules-draft"
+  ],
+  "pptx": "画图/PPT/E2E评价计费规则.pptx",
+  "entry": "run.py",
+  "outputs": [
+    "candidate.pptx"
+  ]
+}

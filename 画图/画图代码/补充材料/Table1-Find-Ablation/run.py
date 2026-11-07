@@ -1,0 +1,33 @@
+"""本目录图表的短命令入口; 只解析本次输出位置并调用正式构造函数."""
+
+from pathlib import Path
+from datetime import datetime, timezone
+import argparse
+import os
+import sys
+
+ROOT = Path(__file__).resolve().parents[4]
+sys.path.insert(0, str(ROOT))
+from TOOLS.runtime.paths import configure_runtime, load_module
+
+configure_runtime(ROOT)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--build", type=Path)
+    args = parser.parse_args()
+    output = (
+        args.build
+        if args.build
+        else ROOT
+        / "temp/figure-build"
+        / Path(__file__).parent.name
+        / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    ).resolve()
+    output.relative_to(ROOT / "temp")
+    if output.exists() and any(output.iterdir()):
+        raise FileExistsError("本图只使用新的空构建目录: " + str(output))
+    os.environ["MPLCONFIGDIR"] = str(output / "matplotlib")
+    module = load_module(Path(__file__).with_name("build.py"), "figure_build")
+    result = module.build(output)
+    print(output)

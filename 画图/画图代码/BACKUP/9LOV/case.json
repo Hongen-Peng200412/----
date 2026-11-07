@@ -1,0 +1,41 @@
+{
+  "pdb": "9lov",
+  "receptor": "CA2",
+  "condition": "controlled-test0-CA2",
+  "budget_percent": 100,
+  "pose": "model Top-1",
+  "rmsd_cutoff_A": 2,
+  "expected_success_count": 3,
+  "expected_target_count": 3,
+  "native_size": [
+    2400,
+    1900
+  ],
+  "native_window_size": null,
+  "display": {
+    "camera_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        118.62950134277344
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        124.60399627685547
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        371.88797772958776
+      ]
+    ],
+    "field_width": 184.48443171953912,
+    "camera": "ortho",
+    "image_width": 2400,
+    "image_height": 1900
+  }
+}

@@ -1,0 +1,4815 @@
+{
+  "canvas": [
+    6591300,
+    8640763
+  ],
+  "styles": [
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:endParaRPr lang=\"zh-CN\" altLang=\"en-US\" dirty=\"0\"/></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"6074\"><a:solidFill><a:srgbClr val=\"94A3B8\"/></a:solidFill><a:prstDash val=\"sysDot\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:ln w=\"10160\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"521\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"521\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Relative attempt budget (%)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"3712\"><a:solidFill><a:srgbClr val=\"E3E9ED\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"r\"/><a:r><a:rPr lang=\"en-US\" sz=\"521\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm rot=\"16200000\"><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"521\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Per-PDB mean completion (%)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"4724\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"600\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>a</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"5A6B78\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}% budget</a:t></a:r><a:r><a:rPr lang=\"en-US\" altLang=\"zh-CN\" sz=\"510\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"5A6B78\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>(1× true count)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"574\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>All ligands: detection(Find) and identification(Match)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10797\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"14846\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10797\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"14846\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"11810\"><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"6411\"><a:solidFill><a:srgbClr val=\"0D8A82\"><a:alpha val=\"85000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"0D8A82\"><a:alpha val=\"85000\"/></a:srgbClr></a:solidFill><a:ln w=\"6074\"><a:solidFill><a:srgbClr val=\"0D8A82\"><a:alpha val=\"85000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"6411\"><a:solidFill><a:srgbClr val=\"4860B8\"><a:alpha val=\"85000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"4860B8\"><a:alpha val=\"85000\"/></a:srgbClr></a:solidFill><a:ln w=\"6074\"><a:solidFill><a:srgbClr val=\"4860B8\"><a:alpha val=\"85000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"6411\"><a:solidFill><a:srgbClr val=\"9A6324\"><a:alpha val=\"85000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"9A6324\"><a:alpha val=\"85000\"/></a:srgbClr></a:solidFill><a:ln w=\"6074\"><a:solidFill><a:srgbClr val=\"9A6324\"><a:alpha val=\"85000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"><a:alpha val=\"94000\"/></a:srgbClr></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"E2E8F0\"><a:alpha val=\"94000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"13497\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Find + Match</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10797\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"8773\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Find only</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"1F77B4\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"8773\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"FF7F0E\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"2CA02C\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"D62728\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"9467BD\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:ln w=\"8773\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"8C564B\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"E377C2\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"7F7F7F\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"BCBD22\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"8773\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"17BECF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:ln w=\"8773\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"8773\"><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"F8FAFC\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"F8FAFC\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"521\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"521\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Per-PDB mean completion (%)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm rot=\"19680000\"><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Emap{value:0}lig</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm rot=\"19680000\"><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>LigandSeek (CA{value:0})</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm rot=\"19680000\"><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>LigandSeek (GT)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm rot=\"19680000\"><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\" dirty=\"0\" err=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>LigandSeek</a:t></a:r><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t> (CA{value:0})</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"64748B\"/></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"600\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>b</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>RMSD &lt; {value:0} Å</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"17546\"><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"r\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\"><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\"><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"13497\"><a:solidFill><a:srgbClr val=\"C49358\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"r\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"C49358\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"C49358\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"17546\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"r\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"13497\"><a:solidFill><a:srgbClr val=\"8294DF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"r\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"8294DF\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"8294DF\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"17546\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"r\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"13497\"><a:solidFill><a:srgbClr val=\"58B8B1\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"r\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"58B8B1\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"58B8B1\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"574\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Small molecules: detection(Find) and pose reconstruction(Build)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"10797\"><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"C49358\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"10797\"><a:solidFill><a:srgbClr val=\"C49358\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"10797\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"8294DF\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"10797\"><a:solidFill><a:srgbClr val=\"8294DF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"10797\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"58B8B1\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"10797\"><a:solidFill><a:srgbClr val=\"58B8B1\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"><a:alpha val=\"95000\"/></a:srgbClr></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"E2E8F0\"><a:alpha val=\"95000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"16871\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}% budget</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"13497\"><a:solidFill><a:srgbClr val=\"8896A6\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"000000\"><a:alpha val=\"0\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Top{value:0} pose</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:ln w=\"10123\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Top{value:0} poses</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Find</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>only</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Find +</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Match</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>E{value:0}E</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>(&lt;{value:0} Å)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"600\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>c</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}% attempt budget</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}% attempt budget</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"AEBCEF\"><a:alpha val=\"42000\"/></a:srgbClr></a:solidFill><a:ln w=\"7423\"><a:solidFill><a:srgbClr val=\"4860B8\"><a:alpha val=\"42000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:ln w=\"3374\"><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"AEBCEF\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"574\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Small molecules: automated end-to-end modelling(CA2)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"sysDot\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\"><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Top{value:0} pose</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"AEBCEF\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Top{value:0} poses</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"600\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>d</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"94D4CF\"><a:alpha val=\"42000\"/></a:srgbClr></a:solidFill><a:ln w=\"7423\"><a:solidFill><a:srgbClr val=\"0D8A82\"><a:alpha val=\"42000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:ln w=\"3374\"><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"94D4CF\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"ctr\"/><a:r><a:rPr lang=\"en-US\" sz=\"510\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>{value:0}%</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"94D4CF\"><a:alpha val=\"42000\"/></a:srgbClr></a:solidFill><a:ln w=\"7423\"><a:solidFill><a:srgbClr val=\"0D8A82\"><a:alpha val=\"42000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"dash\"/></a:ln></p:spPr><p:txBody><a:bodyPr/><a:lstStyle/><a:p><a:endParaRPr lang=\"zh-CN\" altLang=\"en-US\" dirty=\"0\"/></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"574\" b=\"1\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Small molecules: automated end-to-end modelling(GT)</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"sysDot\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"FFFFFF\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"94D4CF\"/></a:solidFill><a:ln w=\"6748\"><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"F8FAFC\"><a:alpha val=\"80000\"/></a:srgbClr></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"CBD5E1\"><a:alpha val=\"80000\"/></a:srgbClr></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"9A6324\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>Emap{value:0}lig </a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"4860B8\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\" dirty=\"0\" err=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>LigandSeek</a:t></a:r><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t> (CA{value:0})</a:t></a:r></a:p></p:txBody></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr><a:spLocks/></p:cNvSpPr><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:solidFill><a:srgbClr val=\"0D8A82\"/></a:solidFill><a:ln w=\"4049\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:prstDash val=\"solid\"/></a:ln></p:spPr></p:sp>",
+    "<p:sp xmlns:p=\"http://schemas.openxmlformats.org/presentationml/2006/main\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><p:nvSpPr><p:cNvPr id=\"0\" name=\"{name}\"/><p:cNvSpPr txBox=\"1\"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x=\"0\" y=\"0\"/><a:ext cx=\"0\" cy=\"0\"/></a:xfrm><a:noFill/><a:ln w=\"0\"><a:noFill/></a:ln></p:spPr><p:txBody><a:bodyPr wrap=\"none\" lIns=\"0\" tIns=\"0\" rIns=\"0\" bIns=\"0\" anchor=\"ctr\"><a:noAutofit/></a:bodyPr><a:lstStyle/><a:p><a:pPr algn=\"l\"/><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\" dirty=\"0\" err=\"1\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t>LigandSeek</a:t></a:r><a:r><a:rPr lang=\"en-US\" sz=\"550\" b=\"0\" dirty=\"0\"><a:solidFill><a:srgbClr val=\"243442\"/></a:solidFill><a:latin typeface=\"Arial\"/><a:ea typeface=\"Arial\"/><a:cs typeface=\"Arial\"/></a:rPr><a:t> (GT)</a:t></a:r></a:p></p:txBody></p:sp>"
+  ],
+  "pages": [
+    {
+      "id": "e2e-main-top5(v1)",
+      "nodes": [
+        {
+          "name": "data_10",
+          "delta": [
+            428934,
+            2303962,
+            0,
+            0
+          ],
+          "style": 0
+        },
+        {
+          "name": "data_11",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 1
+        },
+        {
+          "name": "data_12",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 2
+        },
+        {
+          "name": "tick_13",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_14",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 4
+        },
+        {
+          "name": "tick_15",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_16",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 4
+        },
+        {
+          "name": "tick_17",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_18",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 4
+        },
+        {
+          "name": "tick_19",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_20",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 4
+        },
+        {
+          "name": "tick_21",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_22",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 4
+        },
+        {
+          "name": "text_23",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 5
+        },
+        {
+          "name": "data_24",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_25",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_26",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_27",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_28",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_29",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_30",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_31",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_32",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_33",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_34",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_35",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_36",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_37",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_38",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_39",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_40",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_41",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_42",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_43",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_44",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_45",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_46",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_47",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_48",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_49",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_50",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "text_51",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 8
+        },
+        {
+          "name": "data_52",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 9
+        },
+        {
+          "name": "data_53",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 9
+        },
+        {
+          "name": "text_54",
+          "delta": [
+            454332,
+            2329360,
+            0,
+            0
+          ],
+          "style": 10
+        },
+        {
+          "name": "text_55",
+          "delta": [
+            809804,
+            2303962,
+            0,
+            0
+          ],
+          "style": 11
+        },
+        {
+          "name": "text_56",
+          "delta": [
+            809804,
+            2303962,
+            0,
+            0
+          ],
+          "style": 12
+        },
+        {
+          "name": "text_57",
+          "delta": [
+            809804,
+            2303962,
+            0,
+            0
+          ],
+          "style": 13
+        },
+        {
+          "name": "text_58",
+          "delta": [
+            809804,
+            2303962,
+            0,
+            0
+          ],
+          "style": 14
+        },
+        {
+          "name": "text_59",
+          "delta": [
+            809804,
+            2303962,
+            0,
+            0
+          ],
+          "style": 15
+        },
+        {
+          "name": "text_60",
+          "delta": [
+            555891,
+            2306954,
+            621834,
+            -2993
+          ],
+          "style": 16
+        },
+        {
+          "name": "text_62",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 17
+        },
+        {
+          "name": "data_64",
+          "delta": [
+            454332,
+            2303962,
+            304676,
+            0
+          ],
+          "style": 18
+        },
+        {
+          "name": "data_65",
+          "delta": [
+            454332,
+            2303962,
+            304676,
+            0
+          ],
+          "style": 19
+        },
+        {
+          "name": "data_66",
+          "delta": [
+            454332,
+            2303962,
+            304676,
+            0
+          ],
+          "style": 20
+        },
+        {
+          "name": "data_67",
+          "delta": [
+            454332,
+            2303962,
+            304676,
+            0
+          ],
+          "style": 21
+        },
+        {
+          "name": "data_68",
+          "delta": [
+            454332,
+            2303962,
+            304676,
+            0
+          ],
+          "style": 22
+        },
+        {
+          "name": "data_69",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 23
+        },
+        {
+          "name": "tick_70",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "tick_71",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "data_72",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 23
+        },
+        {
+          "name": "tick_73",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "tick_74",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "data_75",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 23
+        },
+        {
+          "name": "tick_76",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "tick_77",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "data_78",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 23
+        },
+        {
+          "name": "tick_79",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "tick_80",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "data_81",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 23
+        },
+        {
+          "name": "tick_82",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "tick_83",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "data_84",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 23
+        },
+        {
+          "name": "tick_85",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "tick_86",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 24
+        },
+        {
+          "name": "data_87",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 25
+        },
+        {
+          "name": "tick_88",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "tick_89",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "data_90",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 25
+        },
+        {
+          "name": "tick_91",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "tick_92",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "data_93",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 25
+        },
+        {
+          "name": "tick_94",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "tick_95",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "data_96",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 25
+        },
+        {
+          "name": "tick_97",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "tick_98",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "data_99",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 25
+        },
+        {
+          "name": "tick_100",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "tick_101",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "data_102",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 25
+        },
+        {
+          "name": "tick_103",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "tick_104",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 26
+        },
+        {
+          "name": "data_105",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 27
+        },
+        {
+          "name": "tick_106",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 28
+        },
+        {
+          "name": "tick_107",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 28
+        },
+        {
+          "name": "data_108",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 27
+        },
+        {
+          "name": "tick_109",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 28
+        },
+        {
+          "name": "tick_110",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 28
+        },
+        {
+          "name": "data_111",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 27
+        },
+        {
+          "name": "tick_112",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 28
+        },
+        {
+          "name": "tick_113",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 28
+        },
+        {
+          "name": "data_114",
+          "delta": [
+            454333,
+            2303962,
+            -551241,
+            0
+          ],
+          "style": 29
+        },
+        {
+          "name": "data_115",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 30
+        },
+        {
+          "name": "marker_116",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 31
+        },
+        {
+          "name": "text_117",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 32
+        },
+        {
+          "name": "data_118",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 33
+        },
+        {
+          "name": "marker_119",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 34
+        },
+        {
+          "name": "text_120",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 35
+        },
+        {
+          "name": "data_121",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 36
+        },
+        {
+          "name": "marker_122",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 37
+        },
+        {
+          "name": "data_123",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 38
+        },
+        {
+          "name": "marker_124",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 37
+        },
+        {
+          "name": "data_125",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 39
+        },
+        {
+          "name": "marker_126",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 37
+        },
+        {
+          "name": "data_127",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 40
+        },
+        {
+          "name": "marker_128",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 37
+        },
+        {
+          "name": "data_129",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 41
+        },
+        {
+          "name": "marker_130",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 42
+        },
+        {
+          "name": "data_131",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 43
+        },
+        {
+          "name": "marker_132",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 42
+        },
+        {
+          "name": "data_133",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 44
+        },
+        {
+          "name": "marker_134",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 42
+        },
+        {
+          "name": "data_135",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 45
+        },
+        {
+          "name": "marker_136",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 42
+        },
+        {
+          "name": "data_137",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 46
+        },
+        {
+          "name": "marker_138",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 47
+        },
+        {
+          "name": "data_139",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 48
+        },
+        {
+          "name": "marker_140",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 47
+        },
+        {
+          "name": "data_141",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 36
+        },
+        {
+          "name": "marker_142",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 47
+        },
+        {
+          "name": "data_143",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 38
+        },
+        {
+          "name": "marker_144",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 47
+        },
+        {
+          "name": "data_145",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 39
+        },
+        {
+          "name": "marker_146",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 49
+        },
+        {
+          "name": "data_147",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 40
+        },
+        {
+          "name": "marker_148",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 49
+        },
+        {
+          "name": "data_149",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 41
+        },
+        {
+          "name": "marker_150",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 49
+        },
+        {
+          "name": "data_151",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 43
+        },
+        {
+          "name": "marker_152",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 49
+        },
+        {
+          "name": "data_153",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 44
+        },
+        {
+          "name": "marker_154",
+          "delta": [
+            505111,
+            2303962,
+            0,
+            0
+          ],
+          "style": 50
+        },
+        {
+          "name": "data_155",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 45
+        },
+        {
+          "name": "marker_156",
+          "delta": [
+            555891,
+            2303962,
+            0,
+            0
+          ],
+          "style": 50
+        },
+        {
+          "name": "data_157",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 46
+        },
+        {
+          "name": "marker_158",
+          "delta": [
+            657449,
+            2303962,
+            0,
+            0
+          ],
+          "style": 50
+        },
+        {
+          "name": "data_159",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 48
+        },
+        {
+          "name": "marker_160",
+          "delta": [
+            759008,
+            2303962,
+            0,
+            0
+          ],
+          "style": 50
+        },
+        {
+          "name": "data_161",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 0
+        },
+        {
+          "name": "data_162",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 51
+        },
+        {
+          "name": "data_163",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_164",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_165",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 52
+        },
+        {
+          "name": "data_166",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_167",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_168",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 52
+        },
+        {
+          "name": "data_169",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_170",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_171",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 52
+        },
+        {
+          "name": "data_172",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_173",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_174",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 52
+        },
+        {
+          "name": "data_175",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_176",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_177",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 52
+        },
+        {
+          "name": "data_178",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_179",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_180",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 52
+        },
+        {
+          "name": "data_181",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_182",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_183",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 52
+        },
+        {
+          "name": "data_184",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_185",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_186",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 52
+        },
+        {
+          "name": "data_187",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_188",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_189",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 52
+        },
+        {
+          "name": "text_190",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 53
+        },
+        {
+          "name": "tick_191",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_192",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 54
+        },
+        {
+          "name": "tick_193",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_194",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 55
+        },
+        {
+          "name": "tick_195",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_196",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 56
+        },
+        {
+          "name": "tick_197",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_198",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 54
+        },
+        {
+          "name": "tick_199",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_200",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 57
+        },
+        {
+          "name": "tick_201",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_202",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 56
+        },
+        {
+          "name": "data_203",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 58
+        },
+        {
+          "name": "data_204",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 9
+        },
+        {
+          "name": "data_205",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 9
+        },
+        {
+          "name": "text_206",
+          "delta": [
+            301944,
+            2329360,
+            0,
+            0
+          ],
+          "style": 59
+        },
+        {
+          "name": "text_207",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 60
+        },
+        {
+          "name": "text_208",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 60
+        },
+        {
+          "name": "data_209",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 61
+        },
+        {
+          "name": "text_210",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 62
+        },
+        {
+          "name": "text_211",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 63
+        },
+        {
+          "name": "data_212",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 64
+        },
+        {
+          "name": "text_213",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 65
+        },
+        {
+          "name": "text_214",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 66
+        },
+        {
+          "name": "data_215",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 67
+        },
+        {
+          "name": "text_216",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 68
+        },
+        {
+          "name": "text_217",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 69
+        },
+        {
+          "name": "data_218",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 70
+        },
+        {
+          "name": "text_219",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 71
+        },
+        {
+          "name": "text_220",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 72
+        },
+        {
+          "name": "data_221",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 73
+        },
+        {
+          "name": "text_222",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 74
+        },
+        {
+          "name": "text_223",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 75
+        },
+        {
+          "name": "data_224",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 76
+        },
+        {
+          "name": "text_225",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 77
+        },
+        {
+          "name": "text_226",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 78
+        },
+        {
+          "name": "data_227",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 61
+        },
+        {
+          "name": "text_228",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 62
+        },
+        {
+          "name": "text_229",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 63
+        },
+        {
+          "name": "data_230",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 64
+        },
+        {
+          "name": "text_231",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 65
+        },
+        {
+          "name": "text_232",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 66
+        },
+        {
+          "name": "data_233",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 67
+        },
+        {
+          "name": "text_234",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 68
+        },
+        {
+          "name": "text_235",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 69
+        },
+        {
+          "name": "data_236",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 70
+        },
+        {
+          "name": "text_237",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 71
+        },
+        {
+          "name": "text_238",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 72
+        },
+        {
+          "name": "data_239",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 73
+        },
+        {
+          "name": "text_240",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 74
+        },
+        {
+          "name": "text_241",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 75
+        },
+        {
+          "name": "data_242",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 76
+        },
+        {
+          "name": "text_243",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 77
+        },
+        {
+          "name": "text_244",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 78
+        },
+        {
+          "name": "text_245",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 79
+        },
+        {
+          "name": "data_247",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 36
+        },
+        {
+          "name": "marker_248",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 80
+        },
+        {
+          "name": "data_249",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 38
+        },
+        {
+          "name": "marker_250",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 81
+        },
+        {
+          "name": "data_251",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 39
+        },
+        {
+          "name": "marker_252",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 82
+        },
+        {
+          "name": "data_253",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 40
+        },
+        {
+          "name": "marker_254",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 83
+        },
+        {
+          "name": "data_255",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 41
+        },
+        {
+          "name": "marker_256",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 84
+        },
+        {
+          "name": "data_257",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 43
+        },
+        {
+          "name": "marker_258",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 85
+        },
+        {
+          "name": "data_259",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 44
+        },
+        {
+          "name": "marker_260",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 86
+        },
+        {
+          "name": "data_261",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 45
+        },
+        {
+          "name": "marker_262",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 87
+        },
+        {
+          "name": "data_263",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 46
+        },
+        {
+          "name": "marker_264",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 88
+        },
+        {
+          "name": "data_265",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 48
+        },
+        {
+          "name": "marker_266",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 89
+        },
+        {
+          "name": "data_267",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 36
+        },
+        {
+          "name": "marker_268",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 90
+        },
+        {
+          "name": "data_269",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 38
+        },
+        {
+          "name": "marker_270",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 91
+        },
+        {
+          "name": "data_271",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 39
+        },
+        {
+          "name": "marker_272",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 80
+        },
+        {
+          "name": "data_273",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 40
+        },
+        {
+          "name": "marker_274",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 81
+        },
+        {
+          "name": "data_275",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 41
+        },
+        {
+          "name": "marker_276",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 82
+        },
+        {
+          "name": "data_277",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 43
+        },
+        {
+          "name": "marker_278",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 83
+        },
+        {
+          "name": "data_279",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 44
+        },
+        {
+          "name": "marker_280",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 84
+        },
+        {
+          "name": "data_281",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 45
+        },
+        {
+          "name": "marker_282",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 85
+        },
+        {
+          "name": "data_283",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 46
+        },
+        {
+          "name": "marker_284",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 86
+        },
+        {
+          "name": "data_285",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 48
+        },
+        {
+          "name": "marker_286",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 87
+        },
+        {
+          "name": "data_287",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 36
+        },
+        {
+          "name": "marker_288",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 88
+        },
+        {
+          "name": "data_289",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 38
+        },
+        {
+          "name": "marker_290",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 89
+        },
+        {
+          "name": "data_291",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 39
+        },
+        {
+          "name": "marker_292",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 90
+        },
+        {
+          "name": "data_293",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 40
+        },
+        {
+          "name": "marker_294",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 91
+        },
+        {
+          "name": "data_295",
+          "delta": [
+            301944,
+            2303962,
+            -300639,
+            0
+          ],
+          "style": 92
+        },
+        {
+          "name": "data_296",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 93
+        },
+        {
+          "name": "text_297",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 94
+        },
+        {
+          "name": "data_298",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 95
+        },
+        {
+          "name": "text_299",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 94
+        },
+        {
+          "name": "data_300",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 96
+        },
+        {
+          "name": "marker_301",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 31
+        },
+        {
+          "name": "text_302",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 97
+        },
+        {
+          "name": "data_303",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 96
+        },
+        {
+          "name": "marker_304",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 98
+        },
+        {
+          "name": "text_305",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 99
+        },
+        {
+          "name": "data_306",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 0
+        },
+        {
+          "name": "data_307",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 51
+        },
+        {
+          "name": "tick_308",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_309",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 100
+        },
+        {
+          "name": "text_310",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 101
+        },
+        {
+          "name": "tick_311",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_312",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 102
+        },
+        {
+          "name": "text_313",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 103
+        },
+        {
+          "name": "tick_314",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_315",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 104
+        },
+        {
+          "name": "text_316",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 105
+        },
+        {
+          "name": "tick_317",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_318",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 104
+        },
+        {
+          "name": "text_319",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 105
+        },
+        {
+          "name": "tick_320",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_321",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 100
+        },
+        {
+          "name": "text_322",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 101
+        },
+        {
+          "name": "tick_323",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_324",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 102
+        },
+        {
+          "name": "text_325",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 103
+        },
+        {
+          "name": "tick_326",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_327",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 104
+        },
+        {
+          "name": "text_328",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 105
+        },
+        {
+          "name": "tick_329",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_330",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 104
+        },
+        {
+          "name": "text_331",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 105
+        },
+        {
+          "name": "data_332",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_333",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_334",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_335",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_336",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_337",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_338",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_339",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_340",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_341",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_342",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_343",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_344",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_345",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_346",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_347",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_348",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_349",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "text_350",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 8
+        },
+        {
+          "name": "data_351",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 58
+        },
+        {
+          "name": "data_352",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 9
+        },
+        {
+          "name": "data_353",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 9
+        },
+        {
+          "name": "text_354",
+          "delta": [
+            454332,
+            2359347,
+            0,
+            0
+          ],
+          "style": 106
+        },
+        {
+          "name": "text_355",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 107
+        },
+        {
+          "name": "text_356",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 108
+        },
+        {
+          "name": "data_357",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 109
+        },
+        {
+          "name": "text_358",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 110
+        },
+        {
+          "name": "data_359",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 109
+        },
+        {
+          "name": "text_360",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 110
+        },
+        {
+          "name": "data_361",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 111
+        },
+        {
+          "name": "data_362",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 112
+        },
+        {
+          "name": "text_363",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 113
+        },
+        {
+          "name": "data_364",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 111
+        },
+        {
+          "name": "data_365",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 112
+        },
+        {
+          "name": "text_366",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 113
+        },
+        {
+          "name": "data_367",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 109
+        },
+        {
+          "name": "text_368",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 110
+        },
+        {
+          "name": "data_369",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 109
+        },
+        {
+          "name": "text_370",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 110
+        },
+        {
+          "name": "data_371",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 111
+        },
+        {
+          "name": "data_372",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 112
+        },
+        {
+          "name": "text_373",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 114
+        },
+        {
+          "name": "data_374",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 111
+        },
+        {
+          "name": "data_375",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 112
+        },
+        {
+          "name": "text_376",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 113
+        },
+        {
+          "name": "text_377",
+          "delta": [
+            454332,
+            2343356,
+            0,
+            0
+          ],
+          "style": 115
+        },
+        {
+          "name": "data_379",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 116
+        },
+        {
+          "name": "data_380",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 116
+        },
+        {
+          "name": "text_381",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 117
+        },
+        {
+          "name": "text_382",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 117
+        },
+        {
+          "name": "text_383",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 117
+        },
+        {
+          "name": "text_384",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 117
+        },
+        {
+          "name": "data_385",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 92
+        },
+        {
+          "name": "data_386",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 118
+        },
+        {
+          "name": "text_387",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 119
+        },
+        {
+          "name": "data_388",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 120
+        },
+        {
+          "name": "text_389",
+          "delta": [
+            454332,
+            2303962,
+            0,
+            0
+          ],
+          "style": 121
+        },
+        {
+          "name": "data_390",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 0
+        },
+        {
+          "name": "data_391",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 51
+        },
+        {
+          "name": "tick_392",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_393",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 100
+        },
+        {
+          "name": "text_394",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 101
+        },
+        {
+          "name": "tick_395",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_396",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 102
+        },
+        {
+          "name": "text_397",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 103
+        },
+        {
+          "name": "tick_398",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_399",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 104
+        },
+        {
+          "name": "text_400",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 105
+        },
+        {
+          "name": "tick_401",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_402",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 104
+        },
+        {
+          "name": "text_403",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 105
+        },
+        {
+          "name": "tick_404",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_405",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 100
+        },
+        {
+          "name": "text_406",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 101
+        },
+        {
+          "name": "tick_407",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_408",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 102
+        },
+        {
+          "name": "text_409",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 103
+        },
+        {
+          "name": "tick_410",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_411",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 104
+        },
+        {
+          "name": "text_412",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 105
+        },
+        {
+          "name": "tick_413",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_414",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 104
+        },
+        {
+          "name": "text_415",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 105
+        },
+        {
+          "name": "data_416",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_417",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_418",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_419",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_420",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_421",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_422",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_423",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_424",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_425",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_426",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_427",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_428",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_429",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_430",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "data_431",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 6
+        },
+        {
+          "name": "tick_432",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 3
+        },
+        {
+          "name": "text_433",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 7
+        },
+        {
+          "name": "text_434",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 8
+        },
+        {
+          "name": "data_435",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 58
+        },
+        {
+          "name": "data_436",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 9
+        },
+        {
+          "name": "data_437",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 9
+        },
+        {
+          "name": "text_438",
+          "delta": [
+            301944,
+            2359347,
+            0,
+            0
+          ],
+          "style": 122
+        },
+        {
+          "name": "text_439",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 108
+        },
+        {
+          "name": "text_440",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 108
+        },
+        {
+          "name": "data_441",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 123
+        },
+        {
+          "name": "text_442",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 110
+        },
+        {
+          "name": "data_443",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 123
+        },
+        {
+          "name": "text_444",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 110
+        },
+        {
+          "name": "data_445",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 124
+        },
+        {
+          "name": "data_446",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 125
+        },
+        {
+          "name": "text_447",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 126
+        },
+        {
+          "name": "data_448",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 124
+        },
+        {
+          "name": "data_449",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 125
+        },
+        {
+          "name": "text_450",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 127
+        },
+        {
+          "name": "data_451",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 123
+        },
+        {
+          "name": "text_452",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 110
+        },
+        {
+          "name": "data_453",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 128
+        },
+        {
+          "name": "text_454",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 110
+        },
+        {
+          "name": "data_455",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 124
+        },
+        {
+          "name": "data_456",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 125
+        },
+        {
+          "name": "text_457",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 126
+        },
+        {
+          "name": "data_458",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 124
+        },
+        {
+          "name": "data_459",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 125
+        },
+        {
+          "name": "text_460",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 126
+        },
+        {
+          "name": "text_461",
+          "delta": [
+            301944,
+            2343356,
+            0,
+            0
+          ],
+          "style": 129
+        },
+        {
+          "name": "data_463",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 130
+        },
+        {
+          "name": "data_464",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 130
+        },
+        {
+          "name": "text_465",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 117
+        },
+        {
+          "name": "text_466",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 117
+        },
+        {
+          "name": "text_467",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 117
+        },
+        {
+          "name": "text_468",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 117
+        },
+        {
+          "name": "data_469",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 92
+        },
+        {
+          "name": "data_470",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 131
+        },
+        {
+          "name": "text_471",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 97
+        },
+        {
+          "name": "data_472",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 132
+        },
+        {
+          "name": "text_473",
+          "delta": [
+            301944,
+            2303962,
+            0,
+            0
+          ],
+          "style": 99
+        },
+        {
+          "name": "data_474",
+          "delta": [
+            1021598,
+            2326998,
+            -1128866,
+            -18804
+          ],
+          "style": 133
+        },
+        {
+          "name": "data_475",
+          "delta": [
+            1046068,
+            2321720,
+            0,
+            0
+          ],
+          "style": 134
+        },
+        {
+          "name": "text_476",
+          "delta": [
+            1037469,
+            2317508,
+            0,
+            0
+          ],
+          "style": 135
+        },
+        {
+          "name": "data_477",
+          "delta": [
+            958030,
+            2321720,
+            0,
+            0
+          ],
+          "style": 136
+        },
+        {
+          "name": "text_478",
+          "delta": [
+            958030,
+            2317508,
+            0,
+            0
+          ],
+          "style": 137
+        },
+        {
+          "name": "data_479",
+          "delta": [
+            426193,
+            2321720,
+            0,
+            0
+          ],
+          "style": 138
+        },
+        {
+          "name": "text_480",
+          "delta": [
+            426193,
+            2317508,
+            0,
+            0
+          ],
+          "style": 139
+        }
+      ]
+    }
+  ]
+}

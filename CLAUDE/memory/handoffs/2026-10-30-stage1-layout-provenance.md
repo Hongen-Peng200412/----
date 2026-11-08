@@ -31,6 +31,6 @@ Date: 2026-10-30
 ## Files To Reopen
 
 - [本轮执行记录](../../../talk/stage1_layout_provenance_20261030/执行记录.md)
-- [版本与来源规则](../../../RULES/图表追溯规则.md)
+- [版本与来源规则](../../../RULES/论文追溯与文件管理总则.md)
 - [重建及来源工具契约](../../../转换工具/ops/README.md)
 - [补图代码与统计契约](../../../画图/画图代码/stage1/calculate/stage1-additional-analysis/README.md)

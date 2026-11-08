@@ -1,5 +1,7 @@
 # Handoff: Find、Emap2lig公平对接与端到端补充数据
 
+> 历史入口说明（2026-11-08）：本交接引用的 `RULES/执行记录.md` 已退场；旧日志引用仅标识历史出处，不作为当前入口或科学依据。当前工作按[总则](../../../RULES/论文追溯与文件管理总则.md)执行。
+
 Date: 2026-10-18
 
 ## Current State
@@ -188,5 +190,5 @@ Word继续使用根目录`md_to_word.py`及`md_to_word_operation.py`，英文加
 - [科学文件来源清单](../../../补充数据/Find-Match-Build_20261018/provenance/source_manifest.json)及同目录`git_endpoints.json`。
 - `AdaLigand/测评数据代码/端到端测评/结果与日志/总日志.md`及GT／CA2／Emap2lig逐实验日志；归档内有已提交快照。
 - `Emap2lig/测试Find出来的Build/结果与日志/`：原243实例实验的前因后果、原生环境和50姿态评价；归档内有已提交快照。
-- [论文执行记录](../../../RULES/执行记录.md)：历次正式统计、制图、编译和验收命令。
+- 论文执行记录（`RULES/执行记录.md`，已退场的历史出处）：历次正式统计、制图、编译和验收命令。
 - [Stage1统计入口说明](../../../画图/画图代码/stage1/find_completion_20261017/README.md)和[共享制图入口说明](../../../画图/画图代码/stage3/fmb_20261015/README.md)。

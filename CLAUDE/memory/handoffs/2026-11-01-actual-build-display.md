@@ -1,5 +1,7 @@
 # Handoff：实际预测构象补齐与小分子案例
 
+> 历史入口说明（2026-11-08）：本交接引用的 `RULES/执行记录.md` 已退场；旧日志引用仅标识历史出处，不作为当前入口或科学依据。当前工作按[总则](../../../RULES/论文追溯与文件管理总则.md)执行。
+
 Date: 2026-11-01
 
 ## Current State
@@ -32,7 +34,7 @@ H200作业441686已成功执行一次，停回try_lock；hnode03的单H200与16 
 
 ## Files To Reopen
 
-- [本轮论文执行记录](../../../RULES/执行记录.md#2026-11-01实际预测构象显示与大复合物案例)
+- 本轮论文执行记录（`RULES/执行记录.md`，已退场的历史出处）
 - [新图追溯](../../../画图/画图代码/e2e/visualization/图表追溯.md#full-pipeline-small-molecule-cases11jb与9bjj的实际小分子输出)
 - [工作台开始使用](../../../画图/画图代码/e2e/visualization/multiligand-workbench/开始使用.md)
 - [独立审查证据](../../../画图/画图代码/e2e/output/multiligand-workbench/qa/20261101_1.0.8/independent_audit/独立收口窄核查.md)

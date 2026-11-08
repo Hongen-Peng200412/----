@@ -1,5 +1,7 @@
 # 合并后的Build主图235实例与标准消融446实例分开维护
 
+> 接续入口更新（2026-11-08）：下文保留当时决定；科学口径以当前Figure追溯和实验来源核对，不以本记忆替代。
+
 Type: decision
 Date: 2026-10-31
 Tags: manuscript, build, denominator, stage23, author-confirmed
@@ -18,10 +20,12 @@ Tags: manuscript, build, denominator, stage23, author-confirmed
 
 ## When To Use
 
-后续修改合并结果、消融、相关图注及Methods时，先沿当前八份追溯文档的稳定图名读取冻结来源与定义，再复用现有计算入口；不要从旧图的视觉数字或旧会话重建统计。
+后续修改合并结果、消融、相关图注及Methods时，先读取下列当前Figure追溯和对应实验来源，再使用所属Figure入口；不要从旧图的视觉数字或旧会话重建统计。
 
 ## Related Files
 
-- [当前图表追溯](../../../画图/画图代码/e2e/calculate/图表追溯.md)
-- [计算与重建入口](../../../画图/画图代码/e2e/calculate/stage2-stage3-results/README.md)
+- [Fig5追溯](../../../画图/画图代码/正文/Fig5-result-Match&Build/trace.md)
+- [Fig5重建入口](../../../画图/画图代码/正文/Fig5-result-Match&Build/README.md)
+- [Fig9追溯](../../../画图/画图代码/正文/Fig9-result-Ablation/trace.md)
+- [补充Build消融追溯](../../../画图/画图代码/补充材料/Fig3-Build-Ablation/trace.md)
 - [本轮方案及执行映射](../../../talk/stage23_revision_20261031/映射.md)

@@ -1,5 +1,7 @@
 # Handoff：新增作者9UJF全景与追溯修复
 
+> 历史入口说明（2026-11-08）：本交接引用的 `RULES/执行记录.md` 已退场；旧日志引用仅标识历史出处，不作为当前入口或科学依据。当前工作按[总则](../../../RULES/论文追溯与文件管理总则.md)执行。
+
 Date: 2026-11-03
 
 ## Current State
@@ -28,6 +30,6 @@ Date: 2026-11-03
 - [9UJF教程](../../../画图/画图代码/e2e/visualization/actual-small-molecule-cases/author_9ujf教程.md)
 - [最终会话](../../../画图/画图代码/e2e/output/actual-small-molecule-cases/author_9ujf/author_final.cxs)
 - [本轮核验](../../../画图/画图代码/e2e/output/actual-small-molecule-cases/author_9ujf/qa/validation.json)
-- [共享执行记录](../../../RULES/执行记录.md)
+- 共享执行记录（`RULES/执行记录.md`，已退场的历史出处）
 
 作者开始时三份staged资产保持，未暂存、提交或推送任何内容。没有接触服务器、模型运行资源或AdaLigand Git。

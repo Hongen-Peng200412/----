@@ -99,6 +99,6 @@ Find 全集的逐 PDB 宏平均语义 Dice 为 `0.2468053777`，实例 PRAUC₀.
 - [旧结果归档](../../../补充数据/Find-Match-Build_20261018/README.md)：旧数据保留原位，不重复搬迁或改写来源散列。
 - [重跑前核查](../../../talk/emap2lig_level_20261026/核查报告.md)与[历史方案](../../../talk/emap2lig_level_20261026/方案.md)：解释缺陷、当时的讨论和执行契约；其待批准、16 核及补充材料优先等状态已被后续事实或决定取代。
 - [资产接入记录](../../../补充数据/Emap2lig_双条件/接入记录.md)：记录复制、逐文件核对、原结果保护及正式／门控命令。正式命令为 `bash 训练与运行/sh/with_level.sh`；门控为 `bash 训练与运行/sh/with_level_gate.sh`，均为已完成实验的留证，不要求再次执行。
-- [老师两版意见的采用建议](../../../RULES/Professor_Instruct/两版比较与采用建议.md)与[图表追溯规则](../../../RULES/图表追溯规则.md)：前者提供写作建议，后者维护来源与作者编辑保护。
+- [老师两版意见的采用建议](../../../RULES/Professor_Instruct/两版比较与采用建议.md)与[论文追溯与文件管理总则](../../../RULES/论文追溯与文件管理总则.md)：前者提供写作建议，后者维护来源与作者编辑保护。
 
 本地资产含 251 份 `LIG.npz` 化学身份包、251 份原评分 CSV、逐姿态评分／RMSD、全部测试身份、推荐值来源、候选稀疏体素及映射几何。大型密度、完整概率、原生 blob 和 CIF 仍由元数据中的服务器绝对路径定位；新科学根为 `/storage/penghongen/Emap2lig/contour_level_20261026/`，旧 Find 根为 `/storage/penghongen/AdaLigand_stage1_inference/Emap2lig/official_find_li/held_out_test_0/`，旧 Build 根为 `/storage/penghongen/Emap2lig/stage3_find_hit_build/`。本次未重新核查服务器当前作业状态，也未改变这些原件。

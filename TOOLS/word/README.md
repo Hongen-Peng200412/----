@@ -284,7 +284,7 @@ D:/Anaconda/python.exe -X utf8 -B TOOLS/figure_runner/run.py --all
 
 `--check` 只读；`--sync` 只改专用来源批注，本次比较副本放根 temp。运行器按声明逐图计算，不把整个 stage 作为一个统计包。候选只写本次 temp，不覆盖正式图集。两张流程示意从当前作者设计和必要媒体组合，其余图按各自科学入口读取原件。工具的完整职责见 [运行器说明](../figure_runner/README.md)。
 
-所有 PPT 统一放 `画图/PPT/`。Word 隐藏来源和 Markdown 引用应直接指向这里，不建立旧路径兼容层。当前作者会话的保留和最小兼容修改遵循 [图表追溯规则](../../RULES/图表追溯规则.md)；保留的 CXS 不进入精选 Git，纳入 [服务器全面 Git](../sync-to-server/README.md)。
+所有 PPT 统一放 `画图/PPT/`。Word 隐藏来源和 Markdown 引用应直接指向这里，不建立旧路径兼容层。当前作者会话的保留和最小兼容修改遵循 [论文追溯与文件管理总则](../../RULES/论文追溯与文件管理总则.md)；保留的 CXS 不进入精选 Git，纳入 [服务器全面 Git](../sync-to-server/README.md)。
 
 ## 往返检查
 

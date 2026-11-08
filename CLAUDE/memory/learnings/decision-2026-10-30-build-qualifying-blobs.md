@@ -1,5 +1,7 @@
 # Find 与 Find–Build 比较使用各自的合格候选定义
 
+> 历史范围说明（2026-11-08）：本文保存2026-10-30的集合与授权状态，不能直接作为当前分母或许可。后续主图决定见[2026-10-31记忆](decision-2026-10-31-stage23-cohorts.md)，实际处理以[Fig5当前追溯](../../../画图/画图代码/正文/Fig5-result-Match&Build/trace.md)核对。
+
 Type: decision
 Date: 2026-10-30
 Tags: manuscript, build, emap2lig, eligibility, denominator, author-confirmed
@@ -25,6 +27,5 @@ Tags: manuscript, build, emap2lig, eligibility, denominator, author-confirmed
 
 - [英文正文](../../../draft.md)
 - [中文正文](../../../论文草稿.md)
-- [Build 计算追溯](../../../画图/画图代码/stage3/calculate/图表追溯.md)
-- [Emap2lig 双条件资产](../../../补充数据/Emap2lig_双条件/README.md)
-- [正式比例筛选实现](../../../补充数据/Emap2lig_双条件/explicit_emdb_level/provenance/code/显式level实验/prepare_build.py)
+- [Fig5当前计算追溯](../../../画图/画图代码/正文/Fig5-result-Match&Build/trace.md)
+- [Emap2lig显式level实验来源](../../../追溯文档/source/Emap2lig-level.md)

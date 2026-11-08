@@ -1,5 +1,7 @@
 # Handoff：9BJJ建模能力定量扩写
 
+> 历史入口说明（2026-11-08）：本交接引用的 `RULES/执行记录.md` 已退场；旧日志引用仅标识历史出处，不作为当前入口或科学依据。当前工作按[总则](../../../RULES/论文追溯与文件管理总则.md)执行。
+
 Date: 2026-11-02
 
 ## Current State
@@ -18,6 +20,6 @@ Date: 2026-11-02
 
 - [英文正文](../../../draft.md)
 - [中文正文](../../../论文草稿.md)
-- [执行记录](../../../RULES/执行记录.md)
+- 执行记录（`RULES/执行记录.md`，已退场的历史出处）
 - [数字追溯](../../../画图/画图代码/e2e/calculate/图表追溯.md)
 - [本轮证据](../../../画图/画图代码/e2e/output/actual-small-molecule-cases/author_9bjj/capability_20261102/validation.json)

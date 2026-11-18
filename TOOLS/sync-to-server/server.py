@@ -201,10 +201,11 @@ def finish_documents(stage, keep_new):
 
 
 @contextmanager
-def document_scope(project, documents, stage):
+def document_scope(project, documents, stage, policy):
     """更新显式映射的说明文件; 正式发布前失败时恢复同一目标的旧原字节.
 
     documents 为 source/target/sha256 记录列表, 不解释 MD 的科学内容.
+    policy为update或verify; verify只读比对原字节, 不创建说明暂存, 不写任一目标.
     old_file 仅暂存在论文部署 control 中, 成功或完成回滚后清除.
     若正式引用和有效回执均已发布本syncid, 收尾异常也保留新说明, 由同次resume清理锁和发布记录.
     """
@@ -212,6 +213,8 @@ def document_scope(project, documents, stage):
         raise RuntimeError('说明事务尚未收口, 使用同一次恢复')
     if stage.resolve() != stage or stage.parent.resolve() != stage.parent:
         raise ValueError('说明暂存目录不能经过链接')
+    if policy not in ('update', 'verify'):
+        raise ValueError('未知说明处理方式')
     values = []
     targets = set()
     for item in documents:
@@ -223,6 +226,11 @@ def document_scope(project, documents, stage):
             raise ValueError('说明源与捕获清单不同')
         values.append((item, new, read_document(DOCUMENT_IO, item['target'])))
         targets.add(item['target'])
+    if policy == 'verify':
+        if any(new != old for _, new, old in values):
+            raise ValueError('只读核对发现服务器说明与本地不同; 不写目标, 需另获修订许可')
+        yield {'verified': len(values), 'changed': 0}
+        return
     stage.mkdir(parents=True)
     plan = []
     for number, (item, new, old) in enumerate(values):
@@ -389,7 +397,7 @@ def main(request):
         manifest = json.loads(run(arguments + ['show', commit + ':snapshot/manifest.json'], environment))
     else:
         raise ValueError('未知操作')
-    scope = document_scope(directory / 'project', manifest['documents'], document_stage) if action == 'finalize' else nullcontext(None)
+    scope = document_scope(directory / 'project', manifest['documents'], document_stage, manifest.get('document_policy', 'update')) if action == 'finalize' else nullcontext(None)
     with scope as document_result:
         if action == 'finalize':
             (repository / 'info/attributes').write_text('* -text -filter -ident -working-tree-encoding\n', encoding='ascii')

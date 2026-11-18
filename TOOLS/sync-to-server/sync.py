@@ -162,11 +162,15 @@ def transfer(source, target, password, previous):
 
 
 def clear_capture(temporary):
-    """只清除本项目固定临时根内的一个独立捕获副本, 不跟随目录链接."""
+    """清除本项目固定临时根内的一个独立捕获副本, 并回收两个已空父目录; 保留非空兄弟目录."""
     expected = PROJECT_ROOT / 'temp/figure-centric/sync-to-server'
     if TEMP_ROOT.resolve() != expected or temporary.resolve() != temporary or temporary.parent != expected:
         raise ValueError('捕获副本清理边界不符, 不递归删除')
     shutil.rmtree(temporary)
+    for parent in (expected, expected.parent):
+        if any(parent.iterdir()):
+            break
+        parent.rmdir()
 
 
 # ================================================================================================
@@ -180,6 +184,7 @@ def main():
     parser.add_argument('--commit', help='verify 独立恢复一个正式全面提交')
     parser.add_argument('--resume', type=Path, help='恢复同一次已经完整捕获的本地副本')
     parser.add_argument('--document-index', type=Path, help='项目人读说明的本地说明/服务器说明两列表')
+    parser.add_argument('--document-policy', choices=['update', 'verify'], default='update', help='update按映射更新说明; verify只读核对, 不允许写实验目录')
     options = parser.parse_args()
     if options.action == 'reset-history' and not options.expect_current:
         parser.error('reset-history 必须显式提供 --expect-current')
@@ -239,6 +244,7 @@ def main():
             generation = syncid if options.action == 'reset-history' else previous['current']['generation']
             manifest = capture(source, temporary, syncid, options.action, generation, expected_current)
             index_relative = options.document_index.resolve().relative_to(source).as_posix()
+            manifest['document_policy'] = options.document_policy
             manifest['document_index'] = index_relative
             manifest['documents'] = parse_document_index(temporary / 'capture', index_relative)
             (temporary / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=True), encoding='utf-8')

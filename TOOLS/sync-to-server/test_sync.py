@@ -91,7 +91,7 @@ def reject(call):
     raise AssertionError('应拒绝的操作被接受')
 
 
-def stage(client, server, source, base, syncid, operation, expected):
+def stage(client, server, source, base, syncid, operation, expected, document_policy=None):
     """从真实临时源捕获并复制到隔离接收目录, 返回本次完整清单."""
     temporary = base / 'captures' / syncid
     temporary.mkdir(parents=True)
@@ -100,6 +100,8 @@ def stage(client, server, source, base, syncid, operation, expected):
         manifest = client.capture(source, temporary, syncid, operation, generation, expected)
     manifest['document_index'] = 'docs/README.md'
     manifest['documents'] = server.parse_document_index(temporary / 'capture', manifest['document_index'])
+    if document_policy is not None:
+        manifest['document_policy'] = document_policy
     (temporary / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=True), encoding='utf-8')
     server.main({'action': 'begin', 'syncid': syncid, 'operation': operation, 'expected_current': expected, 'manifest_sha256': client.digest(temporary / 'manifest.json'), 'resume': False})
     destination = server.ROOT / 'runs' / syncid
@@ -389,6 +391,37 @@ def main():
             assert verified['restored_verified'] and not verified['documents']['live_verified']
             results.append('published_' + failure + '_cleanup_failure_keeps_new_documents_and_resumes')
 
+        # 历史整理模式既不能写目标, 也不能为说明创建回滚副本.
+        readonly_adapter = FakeSFTP({})
+        readonly_adapter.files = {item['target']: (source / item['source']).read_bytes() for item in server.parse_document_index(source, 'docs/README.md')}
+        readonly_documents = server.parse_document_index(source, 'docs/README.md')
+        readonly_stage = base / 'readonly-document-stage'
+        with patch.object(server, 'DOCUMENT_IO', readonly_adapter):
+            with server.document_scope(source, readonly_documents, readonly_stage, 'verify') as result:
+                assert result == {'verified': 2, 'changed': 0}
+            assert not readonly_stage.exists()
+            assert not any(mode == 'r+b' for _, mode in readonly_adapter.calls)
+            results.append('verify_document_policy_reads_only_without_stage')
+            readonly_adapter.files['/fake-server/one/trace.md'] = b'concurrent scientific explanation'
+            readonly_before = dict(readonly_adapter.files)
+            def reject_readonly_mismatch():
+                with server.document_scope(source, readonly_documents, readonly_stage, 'verify'):
+                    raise AssertionError('mismatch reached publication')
+            reject(reject_readonly_mismatch)
+            assert readonly_adapter.files == readonly_before and not readonly_stage.exists()
+            assert not any(mode == 'r+b' for _, mode in readonly_adapter.calls)
+            results.append('verify_document_policy_mismatch_never_writes')
+
+        readonly_id = 'test-readonly-publication'
+        previous = server.state()['current']['commit']
+        writes_before = sum(mode == 'r+b' for _, mode in fake_sftp.calls)
+        stage(client, server, source, base, readonly_id, 'snapshot', previous, 'verify')
+        readonly_published = server.main({'action': 'finalize', 'syncid': readonly_id})
+        assert readonly_published['restored_verified'] and readonly_published['documents']['changed'] == 0
+        assert sum(mode == 'r+b' for _, mode in fake_sftp.calls) == writes_before
+        assert not server.state()['pending_documents'] and not server.state()['locked']
+        results.append('verify_document_policy_full_publication_restores_without_MD_writes')
+
         index_capture = base / 'index-change-capture'
         index_capture.mkdir()
         source_index = source / '.git/index'
@@ -416,9 +449,24 @@ def main():
         (own_capture / 'own.txt').write_bytes(b'only this capture')
         client.clear_capture(own_capture)
         assert not own_capture.exists()
-        if not any(client.TEMP_ROOT.iterdir()):
+        if client.TEMP_ROOT.exists() and not any(client.TEMP_ROOT.iterdir()):
             client.TEMP_ROOT.rmdir()
         results.append('capture_cleanup_rejects_source_or_other_temp_roots')
+
+        cleanup_project = base / 'cleanup-project'
+        cleanup_temp = cleanup_project / 'temp/figure-centric/sync-to-server'
+        sibling = cleanup_temp.parent / 'other-task.txt'
+        isolated_capture = cleanup_temp / 'own-capture'
+        isolated_capture.mkdir(parents=True)
+        sibling.write_bytes(b'preserve another task')
+        with patch.object(client, 'PROJECT_ROOT', cleanup_project), patch.object(client, 'TEMP_ROOT', cleanup_temp):
+            client.clear_capture(isolated_capture)
+            assert sibling.read_bytes() == b'preserve another task' and not cleanup_temp.exists()
+            sibling.unlink()
+            isolated_capture.mkdir(parents=True)
+            client.clear_capture(isolated_capture)
+            assert not cleanup_temp.parent.exists() and (cleanup_project / 'temp').is_dir()
+        results.append('capture_cleanup_removes_empty_parents_preserves_siblings_and_temp_root')
 
         roots = [os.environ.get('PROJECT_MSYS_ROOT'), os.environ.get('MSYS2_ROOT'), 'C:/msys64', 'D:/msys64']
         msys = next(Path(root) / 'usr/bin' for root in roots if root and (Path(root) / 'usr/bin/rsync.exe').is_file())

@@ -67,6 +67,14 @@ D:/Anaconda/python.exe -X utf8 -B TOOLS/sync-to-server/sync.py reset-history --e
 
 ## 明确说明文件的同步范围
 
+历史重整只同步论文项目时, 使用 `--document-policy verify`: 按相同索引只读核对服务器现有说明, 不创建说明暂存、不开启写句柄、不修订实验目录; 任一字节不一致即停止。默认 `--document-policy update` 保持原有明确映射说明的更新行为, 只有该写入范围已获作者授权时使用。处理方式保存在本次 `manifest.json` 的 `document_policy` 字段中, 值为 `verify` 或 `update`; 旧清单没有该字段时仍按原 `update` 契约解释。恢复同一次事务沿用捕获清单中的方式, 不因新的命令参数改变范围。
+
+```powershell
+D:/Anaconda/python.exe -X utf8 -B TOOLS/sync-to-server/sync.py snapshot --document-index 追溯文档/source/README.md --document-policy verify
+```
+
+本地精选历史重整遵循[自定义命令](../../RULES/自定义命令/将改动融入指定Git提交.md)。旧全面捕获记录不改写原始来源SHA; 旧新精选对应保存为具名Git任务记录并随项目同步。只有实际捕获、恢复并验收过的新端点才具备精确覆盖, 不把关系映射当成文件相等。
+
 `run_sync.bat` 默认传入 `追溯文档/source/README.md`。该索引必须包含唯一一张表头为 `| 本地说明 | 服务器说明 |` 的两列表；下例仅说明格式，服务器路径不是本项目的真实地址：
 
 ```markdown
@@ -101,6 +109,8 @@ D:/Anaconda/python.exe -X utf8 -B TOOLS/sync-to-server/sync.py verify --commit �
 SHA 从 `coverage` 返回的 `commit` 字段取得。验证只在部署根的 `restore/` 写临时检出，成功或报错后清理该次检出；旧正式代之外的提交不会被冒称为本轮有效版本。
 
 ## 完整清单与回执
+
+成功清除本次捕获副本后, 程序还会回收已经全空的 `temp/figure-centric/sync-to-server/` 和其 `figure-centric/` 父目录; 其中有其他任务材料时保留, 不递归清理兄弟目录, 不删除根temp。其它本次构建材料仍由调用任务按总则清理。
 
 `manifest.json` 的重要字段如下；字段值均指本次实际捕获，不倒填过去的状态。
 
